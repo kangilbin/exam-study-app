@@ -1,0 +1,96 @@
+[
+  {
+    "id": "theory-network_001",
+    "categoryId": "theory-network",
+    "subcategory": "OSI 7계층",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "OSI 7계층을 물리 계층부터 순서대로 쓰시오.",
+    "answer": "물리 - 데이터링크 - 네트워크 - 전송 - 세션 - 표현 - 응용",
+    "explanation": "OSI 7계층 (아래에서 위):\n1. 물리(Physical): 비트 전송\n2. 데이터링크(Data Link): 프레임 전송, MAC주소\n3. 네트워크(Network): 패킷 라우팅, IP주소\n4. 전송(Transport): 세그먼트, TCP/UDP\n5. 세션(Session): 연결 설정/해제\n6. 표현(Presentation): 데이터 변환, 암호화\n7. 응용(Application): 사용자 인터페이스",
+    "choices": [
+      {"label": "1", "text": "물리-데이터링크-네트워크-전송-세션-표현-응용", "isCorrect": true},
+      {"label": "2", "text": "물리-네트워크-데이터링크-전송-세션-표현-응용", "isCorrect": false},
+      {"label": "3", "text": "물리-데이터링크-전송-네트워크-세션-표현-응용", "isCorrect": false},
+      {"label": "4", "text": "물리-데이터링크-네트워크-세션-전송-표현-응용", "isCorrect": false}
+    ],
+    "source": "generated",
+    "tags": ["네트워크", "OSI", "7계층"]
+  },
+  {
+    "id": "theory-network_002",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "TCP 22번 포트를 사용하며, 원격지 컴퓨터에 안전하게 접속하기 위한 암호화된 네트워크 프로토콜은?",
+    "answer": "SSH(Secure Shell)",
+    "explanation": "SSH는 공개키 암호화 방식으로 상호 인증하고 데이터를 암호화합니다. Telnet(23번 포트)을 대체합니다.",
+    "choices": [
+      {"label": "1", "text": "SSH", "isCorrect": true},
+      {"label": "2", "text": "Telnet", "isCorrect": false},
+      {"label": "3", "text": "FTP", "isCorrect": false},
+      {"label": "4", "text": "SNMP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["네트워크", "SSH", "프로토콜"]
+  },
+  {
+    "id": "theory-network_003",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "가짜 바이러스 경고로 사용자에게 공포심을 유발하여 돈을 지불하게 하는 악성 소프트웨어는?",
+    "answer": "스캐어웨어(Scareware)",
+    "explanation": "스캐어웨어는 사회공학적 기법을 활용하여 사용자를 위협합니다. 랜섬웨어와 달리 실제 파일을 암호화하지는 않습니다.",
+    "choices": [
+      {"label": "1", "text": "스캐어웨어", "isCorrect": true},
+      {"label": "2", "text": "랜섬웨어", "isCorrect": false},
+      {"label": "3", "text": "애드웨어", "isCorrect": false},
+      {"label": "4", "text": "스파이웨어", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "tags": ["보안", "스캐어웨어", "악성코드"]
+  },
+  {
+    "id": "theory-network_004",
+    "categoryId": "theory-network",
+    "subcategory": "VPN",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "IPSec, SSL 등의 보안프로토콜로 안전한 사설 네트워크를 구성하는 기술은?",
+    "answer": "VPN(Virtual Private Network)",
+    "explanation": "VPN은 터널링, 암호화, 인증으로 공용 네트워크에서 안전한 통신을 제공합니다.",
+    "choices": [
+      {"label": "1", "text": "VPN", "isCorrect": true},
+      {"label": "2", "text": "NAT", "isCorrect": false},
+      {"label": "3", "text": "Proxy", "isCorrect": false},
+      {"label": "4", "text": "DMZ", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "기출문제_2024년_3회_수업자료_v0.1.pdf",
+    "tags": ["네트워크", "VPN", "보안"]
+  },
+  {
+    "id": "theory-network_005",
+    "categoryId": "theory-network",
+    "subcategory": "오류검출",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "다항식 기반 계산으로 데이터 무결성을 확인하는 오류 검출 기법은? (영어 3글자)",
+    "answer": "CRC",
+    "explanation": "CRC(Cyclic Redundancy Check)는 순환 중복 검사로, 연속된 비트 오류 감지에 효과적입니다.",
+    "choices": [
+      {"label": "1", "text": "CRC", "isCorrect": true},
+      {"label": "2", "text": "BCC", "isCorrect": false},
+      {"label": "3", "text": "ECC", "isCorrect": false},
+      {"label": "4", "text": "FEC", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "tags": ["네트워크", "CRC", "오류검출"]
+  }
+]

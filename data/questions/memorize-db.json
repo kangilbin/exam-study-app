@@ -1,0 +1,160 @@
+[
+  {
+    "id": "memorize-db_001",
+    "categoryId": "memorize-db",
+    "subcategory": "트랜잭션",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "트랜잭션의 ACID 특성을 쓰시오.",
+    "answer": "원자성(Atomicity), 일관성(Consistency), 격리성(Isolation), 지속성(Durability)",
+    "explanation": "원자성: All or Nothing\n일관성: 실행 전후 일관된 상태\n격리성: 트랜잭션 간 간섭 불가\n지속성: 완료 후 영구 반영",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "트랜잭션",
+      "ACID"
+    ]
+  },
+  {
+    "id": "memorize-db_002",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "SQL의 분류(DDL, DML, DCL, TCL)를 쓰시오.",
+    "answer": "DDL: CREATE, ALTER, DROP, TRUNCATE\nDML: SELECT, INSERT, UPDATE, DELETE\nDCL: GRANT, REVOKE\nTCL: COMMIT, ROLLBACK, SAVEPOINT",
+    "explanation": "DDL: 데이터 정의\nDML: 데이터 조작\nDCL: 데이터 제어\nTCL: 트랜잭션 제어",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "SQL",
+      "DDL",
+      "DML",
+      "DCL"
+    ]
+  },
+  {
+    "id": "memorize-db_003",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "정규화 단계를 순서대로 쓰시오.",
+    "answer": "1NF→2NF→3NF→BCNF→4NF→5NF",
+    "explanation": "1NF: 원자값\n2NF: 부분 함수 종속 제거\n3NF: 이행적 함수 종속 제거\nBCNF: 결정자가 후보키\n4NF: 다치 종속 제거\n5NF: 조인 종속 제거",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "정규화"
+    ]
+  },
+  {
+    "id": "memorize-db_004",
+    "categoryId": "memorize-db",
+    "subcategory": "이상현상",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 이상 현상 3가지를 쓰시오.",
+    "answer": "삽입 이상, 삭제 이상, 갱신 이상",
+    "explanation": "삽입 이상: 불필요한 데이터 함께 삽입\n삭제 이상: 필요한 데이터까지 삭제\n갱신 이상: 일부만 갱신되어 불일치",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "이상현상",
+      "정규화"
+    ]
+  },
+  {
+    "id": "memorize-db_005",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "순수 관계 연산자 4가지를 쓰시오.",
+    "answer": "σ(셀렉트), π(프로젝트), ⋈(조인), ÷(디비전)",
+    "explanation": "셀렉트: 조건에 맞는 튜플 선택\n프로젝트: 특정 속성만 추출\n조인: 두 릴레이션 결합\n디비전: 관계나누기",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "관계대수"
+    ]
+  },
+  {
+    "id": "memorize-db_006",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 회복 기법을 쓰시오.",
+    "answer": "지연 갱신, 즉각 갱신, 체크포인트, 그림자 페이징, 미디어 회복",
+    "explanation": "지연: 로그에만 저장, Redo만\n즉각: 바로 DB반영, Redo+Undo\n체크포인트: 검사점 이후만 회복",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "회복기법",
+      "DB"
+    ]
+  },
+  {
+    "id": "memorize-db_007",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "병행제어 기법을 쓰시오.",
+    "answer": "로킹, 타임스탬프, 최적 병행 수행(검증기법), 다중 버전 기법",
+    "explanation": "로킹: 상호배제\n타임스탬프: 시간표 부여\n다중 버전: 버전별 관리",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "병행제어"
+    ]
+  },
+  {
+    "id": "memorize-db_008",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 키의 종류를 쓰시오.",
+    "answer": "슈퍼키, 후보키, 기본키, 대체키, 외래키",
+    "explanation": "슈퍼키: 유일하게 식별 가능한 속성 집합\n후보키: 최소 슈퍼키\n기본키: 선택된 후보키\n대체키: 선택되지 않은 후보키\n외래키: 다른 테이블의 기본키 참조",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "키",
+      "DB"
+    ]
+  },
+  {
+    "id": "memorize-db_009",
+    "categoryId": "memorize-db",
+    "subcategory": "용어",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "카디널리티와 차수(Degree)의 차이를 쓰시오.",
+    "answer": "카디널리티: 튜플(행)의 수, 차수(Degree): 속성(열)의 수",
+    "explanation": "릴레이션의 구성: 속성(Attribute), 튜플(Tuple), 도메인(Domain), 스키마, 인스턴스",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "카디널리티",
+      "Degree"
+    ]
+  },
+  {
+    "id": "memorize-db_010",
+    "categoryId": "memorize-db",
+    "subcategory": "설계",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 설계 절차를 쓰시오.",
+    "answer": "요구사항 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현",
+    "explanation": "개념적: E-R 다이어그램\n논리적: 정규화, 스키마 설계\n물리적: 저장구조, 인덱스 설계",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "DB설계"
+    ]
+  }
+]

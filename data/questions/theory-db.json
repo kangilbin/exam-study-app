@@ -1,0 +1,97 @@
+[
+  {
+    "id": "theory-db_001",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "릴레이션에서 속성(열)의 개수를 나타내는 용어는?",
+    "answer": "차수(Degree)",
+    "explanation": "차수(Degree): 릴레이션의 속성(열) 수\n카디널리티(Cardinality): 릴레이션의 튜플(행) 수",
+    "choices": [
+      {"label": "1", "text": "차수(Degree)", "isCorrect": true},
+      {"label": "2", "text": "카디널리티(Cardinality)", "isCorrect": false},
+      {"label": "3", "text": "도메인(Domain)", "isCorrect": false},
+      {"label": "4", "text": "스키마(Schema)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "tags": ["데이터베이스", "차수", "Degree", "릴레이션"]
+  },
+  {
+    "id": "theory-db_002",
+    "categoryId": "theory-db",
+    "subcategory": "스키마",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스의 전체적인 논리적 구조를 정의하며, 조직 전체에 하나만 존재하는 스키마는?",
+    "answer": "개념 스키마",
+    "explanation": "외부 스키마: 사용자별 논리적 구조\n개념 스키마: DB 전체 논리적 구조 (하나만 존재)\n내부 스키마: 물리적 저장 구조",
+    "choices": [
+      {"label": "1", "text": "개념 스키마", "isCorrect": true},
+      {"label": "2", "text": "외부 스키마", "isCorrect": false},
+      {"label": "3", "text": "내부 스키마", "isCorrect": false},
+      {"label": "4", "text": "논리 스키마", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "스키마", "개념스키마"]
+  },
+  {
+    "id": "theory-db_003",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "관계 대수에서 pi(파이) 연산의 의미는? (영문명으로 작성)",
+    "answer": "Project(프로젝트)",
+    "explanation": "pi(Project): 수직적 부분 집합(특정 속성만 선택)\nsigma(Select): 수평적 부분 집합(특정 조건의 튜플 선택)",
+    "choices": [
+      {"label": "1", "text": "Project", "isCorrect": true},
+      {"label": "2", "text": "Select", "isCorrect": false},
+      {"label": "3", "text": "Join", "isCorrect": false},
+      {"label": "4", "text": "Division", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["데이터베이스", "관계대수", "Project"]
+  },
+  {
+    "id": "theory-db_004",
+    "categoryId": "theory-db",
+    "subcategory": "파일접근",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "'키 값, 주소' 쌍으로 구성된 별도의 테이블을 사용하여 데이터 레코드를 찾아가는 파일 접근 방법은?",
+    "answer": "인덱스(Index) 방법",
+    "explanation": "물리적 파일 접근 방법:\n1. 순차 방법(Sequential Access)\n2. 해싱 방법(Hashing)\n3. 인덱스 방법(Indexing): 키-주소 테이블 사용",
+    "choices": [
+      {"label": "1", "text": "인덱스 방법", "isCorrect": true},
+      {"label": "2", "text": "해싱 방법", "isCorrect": false},
+      {"label": "3", "text": "순차 방법", "isCorrect": false},
+      {"label": "4", "text": "직접 방법", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["데이터베이스", "인덱스", "파일접근"]
+  },
+  {
+    "id": "theory-db_005",
+    "categoryId": "theory-db",
+    "subcategory": "무결성",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "한 릴레이션의 속성이 다른 릴레이션의 기본 키를 참조할 때, 그 참조하는 속성을 무엇이라 하는가?",
+    "answer": "외래키(Foreign Key)",
+    "explanation": "외래키는 다른 릴레이션의 기본키를 참조하는 속성으로, 참조 무결성을 보장합니다.",
+    "choices": [
+      {"label": "1", "text": "외래키", "isCorrect": true},
+      {"label": "2", "text": "후보키", "isCorrect": false},
+      {"label": "3", "text": "대체키", "isCorrect": false},
+      {"label": "4", "text": "슈퍼키", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "tags": ["데이터베이스", "외래키", "무결성"]
+  }
+]

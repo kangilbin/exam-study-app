@@ -1,0 +1,308 @@
+[
+  {
+    "id": "code-c",
+    "name": "C언어",
+    "icon": "language-c",
+    "group": "code",
+    "description": "C언어 코드 해석 및 출력 결과 예측",
+    "questionCount": 0,
+    "subcategories": ["포인터", "배열", "구조체", "함수", "재귀", "문자열", "연산자"]
+  },
+  {
+    "id": "code-java",
+    "name": "Java",
+    "icon": "language-java",
+    "group": "code",
+    "description": "Java 코드 해석, 클래스, 상속, 오버라이딩",
+    "questionCount": 0,
+    "subcategories": ["클래스", "상속", "오버라이딩", "인터페이스", "컬렉션", "예외처리", "생성자"]
+  },
+  {
+    "id": "code-python",
+    "name": "Python",
+    "icon": "language-python",
+    "group": "code",
+    "description": "Python 코드 해석 및 출력 결과",
+    "questionCount": 0,
+    "subcategories": ["리스트", "딕셔너리", "함수", "클래스", "슬라이싱", "람다"]
+  },
+  {
+    "id": "code-common",
+    "name": "공통 코드",
+    "icon": "code-braces",
+    "group": "code",
+    "description": "언어 공통 알고리즘 및 코드 해석",
+    "questionCount": 0,
+    "subcategories": ["정렬", "검색", "스택/큐", "트리", "그래프"]
+  },
+  {
+    "id": "sql-dml",
+    "name": "SQL DML",
+    "icon": "database-search",
+    "group": "sql",
+    "description": "SELECT, INSERT, UPDATE, DELETE 등 데이터 조작어",
+    "questionCount": 0,
+    "subcategories": ["SELECT", "JOIN", "서브쿼리", "GROUP BY", "HAVING", "ORDER BY"]
+  },
+  {
+    "id": "sql-ddl",
+    "name": "SQL DDL",
+    "icon": "database-cog",
+    "group": "sql",
+    "description": "CREATE, ALTER, DROP 등 데이터 정의어",
+    "questionCount": 0,
+    "subcategories": ["CREATE", "ALTER", "DROP", "제약조건", "인덱스", "뷰"]
+  },
+  {
+    "id": "sql-set",
+    "name": "SQL 집합",
+    "icon": "set-all",
+    "group": "sql",
+    "description": "UNION, INTERSECT, EXCEPT 등 집합 연산",
+    "questionCount": 0,
+    "subcategories": ["UNION", "INTERSECT", "EXCEPT", "집계함수"]
+  },
+  {
+    "id": "theory-se",
+    "name": "소프트웨어공학",
+    "icon": "cog-outline",
+    "group": "theory",
+    "description": "소프트웨어 개발 방법론, 테스트, 디자인 패턴",
+    "questionCount": 0,
+    "subcategories": ["개발방법론", "UML", "디자인패턴", "테스트", "형상관리", "프로젝트관리"]
+  },
+  {
+    "id": "theory-network",
+    "name": "네트워크/보안",
+    "icon": "shield-lock-outline",
+    "group": "theory",
+    "description": "네트워크 프로토콜, 보안 기술, 암호화",
+    "questionCount": 0,
+    "subcategories": ["OSI 7계층", "TCP/IP", "프로토콜", "암호화", "보안공격", "방화벽"]
+  },
+  {
+    "id": "theory-db",
+    "name": "데이터베이스",
+    "icon": "database",
+    "group": "theory",
+    "description": "데이터베이스 이론, 정규화, 트랜잭션",
+    "questionCount": 0,
+    "subcategories": ["정규화", "트랜잭션", "회복", "병행제어", "관계대수", "인덱스"]
+  },
+  {
+    "id": "theory-os",
+    "name": "운영체제",
+    "icon": "monitor",
+    "group": "theory",
+    "description": "프로세스, 메모리 관리, 스케줄링",
+    "questionCount": 0,
+    "subcategories": ["프로세스", "스케줄링", "메모리관리", "디스크", "교착상태"]
+  },
+  {
+    "id": "memorize-se",
+    "name": "암기: 소프트웨어공학",
+    "icon": "brain",
+    "group": "theory",
+    "description": "소프트웨어 공학 핵심 개념 암기",
+    "questionCount": 0,
+    "subcategories": ["방법론", "모듈", "형상관리", "테스트", "디자인패턴", "UML"]
+  },
+  {
+    "id": "memorize-network",
+    "name": "암기: 네트워크/보안",
+    "icon": "brain",
+    "group": "theory",
+    "description": "네트워크/보안 핵심 개념 암기",
+    "questionCount": 0,
+    "subcategories": ["OSI", "프로토콜", "IP", "DoS", "암호화", "접근통제"]
+  },
+  {
+    "id": "memorize-db",
+    "name": "암기: 데이터베이스",
+    "icon": "brain",
+    "group": "theory",
+    "description": "데이터베이스 핵심 개념 암기",
+    "questionCount": 0,
+    "subcategories": ["트랜잭션", "SQL분류", "정규화", "관계대수", "회복기법"]
+  },
+  {
+    "id": "memorize-os",
+    "name": "암기: 운영체제",
+    "icon": "brain",
+    "group": "theory",
+    "description": "운영체제 핵심 개념 암기",
+    "questionCount": 0,
+    "subcategories": ["스케줄링", "교착상태", "프로세스", "메모리", "리눅스"]
+  },
+  {
+    "id": "exam-2020-1",
+    "name": "2020년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2020년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2020-2",
+    "name": "2020년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2020년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2020-3",
+    "name": "2020년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2020년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2020-4",
+    "name": "2020년 4회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2020년 4회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2021-1",
+    "name": "2021년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2021년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2021-2",
+    "name": "2021년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2021년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2021-3",
+    "name": "2021년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2021년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2022-1",
+    "name": "2022년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2022년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2022-2",
+    "name": "2022년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2022년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2022-3",
+    "name": "2022년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2022년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2023-1",
+    "name": "2023년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2023년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2023-2",
+    "name": "2023년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2023년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2023-3",
+    "name": "2023년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2023년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2024-1",
+    "name": "2024년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2024년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2024-2",
+    "name": "2024년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2024년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2024-3",
+    "name": "2024년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2024년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2025-1",
+    "name": "2025년 1회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2025년 1회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2025-2",
+    "name": "2025년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2025년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  },
+  {
+    "id": "exam-2025-3",
+    "name": "2025년 3회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2025년 3회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
+  }
+]

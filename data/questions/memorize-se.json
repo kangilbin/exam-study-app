@@ -1,0 +1,240 @@
+[
+  {
+    "id": "memorize-se_001",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "애자일 방법론의 4가지 핵심 가치를 쓰시오.",
+    "answer": "1. 개인과 상호작용 2. 작동하는 소프트웨어 3. 고객과의 협력 4. 변화에 대응",
+    "explanation": "애자일 선언문의 4가지 가치: 프로세스/도구보다 개인과 상호작용, 문서보다 작동하는 소프트웨어, 계약 협상보다 고객과의 협력, 계획 따르기보다 변화에 대응",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "애자일",
+      "방법론"
+    ]
+  },
+  {
+    "id": "memorize-se_002",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "스크럼(Scrum)의 주요 구성요소를 쓰시오.",
+    "answer": "제품 백로그, 스프린트 백로그, 스프린트(2~4주), 데일리 스크럼, 스프린트 리뷰, 스프린트 회고",
+    "explanation": "스크럼 역할: 제품 소유자(PO), 스크럼 마스터(SM), 개발팀\n스크럼 산출물: 제품 백로그, 스프린트 백로그, 증분(Increment)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "스크럼",
+      "애자일"
+    ]
+  },
+  {
+    "id": "memorize-se_003",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "XP(eXtreme Programming)의 12가지 실천 방법 중 주요 5가지를 쓰시오.",
+    "answer": "페어 프로그래밍, TDD, 지속적 통합(CI), 리팩토링, 소규모 릴리스",
+    "explanation": "XP의 5가지 핵심 가치: 의사소통, 단순성, 피드백, 용기, 존중",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "XP",
+      "애자일"
+    ]
+  },
+  {
+    "id": "memorize-se_004",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "결합도의 종류를 강한 순서대로 나열하시오.",
+    "answer": "내용 > 공통 > 외부 > 제어 > 스탬프 > 자료",
+    "explanation": "내용: 다른 모듈 내부 접근\n공통: 전역변수 공유\n외부: 외부 데이터 참조\n제어: 제어신호 전달\n스탬프: 구조체 전달\n자료: 파라미터만 사용",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "결합도",
+      "모듈"
+    ]
+  },
+  {
+    "id": "memorize-se_005",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "응집도의 종류를 약한 순서대로 나열하시오.",
+    "answer": "우연적 > 논리적 > 시간적 > 절차적 > 교환적(통신적) > 순차적 > 기능적",
+    "explanation": "우연적: 연관 없음\n논리적: 유사 성격 분류\n시간적: 같은 시간 실행\n절차적: 순서대로 수행\n교환적: 동일 입출력\n순차적: 출력이 다음 입력\n기능적: 단일 기능",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "응집도",
+      "모듈"
+    ]
+  },
+  {
+    "id": "memorize-se_006",
+    "categoryId": "memorize-se",
+    "subcategory": "형상관리",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "형상관리 절차 4단계를 쓰시오.",
+    "answer": "형상 식별 → 형상 통제 → 형상 감사 → 형상 기록(상태보고)",
+    "explanation": "식별: 대상 정의\n통제: 변경 활동 제어(CCB)\n감사: 베이스라인 무결성 평가\n기록: 수행결과 기록",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "형상관리"
+    ]
+  },
+  {
+    "id": "memorize-se_007",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "블랙박스 테스트 기법 5가지를 쓰시오.",
+    "answer": "동치분할, 경계값 분석, 원인-효과 그래프, 오류 예측, 비교 검사",
+    "explanation": "블랙박스: 내부 구조 모르고 기능만 테스트\n화이트박스: 내부 구조를 알고 테스트(구문, 분기, 조건 커버리지)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ]
+  },
+  {
+    "id": "memorize-se_008",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "화이트박스 테스트의 커버리지 유형을 쓰시오.",
+    "answer": "문장 커버리지, 결정(분기) 커버리지, 조건 커버리지, 조건/결정 커버리지, 변경조건/결정(MC/DC), 다중조건, 경로 커버리지",
+    "explanation": "문장: 모든 문장 1회 이상\n결정: 전체 조건식 T/F\n조건: 개별 조건 T/F\nMC/DC: 각 조건이 독립적으로 결과에 영향",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ]
+  },
+  {
+    "id": "memorize-se_009",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "테스트 레벨 4단계를 쓰시오.",
+    "answer": "단위 테스트 → 통합 테스트 → 시스템 테스트 → 인수 테스트",
+    "explanation": "단위: 모듈 단위\n통합: 모듈 간 인터페이스\n시스템: 전체 시스템\n인수: 사용자 관점(알파/베타)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "테스트레벨"
+    ]
+  },
+  {
+    "id": "memorize-se_010",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "통합 테스트에서 상향식은 ( ), 하향식은 ( )이 필요하다.",
+    "answer": "상향식: 드라이버, 하향식: 스텁",
+    "explanation": "드라이버: 하위 모듈을 호출하는 상위 모듈 대역\n스텁: 상위 모듈이 호출하는 하위 모듈 대역",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "통합테스트",
+      "드라이버",
+      "스텁"
+    ]
+  },
+  {
+    "id": "memorize-se_011",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "GoF 디자인 패턴의 3가지 분류를 쓰시오.",
+    "answer": "생성 패턴, 구조 패턴, 행위 패턴",
+    "explanation": "생성: 객체 생성(싱글톤, 팩토리메서드, 추상팩토리, 빌더, 프로토타입)\n구조: 객체 구성(어댑터, 브릿지, 컴포지트, 데코레이터, 퍼사드, 플라이웨이트, 프록시)\n행위: 상호작용(옵저버, 전략, 커맨드, 이터레이터 등)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "디자인패턴",
+      "GoF"
+    ]
+  },
+  {
+    "id": "memorize-se_012",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "싱글톤 패턴이란?",
+    "answer": "클래스의 인스턴스가 하나만 생성되는 것을 보장하는 생성 패턴",
+    "explanation": "전역 변수를 사용하지 않고 객체를 하나만 생성하며, 어디서든지 참조할 수 있게 합니다.",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "싱글톤",
+      "디자인패턴"
+    ]
+  },
+  {
+    "id": "memorize-se_013",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "UML 다이어그램의 구조/행위 분류를 쓰시오.",
+    "answer": "구조: 클래스, 객체, 컴포넌트, 배포, 복합체구조, 패키지\n행위: 유스케이스, 활동, 상태머신, 시퀀스, 통신, 상호작용개요, 타이밍",
+    "explanation": "구조 다이어그램: 정적인 시스템 구조 표현\n행위 다이어그램: 동적인 시스템 동작 표현",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "UML",
+      "다이어그램"
+    ]
+  },
+  {
+    "id": "memorize-se_014",
+    "categoryId": "memorize-se",
+    "subcategory": "릴리스노트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "릴리스 노트의 작성 항목을 쓰시오.",
+    "answer": "헤더, 개요, 목적, 문제요약, 재현항목, 수정/개선내용, 사용자영향도, SW지원영향도, 노트, 면책조항, 연락처",
+    "explanation": "릴리스 노트는 소프트웨어의 최종 사용자에게 변경사항을 공유하기 위한 문서입니다.",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "릴리스노트"
+    ]
+  },
+  {
+    "id": "memorize-se_015",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "EAI의 4가지 유형을 쓰시오.",
+    "answer": "포인트 투 포인트, 허브 앤 스포크, 메시지 버스, 하이브리드",
+    "explanation": "P2P: 1:1 통합\n허브앤스포크: 중앙집중 허브\n메시지버스: 미들웨어 기반\n하이브리드: 허브앤스포크+메시지버스",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ]
+  }
+]

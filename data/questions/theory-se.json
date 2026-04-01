@@ -1,0 +1,91 @@
+[
+  {
+    "id": "theory-se_001",
+    "categoryId": "theory-se",
+    "subcategory": "개발방법론",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "XP(eXtreme Programming)의 5가지 핵심가치를 모두 쓰시오.",
+    "answer": "피드백, 존중, 용기, 단순성, 소통(의사소통)",
+    "explanation": "XP의 5가지 핵심가치 (피존의 용기는 단순하게 소통한다):\n- 피드백: 지속적인 테스트와 반복적 결함 수정\n- 존중: 모든 프로젝트 관리자는 팀원의 기여 존중\n- 용기: 고객 요구사항 변화에 능동적인 대처\n- 단순성: 부가적 기능, 사용않는 알고리즘 배제\n- 소통: 개발자, 관리자, 고객 간의 원활한 소통",
+    "choices": [
+      {"label": "1", "text": "피드백, 존중, 용기, 단순성, 소통", "isCorrect": true},
+      {"label": "2", "text": "피드백, 존중, 용기, 효율성, 소통", "isCorrect": false},
+      {"label": "3", "text": "반복, 존중, 용기, 단순성, 소통", "isCorrect": false},
+      {"label": "4", "text": "피드백, 신뢰, 용기, 단순성, 협업", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "XP", "애자일", "핵심가치"]
+  },
+  {
+    "id": "theory-se_002",
+    "categoryId": "theory-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "디자인 패턴 3가지 유형(생성, 구조, 행위)에 해당하는 패턴을 각각 3개 이상 쓰시오.",
+    "answer": "생성: 추상팩토리, 빌더, 팩토리메서드, 프로토타입, 싱글턴\n구조: 어댑터, 브릿지, 컴포지트, 데코레이터, 퍼사드, 플라이웨이트, 프록시\n행위: 옵서버, 커맨드, 스트레티지, 템플릿메서드, 이터레이터, 미디에이터, 비지터",
+    "explanation": "GoF 디자인 패턴 분류:\n- 생성패턴: 객체 생성에 관한 패턴\n- 구조패턴: 클래스/객체 조합에 관한 패턴\n- 행위패턴: 객체 간 상호작용 패턴",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "디자인패턴", "GoF"]
+  },
+  {
+    "id": "theory-se_003",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "UML의 구조적 다이어그램 6가지를 쓰시오.",
+    "answer": "클래스, 패키지, 복합체 구조, 객체, 컴포넌트, 배치 다이어그램",
+    "explanation": "구조적 다이어그램: 시스템의 정적 구조를 표현\n- 클래스: 클래스 사이 관계\n- 패키지: 모델 요소를 그룹화\n- 복합체 구조: 내부 구조 표현\n- 객체: 객체 정보\n- 컴포넌트: 컴포넌트 간 관계\n- 배치: 물리적 배포 구조",
+    "choices": [
+      {"label": "1", "text": "클래스, 패키지, 복합체 구조, 객체, 컴포넌트, 배치", "isCorrect": true},
+      {"label": "2", "text": "클래스, 유스케이스, 활동, 객체, 컴포넌트, 배치", "isCorrect": false},
+      {"label": "3", "text": "클래스, 패키지, 순차, 객체, 컴포넌트, 배치", "isCorrect": false},
+      {"label": "4", "text": "클래스, 패키지, 상태, 객체, 컴포넌트, 배치", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "UML", "다이어그램"]
+  },
+  {
+    "id": "theory-se_004",
+    "categoryId": "theory-se",
+    "subcategory": "비용산정",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "보헴(Boehm)이 제안한 비용 산정 모형으로, 프로그램 규모에 따라 비용을 산정하는 모형은?",
+    "answer": "COCOMO",
+    "explanation": "COCOMO(COnstructive COst MOdel)는 보헴이 제안한 모형입니다.\n프로그램 규모에 따라 Organic, Semi-detached, Embedded 모드로 분류합니다.",
+    "choices": [
+      {"label": "1", "text": "COCOMO", "isCorrect": true},
+      {"label": "2", "text": "PUTNAM", "isCorrect": false},
+      {"label": "3", "text": "FP(Function Point)", "isCorrect": false},
+      {"label": "4", "text": "LOC", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "비용산정", "COCOMO"]
+  },
+  {
+    "id": "theory-se_005",
+    "categoryId": "theory-se",
+    "subcategory": "결합도",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "다음 결합도의 이름을 작성하시오.\na) 한 모듈이 다른 모듈의 내부 구현에 직접 접근\nb) 여러 모듈이 전역 변수를 공유\nc) 필요한 정보만 전달하지 않고 전체 자료 구조를 전달",
+    "answer": "a: 내용 결합도\nb: 공통(공유) 결합도\nc: 스탬프 결합도",
+    "explanation": "결합도(높→낮): 내용 > 공통 > 외부 > 제어 > 스탬프 > 자료\n내용 결합도: 내부 구현 직접 접근 (가장 나쁨)\n공통 결합도: 전역 변수 공유\n스탬프 결합도: 전체 자료 구조 전달",
+    "choices": [
+      {"label": "1", "text": "내용, 공통, 스탬프 결합도", "isCorrect": true},
+      {"label": "2", "text": "내용, 외부, 스탬프 결합도", "isCorrect": false},
+      {"label": "3", "text": "공통, 내용, 제어 결합도", "isCorrect": false},
+      {"label": "4", "text": "내용, 공통, 제어 결합도", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "tags": ["소프트웨어공학", "결합도", "모듈"]
+  }
+]

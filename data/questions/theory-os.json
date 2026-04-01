@@ -1,0 +1,96 @@
+[
+  {
+    "id": "theory-os_001",
+    "categoryId": "theory-os",
+    "subcategory": "스케줄링",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "예상 CPU 실행 시간이 가장 짧은 프로세스에게 먼저 CPU를 할당하는 비선점형 스케줄링 알고리즘은?",
+    "answer": "SJF(Shortest Job First)",
+    "explanation": "SJF는 실행 시간이 가장 짧은 프로세스를 우선 처리합니다. 평균 대기 시간을 최소화하지만, 긴 프로세스가 무한 대기할 수 있는 기아(Starvation) 문제가 있습니다.",
+    "choices": [
+      {"label": "1", "text": "SJF", "isCorrect": true},
+      {"label": "2", "text": "FCFS", "isCorrect": false},
+      {"label": "3", "text": "Round Robin", "isCorrect": false},
+      {"label": "4", "text": "Priority", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["운영체제", "스케줄링", "SJF"]
+  },
+  {
+    "id": "theory-os_002",
+    "categoryId": "theory-os",
+    "subcategory": "스케줄링",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "SJF의 선점형 버전으로, 남은 실행 시간이 더 짧은 프로세스가 도착하면 현재 프로세스를 중단하는 알고리즘은?",
+    "answer": "SRT(Shortest Remaining Time)",
+    "explanation": "SRT는 SJF의 선점형 버전입니다. 현재 실행 중인 프로세스보다 더 짧은 실행 시간의 프로세스가 도착하면 CPU를 빼앗깁니다.",
+    "choices": [
+      {"label": "1", "text": "SRT", "isCorrect": true},
+      {"label": "2", "text": "SJF", "isCorrect": false},
+      {"label": "3", "text": "HRN", "isCorrect": false},
+      {"label": "4", "text": "MLQ", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["운영체제", "스케줄링", "SRT", "선점형"]
+  },
+  {
+    "id": "theory-os_003",
+    "categoryId": "theory-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교착상태(Deadlock)의 4가지 필요조건을 모두 쓰시오.",
+    "answer": "상호배제, 점유와 대기, 비선점, 환형 대기",
+    "explanation": "교착상태의 4가지 필요조건:\n1. 상호배제(Mutual Exclusion): 자원을 한 번에 하나의 프로세스만 사용\n2. 점유와 대기(Hold and Wait): 자원을 점유하면서 다른 자원을 대기\n3. 비선점(Non-preemption): 강제로 자원을 빼앗을 수 없음\n4. 환형 대기(Circular Wait): 순환 형태로 자원을 대기",
+    "choices": [
+      {"label": "1", "text": "상호배제, 점유와 대기, 비선점, 환형 대기", "isCorrect": true},
+      {"label": "2", "text": "상호배제, 점유와 대기, 선점, 환형 대기", "isCorrect": false},
+      {"label": "3", "text": "상호배제, 점유, 비선점, 순차 대기", "isCorrect": false},
+      {"label": "4", "text": "독점, 대기, 비선점, 환형 대기", "isCorrect": false}
+    ],
+    "source": "generated",
+    "tags": ["운영체제", "교착상태", "데드락"]
+  },
+  {
+    "id": "theory-os_004",
+    "categoryId": "theory-os",
+    "subcategory": "웹기술",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "JavaScript, XML 등을 활용하여 전체 페이지 새로고침 없이 웹 페이지 일부만 비동기식으로 갱신하는 기법은?",
+    "answer": "AJAX(Asynchronous JavaScript and XML)",
+    "explanation": "AJAX는 XMLHttpRequest 객체를 이용하여 서버와 비동기 통신을 수행합니다. 페이지 전체를 다시 로딩하지 않고 필요한 부분만 업데이트합니다.",
+    "choices": [
+      {"label": "1", "text": "AJAX", "isCorrect": true},
+      {"label": "2", "text": "WebSocket", "isCorrect": false},
+      {"label": "3", "text": "REST", "isCorrect": false},
+      {"label": "4", "text": "SOAP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "tags": ["웹기술", "AJAX", "비동기"]
+  },
+  {
+    "id": "theory-os_005",
+    "categoryId": "theory-os",
+    "subcategory": "네트워크",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "노드들끼리 무선 인터페이스로 서로 통신하고, 외부 도움 없이 자체적으로 네트워킹이 가능한 네트워크는?",
+    "answer": "애드혹(Ad-hoc) 네트워크",
+    "explanation": "애드혹 네트워크는 기반 인프라(AP, 기지국) 없이 무선 단말들끼리 직접 통신하는 네트워크입니다. 군사용으로도 활용됩니다.",
+    "choices": [
+      {"label": "1", "text": "애드혹(Ad-hoc) 네트워크", "isCorrect": true},
+      {"label": "2", "text": "메쉬(Mesh) 네트워크", "isCorrect": false},
+      {"label": "3", "text": "피어투피어(P2P) 네트워크", "isCorrect": false},
+      {"label": "4", "text": "클라이언트-서버 네트워크", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "기출문제_2024년_3회_수업자료_v0.1.pdf",
+    "tags": ["네트워크", "애드혹", "무선"]
+  }
+]

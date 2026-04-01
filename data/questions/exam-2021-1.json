@@ -1,0 +1,834 @@
+[
+  {
+    "id": "exam-2021-1_001",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/네트워크",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "물리 네트워크(MAC) 주소에 해당하는 IP 주소를 알려주는 역순 주소 결정 프로토콜은?",
+    "answer": "RARP",
+    "explanation": "RARP(Reverse Address Resolution Protocol)는 MAC→IP 변환. ARP는 IP→MAC 변환.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "RARP",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "ARP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "ICMP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "DHCP",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "RARP",
+      "네트워크",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_002",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/DB",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "DB 설계 절차에서 (1)특정 DBMS 성능을 고려한 저장 구조 변환, (2)추상적/개념적 구조 도출(E-R다이어그램), (3)스키마 설계/정규화 과정은?",
+    "answer": "1. 물리적 설계  2. 개념적 설계  3. 논리적 설계",
+    "explanation": "DB설계 절차: 요구사항 분석 > 개념적 설계 > 논리적 설계 > 물리적 설계 > 구현",
+    "choices": [
+      {
+        "label": "1",
+        "text": "물리적설계, 개념적설계, 논리적설계",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "논리적설계, 물리적설계, 개념적설계",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "개념적설계, 논리적설계, 물리적설계",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "물리적설계, 논리적설계, 개념적설계",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "DB설계",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_003",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/소프트웨어공학",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "시스템이 제공하는 기능/서비스에 대한 요구사항은 ( 1 ) 요구사항, 기능 이외의 제약사항은 ( 2 ) 요구사항이다.",
+    "answer": "1. 기능적  2. 비기능적",
+    "explanation": "기능적 요구사항: 시스템이 수행해야 할 기능\n비기능적 요구사항: 성능, 보안, 신뢰성 등 제약사항",
+    "choices": [
+      {
+        "label": "1",
+        "text": "기능적, 비기능적",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "비기능적, 기능적",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "필수, 선택",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "명시적, 암묵적",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "요구사항",
+      "소프트웨어공학",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_004",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/웹",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "웹 서비스명, 제공 위치, 메시지 포맷, 프로토콜 정보 등이 기술된 XML 형식의 언어는?",
+    "answer": "WSDL",
+    "explanation": "WSDL(Web Services Description Language)은 웹 서비스의 상세 정보를 XML로 기술합니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "WSDL",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "SOAP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "UDDI",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "REST",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "WSDL",
+      "웹서비스",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_005",
+    "categoryId": "exam-2021-1",
+    "subcategory": "Python 문자열",
+    "type": "code",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "다음 파이썬 코드의 출력 결과를 쓰시오.",
+    "answer": "skiddp",
+    "explanation": "각 문자열의 0번째(첫 글자)를 연결: seoul→s, kyeonggi→k, inchon→i, daejeon→d, daegu→d, pusan→p",
+    "codeSnippet": "class good:\n    li = [\"seoul\",\"kyeonggi\",\"inchon\",\"daejeon\",\"daegu\",\"pusan\"]\ng = good()\nstr01 = ''\nfor i in g.li:\n    str01 = str01 + i[0]\nprint(str01)",
+    "codeLanguage": "python",
+    "choices": [
+      {
+        "label": "1",
+        "text": "skiddp",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "SKIDDP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "s k i d d p",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "seoul",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "Python",
+      "문자열",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_006",
+    "categoryId": "exam-2021-1",
+    "subcategory": "SQL 조건",
+    "type": "sql",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "SELECT COUNT(*) FROM 급여 WHERE EMPNO > 100 AND SAL >= 3000 OR EMPNO = 200; 의 결과는?",
+    "answer": "1",
+    "explanation": "EMPNO>100 AND SAL>=3000: 200번(3000)만 해당, OR EMPNO=200: 200번 이미 포함. 결과 1건",
+    "choices": [
+      {
+        "label": "1",
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "0",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "SQL",
+      "조건",
+      "COUNT",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_007",
+    "categoryId": "exam-2021-1",
+    "subcategory": "Java 2차원배열",
+    "type": "code",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "다음 Java 코드의 출력 결과를 쓰시오.",
+    "answer": "3\n1\n45\n50\n89",
+    "explanation": "arr[0].length=3(3개원소), arr[1].length=1(1개원소), arr[0][0]=45, arr[0][1]=50, arr[1][0]=89",
+    "codeSnippet": "public class Main {\n    public static void main(String[] args){\n        int[][] arr = new int[][]{{45,50,75},{89}};\n        System.out.println(arr[0].length);\n        System.out.println(arr[1].length);\n        System.out.println(arr[0][0]);\n        System.out.println(arr[0][1]);\n        System.out.println(arr[1][0]);\n    }\n}",
+    "codeLanguage": "java",
+    "choices": [
+      {
+        "label": "1",
+        "text": "3, 1, 45, 50, 89",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "2, 1, 45, 50, 89",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3, 1, 50, 75, 89",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "3, 2, 45, 50, 89",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "Java",
+      "2차원배열",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_008",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/DB",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "정규화된 엔티티에 대해 성능 향상을 위해 중복, 통합, 분리를 수행하는 데이터 모델링 기법은?",
+    "answer": "비정규화(반정규화)",
+    "explanation": "반정규화 방법: 테이블 통합, 테이블 분할, 중복 테이블 추가, 중복 속성 추가",
+    "choices": [
+      {
+        "label": "1",
+        "text": "비정규화",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "정규화",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "인덱싱",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "파티셔닝",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "비정규화",
+      "DB",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_009",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "(1)경계값에서 오류 발생 확률이 높은 테스트, (2)입력 데이터를 유사 도메인별로 나누어 검사하는 테스트는?",
+    "answer": "1. 경계값 분석  2. 동등분할 테스트",
+    "explanation": "둘 다 블랙박스 테스트 기법입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "경계값 분석, 동등분할",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "동등분할, 경계값 분석",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "원인효과, 오류예측",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "구문커버리지, 분기커버리지",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "테스트",
+      "블랙박스",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_010",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "(1)개별 모듈이 정상 실행되는지 확인하는 테스트, (2)인터페이스 간 시스템이 정상 실행되는지 확인하는 테스트는?",
+    "answer": "1. 단위 테스트  2. 통합 테스트",
+    "explanation": "단위 테스트: 모듈 단위, 통합 테스트: 모듈 간 인터페이스",
+    "choices": [
+      {
+        "label": "1",
+        "text": "단위 테스트, 통합 테스트",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "통합 테스트, 시스템 테스트",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "시스템 테스트, 인수 테스트",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "알파 테스트, 베타 테스트",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "단위테스트",
+      "통합테스트",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_011",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/네트워크",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "IPv6는 ( 1 ) 비트, IPv4는 32비트이며 ( 2 ) 비트씩 네 부분으로 나눈다.",
+    "answer": "1. 128  2. 8",
+    "explanation": "IPv4: 32비트(8비트×4), IPv6: 128비트(16비트×8)",
+    "choices": [
+      {
+        "label": "1",
+        "text": "128, 8",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "64, 8",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "128, 16",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "256, 8",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "IPv4",
+      "IPv6",
+      "네트워크",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_012",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/운영체제",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "공유메모리, 소켓, 세마포어, 메시지 큐 등 프로세스 간 통신하는 기술은?",
+    "answer": "IPC (Inter Process Communication)",
+    "explanation": "IPC는 프로세스 간 데이터를 주고받는 통신 메커니즘입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "IPC",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "RPC",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "API",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SDK",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "IPC",
+      "운영체제",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_013",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/소프트웨어공학",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "Point to Point, Hub & Spoke, Message Bus 유형을 가진 기업 애플리케이션 통합 솔루션은?",
+    "answer": "EAI (Enterprise Application Integration)",
+    "explanation": "EAI는 기업 내 서로 다른 시스템 간의 정보를 연계하고 통합하는 솔루션입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "EAI",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "ESB",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SOA",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "BPM",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "EAI",
+      "소프트웨어공학",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_014",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/DB",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "테이블의 행의 수를 Cardinality, 속성의 수를 무엇이라 하는가?",
+    "answer": "Degree",
+    "explanation": "Cardinality: 튜플(행)의 수, Degree: 속성(열)의 수",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Degree",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Attribute",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Domain",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Schema",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "Cardinality",
+      "Degree",
+      "DB",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_015",
+    "categoryId": "exam-2021-1",
+    "subcategory": "C언어 구조체",
+    "type": "code",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
+    "answer": "Lee\n38",
+    "explanation": "p=s이고 p++로 s[1]을 가리킴. s[1]은 {\"Lee\", 38}",
+    "codeSnippet": "#include <stdio.h>\nstruct good {\n    char name[10];\n    int age;\n};\nvoid main(){\n    struct good s[] = {\"Kim\",28,\"Lee\",38,\"Seo\",50,\"Park\",35};\n    struct good *p;\n    p = s;\n    p++;\n    printf(\"%s\\n\", p->name);\n    printf(\"%d\\n\", p->age);\n}",
+    "codeLanguage": "c",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Lee, 38",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Kim, 28",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Seo, 50",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Park, 35",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "C언어",
+      "구조체",
+      "포인터",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_016",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/DB",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "데이터 모델 구성요소 3가지: (1)데이터 처리 작업에 대한 명세, (2)데이터를 어떻게 나타낼 것인지, (3)데이터 무결성 유지를 위한 방법은?",
+    "answer": "1. 연산  2. 구조  3. 제약조건",
+    "explanation": "데이터 모델의 3요소: 구조(Structure), 연산(Operation), 제약조건(Constraint)",
+    "choices": [
+      {
+        "label": "1",
+        "text": "연산, 구조, 제약조건",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "구조, 연산, 무결성",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "테이블, 속성, 관계",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "엔티티, 속성, 관계",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "데이터모델",
+      "DB",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_017",
+    "categoryId": "exam-2021-1",
+    "subcategory": "Java 반복문",
+    "type": "code",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 1,
+    "question": "다음 Java 코드의 출력 결과를 쓰시오. 0+1+2+3+4+5=",
+    "answer": "0+1+2+3+4+5=15",
+    "explanation": "i가 0~5까지 반복하며 j에 누적합산, i==5일 때 '='과 j를 출력",
+    "codeSnippet": "public class Main {\n    public static void main(String[] args){\n        int i, j;\n        for(j=0, i=0; i<=5; i++){\n            j+=i;\n            System.out.print(i);\n            if(i==5){\n                System.out.print(\"=\");\n                System.out.print(j);\n            }else{\n                System.out.print(\"+\");\n            }\n        }\n    }\n}",
+    "codeLanguage": "java",
+    "choices": [
+      {
+        "label": "1",
+        "text": "0+1+2+3+4+5=15",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "1+2+3+4+5=15",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "0+1+2+3+4+5=21",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "15",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "Java",
+      "반복문",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_018",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/보안",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "개인 또는 그룹의 식별자에 기반을 둔 접근 제어 방식으로, 사용자가 자신의 판단에 따라 권한을 허용하는 방식은?",
+    "answer": "임의적 접근 통제 (DAC)",
+    "explanation": "DAC: 사용자 기반, MAC: 보안 등급 기반, RBAC: 역할 기반",
+    "choices": [
+      {
+        "label": "1",
+        "text": "DAC (임의적 접근 통제)",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "MAC (강제적 접근 통제)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "RBAC (역할 기반 접근 통제)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ABAC (속성 기반 접근 통제)",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "DAC",
+      "접근통제",
+      "보안",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_019",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/소프트웨어공학",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "결합도에서 (1)다른 모듈 내부 변수/기능을 사용, (2)배열/객체/구조가 전달, (3)전역 변수를 참조하는 결합도는?",
+    "answer": "1. 내용 결합도  2. 스탬프 결합도  3. 공통 결합도",
+    "explanation": "결합도(강→약): 내용 > 공통 > 외부 > 제어 > 스탬프 > 자료",
+    "choices": [
+      {
+        "label": "1",
+        "text": "내용, 스탬프, 공통",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "공통, 스탬프, 내용",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "내용, 공통, 외부",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "제어, 스탬프, 공통",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "결합도",
+      "소프트웨어공학",
+      "2021년1회"
+    ]
+  },
+  {
+    "id": "exam-2021-1_020",
+    "categoryId": "exam-2021-1",
+    "subcategory": "이론/보안",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 1,
+    "question": "세션을 가로채는 공격으로 RST 패킷을 통해 정상 연결을 종료시킨 후 공격자에게 재연결하는 기법은?",
+    "answer": "세션 하이재킹",
+    "explanation": "세션 하이재킹은 세션 관리 취약점을 이용한 공격 기법입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "세션 하이재킹",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "스니핑",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "스푸핑",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "중간자 공격",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/191",
+    "tags": [
+      "세션하이재킹",
+      "보안",
+      "2021년1회"
+    ]
+  }
+]

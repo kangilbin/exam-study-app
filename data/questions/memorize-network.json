@@ -1,0 +1,213 @@
+[
+  {
+    "id": "memorize-network_001",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "OSI 7계층을 순서대로 쓰시오.",
+    "answer": "물리→데이터링크→네트워크→전송→세션→표현→응용",
+    "explanation": "1.물리(비트) 2.데이터링크(프레임,MAC) 3.네트워크(패킷,IP) 4.전송(세그먼트,TCP/UDP) 5.세션 6.표현(인코딩) 7.응용(HTTP,FTP)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "OSI",
+      "7계층"
+    ]
+  },
+  {
+    "id": "memorize-network_002",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "프로토콜의 3요소를 쓰시오.",
+    "answer": "구문(Syntax), 의미(Semantics), 순서(Timing)",
+    "explanation": "구문: 데이터 형식/부호화\n의미: 제어 정보 규정\n순서: 통신 속도/메시지 순서",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "프로토콜"
+    ]
+  },
+  {
+    "id": "memorize-network_003",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "ARP와 RARP의 차이를 설명하시오.",
+    "answer": "ARP: IP→MAC 주소 변환, RARP: MAC→IP 주소 변환",
+    "explanation": "ARP(Address Resolution Protocol): 논리주소→물리주소\nRARP(Reverse ARP): 물리주소→논리주소",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "ARP",
+      "RARP"
+    ]
+  },
+  {
+    "id": "memorize-network_004",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "TCP와 UDP의 차이를 설명하시오.",
+    "answer": "TCP: 연결형, 신뢰성 보장, 순서 보장\nUDP: 비연결형, 신뢰성 미보장, 빠른 전송",
+    "explanation": "TCP: 3-Way Handshake(SYN→SYN+ACK→ACK)\nUDP: 실시간 스트리밍, DNS 등에 사용",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "TCP",
+      "UDP"
+    ]
+  },
+  {
+    "id": "memorize-network_005",
+    "categoryId": "memorize-network",
+    "subcategory": "IP",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "IPv4와 IPv6의 차이를 쓰시오.",
+    "answer": "IPv4: 32비트(8비트×4), IPv6: 128비트(16비트×8)",
+    "explanation": "IPv6 특징: 주소 공간 확대, IPSec 기본 탑재, 이동성 지원, 자동주소 설정",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "IPv4",
+      "IPv6"
+    ]
+  },
+  {
+    "id": "memorize-network_006",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "라우팅 프로토콜에서 IGP와 EGP를 설명하시오.",
+    "answer": "IGP(내부): RIP, OSPF\nEGP(외부): BGP",
+    "explanation": "RIP: 거리벡터, 최대 15홉\nOSPF: 링크상태, 다익스트라 알고리즘\nBGP: 경로벡터, AS간 라우팅",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "라우팅",
+      "OSPF",
+      "RIP"
+    ]
+  },
+  {
+    "id": "memorize-network_007",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "DoS 공격 유형을 쓰시오.",
+    "answer": "SYN Flooding, Land Attack, Smurf, Ping of Death, Teardrop",
+    "explanation": "SYN Flooding: 반개방 연결\nLand Attack: 출발지=목적지 IP\nSmurf: ICMP 대량 전송\nPing of Death: 초대형 패킷\nTeardrop: 분할 순서 변경",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "DoS",
+      "보안"
+    ]
+  },
+  {
+    "id": "memorize-network_008",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "대칭키와 비대칭키 암호화의 차이를 설명하시오.",
+    "answer": "대칭키: 암호화/복호화에 같은 키(AES, DES, SEED)\n비대칭키: 공개키/개인키 쌍(RSA, ECC)",
+    "explanation": "대칭키: 빠르지만 키 분배 문제\n비대칭키: 느리지만 키 분배 용이\n하이브리드 방식으로 함께 사용",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "대칭키",
+      "비대칭키",
+      "암호화"
+    ]
+  },
+  {
+    "id": "memorize-network_009",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "접근 통제 3가지 방식을 쓰시오.",
+    "answer": "DAC(임의적), MAC(강제적), RBAC(역할 기반)",
+    "explanation": "DAC: 소유자가 권한 설정\nMAC: 보안 등급 기반, 중앙 관리\nRBAC: 역할에 권한 부여",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "접근통제",
+      "DAC",
+      "MAC",
+      "RBAC"
+    ]
+  },
+  {
+    "id": "memorize-network_010",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "SQL Injection이란?",
+    "answer": "악의적인 SQL 구문을 삽입하여 DB를 조작하는 공격 기법",
+    "explanation": "방어: 입력값 검증, Prepared Statement 사용, 최소 권한 부여",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "SQL Injection",
+      "보안"
+    ]
+  },
+  {
+    "id": "memorize-network_011",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "XSS(Cross-Site Scripting)란?",
+    "answer": "웹 페이지에 악성 스크립트를 삽입하여 사용자 정보를 탈취하는 공격",
+    "explanation": "방어: 입출력 값 검증, HTML 인코딩, Content Security Policy",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "XSS",
+      "보안"
+    ]
+  },
+  {
+    "id": "memorize-network_012",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "IPSec이란?",
+    "answer": "IP 계층에서 무결성과 인증(AH)과 기밀성(ESP)을 제공하는 보안 프로토콜",
+    "explanation": "AH(Authentication Header): 인증/무결성\nESP(Encapsulating Security Payload): 암호화/인증",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "IPSec",
+      "보안"
+    ]
+  },
+  {
+    "id": "memorize-network_013",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "CIA 트라이앵글(보안의 3대 요소)을 쓰시오.",
+    "answer": "기밀성(Confidentiality), 무결성(Integrity), 가용성(Availability)",
+    "explanation": "기밀성: 비인가 접근 차단\n무결성: 데이터 변경 방지\n가용성: 서비스 지속 보장",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "CIA",
+      "보안"
+    ]
+  }
+]

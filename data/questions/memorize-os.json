@@ -1,0 +1,162 @@
+[
+  {
+    "id": "memorize-os_001",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "비선점형 스케줄링 알고리즘을 쓰시오.",
+    "answer": "FCFS, SJF, HRN, 우선순위, 기한부",
+    "explanation": "FCFS: 먼저 도착한 순서\nSJF: 실행시간 짧은 순\nHRN: (대기시간+서비스시간)/서비스시간\n비선점: 실행 중인 프로세스를 강제로 빼앗을 수 없음",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "스케줄링",
+      "비선점형"
+    ]
+  },
+  {
+    "id": "memorize-os_002",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "선점형 스케줄링 알고리즘을 쓰시오.",
+    "answer": "RR(Round Robin), SRT, 선점 우선순위, 다단계 큐, 다단계 피드백 큐",
+    "explanation": "RR: 시분할, 타임슬라이스\nSRT: SJF의 선점형\n다단계 피드백 큐: 큐 간 이동 가능",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ]
+  },
+  {
+    "id": "memorize-os_003",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교착상태(Deadlock)의 4가지 필요조건을 쓰시오.",
+    "answer": "상호배제, 점유와 대기, 비선점, 환형(순환) 대기",
+    "explanation": "4가지 조건이 모두 충족되어야 교착상태 발생\n해결: 예방, 회피, 탐지, 회복",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "교착상태",
+      "Deadlock"
+    ]
+  },
+  {
+    "id": "memorize-os_004",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교착상태 해결 방법 4가지를 쓰시오.",
+    "answer": "예방(Prevention), 회피(Avoidance), 탐지(Detection), 회복(Recovery)",
+    "explanation": "예방: 4가지 조건 중 하나 제거\n회피: 은행원 알고리즘(안전상태 유지)\n탐지: 자원 할당 그래프\n회복: 프로세스 종료/자원 선점",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "교착상태",
+      "해결"
+    ]
+  },
+  {
+    "id": "memorize-os_005",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "프로세스 상태 전이를 설명하시오.",
+    "answer": "생성→준비→실행→완료, 실행→대기→준비",
+    "explanation": "Dispatch: 준비→실행\nTimer Runout: 실행→준비\nBlock(Wait): 실행→대기\nWakeup: 대기→준비",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "프로세스",
+      "상태전이"
+    ]
+  },
+  {
+    "id": "memorize-os_006",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "페이지 교체 알고리즘을 쓰시오.",
+    "answer": "FIFO, LRU, LFU, OPT, NUR, SCR",
+    "explanation": "FIFO: 먼저 들어온 페이지 교체\nLRU: 가장 오래 사용 안한 페이지\nLFU: 사용 빈도 가장 낮은 페이지\nOPT: 최적(앞으로 가장 오래 사용 안될 페이지)",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "페이지교체",
+      "메모리"
+    ]
+  },
+  {
+    "id": "memorize-os_007",
+    "categoryId": "memorize-os",
+    "subcategory": "리눅스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "리눅스 파일 권한 chmod의 8진법을 설명하시오.",
+    "answer": "읽기(r)=4, 쓰기(w)=2, 실행(x)=1\nchmod 755: rwxr-xr-x",
+    "explanation": "첫번째 자리: 소유자\n두번째 자리: 그룹\n세번째 자리: 기타\n예) chmod 751: rwxr-x--x",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "chmod",
+      "리눅스"
+    ]
+  },
+  {
+    "id": "memorize-os_008",
+    "categoryId": "memorize-os",
+    "subcategory": "리눅스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "리눅스 기본 명령어를 쓰시오.",
+    "answer": "ls, cd, pwd, cp, mv, rm, mkdir, rmdir, cat, chmod, chown, grep, find, ps, kill",
+    "explanation": "ls: 목록, cd: 이동, pwd: 현재경로, cp: 복사, mv: 이동, rm: 삭제, mkdir: 디렉토리생성, cat: 파일내용출력",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "리눅스",
+      "명령어"
+    ]
+  },
+  {
+    "id": "memorize-os_009",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "프로세스 간 통신(IPC) 방법을 쓰시오.",
+    "answer": "공유 메모리, 메시지 큐, 파이프, 소켓, 세마포어",
+    "explanation": "공유 메모리: 메모리 공유\n메시지 큐: 메시지 전달\n파이프: 단방향 통신\n소켓: 네트워크 통신\n세마포어: 동기화",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ]
+  },
+  {
+    "id": "memorize-os_010",
+    "categoryId": "memorize-os",
+    "subcategory": "유닉스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "유닉스(UNIX)의 특징을 쓰시오.",
+    "answer": "대화식 운영체제, 다중 작업, 다중 사용자, 이식성, 계층적 트리 구조 파일 시스템",
+    "explanation": "C언어로 90% 이상 구현되어 이식성이 높고, 커널/쉘/유틸리티로 구성됩니다.",
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/193",
+    "tags": [
+      "유닉스",
+      "운영체제"
+    ]
+  }
+]

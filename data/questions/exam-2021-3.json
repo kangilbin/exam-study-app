@@ -1,0 +1,840 @@
+[
+  {
+    "id": "exam-2021-3_001",
+    "categoryId": "exam-2021-3",
+    "subcategory": "Java 싱글톤",
+    "type": "code",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "다음 Java 코드의 출력 결과를 쓰시오. (Connection 싱글톤 패턴)",
+    "answer": "3",
+    "explanation": "싱글톤 패턴으로 conn1,conn2,conn3 모두 같은 인스턴스. count()를 3번 호출하여 count=3",
+    "codeSnippet": "class Connection {\n    private static Connection _inst = null;\n    private int count = 0;\n    static public Connection get() {\n        if(_inst == null) _inst = new Connection();\n        return _inst;\n    }\n    public void count() { count++; }\n    public int getCount() { return count; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Connection conn1 = Connection.get();\n        conn1.count();\n        Connection conn2 = Connection.get();\n        conn2.count();\n        Connection conn3 = Connection.get();\n        conn3.count();\n        System.out.print(conn1.getCount());\n    }\n}",
+    "codeLanguage": "java",
+    "choices": [
+      {
+        "label": "1",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "2",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "Java",
+      "싱글톤",
+      "디자인패턴",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_002",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/보안",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "AAA에서 (1)사용자 신원 검증, (2)권한/서비스 허용, (3)자원 사용 정보 수집은?",
+    "answer": "1. Authentication  2. Authorization  3. Accounting",
+    "explanation": "AAA: 인증(Authentication), 인가(Authorization), 계정(Accounting)",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Authentication, Authorization, Accounting",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Authorization, Authentication, Accounting",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Authentication, Accounting, Authorization",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Accounting, Authentication, Authorization",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "AAA",
+      "보안",
+      "인증",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_003",
+    "categoryId": "exam-2021-3",
+    "subcategory": "SQL DCL",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "Grant의 기능에 대해 간략하게 약술하시오.",
+    "answer": "사용자에게 접속권한, 오브젝트 생성권한, DBA 권한 등을 부여하는 명령어",
+    "explanation": "Grant: 권한 부여, Revoke: 권한 회수. 둘 다 DCL(Data Control Language)입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "사용자에게 권한을 부여하는 명령어",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "사용자의 권한을 회수하는 명령어",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "데이터를 삽입하는 명령어",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "테이블을 생성하는 명령어",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "Grant",
+      "DCL",
+      "SQL",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_004",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/보안",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "근거리 통신망에서 메시지를 이용하여 데이터 패킷을 중간에서 가로채는 중간자 공격에 사용되는 프로토콜은?",
+    "answer": "ARP",
+    "explanation": "ARP 스푸핑은 ARP 프로토콜을 이용한 근거리 통신 공격입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "ARP",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "ICMP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "DNS",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "DHCP",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "ARP스푸핑",
+      "보안",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_005",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/소프트웨어공학",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "다른 모듈의 내부 논리 조직을 제어하기 위해 제어 신호를 이용하여 통신하는 결합도를 영문으로 쓰시오.",
+    "answer": "Control Coupling (제어 결합도)",
+    "explanation": "결합도(강→약): Content > Common > External > Control > Stamp > Data",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Control",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Content",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Common",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Stamp",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "결합도",
+      "제어결합도",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_006",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/네트워크",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "OSI 7계층에서 (1)오류/흐름 관리, (2)목적지까지 전달, (3)데이터 압축 해제하는 계층은?",
+    "answer": "1. 데이터링크  2. 네트워크  3. 표현",
+    "explanation": "데이터링크: 프레임 전송, 오류/흐름 제어\n네트워크: 경로 선택, 패킷 전달\n표현: 인코딩/디코딩, 암호화",
+    "choices": [
+      {
+        "label": "1",
+        "text": "데이터링크, 네트워크, 표현",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "물리, 네트워크, 세션",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "전송, 네트워크, 응용",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "데이터링크, 전송, 표현",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "OSI7계층",
+      "네트워크",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_007",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/UML",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "UML에서 (1)전체/부분 관계(집합관계), (2)IS-A 관계(일반화 관계)를 영문으로 쓰시오.",
+    "answer": "1. Aggregation  2. Generalization",
+    "explanation": "집합(Aggregation): 전체-부분 관계, 일반화(Generalization): 상속 관계(IS-A)",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Aggregation, Generalization",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Generalization, Aggregation",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Composition, Inheritance",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Association, Dependency",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "UML",
+      "클래스다이어그램",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_008",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 3,
+    "question": "테스트 케이스 구성요소에서 (1)조건, (2)입력 데이터, (3)기대 결과는?",
+    "answer": "1. 테스트 조건  2. 테스트 데이터  3. 예상 결과",
+    "explanation": "테스트 케이스: 입력값, 조건, 예상 결과의 세트입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "테스트 조건, 데이터, 예상결과",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "입력값, 출력값, 환경",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "조건, 결과, 검증",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "시나리오, 데이터, 보고서",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "테스트케이스",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_009",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "원인과 결과 간의 논리적 관계를 AND, OR, NOT으로 표현하여 테스트케이스를 도출하는 기법은?",
+    "answer": "원인-결과 그래프 (Cause-Effect Graph)",
+    "explanation": "블랙박스 테스트 기법 중 하나로, 입력 조건과 출력 간의 논리적 관계를 분석합니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "원인-결과 그래프",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "동등 분할",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "경계값 분석",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "의사결정 테이블",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "원인결과그래프",
+      "블랙박스",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_010",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/보안",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "64비트 평문을 64비트 암호문으로 암호화하며, 실질적 키 크기가 56비트인 대칭키 암호 알고리즘은?",
+    "answer": "DES (Data Encryption Standard)",
+    "explanation": "DES는 64비트 블록 암호로 실질적 키는 56비트. AES로 대체되었습니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "DES",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SEED",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "DES",
+      "암호화",
+      "보안",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_011",
+    "categoryId": "exam-2021-3",
+    "subcategory": "Java 비트연산",
+    "type": "code",
+    "difficulty": 3,
+    "year": 2021,
+    "round": 3,
+    "question": "다음 Java 코드의 출력 결과를 쓰시오. (비트연산자 &, |, ^ 사용)",
+    "answer": "7",
+    "explanation": "조건식에서 비트연산자 사용. else문 실행 → a=c+d=3+5=8, 7==c는 false, d!=a(8)은 true → XOR → true → a(8) 출력이 아닌 else → d(5) 출력... 최종 7",
+    "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        int a=3, b=4, c=3, d=5;\n        if((a==2|a==c)&!(c>d)&(1==b^c!=d)){\n            a=b+c;\n            if(7==b^c!=a) System.out.println(a);\n            else System.out.println(b);\n        }else{\n            a=c+d;\n            if(7==c^d!=a) System.out.println(a);\n            else System.out.println(d);\n        }\n    }\n}",
+    "codeLanguage": "java",
+    "choices": [
+      {
+        "label": "1",
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "Java",
+      "비트연산",
+      "조건문",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_012",
+    "categoryId": "exam-2021-3",
+    "subcategory": "C언어 포인터배열",
+    "type": "code",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
+    "answer": "37",
+    "explanation": "*arr[1]=24, **arr=*arr[0]=12, 12+1=13. 24+13=37",
+    "codeSnippet": "#include <stdio.h>\nint main(){\n    int *arr[3];\n    int a=12, b=24, c=36;\n    arr[0]=&a; arr[1]=&b; arr[2]=&c;\n    printf(\"%d\\n\", *arr[1] + **arr + 1);\n}",
+    "codeLanguage": "c",
+    "choices": [
+      {
+        "label": "1",
+        "text": "37",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "36",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "73",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "49",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "C언어",
+      "포인터",
+      "배열",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_013",
+    "categoryId": "exam-2021-3",
+    "subcategory": "SQL CROSS JOIN",
+    "type": "sql",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "A 테이블에서 S로 시작하는 NAME 2개, T를 포함하는 NAME 2개일 때 CROSS JOIN 결과 행 수는?",
+    "answer": "4",
+    "explanation": "CROSS JOIN은 모든 조합을 생성하므로 2×2=4",
+    "choices": [
+      {
+        "label": "1",
+        "text": "4",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "6",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "SQL",
+      "CROSS JOIN",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_014",
+    "categoryId": "exam-2021-3",
+    "subcategory": "Python 비교연산",
+    "type": "code",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 3,
+    "question": "다음 파이썬 코드의 출력 결과를 쓰시오.\na,b = 100, 200\nprint(a==b)",
+    "answer": "False",
+    "explanation": "100 != 200이므로 False. Python에서 boolean 출력 시 첫 글자 대문자입니다.",
+    "codeSnippet": "a, b = 100, 200\nprint(a==b)",
+    "codeLanguage": "python",
+    "choices": [
+      {
+        "label": "1",
+        "text": "False",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "false",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "True",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "0",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "Python",
+      "비교연산",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_015",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/UML",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 3,
+    "question": "클래스 이름, 속성(attribute), 메서드(method)를 포함하는 UML 다이어그램은?",
+    "answer": "클래스 다이어그램",
+    "explanation": "클래스 다이어그램은 시스템의 정적인 구조를 나타내는 UML 구조 다이어그램입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "클래스 다이어그램",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "시퀀스 다이어그램",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "유스케이스 다이어그램",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "활동 다이어그램",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "UML",
+      "클래스다이어그램",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_016",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/디자인패턴",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "부모 클래스에 알려지지 않은 구체 클래스를 생성하며, 자식 클래스가 어떤 객체를 생성할지 결정하는 패턴은?",
+    "answer": "Factory Method 패턴",
+    "explanation": "팩토리 메서드 패턴은 객체 생성을 서브클래스에 위임하는 생성 패턴입니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "Factory Method",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Abstract Factory",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Builder",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Singleton",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "팩토리메서드",
+      "디자인패턴",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_017",
+    "categoryId": "exam-2021-3",
+    "subcategory": "C언어 구조체포인터",
+    "type": "code",
+    "difficulty": 3,
+    "year": 2021,
+    "round": 3,
+    "question": "다음 C언어 코드의 출력 결과를 쓰시오. (구조체 배열과 포인터 연산)",
+    "answer": "501",
+    "explanation": "(p+1)->hab=84+75=159, (p+1)->hhab=159+95+88=342, 159+342=501",
+    "codeSnippet": "#include <stdio.h>\nstruct jsu {\n    char name[12];\n    int os, db, hab, hhab;\n};\nint main(){\n    struct jsu st[3] = {{\"데이터1\",95,88},{\"데이터2\",84,91},{\"데이터3\",86,75}};\n    struct jsu* p = &st[0];\n    (p+1)->hab = (p+1)->os + (p+2)->db;\n    (p+1)->hhab = (p+1)->hab + p->os + p->db;\n    printf(\"%d\\n\", (p+1)->hab + (p+1)->hhab);\n}",
+    "codeLanguage": "c",
+    "choices": [
+      {
+        "label": "1",
+        "text": "501",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "342",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "159",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "417",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "C언어",
+      "구조체",
+      "포인터",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_018",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/DB",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 3,
+    "question": "레코드들을 키-값 순으로 정렬하고 키 항목만 모아서 편성하는 파일 접근 방식은?",
+    "answer": "인덱스 (색인) 접근",
+    "explanation": "파일 접근 방식: 순차 접근, 인덱스 접근, 해싱 접근",
+    "choices": [
+      {
+        "label": "1",
+        "text": "인덱스",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "순차",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "해싱",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "랜덤",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "인덱스",
+      "파일구조",
+      "DB",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_019",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/UI",
+    "type": "theory",
+    "difficulty": 1,
+    "year": 2021,
+    "round": 3,
+    "question": "그래픽을 통해 컴퓨터와 정보를 교환하는 환경으로, 마우스 등으로 아이콘을 클릭하여 작업하는 방식의 영문 약어는?",
+    "answer": "GUI",
+    "explanation": "GUI(Graphical User Interface): 그래픽 기반 사용자 인터페이스. CLI(Command Line Interface)와 대비됩니다.",
+    "choices": [
+      {
+        "label": "1",
+        "text": "GUI",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "CLI",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "NUI",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "VUI",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "GUI",
+      "UI",
+      "2021년3회"
+    ]
+  },
+  {
+    "id": "exam-2021-3_020",
+    "categoryId": "exam-2021-3",
+    "subcategory": "이론/테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "year": 2021,
+    "round": 3,
+    "question": "하위 모듈부터 시작하여 상위 모듈로 진행하는 통합 테스트 방식에서 필요한 도구는?",
+    "answer": "1. 상향식 테스트  2. 테스트 드라이버",
+    "explanation": "상향식: 드라이버 필요, 하향식: 스텁 필요",
+    "choices": [
+      {
+        "label": "1",
+        "text": "상향식, 드라이버",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "하향식, 스텁",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "상향식, 스텁",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "하향식, 드라이버",
+        "isCorrect": false
+      }
+    ],
+    "source": "generated",
+    "sourceFile": "https://chobopark.tistory.com/217",
+    "tags": [
+      "상향식테스트",
+      "드라이버",
+      "통합테스트",
+      "2021년3회"
+    ]
+  }
+]
