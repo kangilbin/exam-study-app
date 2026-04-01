@@ -425,7 +425,7 @@
       "결과값",
       "2025년3회"
     ],
-    "codeSnippet": "[A 테이블]\n CODE | NAME\n ------+------\n 3258   |  smith\n 4324   |  allen\n 5432   |  scott\n\n[B 테이블]\n  NO  | RULE\n------+------\n   12   |   s%\n  32   |  %t%\n\nSELECT COUNT(*) FROM T1 A CROSS JOIN T2 B WHERE A.NAME LIKE B.RULE;"
+    "codeSnippet": "[A 테이블]\n CODE | NAME\n ------+------\n 3258  |  smith\n 4324  |  allen\n 5432  |  scott\n\n[B 테이블]\n  NO  | RULE\n------+------\n  12   |   s%\n  32   |  %t%\n\nSELECT COUNT(*) FROM T1 A CROSS JOIN T2 B WHERE A.NAME LIKE B.RULE;"
   },
   {
     "id": "exam-2025-3_011",
@@ -566,7 +566,7 @@
     "question": "관계대수에서 R÷S(디비전)의 결과를 구하시오.",
     "answer": "A: a1",
     "explanation": "디비전은 S의 모든 튜플과 연관된 R의 튜플을 반환합니다.",
-    "codeSnippet": "[R 테이블]\n  A  |   B\n-----+-----\n  a1   |  b1\n  a2   |  b2\n  a1   |  b3\n\n[S 테이블]\n B\n-----\nb1\nb3\n",
+    "codeSnippet": "[R 테이블]\n  A  |   B\n-----+-----\n a1  |  b1\n a2  |  b2\n a1  |  b3\n\n[S 테이블]\n B\n-----\nb1\nb3\n",
     "codeLanguage": "sql",
     "choices": [
       {
@@ -779,7 +779,7 @@
     "difficulty": 1,
     "year": 2025,
     "round": 3,
-    "question": "테스트케이스 구성요소에서 (1)테스트할 조건, (2)입력 데이터, (3)기대되는 결과는?",
+    "question": "테스트케이스 구성요소에서  식별자 ID - 테스트항목 - (1) - (2) - (3) ()안에 들어갈 알맞는 보기를 고르시오.",
     "answer": "1. 테스트 조건  2. 테스트 데이터  3. 예상 결과",
     "explanation": "테스트 케이스의 핵심 구성요소입니다.",
     "choices": [
@@ -852,6 +852,6 @@
       "IN",
       "2025년3회"
     ],
-    "codeSnippet": "[A 테이블]\n col1 | col2\n------+------\n  1   |  1\n  2   |  3\n  3   |  5\n  4   |  3\n  5   | NULL\n\nSELECT count(col2)\nFROM A\nWHERE col1 IN (2, 3)\n   OR col2 IN (3, 5);"
+    "codeSnippet": "[A 테이블]\n col1 | col2\n------+------\n  2   |  NULL\n  3   |  6\n  2   |  3\nNULL |  3\n  4   |  5\n\nSELECT count(col2)\nFROM A\nWHERE col1 IN (2, 3)\n   OR col2 IN (3, 5);"
   }
 ]

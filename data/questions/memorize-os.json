@@ -7,7 +7,7 @@
     "difficulty": 2,
     "question": "비선점형 스케줄링 알고리즘을 쓰시오.",
     "answer": "FCFS, SJF, HRN, 우선순위, 기한부",
-    "explanation": "FCFS: 먼저 도착한 순서\nSJF: 실행시간 짧은 순\nHRN: (대기시간+서비스시간)/서비스시간\n비선점: 실행 중인 프로세스를 강제로 빼앗을 수 없음",
+    "explanation": "FCFS: 먼저 도착한 순서\nSJF: 실행시간 짧은 순\nHRN: SJF의 단점을 보안하기 위해 대기 시간과 샐행시간을 고려, (대기시간+서비스시간)/서비스시간\n비선점: 실행 중인 프로세스를 강제로 빼앗을 수 없음",
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/193",
     "tags": [
@@ -23,7 +23,7 @@
     "difficulty": 2,
     "question": "선점형 스케줄링 알고리즘을 쓰시오.",
     "answer": "RR(Round Robin), SRT, 선점 우선순위, 다단계 큐, 다단계 피드백 큐",
-    "explanation": "RR: 시분할, 타임슬라이스\nSRT: SJF의 선점형\n다단계 피드백 큐: 큐 간 이동 가능",
+    "explanation": "RR: 각 프로세스에 동일한 시간 할당량(Time Slice)를 주고 시간이 지나면 다음 프로세스로 이동\nSRT: SJF의 선점형\n선점 우선순위: 더 높은 우선순위 프로세스가 도착하면 즉시 현재 프로세스를 중단하고 이동\n다단계 큐: 큐를 여러개로 나누어 각각 다른 스케줄링 적용\n다단계 피드백 큐: 큐 간 이동 가능",
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/193",
     "tags": [
