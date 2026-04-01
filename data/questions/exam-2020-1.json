@@ -13,23 +13,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "동일한 테스트 케이스에 의한 반복적 테스트는 새로운 버그를 찾지 못한다는 원리",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "소프트웨어의 20%에서 80%의 결함이 발견된다는 원리",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "결함을 모두 제거해도 사용자 요구를 만족시키지 못할 수 있다는 원리",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "완벽한 테스트는 불가능하다는 원리",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "동일한 테스트 케이스에 의한 반복적 테스트는 새로운 버그를 찾지 못한다는 원리",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -54,22 +54,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "빅데이터 분석",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "데이터 마이닝",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "데이터 웨어하우스",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "OLAP",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "빅데이터 분석",
+        "text": "OLAP",
         "isCorrect": false
       }
     ],
@@ -94,13 +94,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "구문, 의미, 순서",
-        "isCorrect": true
+        "text": "헤더, 페이로드, 트레일러",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "구문, 의미, 타이밍",
-        "isCorrect": false
+        "text": "구문, 의미, 순서",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -109,7 +109,7 @@
       },
       {
         "label": "4",
-        "text": "헤더, 페이로드, 트레일러",
+        "text": "구문, 의미, 타이밍",
         "isCorrect": false
       }
     ],
@@ -135,8 +135,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "XML",
-        "isCorrect": true
+        "text": "YAML",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -145,12 +145,12 @@
       },
       {
         "label": "3",
-        "text": "JSON",
-        "isCorrect": false
+        "text": "XML",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "YAML",
+        "text": "JSON",
         "isCorrect": false
       }
     ],
@@ -181,7 +181,7 @@
       },
       {
         "label": "2",
-        "text": "XML",
+        "text": "CSV",
         "isCorrect": false
       },
       {
@@ -191,7 +191,7 @@
       },
       {
         "label": "4",
-        "text": "CSV",
+        "text": "XML",
         "isCorrect": false
       }
     ],
@@ -211,7 +211,7 @@
     "difficulty": 2,
     "year": 2020,
     "round": 1,
-    "question": "STUDENT 테이블에서 컴퓨터과 학생 50명, 인터넷과 학생 100명, 사무자동화과 학생 50명의 정보가 저장되어 있을 때, 다음 SQL문의 실행 결과에 따른 튜플의 수는?\n1) SELECT DEPT FROM STUDENT;\n2) SELECT DISTINCT DEPT FROM STUDENT;\n3) SELECT COUNT(DISTINCT DEPT) FROM STUDENT WHERE DEPT = '컴퓨터과';",
+    "question": "STUDENT 테이블에서 다음 3개의 SQL문 실행 결과로 나오는 튜플의 수를 쓰시오.\n(컴퓨터과 50명, 인터넷과 100명, 사무자동화과 50명, 총 200개 튜플)",
     "answer": "1) 200  2) 3  3) 1",
     "explanation": "1) DISTINCT가 없으므로 전체 200개 튜플 반환\n2) DISTINCT로 중복 제거하여 3개 학과명만 반환\n3) 컴퓨터과만 필터링 후 DISTINCT DEPT는 1개",
     "choices": [
@@ -222,12 +222,12 @@
       },
       {
         "label": "2",
-        "text": "200, 3, 50",
+        "text": "150, 3, 1",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "150, 3, 1",
+        "text": "200, 3, 50",
         "isCorrect": false
       },
       {
@@ -243,7 +243,8 @@
       "DISTINCT",
       "COUNT",
       "2020년1회"
-    ]
+    ],
+    "codeSnippet": "[STUDENT 테이블]\n DEPT(학과)\n-----------\n 컴퓨터과    (50명)\n 인터넷과    (100명)\n 사무자동화과 (50명)\n 총 200개 튜플\n\n1) SELECT DEPT FROM STUDENT;\n2) SELECT DISTINCT DEPT FROM STUDENT;\n3) SELECT COUNT(DISTINCT DEPT)\n   FROM STUDENT\n   WHERE DEPT = '컴퓨터과';"
   },
   {
     "id": "exam-2020-1_007",
@@ -259,22 +260,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "(서비스 시간 - 대기 시간) / 서비스 시간",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "(대기 시간 + 서비스 시간) / 서비스 시간",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "서비스 시간 / (대기 시간 + 서비스 시간)",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "대기 시간 / 서비스 시간",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "(서비스 시간 - 대기 시간) / 서비스 시간",
+        "text": "대기 시간 / 서비스 시간",
         "isCorrect": false
       }
     ],
@@ -311,12 +312,12 @@
       },
       {
         "label": "3",
-        "text": "무결성, 독립성",
+        "text": "보안성, 원자성",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "보안성, 원자성",
+        "text": "무결성, 독립성",
         "isCorrect": false
       }
     ],
@@ -343,22 +344,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "랜드 어택",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "SYN Flooding",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "스머프 공격",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "랜드 어택",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "Ping of Death",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SYN Flooding",
         "isCorrect": false
       }
     ],
@@ -432,7 +433,7 @@
       },
       {
         "label": "2",
-        "text": "응집도, 결합도",
+        "text": "의존도, 독립도",
         "isCorrect": false
       },
       {
@@ -442,7 +443,7 @@
       },
       {
         "label": "4",
-        "text": "의존도, 독립도",
+        "text": "응집도, 결합도",
         "isCorrect": false
       }
     ],
@@ -471,8 +472,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "50758595100",
-        "isCorrect": true
+        "text": "50859575100",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -481,8 +482,8 @@
       },
       {
         "label": "3",
-        "text": "50859575100",
-        "isCorrect": false
+        "text": "50758595100",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -515,22 +516,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "0 1 2 3",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "1 2 3 4",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "0 1 2 3 4",
+        "label": "2",
+        "text": "0123",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "0 1 2 3",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "0123",
+        "text": "0 1 2 3 4",
         "isCorrect": false
       }
     ],
@@ -558,22 +559,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "-8",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "0",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "-7",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "-8",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "0",
         "isCorrect": false
       }
     ],
@@ -605,7 +606,7 @@
       },
       {
         "label": "2",
-        "text": "개요",
+        "text": "문제요약",
         "isCorrect": false
       },
       {
@@ -615,7 +616,7 @@
       },
       {
         "label": "4",
-        "text": "문제요약",
+        "text": "개요",
         "isCorrect": false
       }
     ],
@@ -641,22 +642,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "20개월",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "10개월",
+        "text": "15개월",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "100개월",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "20개월",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "15개월",
+        "text": "10개월",
         "isCorrect": false
       }
     ],
@@ -682,13 +683,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "성능 향상을 위해 정규화된 데이터에 중복, 통합, 분리를 수행하는 기법",
-        "isCorrect": true
+        "text": "데이터의 중복을 제거하여 무결성을 보장하는 기법",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "데이터의 중복을 제거하여 무결성을 보장하는 기법",
-        "isCorrect": false
+        "text": "성능 향상을 위해 정규화된 데이터에 중복, 통합, 분리를 수행하는 기법",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -723,23 +724,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "물리 계층",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "데이터 링크 계층",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "네트워크 계층",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "전송 계층",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "데이터 링크 계층",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "물리 계층",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -775,12 +776,12 @@
       },
       {
         "label": "3",
-        "text": "처리량, 대기 시간, 응답 시간",
+        "text": "경과 시간, 처리량, 응답 시간",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "경과 시간, 처리량, 응답 시간",
+        "text": "처리량, 대기 시간, 응답 시간",
         "isCorrect": false
       }
     ],
@@ -807,23 +808,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "fan-in은 해당 모듈을 호출하는 모듈 수, fan-out은 해당 모듈이 호출하는 모듈 수",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "fan-in은 입력 데이터 수, fan-out은 출력 데이터 수",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "fan-in은 나가는 화살표, fan-out은 들어오는 화살표",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "fan-in은 모듈 크기, fan-out은 모듈 복잡도",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "fan-in은 입력 데이터 수, fan-out은 출력 데이터 수",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "fan-in은 해당 모듈을 호출하는 모듈 수, fan-out은 해당 모듈이 호출하는 모듈 수",
+        "isCorrect": true
       }
     ],
     "source": "generated",

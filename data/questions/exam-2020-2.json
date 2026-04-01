@@ -13,23 +13,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "RTO",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "RPO",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "BCP",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "DRS",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "RPO",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "RTO",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -56,22 +56,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "{'중국','한국','베트남','홍콩','태국'}",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "{'일본','중국','한국','베트남','홍콩','태국'}",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "{'베트남','홍콩','태국'}",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "오류 발생",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "{'중국','한국','베트남','홍콩','태국'}",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "{'일본','중국','한국','베트남','홍콩','태국'}",
         "isCorrect": false
       }
     ],
@@ -98,8 +98,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "AJAX",
-        "isCorrect": true
+        "text": "REST API",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -108,13 +108,13 @@
       },
       {
         "label": "3",
-        "text": "REST API",
+        "text": "GraphQL",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "GraphQL",
-        "isCorrect": false
+        "text": "AJAX",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -139,8 +139,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "애자일 방법론",
-        "isCorrect": true
+        "text": "프로토타입 방법론",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -154,8 +154,8 @@
       },
       {
         "label": "4",
-        "text": "프로토타입 방법론",
-        "isCorrect": false
+        "text": "애자일 방법론",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -187,17 +187,17 @@
       },
       {
         "label": "2",
-        "text": "this",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "super",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "static",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "this",
         "isCorrect": false
       }
     ],
@@ -218,28 +218,28 @@
     "difficulty": 2,
     "year": 2020,
     "round": 2,
-    "question": "학생 테이블에서 3,4학년인 학번, 이름을 IN 연산자를 사용하여 조회하는 SQL문을 작성하시오.",
+    "question": "학생 테이블에서 3, 4학년인 학번, 이름을 IN 연산자를 사용하여 조회하는 SQL문을 작성하시오.",
     "answer": "SELECT 학번, 이름 FROM 학생 WHERE 학년 IN (3,4);",
     "explanation": "IN 연산자는 여러 값을 OR 조건으로 한번에 비교할 수 있습니다.",
     "choices": [
       {
         "label": "1",
-        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 IN (3,4);",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 = 3 AND 학년 = 4;",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 BETWEEN 3 AND 4;",
+        "label": "2",
+        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 IN [3,4];",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 IN (3,4);",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 IN [3,4];",
+        "text": "SELECT 학번, 이름 FROM 학생 WHERE 학년 BETWEEN 3 AND 4;",
         "isCorrect": false
       }
     ],
@@ -249,7 +249,8 @@
       "SQL",
       "IN",
       "2020년2회"
-    ]
+    ],
+    "codeSnippet": "[학생 테이블]\n 학번 | 이름   | 학년 | 수강과목 | 점수 | 연락처\n------+--------+------+---------+------+----------------\n 1000 | 김이름 |  1   | 수학    |  90  | 010-1111-2222\n 2000 | 장이름 |  2   | 과학    |  95  | 010-2222-2222\n 3000 | 허이름 |  3   | 미술    |  90  | 010-3333-3333\n 4000 | 조이름 |  4   | 음악    |  95  | 010-4444-4444"
   },
   {
     "id": "exam-2020-2_007",
@@ -265,22 +266,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "트랜잭션의 시작을 선언하는 명령어",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "오류 발생 시 이전 상태로 되돌리는 제어어",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "트랜잭션을 영구적으로 반영하는 명령어",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "트랜잭션의 중간 저장점을 설정하는 명령어",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "트랜잭션의 시작을 선언하는 명령어",
+        "text": "트랜잭션의 중간 저장점을 설정하는 명령어",
         "isCorrect": false
       }
     ],
@@ -307,22 +308,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "IPSec",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "SSL/TLS",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "SSH",
+        "label": "2",
+        "text": "S-HTTP",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "IPSec",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "S-HTTP",
+        "text": "SSH",
         "isCorrect": false
       }
     ],
@@ -354,17 +355,17 @@
       },
       {
         "label": "2",
-        "text": "동적 분석 도구",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "성능 분석 도구",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "모니터링 도구",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "동적 분석 도구",
         "isCorrect": false
       }
     ],
@@ -390,8 +391,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "Observer Pattern",
-        "isCorrect": true
+        "text": "Mediator Pattern",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -400,8 +401,8 @@
       },
       {
         "label": "3",
-        "text": "Mediator Pattern",
-        "isCorrect": false
+        "text": "Observer Pattern",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -431,22 +432,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "안드로이드",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "iOS",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "하모니OS",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "Tizen",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "안드로이드",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "iOS",
         "isCorrect": false
       }
     ],
@@ -466,14 +467,14 @@
     "difficulty": 2,
     "year": 2020,
     "round": 2,
-    "question": "학생 테이블의 name속성에 IDX_NAME 이름으로 인덱스를 생성하는 SQL문을 작성하시오.",
+    "question": "학생 테이블의 name 속성에 IDX_NAME 이름으로 인덱스를 생성하는 SQL문을 작성하시오.",
     "answer": "CREATE INDEX IDX_NAME ON 학생(NAME);",
     "explanation": "인덱스는 테이블의 검색 속도를 향상시키기 위한 데이터 구조입니다.",
     "choices": [
       {
         "label": "1",
-        "text": "CREATE INDEX IDX_NAME ON 학생(NAME);",
-        "isCorrect": true
+        "text": "INSERT INDEX IDX_NAME INTO 학생(NAME);",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -482,8 +483,8 @@
       },
       {
         "label": "3",
-        "text": "INSERT INDEX IDX_NAME INTO 학생(NAME);",
-        "isCorrect": false
+        "text": "CREATE INDEX IDX_NAME ON 학생(NAME);",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -498,7 +499,8 @@
       "인덱스",
       "CREATE",
       "2020년2회"
-    ]
+    ],
+    "codeSnippet": "[학생 테이블]\n STID | NAME | SCORE | DEPTID\n------+------+-------+-------"
   },
   {
     "id": "exam-2020-2_013",
@@ -514,8 +516,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "SOAP",
-        "isCorrect": true
+        "text": "GraphQL",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -524,13 +526,13 @@
       },
       {
         "label": "3",
-        "text": "GraphQL",
+        "text": "gRPC",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "gRPC",
-        "isCorrect": false
+        "text": "SOAP",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -555,8 +557,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "악의적인 SQL 구문을 삽입하여 DB를 조작하는 공격",
-        "isCorrect": true
+        "text": "웹 페이지에 악성 스크립트를 삽입하는 공격",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -565,13 +567,13 @@
       },
       {
         "label": "3",
-        "text": "웹 페이지에 악성 스크립트를 삽입하는 공격",
+        "text": "서버에 대량의 요청을 보내는 공격",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "서버에 대량의 요청을 보내는 공격",
-        "isCorrect": false
+        "text": "악의적인 SQL 구문을 삽입하여 DB를 조작하는 공격",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -596,13 +598,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "chmod 751 a.txt",
-        "isCorrect": true
+        "text": "chmod 571 a.txt",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "chmod 754 a.txt",
-        "isCorrect": false
+        "text": "chmod 751 a.txt",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -611,7 +613,7 @@
       },
       {
         "label": "4",
-        "text": "chmod 571 a.txt",
+        "text": "chmod 754 a.txt",
         "isCorrect": false
       }
     ],
@@ -638,23 +640,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "유효성",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "접근성",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "효율성",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "일관성",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "유효성",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -679,8 +681,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "LOD",
-        "isCorrect": true
+        "text": "SPARQL",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -694,8 +696,8 @@
       },
       {
         "label": "4",
-        "text": "SPARQL",
-        "isCorrect": false
+        "text": "LOD",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -720,22 +722,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "요구사항분석 → 개념적 → 논리적 → 물리적",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "요구사항분석 → 논리적 → 개념적 → 물리적",
+        "text": "개념적 → 요구사항분석 → 논리적 → 물리적",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "요구사항분석 → 물리적 → 논리적 → 개념적",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "요구사항분석 → 개념적 → 논리적 → 물리적",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "개념적 → 요구사항분석 → 논리적 → 물리적",
+        "text": "요구사항분석 → 논리적 → 개념적 → 물리적",
         "isCorrect": false
       }
     ],
@@ -763,8 +765,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "a=10",
-        "isCorrect": true
+        "text": "컴파일 오류",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -778,8 +780,8 @@
       },
       {
         "label": "4",
-        "text": "컴파일 오류",
-        "isCorrect": false
+        "text": "a=10",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -805,23 +807,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "형상관리",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "버전관리",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "변경관리",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "품질관리",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "버전관리",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "형상관리",
+        "isCorrect": true
       }
     ],
     "source": "generated",

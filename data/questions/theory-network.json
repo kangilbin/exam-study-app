@@ -14,7 +14,8 @@
       {"label": "3", "text": "물리-데이터링크-전송-네트워크-세션-표현-응용", "isCorrect": false},
       {"label": "4", "text": "물리-데이터링크-네트워크-세션-전송-표현-응용", "isCorrect": false}
     ],
-    "source": "generated",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["네트워크", "OSI", "7계층"]
   },
   {
@@ -33,7 +34,7 @@
       {"label": "4", "text": "SNMP", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["네트워크", "SSH", "프로토콜"]
   },
   {
@@ -44,7 +45,7 @@
     "difficulty": 2,
     "question": "가짜 바이러스 경고로 사용자에게 공포심을 유발하여 돈을 지불하게 하는 악성 소프트웨어는?",
     "answer": "스캐어웨어(Scareware)",
-    "explanation": "스캐어웨어는 사회공학적 기법을 활용하여 사용자를 위협합니다. 랜섬웨어와 달리 실제 파일을 암호화하지는 않습니다.",
+    "explanation": "스캐어웨어는 사회공학적 기법을 활용하여 사용자를 위협합니다.",
     "choices": [
       {"label": "1", "text": "스캐어웨어", "isCorrect": true},
       {"label": "2", "text": "랜섬웨어", "isCorrect": false},
@@ -52,7 +53,7 @@
       {"label": "4", "text": "스파이웨어", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["보안", "스캐어웨어", "악성코드"]
   },
   {
@@ -71,7 +72,7 @@
       {"label": "4", "text": "DMZ", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "기출문제_2024년_3회_수업자료_v0.1.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["네트워크", "VPN", "보안"]
   },
   {
@@ -90,7 +91,482 @@
       {"label": "4", "text": "FEC", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["네트워크", "CRC", "오류검출"]
+  },
+  {
+    "id": "theory-network_006",
+    "categoryId": "theory-network",
+    "subcategory": "OSI 7계층",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "OSI 7계층에서 데이터링크 계층의 장비와 프로토콜로 올바른 것은?",
+    "answer": "스위치, 브리지 / HDLC, MAC",
+    "explanation": "OSI 각 계층별 장비와 프로토콜:\n1계층(물리): 케이블, 허브, 리피터\n2계층(데이터링크): 스위치, 브리지 / HDLC, MAC\n3계층(네트워크): 라우터 / IP, ICMP\n4계층(전송): TCP, UDP\n5계층(세션): NetBIOS, RPC\n6계층(표현): JPEG, MPEG\n7계층(응용): HTTP, FTP, DNS",
+    "choices": [
+      {"label": "1", "text": "스위치, 브리지 / HDLC, MAC", "isCorrect": true},
+      {"label": "2", "text": "라우터 / IP, ICMP", "isCorrect": false},
+      {"label": "3", "text": "허브, 리피터 / RS-232", "isCorrect": false},
+      {"label": "4", "text": "게이트웨이 / TCP, UDP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "OSI", "데이터링크", "프로토콜"]
+  },
+  {
+    "id": "theory-network_007",
+    "categoryId": "theory-network",
+    "subcategory": "TCP/IP",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "TCP/IP 4계층에서 인터넷 계층에 해당하는 프로토콜로 올바르게 짝지어진 것은?",
+    "answer": "IP, ICMP, IGMP, ARP, RARP",
+    "explanation": "TCP/IP 4계층 구조:\n1. 응용 계층: HTTP, FTP, SMTP, DNS 등\n2. 전송 계층: TCP, UDP, RTCP\n3. 인터넷 계층: IP, ICMP, IGMP, ARP, RARP\n4. 네트워크 액세스 계층: Ethernet, IEEE 802 등",
+    "choices": [
+      {"label": "1", "text": "IP, ICMP, IGMP, ARP, RARP", "isCorrect": true},
+      {"label": "2", "text": "TCP, UDP, RTCP", "isCorrect": false},
+      {"label": "3", "text": "HTTP, FTP, SMTP, DNS", "isCorrect": false},
+      {"label": "4", "text": "Ethernet, IEEE 802, HDLC", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "TCP/IP", "인터넷계층"]
+  },
+  {
+    "id": "theory-network_008",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "TCP와 UDP에 대한 비교 설명으로 틀린 것은?",
+    "answer": "UDP는 3-way-handshake를 사용하여 연결을 설정한다.",
+    "explanation": "TCP vs UDP 비교:\n- TCP: 연결형, 가상회선 방식, 1:1 통신, 신뢰성 높음, 3-way-handshake 사용\n- UDP: 비연결형, 데이터그램 방식, 1:N/N:N 통신, 신뢰성 낮음, 빠른 전송 속도\n3-way-handshake는 TCP에서만 사용합니다.",
+    "choices": [
+      {"label": "1", "text": "TCP는 연결형 서비스이고, UDP는 비연결형 서비스이다.", "isCorrect": false},
+      {"label": "2", "text": "TCP는 가상회선 방식이고, UDP는 데이터그램 방식이다.", "isCorrect": false},
+      {"label": "3", "text": "TCP는 1:1 통신이고, UDP는 1:N, N:N 통신이 가능하다.", "isCorrect": false},
+      {"label": "4", "text": "UDP는 3-way-handshake를 사용하여 연결을 설정한다.", "isCorrect": true}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "TCP", "UDP", "프로토콜"]
+  },
+  {
+    "id": "theory-network_009",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "IP 주소를 MAC 주소로 변환하는 프로토콜은?",
+    "answer": "ARP(Address Resolution Protocol)",
+    "explanation": "ARP는 IP 주소를 MAC 주소로 변환하는 프로토콜입니다.\nRARP(Reverse ARP)는 반대로 MAC 주소를 IP 주소로 변환합니다.\n두 프로토콜 모두 TCP/IP 인터넷 계층에서 동작합니다.",
+    "choices": [
+      {"label": "1", "text": "ARP", "isCorrect": true},
+      {"label": "2", "text": "RARP", "isCorrect": false},
+      {"label": "3", "text": "ICMP", "isCorrect": false},
+      {"label": "4", "text": "IGMP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "ARP", "RARP", "프로토콜"]
+  },
+  {
+    "id": "theory-network_010",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "네트워크에서 오류 메시지를 전달하는 프로토콜과 멀티캐스트 그룹을 관리하는 프로토콜을 순서대로 쓰시오.",
+    "answer": "ICMP, IGMP",
+    "explanation": "ICMP(Internet Control Message Protocol): IP 통신 중 발생하는 오류 메시지를 전달하는 프로토콜 (예: Ping)\nIGMP(Internet Group Management Protocol): 멀티캐스트 그룹의 가입/탈퇴를 관리하는 프로토콜\n두 프로토콜 모두 TCP/IP 인터넷 계층에 속합니다.",
+    "choices": [
+      {"label": "1", "text": "ICMP, IGMP", "isCorrect": true},
+      {"label": "2", "text": "IGMP, ICMP", "isCorrect": false},
+      {"label": "3", "text": "ARP, RARP", "isCorrect": false},
+      {"label": "4", "text": "SMTP, SNMP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "ICMP", "IGMP", "프로토콜"]
+  },
+  {
+    "id": "theory-network_011",
+    "categoryId": "theory-network",
+    "subcategory": "네트워크",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "IP 주소에서 네트워크 부분과 호스트 부분을 구분하기 위해 사용하는 것은?",
+    "answer": "서브넷마스크(Subnet Mask)",
+    "explanation": "서브넷마스크는 IP 주소를 네트워크 부분과 호스트 부분으로 구분하는 데 사용됩니다.\n서브네팅(Subnetting)은 하나의 네트워크를 여러 개의 작은 서브넷으로 분할하는 기법입니다.\n예: 255.255.255.0 → 상위 24비트가 네트워크, 하위 8비트가 호스트",
+    "choices": [
+      {"label": "1", "text": "서브넷마스크", "isCorrect": true},
+      {"label": "2", "text": "게이트웨이", "isCorrect": false},
+      {"label": "3", "text": "DNS", "isCorrect": false},
+      {"label": "4", "text": "DHCP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "서브넷마스크", "서브네팅", "IP"]
+  },
+  {
+    "id": "theory-network_012",
+    "categoryId": "theory-network",
+    "subcategory": "IPv6",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "IPv6에 대한 설명으로 틀린 것은?",
+    "answer": "주소 체계는 Unicast, Broadcast, Multicast로 구성된다.",
+    "explanation": "IPv6 특징:\n- 128비트 주소 체계\n- 인증성, 기밀성, 데이터 무결성 지원 (보안 기능 강화)\n- 주소 체계: Unicast(1:1), Anycast(1:가장 가까운 1), Multicast(1:N)\n- IPv6에는 Broadcast가 없고, 대신 Anycast가 있습니다.\n- 기출 빈출 포인트입니다.",
+    "choices": [
+      {"label": "1", "text": "128비트 주소 체계를 사용한다.", "isCorrect": false},
+      {"label": "2", "text": "인증성, 기밀성, 데이터 무결성을 지원한다.", "isCorrect": false},
+      {"label": "3", "text": "주소 체계는 Unicast, Broadcast, Multicast로 구성된다.", "isCorrect": true},
+      {"label": "4", "text": "주소 체계는 Unicast, Anycast, Multicast로 구성된다.", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "IPv6", "기출"]
+  },
+  {
+    "id": "theory-network_013",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "도메인 네임(예: www.example.com)을 IP 주소로 변환하는 시스템은?",
+    "answer": "DNS(Domain Name System)",
+    "explanation": "DNS는 사람이 읽기 쉬운 도메인 네임을 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 시스템입니다.\n응용 계층 프로토콜이며, UDP 53번 포트를 주로 사용합니다.",
+    "choices": [
+      {"label": "1", "text": "DNS", "isCorrect": true},
+      {"label": "2", "text": "DHCP", "isCorrect": false},
+      {"label": "3", "text": "NAT", "isCorrect": false},
+      {"label": "4", "text": "ARP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "DNS", "프로토콜"]
+  },
+  {
+    "id": "theory-network_014",
+    "categoryId": "theory-network",
+    "subcategory": "네트워크장비",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "네트워크 스위치 중 IP 주소를 기반으로 라우팅 기능을 수행하는 계층의 스위치는?",
+    "answer": "L3 스위치",
+    "explanation": "스위치 분류:\n- L2 스위치: MAC 주소 기반, 데이터링크 계층 (프레임 전달)\n- L3 스위치: IP 주소 기반, 네트워크 계층 (라우팅 기능)\n- L4 스위치: TCP/UDP 포트 기반, 전송 계층 (로드밸런싱)\n- L7 스위치: 애플리케이션 데이터 기반, 응용 계층 (콘텐츠 기반 스위칭)",
+    "choices": [
+      {"label": "1", "text": "L2 스위치", "isCorrect": false},
+      {"label": "2", "text": "L3 스위치", "isCorrect": true},
+      {"label": "3", "text": "L4 스위치", "isCorrect": false},
+      {"label": "4", "text": "L7 스위치", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "스위치", "L2", "L3", "L4", "L7"]
+  },
+  {
+    "id": "theory-network_015",
+    "categoryId": "theory-network",
+    "subcategory": "라우팅",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "라우팅 프로토콜 중 링크 상태(Link-State) 알고리즘을 사용하며 다익스트라(Dijkstra) 알고리즘을 기반으로 하는 것은?",
+    "answer": "OSPF(Open Shortest Path First)",
+    "explanation": "라우팅 프로토콜 분류:\n- IGP(내부 게이트웨이 프로토콜):\n  * RIP: 거리벡터 알고리즘, 홉 수(최대 15) 기반, 소규모 네트워크\n  * OSPF: 링크상태 알고리즘, 다익스트라 기반, 대규모 네트워크\n- EGP(외부 게이트웨이 프로토콜):\n  * EGP: 초기 외부 라우팅 프로토콜\n  * BGP: 경로벡터 알고리즘, 현재 인터넷 표준",
+    "choices": [
+      {"label": "1", "text": "OSPF", "isCorrect": true},
+      {"label": "2", "text": "RIP", "isCorrect": false},
+      {"label": "3", "text": "BGP", "isCorrect": false},
+      {"label": "4", "text": "EGP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "라우팅", "OSPF", "RIP", "BGP"]
+  },
+  {
+    "id": "theory-network_016",
+    "categoryId": "theory-network",
+    "subcategory": "프로토콜",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "프로토콜의 기본 3요소를 모두 고르시오.",
+    "answer": "구문(Syntax), 의미(Semantics), 타이밍(Timing)",
+    "explanation": "프로토콜의 기본 3요소:\n1. 구문(Syntax): 데이터의 형식, 부호화, 신호 레벨 등 구조적 정의\n2. 의미(Semantics): 제어 정보, 오류 처리 등 의미 해석\n3. 타이밍(Timing): 전송 속도, 순서 등 시간적 조건",
+    "choices": [
+      {"label": "1", "text": "구문(Syntax), 의미(Semantics), 타이밍(Timing)", "isCorrect": true},
+      {"label": "2", "text": "구문(Syntax), 의미(Semantics), 보안(Security)", "isCorrect": false},
+      {"label": "3", "text": "형식(Format), 제어(Control), 동기화(Sync)", "isCorrect": false},
+      {"label": "4", "text": "구문(Syntax), 암호화(Encryption), 타이밍(Timing)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "프로토콜", "3요소"]
+  },
+  {
+    "id": "theory-network_017",
+    "categoryId": "theory-network",
+    "subcategory": "데이터베이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "후보키 중 기본키로 선택되지 않은 나머지 키를 무엇이라 하는가?",
+    "answer": "대체키(Alternate Key)",
+    "explanation": "키의 종류:\n- 슈퍼키: 유일성을 만족하는 속성 집합\n- 후보키: 유일성 + 최소성을 만족하는 키\n- 기본키(Primary Key): 후보키 중 선택된 대표 키\n- 대체키(Alternate Key): 후보키 중 기본키가 아닌 키\n- 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하는 키",
+    "choices": [
+      {"label": "1", "text": "대체키", "isCorrect": true},
+      {"label": "2", "text": "외래키", "isCorrect": false},
+      {"label": "3", "text": "슈퍼키", "isCorrect": false},
+      {"label": "4", "text": "후보키", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "키", "기본키", "대체키"]
+  },
+  {
+    "id": "theory-network_018",
+    "categoryId": "theory-network",
+    "subcategory": "네트워크",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교환 방식 중 축적교환(Store-and-Forward) 방식의 패킷교환에 해당하는 두 가지는?",
+    "answer": "가상회선 방식, 데이터그램 방식",
+    "explanation": "교환 회선 방식 분류:\n1. 회선교환(Circuit Switching): 통신 전 전용 경로 설정\n2. 축적교환(Store-and-Forward):\n   - 메시지 교환: 메시지 단위로 저장 후 전달\n   - 패킷 교환:\n     * 가상회선(Virtual Circuit): 논리적 경로 설정 후 패킷 전송\n     * 데이터그램(Datagram): 각 패킷이 독립적으로 경로 선택",
+    "choices": [
+      {"label": "1", "text": "가상회선 방식, 데이터그램 방식", "isCorrect": true},
+      {"label": "2", "text": "회선교환 방식, 메시지교환 방식", "isCorrect": false},
+      {"label": "3", "text": "메시지교환 방식, 데이터그램 방식", "isCorrect": false},
+      {"label": "4", "text": "동기식 방식, 비동기식 방식", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["네트워크", "교환방식", "패킷교환", "가상회선", "데이터그램"]
+  },
+  {
+    "id": "theory-network_019",
+    "categoryId": "theory-network",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "정보보안의 5대 요소에 해당하지 않는 것은?",
+    "answer": "효율성(Efficiency)",
+    "explanation": "정보보안 5대 요소:\n1. 기밀성(Confidentiality): 인가된 사용자만 정보에 접근\n2. 무결성(Integrity): 정보가 불법적으로 변경되지 않음\n3. 가용성(Availability): 인가된 사용자가 필요할 때 접근 가능\n4. 인증(Authentication): 사용자 신원 확인\n5. 부인방지(Non-Repudiation): 송수신 사실을 부인할 수 없음",
+    "choices": [
+      {"label": "1", "text": "기밀성, 무결성", "isCorrect": false},
+      {"label": "2", "text": "가용성, 인증", "isCorrect": false},
+      {"label": "3", "text": "부인방지", "isCorrect": false},
+      {"label": "4", "text": "효율성(Efficiency)", "isCorrect": true}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "기밀성", "무결성", "가용성", "인증", "부인방지"]
+  },
+  {
+    "id": "theory-network_020",
+    "categoryId": "theory-network",
+    "subcategory": "암호화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "암호 알고리즘 분류에서 단방향 암호화에 해당하는 것은?",
+    "answer": "해시(Hash) 함수",
+    "explanation": "암호 알고리즘 분류:\n1. 단방향(해시): SHA, MD5, N-NASH, SNEFRU (복호화 불가)\n2. 양방향:\n   - 대칭키(비밀키): SEED, ARIA, DES, AES (암·복호화 키 동일)\n   - 비대칭키(공개키): RSA (암·복호화 키 다름)",
+    "choices": [
+      {"label": "1", "text": "해시(Hash) 함수 - SHA, MD5 등", "isCorrect": true},
+      {"label": "2", "text": "대칭키 암호화 - DES, AES", "isCorrect": false},
+      {"label": "3", "text": "비대칭키 암호화 - RSA", "isCorrect": false},
+      {"label": "4", "text": "블록 암호화 - SEED, ARIA", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "암호화", "해시", "SHA", "MD5"]
+  },
+  {
+    "id": "theory-network_021",
+    "categoryId": "theory-network",
+    "subcategory": "암호화",
+    "type": "theory",
+    "difficulty": 3,
+    "question": "다음 중 양방향 암호화 알고리즘에 대한 설명으로 올바른 것은?",
+    "answer": "AES는 2001년 NIST에서 DES를 대체하기 위해 개발되었다.",
+    "explanation": "양방향 암호화 알고리즘 (전체 기출):\n- SEED: KISA 개발, 128비트 블록 암호\n- ARIA: 국정원/산학연 개발, 경량 환경용\n- DES: 1975년 NBS 개발, 56비트 키\n- AES: 2001년 NIST 개발, DES 대체, 128/192/256비트 키\n- RSA: 1978년 MIT 개발, 대표적 공개키 암호 알고리즘",
+    "choices": [
+      {"label": "1", "text": "AES는 2001년 NIST에서 DES를 대체하기 위해 개발되었다.", "isCorrect": true},
+      {"label": "2", "text": "SEED는 국정원에서 개발한 암호 알고리즘이다.", "isCorrect": false},
+      {"label": "3", "text": "RSA는 1975년 NBS에서 개발한 대칭키 암호이다.", "isCorrect": false},
+      {"label": "4", "text": "DES는 MIT에서 개발한 공개키 암호 알고리즘이다.", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "암호화", "AES", "DES", "RSA", "SEED", "ARIA", "기출"]
+  },
+  {
+    "id": "theory-network_022",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "패킷의 출발지 IP와 목적지 IP를 같은 주소로 만들어 수신자가 자기 자신에게 응답하도록 하는 공격은?",
+    "answer": "LAND Attack",
+    "explanation": "서비스 공격 유형:\n- Ping of Death: 규정 이상 크기의 ICMP 패킷으로 시스템 마비\n- SMURFING: 브로드캐스트 주소로 대량의 ICMP Echo 전송\n- SYN Flooding: TCP 연결 시 SYN 패킷만 대량 전송\n- TearDrop: 패킷의 오프셋 값을 조작하여 재조합 오류 유발\n- LAND Attack: 출발지/목적지 IP를 동일하게 설정\n- DDoS: 분산된 다수의 좀비 PC로 동시 공격",
+    "choices": [
+      {"label": "1", "text": "LAND Attack", "isCorrect": true},
+      {"label": "2", "text": "SYN Flooding", "isCorrect": false},
+      {"label": "3", "text": "SMURFING", "isCorrect": false},
+      {"label": "4", "text": "TearDrop", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "공격", "LAND", "DoS"]
+  },
+  {
+    "id": "theory-network_023",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "합법적으로 소유한 도메인을 탈취하거나 DNS를 변조하여 사용자를 가짜 사이트로 유도하는 공격 기법은?",
+    "answer": "파밍(Pharming)",
+    "explanation": "사회공학적 공격 비교:\n- 피싱(Phishing): 이메일 등으로 가짜 사이트로 유도하여 개인정보 탈취\n- 파밍(Pharming): DNS 변조로 정상 접속 시에도 가짜 사이트로 이동\n- 스미싱(Smishing): SMS + Phishing, 문자메시지를 이용한 피싱\n- 스니핑(Sniffing): 네트워크 패킷을 도청\n- 큐싱(Qshing): QR코드를 이용한 피싱 공격",
+    "choices": [
+      {"label": "1", "text": "파밍(Pharming)", "isCorrect": true},
+      {"label": "2", "text": "피싱(Phishing)", "isCorrect": false},
+      {"label": "3", "text": "스미싱(Smishing)", "isCorrect": false},
+      {"label": "4", "text": "스니핑(Sniffing)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "파밍", "피싱", "스미싱", "스니핑", "큐싱"]
+  },
+  {
+    "id": "theory-network_024",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "웹 페이지에 악성 스크립트를 삽입하여, 해당 페이지를 열람하는 사용자의 브라우저에서 실행되게 하는 공격은?",
+    "answer": "XSS(Cross Site Scripting)",
+    "explanation": "웹 관련 보안 공격:\n- XSS(Cross Site Scripting): 웹 페이지에 악성 스크립트 삽입, 사용자 브라우저에서 실행\n- 랜섬웨어(Ransomware): 시스템을 잠그거나 파일을 암호화하여 금전 요구\n- 키로거(Keylogger): 키보드 입력을 몰래 기록하여 정보 탈취",
+    "choices": [
+      {"label": "1", "text": "XSS", "isCorrect": true},
+      {"label": "2", "text": "CSRF", "isCorrect": false},
+      {"label": "3", "text": "SQL Injection", "isCorrect": false},
+      {"label": "4", "text": "키로거", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "XSS", "웹보안"]
+  },
+  {
+    "id": "theory-network_025",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "보안 취약점이 발견되었으나, 패치가 나오기 전에 해당 취약점을 악용하는 공격은?",
+    "answer": "제로데이 공격(Zero-Day Attack)",
+    "explanation": "주요 공격 기법:\n- 제로데이 공격(Zero-Day Attack): 취약점 발견 후 패치 전 공격 (대응 시간 0일)\n- 무차별 대입(Brute-Force Attack): 가능한 모든 조합을 시도하여 비밀번호 해독\n- APT(Advanced Persistent Threat): 특정 대상에 대해 지속적이고 지능적인 해킹 공격",
+    "choices": [
+      {"label": "1", "text": "제로데이 공격", "isCorrect": true},
+      {"label": "2", "text": "무차별 대입 공격", "isCorrect": false},
+      {"label": "3", "text": "APT 공격", "isCorrect": false},
+      {"label": "4", "text": "백도어 공격", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "제로데이", "공격"]
+  },
+  {
+    "id": "theory-network_026",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "사용자가 자신의 의지와 무관하게, 인증된 상태에서 공격자가 의도한 행위를 특정 웹사이트에 요청하게 하는 공격은?",
+    "answer": "CSRF(Cross-Site Request Forgery)",
+    "explanation": "주요 보안 공격 기법:\n- CSRF(Cross-Site Request Forgery): 인증된 사용자의 권한으로 위조된 요청 전송\n- 스피어 피싱(Spear Phishing): 특정 대상을 겨냥한 맞춤형 피싱 공격\n- 백도어(Backdoor): 시스템에 몰래 설치된 비인가 접근 통로\n- Rainbow Table Attack: 미리 계산된 해시값 테이블로 비밀번호 역추적",
+    "choices": [
+      {"label": "1", "text": "CSRF", "isCorrect": true},
+      {"label": "2", "text": "XSS", "isCorrect": false},
+      {"label": "3", "text": "스피어 피싱", "isCorrect": false},
+      {"label": "4", "text": "Rainbow Table Attack", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "CSRF", "웹보안"]
+  },
+  {
+    "id": "theory-network_027",
+    "categoryId": "theory-network",
+    "subcategory": "악성코드",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "네트워크를 통해 스스로 복제하여 전파되며, 독립적으로 실행 가능한 악성 프로그램은?",
+    "answer": "웜(Worm)",
+    "explanation": "웜(Worm) vs 트로이 목마(Trojan Horse):\n- 웜(Worm): 자가 복제 가능, 독립 실행, 네트워크를 통해 전파, 숙주 파일 불필요\n- 트로이 목마(Trojan Horse): 정상 프로그램으로 위장, 자가 복제 불가, 사용자가 직접 설치, 백도어 역할 수행\n- 바이러스(Virus): 자가 복제 가능하지만, 숙주 파일에 기생하여 전파",
+    "choices": [
+      {"label": "1", "text": "웜(Worm)", "isCorrect": true},
+      {"label": "2", "text": "트로이 목마(Trojan Horse)", "isCorrect": false},
+      {"label": "3", "text": "바이러스(Virus)", "isCorrect": false},
+      {"label": "4", "text": "애드웨어(Adware)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "웜", "트로이목마", "악성코드"]
+  },
+  {
+    "id": "theory-network_028",
+    "categoryId": "theory-network",
+    "subcategory": "보안솔루션",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "네트워크 트래픽을 모니터링하여 침입을 탐지하는 시스템과, 탐지 후 자동으로 차단까지 수행하는 시스템을 순서대로 쓰시오.",
+    "answer": "IDS, IPS",
+    "explanation": "보안 솔루션 유형:\n- 방화벽(Firewall): 네트워크 접근 제어 (패킷 필터링)\n- 웹방화벽(WAF): 웹 애플리케이션 보호 (SQL Injection, XSS 차단)\n- IDS(Intrusion Detection System): 침입 탐지 시스템 (탐지만 수행)\n- IPS(Intrusion Prevention System): 침입 방지 시스템 (탐지 + 차단)\n- DMZ: 외부와 내부 네트워크 사이의 완충 영역\n- NAC(Network Access Control): 네트워크 접근 제어\n- DLP(Data Loss Prevention): 데이터 유출 방지",
+    "choices": [
+      {"label": "1", "text": "IDS, IPS", "isCorrect": true},
+      {"label": "2", "text": "IPS, IDS", "isCorrect": false},
+      {"label": "3", "text": "방화벽, IDS", "isCorrect": false},
+      {"label": "4", "text": "NAC, DLP", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "IDS", "IPS", "방화벽", "보안솔루션"]
+  },
+  {
+    "id": "theory-network_029",
+    "categoryId": "theory-network",
+    "subcategory": "인증",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "서버 접근 시 사용자 인증기법 중 '소유 기반' 인증에 해당하는 것은?",
+    "answer": "공인인증서, OTP, 보안카드",
+    "explanation": "사용자 인증 기법 3가지:\n1. 지식 기반(Something you know): ID/PW, PIN 등 사용자가 알고 있는 정보\n2. 소유 기반(Something you have): 공인인증서, OTP, 보안카드, 스마트카드 등 물리적 소유물\n3. 생체 기반(Something you are): 지문, 홍채, 얼굴, 정맥 등 고유한 생체 정보",
+    "choices": [
+      {"label": "1", "text": "공인인증서, OTP, 보안카드", "isCorrect": true},
+      {"label": "2", "text": "ID/PW, PIN 번호", "isCorrect": false},
+      {"label": "3", "text": "지문, 홍채, 얼굴 인식", "isCorrect": false},
+      {"label": "4", "text": "보안 질문, 패턴 잠금", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "인증", "소유기반", "지식기반", "생체기반"]
+  },
+  {
+    "id": "theory-network_030",
+    "categoryId": "theory-network",
+    "subcategory": "접근통제",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "서버 접근 통제 방식 중 주체의 직책이나 역할에 따라 권한을 부여하는 방식은?",
+    "answer": "RBAC(Role-Based Access Control)",
+    "explanation": "서버 접근 통제 방식:\n1. DAC(Discretionary Access Control, 임의적 접근 통제): 자원의 소유자가 접근 권한을 설정 (소유자 기준)\n2. MAC(Mandatory Access Control, 강제적 접근 통제): 보안 등급/정책에 의해 중앙에서 통제 (정책·보안등급 기준)\n3. RBAC(Role-Based Access Control, 역할 기반 접근 통제): 사용자의 직책이나 역할에 따라 권한 부여 (역할 기준)",
+    "choices": [
+      {"label": "1", "text": "RBAC", "isCorrect": true},
+      {"label": "2", "text": "DAC", "isCorrect": false},
+      {"label": "3", "text": "MAC", "isCorrect": false},
+      {"label": "4", "text": "ACL", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "접근통제", "DAC", "MAC", "RBAC"]
   }
 ]

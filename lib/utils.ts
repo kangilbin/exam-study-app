@@ -16,33 +16,9 @@ export function shuffle<T>(array: T[]): T[] {
 }
 
 /**
- * 퍼센트 계산 (소수점 1자리)
- */
-export function calcPercent(value: number, total: number): number {
-  if (total === 0) return 0;
-  return Math.round((value / total) * 1000) / 10;
-}
-
-/**
- * 초(second)를 "분:초" 형식으로 변환
- */
-export function formatTime(seconds: number): string {
-  const mins = Math.floor(seconds / 60);
-  const secs = seconds % 60;
-  return `${mins}:${secs.toString().padStart(2, '0')}`;
-}
-
-/**
  * 현재 ISO 8601 문자열 반환
  */
 export function nowISO(): string {
   return new Date().toISOString();
 }
 
-/**
- * 배열에서 n개 랜덤 추출 (비복원)
- */
-export function sampleN<T>(array: T[], n: number): T[] {
-  const shuffled = shuffle(array);
-  return shuffled.slice(0, Math.min(n, array.length));
-}

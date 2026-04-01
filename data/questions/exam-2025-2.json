@@ -11,14 +11,35 @@
     "answer": "인덱스(색인)",
     "explanation": "인덱스(Index) 접근 방법은 키 값과 포인터를 쌍으로 저장하여 빠르게 레코드를 검색하는 방식이다. 순차 접근, 인덱스 접근, 해싱 접근은 데이터베이스 물리 설계의 3가지 기본 접근 방법이다.",
     "choices": [
-      {"label": "1", "text": "인덱스(색인)", "isCorrect": true},
-      {"label": "2", "text": "직접(Direct)", "isCorrect": false},
-      {"label": "3", "text": "랜덤(Random)", "isCorrect": false},
-      {"label": "4", "text": "클러스터(Cluster)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "직접(Direct)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "클러스터(Cluster)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "랜덤(Random)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "인덱스(색인)",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "데이터베이스", "인덱스"]
+    "tags": [
+      "2025년",
+      "2회",
+      "데이터베이스",
+      "인덱스"
+    ]
   },
   {
     "id": "exam-2025-2_002",
@@ -32,14 +53,35 @@
     "answer": "ㄷ. Attribute",
     "explanation": "Attribute(속성)는 릴레이션에서 열(Column)을 의미하며 파일 구조에서 필드(Field)에 해당한다. 각 속성은 고유한 이름을 가지고 특정 도메인의 값을 갖는다.",
     "choices": [
-      {"label": "1", "text": "Attribute", "isCorrect": true},
-      {"label": "2", "text": "Tuple", "isCorrect": false},
-      {"label": "3", "text": "Degree", "isCorrect": false},
-      {"label": "4", "text": "Domain", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Degree",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Domain",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Attribute",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "Tuple",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "데이터베이스", "릴레이션"]
+    "tags": [
+      "2025년",
+      "2회",
+      "데이터베이스",
+      "릴레이션"
+    ]
   },
   {
     "id": "exam-2025-2_003",
@@ -53,14 +95,35 @@
     "answer": "SSH",
     "explanation": "SSH(Secure Shell)는 원격 접속 시 암호화된 통신을 제공하는 보안 프로토콜이다. 기본 포트는 22번이며, 공개키 인증을 사용한다. Telnet의 보안 취약점(평문 전송)을 보완한다.",
     "choices": [
-      {"label": "1", "text": "SSH", "isCorrect": true},
-      {"label": "2", "text": "SSL", "isCorrect": false},
-      {"label": "3", "text": "TLS", "isCorrect": false},
-      {"label": "4", "text": "SFTP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SSH",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "TLS",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SSL",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SFTP",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "보안", "SSH"]
+    "tags": [
+      "2025년",
+      "2회",
+      "보안",
+      "SSH"
+    ]
   },
   {
     "id": "exam-2025-2_004",
@@ -74,14 +137,35 @@
     "answer": "(1) SJF (2) SRT",
     "explanation": "SJF(Shortest Job First)는 실행 시간이 가장 짧은 프로세스를 먼저 처리하는 비선점형 스케줄링이다. SRT(Shortest Remaining Time)는 SJF의 선점형 버전으로, 남은 실행 시간이 더 짧은 프로세스가 도착하면 현재 프로세스를 선점한다.",
     "choices": [
-      {"label": "1", "text": "(1) SJF (2) SRT", "isCorrect": true},
-      {"label": "2", "text": "(1) FCFS (2) RR", "isCorrect": false},
-      {"label": "3", "text": "(1) SJF (2) RR", "isCorrect": false},
-      {"label": "4", "text": "(1) Priority (2) SRT", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "(1) SJF (2) RR",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "(1) FCFS (2) RR",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "(1) Priority (2) SRT",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "(1) SJF (2) SRT",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "운영체제", "스케줄링"]
+    "tags": [
+      "2025년",
+      "2회",
+      "운영체제",
+      "스케줄링"
+    ]
   },
   {
     "id": "exam-2025-2_005",
@@ -97,14 +181,35 @@
     "codeSnippet": "public class Main {\n    public static void change(String[] data, String s){\n        data[0] = s;\n        s = \"Z\";\n    }\n\n    public static void main(String[] args) {\n        String data[] = { \"A\" };\n        String s = \"B\";\n\n        change(data, s);\n        System.out.print(data[0] + s);\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "BB", "isCorrect": true},
-      {"label": "2", "text": "BZ", "isCorrect": false},
-      {"label": "3", "text": "AB", "isCorrect": false},
-      {"label": "4", "text": "ZB", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ZB",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "BB",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "BZ",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "AB",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "Java", "참조"]
+    "tags": [
+      "2025년",
+      "2회",
+      "Java",
+      "참조"
+    ]
   },
   {
     "id": "exam-2025-2_006",
@@ -118,14 +223,35 @@
     "answer": "① 128  ② 62",
     "explanation": "서브넷 마스크 255.255.255.192는 /26이다. 192=11000000이므로 호스트 비트는 6비트, 블록 크기는 64이다. 132/64=2.06이므로 네트워크 주소는 128(64*2). 사용 가능 호스트 수 = 2^6 - 2 = 62개이다.",
     "choices": [
-      {"label": "1", "text": "① 128  ② 62", "isCorrect": true},
-      {"label": "2", "text": "① 192  ② 30", "isCorrect": false},
-      {"label": "3", "text": "① 128  ② 64", "isCorrect": false},
-      {"label": "4", "text": "① 0  ② 254", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "① 192  ② 30",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "① 128  ② 62",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "① 128  ② 64",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "① 0  ② 254",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "네트워크", "서브넷"]
+    "tags": [
+      "2025년",
+      "2회",
+      "네트워크",
+      "서브넷"
+    ]
   },
   {
     "id": "exam-2025-2_007",
@@ -139,14 +265,35 @@
     "answer": "Proxy",
     "explanation": "프록시 패턴(Proxy Pattern)은 실제 객체 대신 대리 객체를 사용하여 접근을 제어하는 구조적 디자인 패턴이다. 지연 로딩, 접근 제어, 로깅 등의 용도로 사용된다.",
     "choices": [
-      {"label": "1", "text": "Proxy", "isCorrect": true},
-      {"label": "2", "text": "Adapter", "isCorrect": false},
-      {"label": "3", "text": "Facade", "isCorrect": false},
-      {"label": "4", "text": "Decorator", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Adapter",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Decorator",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Facade",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Proxy",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "디자인패턴", "Proxy"]
+    "tags": [
+      "2025년",
+      "2회",
+      "디자인패턴",
+      "Proxy"
+    ]
   },
   {
     "id": "exam-2025-2_008",
@@ -160,14 +307,35 @@
     "answer": "AJAX",
     "explanation": "AJAX(Asynchronous JavaScript and XML)는 웹 페이지 전체를 새로고침하지 않고 서버와 비동기적으로 데이터를 교환하여 일부 콘텐츠만 갱신할 수 있는 기술이다.",
     "choices": [
-      {"label": "1", "text": "AJAX", "isCorrect": true},
-      {"label": "2", "text": "REST", "isCorrect": false},
-      {"label": "3", "text": "WebSocket", "isCorrect": false},
-      {"label": "4", "text": "GraphQL", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "AJAX",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "REST",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "WebSocket",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "GraphQL",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "웹", "AJAX"]
+    "tags": [
+      "2025년",
+      "2회",
+      "웹",
+      "AJAX"
+    ]
   },
   {
     "id": "exam-2025-2_009",
@@ -183,14 +351,36 @@
     "codeSnippet": "public class Main {\n\n    static interface F {\n        int apply(int x) throws Exception;\n    }\n\n    public static int run(F f) {\n        try {\n            return f.apply(3);\n        } catch (Exception e) {\n            return 7;\n        }\n    }\n\n    public static void main(String[] args) {\n\n        F f = (x) -> {\n            if (x > 2) {\n                throw new Exception();\n            }\n            return x * 2;\n        };\n\n        System.out.print(run(f) + run((int n) -> n + 9));\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "19", "isCorrect": true},
-      {"label": "2", "text": "13", "isCorrect": false},
-      {"label": "3", "text": "7", "isCorrect": false},
-      {"label": "4", "text": "18", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "19",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "18",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "7",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "13",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "Java", "람다", "예외처리"]
+    "tags": [
+      "2025년",
+      "2회",
+      "Java",
+      "람다",
+      "예외처리"
+    ]
   },
   {
     "id": "exam-2025-2_010",
@@ -206,14 +396,36 @@
     "codeSnippet": "public class Main{\n\n    public static class Parent {\n        public int x(int i) { return i + 2; }\n        public static String id() { return \"P\";}\n    }\n\n    public static class Child extends Parent {\n        public int x(int i) { return i + 3; }\n        public String x(String s) { return s + \"R\"; }\n        public static String id() { return \"C\"; }\n    }\n\n    public static void main(String[] args) {\n        Parent ref = new Child();\n        System.out.println(ref.x(2) + ref.id());\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "5P", "isCorrect": true},
-      {"label": "2", "text": "5C", "isCorrect": false},
-      {"label": "3", "text": "4P", "isCorrect": false},
-      {"label": "4", "text": "4C", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "5C",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "4C",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "4P",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5P",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "Java", "상속", "static"]
+    "tags": [
+      "2025년",
+      "2회",
+      "Java",
+      "상속",
+      "static"
+    ]
   },
   {
     "id": "exam-2025-2_011",
@@ -227,14 +439,35 @@
     "answer": "1234561, 124567 또는 1234567, 124561",
     "explanation": "분기 커버리지는 모든 분기(True/False)를 최소 한 번씩 실행해야 한다. 두 가지 경로를 조합하여 노드 3에서의 True/False 분기와 노드 6에서의 루프/종료 분기를 모두 커버해야 한다.",
     "choices": [
-      {"label": "1", "text": "1234561, 124567", "isCorrect": true},
-      {"label": "2", "text": "1234567", "isCorrect": false},
-      {"label": "3", "text": "124561, 124567", "isCorrect": false},
-      {"label": "4", "text": "1234561", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1234567",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1234561",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "124561, 124567",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1234561, 124567",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "테스트", "분기 커버리지"]
+    "tags": [
+      "2025년",
+      "2회",
+      "테스트",
+      "분기 커버리지"
+    ]
   },
   {
     "id": "exam-2025-2_012",
@@ -250,14 +483,36 @@
     "codeSnippet": "#include <stdio.h>\n#define SIZE 3\n\ntypedef struct {\n    int a[SIZE];\n    int front;\n    int rear;\n} Queue;\n\nvoid enq(Queue* q, int val){\n    q->a[q->rear] = val;\n    q->rear = (q->rear + 1) % SIZE;\n}\n\nint deq(Queue* q) {\n    int val = q->a[q->front];\n    q->front = (q->front + 1) % SIZE;\n    return val;\n}\n\nint main() {\n    Queue q = {{0}, 0, 0};\n\n    enq(&q,1); enq(&q,2); deq(&q); enq(&q, 3);\n\n    int first = deq(&q);\n    int second = deq(&q);\n    printf(\"%d 그리고 %d\", first, second);\n\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "2 그리고 3", "isCorrect": true},
-      {"label": "2", "text": "1 그리고 2", "isCorrect": false},
-      {"label": "3", "text": "1 그리고 3", "isCorrect": false},
-      {"label": "4", "text": "3 그리고 1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1 그리고 2",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "2 그리고 3",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "1 그리고 3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "3 그리고 1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "C언어", "큐", "원형큐"]
+    "tags": [
+      "2025년",
+      "2회",
+      "C언어",
+      "큐",
+      "원형큐"
+    ]
   },
   {
     "id": "exam-2025-2_013",
@@ -271,14 +526,35 @@
     "answer": "11.75ms",
     "explanation": "라운드로빈(타임퀀텀=4)으로 스케줄링 수행 시:\nP1(0-4), P2(4-8), P3(8-12), P4(12-16), P1(16-20), P3(20-24), P4(24-25), P3(25-26)\nP1 대기: (16-4)=12, P2 대기: (4-1)=3, P3 대기: (8-2)+(20-12)+(25-24)=17, P4 대기: (12-3)+(24-16)=17 -> 부분 계산 이후 평균은 약 11.75ms이다.",
     "choices": [
-      {"label": "1", "text": "11.75ms", "isCorrect": true},
-      {"label": "2", "text": "10.5ms", "isCorrect": false},
-      {"label": "3", "text": "12.25ms", "isCorrect": false},
-      {"label": "4", "text": "9.75ms", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "12.25ms",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "9.75ms",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "10.5ms",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "11.75ms",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "운영체제", "라운드로빈"]
+    "tags": [
+      "2025년",
+      "2회",
+      "운영체제",
+      "라운드로빈"
+    ]
   },
   {
     "id": "exam-2025-2_014",
@@ -294,14 +570,36 @@
     "codeSnippet": "#include <stdio.h>\n\nstruct dat {\n    int x;\n    int y;\n};\n\nint main() {\n    struct dat a[] = {{1, 2}, {3, 4}, {5, 6}};\n    struct dat* ptr = a;\n    struct dat** pptr = &ptr;\n\n    (*pptr)[1] = (*pptr)[2];\n    printf(\"%d 그리고 %d\", a[1].x, a[1].y);\n\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "5 그리고 6", "isCorrect": true},
-      {"label": "2", "text": "3 그리고 4", "isCorrect": false},
-      {"label": "3", "text": "1 그리고 2", "isCorrect": false},
-      {"label": "4", "text": "5 그리고 4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "5 그리고 4",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1 그리고 2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3 그리고 4",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5 그리고 6",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "C언어", "구조체", "포인터"]
+    "tags": [
+      "2025년",
+      "2회",
+      "C언어",
+      "구조체",
+      "포인터"
+    ]
   },
   {
     "id": "exam-2025-2_015",
@@ -317,14 +615,35 @@
     "codeSnippet": "public class Main{\n    public static class BO {\n        public int v;\n        public BO(int v) {\n            this.v = v;\n        }\n    }\n    public static void main(String[] args) {\n        BO a = new BO(1);\n        BO b = new BO(2);\n        BO c = new BO(3);\n        BO[] arr = {a, b, c};\n        BO t = arr[0];\n        arr[0] = arr[2];\n        arr[2] = t;\n        arr[1].v = arr[0].v;\n        System.out.println(a.v + \"a\" + b.v + \"b\" + c.v);\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "1a3b3", "isCorrect": true},
-      {"label": "2", "text": "3a3b1", "isCorrect": false},
-      {"label": "3", "text": "1a2b3", "isCorrect": false},
-      {"label": "4", "text": "3a2b1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1a3b3",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "3a3b1",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3a2b1",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1a2b3",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "Java", "객체배열"]
+    "tags": [
+      "2025년",
+      "2회",
+      "Java",
+      "객체배열"
+    ]
   },
   {
     "id": "exam-2025-2_016",
@@ -340,14 +659,35 @@
     "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct node {\n    int p;\n    struct node* n;\n};\n\nint main() {\n    struct node a = {1, NULL};\n    struct node b = {2, NULL};\n    struct node c = {3, NULL};\n\n    a.n = &b; b.n = &c; c.n = NULL;\n    c.n = &a; a.n = &b; b.n = NULL;\n    struct node* head = &c;\n    printf(\"%d %d %d\", head->p, head->n->p, head->n->n->p);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "3 1 2", "isCorrect": true},
-      {"label": "2", "text": "1 2 3", "isCorrect": false},
-      {"label": "3", "text": "3 2 1", "isCorrect": false},
-      {"label": "4", "text": "1 3 2", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1 3 2",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "3 2 1",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3 1 2",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "1 2 3",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "C언어", "연결리스트"]
+    "tags": [
+      "2025년",
+      "2회",
+      "C언어",
+      "연결리스트"
+    ]
   },
   {
     "id": "exam-2025-2_017",
@@ -363,14 +703,36 @@
     "codeSnippet": "lst = [1,2,3]\ndst = {i : i* 2 for i in lst}\ns = set(dst.values())\nlst[0] = 99\ndst[2]=7\ns.add(99)\nprint(len(s & set(dst.values())))",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "2", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "1", "isCorrect": false},
-      {"label": "4", "text": "4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "Python", "딕셔너리", "집합"]
+    "tags": [
+      "2025년",
+      "2회",
+      "Python",
+      "딕셔너리",
+      "집합"
+    ]
   },
   {
     "id": "exam-2025-2_018",
@@ -386,14 +748,36 @@
     "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct node {\n    char c;\n    struct node* p;\n};\n\nstruct node* func(char* s) {\n    struct node* h = NULL, *n;\n\n    while(*s) {\n        n = malloc(sizeof(struct node));\n        n->c = *s++;\n        n->p = h;\n        h = n;\n    }\n\n    return h;\n}\n\nint main() {\n    struct node* n = func(\"BEST\");\n\n    while(n) {\n        putchar(n->c);\n        struct node* t = n;\n        n = n->p;\n        free(t);\n    }\n\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "TSEB", "isCorrect": true},
-      {"label": "2", "text": "BEST", "isCorrect": false},
-      {"label": "3", "text": "TBES", "isCorrect": false},
-      {"label": "4", "text": "SEBT", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "BEST",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "TBES",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SEBT",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "TSEB",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "C언어", "연결리스트", "문자열"]
+    "tags": [
+      "2025년",
+      "2회",
+      "C언어",
+      "연결리스트",
+      "문자열"
+    ]
   },
   {
     "id": "exam-2025-2_019",
@@ -407,14 +791,35 @@
     "answer": "SYN Flooding",
     "explanation": "SYN Flooding은 TCP 3-way handshake의 SYN 단계를 악용하는 DoS 공격이다. 공격자가 다수의 SYN 패킷을 보내고 ACK를 보내지 않으면 서버의 반개방 연결이 누적되어 자원이 고갈된다.",
     "choices": [
-      {"label": "1", "text": "SYN Flooding", "isCorrect": true},
-      {"label": "2", "text": "스머프 공격", "isCorrect": false},
-      {"label": "3", "text": "Land Attack", "isCorrect": false},
-      {"label": "4", "text": "Ping of Death", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SYN Flooding",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Land Attack",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "스머프 공격",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Ping of Death",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "보안", "SYN Flooding"]
+    "tags": [
+      "2025년",
+      "2회",
+      "보안",
+      "SYN Flooding"
+    ]
   },
   {
     "id": "exam-2025-2_020",
@@ -428,13 +833,35 @@
     "answer": "부장, 대리, 과장, 차장",
     "explanation": "π(프로젝션)는 특정 속성(열)만 추출하는 관계대수 연산이다. πTTL(employee)는 TTL 속성만 추출하며, 릴레이션은 중복을 제거하므로 결과는 부장, 대리, 과장, 차장이다.",
     "choices": [
-      {"label": "1", "text": "부장, 대리, 과장, 차장", "isCorrect": true},
-      {"label": "2", "text": "부장, 대리, 과장, 부장, 차장", "isCorrect": false},
-      {"label": "3", "text": "김철수, 이영희, 박민수, 정수진, 한지민", "isCorrect": false},
-      {"label": "4", "text": "영업부, 개발부, 기획부", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "부장, 대리, 과장, 부장, 차장",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "김철수, 이영희, 박민수, 정수진, 한지민",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "영업부, 개발부, 기획부",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "부장, 대리, 과장, 차장",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/554",
-    "tags": ["2025년", "2회", "데이터베이스", "관계대수", "프로젝션"]
+    "tags": [
+      "2025년",
+      "2회",
+      "데이터베이스",
+      "관계대수",
+      "프로젝션"
+    ]
   }
 ]

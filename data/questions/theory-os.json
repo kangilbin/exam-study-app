@@ -7,7 +7,7 @@
     "difficulty": 2,
     "question": "예상 CPU 실행 시간이 가장 짧은 프로세스에게 먼저 CPU를 할당하는 비선점형 스케줄링 알고리즘은?",
     "answer": "SJF(Shortest Job First)",
-    "explanation": "SJF는 실행 시간이 가장 짧은 프로세스를 우선 처리합니다. 평균 대기 시간을 최소화하지만, 긴 프로세스가 무한 대기할 수 있는 기아(Starvation) 문제가 있습니다.",
+    "explanation": "SJF는 실행 시간이 가장 짧은 프로세스를 우선 처리합니다.",
     "choices": [
       {"label": "1", "text": "SJF", "isCorrect": true},
       {"label": "2", "text": "FCFS", "isCorrect": false},
@@ -15,7 +15,7 @@
       {"label": "4", "text": "Priority", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["운영체제", "스케줄링", "SJF"]
   },
   {
@@ -26,7 +26,7 @@
     "difficulty": 2,
     "question": "SJF의 선점형 버전으로, 남은 실행 시간이 더 짧은 프로세스가 도착하면 현재 프로세스를 중단하는 알고리즘은?",
     "answer": "SRT(Shortest Remaining Time)",
-    "explanation": "SRT는 SJF의 선점형 버전입니다. 현재 실행 중인 프로세스보다 더 짧은 실행 시간의 프로세스가 도착하면 CPU를 빼앗깁니다.",
+    "explanation": "SRT는 SJF의 선점형 버전입니다.",
     "choices": [
       {"label": "1", "text": "SRT", "isCorrect": true},
       {"label": "2", "text": "SJF", "isCorrect": false},
@@ -34,7 +34,7 @@
       {"label": "4", "text": "MLQ", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["운영체제", "스케줄링", "SRT", "선점형"]
   },
   {
@@ -45,14 +45,15 @@
     "difficulty": 2,
     "question": "교착상태(Deadlock)의 4가지 필요조건을 모두 쓰시오.",
     "answer": "상호배제, 점유와 대기, 비선점, 환형 대기",
-    "explanation": "교착상태의 4가지 필요조건:\n1. 상호배제(Mutual Exclusion): 자원을 한 번에 하나의 프로세스만 사용\n2. 점유와 대기(Hold and Wait): 자원을 점유하면서 다른 자원을 대기\n3. 비선점(Non-preemption): 강제로 자원을 빼앗을 수 없음\n4. 환형 대기(Circular Wait): 순환 형태로 자원을 대기",
+    "explanation": "교착상태의 4가지 필요조건:\n1. 상호배제\n2. 점유와 대기\n3. 비선점\n4. 환형 대기",
     "choices": [
       {"label": "1", "text": "상호배제, 점유와 대기, 비선점, 환형 대기", "isCorrect": true},
       {"label": "2", "text": "상호배제, 점유와 대기, 선점, 환형 대기", "isCorrect": false},
       {"label": "3", "text": "상호배제, 점유, 비선점, 순차 대기", "isCorrect": false},
       {"label": "4", "text": "독점, 대기, 비선점, 환형 대기", "isCorrect": false}
     ],
-    "source": "generated",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["운영체제", "교착상태", "데드락"]
   },
   {
@@ -63,7 +64,7 @@
     "difficulty": 1,
     "question": "JavaScript, XML 등을 활용하여 전체 페이지 새로고침 없이 웹 페이지 일부만 비동기식으로 갱신하는 기법은?",
     "answer": "AJAX(Asynchronous JavaScript and XML)",
-    "explanation": "AJAX는 XMLHttpRequest 객체를 이용하여 서버와 비동기 통신을 수행합니다. 페이지 전체를 다시 로딩하지 않고 필요한 부분만 업데이트합니다.",
+    "explanation": "AJAX는 XMLHttpRequest 객체를 이용하여 서버와 비동기 통신을 수행합니다.",
     "choices": [
       {"label": "1", "text": "AJAX", "isCorrect": true},
       {"label": "2", "text": "WebSocket", "isCorrect": false},
@@ -71,7 +72,7 @@
       {"label": "4", "text": "SOAP", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["웹기술", "AJAX", "비동기"]
   },
   {
@@ -82,7 +83,7 @@
     "difficulty": 2,
     "question": "노드들끼리 무선 인터페이스로 서로 통신하고, 외부 도움 없이 자체적으로 네트워킹이 가능한 네트워크는?",
     "answer": "애드혹(Ad-hoc) 네트워크",
-    "explanation": "애드혹 네트워크는 기반 인프라(AP, 기지국) 없이 무선 단말들끼리 직접 통신하는 네트워크입니다. 군사용으로도 활용됩니다.",
+    "explanation": "애드혹 네트워크는 기반 인프라 없이 무선 단말들끼리 직접 통신하는 네트워크입니다.",
     "choices": [
       {"label": "1", "text": "애드혹(Ad-hoc) 네트워크", "isCorrect": true},
       {"label": "2", "text": "메쉬(Mesh) 네트워크", "isCorrect": false},
@@ -90,7 +91,292 @@
       {"label": "4", "text": "클라이언트-서버 네트워크", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "기출문제_2024년_3회_수업자료_v0.1.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["네트워크", "애드혹", "무선"]
+  },
+  {
+    "id": "theory-os_006",
+    "categoryId": "theory-os",
+    "subcategory": "운영체제",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "운영체제의 목적 4가지를 암기법 '처반사신'으로 외울 수 있다. 다음 중 운영체제의 목적으로 올바른 것은?",
+    "answer": "처리 능력(Throughput), 반환 시간(Turn Around Time), 사용 가능도(Availability), 신뢰도(Reliability)",
+    "explanation": "운영체제의 목적 4가지(처반사신):\n1. 처리 능력(Throughput): 일정 시간 내에 시스템이 처리하는 일의 양\n2. 반환 시간(Turn Around Time): 작업을 의뢰한 시간부터 처리가 완료될 때까지 걸린 시간\n3. 사용 가능도(Availability): 시스템을 사용할 필요가 있을 때 즉시 사용 가능한 정도\n4. 신뢰도(Reliability): 시스템이 주어진 문제를 정확하게 해결하는 정도",
+    "choices": [
+      {"label": "1", "text": "처리 능력, 반환 시간, 사용 가능도, 신뢰도", "isCorrect": true},
+      {"label": "2", "text": "처리 능력, 응답 시간, 가용성, 보안성", "isCorrect": false},
+      {"label": "3", "text": "처리량, 대기 시간, 확장성, 안정성", "isCorrect": false},
+      {"label": "4", "text": "처리 속도, 반환 시간, 이식성, 신뢰도", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "목적", "처반사신"]
+  },
+  {
+    "id": "theory-os_007",
+    "categoryId": "theory-os",
+    "subcategory": "운영체제",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "다음 중 운영체제의 운영 방식에 해당하지 않는 것은?",
+    "answer": "일괄처리, 다중프로그래밍, 시분할, 다중처리, 실시간, 다중모드, 분산처리",
+    "explanation": "운영체제의 운영 방식 7가지:\n1. 일괄처리(Batch Processing): 작업을 모아서 한꺼번에 처리\n2. 다중프로그래밍(Multi-Programming): 여러 프로그램을 메모리에 적재하여 CPU 활용 극대화\n3. 시분할(Time Sharing): CPU 사용 시간을 분할하여 여러 사용자에게 할당\n4. 다중처리(Multi-Processing): 여러 CPU로 동시 처리\n5. 실시간(Real-Time): 즉각적 응답이 필요한 처리\n6. 다중모드(Multi-Mode): 일괄처리+시분할+실시간 혼합\n7. 분산처리(Distributed): 여러 컴퓨터를 네트워크로 연결하여 처리",
+    "choices": [
+      {"label": "1", "text": "시분할 시스템", "isCorrect": false},
+      {"label": "2", "text": "다중프로그래밍 시스템", "isCorrect": false},
+      {"label": "3", "text": "객체지향 시스템", "isCorrect": true},
+      {"label": "4", "text": "분산처리 시스템", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "운영방식"]
+  },
+  {
+    "id": "theory-os_008",
+    "categoryId": "theory-os",
+    "subcategory": "UNIX",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "UNIX 시스템의 구성요소 3가지 중, 하드웨어를 보호하고 프로세스, 메모리, 파일, 입출력 등을 관리하는 핵심 부분은?",
+    "answer": "커널(Kernel)",
+    "explanation": "UNIX 시스템의 구성요소 3가지:\n1. 커널(Kernel): UNIX의 핵심으로 하드웨어를 보호하고, 프로세스 관리, 메모리 관리, 파일 관리, 입출력 관리, 데이터 전송 및 변환 등의 기능을 수행\n2. 쉘(Shell): 명령어 해석기로서 사용자와 커널 사이의 인터페이스 역할 수행\n3. 유틸리티(Utility): 응용 프로그램으로 에디터, 컴파일러, 인터프리터 등이 해당",
+    "choices": [
+      {"label": "1", "text": "커널(Kernel)", "isCorrect": true},
+      {"label": "2", "text": "쉘(Shell)", "isCorrect": false},
+      {"label": "3", "text": "유틸리티(Utility)", "isCorrect": false},
+      {"label": "4", "text": "파일 시스템(File System)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "UNIX", "커널", "쉘", "유틸리티"]
+  },
+  {
+    "id": "theory-os_009",
+    "categoryId": "theory-os",
+    "subcategory": "메모리관리",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "페이징 기법에서 페이지 부재(Page Fault)가 계속 발생하여, 프로세스 수행에 소비되는 시간보다 페이지 교체에 소비되는 시간이 더 많아지는 현상은?",
+    "answer": "스래싱(Thrashing)",
+    "explanation": "스래싱(Thrashing)은 다중 프로그래밍 환경에서 프로세스에 할당된 프레임 수가 부족할 때 발생합니다. 페이지 부재가 과도하게 발생하여 실제 작업보다 페이지 교체 작업이 더 많아지면서 시스템 성능이 급격히 저하됩니다. 워킹 셋(Working Set)을 적절히 유지하면 스래싱을 방지할 수 있습니다.",
+    "choices": [
+      {"label": "1", "text": "스래싱(Thrashing)", "isCorrect": true},
+      {"label": "2", "text": "스와핑(Swapping)", "isCorrect": false},
+      {"label": "3", "text": "페이징(Paging)", "isCorrect": false},
+      {"label": "4", "text": "세그먼테이션(Segmentation)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "메모리관리", "스래싱", "페이징"]
+  },
+  {
+    "id": "theory-os_010",
+    "categoryId": "theory-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교착상태 해결방법 중, 교착상태가 발생하지 않도록 사전에 시스템을 제어하는 방법으로 은행원 알고리즘(Banker's Algorithm)이 사용되는 기법은?",
+    "answer": "회피(Avoidance)",
+    "explanation": "교착상태 해결방법 4가지:\n1. 예방(Prevention): 교착상태 4가지 조건 중 하나를 제거하여 사전에 예방\n2. 회피(Avoidance): 은행원 알고리즘 등을 사용하여 교착상태가 발생할 가능성을 피해감\n3. 발견(Detection): 교착상태 발생을 허용하고 발생 시 원인을 점검하여 발견\n4. 회복(Recovery): 교착상태 발견 후 프로세스 종료 또는 자원 선점을 통해 회복",
+    "choices": [
+      {"label": "1", "text": "회피(Avoidance)", "isCorrect": true},
+      {"label": "2", "text": "예방(Prevention)", "isCorrect": false},
+      {"label": "3", "text": "발견(Detection)", "isCorrect": false},
+      {"label": "4", "text": "회복(Recovery)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "교착상태", "회피", "은행원알고리즘"]
+  },
+  {
+    "id": "theory-os_011",
+    "categoryId": "theory-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "Dijkstra가 제안한 것으로, P와 V 연산을 통해 프로세스 사이의 동기를 유지하고 상호 배제의 원리를 보장하는 알고리즘은?",
+    "answer": "세마포어(Semaphore)",
+    "explanation": "세마포어(Semaphore)는 Dijkstra가 제안한 동기화 도구입니다.\n- P 연산(Wait): 임계 구역에 진입하기 전에 수행 (자원 획득, S값 감소)\n- V 연산(Signal): 임계 구역에서 나올 때 수행 (자원 반납, S값 증가)\n이 두 연산을 통해 프로세스 간 동기화와 상호 배제를 보장합니다.",
+    "choices": [
+      {"label": "1", "text": "세마포어(Semaphore)", "isCorrect": true},
+      {"label": "2", "text": "뮤텍스(Mutex)", "isCorrect": false},
+      {"label": "3", "text": "모니터(Monitor)", "isCorrect": false},
+      {"label": "4", "text": "스핀락(Spinlock)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "교착상태", "세마포어", "동기화"]
+  },
+  {
+    "id": "theory-os_012",
+    "categoryId": "theory-os",
+    "subcategory": "메모리관리",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "가상메모리 페이지 교체 알고리즘 중, 가장 오랫동안 사용하지 않은 페이지를 교체하는 알고리즘은?",
+    "answer": "LRU(Least Recently Used)",
+    "explanation": "주요 페이지 교체 알고리즘:\n1. FIFO(First In First Out): 가장 먼저 들어온 페이지를 교체\n2. LRU(Least Recently Used): 가장 오랫동안 사용하지 않은 페이지를 교체\n3. LFU(Least Frequently Used): 사용 빈도가 가장 적은 페이지를 교체\n4. OPT(Optimal): 앞으로 가장 오랫동안 사용하지 않을 페이지를 교체 (이론적 최적)\n5. NUR(Not Used Recently): 최근에 사용하지 않은 페이지를 교체 (참조 비트, 변형 비트 활용)",
+    "choices": [
+      {"label": "1", "text": "LRU(Least Recently Used)", "isCorrect": true},
+      {"label": "2", "text": "LFU(Least Frequently Used)", "isCorrect": false},
+      {"label": "3", "text": "FIFO(First In First Out)", "isCorrect": false},
+      {"label": "4", "text": "OPT(Optimal)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "메모리관리", "페이지교체", "LRU"]
+  },
+  {
+    "id": "theory-os_013",
+    "categoryId": "theory-os",
+    "subcategory": "프로세스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "프로세스 상태 전이에서, 준비(Ready) 상태의 프로세스가 CPU를 할당받아 실행(Running) 상태로 전이되는 것을 무엇이라 하는가?",
+    "answer": "디스패치(Dispatch)",
+    "explanation": "프로세스 상태 전이:\n1. 생성(New) → 준비(Ready): 승인(Admit)\n2. 준비(Ready) → 실행(Running): 디스패치(Dispatch) - CPU 할당\n3. 실행(Running) → 준비(Ready): 타이머 런아웃(Timer Run Out) - 할당 시간 초과\n4. 실행(Running) → 대기(Waiting): 블록(Block) - 입출력 요청 등\n5. 대기(Waiting) → 준비(Ready): 웨이크업(Wake Up) - 입출력 완료 등\n6. 실행(Running) → 완료(Terminated): 종료(Exit)",
+    "choices": [
+      {"label": "1", "text": "디스패치(Dispatch)", "isCorrect": true},
+      {"label": "2", "text": "타이머 런아웃(Timer Run Out)", "isCorrect": false},
+      {"label": "3", "text": "블록(Block)", "isCorrect": false},
+      {"label": "4", "text": "웨이크업(Wake Up)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "프로세스", "상태전이", "디스패치"]
+  },
+  {
+    "id": "theory-os_014",
+    "categoryId": "theory-os",
+    "subcategory": "개발모델",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 생명주기 모델 중, 계획-위험분석-개발-고객평가의 과정을 반복하며 점진적으로 개발하는 모델은?",
+    "answer": "나선형 모델(Spiral Model)",
+    "explanation": "주요 소프트웨어 생명주기 모델:\n1. 폭포수 모델(Waterfall): 각 단계를 순차적으로 진행, 이전 단계로 되돌아갈 수 없음\n2. 프로토타이핑 모델(Prototyping): 시제품을 먼저 만들어 사용자 요구사항을 파악\n3. 나선형 모델(Spiral): Boehm이 제안, 계획수립→위험분석→개발→고객평가 단계를 반복하며 점진적으로 완성, 위험 관리에 중점",
+    "choices": [
+      {"label": "1", "text": "나선형 모델(Spiral Model)", "isCorrect": true},
+      {"label": "2", "text": "폭포수 모델(Waterfall Model)", "isCorrect": false},
+      {"label": "3", "text": "프로토타이핑 모델(Prototyping Model)", "isCorrect": false},
+      {"label": "4", "text": "애자일 모델(Agile Model)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "생명주기", "나선형모델"]
+  },
+  {
+    "id": "theory-os_015",
+    "categoryId": "theory-os",
+    "subcategory": "병행제어",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "병행 제어(Concurrency Control) 기법 중, 데이터에 잠금(Lock)을 설정하여 다른 트랜잭션이 접근하지 못하도록 하는 기법은?",
+    "answer": "로킹(Locking)",
+    "explanation": "병행 제어 기법의 종류:\n1. 로킹(Locking): 트랜잭션이 데이터에 잠금을 설정하면 다른 트랜잭션은 해당 데이터에 접근 불가. 공유 잠금(Shared Lock)과 배타 잠금(Exclusive Lock)이 있음\n2. 낙관적 검증(Optimistic Validation): 트랜잭션 수행 동안 어떤 검사도 하지 않고, 완료 후에 검증을 수행\n3. 타임스탬프 순서(Timestamp Ordering): 트랜잭션에 시간 도장을 부여하고 그 순서대로 처리",
+    "choices": [
+      {"label": "1", "text": "로킹(Locking)", "isCorrect": true},
+      {"label": "2", "text": "낙관적 검증(Optimistic Validation)", "isCorrect": false},
+      {"label": "3", "text": "타임스탬프 순서(Timestamp Ordering)", "isCorrect": false},
+      {"label": "4", "text": "다중 버전 기법(MVCC)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "병행제어", "로킹"]
+  },
+  {
+    "id": "theory-os_016",
+    "categoryId": "theory-os",
+    "subcategory": "디스크",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "디스크 스케줄링 알고리즘 중, 현재 헤드 위치에서 가장 가까운 트랙의 요청을 먼저 서비스하는 알고리즘은?",
+    "answer": "SSTF(Shortest Seek Time First)",
+    "explanation": "주요 디스크 스케줄링 알고리즘:\n1. FCFS(First Come First Served): 요청 순서대로 처리\n2. SSTF(Shortest Seek Time First): 현재 헤드에서 가장 가까운 트랙의 요청을 먼저 처리, 기아 현상 발생 가능\n3. SCAN: 헤드가 한 방향으로 이동하며 요청을 처리하고 끝에 도달하면 반대 방향으로 이동 (엘리베이터 알고리즘)\n4. C-SCAN: 한 방향으로만 이동하며 처리, 끝에 도달하면 처음으로 되돌아감\n5. LOOK: SCAN과 유사하지만 더 이상 요청이 없으면 방향 전환",
+    "choices": [
+      {"label": "1", "text": "SSTF(Shortest Seek Time First)", "isCorrect": true},
+      {"label": "2", "text": "FCFS(First Come First Served)", "isCorrect": false},
+      {"label": "3", "text": "SCAN", "isCorrect": false},
+      {"label": "4", "text": "C-SCAN", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "디스크", "스케줄링", "SSTF"]
+  },
+  {
+    "id": "theory-os_017",
+    "categoryId": "theory-os",
+    "subcategory": "프로세스",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "프로그램 실행 중 오류 등 예기치 못한 상황이 발생했을 때, 실행 중인 작업을 중단하고 해당 상황을 처리한 후 다시 원래 작업으로 돌아가는 것을 무엇이라 하는가?",
+    "answer": "인터럽트(Interrupt)",
+    "explanation": "인터럽트(Interrupt)는 프로그램 실행 도중 예기치 않은 상황(오류, 입출력 요청 등)이 발생했을 때, 현재 실행 중인 작업을 일시 중단하고 발생된 상황을 우선 처리한 후, 다시 실행 중이던 작업으로 복귀하는 것입니다. 외부 인터럽트(전원 이상, 기계 고장, 입출력), 내부 인터럽트(프로그램 오류), 소프트웨어 인터럽트(SVC) 등으로 분류됩니다.",
+    "choices": [
+      {"label": "1", "text": "인터럽트(Interrupt)", "isCorrect": true},
+      {"label": "2", "text": "트랩(Trap)", "isCorrect": false},
+      {"label": "3", "text": "폴링(Polling)", "isCorrect": false},
+      {"label": "4", "text": "콜백(Callback)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "프로세스", "인터럽트"]
+  },
+  {
+    "id": "theory-os_018",
+    "categoryId": "theory-os",
+    "subcategory": "교착상태",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "교착상태 발생의 4가지 조건 중, 다른 프로세스에 할당된 자원을 강제로 빼앗을 수 없는 조건은?",
+    "answer": "비선점(Non-Preemption)",
+    "explanation": "교착상태 발생 4가지 조건(상점비환):\n1. 상호배제(Mutual Exclusion): 한 번에 한 프로세스만 해당 자원을 사용할 수 있음\n2. 점유와 대기(Hold and Wait): 이미 자원을 가진 프로세스가 다른 자원을 추가로 요구하며 대기\n3. 비선점(Non-Preemption): 다른 프로세스에 할당된 자원을 강제로 빼앗을 수 없음\n4. 환형 대기(Circular Wait): 프로세스 간 자원 요구가 순환 형태로 대기",
+    "choices": [
+      {"label": "1", "text": "비선점(Non-Preemption)", "isCorrect": true},
+      {"label": "2", "text": "상호배제(Mutual Exclusion)", "isCorrect": false},
+      {"label": "3", "text": "점유와 대기(Hold and Wait)", "isCorrect": false},
+      {"label": "4", "text": "환형 대기(Circular Wait)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["운영체제", "교착상태", "비선점", "상점비환"]
+  },
+  {
+    "id": "theory-os_019",
+    "categoryId": "theory-os",
+    "subcategory": "인터페이스",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "사용자에게 메뉴를 기반으로 선택하여 작업할 수 있는 환경을 제공하는 사용자 인터페이스는?",
+    "answer": "MUI(Menu User Interface)",
+    "explanation": "사용자 인터페이스의 종류:\n- CLI(Command Line Interface): 명령어를 직접 입력하여 조작\n- GUI(Graphical User Interface): 그래픽 요소(아이콘, 메뉴 등)를 이용하여 조작\n- MUI(Menu User Interface): 메뉴를 기반으로 선택하여 작업\n- NUI(Natural User Interface): 사용자의 자연스러운 동작(터치, 음성 등)으로 조작",
+    "choices": [
+      {"label": "1", "text": "MUI(Menu User Interface)", "isCorrect": true},
+      {"label": "2", "text": "GUI(Graphical User Interface)", "isCorrect": false},
+      {"label": "3", "text": "CLI(Command Line Interface)", "isCorrect": false},
+      {"label": "4", "text": "NUI(Natural User Interface)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["인터페이스", "MUI", "사용자인터페이스"]
+  },
+  {
+    "id": "theory-os_020",
+    "categoryId": "theory-os",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 개발 보안의 3대 요소 중, 인가된 사용자만 정보 자산에 접근할 수 있도록 하는 것은?",
+    "answer": "기밀성(Confidentiality)",
+    "explanation": "소프트웨어 개발 보안의 3대 요소:\n1. 기밀성(Confidentiality): 인가된 사용자만 정보 자산에 접근할 수 있음. 허가되지 않은 사용자의 정보 공개 차단\n2. 무결성(Integrity): 적절한 권한을 가진 사용자만 인가된 방법으로 정보를 변경할 수 있음. 정보의 정확성과 완전성 보장\n3. 가용성(Availability): 정보 자산에 대해 적절한 시간에 접근 가능하도록 보장. 인가된 사용자가 필요할 때 사용 가능",
+    "choices": [
+      {"label": "1", "text": "기밀성(Confidentiality)", "isCorrect": true},
+      {"label": "2", "text": "무결성(Integrity)", "isCorrect": false},
+      {"label": "3", "text": "가용성(Availability)", "isCorrect": false},
+      {"label": "4", "text": "인증성(Authentication)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["보안", "기밀성", "무결성", "가용성"]
   }
 ]

@@ -15,7 +15,7 @@
       {"label": "4", "text": "스키마(Schema)", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["데이터베이스", "차수", "Degree", "릴레이션"]
   },
   {
@@ -53,7 +53,7 @@
       {"label": "4", "text": "Division", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["데이터베이스", "관계대수", "Project"]
   },
   {
@@ -72,7 +72,7 @@
       {"label": "4", "text": "직접 방법", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 2회 이론 코드 통합_학습 자료.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["데이터베이스", "인덱스", "파일접근"]
   },
   {
@@ -91,7 +91,482 @@
       {"label": "4", "text": "슈퍼키", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["데이터베이스", "외래키", "무결성"]
+  },
+  {
+    "id": "theory-db_006",
+    "categoryId": "theory-db",
+    "subcategory": "스키마",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스의 물리적 저장 구조를 정의하며, 실제 데이터가 저장되는 방법을 기술하는 스키마는?",
+    "answer": "내부 스키마",
+    "explanation": "스키마 3종류:\n- 외부 스키마(서브 스키마): 사용자 관점의 논리적 구조, 여러 개 존재 가능\n- 개념 스키마: DB 전체 논리적 구조, 조직 전체에 하나만 존재\n- 내부 스키마: 물리적 저장 구조, 실제 데이터 저장 방법 기술",
+    "choices": [
+      {"label": "1", "text": "내부 스키마", "isCorrect": true},
+      {"label": "2", "text": "외부 스키마", "isCorrect": false},
+      {"label": "3", "text": "개념 스키마", "isCorrect": false},
+      {"label": "4", "text": "관계 스키마", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "스키마", "내부스키마", "외부스키마"]
+  },
+  {
+    "id": "theory-db_007",
+    "categoryId": "theory-db",
+    "subcategory": "릴레이션",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "(기출) 릴레이션에서 행(Row)에 해당하는 용어로, 각 속성에 대응하는 값들의 모임을 무엇이라 하는가?",
+    "answer": "튜플(Tuple)",
+    "explanation": "릴레이션 구성요소:\n- 튜플(Tuple): 릴레이션의 행(Row), 레코드에 해당\n- 속성(Attribute): 릴레이션의 열(Column), 필드에 해당\n- 차수(Degree): 속성(열)의 수\n- 카디널리티(Cardinality): 튜플(행)의 수",
+    "choices": [
+      {"label": "1", "text": "튜플(Tuple)", "isCorrect": true},
+      {"label": "2", "text": "속성(Attribute)", "isCorrect": false},
+      {"label": "3", "text": "도메인(Domain)", "isCorrect": false},
+      {"label": "4", "text": "차수(Degree)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "릴레이션", "튜플", "기출"]
+  },
+  {
+    "id": "theory-db_008",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "관계 대수의 일반 집합 연산자 중, 두 릴레이션의 모든 튜플 조합을 구하는 연산은?",
+    "answer": "교차곱(Cartesian Product, x)",
+    "explanation": "일반 집합 연산자 4가지:\n- 합집합(∪, Union): 두 릴레이션의 모든 튜플을 합침 (중복 제거)\n- 교집합(∩, Intersection): 두 릴레이션에 공통으로 존재하는 튜플\n- 차집합(-, Difference): 한 릴레이션에만 존재하는 튜플\n- 교차곱(×, Cartesian Product): 두 릴레이션의 모든 튜플 조합",
+    "choices": [
+      {"label": "1", "text": "교차곱(Cartesian Product)", "isCorrect": true},
+      {"label": "2", "text": "합집합(Union)", "isCorrect": false},
+      {"label": "3", "text": "교집합(Intersection)", "isCorrect": false},
+      {"label": "4", "text": "차집합(Difference)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "관계대수", "집합연산자", "교차곱"]
+  },
+  {
+    "id": "theory-db_009",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "관계 대수에서 σ(시그마) 연산은 선택 조건을 만족하는 튜플의 부분집합을 구하는 연산이다. 이 연산의 특징으로 올바른 것은?",
+    "answer": "수평 연산(행 단위 선택)",
+    "explanation": "Select(σ, 시그마):\n- 선택 조건을 만족하는 튜플의 부분집합을 구하는 연산\n- 수평 연산(행 단위)으로 릴레이션의 행을 선택\n- 반면 Project(π)는 수직 연산(열 단위)으로 속성을 선택",
+    "choices": [
+      {"label": "1", "text": "수평 연산으로 조건을 만족하는 행을 선택한다", "isCorrect": true},
+      {"label": "2", "text": "수직 연산으로 특정 열을 선택한다", "isCorrect": false},
+      {"label": "3", "text": "두 릴레이션을 공통 속성으로 합친다", "isCorrect": false},
+      {"label": "4", "text": "릴레이션의 중복 튜플을 제거한다", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "관계대수", "Select", "시그마"]
+  },
+  {
+    "id": "theory-db_010",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "관계 대수에서 공통 속성을 중심으로 두 릴레이션을 하나로 합치는 연산은?",
+    "answer": "조인(Join, ⋈)",
+    "explanation": "Join(⋈):\n- 공통 속성을 중심으로 두 릴레이션을 하나로 합치는 연산\n- 자연 조인(Natural Join): 중복 속성 제거\n- 세타 조인(Theta Join): 조건을 만족하는 튜플끼리 결합\n- 동등 조인(Equi Join): = 조건으로 결합",
+    "choices": [
+      {"label": "1", "text": "조인(Join)", "isCorrect": true},
+      {"label": "2", "text": "디비전(Division)", "isCorrect": false},
+      {"label": "3", "text": "교차곱(Cartesian Product)", "isCorrect": false},
+      {"label": "4", "text": "합집합(Union)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "관계대수", "Join", "조인"]
+  },
+  {
+    "id": "theory-db_011",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "type": "theory",
+    "difficulty": 3,
+    "question": "관계 대수에서 릴레이션 R÷S 연산 시, S의 모든 튜플과 관련 있는 R의 튜플에서 S의 속성을 제외한 속성만 구하는 연산은?",
+    "answer": "디비전(Division, ÷)",
+    "explanation": "Division(÷):\n- R÷S 연산 시 S 릴레이션의 모든 튜플과 관련 있는 R 릴레이션의 튜플을 선택\n- S의 속성을 제외한 R의 속성만 결과로 반환\n- '모든'이라는 조건을 표현할 때 유용한 연산",
+    "choices": [
+      {"label": "1", "text": "디비전(Division)", "isCorrect": true},
+      {"label": "2", "text": "조인(Join)", "isCorrect": false},
+      {"label": "3", "text": "프로젝트(Project)", "isCorrect": false},
+      {"label": "4", "text": "셀렉트(Select)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "관계대수", "Division", "디비전"]
+  },
+  {
+    "id": "theory-db_012",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "정규화 과정을 순서대로 나열한 것으로 올바른 것은? (암기법: 도부이결다조)",
+    "answer": "비정규형 → 1NF → 2NF → 3NF → BCNF → 4NF → 5NF",
+    "explanation": "정규화 6단계 (도부이결다조):\n- 도메인이 원자값 → 1NF (도)\n- 부분 함수 종속 제거 → 2NF (부)\n- 이행 함수 종속 제거 → 3NF (이)\n- 결정자이면서 후보키가 아닌 것 제거 → BCNF (결)\n- 다치 종속 제거 → 4NF (다)\n- 조인 종속 제거 → 5NF (조)",
+    "choices": [
+      {"label": "1", "text": "비정규형 → 1NF → 2NF → 3NF → BCNF → 4NF → 5NF", "isCorrect": true},
+      {"label": "2", "text": "비정규형 → 1NF → 2NF → 3NF → 4NF → BCNF → 5NF", "isCorrect": false},
+      {"label": "3", "text": "비정규형 → 1NF → 2NF → BCNF → 3NF → 4NF → 5NF", "isCorrect": false},
+      {"label": "4", "text": "비정규형 → 2NF → 1NF → 3NF → BCNF → 4NF → 5NF", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "정규화", "도부이결다조"]
+  },
+  {
+    "id": "theory-db_013",
+    "categoryId": "theory-db",
+    "subcategory": "무결성",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "관계형 데이터베이스에서 기본키는 NULL 값을 가질 수 없고, 릴레이션 내에 오직 하나의 값만 존재해야 한다는 무결성 제약조건은?",
+    "answer": "개체 무결성(Entity Integrity)",
+    "explanation": "관계형 DB 무결성 제약조건:\n- 개체 무결성: 기본키는 NULL 불가, 중복 불가\n- 참조 무결성: 외래키는 참조 릴레이션의 기본키 값이거나 NULL\n- 도메인 무결성: 속성 값은 정의된 도메인에 속해야 함\n- 사용자 정의 무결성: 사용자가 정의한 제약조건\n- NULL 무결성: 특정 속성에 NULL 불허\n- 관계 무결성: 릴레이션 간의 관계에 대한 조건\n- 키 무결성: 각 릴레이션에 최소한 하나의 키가 존재",
+    "choices": [
+      {"label": "1", "text": "개체 무결성", "isCorrect": true},
+      {"label": "2", "text": "참조 무결성", "isCorrect": false},
+      {"label": "3", "text": "도메인 무결성", "isCorrect": false},
+      {"label": "4", "text": "키 무결성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "무결성", "개체무결성", "제약조건"]
+  },
+  {
+    "id": "theory-db_014",
+    "categoryId": "theory-db",
+    "subcategory": "릴레이션",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "(기출) 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자(Atomic)값들의 집합을 무엇이라 하는가?",
+    "answer": "도메인(Domain)",
+    "explanation": "도메인(Domain):\n- 하나의 애트리뷰트(속성)가 취할 수 있는 같은 타입의 원자값들의 집합\n- 예: '성별' 속성의 도메인은 {남, 여}\n- 예: '학년' 속성의 도메인은 {1, 2, 3, 4}",
+    "choices": [
+      {"label": "1", "text": "도메인(Domain)", "isCorrect": true},
+      {"label": "2", "text": "튜플(Tuple)", "isCorrect": false},
+      {"label": "3", "text": "카디널리티(Cardinality)", "isCorrect": false},
+      {"label": "4", "text": "속성(Attribute)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "도메인", "릴레이션", "기출"]
+  },
+  {
+    "id": "theory-db_015",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "시스템의 성능 향상, 개발 및 운영의 편의성 등을 위해 정규화 원칙을 의도적으로 위배하는 행위를 무엇이라 하는가?",
+    "answer": "반정규화(Denormalization)",
+    "explanation": "반정규화(Denormalization):\n- 성능 향상을 위해 정규화된 데이터 모델을 통합, 중복, 분리하는 과정\n- 방법: 테이블 통합, 테이블 분할, 중복 테이블 추가, 중복 속성 추가 등\n- 주의: 데이터 무결성이 깨질 수 있으므로 신중하게 적용",
+    "choices": [
+      {"label": "1", "text": "반정규화(Denormalization)", "isCorrect": true},
+      {"label": "2", "text": "정규화(Normalization)", "isCorrect": false},
+      {"label": "3", "text": "최적화(Optimization)", "isCorrect": false},
+      {"label": "4", "text": "파티셔닝(Partitioning)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "반정규화", "정규화", "성능"]
+  },
+  {
+    "id": "theory-db_016",
+    "categoryId": "theory-db",
+    "subcategory": "데이터베이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "시스템 자체에서 관리하는 테이블로, 데이터베이스 객체(테이블, 뷰, 인덱스 등)에 관한 정보를 포함하는 시스템 테이블을 무엇이라 하는가?",
+    "answer": "시스템 카탈로그(System Catalog)",
+    "explanation": "시스템 카탈로그(= 데이터 사전, Data Dictionary):\n- 시스템 관련 객체에 관한 정보를 포함하는 시스템 테이블\n- 데이터베이스 구조, 통계 정보, 사용자 권한 정보 등을 저장\n- DBMS가 자동으로 관리하며, 사용자가 직접 수정 불가\n- SQL로 조회는 가능 (읽기 전용)",
+    "choices": [
+      {"label": "1", "text": "시스템 카탈로그(데이터 사전)", "isCorrect": true},
+      {"label": "2", "text": "인덱스(Index)", "isCorrect": false},
+      {"label": "3", "text": "뷰(View)", "isCorrect": false},
+      {"label": "4", "text": "트리거(Trigger)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "시스템카탈로그", "데이터사전"]
+  },
+  {
+    "id": "theory-db_017",
+    "categoryId": "theory-db",
+    "subcategory": "트랜잭션",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "(기출) 트랜잭션의 특성 중, 트랜잭션이 성공적으로 완료되면 그 결과가 영구적으로 반영되어야 한다는 특성은?",
+    "answer": "지속성(Durability, 영속성)",
+    "explanation": "트랜잭션 ACID 특성:\n- 원자성(Atomicity): 모두 실행되거나 모두 취소 (All or Nothing)\n- 일관성(Consistency): 실행 전후 데이터베이스 일관성 유지\n- 격리성(Isolation, 독립성): 다른 트랜잭션에 영향을 주거나 받지 않음\n- 지속성(Durability, 영속성): 성공 완료 시 결과가 영구적으로 반영",
+    "choices": [
+      {"label": "1", "text": "지속성(Durability)", "isCorrect": true},
+      {"label": "2", "text": "원자성(Atomicity)", "isCorrect": false},
+      {"label": "3", "text": "일관성(Consistency)", "isCorrect": false},
+      {"label": "4", "text": "격리성(Isolation)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "트랜잭션", "ACID", "지속성", "기출"]
+  },
+  {
+    "id": "theory-db_018",
+    "categoryId": "theory-db",
+    "subcategory": "보안",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "접근통제 기술 중, 사용자의 역할(Role)에 기반하여 접근 권한을 부여하는 방식은?",
+    "answer": "RBAC(Role-Based Access Control)",
+    "explanation": "접근통제 기술 3가지:\n- DAC(Discretionary Access Control, 임의적 접근통제): 데이터 소유자가 접근 권한 결정\n- MAC(Mandatory Access Control, 강제적 접근통제): 보안 등급에 따라 시스템이 접근 권한 결정\n- RBAC(Role-Based Access Control, 역할 기반 접근통제): 사용자 역할에 따라 접근 권한 부여",
+    "choices": [
+      {"label": "1", "text": "RBAC(역할 기반 접근통제)", "isCorrect": true},
+      {"label": "2", "text": "DAC(임의적 접근통제)", "isCorrect": false},
+      {"label": "3", "text": "MAC(강제적 접근통제)", "isCorrect": false},
+      {"label": "4", "text": "ACL(접근통제 목록)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "보안", "접근통제", "RBAC"]
+  },
+  {
+    "id": "theory-db_019",
+    "categoryId": "theory-db",
+    "subcategory": "데이터베이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "대용량 테이블을 특정 기준에 따라 물리적으로 분할하여 성능을 향상시키는 기법으로, 범위 분할, 해시 분할, 조합 분할이 있는 것은?",
+    "answer": "파티션(Partition)",
+    "explanation": "파티션(Partition) 종류:\n- 범위 분할(Range): 지정된 범위를 기준으로 분할 (예: 날짜별)\n- 해시 분할(Hash): 해시 함수를 적용하여 분할\n- 조합 분할(Composite): 범위 분할 후 해시 분할을 적용하는 복합 방식\n- 목록 분할(List): 특정 값 목록을 기준으로 분할",
+    "choices": [
+      {"label": "1", "text": "파티션(Partition)", "isCorrect": true},
+      {"label": "2", "text": "클러스터링(Clustering)", "isCorrect": false},
+      {"label": "3", "text": "인덱싱(Indexing)", "isCorrect": false},
+      {"label": "4", "text": "샤딩(Sharding)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "파티션", "범위분할", "해시분할"]
+  },
+  {
+    "id": "theory-db_020",
+    "categoryId": "theory-db",
+    "subcategory": "데이터베이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "분산 데이터베이스의 투명성 중, 사용자가 데이터의 물리적 저장 위치를 알 필요 없이 데이터에 접근할 수 있는 투명성은?",
+    "answer": "위치 투명성(Location Transparency)",
+    "explanation": "분산 DB 투명성 4가지:\n- 위치 투명성: 데이터의 물리적 위치를 알 필요 없음\n- 중복 투명성: 데이터가 여러 곳에 중복 저장되어도 사용자는 하나만 존재하는 것처럼 사용\n- 병행 투명성: 다수 사용자가 동시에 접근해도 결과에 이상 없음\n- 장애 투명성: 일부 장애가 발생해도 정상적으로 처리",
+    "choices": [
+      {"label": "1", "text": "위치 투명성", "isCorrect": true},
+      {"label": "2", "text": "중복 투명성", "isCorrect": false},
+      {"label": "3", "text": "병행 투명성", "isCorrect": false},
+      {"label": "4", "text": "장애 투명성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "분산DB", "투명성", "위치투명성"]
+  },
+  {
+    "id": "theory-db_021",
+    "categoryId": "theory-db",
+    "subcategory": "데이터베이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "동일한 성격의 데이터를 동일한 데이터 블록에 저장하여 디스크 I/O를 줄이고 액세스 효율을 향상시키는 물리적 저장 방법은?",
+    "answer": "클러스터링(Clustering)",
+    "explanation": "클러스터링(Clustering):\n- 동일한 성격의 데이터를 동일한 데이터 블록에 저장하는 방법\n- 디스크 I/O를 줄여 액세스 효율을 향상\n- 대량의 범위 조회에 유리\n- 데이터 분포가 넓은 테이블에 효과적\n- 단, 입력/수정/삭제 시 성능 저하 가능",
+    "choices": [
+      {"label": "1", "text": "클러스터링(Clustering)", "isCorrect": true},
+      {"label": "2", "text": "파티셔닝(Partitioning)", "isCorrect": false},
+      {"label": "3", "text": "인덱싱(Indexing)", "isCorrect": false},
+      {"label": "4", "text": "해싱(Hashing)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "클러스터링", "물리적저장"]
+  },
+  {
+    "id": "theory-db_022",
+    "categoryId": "theory-db",
+    "subcategory": "데이터모델",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터 모델의 구성 요소 3가지로 올바른 것은?",
+    "answer": "구조(Structure), 연산(Operation), 제약조건(Constraint)",
+    "explanation": "데이터 모델 3요소:\n- 구조(Structure): 데이터베이스에 논리적으로 표현될 대상으로서의 개체 타입과 관계\n- 연산(Operation): 데이터베이스에 저장된 실제 데이터를 처리하는 방법\n- 제약조건(Constraint): 데이터베이스에 저장될 수 있는 데이터의 논리적 제약",
+    "choices": [
+      {"label": "1", "text": "구조, 연산, 제약조건", "isCorrect": true},
+      {"label": "2", "text": "구조, 속성, 관계", "isCorrect": false},
+      {"label": "3", "text": "엔터티, 속성, 도메인", "isCorrect": false},
+      {"label": "4", "text": "개체, 관계, 연산", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "데이터모델", "구조", "연산", "제약조건"]
+  },
+  {
+    "id": "theory-db_023",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "릴레이션 R에서 속성 X의 값 각각에 대해 속성 Y의 값이 오직 하나만 연관되어 있을 때, 이를 무엇이라 하는가?",
+    "answer": "함수적 종속(Functional Dependency)",
+    "explanation": "함수적 종속(Functional Dependency):\n- X → Y로 표기 (Y는 X에 함수적으로 종속된다)\n- X(결정자)의 값을 알면 Y(종속자)의 값을 알 수 있음\n- 완전 함수 종속: 기본키 전체에 종속\n- 부분 함수 종속: 기본키 일부에 종속\n- 이행 함수 종속: X→Y→Z일 때 X→Z 관계",
+    "choices": [
+      {"label": "1", "text": "함수적 종속(Functional Dependency)", "isCorrect": true},
+      {"label": "2", "text": "다치 종속(Multivalued Dependency)", "isCorrect": false},
+      {"label": "3", "text": "조인 종속(Join Dependency)", "isCorrect": false},
+      {"label": "4", "text": "참조 무결성(Referential Integrity)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "정규화", "함수적종속", "종속성"]
+  },
+  {
+    "id": "theory-db_024",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "(기출) 정규화를 거치지 않아 발생하는 이상(Anomaly) 현상 중, 릴레이션에서 한 튜플을 삭제할 때 의도하지 않은 다른 데이터까지 함께 삭제되는 현상은?",
+    "answer": "삭제 이상(Deletion Anomaly)",
+    "explanation": "이상(Anomaly) 3종류:\n- 삽입 이상(Insertion Anomaly): 데이터를 삽입할 때 불필요한 데이터도 함께 삽입해야 하는 현상\n- 삭제 이상(Deletion Anomaly): 데이터를 삭제할 때 의도하지 않은 데이터도 함께 삭제되는 현상\n- 갱신 이상(Update Anomaly): 중복 데이터 중 일부만 수정되어 데이터 불일치가 발생하는 현상",
+    "choices": [
+      {"label": "1", "text": "삭제 이상(Deletion Anomaly)", "isCorrect": true},
+      {"label": "2", "text": "삽입 이상(Insertion Anomaly)", "isCorrect": false},
+      {"label": "3", "text": "갱신 이상(Update Anomaly)", "isCorrect": false},
+      {"label": "4", "text": "종속 이상(Dependency Anomaly)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "정규화", "이상", "삭제이상", "기출"]
+  },
+  {
+    "id": "theory-db_025",
+    "categoryId": "theory-db",
+    "subcategory": "회복",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 회복 기법 중, 트랜잭션이 수행되는 동안 갱신 결과를 로그에만 기록하고 커밋 시점에 실제 데이터베이스에 반영하는 기법은?",
+    "answer": "지연 갱신 회복 기법(Deferred Update)",
+    "explanation": "DB 회복 기법 5가지:\n- 즉시 갱신(Immediate Update): 트랜잭션 수행 중 즉시 DB에 반영, UNDO/REDO 모두 필요\n- 지연 갱신(Deferred Update): 커밋까지 지연 후 반영, REDO만 필요 (UNDO 불필요)\n- 검사 시점(Checkpoint): 검사 시점까지의 변경 내용을 DB에 반영\n- 그림자 페이징(Shadow Paging): 갱신 이전의 DB를 페이지 단위로 보관\n- 미디어 회복(Media Recovery): 디스크 장애 시 덤프 이용",
+    "choices": [
+      {"label": "1", "text": "지연 갱신 회복 기법", "isCorrect": true},
+      {"label": "2", "text": "즉시 갱신 회복 기법", "isCorrect": false},
+      {"label": "3", "text": "검사 시점 회복 기법", "isCorrect": false},
+      {"label": "4", "text": "그림자 페이징 회복 기법", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "회복", "지연갱신", "회복기법"]
+  },
+  {
+    "id": "theory-db_026",
+    "categoryId": "theory-db",
+    "subcategory": "회복",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "데이터베이스 회복 시, 로그를 이용하여 이미 커밋된 트랜잭션의 변경 내용을 재반영하는 작업은?",
+    "answer": "REDO(재실행)",
+    "explanation": "REDO와 UNDO:\n- REDO(재실행): 커밋된 트랜잭션의 변경 내용을 재반영 (로그 → DB)\n  - 장애 발생 시 커밋 완료된 트랜잭션을 다시 실행\n- UNDO(취소): 커밋되지 않은 트랜잭션의 변경 내용을 원래 상태로 복원\n  - 장애 발생 시 미완료 트랜잭션의 작업을 취소",
+    "choices": [
+      {"label": "1", "text": "REDO(재실행)", "isCorrect": true},
+      {"label": "2", "text": "UNDO(취소)", "isCorrect": false},
+      {"label": "3", "text": "COMMIT(커밋)", "isCorrect": false},
+      {"label": "4", "text": "ROLLBACK(롤백)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "회복", "REDO", "UNDO"]
+  },
+  {
+    "id": "theory-db_027",
+    "categoryId": "theory-db",
+    "subcategory": "병행제어",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "병행 제어 기법 중, 트랜잭션이 사용하는 데이터 항목에 대해 잠금(Lock)을 설정하여 다른 트랜잭션의 접근을 제한하는 기법은?",
+    "answer": "로킹(Locking)",
+    "explanation": "병행 제어와 로킹:\n- 병행 제어: 다중 사용자 환경에서 동시에 수행되는 트랜잭션들을 일관성 있게 처리하는 기법\n- 로킹(Locking): 트랜잭션이 데이터를 사용할 때 잠금을 걸어 다른 트랜잭션의 접근을 제한\n  - 공유 잠금(Shared Lock): 읽기만 허용\n  - 배타 잠금(Exclusive Lock): 읽기/쓰기 모두 제한\n- 로킹 단위가 크면 병행성↓ 오버헤드↓, 작으면 병행성↑ 오버헤드↑",
+    "choices": [
+      {"label": "1", "text": "로킹(Locking)", "isCorrect": true},
+      {"label": "2", "text": "타임스탬프(Timestamp)", "isCorrect": false},
+      {"label": "3", "text": "낙관적 검증(Optimistic)", "isCorrect": false},
+      {"label": "4", "text": "다중 버전(MVCC)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "병행제어", "로킹", "Lock"]
+  },
+  {
+    "id": "theory-db_028",
+    "categoryId": "theory-db",
+    "subcategory": "키",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "릴레이션에서 튜플을 유일하게 식별할 수 있는 속성의 부분집합으로, 유일성과 최소성을 모두 만족하는 키는?",
+    "answer": "후보키(Candidate Key)",
+    "explanation": "키(Key) 종류 5가지:\n- 슈퍼키(Super Key): 유일성 O, 최소성 X (속성의 모든 조합)\n- 후보키(Candidate Key): 유일성 O, 최소성 O (기본키가 될 수 있는 키)\n- 기본키(Primary Key): 후보키 중 선택된 대표 키 (NULL 불가, 중복 불가)\n- 대체키(Alternate Key): 후보키 중 기본키를 제외한 나머지 키\n- 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하는 속성",
+    "choices": [
+      {"label": "1", "text": "후보키(Candidate Key)", "isCorrect": true},
+      {"label": "2", "text": "슈퍼키(Super Key)", "isCorrect": false},
+      {"label": "3", "text": "기본키(Primary Key)", "isCorrect": false},
+      {"label": "4", "text": "대체키(Alternate Key)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "키", "후보키", "유일성", "최소성"]
+  },
+  {
+    "id": "theory-db_029",
+    "categoryId": "theory-db",
+    "subcategory": "SQL분류",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "SQL 명령어 분류 중, GRANT와 REVOKE가 속하는 분류는?",
+    "answer": "DCL(Data Control Language)",
+    "explanation": "SQL 명령어 분류:\n- DDL(Data Definition Language): CREATE, ALTER, DROP, TRUNCATE\n- DML(Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE\n- DCL(Data Control Language): GRANT(권한 부여), REVOKE(권한 회수)\n- TCL(Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT",
+    "choices": [
+      {"label": "1", "text": "DCL(데이터 제어어)", "isCorrect": true},
+      {"label": "2", "text": "DDL(데이터 정의어)", "isCorrect": false},
+      {"label": "3", "text": "DML(데이터 조작어)", "isCorrect": false},
+      {"label": "4", "text": "TCL(트랜잭션 제어어)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "SQL", "DCL", "GRANT", "REVOKE"]
+  },
+  {
+    "id": "theory-db_030",
+    "categoryId": "theory-db",
+    "subcategory": "SQL",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "SQL DDL의 ALTER TABLE 명령에서 기존 테이블에 새로운 컬럼을 추가할 때 사용하는 키워드는?",
+    "answer": "ADD",
+    "explanation": "ALTER TABLE 상세:\n- ADD: 새로운 컬럼 추가 (ALTER TABLE 테이블명 ADD 컬럼명 데이터타입)\n- MODIFY: 기존 컬럼의 데이터 타입 변경 (ALTER TABLE 테이블명 MODIFY 컬럼명 데이터타입)\n- DROP COLUMN: 기존 컬럼 삭제 (ALTER TABLE 테이블명 DROP COLUMN 컬럼명)\n- RENAME COLUMN: 컬럼 이름 변경",
+    "choices": [
+      {"label": "1", "text": "ADD", "isCorrect": true},
+      {"label": "2", "text": "MODIFY", "isCorrect": false},
+      {"label": "3", "text": "DROP COLUMN", "isCorrect": false},
+      {"label": "4", "text": "RENAME", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["데이터베이스", "SQL", "DDL", "ALTER", "ADD"]
   }
 ]

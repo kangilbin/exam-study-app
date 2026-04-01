@@ -4,26 +4,32 @@
  */
 
 import { useMemo } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useUserStore } from '@/store/useUserStore';
-import { getTotalQuestionCount } from '@/features/questions/services/questionService';
-import { calculateOverallStats } from '@/features/questions/services/progressService';
+import { getQuestionIdsByGroup, getIncorrectQuestions } from '@/features/questions/services/questionService';
+import { calculateOverallStatsFiltered } from '@/features/questions/services/progressService';
 import { COLORS } from '@/lib/constants';
 
 export default function ProfileScreen() {
   const router = useRouter();
   const progress = useUserStore((s) => s.progress);
-  const totalQuestions = getTotalQuestionCount();
+  const examQuestionIds = getQuestionIdsByGroup('exam');
+  const totalQuestions = examQuestionIds.length;
   const overallStats = useMemo(
-    () => calculateOverallStats(progress, totalQuestions),
-    [progress, totalQuestions]
+    () => calculateOverallStatsFiltered(progress, examQuestionIds),
+    [progress, examQuestionIds]
   );
   const bookmarks = useUserStore((s) => s.bookmarks);
   const settings = useUserStore((s) => s.settings);
   const updateSettings = useUserStore((s) => s.updateSettings);
+
+  const incorrectCount = useMemo(
+    () => Object.values(progress).filter((p) => p.status === 'incorrect').length,
+    [progress]
+  );
 
   const accuracy = overallStats.totalSeen > 0
     ? Math.round(overallStats.accuracy * 100)
@@ -34,7 +40,7 @@ export default function ProfileScreen() {
       <ScrollView contentContainerStyle={styles.content}>
         {/* 통계 카드 */}
         <View style={styles.statsCard}>
-          <Text style={styles.statsTitle}>학습 통계</Text>
+          <Text style={styles.statsTitle}>기출문제 학습 통계</Text>
           <View style={styles.statsGrid}>
             <View style={styles.statItem}>
               <Text style={styles.statValue}>{overallStats.totalSeen}</Text>
@@ -68,6 +74,22 @@ export default function ProfileScreen() {
             <MaterialCommunityIcons name="bookmark" size={24} color={COLORS.primary} />
             <Text style={styles.menuText}>북마크</Text>
             <Text style={styles.menuBadge}>{bookmarks.length}</Text>
+            <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.gray[400]} />
+          </Pressable>
+
+          <Pressable
+            style={styles.menuItem}
+            onPress={() => {
+              if (incorrectCount === 0) {
+                Alert.alert('알림', '틀린 문제가 없습니다.');
+                return;
+              }
+              router.push('/quiz/incorrect');
+            }}
+          >
+            <MaterialCommunityIcons name="close-circle-outline" size={24} color={COLORS.danger} />
+            <Text style={styles.menuText}>틀린 문제 다시 풀기</Text>
+            <Text style={[styles.menuBadge, { color: COLORS.danger }]}>{incorrectCount}</Text>
             <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.gray[400]} />
           </Pressable>
         </View>

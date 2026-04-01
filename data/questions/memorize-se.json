@@ -236,5 +236,255 @@
       "EAI",
       "시스템통합"
     ]
+  },
+  {
+    "id": "memorize-se_016",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 아키텍처 패턴 6가지를 쓰시오.",
+    "answer": "레이어 패턴, 클라이언트-서버 패턴, 파이프-필터 패턴, MVC 패턴, 마스터-슬레이브 패턴, 브로커 패턴",
+    "explanation": "레이어: 계층별 역할 분리(프레젠테이션-비즈니스-데이터)\n클라이언트-서버: 요청-응답 구조\n파이프-필터: 데이터 스트림을 단계별로 처리\nMVC: Model-View-Controller 분리\n마스터-슬레이브: 마스터가 작업 분배, 슬레이브가 처리\n브로커: 분산 시스템에서 중개자 역할",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ]
+  },
+  {
+    "id": "memorize-se_017",
+    "categoryId": "memorize-se",
+    "subcategory": "생명주기",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 생명주기 모델 3가지를 설명하시오.",
+    "answer": "폭포수 모델, 프로토타이핑 모델, 나선형 모델",
+    "explanation": "폭포수: 각 단계를 확실히 마무리한 후 다음 단계로 진행하는 순차적 모델\n프로토타이핑: 요구사항을 프로토타입으로 구현하여 사용자 피드백을 반영하는 모델\n나선형: 위험을 최소화하면서 점진적으로 완벽한 시스템을 개발하는 모델(계획→위험분석→개발→평가 반복)",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "생명주기",
+      "폭포수",
+      "나선형",
+      "프로토타이핑"
+    ]
+  },
+  {
+    "id": "memorize-se_018",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항분석",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "구조적 분석 기법의 3가지 도구를 쓰시오.",
+    "answer": "자료흐름도(DFD), 자료 사전(DD), 소단위 명세서(Mini-Spec)",
+    "explanation": "DFD(Data Flow Diagram): 데이터의 흐름을 도형으로 표현(프로세스, 데이터 저장소, 외부 엔티티, 데이터 흐름)\nDD(Data Dictionary): 자료의 의미와 구성을 정의한 사전\nMini-Spec(소단위 명세서): DFD의 최하위 프로세스를 상세히 기술한 명세서",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "구조적분석",
+      "DFD",
+      "자료사전"
+    ]
+  },
+  {
+    "id": "memorize-se_019",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "GoF 디자인 패턴 중 생성 패턴 5가지를 설명하시오.",
+    "answer": "빌더, 프로토타입, 팩토리 메서드, 추상 팩토리, 싱글턴",
+    "explanation": "빌더: 복잡한 객체를 단계별로 생성, 구성과 표현을 분리\n프로토타입: 원본 객체를 복제하여 새 객체 생성\n팩토리 메서드: 객체 생성을 서브클래스에 위임\n추상 팩토리: 관련 객체군을 생성하는 인터페이스 제공\n싱글턴: 인스턴스가 하나만 생성되도록 보장",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ]
+  },
+  {
+    "id": "memorize-se_020",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "GoF 디자인 패턴 중 구조 패턴 7가지를 설명하시오.",
+    "answer": "브릿지, 데코레이터, 퍼사드, 플라이웨이트, 프록시, 컴포지트, 어댑터",
+    "explanation": "브릿지: 추상화와 구현을 분리하여 독립적 변경 가능\n데코레이터: 객체에 동적으로 기능 추가\n퍼사드: 복잡한 서브시스템에 단순한 인터페이스 제공\n플라이웨이트: 공유를 통해 메모리 절약\n프록시: 대리 객체를 통해 접근 제어\n컴포지트: 트리 구조로 부분-전체 계층 표현\n어댑터: 호환되지 않는 인터페이스를 변환",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ]
+  },
+  {
+    "id": "memorize-se_021",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "GoF 디자인 패턴 중 행위 패턴 11가지를 설명하시오.",
+    "answer": "인터프리터, 템플릿 메서드, 책임의 고리, 커맨드, 이터레이터, 미디에이터, 메멘토, 옵저버, 스테이트, 스트레티지, 비지터",
+    "explanation": "인터프리터: 문법 규칙을 클래스로 표현\n템플릿 메서드: 알고리즘 골격 정의, 세부 단계는 서브클래스에서 구현\n책임의 고리: 요청을 처리할 객체를 체인으로 연결\n커맨드: 요청을 객체로 캡슐화\n이터레이터: 내부 구조 노출 없이 순차 접근\n미디에이터: 객체 간 상호작용을 중재자가 조정\n메멘토: 객체 상태를 저장/복원\n옵저버: 상태 변화를 구독자에게 알림\n스테이트: 상태에 따라 행위 변경\n스트레티지: 알고리즘을 캡슐화하여 교환 가능\n비지터: 구조를 변경하지 않고 새로운 연산 추가",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ]
+  },
+  {
+    "id": "memorize-se_022",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "결합도 6단계를 강한 순서대로 암기법과 함께 쓰시오.",
+    "answer": "내공외제스자 (내용 > 공통 > 외부 > 제어 > 스탬프 > 자료)",
+    "explanation": "내용결합도: 다른 모듈 내부 기능/자료를 직접 참조·수정\n공통결합도: 전역 변수를 여러 모듈이 공유\n외부결합도: 외부에서 도입된 데이터 포맷이나 프로토콜 공유\n제어결합도: 제어 요소(플래그)를 전달하여 내부 로직 제어\n스탬프결합도: 배열·레코드 등 자료구조를 전달\n자료결합도: 매개변수로 단순 데이터만 전달 (가장 바람직)",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ]
+  },
+  {
+    "id": "memorize-se_023",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "응집도 7단계를 강한 순서대로 암기법과 함께 쓰시오.",
+    "answer": "기순교절시논우 (기능적 > 순차적 > 교환적 > 절차적 > 시간적 > 논리적 > 우연적)",
+    "explanation": "기능적: 단일 기능을 수행하는 요소로 구성 (가장 바람직)\n순차적: 한 활동의 출력이 다음 활동의 입력\n교환적(통신적): 동일한 입출력 데이터를 사용하는 활동 모음\n절차적: 순서대로 수행해야 하는 활동 모음\n시간적: 같은 시간대에 실행되는 활동 모음\n논리적: 유사한 성격의 요소를 모아둔 것\n우연적: 서로 관련 없는 요소의 모임 (가장 나쁨)",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ]
+  },
+  {
+    "id": "memorize-se_024",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "테스트 커버리지의 종류 6가지를 쓰시오.",
+    "answer": "구문 커버리지, 결정 커버리지, 조건 커버리지, 다중 조건 커버리지, 제어흐름 테스트, 루프 테스트",
+    "explanation": "구문 커버리지: 모든 구문을 최소 1회 실행\n결정 커버리지(분기): 전체 조건식의 참/거짓을 모두 테스트\n조건 커버리지: 개별 조건식의 참/거짓을 모두 테스트\n다중 조건 커버리지: 모든 개별 조건의 조합을 테스트\n제어흐름 테스트: 프로그램의 제어 흐름 경로를 테스트\n루프 테스트: 반복문의 경계 조건을 테스트",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ]
+  },
+  {
+    "id": "memorize-se_025",
+    "categoryId": "memorize-se",
+    "subcategory": "설계원칙",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "객체지향 설계 SOLID 원칙 5가지를 쓰시오.",
+    "answer": "S: 단일 책임 원칙(SRP), O: 개방-폐쇄 원칙(OCP), L: 리스코프 치환 원칙(LSP), I: 인터페이스 분리 원칙(ISP), D: 의존 역전 원칙(DIP)",
+    "explanation": "SRP: 클래스는 하나의 책임만 가져야 한다\nOCP: 확장에는 열려있고 변경에는 닫혀있어야 한다\nLSP: 하위 타입은 상위 타입을 대체할 수 있어야 한다\nISP: 사용하지 않는 인터페이스에 의존하지 않아야 한다\nDIP: 고수준 모듈은 저수준 모듈에 의존하지 않고, 추상화에 의존해야 한다",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ]
+  },
+  {
+    "id": "memorize-se_026",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "EAI(Enterprise Application Integration) 구축 유형 4가지를 상세히 설명하시오.",
+    "answer": "Point-to-Point, Hub & Spoke, Message Bus, Hybrid",
+    "explanation": "Point-to-Point: 애플리케이션 간 1:1 직접 연결, 변경·재사용 어려움\nHub & Spoke: 중앙 허브가 모든 데이터 전송을 담당, 허브 장애 시 전체 영향\nMessage Bus: 미들웨어(ESB)를 통해 메시지 기반 통합, 확장성 우수\nHybrid: Hub & Spoke와 Message Bus를 결합하여 유연성과 안정성 확보",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ]
+  },
+  {
+    "id": "memorize-se_027",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 아키텍처 4+1 뷰를 쓰시오.",
+    "answer": "유스케이스 뷰, 논리 뷰, 프로세스 뷰, 구현 뷰, 배포 뷰",
+    "explanation": "유스케이스 뷰: 사용자 관점에서 시스템 기능 표현 (다른 4개 뷰를 검증하는 +1)\n논리 뷰: 시스템의 기능적 요구사항, 클래스/패키지 구조\n프로세스 뷰: 동시성, 동기화 등 비기능적 요구사항\n구현 뷰: 개발자 관점의 모듈 구성, 컴포넌트 구조\n배포 뷰: 물리적 노드에 소프트웨어 배치 구성",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ]
+  },
+  {
+    "id": "memorize-se_028",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "CMMi(Capability Maturity Model Integration) 5단계를 쓰시오.",
+    "answer": "1단계 초기 → 2단계 관리 → 3단계 정의 → 4단계 정량적 관리 → 5단계 최적화",
+    "explanation": "초기(Initial): 프로세스 정의 없음, 개인 역량에 의존\n관리(Managed): 기본적인 프로젝트 관리 프로세스 확립\n정의(Defined): 조직 차원의 표준 프로세스 정의\n정량적 관리(Quantitatively Managed): 정량적 측정·분석으로 프로세스 통제\n최적화(Optimizing): 지속적인 프로세스 개선 활동",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ]
+  },
+  {
+    "id": "memorize-se_029",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 테스트의 주요 원리 3가지를 쓰시오.",
+    "answer": "결함 집중(파레토 법칙), 살충제 패러독스, 오류-부재의 궤변",
+    "explanation": "결함 집중(파레토 법칙): 전체 결함의 80%는 20%의 모듈에서 발생\n살충제 패러독스: 동일한 테스트를 반복하면 새로운 결함을 발견할 수 없으므로 테스트를 주기적으로 개선해야 함\n오류-부재의 궤변: 결함을 모두 제거해도 사용자 요구사항을 충족하지 못하면 품질이 높다고 할 수 없음",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "테스트원리",
+      "파레토",
+      "살충제패러독스"
+    ]
+  },
+  {
+    "id": "memorize-se_030",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "빌드 자동화의 처리 절차를 순서대로 쓰시오.",
+    "answer": "종속성 다운로드 → 컴파일 → 패키징 → 테스트 → 배포",
+    "explanation": "종속성 다운로드: 프로젝트에 필요한 라이브러리·모듈 다운로드\n컴파일: 소스코드를 기계어/바이트코드로 변환\n패키징: 실행 가능한 형태(JAR, WAR 등)로 묶음\n테스트: 자동화된 단위·통합 테스트 실행\n배포: 빌드 결과물을 운영 환경에 배포\n대표 도구: Jenkins, Maven, Gradle, Ant",
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ]
   }
 ]

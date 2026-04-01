@@ -13,17 +13,17 @@
     "choices": [
       {
         "label": "1",
+        "text": "ICMP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "RARP",
         "isCorrect": true
       },
       {
-        "label": "2",
-        "text": "ARP",
-        "isCorrect": false
-      },
-      {
         "label": "3",
-        "text": "ICMP",
+        "text": "ARP",
         "isCorrect": false
       },
       {
@@ -54,22 +54,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "물리적설계, 개념적설계, 논리적설계",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "논리적설계, 물리적설계, 개념적설계",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "개념적설계, 논리적설계, 물리적설계",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "물리적설계, 개념적설계, 논리적설계",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "물리적설계, 논리적설계, 개념적설계",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "논리적설계, 물리적설계, 개념적설계",
         "isCorrect": false
       }
     ],
@@ -94,8 +94,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "기능적, 비기능적",
-        "isCorrect": true
+        "text": "명시적, 암묵적",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -104,12 +104,12 @@
       },
       {
         "label": "3",
-        "text": "필수, 선택",
-        "isCorrect": false
+        "text": "기능적, 비기능적",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "명시적, 암묵적",
+        "text": "필수, 선택",
         "isCorrect": false
       }
     ],
@@ -140,17 +140,17 @@
       },
       {
         "label": "2",
-        "text": "SOAP",
+        "text": "REST",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "UDDI",
+        "text": "SOAP",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "REST",
+        "text": "UDDI",
         "isCorrect": false
       }
     ],
@@ -178,22 +178,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "skiddp",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "SKIDDP",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "s k i d d p",
+        "label": "2",
+        "text": "seoul",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "skiddp",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "seoul",
+        "text": "s k i d d p",
         "isCorrect": false
       }
     ],
@@ -213,7 +213,7 @@
     "difficulty": 2,
     "year": 2021,
     "round": 1,
-    "question": "SELECT COUNT(*) FROM 급여 WHERE EMPNO > 100 AND SAL >= 3000 OR EMPNO = 200; 의 결과는?",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "1",
     "explanation": "EMPNO>100 AND SAL>=3000: 200번(3000)만 해당, OR EMPNO=200: 200번 이미 포함. 결과 1건",
     "choices": [
@@ -245,7 +245,8 @@
       "조건",
       "COUNT",
       "2021년1회"
-    ]
+    ],
+    "codeSnippet": "[급여 테이블]\n EMPNO | SAL\n-------+------\n  100  | 1000\n  200  | 3000\n  300  | 1500\n\nSELECT COUNT(*) FROM 급여\nWHERE EMPNO > 100 AND SAL >= 3000\n   OR EMPNO = 200;"
   },
   {
     "id": "exam-2021-1_007",
@@ -263,22 +264,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "3, 1, 45, 50, 89",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "2, 1, 45, 50, 89",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "3, 1, 45, 50, 89",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "3, 1, 50, 75, 89",
+        "text": "3, 2, 45, 50, 89",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "3, 2, 45, 50, 89",
+        "text": "3, 1, 50, 75, 89",
         "isCorrect": false
       }
     ],
@@ -314,12 +315,12 @@
       },
       {
         "label": "3",
-        "text": "인덱싱",
+        "text": "파티셔닝",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "파티셔닝",
+        "text": "인덱싱",
         "isCorrect": false
       }
     ],
@@ -345,8 +346,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "경계값 분석, 동등분할",
-        "isCorrect": true
+        "text": "구문커버리지, 분기커버리지",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -360,8 +361,8 @@
       },
       {
         "label": "4",
-        "text": "구문커버리지, 분기커버리지",
-        "isCorrect": false
+        "text": "경계값 분석, 동등분할",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -386,22 +387,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "단위 테스트, 통합 테스트",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "통합 테스트, 시스템 테스트",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "시스템 테스트, 인수 테스트",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "단위 테스트, 통합 테스트",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "알파 테스트, 베타 테스트",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "통합 테스트, 시스템 테스트",
         "isCorrect": false
       }
     ],
@@ -469,22 +470,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "IPC",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "RPC",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "API",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "IPC",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "SDK",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "RPC",
         "isCorrect": false
       }
     ],
@@ -515,12 +516,12 @@
       },
       {
         "label": "2",
-        "text": "ESB",
+        "text": "SOA",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "SOA",
+        "text": "ESB",
         "isCorrect": false
       },
       {
@@ -595,23 +596,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "Lee, 38",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "Kim, 28",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "Seo, 50",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "Park, 35",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Lee, 38",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -637,8 +638,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "연산, 구조, 제약조건",
-        "isCorrect": true
+        "text": "테이블, 속성, 관계",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -647,8 +648,8 @@
       },
       {
         "label": "3",
-        "text": "테이블, 속성, 관계",
-        "isCorrect": false
+        "text": "연산, 구조, 제약조건",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -685,7 +686,7 @@
       },
       {
         "label": "2",
-        "text": "1+2+3+4+5=15",
+        "text": "15",
         "isCorrect": false
       },
       {
@@ -695,7 +696,7 @@
       },
       {
         "label": "4",
-        "text": "15",
+        "text": "1+2+3+4+5=15",
         "isCorrect": false
       }
     ],
@@ -721,18 +722,18 @@
     "choices": [
       {
         "label": "1",
-        "text": "DAC (임의적 접근 통제)",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "MAC (강제적 접근 통제)",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "RBAC (역할 기반 접근 통제)",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "DAC (임의적 접근 통제)",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -763,22 +764,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "내용, 스탬프, 공통",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "공통, 스탬프, 내용",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "내용, 공통, 외부",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "내용, 스탬프, 공통",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "제어, 스탬프, 공통",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "공통, 스탬프, 내용",
         "isCorrect": false
       }
     ],
@@ -804,8 +805,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "세션 하이재킹",
-        "isCorrect": true
+        "text": "스푸핑",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -814,8 +815,8 @@
       },
       {
         "label": "3",
-        "text": "스푸핑",
-        "isCorrect": false
+        "text": "세션 하이재킹",
+        "isCorrect": true
       },
       {
         "label": "4",

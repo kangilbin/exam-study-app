@@ -13,22 +13,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "패키지 다이어그램",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "클래스 다이어그램",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "컴포넌트 다이어그램",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "패키지 다이어그램",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "배포 다이어그램",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "클래스 다이어그램",
         "isCorrect": false
       }
     ],
@@ -54,8 +54,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "조건 커버리지",
-        "isCorrect": true
+        "text": "문장 커버리지",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -64,8 +64,8 @@
       },
       {
         "label": "3",
-        "text": "문장 커버리지",
-        "isCorrect": false
+        "text": "조건 커버리지",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -105,12 +105,12 @@
       },
       {
         "label": "3",
-        "text": "pwd, dir, cd, copy",
+        "text": "ls, cd, pwd, mv",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "ls, cd, pwd, mv",
+        "text": "pwd, dir, cd, copy",
         "isCorrect": false
       }
     ],
@@ -136,17 +136,17 @@
     "choices": [
       {
         "label": "1",
+        "text": "CRC, FEC, BEC, Parity, Hamming",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "Hamming, FEC, BEC, Parity, CRC",
         "isCorrect": true
       },
       {
-        "label": "2",
-        "text": "Hamming, BEC, FEC, CRC, Parity",
-        "isCorrect": false
-      },
-      {
         "label": "3",
-        "text": "CRC, FEC, BEC, Parity, Hamming",
+        "text": "Hamming, BEC, FEC, CRC, Parity",
         "isCorrect": false
       },
       {
@@ -186,12 +186,12 @@
       },
       {
         "label": "2",
-        "text": "DC",
+        "text": "D",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "D",
+        "text": "DC",
         "isCorrect": false
       },
       {
@@ -230,17 +230,17 @@
       },
       {
         "label": "2",
-        "text": "A",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "R",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "K",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "A",
         "isCorrect": false
       }
     ],
@@ -269,18 +269,18 @@
     "choices": [
       {
         "label": "1",
-        "text": "187",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "225",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "167",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "187",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -305,30 +305,30 @@
     "difficulty": 1,
     "year": 2025,
     "round": 3,
-    "question": "Java에서 인터페이스를 구현하는 클래스 선언에 사용하는 키워드는?",
+    "question": "Java에서 인터페이스를 구현하는 클래스 선언에 사용하는 빈칸에 들어갈 키워드는?",
     "answer": "implements",
     "explanation": "class WashingMachine implements Machine { ... } 형태로 인터페이스를 구현합니다.",
-    "codeSnippet": "interface Machine {\n    void run();\n}\nclass WashingMachine implements Machine {\n    public void run() {\n        System.out.println(\"Washing machine running\");\n    }\n}",
+    "codeSnippet": "interface Machine {\n    void run();\n}\nclass WashingMachine (_____) Machine {\n    public void run() {\n        System.out.println(\"Washing machine running\");\n    }\n}",
     "codeLanguage": "java",
     "choices": [
       {
         "label": "1",
+        "text": "interface",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "implements",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "extends",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "abstract",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "interface",
+        "text": "abstract",
         "isCorrect": false
       }
     ],
@@ -393,14 +393,14 @@
     "difficulty": 2,
     "year": 2025,
     "round": 3,
-    "question": "테이블에서 CROSS JOIN 또는 조건부 쿼리 결과 행의 수를 구하시오.",
+    "question": "다음 테이블에서 쿼리 실행 결과를 구하시오.",
     "answer": "4",
     "explanation": "조건에 맞는 행의 수를 구하는 문제입니다.",
     "choices": [
       {
         "label": "1",
-        "text": "4",
-        "isCorrect": true
+        "text": "6",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -409,13 +409,13 @@
       },
       {
         "label": "3",
-        "text": "6",
+        "text": "8",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "8",
-        "isCorrect": false
+        "text": "4",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -424,7 +424,8 @@
       "SQL",
       "결과값",
       "2025년3회"
-    ]
+    ],
+    "codeSnippet": "[A 테이블]\n CODE | NAME\n ------+------\n 3258   |  smith\n 4324   |  allen\n 5432   |  scott\n\n[B 테이블]\n  NO  | RULE\n------+------\n   12   |   s%\n  32   |  %t%\n\nSELECT COUNT(*) FROM T1 A CROSS JOIN T2 B WHERE A.NAME LIKE B.RULE;"
   },
   {
     "id": "exam-2025-3_011",
@@ -440,23 +441,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "OTP",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "SSO",
+        "text": "MFA",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "PKI",
         "isCorrect": false
       },
       {
-        "label": "4",
-        "text": "MFA",
+        "label": "3",
+        "text": "SSO",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "OTP",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -476,31 +477,31 @@
     "difficulty": 1,
     "year": 2025,
     "round": 3,
-    "question": "Java에서 자식 클래스 생성자에서 부모 클래스의 생성자를 호출하는 키워드는?",
+    "question": "Java에서 자식 클래스 생성자에서 부모 클래스의 생성자를 호출하데 사용하는 빈칸에 들어갈 키워드는?",
     "answer": "super",
     "explanation": "super(a,a)로 부모 클래스 Rectangle의 생성자 Rectangle(int,int)를 호출합니다.",
-    "codeSnippet": "class Rectangle {\n    int width, height;\n    Rectangle(int w, int h) { this.width=w; this.height=h; }\n}\nclass Square extends Rectangle {\n    Square(int a) { super(a,a); }\n    int getSquareArea() { return width*height; }\n}",
+    "codeSnippet": "class Rectangle {\n    int width, height;\n    Rectangle(int w, int h) { this.width=w; this.height=h; }\n}\nclass Square extends Rectangle {\n    Square(int a) { ____(a,a); }\n    int getSquareArea() { return width*height; }\n}",
     "codeLanguage": "java",
     "choices": [
       {
         "label": "1",
-        "text": "super",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "this",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "extends",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "parent",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "this",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "super",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -526,13 +527,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "OAuth",
-        "isCorrect": true
+        "text": "SSO",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "SSO",
-        "isCorrect": false
+        "text": "OAuth",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -557,14 +558,16 @@
   {
     "id": "exam-2025-3_014",
     "categoryId": "exam-2025-3",
-    "subcategory": "이론/DB",
-    "type": "theory",
+    "subcategory": "SQL",
+    "type": "sql",
     "difficulty": 2,
     "year": 2025,
     "round": 3,
     "question": "관계대수에서 R÷S(디비전)의 결과를 구하시오.",
     "answer": "A: a1",
     "explanation": "디비전은 S의 모든 튜플과 연관된 R의 튜플을 반환합니다.",
+    "codeSnippet": "[R 테이블]\n  A  |   B\n-----+-----\n  a1   |  b1\n  a2   |  b2\n  a1   |  b3\n\n[S 테이블]\n B\n-----\nb1\nb3\n",
+    "codeLanguage": "sql",
     "choices": [
       {
         "label": "1",
@@ -578,12 +581,12 @@
       },
       {
         "label": "3",
-        "text": "a2",
+        "text": "a1, a2, a3",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "a1, a2, a3",
+        "text": "a2",
         "isCorrect": false
       }
     ],
@@ -612,22 +615,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "0",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "14",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "7",
+        "label": "2",
+        "text": "2",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "0",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "2",
+        "text": "7",
         "isCorrect": false
       }
     ],
@@ -654,23 +657,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "튜플, 인스턴스, 카디널리티",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "속성, 스키마, 차수",
+        "text": "튜플, 스키마, 차수",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "레코드, 테이블, 도메인",
         "isCorrect": false
       },
       {
-        "label": "4",
-        "text": "튜플, 스키마, 차수",
+        "label": "3",
+        "text": "속성, 스키마, 차수",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "튜플, 인스턴스, 카디널리티",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -703,17 +706,17 @@
       },
       {
         "label": "2",
-        "text": "A",
+        "text": "B",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "ABC",
+        "text": "A",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "B",
+        "text": "ABC",
         "isCorrect": false
       }
     ],
@@ -739,23 +742,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "MAC, RBAC, DAC",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "DAC, MAC, RBAC",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "RBAC, DAC, MAC",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "MAC, DAC, RBAC",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "MAC, RBAC, DAC",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -782,22 +785,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "테스트 조건, 테스트 데이터, 예상 결과",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "테스트 환경, 테스트 유형, 수행 단계",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "테스트 조건, 테스트 환경, 성공기준",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "테스트 조건, 테스트 데이터, 예상 결과",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "테스트 데이터, 수행 단계, 테스트 유형",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "테스트 환경, 테스트 유형, 수행 단계",
         "isCorrect": false
       }
     ],
@@ -816,14 +819,14 @@
     "difficulty": 2,
     "year": 2025,
     "round": 3,
-    "question": "SELECT count(col2) FROM A WHERE col1 IN (2,3) OR col2 IN (3,5) 의 결과는?",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "4",
     "explanation": "col1 IN (2,3) 또는 col2 IN (3,5) 조건을 만족하는 행 중 col2가 NULL이 아닌 행의 수를 구합니다.",
     "choices": [
       {
         "label": "1",
-        "text": "4",
-        "isCorrect": true
+        "text": "6",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -837,8 +840,8 @@
       },
       {
         "label": "4",
-        "text": "6",
-        "isCorrect": false
+        "text": "4",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -848,6 +851,7 @@
       "COUNT",
       "IN",
       "2025년3회"
-    ]
+    ],
+    "codeSnippet": "[A 테이블]\n col1 | col2\n------+------\n  1   |  1\n  2   |  3\n  3   |  5\n  4   |  3\n  5   | NULL\n\nSELECT count(col2)\nFROM A\nWHERE col1 IN (2, 3)\n   OR col2 IN (3, 5);"
   }
 ]

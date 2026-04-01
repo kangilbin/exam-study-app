@@ -5,6 +5,7 @@
 
 import type {
   Question,
+  Category,
   CategoryId,
   QuestionType,
   Difficulty,
@@ -139,6 +140,50 @@ export function getIncorrectQuestions(
 /** 전체 문제 수 */
 export function getTotalQuestionCount(): number {
   return loadAllQuestions().length;
+}
+
+/** 특정 그룹의 문제 ID 목록 */
+export function getQuestionIdsByGroup(group: string): string[] {
+  const categories: Category[] = require('@/data/categories.json');
+  const groupCatIds = categories
+    .filter((c) => c.group === group)
+    .map((c) => c.id);
+
+  const ids: string[] = [];
+  for (const [catId, questions] of Object.entries(questionFiles)) {
+    if (groupCatIds.includes(catId as CategoryId)) {
+      ids.push(...questions.map((q) => q.id));
+    }
+  }
+  return ids;
+}
+
+/** 특정 그룹 제외한 문제 수 */
+export function getQuestionCountExcludingGroup(excludeGroup: string): number {
+  const categories: Category[] = require('@/data/categories.json');
+  const excludedIds = categories
+    .filter((c) => c.group === excludeGroup)
+    .map((c) => c.id);
+
+  return Object.entries(questionFiles)
+    .filter(([id]) => !excludedIds.includes(id as CategoryId))
+    .reduce((sum, [, questions]) => sum + questions.length, 0);
+}
+
+/** 특정 그룹 제외한 문제 ID 목록 */
+export function getQuestionIdsExcludingGroup(excludeGroup: string): string[] {
+  const categories: Category[] = require('@/data/categories.json');
+  const excludedIds = categories
+    .filter((c) => c.group === excludeGroup)
+    .map((c) => c.id);
+
+  const ids: string[] = [];
+  for (const [catId, questions] of Object.entries(questionFiles)) {
+    if (!excludedIds.includes(catId as CategoryId)) {
+      ids.push(...questions.map((q) => q.id));
+    }
+  }
+  return ids;
 }
 
 /** 카테고리별 문제 수 맵 */

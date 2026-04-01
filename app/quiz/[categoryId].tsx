@@ -21,10 +21,12 @@ import {
   useIsQuizComplete,
 } from '@/store/useQuizStore';
 import { useUserStore } from '@/store/useUserStore';
-import { loadQuestionsByCategory, shuffleQuestions } from '@/features/questions/services/questionService';
+import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from '@/features/questions/services/questionService';
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
 import type { CategoryId } from '@/features/questions/types';
+
+const FONT_SIZE_MAP = { small: 11, medium: 13, large: 16 } as const;
 
 export default function QuizScreen() {
   const { categoryId } = useLocalSearchParams<{ categoryId: string }>();
@@ -32,6 +34,7 @@ export default function QuizScreen() {
   const category = getCategoryById(categoryId as CategoryId);
 
   const startQuiz = useQuizStore((s) => s.startQuiz);
+  const resetQuiz = useQuizStore((s) => s.resetQuiz);
   const selectChoice = useQuizStore((s) => s.selectChoice);
   const submitAnswer = useQuizStore((s) => s.submitAnswer);
   const revealExplanation = useQuizStore((s) => s.revealExplanation);
@@ -49,9 +52,35 @@ export default function QuizScreen() {
   const bookmarks = useUserStore((s) => s.bookmarks);
   const toggleBookmark = useUserStore((s) => s.toggleBookmark);
   const shuffleMode = useUserStore((s) => s.settings.shuffleMode);
+  const fontSize = useUserStore((s) => s.settings.fontSize);
+  const codeFontSize = FONT_SIZE_MAP[fontSize];
+
+  const canResume = useQuizStore((s) => s.canResume);
 
   useEffect(() => {
-    if (categoryId) {
+    if (!categoryId) return;
+
+    // 북마크/오답은 이전 화면에서 startQuiz 호출 완료
+    if (categoryId === 'bookmark') return;
+
+    // 오답 다시 풀기
+    if (categoryId === 'incorrect') {
+      const userProgress = useUserStore.getState().progress;
+      let qs = getIncorrectQuestions(userProgress);
+      if (shuffleMode) qs = shuffleQuestions(qs);
+      startQuiz('incorrect' as CategoryId, qs);
+      return;
+    }
+
+    if (canResume(categoryId)) {
+      // 저장된 진행 상태 복원 - UI 상태만 초기화
+      useQuizStore.setState({
+        selectedChoiceIndex: null,
+        isAnswered: false,
+        isExplanationRevealed: false,
+      });
+    } else {
+      // 새로 시작
       let qs = loadQuestionsByCategory(categoryId as CategoryId);
       if (shuffleMode) qs = shuffleQuestions(qs);
       startQuiz(categoryId as CategoryId, qs);
@@ -73,6 +102,7 @@ export default function QuizScreen() {
 
   const handleNext = () => {
     if (isComplete) {
+      resetQuiz();
       router.replace({
         pathname: '/quiz/result',
         params: {
@@ -92,7 +122,7 @@ export default function QuizScreen() {
   if (!currentQuestion) {
     return (
       <SafeAreaView style={styles.container}>
-        <Stack.Screen options={{ title: `${category?.name || ''} 문제풀이` }} />
+        <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>이 카테고리에 문제가 없습니다.</Text>
           <Pressable style={styles.primaryButton} onPress={() => router.back()}>
@@ -108,7 +138,7 @@ export default function QuizScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Stack.Screen options={{ title: `${category?.name || ''} 문제풀이` }} />
+      <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
 
       {/* 진행도 */}
       <View style={styles.progressContainer}>
@@ -145,7 +175,7 @@ export default function QuizScreen() {
         {/* 코드 블록 */}
         {currentQuestion.codeSnippet && (
           <View style={styles.codeBlock}>
-            <Text style={styles.codeText}>{currentQuestion.codeSnippet}</Text>
+            <Text style={[styles.codeText, { fontSize: codeFontSize }]}>{currentQuestion.codeSnippet}</Text>
           </View>
         )}
 

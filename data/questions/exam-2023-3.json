@@ -13,14 +13,36 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int n[5] = {1, 2, 3, 4, 5};\n    int i;\n    for(i = 0; i < 5; i++)\n        printf(\"%d \", n[(i + 1) % 5]);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "1 2 3 4 5", "isCorrect": false},
-      {"label": "2", "text": "2 3 4 5 1", "isCorrect": true},
-      {"label": "3", "text": "5 1 2 3 4", "isCorrect": false},
-      {"label": "4", "text": "2 3 4 5 0", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "2 3 4 5 0",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "2 3 4 5 1",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "1 2 3 4 5",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5 1 2 3 4",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["C언어", "배열", "순환", "나머지연산", "2023년3회"]
+    "tags": [
+      "C언어",
+      "배열",
+      "순환",
+      "나머지연산",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_002",
@@ -36,14 +58,35 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int m = 4620;\n    printf(\"1000원: %d개\\n\", m / 1000);\n    printf(\"500원: %d개\\n\", (m % 1000) / 500);\n    printf(\"100원: %d개\\n\", (m % 500) / 100);\n    printf(\"10원: %d개\\n\", (m % 100) / 10);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "m/1000, (m%1000)/500, (m%500)/100, (m%100)/10", "isCorrect": true},
-      {"label": "2", "text": "m/1000, m/500, m/100, m/10", "isCorrect": false},
-      {"label": "3", "text": "m/1000, (m-4000)/500, (m-4500)/100, (m-4600)/10", "isCorrect": false},
-      {"label": "4", "text": "m%1000, m%500, m%100, m%10", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "m/1000, m/500, m/100, m/10",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "m%1000, m%500, m%100, m%10",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "m/1000, (m-4000)/500, (m-4500)/100, (m-4600)/10",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "m/1000, (m%1000)/500, (m%500)/100, (m%100)/10",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["C언어", "화폐환산", "나머지연산", "2023년3회"]
+    "tags": [
+      "C언어",
+      "화폐환산",
+      "나머지연산",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_003",
@@ -59,14 +102,35 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    char *a = \"박영희\";\n    char *b = a;\n    char *c = a;\n    printf(\"%s %s %s\", a, b, c);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "박영희 박영희 박영희", "isCorrect": true},
-      {"label": "2", "text": "박영희 (null) (null)", "isCorrect": false},
-      {"label": "3", "text": "주소값 주소값 주소값", "isCorrect": false},
-      {"label": "4", "text": "컴파일 에러 발생", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "주소값 주소값 주소값",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "박영희 (null) (null)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "컴파일 에러 발생",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "박영희 박영희 박영희",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["C언어", "포인터", "문자열", "2023년3회"]
+    "tags": [
+      "C언어",
+      "포인터",
+      "문자열",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_004",
@@ -80,14 +144,36 @@
     "answer": "INSERT INTO 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')",
     "explanation": "INSERT INTO 테이블명 VALUES(값1, 값2, ...) 구문을 사용합니다.\n문자열 값은 작은따옴표(')로 감싸야 하며, 숫자는 그대로 작성합니다.\n컬럼을 지정하지 않으면 테이블의 모든 컬럼에 순서대로 값이 입력됩니다.",
     "choices": [
-      {"label": "1", "text": "INSERT INTO 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')", "isCorrect": true},
-      {"label": "2", "text": "INSERT 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')", "isCorrect": false},
-      {"label": "3", "text": "INSERT INTO 학생 SET(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')", "isCorrect": false},
-      {"label": "4", "text": "ADD INTO 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ADD INTO 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "INSERT 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "INSERT INTO 학생 VALUES(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "INSERT INTO 학생 SET(9830287, '뉴진스', 3, '경영학개론', '010-1234-1234')",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["SQL", "INSERT", "데이터삽입", "2023년3회"]
+    "tags": [
+      "SQL",
+      "INSERT",
+      "데이터삽입",
+      "2023년3회"
+    ],
+    "codeSnippet": "[학생 테이블]\n 학번(int) | 이름(varchar) | 학년(int) | 전공(varchar) | 전화번호(varchar)"
   },
   {
     "id": "exam-2023-3_005",
@@ -103,14 +189,35 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int sum = 0;\n    switch(sum) {\n        case 'A': sum += 100; printf(\"A\");\n        case 'B': sum += 50; printf(\"B\");\n        case 'C': sum += 100; printf(\"C\");\n        case 'D': sum += 100; printf(\"D\"); break;\n        default: printf(\"default\");\n    }\n    // sum = 250\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "ABCD", "isCorrect": false},
-      {"label": "2", "text": "BCD", "isCorrect": true},
-      {"label": "3", "text": "BC", "isCorrect": false},
-      {"label": "4", "text": "B", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ABCD",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "BC",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "BCD",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "B",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["C언어", "switch", "fall-through", "2023년3회"]
+    "tags": [
+      "C언어",
+      "switch",
+      "fall-through",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_006",
@@ -124,20 +231,41 @@
     "answer": "조건 커버리지",
     "explanation": "조건 커버리지(Condition Coverage)는 각 개별 조건식이 참과 거짓을 한 번 이상 갖도록 테스트 케이스를 설계하는 기법입니다.\n- 구문 커버리지: 모든 구문을 한 번 이상 실행\n- 결정(분기) 커버리지: 모든 분기의 참/거짓을 한 번 이상 실행\n- 조건 커버리지: 각 개별 조건이 참/거짓을 한 번 이상\n- MC/DC: 각 조건이 독립적으로 결정에 영향을 미치는지 확인",
     "choices": [
-      {"label": "1", "text": "구문 커버리지", "isCorrect": false},
-      {"label": "2", "text": "결정 커버리지", "isCorrect": false},
-      {"label": "3", "text": "조건 커버리지", "isCorrect": true},
-      {"label": "4", "text": "변형 조건/결정 커버리지", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "변형 조건/결정 커버리지",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "조건 커버리지",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "구문 커버리지",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "결정 커버리지",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["테스트", "커버리지", "조건커버리지", "2023년3회"]
+    "tags": [
+      "테스트",
+      "커버리지",
+      "조건커버리지",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_007",
     "categoryId": "exam-2023-3",
     "subcategory": "프로그래밍 논리",
-    "type": "code",
+    "type": "theory",
     "difficulty": 2,
     "year": 2023,
     "round": 3,
@@ -145,14 +273,35 @@
     "answer": "505",
     "explanation": "1부터 2023까지 4의 배수: 4, 8, 12, ..., 2020\n4의 배수의 개수 = 2023 / 4 = 505 (정수 나눗셈)\n즉, 4 × 1 = 4부터 4 × 505 = 2020까지 총 505개입니다.",
     "choices": [
-      {"label": "1", "text": "505", "isCorrect": true},
-      {"label": "2", "text": "506", "isCorrect": false},
-      {"label": "3", "text": "504", "isCorrect": false},
-      {"label": "4", "text": "500", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "504",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "505",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "506",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "500",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["프로그래밍", "수학", "배수", "2023년3회"]
+    "tags": [
+      "프로그래밍",
+      "수학",
+      "배수",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_008",
@@ -166,14 +315,35 @@
     "answer": "템퍼프루핑",
     "explanation": "템퍼프루핑(Tamper Proofing)은 소프트웨어의 변조를 방지하는 기술입니다.\n- 코드가 변조되면 이를 탐지하여 프로그램 실행을 중단하거나 원래 상태로 복구합니다.\n- 리버스 엔지니어링이나 크래킹으로부터 소프트웨어를 보호합니다.\n- 유사 개념: 코드 난독화(Obfuscation), 워터마킹(Watermarking)",
     "choices": [
-      {"label": "1", "text": "템퍼프루핑", "isCorrect": true},
-      {"label": "2", "text": "코드 난독화", "isCorrect": false},
-      {"label": "3", "text": "디지털 워터마킹", "isCorrect": false},
-      {"label": "4", "text": "코드 서명", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "디지털 워터마킹",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "코드 난독화",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "템퍼프루핑",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "코드 서명",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["보안", "템퍼프루핑", "소프트웨어보안", "2023년3회"]
+    "tags": [
+      "보안",
+      "템퍼프루핑",
+      "소프트웨어보안",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_009",
@@ -187,14 +357,37 @@
     "answer": "213465",
     "explanation": "push(1) → [1]\npush(2) → [1,2]\npop() → 2 출력, [1]\npush(3) → [1,3]\npop() → 3 출력, [1]\npush(4) → [1,4]\npush(5) → [1,4,5]\npop() → 5 출력, [1,4]\npop() → 4 출력, [1]\npush(6) → [1,6]\npop() → 6 출력, [1]\npop() → 1 출력, []\n결과: 235461",
     "choices": [
-      {"label": "1", "text": "213465", "isCorrect": true},
-      {"label": "2", "text": "123456", "isCorrect": false},
-      {"label": "3", "text": "214365", "isCorrect": false},
-      {"label": "4", "text": "231546", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "123456",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "214365",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "231546",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "213465",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["자료구조", "스택", "push", "pop", "2023년3회"]
+    "tags": [
+      "자료구조",
+      "스택",
+      "push",
+      "pop",
+      "2023년3회"
+    ],
+    "codeSnippet": "push(1), push(2), pop(),\npush(3), pop(), push(4),\npush(5), pop(), push(6),\npop(), pop(), pop()\n\n[스택 동작 추적]\npush(1) → [1]\npush(2) → [1,2]\npop()   → [1]    출력: 2\npush(3) → [1,3]\npop()   → [1]    출력: 3\npush(4) → [1,4]\npush(5) → [1,4,5]\npop()   → [1,4]  출력: 5\npush(6) → [1,4,6]\npop()   → [1,4]  출력: 6\npop()   → [1]    출력: 4\npop()   → []     출력: 1"
   },
   {
     "id": "exam-2023-3_010",
@@ -208,14 +401,34 @@
     "answer": "요구조건분석 → 개념적설계 → 논리적설계 → 물리적설계 → 구현",
     "explanation": "데이터베이스 설계 순서:\n1. 요구조건 분석: 사용자의 요구사항을 수집하고 분석\n2. 개념적 설계: E-R 다이어그램 작성 (DBMS에 독립적)\n3. 논리적 설계: 관계 스키마로 변환 (정규화 수행)\n4. 물리적 설계: 저장 구조, 접근 경로 설계\n5. 구현: DDL로 스키마를 DBMS에 생성\n순서: ③ → ④ → ① → ② → ⑤",
     "choices": [
-      {"label": "1", "text": "③ → ④ → ① → ② → ⑤", "isCorrect": true},
-      {"label": "2", "text": "④ → ③ → ① → ② → ⑤", "isCorrect": false},
-      {"label": "3", "text": "③ → ① → ④ → ② → ⑤", "isCorrect": false},
-      {"label": "4", "text": "③ → ④ → ② → ① → ⑤", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "④ → ③ → ① → ② → ⑤",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "③ → ④ → ② → ① → ⑤",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "③ → ④ → ① → ② → ⑤",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "③ → ① → ④ → ② → ⑤",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["데이터베이스", "설계순서", "2023년3회"]
+    "tags": [
+      "데이터베이스",
+      "설계순서",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_011",
@@ -229,14 +442,36 @@
     "answer": "Singleton, Visitor",
     "explanation": "① Singleton 패턴: 생성 패턴으로, 클래스의 인스턴스가 오직 하나만 존재하도록 보장합니다. 전역 접근점(getInstance)을 통해 어디서든 접근 가능합니다.\n② Visitor 패턴: 행위 패턴으로, 객체 구조와 처리 로직을 분리합니다. 새로운 연산(Visitor)을 추가해도 기존 객체 구조를 수정할 필요가 없습니다.",
     "choices": [
-      {"label": "1", "text": "Singleton, Visitor", "isCorrect": true},
-      {"label": "2", "text": "Factory, Observer", "isCorrect": false},
-      {"label": "3", "text": "Singleton, Iterator", "isCorrect": false},
-      {"label": "4", "text": "Builder, Strategy", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Builder, Strategy",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Factory, Observer",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Singleton, Visitor",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "Singleton, Iterator",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["디자인패턴", "Singleton", "Visitor", "GoF", "2023년3회"]
+    "tags": [
+      "디자인패턴",
+      "Singleton",
+      "Visitor",
+      "GoF",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_012",
@@ -250,14 +485,38 @@
     "answer": "해밍코드(Hamming), FEC, BEC, 패리티비트(Parity), CRC",
     "explanation": "① 해밍코드(Hamming Code): 1비트 오류 정정, 2비트 오류 검출 가능\n② FEC(Forward Error Correction, 전진 오류 수정): 수신측에서 스스로 오류를 정정\n③ BEC(Backward Error Correction, 후진 오류 수정): 오류 검출 시 재전송 요청 (ARQ)\n④ 패리티 비트(Parity Bit): 데이터에 1비트 추가하여 오류 검출 (짝수/홀수 패리티)\n⑤ CRC(Cyclic Redundancy Check, 순환 중복 검사): 다항식 기반 오류 검출",
     "choices": [
-      {"label": "1", "text": "Hamming, FEC, BEC, Parity, CRC", "isCorrect": true},
-      {"label": "2", "text": "Hamming, BEC, FEC, Parity, CRC", "isCorrect": false},
-      {"label": "3", "text": "Hamming, FEC, ARQ, Checksum, CRC", "isCorrect": false},
-      {"label": "4", "text": "Reed-Solomon, FEC, BEC, Parity, CRC", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Hamming, BEC, FEC, Parity, CRC",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Hamming, FEC, ARQ, Checksum, CRC",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Hamming, FEC, BEC, Parity, CRC",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "Reed-Solomon, FEC, BEC, Parity, CRC",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["오류검출", "해밍코드", "FEC", "BEC", "패리티", "CRC", "2023년3회"]
+    "tags": [
+      "오류검출",
+      "해밍코드",
+      "FEC",
+      "BEC",
+      "패리티",
+      "CRC",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_013",
@@ -271,14 +530,36 @@
     "answer": "정보(I)프레임, 감독(S)프레임, 순서번호, 비동기균형모드(ABM), 비동기응답모드(ARM)",
     "explanation": "HDLC 프레임 종류:\n① 정보(I, Information) 프레임: 실제 사용자 데이터 전송\n② 감독(S, Supervisory) 프레임: 오류 제어, 흐름 제어 담당\n③ 순서 번호(Sequence Number): 프레임의 순서를 관리\nHDLC 동작 모드:\n④ ABM(Asynchronous Balanced Mode, 비동기 균형 모드): 혼합국 간 대등한 통신\n⑤ ARM(Asynchronous Response Mode, 비동기 응답 모드): 종국이 허가 없이 전송 가능",
     "choices": [
-      {"label": "1", "text": "정보프레임, 감독프레임, 순서번호, ABM, ARM", "isCorrect": true},
-      {"label": "2", "text": "데이터프레임, 제어프레임, 순서번호, NRM, ABM", "isCorrect": false},
-      {"label": "3", "text": "정보프레임, 비번호프레임, 순서번호, ABM, NRM", "isCorrect": false},
-      {"label": "4", "text": "정보프레임, 감독프레임, 체크섬, ARM, ABM", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "정보프레임, 비번호프레임, 순서번호, ABM, NRM",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "정보프레임, 감독프레임, 순서번호, ABM, ARM",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "데이터프레임, 제어프레임, 순서번호, NRM, ABM",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "정보프레임, 감독프레임, 체크섬, ARM, ABM",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["네트워크", "HDLC", "프레임", "데이터링크", "2023년3회"]
+    "tags": [
+      "네트워크",
+      "HDLC",
+      "프레임",
+      "데이터링크",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_014",
@@ -294,14 +575,36 @@
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        String str1 = \"hello\";\n        String str2 = \"hello\";\n        String str3 = new String(\"hello\");\n        System.out.println(str1 == str2);\n        System.out.println(str1 == str3);\n        System.out.println(str1.equals(str3));\n        System.out.println(str2.equals(str3));\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "true false true true", "isCorrect": true},
-      {"label": "2", "text": "true true true true", "isCorrect": false},
-      {"label": "3", "text": "false false true true", "isCorrect": false},
-      {"label": "4", "text": "true false false true", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "true false false true",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "true true true true",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "true false true true",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "false false true true",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["Java", "String", "문자열비교", "equals", "2023년3회"]
+    "tags": [
+      "Java",
+      "String",
+      "문자열비교",
+      "equals",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_015",
@@ -315,14 +618,36 @@
     "answer": "대칭키: DES, AES, ARIA, SEED / 비대칭키: RSA, ECC",
     "explanation": "대칭키(비밀키) 암호화: 암호화와 복호화에 같은 키 사용\n- DES: 56비트 키, 64비트 블록 (현재는 보안 취약)\n- AES: 128/192/256비트 키, 미국 표준\n- ARIA: 128/192/256비트 키, 한국 표준\n- SEED: 128비트 키, 한국 표준\n\n비대칭키(공개키) 암호화: 공개키로 암호화, 개인키로 복호화\n- RSA: 큰 수의 소인수분해 어려움에 기반\n- ECC: 타원곡선 이산대수 문제에 기반, RSA보다 짧은 키로 동일 보안 수준",
     "choices": [
-      {"label": "1", "text": "대칭키(DES,AES,ARIA,SEED), 비대칭키(RSA,ECC)", "isCorrect": true},
-      {"label": "2", "text": "대칭키(DES,AES,RSA), 비대칭키(ARIA,SEED,ECC)", "isCorrect": false},
-      {"label": "3", "text": "대칭키(DES,SEED), 비대칭키(AES,ARIA,RSA,ECC)", "isCorrect": false},
-      {"label": "4", "text": "대칭키(DES,AES,ARIA,SEED,RSA), 비대칭키(ECC)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "대칭키(DES,AES,RSA), 비대칭키(ARIA,SEED,ECC)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "대칭키(DES,AES,ARIA,SEED,RSA), 비대칭키(ECC)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "대칭키(DES,AES,ARIA,SEED), 비대칭키(RSA,ECC)",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "대칭키(DES,SEED), 비대칭키(AES,ARIA,RSA,ECC)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["보안", "암호화", "대칭키", "비대칭키", "2023년3회"]
+    "tags": [
+      "보안",
+      "암호화",
+      "대칭키",
+      "비대칭키",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_016",
@@ -336,14 +661,36 @@
     "answer": "해시(Hash)",
     "explanation": "해시(Hash)는 임의 길이의 입력 데이터를 고정 길이의 출력값(해시값, 다이제스트)으로 변환하는 함수입니다.\n특징:\n- 단방향성: 해시값에서 원본을 역추적할 수 없음\n- 고정 출력: 입력 크기와 무관하게 일정한 길이의 출력\n- 충돌 저항성: 같은 해시값을 갖는 서로 다른 입력을 찾기 어려움\n대표 알고리즘: SHA-256, MD5, SHA-1 등",
     "choices": [
-      {"label": "1", "text": "해시(Hash)", "isCorrect": true},
-      {"label": "2", "text": "암호화(Encryption)", "isCorrect": false},
-      {"label": "3", "text": "인코딩(Encoding)", "isCorrect": false},
-      {"label": "4", "text": "압축(Compression)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "인코딩(Encoding)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "압축(Compression)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "암호화(Encryption)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "해시(Hash)",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["보안", "해시", "Hash", "무결성", "2023년3회"]
+    "tags": [
+      "보안",
+      "해시",
+      "Hash",
+      "무결성",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_017",
@@ -353,18 +700,41 @@
     "difficulty": 2,
     "year": 2023,
     "round": 3,
-    "question": "다음 SQL문의 빈칸에 들어갈 옵션을 작성하시오.\n\nDROP VIEW 뷰이름 ( ? );\n\n해당 뷰를 참조하는 다른 뷰나 제약조건도 함께 삭제하는 옵션이다.",
+    "question": "다음 SQL문의 빈칸에 들어갈 옵션을 작성하시오.\n해당 뷰를 참조하는 다른 뷰나 제약조건도 함께 삭제하는 옵션이다.",
     "answer": "CASCADE",
     "explanation": "DROP VIEW에서 CASCADE 옵션을 사용하면 해당 뷰를 참조하는 다른 뷰나 제약조건도 함께 삭제됩니다.\n- CASCADE: 연쇄적으로 관련 객체까지 모두 삭제\n- RESTRICT: 다른 객체가 참조하고 있으면 삭제를 거부\n\nDROP VIEW 뷰이름 CASCADE; → 뷰와 이를 참조하는 모든 객체를 삭제",
     "choices": [
-      {"label": "1", "text": "CASCADE", "isCorrect": true},
-      {"label": "2", "text": "RESTRICT", "isCorrect": false},
-      {"label": "3", "text": "SET NULL", "isCorrect": false},
-      {"label": "4", "text": "NO ACTION", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "CASCADE",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "NO ACTION",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SET NULL",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "RESTRICT",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["SQL", "DROP", "VIEW", "CASCADE", "2023년3회"]
+    "tags": [
+      "SQL",
+      "DROP",
+      "VIEW",
+      "CASCADE",
+      "2023년3회"
+    ],
+    "codeSnippet": "DROP VIEW 뷰이름 ( ? );"
   },
   {
     "id": "exam-2023-3_018",
@@ -380,14 +750,35 @@
     "codeSnippet": "#include <stdio.h>\nvoid selectionSort(int a[], int n) {\n    int i, j, min, temp;\n    for(i = 0; i < n - 1; i++) {\n        min = i;\n        for(j = i + 1; j < n; j++) {\n            if(a[j] > a[min])\n                min = j;\n        }\n        temp = a[i];\n        a[i] = a[min];\n        a[min] = temp;\n    }\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "<", "isCorrect": false},
-      {"label": "2", "text": ">", "isCorrect": true},
-      {"label": "3", "text": "<=", "isCorrect": false},
-      {"label": "4", "text": ">=", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "<",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": ">=",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": ">",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "<=",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["알고리즘", "선택정렬", "정렬", "2023년3회"]
+    "tags": [
+      "알고리즘",
+      "선택정렬",
+      "정렬",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_019",
@@ -403,14 +794,35 @@
     "codeSnippet": "a = 'engineer information processing'\nb = a[:3]\nc = a[4:6]\nd = a[28:]\ne = b + c + d\nprint(e)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "engneing", "isCorrect": true},
-      {"label": "2", "text": "engneeing", "isCorrect": false},
-      {"label": "3", "text": "engnessing", "isCorrect": false},
-      {"label": "4", "text": "engineering", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "engnessing",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "engneeing",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "engineering",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "engneing",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["Python", "슬라이싱", "문자열", "2023년3회"]
+    "tags": [
+      "Python",
+      "슬라이싱",
+      "문자열",
+      "2023년3회"
+    ]
   },
   {
     "id": "exam-2023-3_020",
@@ -424,13 +836,35 @@
     "answer": "스텁(Stub), 드라이버(Driver)",
     "explanation": "① 스텁(Stub): 하향식(Top-Down) 통합 테스트에서 사용. 상위 모듈이 호출하는 하위 모듈의 역할을 임시로 대체합니다.\n② 드라이버(Driver): 상향식(Bottom-Up) 통합 테스트에서 사용. 하위 모듈을 호출하는 상위 모듈의 역할을 임시로 대체합니다.\n\n하향식: 상위 → 하위 방향, 스텁 필요\n상향식: 하위 → 상위 방향, 드라이버 필요",
     "choices": [
-      {"label": "1", "text": "스텁(Stub), 드라이버(Driver)", "isCorrect": true},
-      {"label": "2", "text": "드라이버(Driver), 스텁(Stub)", "isCorrect": false},
-      {"label": "3", "text": "목(Mock), 드라이버(Driver)", "isCorrect": false},
-      {"label": "4", "text": "스텁(Stub), 테스트 하네스(Test Harness)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "드라이버(Driver), 스텁(Stub)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "스텁(Stub), 드라이버(Driver)",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "스텁(Stub), 테스트 하네스(Test Harness)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "목(Mock), 드라이버(Driver)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/420",
-    "tags": ["테스트", "통합테스트", "스텁", "드라이버", "2023년3회"]
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "스텁",
+      "드라이버",
+      "2023년3회"
+    ]
   }
 ]

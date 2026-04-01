@@ -5,18 +5,42 @@
     "subcategory": "SELECT/COUNT",
     "type": "sql",
     "difficulty": 2,
-    "question": "EMP 테이블에서 다음 쿼리의 결과 행 수는?\nSELECT COUNT(*) FROM EMP WHERE EMPNO > 100 AND SAL >= 3000 OR EMPNO = 200\n\nEMP: EMPNO(100,200,300), SAL(1000,3000,1500)",
+    "question": "다음 SQL문의 실행 결과 행 수를 쓰시오.",
     "answer": "1",
     "explanation": "AND가 OR보다 우선순위가 높습니다.\n(EMPNO>100 AND SAL>=3000): 200/3000만 해당 → 1건\nOR EMPNO=200: 200이 이미 포함 → 중복제거\n결과: 1행",
     "choices": [
-      {"label": "1", "text": "1", "isCorrect": true},
-      {"label": "2", "text": "2", "isCorrect": false},
-      {"label": "3", "text": "3", "isCorrect": false},
-      {"label": "4", "text": "0", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "0",
+        "isCorrect": false
+      }
     ],
     "source": "pdf",
     "sourceFile": "SQL_기출문제_+_DML_디테일_학습자료_v0.1.pdf",
-    "tags": ["SQL", "SELECT", "COUNT", "AND", "OR", "우선순위"]
+    "tags": [
+      "SQL",
+      "SELECT",
+      "COUNT",
+      "AND",
+      "OR",
+      "우선순위"
+    ],
+    "codeSnippet": "[EMP 테이블]\n EMPNO | SAL\n-------+------\n  100  | 1000\n  200  | 3000\n  300  | 1500\n\nSELECT COUNT(*) FROM EMP\nWHERE EMPNO > 100 AND SAL >= 3000\n   OR EMPNO = 200;"
   },
   {
     "id": "sql-dml_002",
@@ -24,12 +48,18 @@
     "subcategory": "UNION",
     "type": "sql",
     "difficulty": 1,
-    "question": "T1(3,1,4)과 T2(2,4,3)에서 다음 쿼리의 결과를 작성하시오.\nSELECT A FROM T1 UNION SELECT A FROM T2 ORDER BY A DESC;",
+    "question": "다음 SQL문의 실행 결과를 작성하시오.",
     "answer": "4\n3\n2\n1",
     "explanation": "UNION은 중복을 제거하고 합칩니다.\nT1: {3,1,4}, T2: {2,4,3}\n합집합: {1,2,3,4}\nORDER BY A DESC → 4,3,2,1",
     "source": "pdf",
     "sourceFile": "SQL_기출문제_+_DML_디테일_학습자료_v0.1.pdf",
-    "tags": ["SQL", "UNION", "ORDER BY", "집합"]
+    "tags": [
+      "SQL",
+      "UNION",
+      "ORDER BY",
+      "집합"
+    ],
+    "codeSnippet": "[T1 테이블]    [T2 테이블]\n  A             A\n-----         -----\n  3             2\n  1             4\n  4             3\n\nSELECT A FROM T1\nUNION\nSELECT A FROM T2\nORDER BY A DESC;"
   },
   {
     "id": "sql-dml_003",
@@ -42,7 +72,12 @@
     "explanation": "DELETE FROM 테이블명 WHERE 조건;\n문자열 비교 시 작은따옴표를 사용합니다.",
     "source": "pdf",
     "sourceFile": "SQL_기출문제_+_DML_디테일_학습자료_v0.1.pdf",
-    "tags": ["SQL", "DELETE", "DML"]
+    "tags": [
+      "SQL",
+      "DELETE",
+      "DML"
+    ],
+    "codeSnippet": "[학생 테이블]\n 학번 | 이름 | 학년\n------+------+-----\n 100  | 민수 |  2\n 200  | 영희 |  3\n 300  | 철수 |  1"
   },
   {
     "id": "sql-dml_004",
@@ -55,7 +90,12 @@
     "explanation": "UPDATE 테이블명 SET 컬럼 = 값 WHERE 조건;\nSET으로 변경할 값을 지정하고, WHERE로 대상을 특정합니다.",
     "source": "pdf",
     "sourceFile": "SQL_기출문제_+_DML_디테일_학습자료_v0.1.pdf",
-    "tags": ["SQL", "UPDATE", "DML"]
+    "tags": [
+      "SQL",
+      "UPDATE",
+      "DML"
+    ],
+    "codeSnippet": "[학생 테이블]\n 학번 | 이름 | 학년\n------+------+-----\n 100  | 민수 |  2\n 200  | 영희 |  3\n 300  | 철수 |  1"
   },
   {
     "id": "sql-dml_005",
@@ -68,6 +108,13 @@
     "explanation": "GROUP BY로 과목별 그룹화 후, HAVING으로 평균 90 이상 필터링합니다.\nMIN(), MAX()는 집계함수, AS는 별칭입니다.",
     "source": "pdf",
     "sourceFile": "SQL_기출문제_+_DML_디테일_학습자료_v0.1.pdf",
-    "tags": ["SQL", "GROUP BY", "HAVING", "집계함수", "별칭"]
+    "tags": [
+      "SQL",
+      "GROUP BY",
+      "HAVING",
+      "집계함수",
+      "별칭"
+    ],
+    "codeSnippet": "[성적 테이블]\n 과목코드 | 과목이름   | 점수\n---------+-----------+-----\n 1000    | 데이터베이스 |  95\n 2000    | 운영체제    |  85\n 1000    | 데이터베이스 |  90\n 2000    | 운영체제    |  80\n 3000    | 네트워크    |  92"
   }
 ]

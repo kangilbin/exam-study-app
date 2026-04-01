@@ -13,14 +13,36 @@
     "codeSnippet": "class Main {\n    public static void main(String[] args) {\n        int[] a = new int[]{1, 2, 3, 4};\n        int[] b = new int[]{1, 2, 3, 4};\n        int[] c = new int[]{1, 2, 3};\n        check(a, b);\n        check(a, c);\n        check(b, c);\n    }\n    public static void check(int[] a, int[] b) {\n        if (a == b) {\n            System.out.print(\"O\");\n        } else {\n            System.out.print(\"N\");\n        }\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "NNN", "isCorrect": true},
-      {"label": "2", "text": "ONN", "isCorrect": false},
-      {"label": "3", "text": "OON", "isCorrect": false},
-      {"label": "4", "text": "OOO", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "OOO",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "NNN",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "ONN",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "OON",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["Java", "배열", "참조비교", "2024년", "2회"]
+    "tags": [
+      "Java",
+      "배열",
+      "참조비교",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_002",
@@ -34,14 +56,35 @@
     "answer": "반정규화(De-normalization)",
     "explanation": "반정규화(De-normalization)는 정규화된 엔티티, 속성, 관계에 대해 시스템의 성능 향상과 개발 및 운영의 단순화를 위해 데이터 모델을 통합하는 프로세스입니다. 디스크 I/O량이 많거나 경로가 너무 멀어 조인으로 인한 성능 저하가 예상될 때, 칼럼을 계산하여 읽을 때의 성능이 저하될 것이 예상될 때 수행합니다.",
     "choices": [
-      {"label": "1", "text": "정규화(Normalization)", "isCorrect": false},
-      {"label": "2", "text": "반정규화(De-normalization)", "isCorrect": true},
-      {"label": "3", "text": "이상현상(Anomaly)", "isCorrect": false},
-      {"label": "4", "text": "함수적 종속(Functional Dependency)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "정규화(Normalization)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "함수적 종속(Functional Dependency)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "이상현상(Anomaly)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "반정규화(De-normalization)",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["데이터베이스", "반정규화", "2024년", "2회"]
+    "tags": [
+      "데이터베이스",
+      "반정규화",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_003",
@@ -51,18 +94,41 @@
     "difficulty": 2,
     "year": 2024,
     "round": 2,
-    "question": "다음 SQL 문의 빈칸 (가), (나), (다), (라)에 들어갈 키워드를 순서대로 쓰시오.\n\nINSERT INTO 학생 (가) ('홍길동', 20);\nINSERT INTO 학생 (나) * (다) 지원자 WHERE 나이 >= 20;\nUPDATE 학생 (라) 이름 = '이순신' WHERE 학번 = 100;",
+    "question": "다음 SQL문의 빈칸 (가), (나)에 들어갈 키워드를 순서대로 쓰시오.",
     "answer": "VALUES, SELECT, FROM, SET",
     "explanation": "INSERT INTO ... VALUES는 직접 값을 삽입하는 구문입니다. INSERT INTO ... SELECT ... FROM은 다른 테이블에서 조건에 맞는 데이터를 가져와 삽입하는 구문입니다. UPDATE ... SET은 기존 레코드의 값을 수정하는 구문입니다.",
     "choices": [
-      {"label": "1", "text": "VALUES, SELECT, FROM, SET", "isCorrect": true},
-      {"label": "2", "text": "VALUE, SELECT, WHERE, SET", "isCorrect": false},
-      {"label": "3", "text": "VALUES, INSERT, FROM, WHERE", "isCorrect": false},
-      {"label": "4", "text": "SET, SELECT, INTO, VALUES", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SET, SELECT, INTO, VALUES",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "VALUES, INSERT, FROM, WHERE",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "VALUE, SELECT, WHERE, SET",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "VALUES, SELECT, FROM, SET",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["SQL", "INSERT", "UPDATE", "2024년", "2회"]
+    "tags": [
+      "SQL",
+      "INSERT",
+      "UPDATE",
+      "2024년",
+      "2회"
+    ],
+    "codeSnippet": "-- 직접 값 삽입\nINSERT INTO 사원 (사원번호, 이름, 주소, 부서)\n(가) (32431, '정실기', '서울', '영업');\n\n-- 조회 결과 삽입\nINSERT INTO 부서 (사원번호, 이름, 나이, 부서)\n(나) 사원번호, 이름, 나이, 23\nFROM 사원 WHERE 이름 = '정실기';"
   },
   {
     "id": "exam-2024-2_004",
@@ -76,14 +142,37 @@
     "answer": "5, 4",
     "explanation": "카디널리티(Cardinality)는 릴레이션에 포함된 튜플(행)의 수로, 해당 릴레이션은 5개의 튜플이 있으므로 카디널리티는 5입니다. 차수(Degree)는 릴레이션에 포함된 속성(열)의 수로, 학번, 이름, 학과, 학년 4개이므로 차수는 4입니다.",
     "choices": [
-      {"label": "1", "text": "카디널리티: 5, 차수: 4", "isCorrect": true},
-      {"label": "2", "text": "카디널리티: 4, 차수: 5", "isCorrect": false},
-      {"label": "3", "text": "카디널리티: 5, 차수: 5", "isCorrect": false},
-      {"label": "4", "text": "카디널리티: 4, 차수: 4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "카디널리티: 5, 차수: 4",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "카디널리티: 4, 차수: 4",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "카디널리티: 5, 차수: 5",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "카디널리티: 4, 차수: 5",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["데이터베이스", "릴레이션", "카디널리티", "차수", "2024년", "2회"]
+    "tags": [
+      "데이터베이스",
+      "릴레이션",
+      "카디널리티",
+      "차수",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_005",
@@ -97,14 +186,36 @@
     "answer": "IPSec",
     "explanation": "IPSec(IP Security)은 IP 계층에서 보안 서비스를 제공하는 프로토콜 모음입니다. AH(Authentication Header)는 데이터 무결성과 인증을 제공하고, ESP(Encapsulating Security Payload)는 데이터 기밀성(암호화)과 인증을 제공합니다. 전송 모드와 터널 모드 두 가지 동작 모드가 있습니다.",
     "choices": [
-      {"label": "1", "text": "SSL/TLS", "isCorrect": false},
-      {"label": "2", "text": "IPSec", "isCorrect": true},
-      {"label": "3", "text": "SSH", "isCorrect": false},
-      {"label": "4", "text": "S-HTTP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "IPSec",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "SSL/TLS",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "S-HTTP",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["네트워크", "보안", "IPSec", "2024년", "2회"]
+    "tags": [
+      "네트워크",
+      "보안",
+      "IPSec",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_006",
@@ -120,14 +231,36 @@
     "codeSnippet": "def fnCalculation(x, y):\n    result = 0\n    for i in range(len(x)):\n        temp = x[i:i+len(y)]\n        if temp == y:\n            result += 1\n    return result\n\na = \"abdcabcabca\"\np1 = \"ab\"\np2 = \"ca\"\nout = f\"ab{fnCalculation(a, p1)}ca{fnCalculation(a, p2)}\"\nprint(out)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "ab3ca3", "isCorrect": true},
-      {"label": "2", "text": "ab2ca2", "isCorrect": false},
-      {"label": "3", "text": "ab3ca2", "isCorrect": false},
-      {"label": "4", "text": "ab2ca3", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ab2ca2",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "ab2ca3",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "ab3ca2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ab3ca3",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["Python", "문자열", "슬라이싱", "2024년", "2회"]
+    "tags": [
+      "Python",
+      "문자열",
+      "슬라이싱",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_007",
@@ -141,14 +274,37 @@
     "answer": "AES",
     "explanation": "AES(Advanced Encryption Standard)는 2001년 NIST에서 DES의 후속으로 선정한 대칭키 블록 암호 알고리즘입니다. 벨기에의 암호학자 Joan Daemen과 Vincent Rijmen이 개발한 Rijndael 알고리즘이 선정되었습니다. 128비트 블록 크기에 128, 192, 256비트 키를 지원합니다.",
     "choices": [
-      {"label": "1", "text": "DES", "isCorrect": false},
-      {"label": "2", "text": "AES", "isCorrect": true},
-      {"label": "3", "text": "RSA", "isCorrect": false},
-      {"label": "4", "text": "SEED", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "DES",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SEED",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "AES",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["보안", "암호화", "AES", "대칭키", "2024년", "2회"]
+    "tags": [
+      "보안",
+      "암호화",
+      "AES",
+      "대칭키",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_008",
@@ -162,14 +318,37 @@
     "answer": "가상회선, 데이터그램",
     "explanation": "패킷 교환 방식은 두 가지로 나뉩니다.\n1) 가상회선(Virtual Circuit) 방식: 데이터 전송 전에 논리적 연결 경로를 설정하여 모든 패킷이 같은 경로로 순서대로 전달됩니다.\n2) 데이터그램(Datagram) 방식: 각 패킷이 독립적으로 최적의 경로를 선택하여 전달되므로, 도착 순서가 다를 수 있습니다.",
     "choices": [
-      {"label": "1", "text": "가상회선, 데이터그램", "isCorrect": true},
-      {"label": "2", "text": "회선교환, 메시지교환", "isCorrect": false},
-      {"label": "3", "text": "TCP, UDP", "isCorrect": false},
-      {"label": "4", "text": "유니캐스트, 멀티캐스트", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "유니캐스트, 멀티캐스트",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "가상회선, 데이터그램",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "TCP, UDP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "회선교환, 메시지교환",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["네트워크", "패킷교환", "가상회선", "데이터그램", "2024년", "2회"]
+    "tags": [
+      "네트워크",
+      "패킷교환",
+      "가상회선",
+      "데이터그램",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_009",
@@ -183,14 +362,36 @@
     "answer": "순차적(Sequential) 응집도",
     "explanation": "순차적(Sequential) 응집도는 모듈 내 하나의 활동에서 나온 출력 데이터가 다음 활동의 입력 데이터로 사용되는 형태입니다. 응집도의 순서(낮음→높음): 우연적→논리적→시간적→절차적→통신적→순차적→기능적 응집도입니다.",
     "choices": [
-      {"label": "1", "text": "절차적(Procedural) 응집도", "isCorrect": false},
-      {"label": "2", "text": "통신적(Communication) 응집도", "isCorrect": false},
-      {"label": "3", "text": "순차적(Sequential) 응집도", "isCorrect": true},
-      {"label": "4", "text": "기능적(Functional) 응집도", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "기능적(Functional) 응집도",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "순차적(Sequential) 응집도",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "통신적(Communication) 응집도",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "절차적(Procedural) 응집도",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["소프트웨어공학", "응집도", "모듈", "2024년", "2회"]
+    "tags": [
+      "소프트웨어공학",
+      "응집도",
+      "모듈",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_010",
@@ -204,14 +405,37 @@
     "answer": "Iterator",
     "explanation": "Iterator(반복자) 패턴은 컬렉션 구현 방법을 노출시키지 않으면서도 그 집합체 안에 있는 모든 항목에 순차적으로 접근할 수 있는 방법을 제공하는 패턴입니다. 내부 표현을 외부에 감추면서 순회할 수 있어 다양한 순회 방식을 지원할 수 있습니다.",
     "choices": [
-      {"label": "1", "text": "Observer", "isCorrect": false},
-      {"label": "2", "text": "Iterator", "isCorrect": true},
-      {"label": "3", "text": "Visitor", "isCorrect": false},
-      {"label": "4", "text": "Strategy", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Iterator",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Visitor",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Observer",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Strategy",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["디자인패턴", "GoF", "Iterator", "행위패턴", "2024년", "2회"]
+    "tags": [
+      "디자인패턴",
+      "GoF",
+      "Iterator",
+      "행위패턴",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_011",
@@ -225,14 +449,37 @@
     "answer": "A→D→C→F",
     "explanation": "RIP는 거리 벡터 라우팅 프로토콜로 홉 카운트(Hop Count)를 메트릭으로 사용합니다. 최대 홉 수는 15이며, 16은 도달 불가능을 의미합니다. 주어진 네트워크에서 A→D→C→F 경로가 홉 수 3으로 최소이므로 이 경로가 선택됩니다.",
     "choices": [
-      {"label": "1", "text": "A→B→C→F", "isCorrect": false},
-      {"label": "2", "text": "A→D→C→F", "isCorrect": true},
-      {"label": "3", "text": "A→B→E→F", "isCorrect": false},
-      {"label": "4", "text": "A→D→E→F", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "A→B→C→F",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "A→D→C→F",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "A→D→E→F",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "A→B→E→F",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["네트워크", "라우팅", "RIP", "홉카운트", "2024년", "2회"]
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "RIP",
+      "홉카운트",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_012",
@@ -246,14 +493,37 @@
     "answer": "6.5",
     "explanation": "SRT는 선점형 SJF로, 잔여 실행시간이 가장 짧은 프로세스를 우선 실행합니다.\n0~1: P1(잔여7)\n1~2: P2 도착(잔여4<7), P2 실행(잔여3)\n2~3: P3 도착(잔여2<3), P3 실행(잔여1)\n3~4: P4 도착(잔여1=P3잔여1), P4 실행(잔여0)\n4~5: P3 실행 완료\n5~8: P2 실행 완료(잔여3)\n8~15: P1 실행 완료(잔여7)\n대기시간: P1=15-0-8=7, P2=8-1-4=3, P3=5-2-2=1, P4=4-3-1=0\n평균=(7+3+1+0)/4=2.75 또는 문제 조건에 따라 6.5",
     "choices": [
-      {"label": "1", "text": "5.0", "isCorrect": false},
-      {"label": "2", "text": "5.5", "isCorrect": false},
-      {"label": "3", "text": "6.5", "isCorrect": true},
-      {"label": "4", "text": "7.0", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "7.0",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "6.5",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "5.0",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5.5",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["운영체제", "스케줄링", "SRT", "평균대기시간", "2024년", "2회"]
+    "tags": [
+      "운영체제",
+      "스케줄링",
+      "SRT",
+      "평균대기시간",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_013",
@@ -269,14 +539,36 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int arr[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};\n    int* parr[2] = {arr[1], arr[2]};\n    printf(\"%d\", parr[1][1] + *(parr[1] + 2) + **parr);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "15", "isCorrect": false},
-      {"label": "2", "text": "18", "isCorrect": false},
-      {"label": "3", "text": "21", "isCorrect": true},
-      {"label": "4", "text": "24", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "24",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "15",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "21",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "18",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["C언어", "포인터", "2차원배열", "2024년", "2회"]
+    "tags": [
+      "C언어",
+      "포인터",
+      "2차원배열",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_014",
@@ -292,14 +584,36 @@
     "codeSnippet": "interface Calc {\n    int oddSum();\n    int evenSum();\n}\n\nclass CalcImpl implements Calc {\n    int[] arr;\n    CalcImpl(int[] arr) { this.arr = arr; }\n    public int oddSum() {\n        int sum = 0;\n        for (int v : arr) if (v % 2 != 0) sum += v;\n        return sum;\n    }\n    public int evenSum() {\n        int sum = 0;\n        for (int v : arr) if (v % 2 == 0) sum += v;\n        return sum;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};\n        Calc c = new CalcImpl(arr);\n        System.out.print(c.oddSum() + \", \" + c.evenSum());\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "25, 20", "isCorrect": true},
-      {"label": "2", "text": "20, 25", "isCorrect": false},
-      {"label": "3", "text": "25, 25", "isCorrect": false},
-      {"label": "4", "text": "20, 20", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "20, 25",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "25, 25",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "25, 20",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "20, 20",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["Java", "인터페이스", "홀짝합", "2024년", "2회"]
+    "tags": [
+      "Java",
+      "인터페이스",
+      "홀짝합",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_015",
@@ -315,14 +629,36 @@
     "codeSnippet": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char src[] = \"ABCABC\";\n    char dst[20];\n    strcpy(dst, src);\n    int sum = 0;\n    for (int i = 0; i < strlen(dst); i++) {\n        if (dst[i] == 'A') sum += i;\n        if (dst[i] == 'C') sum += i;\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "8", "isCorrect": false},
-      {"label": "2", "text": "10", "isCorrect": true},
-      {"label": "3", "text": "12", "isCorrect": false},
-      {"label": "4", "text": "15", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "12",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "10",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "15",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["C언어", "문자열", "인덱스", "2024년", "2회"]
+    "tags": [
+      "C언어",
+      "문자열",
+      "인덱스",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_016",
@@ -336,14 +672,36 @@
     "answer": "제어(Control) 결합도",
     "explanation": "제어(Control) 결합도는 한 모듈이 다른 모듈에게 제어 요소(플래그, 스위치 등)를 전달하여 다른 모듈의 처리 흐름을 제어하는 경우입니다. 결합도의 순서(낮음→높음): 자료→스탬프→제어→외부→공통→내용 결합도입니다.",
     "choices": [
-      {"label": "1", "text": "자료(Data) 결합도", "isCorrect": false},
-      {"label": "2", "text": "스탬프(Stamp) 결합도", "isCorrect": false},
-      {"label": "3", "text": "제어(Control) 결합도", "isCorrect": true},
-      {"label": "4", "text": "공통(Common) 결합도", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "공통(Common) 결합도",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "제어(Control) 결합도",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "자료(Data) 결합도",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "스탬프(Stamp) 결합도",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["소프트웨어공학", "결합도", "모듈", "2024년", "2회"]
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_017",
@@ -359,14 +717,37 @@
     "codeSnippet": "public class Main {\n    static String str = \"aabbccdd\";\n    static String result = \"\";\n\n    public static void removeDup(int idx) {\n        if (idx < 0) return;\n        char ch = str.charAt(idx);\n        if (result.indexOf(ch) == -1) {\n            result += ch;\n        }\n        removeDup(idx - 1);\n    }\n\n    public static void main(String[] args) {\n        removeDup(str.length() - 1);\n        System.out.print(result);\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "abcd", "isCorrect": false},
-      {"label": "2", "text": "dcba", "isCorrect": true},
-      {"label": "3", "text": "aabbccdd", "isCorrect": false},
-      {"label": "4", "text": "ddccbbaa", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "abcd",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "ddccbbaa",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "aabbccdd",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "dcba",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["Java", "재귀", "문자열", "중복제거", "2024년", "2회"]
+    "tags": [
+      "Java",
+      "재귀",
+      "문자열",
+      "중복제거",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_018",
@@ -382,14 +763,37 @@
     "codeSnippet": "#include <stdio.h>\nvoid swap() {\n    int a = 11, b = 19, temp;\n    temp = a; a = b; b = temp;\n}\nint main() {\n    int a = 11, b = 19;\n    swap();\n    switch(a) {\n        case 1: b += 1; break;\n        case 11: b += 2;\n        default: b += 3; break;\n    }\n    printf(\"%d\", a - b);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "-10", "isCorrect": false},
-      {"label": "2", "text": "-11", "isCorrect": false},
-      {"label": "3", "text": "-13", "isCorrect": true},
-      {"label": "4", "text": "-8", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "-8",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "-13",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "-10",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "-11",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["C언어", "switch", "값전달", "fall-through", "2024년", "2회"]
+    "tags": [
+      "C언어",
+      "switch",
+      "값전달",
+      "fall-through",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_019",
@@ -405,14 +809,37 @@
     "codeSnippet": "#include <stdio.h>\nstruct node {\n    int n1;\n    struct node* n2;\n};\nint main() {\n    struct node a = {10, NULL};\n    struct node b = {20, NULL};\n    struct node c = {30, NULL};\n    struct node* head = &a;\n    a.n2 = &b;\n    b.n2 = &c;\n    printf(\"%d\\n\", head->n2->n1);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "10", "isCorrect": false},
-      {"label": "2", "text": "20", "isCorrect": true},
-      {"label": "3", "text": "30", "isCorrect": false},
-      {"label": "4", "text": "NULL", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "30",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "20",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "10",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["C언어", "구조체", "연결리스트", "포인터", "2024년", "2회"]
+    "tags": [
+      "C언어",
+      "구조체",
+      "연결리스트",
+      "포인터",
+      "2024년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2024-2_020",
@@ -428,13 +855,35 @@
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        String str = \"ITISTESTSTRING\";\n        String[] result = str.split(\"T\");\n        System.out.print(result[3]);\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "STRING", "isCorrect": true},
-      {"label": "2", "text": "S", "isCorrect": false},
-      {"label": "3", "text": "RING", "isCorrect": false},
-      {"label": "4", "text": "ES", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "STRING",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "S",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "RING",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ES",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/483",
-    "tags": ["Java", "split", "문자열", "2024년", "2회"]
+    "tags": [
+      "Java",
+      "split",
+      "문자열",
+      "2024년",
+      "2회"
+    ]
   }
 ]

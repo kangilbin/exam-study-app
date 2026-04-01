@@ -13,14 +13,35 @@
     "codeSnippet": "class Connection {\n    private static Connection _inst = null;\n    private int count = 0;\n    static public Connection get() {\n        if (_inst == null) {\n            _inst = new Connection();\n            return _inst;\n        }\n        return _inst;\n    }\n    public void count() { count++; }\n    public int getCount() { return count; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Connection conn1 = Connection.get();\n        conn1.count();\n        Connection conn2 = Connection.get();\n        conn2.count();\n        Connection conn3 = Connection.get();\n        conn3.count();\n        conn1.count();\n        System.out.print(conn1.getCount());\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "4", "isCorrect": true},
-      {"label": "2", "text": "1", "isCorrect": false},
-      {"label": "3", "text": "3", "isCorrect": false},
-      {"label": "4", "text": "2", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "4",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["Java", "싱글턴", "디자인패턴", "2024년1회"]
+    "tags": [
+      "Java",
+      "싱글턴",
+      "디자인패턴",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_002",
@@ -36,14 +57,35 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int v1 = 0, v2 = 35, v3 = 29;\n    if ((v1 > v2) ? v2 : v1) {\n        v2 = v2 << 2;\n    } else {\n        v3 = v3 << 2;\n    }\n    printf(\"%d\", v2 + v3);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "151", "isCorrect": true},
-      {"label": "2", "text": "169", "isCorrect": false},
-      {"label": "3", "text": "140", "isCorrect": false},
-      {"label": "4", "text": "64", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "151",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "169",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "140",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "64",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["C언어", "비트연산", "삼항연산자", "2024년1회"]
+    "tags": [
+      "C언어",
+      "비트연산",
+      "삼항연산자",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_003",
@@ -57,14 +99,35 @@
     "answer": "기능적 > 통신적 > 시간적 > 우연적",
     "explanation": "응집도(Cohesion)는 모듈 내부 요소들이 얼마나 밀접하게 관련되어 있는지를 나타냅니다.\n높은 순서: 기능적(Functional) > 순차적(Sequential) > 통신적(Communication) > 절차적(Procedural) > 시간적(Temporal) > 논리적(Logical) > 우연적(Coincidental)\n응집도가 높을수록 좋은 모듈 설계입니다.",
     "choices": [
-      {"label": "1", "text": "기능적 > 통신적 > 시간적 > 우연적", "isCorrect": true},
-      {"label": "2", "text": "우연적 > 시간적 > 통신적 > 기능적", "isCorrect": false},
-      {"label": "3", "text": "기능적 > 시간적 > 통신적 > 우연적", "isCorrect": false},
-      {"label": "4", "text": "통신적 > 기능적 > 우연적 > 시간적", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "통신적 > 기능적 > 우연적 > 시간적",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "기능적 > 시간적 > 통신적 > 우연적",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "기능적 > 통신적 > 시간적 > 우연적",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "우연적 > 시간적 > 통신적 > 기능적",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["소프트웨어공학", "응집도", "모듈", "2024년1회"]
+    "tags": [
+      "소프트웨어공학",
+      "응집도",
+      "모듈",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_004",
@@ -80,14 +143,35 @@
     "codeSnippet": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char str[] = \"ABCDEFGH\";\n    int len = strlen(str);\n    int i;\n    for(i = len - 1; i >= 0; i--) {\n        if(i % 2 == 0)\n            printf(\"%c\", str[i]);\n    }\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "GECA", "isCorrect": true},
-      {"label": "2", "text": "HFDB", "isCorrect": false},
-      {"label": "3", "text": "ACEG", "isCorrect": false},
-      {"label": "4", "text": "BDFH", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ACEG",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "BDFH",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "GECA",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "HFDB",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["C언어", "문자열", "역순", "2024년1회"]
+    "tags": [
+      "C언어",
+      "문자열",
+      "역순",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_005",
@@ -101,14 +185,35 @@
     "answer": "192.168.35.64, 129.200.8.254, 192.168.36.254",
     "explanation": "① 192.168.35.72 AND 255.255.255.192\n72 = 01001000, 192 = 11000000\n01001000 AND 11000000 = 01000000 = 64\n네트워크 주소: 192.168.35.64\n\n② 129.200.8.0/24 → 브로드캐스트: 129.200.8.255\n마지막 유효 호스트: 129.200.8.254\n\n③ 192.168.36.0/24 → 브로드캐스트: 192.168.36.255\n마지막 유효 호스트: 192.168.36.254",
     "choices": [
-      {"label": "1", "text": "192.168.35.64, 129.200.8.254, 192.168.36.254", "isCorrect": true},
-      {"label": "2", "text": "192.168.35.0, 129.200.8.255, 192.168.36.255", "isCorrect": false},
-      {"label": "3", "text": "192.168.35.72, 129.200.8.249, 192.168.36.249", "isCorrect": false},
-      {"label": "4", "text": "192.168.35.128, 129.200.8.253, 192.168.36.253", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "192.168.35.0, 129.200.8.255, 192.168.36.255",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "192.168.35.128, 129.200.8.253, 192.168.36.253",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "192.168.35.72, 129.200.8.249, 192.168.36.249",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "192.168.35.64, 129.200.8.254, 192.168.36.254",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["네트워크", "IP주소", "서브넷마스크", "2024년1회"]
+    "tags": [
+      "네트워크",
+      "IP주소",
+      "서브넷마스크",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_006",
@@ -122,14 +227,36 @@
     "answer": "제3정규형(3NF)",
     "explanation": "제3정규형(3NF)은 제2정규형을 만족하면서 이행적 함수 종속을 제거한 정규형입니다.\n- 제1정규형(1NF): 원자값만 포함\n- 제2정규형(2NF): 부분적 함수 종속 제거\n- 제3정규형(3NF): 이행적 함수 종속 제거 (A→B, B→C일 때 A→C 제거)\n- BCNF: 모든 결정자가 후보키\n이행적 종속: X→Y, Y→Z이면 X→Z가 되는 관계를 제거합니다.",
     "choices": [
-      {"label": "1", "text": "제1정규형(1NF)", "isCorrect": false},
-      {"label": "2", "text": "제2정규형(2NF)", "isCorrect": false},
-      {"label": "3", "text": "제3정규형(3NF)", "isCorrect": true},
-      {"label": "4", "text": "BCNF", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "BCNF",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "제2정규형(2NF)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "제3정규형(3NF)",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "제1정규형(1NF)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["데이터베이스", "정규화", "3NF", "이행적종속", "2024년1회"]
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "3NF",
+      "이행적종속",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_007",
@@ -143,14 +270,36 @@
     "answer": "OSPF",
     "explanation": "OSPF(Open Shortest Path First)는 링크 상태 라우팅 프로토콜입니다.\n- 다익스트라(Dijkstra) 알고리즘을 사용하여 최단 경로를 계산\n- 대규모 네트워크를 Area로 분할하여 관리\n- 라우팅 테이블 변경 시에만 정보를 전송 (효율적)\n\n비교:\n- RIP: 거리 벡터 방식, 최대 15홉, 벨만-포드 알고리즘\n- OSPF: 링크 상태 방식, 홉 수 제한 없음, 다익스트라 알고리즘",
     "choices": [
-      {"label": "1", "text": "OSPF", "isCorrect": true},
-      {"label": "2", "text": "RIP", "isCorrect": false},
-      {"label": "3", "text": "BGP", "isCorrect": false},
-      {"label": "4", "text": "EIGRP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "BGP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "RIP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "OSPF",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "EIGRP",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["네트워크", "라우팅", "OSPF", "다익스트라", "2024년1회"]
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "OSPF",
+      "다익스트라",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_008",
@@ -164,14 +313,37 @@
     "answer": "세타조인, 동등조인, 자연조인",
     "explanation": "① 세타 조인(Theta Join): 비교 연산자(=, <, >, ≤, ≥, ≠)를 사용하여 조건에 맞는 투플을 결합\n② 동등 조인(Equi Join): 세타 조인 중 '=' 연산자만 사용하는 조인\n③ 자연 조인(Natural Join): 동등 조인 결과에서 중복 속성(같은 이름의 컬럼)을 하나만 남기고 제거\n\n관계: 세타조인 ⊃ 동등조인 ⊃ 자연조인",
     "choices": [
-      {"label": "1", "text": "세타조인, 동등조인, 자연조인", "isCorrect": true},
-      {"label": "2", "text": "내부조인, 외부조인, 교차조인", "isCorrect": false},
-      {"label": "3", "text": "동등조인, 세타조인, 자연조인", "isCorrect": false},
-      {"label": "4", "text": "자연조인, 동등조인, 세타조인", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "동등조인, 세타조인, 자연조인",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "내부조인, 외부조인, 교차조인",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "세타조인, 동등조인, 자연조인",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "자연조인, 동등조인, 세타조인",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["SQL", "조인", "세타조인", "동등조인", "자연조인", "2024년1회"]
+    "tags": [
+      "SQL",
+      "조인",
+      "세타조인",
+      "동등조인",
+      "자연조인",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_009",
@@ -185,14 +357,36 @@
     "answer": "6, 6",
     "explanation": "LRU (가장 오래전에 사용된 페이지 교체):\n2→[2] F, 3→[2,3] F, 1→[2,3,1] F, 4→[3,1,4] F(2 교체), 2→[1,4,2] F(3 교체), 1→[4,2,1] H, 5→[2,1,5] F(4 교체), 4→[1,5,4] H→... 총 6회 부재\n\nLFU (가장 적게 사용된 페이지 교체):\n사용 빈도가 가장 적은 페이지를 교체합니다. 동일 빈도일 경우 LRU 적용.\n총 6회 부재",
     "choices": [
-      {"label": "1", "text": "6, 6", "isCorrect": true},
-      {"label": "2", "text": "7, 7", "isCorrect": false},
-      {"label": "3", "text": "6, 7", "isCorrect": false},
-      {"label": "4", "text": "7, 6", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "6, 6",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "6, 7",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "7, 7",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "7, 6",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["운영체제", "페이지교체", "LRU", "LFU", "2024년1회"]
+    "tags": [
+      "운영체제",
+      "페이지교체",
+      "LRU",
+      "LFU",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_010",
@@ -208,14 +402,36 @@
     "codeSnippet": "class Parent {\n    static { System.out.print(\"5 \"); }\n    { System.out.print(\"3 \"); }\n    Parent() { System.out.print(\"1 \"); }\n}\nclass Child extends Parent {\n    static { System.out.print(\"6 \"); }\n    { System.out.print(\"7 \"); }\n    Child() { System.out.print(\"2 \"); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Child c = new Child();\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "5 6 3 1 7 2", "isCorrect": true},
-      {"label": "2", "text": "3 1 7 2 5 6", "isCorrect": false},
-      {"label": "3", "text": "5 3 1 6 7 2", "isCorrect": false},
-      {"label": "4", "text": "6 5 7 3 2 1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "3 1 7 2 5 6",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "6 5 7 3 2 1",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "5 3 1 6 7 2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "5 6 3 1 7 2",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["Java", "상속", "생성자", "초기화블록", "2024년1회"]
+    "tags": [
+      "Java",
+      "상속",
+      "생성자",
+      "초기화블록",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_011",
@@ -231,14 +447,35 @@
     "codeSnippet": "#include <stdio.h>\nstruct Account {\n    int principal;\n    double rate;\n};\nint main() {\n    struct Account acc;\n    acc.principal = 9000;\n    acc.rate = 0.055;\n    double amount = acc.principal;\n    for (int i = 0; i < 2; i++) {\n        amount = amount + amount * acc.rate;\n    }\n    int intPart = (int)amount;\n    double fracPart = (amount - intPart) * 10000;\n    printf(\"%d and %.2f\", intPart, fracPart);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "9981 and 2795.10", "isCorrect": true},
-      {"label": "2", "text": "9990 and 2500.00", "isCorrect": false},
-      {"label": "3", "text": "10017 and 2250.00", "isCorrect": false},
-      {"label": "4", "text": "9981 and 2250.00", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "9981 and 2795.10",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "9981 and 2250.00",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "10017 and 2250.00",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "9990 and 2500.00",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["C언어", "구조체", "복리계산", "2024년1회"]
+    "tags": [
+      "C언어",
+      "구조체",
+      "복리계산",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_012",
@@ -254,14 +491,36 @@
     "codeSnippet": "a = [\"Seoul\", \"Kyeonggi\", \"Incheon\", \"Daejun\", \"Daegu\", \"Pusan\"]\nstr = \"S\"\nfor i in a:\n    str = str + i[1]\nprint(str)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "Seynaau", "isCorrect": true},
-      {"label": "2", "text": "SKIDDP", "isCorrect": false},
-      {"label": "3", "text": "SeoKyeIncDaeDaePus", "isCorrect": false},
-      {"label": "4", "text": "Seynaa", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Seynaa",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Seynaau",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "SKIDDP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SeoKyeIncDaeDaePus",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["Python", "문자열", "리스트", "인덱싱", "2024년1회"]
+    "tags": [
+      "Python",
+      "문자열",
+      "리스트",
+      "인덱싱",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_013",
@@ -271,18 +530,41 @@
     "difficulty": 2,
     "year": 2024,
     "round": 1,
-    "question": "성적 테이블에서 과목별 평균 점수가 90점 이상인 과목의 과목명과 평균점수를 조회하는 SQL문의 빈칸 ①, ②를 채우시오.\n\nSELECT 과목명, AVG(점수) AS 평균점수\nFROM 성적\n( ① ) BY 과목명\n( ② ) AVG(점수) >= 90;",
+    "question": "성적 테이블에서 과목별 평균 점수가 90점 이상인 과목의 과목명과 평균점수를 조회하는 SQL문의 빈칸 (1), (2)를 채우시오.",
     "answer": "GROUP, HAVING",
     "explanation": "① GROUP BY: 과목명별로 그룹화하여 집계 함수(AVG)를 적용\n② HAVING: 그룹에 대한 조건을 지정 (WHERE는 그룹화 전 조건, HAVING은 그룹화 후 조건)\n\nWHERE vs HAVING:\n- WHERE: 개별 행에 대한 조건 (GROUP BY 이전)\n- HAVING: 그룹에 대한 조건 (GROUP BY 이후, 집계 함수 사용 가능)",
     "choices": [
-      {"label": "1", "text": "GROUP, HAVING", "isCorrect": true},
-      {"label": "2", "text": "ORDER, WHERE", "isCorrect": false},
-      {"label": "3", "text": "GROUP, WHERE", "isCorrect": false},
-      {"label": "4", "text": "PARTITION, HAVING", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ORDER, WHERE",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "GROUP, HAVING",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "GROUP, WHERE",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "PARTITION, HAVING",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["SQL", "GROUP BY", "HAVING", "서브쿼리", "2024년1회"]
+    "tags": [
+      "SQL",
+      "GROUP BY",
+      "HAVING",
+      "서브쿼리",
+      "2024년1회"
+    ],
+    "codeSnippet": "SELECT 과목명, AVG(점수) AS 평균점수\nFROM 성적\n( 1 ) 과목명\n( 2 ) AVG(점수) >= 90;"
   },
   {
     "id": "exam-2024-1_014",
@@ -296,14 +578,35 @@
     "answer": "MC/DC(Modified Condition/Decision Coverage)",
     "explanation": "MC/DC(Modified Condition/Decision Coverage, 변형 조건/결정 커버리지)는 각 개별 조건이 독립적으로 전체 결정(Decision)의 결과에 영향을 미치는지를 테스트합니다.\n\n커버리지 강도 순서:\n구문 < 결정(분기) < 조건 < 조건/결정 < MC/DC < 다중 조건\n\nMC/DC는 항공, 자동차 등 안전 필수(Safety-Critical) 소프트웨어에서 요구됩니다.",
     "choices": [
-      {"label": "1", "text": "MC/DC(Modified Condition/Decision Coverage)", "isCorrect": true},
-      {"label": "2", "text": "조건 커버리지(Condition Coverage)", "isCorrect": false},
-      {"label": "3", "text": "결정 커버리지(Decision Coverage)", "isCorrect": false},
-      {"label": "4", "text": "다중 조건 커버리지(Multiple Condition Coverage)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "MC/DC(Modified Condition/Decision Coverage)",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "조건 커버리지(Condition Coverage)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "다중 조건 커버리지(Multiple Condition Coverage)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "결정 커버리지(Decision Coverage)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["테스트", "커버리지", "MC/DC", "2024년1회"]
+    "tags": [
+      "테스트",
+      "커버리지",
+      "MC/DC",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_015",
@@ -317,14 +620,35 @@
     "answer": "루트킷(Rootkit)",
     "explanation": "루트킷(Rootkit)은 시스템에 불법적으로 설치되는 악성 도구 모음입니다.\n특징:\n- root(관리자) + kit(도구모음)의 합성어\n- 시스템의 관리자 권한을 획득\n- 자신의 존재를 로그, 프로세스 목록 등에서 숨김\n- 백도어, 키로거, 트로이목마 등을 함께 설치\n- 탐지가 매우 어려움 (커널 레벨에서 동작 가능)\n대응: 무결성 검사 도구, 행위 기반 탐지",
     "choices": [
-      {"label": "1", "text": "루트킷(Rootkit)", "isCorrect": true},
-      {"label": "2", "text": "랜섬웨어(Ransomware)", "isCorrect": false},
-      {"label": "3", "text": "웜(Worm)", "isCorrect": false},
-      {"label": "4", "text": "스파이웨어(Spyware)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "웜(Worm)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "스파이웨어(Spyware)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "루트킷(Rootkit)",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "랜섬웨어(Ransomware)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["보안", "루트킷", "악성코드", "2024년1회"]
+    "tags": [
+      "보안",
+      "루트킷",
+      "악성코드",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_016",
@@ -340,14 +664,36 @@
     "codeSnippet": "class A {\n    int calc(int x) { return x * 2; }\n}\nclass B extends A {\n    int calc(int x) { return x * 3; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        A obj = new B();\n        System.out.print(obj.calc(3));\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "9", "isCorrect": true},
-      {"label": "2", "text": "6", "isCorrect": false},
-      {"label": "3", "text": "3", "isCorrect": false},
-      {"label": "4", "text": "12", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "9",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "12",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["Java", "다형성", "오버라이딩", "상속", "2024년1회"]
+    "tags": [
+      "Java",
+      "다형성",
+      "오버라이딩",
+      "상속",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_017",
@@ -361,14 +707,35 @@
     "answer": "APT(Advanced Persistent Threat)",
     "explanation": "APT(Advanced Persistent Threat, 지능형 지속 위협):\n- Advanced: 고도화된 공격 기술 사용 (제로데이, 사회공학 등)\n- Persistent: 장기간 지속적으로 공격 수행\n- Threat: 특정 대상을 목표로 한 위협\n\n공격 단계: 침투 → 검색 → 수집 → 유출\n특징:\n- 특정 조직/기업을 표적으로 함\n- 사회공학적 기법 활용 (스피어 피싱 등)\n- 장기간 은밀하게 활동\n- APT 그룹이 국가 지원을 받는 경우도 있음",
     "choices": [
-      {"label": "1", "text": "APT(Advanced Persistent Threat)", "isCorrect": true},
-      {"label": "2", "text": "DDoS(Distributed Denial of Service)", "isCorrect": false},
-      {"label": "3", "text": "피싱(Phishing)", "isCorrect": false},
-      {"label": "4", "text": "SQL 인젝션(SQL Injection)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SQL 인젝션(SQL Injection)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "DDoS(Distributed Denial of Service)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "APT(Advanced Persistent Threat)",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "피싱(Phishing)",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["보안", "APT", "사이버공격", "2024년1회"]
+    "tags": [
+      "보안",
+      "APT",
+      "사이버공격",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_018",
@@ -378,18 +745,41 @@
     "difficulty": 2,
     "year": 2024,
     "round": 1,
-    "question": "학생 테이블에 다음 데이터가 있을 때, 아래 SQL문의 실행 결과를 작성하시오.\n\n| 이름 | 학과 | 학년 |\n|------|------|------|\n| 김철수 | 컴퓨터 | 1 |\n| 이영희 | 전자 | 2 |\n| 박지민 | 컴퓨터 | NULL |\n| 최수진 | 컴퓨터 | 3 |\n\nSELECT COUNT(학년) FROM 학생 WHERE 학과 = '컴퓨터';",
+    "question": "학생 테이블에 다음 데이터가 있을 때, 아래 SQL문의 실행 결과를 작성하시오.",
     "answer": "2",
     "explanation": "COUNT(컬럼명)은 해당 컬럼에서 NULL이 아닌 값의 개수를 셉니다.\n학과가 '컴퓨터'인 행: 김철수(학년=1), 박지민(학년=NULL), 최수진(학년=3)\nNULL을 제외하면: 김철수(1), 최수진(3) → 2개\n\n참고: COUNT(*)는 NULL 포함 모든 행을 세므로 3이 됩니다.",
     "choices": [
-      {"label": "1", "text": "2", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "1", "isCorrect": false},
-      {"label": "4", "text": "4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["SQL", "COUNT", "NULL", "집계함수", "2024년1회"]
+    "tags": [
+      "SQL",
+      "COUNT",
+      "NULL",
+      "집계함수",
+      "2024년1회"
+    ],
+    "codeSnippet": "[학생 테이블]\n 이름   | 학과     | 학년\n--------+---------+-----\n 김철수 | 컴퓨터   |  1\n 이영희 | 전기     |  2\n 박민수 | 컴퓨터   |  3\n 최지수 | 전자     |  1\n 강호동 | 전기     |  4\n\nSELECT 학과, COUNT(*) AS 학과별인원\nFROM 학생\nWHERE 학년 >= 2\nGROUP BY 학과;"
   },
   {
     "id": "exam-2024-1_019",
@@ -405,14 +795,36 @@
     "codeSnippet": "#include <stdio.h>\n#include <ctype.h>\nint main() {\n    char* p = \"It is 8\";\n    char result[100];\n    int i;\n    for (i = 0; p[i] != '\\0'; i++) {\n        if (isupper(p[i]))\n            result[i] = (p[i] - 'A' + 5) % 26 + 'A';\n        else if (islower(p[i]))\n            result[i] = (p[i] - 'a' + 10) % 26 + 'a';\n        else if (isdigit(p[i]))\n            result[i] = (p[i] - '0' + 3) % 10 + '0';\n        else\n            result[i] = p[i];\n    }\n    result[i] = '\\0';\n    printf(\"%s\", result);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "Nd sc 1", "isCorrect": true},
-      {"label": "2", "text": "Ny xn 1", "isCorrect": false},
-      {"label": "3", "text": "It is 8", "isCorrect": false},
-      {"label": "4", "text": "Ns dc 1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Ny xn 1",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Nd sc 1",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "Ns dc 1",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "It is 8",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["C언어", "문자변환", "시저암호", "인코딩", "2024년1회"]
+    "tags": [
+      "C언어",
+      "문자변환",
+      "시저암호",
+      "인코딩",
+      "2024년1회"
+    ]
   },
   {
     "id": "exam-2024-1_020",
@@ -426,13 +838,35 @@
     "answer": "Abstract Factory",
     "explanation": "Abstract Factory(추상 팩토리) 패턴은 생성(Creational) 패턴 중 하나입니다.\n- 관련된 객체들의 집합(제품군)을 생성하는 인터페이스를 제공\n- 구체적인 클래스에 의존하지 않고 객체 생성\n- 제품군을 쉽게 교체 가능\n\n비교:\n- Factory Method: 하나의 객체 생성을 서브클래스에 위임\n- Abstract Factory: 관련된 객체 집합의 생성을 캡슐화\n- Builder: 복잡한 객체의 단계별 생성",
     "choices": [
-      {"label": "1", "text": "Abstract Factory", "isCorrect": true},
-      {"label": "2", "text": "Factory Method", "isCorrect": false},
-      {"label": "3", "text": "Builder", "isCorrect": false},
-      {"label": "4", "text": "Prototype", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Factory Method",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Abstract Factory",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "Prototype",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Builder",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": ["디자인패턴", "Abstract Factory", "생성패턴", "GoF", "2024년1회"]
+    "tags": [
+      "디자인패턴",
+      "Abstract Factory",
+      "생성패턴",
+      "GoF",
+      "2024년1회"
+    ]
   }
 ]

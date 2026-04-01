@@ -85,7 +85,957 @@
       {"label": "4", "text": "내용, 공통, 제어 결합도", "isCorrect": false}
     ],
     "source": "pdf",
-    "sourceFile": "2025년 1회 기출문제 학습자료_250713_v2.pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
     "tags": ["소프트웨어공학", "결합도", "모듈"]
+  },
+  {
+    "id": "theory-se_006",
+    "categoryId": "theory-se",
+    "subcategory": "개발방법론",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 제공학 과정을 순서대로 쓰시오.",
+    "answer": "분석 → 구성 → 역공학 → 이식",
+    "explanation": "소프트웨어 제공학(Re-engineering) 과정:\n1. 분석: 기존 시스템 분석\n2. 구성(재구성): 시스템 재구성\n3. 역공학: 설계 복원\n4. 이식: 새로운 환경으로 이전",
+    "choices": [
+      {"label": "1", "text": "분석 → 구성 → 역공학 → 이식", "isCorrect": true},
+      {"label": "2", "text": "역공학 → 분석 → 구성 → 이식", "isCorrect": false},
+      {"label": "3", "text": "분석 → 역공학 → 구성 → 이식", "isCorrect": false},
+      {"label": "4", "text": "구성 → 분석 → 역공학 → 이식", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "제공학", "순서"]
+  },
+  {
+    "id": "theory-se_007",
+    "categoryId": "theory-se",
+    "subcategory": "개발방법론",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "스크럼마스터에 대해 설명하시오.",
+    "answer": "업무 배분만 하고 일은 강요하지 않음. 팀을 스스로 조직하고 관리하도록 지원. 개발 과정에서 스크럼의 원칙과 가치 지원. 개발 과정 장애 요소를 찾아 제거.",
+    "explanation": "스크럼마스터는 스크럼 팀의 촉진자(Facilitator) 역할을 합니다.\n- 업무를 강요하지 않고 팀 자율성을 존중\n- 장애물(Impediment)을 제거하는 서번트 리더",
+    "choices": [
+      {"label": "1", "text": "팀의 장애 요소를 제거하고 스크럼 원칙을 지원하는 역할", "isCorrect": true},
+      {"label": "2", "text": "팀원에게 업무를 할당하고 진행을 감독하는 역할", "isCorrect": false},
+      {"label": "3", "text": "제품 백로그를 관리하고 우선순위를 결정하는 역할", "isCorrect": false},
+      {"label": "4", "text": "코드 리뷰를 수행하고 품질을 관리하는 역할", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "스크럼", "스크럼마스터", "애자일"]
+  },
+  {
+    "id": "theory-se_008",
+    "categoryId": "theory-se",
+    "subcategory": "요구사항",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "현행 시스템 파악절차 3단계를 순서대로 쓰시오.",
+    "answer": "1단계: 시스템 구성 파악 → 시스템 기능 파악 → 시스템 인터페이스 현황 파악\n2단계: 아키텍처 파악 → 소프트웨어 구성 파악\n3단계: 시스템 하드웨어 현황 파악 → 네트워크 구성 파악",
+    "explanation": "현행 시스템 파악은 3단계로 진행:\n1단계: 시스템 구성/기능/인터페이스\n2단계: 아키텍처/소프트웨어 구성\n3단계: 하드웨어/네트워크 구성",
+    "choices": [
+      {"label": "1", "text": "시스템 구성→기능→인터페이스, 아키텍처→SW구성, HW→네트워크", "isCorrect": true},
+      {"label": "2", "text": "아키텍처→SW구성, 시스템 구성→기능, HW→네트워크", "isCorrect": false},
+      {"label": "3", "text": "HW→네트워크, 시스템 구성→기능, 아키텍처→SW구성", "isCorrect": false},
+      {"label": "4", "text": "시스템 기능→구성→인터페이스, SW구성→아키텍처, 네트워크→HW", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "현행시스템", "파악절차"]
+  },
+  {
+    "id": "theory-se_009",
+    "categoryId": "theory-se",
+    "subcategory": "요구사항",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "애플리케이션 개발 단계에서 요구사항을 분석한 뒤 요구사항을 명세하는 명세 3종류는?",
+    "answer": "시스템 정의서, 시스템 요구사항 명세서, 소프트웨어 요구사항 명세서",
+    "explanation": "요구사항 명세 문서 3종류:\n- 시스템 정의서: 전체 시스템 범위 정의\n- 시스템 요구사항 명세서: 시스템 수준 요구사항\n- 소프트웨어 요구사항 명세서: SW 수준 상세 요구사항",
+    "choices": [
+      {"label": "1", "text": "시스템 정의서, 시스템 요구사항 명세서, 소프트웨어 요구사항 명세서", "isCorrect": true},
+      {"label": "2", "text": "요구사항 정의서, 설계 명세서, 테스트 명세서", "isCorrect": false},
+      {"label": "3", "text": "시스템 분석서, 시스템 설계서, 구현 명세서", "isCorrect": false},
+      {"label": "4", "text": "비즈니스 명세서, 기능 명세서, 기술 명세서", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "요구사항", "명세"]
+  },
+  {
+    "id": "theory-se_010",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "UML 행위 다이어그램의 종류 8가지를 쓰시오.",
+    "answer": "유스케이스, 활동, 콜라보레이션, 상태머신, 순차, 통신, 상호작용 개요, 타이밍",
+    "explanation": "행위 다이어그램: 시스템의 동적 행위를 표현\n- 유스케이스: 사용자 관점 시스템 행위\n- 활동: 업무 처리 과정\n- 순차: 시간 흐름에 따른 객체 상호작용\n- 상태머신: 객체 생명주기\n- 통신: 객체 간 관계 중심 상호작용\n- 타이밍: 시간 제약 명시적 표현",
+    "choices": [
+      {"label": "1", "text": "유스케이스, 활동, 콜라보레이션, 상태머신, 순차, 통신, 상호작용개요, 타이밍", "isCorrect": true},
+      {"label": "2", "text": "유스케이스, 활동, 클래스, 상태머신, 순차, 통신, 컴포넌트, 타이밍", "isCorrect": false},
+      {"label": "3", "text": "유스케이스, 활동, 배치, 상태머신, 순차, 통신, 상호작용개요, 패키지", "isCorrect": false},
+      {"label": "4", "text": "유스케이스, 활동, 콜라보레이션, 객체, 순차, 통신, 상호작용개요, 타이밍", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "UML", "행위다이어그램"]
+  },
+  {
+    "id": "theory-se_011",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "UML에서 표현하는 기본 기능 외에 추가적인 기능을 표현하는 것은? 《》로 표기하며 include, extend, interface, exception, constructor 등이 있다.",
+    "answer": "스테레오 타입(Stereotype)",
+    "explanation": "스테레오타입은 UML의 확장 메커니즘으로, 기존 모델 요소에 새로운 의미를 부여합니다.\n- 길러멧(《》)으로 표기\n- 종류: include, extend, interface, exception, constructor",
+    "choices": [
+      {"label": "1", "text": "스테레오 타입", "isCorrect": true},
+      {"label": "2", "text": "인터페이스", "isCorrect": false},
+      {"label": "3", "text": "추상 클래스", "isCorrect": false},
+      {"label": "4", "text": "어노테이션", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "UML", "스테레오타입"]
+  },
+  {
+    "id": "theory-se_012",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "유스케이스 다이어그램의 정의와 구성요소를 쓰시오. (기출)",
+    "answer": "정의: 사용자와 다른 외부 시스템들이 향후 개발될 시스템을 이용해 수행할 수 있는 기능을 '사용자의 관점'에서 기술한 것\n구성요소: 시스템(네모로 표기), 액터(타원형으로 표기), 관계(화살표)",
+    "explanation": "유스케이스 다이어그램은 시스템의 기능적 요구사항을 사용자 관점에서 모델링합니다.\n- 시스템: 네모 박스\n- 액터: 사람 모양 또는 타원형\n- 관계: 연관, include, extend",
+    "choices": [
+      {"label": "1", "text": "시스템(네모), 액터(타원형), 관계(화살표)", "isCorrect": true},
+      {"label": "2", "text": "클래스(네모), 객체(타원형), 관계(화살표)", "isCorrect": false},
+      {"label": "3", "text": "시스템(원), 액터(네모), 관계(점선)", "isCorrect": false},
+      {"label": "4", "text": "노드(네모), 컴포넌트(타원형), 인터페이스(화살표)", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "UML", "유스케이스", "기출"]
+  },
+  {
+    "id": "theory-se_013",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "럼바우 객체지향 분석에서 3가지 모델링을 순서대로 쓰시오.",
+    "answer": "객체 모델링(Object Modeling) → 동적 모델링(Dynamic Modeling) → 기능 모델링(Functional Modeling)",
+    "explanation": "럼바우 분석 순서:\n1. 객체 모델링: 정보 모델링. 시스템에서 요구하는 객체를 찾고 관계를 정의. 결과물로 객체 다이어그램\n2. 동적 모델링: 시간 흐름에 따른 제어 흐름, 동작 순서 등의 행위를 표현. 결과물로 상태 다이어그램\n3. 기능 모델링: 자료 흐름을 중심으로 처리 과정 표현. 결과물로 DFD(자료흐름도)",
+    "choices": [
+      {"label": "1", "text": "객체 모델링 → 동적 모델링 → 기능 모델링", "isCorrect": true},
+      {"label": "2", "text": "기능 모델링 → 객체 모델링 → 동적 모델링", "isCorrect": false},
+      {"label": "3", "text": "동적 모델링 → 객체 모델링 → 기능 모델링", "isCorrect": false},
+      {"label": "4", "text": "객체 모델링 → 기능 모델링 → 동적 모델링", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "럼바우", "객체지향분석"]
+  },
+  {
+    "id": "theory-se_014",
+    "categoryId": "theory-se",
+    "subcategory": "비용산정",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "비용산정 모형 분류에서 하향식 산정방법 중, 전문가의 경험적 지식을 통한 문제 해결 및 미래예측을 위한 기법은?",
+    "answer": "델파이 기법",
+    "explanation": "하향식 산정방법:\n- 전문가 판단: 경험에 기반한 추정\n- 델파이 기법: 여러 전문가의 의견을 반복적으로 수렴\n\n상향식 산정방법:\n(1) LoC: 원시 코드 라인 수 기반\n(2) COCOMO: 프로그램 규모별 비용 산정\n(3) Man Month: 1인 1개월 작업량 기준",
+    "choices": [
+      {"label": "1", "text": "델파이 기법", "isCorrect": true},
+      {"label": "2", "text": "COCOMO", "isCorrect": false},
+      {"label": "3", "text": "기능점수(FP)", "isCorrect": false},
+      {"label": "4", "text": "LOC", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "비용산정", "델파이"]
+  },
+  {
+    "id": "theory-se_015",
+    "categoryId": "theory-se",
+    "subcategory": "아키텍처",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 아키텍처 4+1뷰에서 각 뷰의 역할을 설명하시오.",
+    "answer": "유스케이스 뷰: 아키텍처를 도출하고 설계하는 작업을 주도\n논리 뷰: 설계 모델의 추상화, 주요 설계 패키지와 서브 시스템, 클래스 식별\n프로세스 뷰: 성능이나 가용성 같은 비기능적 요구사항을 고려\n구현 뷰: 개발 환경 안에서 정적인 소프트웨어 모듈의 구성을 표현\n배포 뷰: 물리적인 노드의 구성과 상호연결 관계를 배포 다이어그램으로 표현",
+    "explanation": "4+1 뷰 모델은 Kruchten이 제안한 소프트웨어 아키텍처 관점입니다.\n+1은 유스케이스 뷰로, 나머지 4개 뷰를 통합하는 중심 역할을 합니다.",
+    "choices": [
+      {"label": "1", "text": "유스케이스, 논리, 프로세스, 구현, 배포 뷰", "isCorrect": true},
+      {"label": "2", "text": "유스케이스, 물리, 프로세스, 구현, 논리 뷰", "isCorrect": false},
+      {"label": "3", "text": "기능, 논리, 프로세스, 구현, 배포 뷰", "isCorrect": false},
+      {"label": "4", "text": "유스케이스, 논리, 데이터, 구현, 배포 뷰", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "아키텍처", "4+1뷰"]
+  },
+  {
+    "id": "theory-se_016",
+    "categoryId": "theory-se",
+    "subcategory": "프로젝트관리",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "플랫폼 성능 특성 분석 항목 3가지를 쓰시오.",
+    "answer": "응답시간, 가용성, 사용률",
+    "explanation": "플랫폼 성능 특성 분석의 3가지 핵심 항목:\n- 응답시간(Response Time): 요청에 대한 응답 속도\n- 가용성(Availability): 시스템 사용 가능 비율\n- 사용률(Utilization): 자원 활용 정도",
+    "choices": [
+      {"label": "1", "text": "응답시간, 가용성, 사용률", "isCorrect": true},
+      {"label": "2", "text": "처리량, 응답시간, 보안성", "isCorrect": false},
+      {"label": "3", "text": "가용성, 확장성, 안정성", "isCorrect": false},
+      {"label": "4", "text": "응답시간, 처리량, 확장성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "플랫폼", "성능분석"]
+  },
+  {
+    "id": "theory-se_017",
+    "categoryId": "theory-se",
+    "subcategory": "프로젝트관리",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "CMMi 5단계를 순서대로 쓰시오.",
+    "answer": "초기단계 → 관리단계 → 정의단계 → 정량적 관리단계 → 최적화 단계",
+    "explanation": "CMMi(Capability Maturity Model Integration)는 카네기 멜런 대학의 소프트웨어 공학 연구소의 지침입니다.\n5단계: 초기→관리→정의→정량적 관리→최적화",
+    "choices": [
+      {"label": "1", "text": "초기 → 관리 → 정의 → 정량적 관리 → 최적화", "isCorrect": true},
+      {"label": "2", "text": "초기 → 정의 → 관리 → 정량적 관리 → 최적화", "isCorrect": false},
+      {"label": "3", "text": "초기 → 관리 → 정량적 관리 → 정의 → 최적화", "isCorrect": false},
+      {"label": "4", "text": "정의 → 초기 → 관리 → 정량적 관리 → 최적화", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "CMMi", "성숙도모델"]
+  },
+  {
+    "id": "theory-se_018",
+    "categoryId": "theory-se",
+    "subcategory": "아키텍처",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 아키텍처의 평가 및 설계에 사용되는 다양한 방법론과 기술 5가지를 쓰시오.",
+    "answer": "SAAM, ATAM, CBAM, ADR, ARID",
+    "explanation": "- SAAM(Software Architecture Analysis Method)\n- ATAM(Architecture Trade-off Analysis Method)\n- CBAM(Cost Benefit Analysis Method)\n- ADR(Active Design Review)\n- ARID(Active Review for Intermediate Designs)",
+    "choices": [
+      {"label": "1", "text": "SAAM, ATAM, CBAM, ADR, ARID", "isCorrect": true},
+      {"label": "2", "text": "SAAM, ATAM, COCOMO, ADR, ARID", "isCorrect": false},
+      {"label": "3", "text": "SAAM, ATAM, CBAM, UML, ARID", "isCorrect": false},
+      {"label": "4", "text": "SAAM, SOLID, CBAM, ADR, ARID", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "아키텍처", "평가기술"]
+  },
+  {
+    "id": "theory-se_019",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "웹 서비스에 대한 정보인 WSDL을 등록하고 검색하기 위한 저장소로, 공개적으로 접근/검색이 가능한 레지스트리는? (기출)",
+    "answer": "UDDI",
+    "explanation": "웹 서비스의 3요소 (기출):\n① UDDI: 웹 서비스 등록/검색 저장소\n② WSDL: 웹 서비스 상세 정보가 기술된 XML 언어\n③ SOAP: HTTP, HTTPS, SMTP 등을 이용하여 XML 기반 메시지를 교환하는 프로토콜",
+    "choices": [
+      {"label": "1", "text": "UDDI", "isCorrect": true},
+      {"label": "2", "text": "WSDL", "isCorrect": false},
+      {"label": "3", "text": "SOAP", "isCorrect": false},
+      {"label": "4", "text": "REST", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "웹서비스", "UDDI", "기출"]
+  },
+  {
+    "id": "theory-se_020",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "연계(인터페이스) 구성 3단계를 쓰시오.",
+    "answer": "송신시스템, 중계시스템, 수신시스템",
+    "explanation": "연계(인터페이스) 구성:\n- 송신시스템: 데이터를 보내는 시스템\n- 중계시스템: 데이터를 중개하는 시스템\n- 수신시스템: 데이터를 받는 시스템",
+    "choices": [
+      {"label": "1", "text": "송신시스템, 중계시스템, 수신시스템", "isCorrect": true},
+      {"label": "2", "text": "클라이언트, 서버, 데이터베이스", "isCorrect": false},
+      {"label": "3", "text": "요청시스템, 처리시스템, 응답시스템", "isCorrect": false},
+      {"label": "4", "text": "입력시스템, 변환시스템, 출력시스템", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "연계", "인터페이스"]
+  },
+  {
+    "id": "theory-se_021",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "연계 방식의 종류 중 간접연계 종류를 제시하라. (기출)",
+    "answer": "EAI(Enterprise Application Integration)",
+    "explanation": "간접 연계: EAI - 실제 송수신 처리와 진행 현황을 모니터링 및 통제하는 솔루션\n\nEAI 구축유형 (기출):\n1. Point-to-Point: 미들웨어 없이 직접 연결\n2. Hub & Spoke: 단일 허브 시스템으로 중앙 집중\n3. Message Bus: 미들웨어를 두어 처리\n4. Hybrid: (2),(3) 혼합방식",
+    "choices": [
+      {"label": "1", "text": "EAI", "isCorrect": true},
+      {"label": "2", "text": "JDBC", "isCorrect": false},
+      {"label": "3", "text": "DB Link", "isCorrect": false},
+      {"label": "4", "text": "API/Open API", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "EAI", "간접연계", "기출"]
+  },
+  {
+    "id": "theory-se_022",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "연계 방식의 종류 중 직접 연계 종류 5가지를 제시하라.",
+    "answer": "DB Link, DB Connection Pool, JDBC, 화면 링크, API/Open API",
+    "explanation": "직접 연계 방식:\n- DB Link: 다른 DB에 접속하기 위한 설정(오라클 객체)\n- DB Connection Pool: WAS에서 Connection Pool을 참조\n- JDBC: 드라이버를 이용하여 송신 시스템 DB와 연결\n- 화면 링크: 웹 애플리케이션에서 하이퍼링크 사용\n- API/Open API: 인터페이스 프로그램",
+    "choices": [
+      {"label": "1", "text": "DB Link, DB Connection Pool, JDBC, 화면 링크, API/Open API", "isCorrect": true},
+      {"label": "2", "text": "DB Link, EAI, JDBC, Socket, API/Open API", "isCorrect": false},
+      {"label": "3", "text": "DB Link, DB Connection Pool, ESB, 화면 링크, SOAP", "isCorrect": false},
+      {"label": "4", "text": "DB Link, DB Connection Pool, JDBC, REST, WebSocket", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "직접연계", "연계방식"]
+  },
+  {
+    "id": "theory-se_023",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "개발 언어의 선정 기준 5가지를 쓰시오.",
+    "answer": "적정성, 효율성, 이식성, 친밀성, 범용성",
+    "explanation": "개발 언어 선정 시 고려해야 할 5가지 기준:\n- 적정성: 프로젝트에 적합한지\n- 효율성: 실행 성능이 좋은지\n- 이식성: 다른 환경으로 이전 가능한지\n- 친밀성: 개발자가 익숙한지\n- 범용성: 널리 사용되는지",
+    "choices": [
+      {"label": "1", "text": "적정성, 효율성, 이식성, 친밀성, 범용성", "isCorrect": true},
+      {"label": "2", "text": "적정성, 안정성, 이식성, 친밀성, 범용성", "isCorrect": false},
+      {"label": "3", "text": "적정성, 효율성, 보안성, 친밀성, 범용성", "isCorrect": false},
+      {"label": "4", "text": "적정성, 효율성, 이식성, 확장성, 범용성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "개발언어", "선정기준"]
+  },
+  {
+    "id": "theory-se_024",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 아키텍처의 설계 과정 5단계를 순서대로 쓰시오.",
+    "answer": "설계 목표 설정 → 시스템 타입 결정 → 아키텍처 패턴 적용 → 서브 시스템 구체화 → 검토",
+    "explanation": "소프트웨어 아키텍처 설계 과정:\n(1) 설계 목표 설정\n(2) 시스템 타입 결정\n(3) 아키텍처 패턴 적용\n(4) 서브 시스템 구체화\n(5) 검토",
+    "choices": [
+      {"label": "1", "text": "설계 목표 설정 → 시스템 타입 결정 → 아키텍처 패턴 적용 → 서브 시스템 구체화 → 검토", "isCorrect": true},
+      {"label": "2", "text": "시스템 타입 결정 → 설계 목표 설정 → 아키텍처 패턴 적용 → 서브 시스템 구체화 → 검토", "isCorrect": false},
+      {"label": "3", "text": "설계 목표 설정 → 아키텍처 패턴 적용 → 시스템 타입 결정 → 검토 → 서브 시스템 구체화", "isCorrect": false},
+      {"label": "4", "text": "설계 목표 설정 → 시스템 타입 결정 → 서브 시스템 구체화 → 아키텍처 패턴 적용 → 검토", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "아키텍처", "설계과정"]
+  },
+  {
+    "id": "theory-se_025",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "객체지향 설계원칙(SOLID) 5가지를 쓰고 각각 설명하시오.",
+    "answer": "단일 책임 원칙(SRP): 클래스는 하나의 책임만 가져야 함\n개방-폐쇄 원칙(OCP): 확장에는 열려있고 수정에는 닫혀있어야 함\n리스코프 치환 원칙(LSP): 자식 클래스는 부모 클래스를 대체할 수 있어야 함\n인터페이스 분리 원칙(ISP): 사용하지 않는 인터페이스는 구현하지 말아야 함\n의존 역전 원칙(DIP): 구체적인 클래스보다 인터페이스나 추상 클래스와 관계를 맺을 것",
+    "explanation": "SOLID 원칙:\n- S: Single Responsibility - 하나의 책임\n- O: Open-Closed - 확장 개방, 수정 폐쇄\n- L: Liskov Substitution - 자식이 부모 대체 가능\n- I: Interface Segregation - 불필요한 인터페이스 구현 금지\n- D: Dependency Inversion - 추상에 의존",
+    "choices": [
+      {"label": "1", "text": "단일책임, 개방폐쇄, 리스코프치환, 인터페이스분리, 의존역전", "isCorrect": true},
+      {"label": "2", "text": "단일책임, 개방폐쇄, 다형성, 인터페이스분리, 의존역전", "isCorrect": false},
+      {"label": "3", "text": "단일책임, 개방폐쇄, 리스코프치환, 캡슐화, 의존역전", "isCorrect": false},
+      {"label": "4", "text": "단일책임, 개방폐쇄, 리스코프치환, 인터페이스분리, 상속", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "SOLID", "객체지향", "설계원칙"]
+  },
+  {
+    "id": "theory-se_026",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 아키텍처 설계 기본 원리 4가지를 쓰시오.",
+    "answer": "모듈화, 추상화, 단계적 분해, 정보 은닉",
+    "explanation": "설계 기본 원리:\n- 모듈화: 기능들을 모듈 단위로 나누는 것\n- 추상화: 전체적이고 포괄적인 개념을 설계한 후 구체화\n- 단계적 분해: 상위 개념에서 하위 개념으로 구체화\n- 정보 은닉: 모듈 내부의 자료를 감추어 다른 모듈이 접근하거나 변경하지 못하도록 하는 기법",
+    "choices": [
+      {"label": "1", "text": "모듈화, 추상화, 단계적 분해, 정보 은닉", "isCorrect": true},
+      {"label": "2", "text": "모듈화, 캡슐화, 단계적 분해, 정보 은닉", "isCorrect": false},
+      {"label": "3", "text": "모듈화, 추상화, 상속, 정보 은닉", "isCorrect": false},
+      {"label": "4", "text": "모듈화, 추상화, 단계적 분해, 다형성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "설계원리", "모듈화", "추상화"]
+  },
+  {
+    "id": "theory-se_027",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "결합도(Coupling)를 강한 순서부터 약한 순서로 6단계를 쓰시오.",
+    "answer": "내용(Content) → 공통(Common) → 외부(External) → 제어(Control) → 스탬프(Stamp) → 자료(Data)",
+    "explanation": "결합도 암기법: 내공외제스자\n1. 내용: 다른 모듈의 내부 기능/자료를 직접 참조\n2. 공통: 공유되는 공통 데이터 영역(전역변수)\n3. 외부: 외부에서 선언한 데이터를 다른 모듈에서 참조\n4. 제어: 제어요소(flag)를 전달하는 결합도\n5. 스탬프: 배열이나 오브젝트 등 동일한 자료 구조 전달\n6. 자료: 자료 요소로만 구성 func a(x)를 a(10) 호출",
+    "choices": [
+      {"label": "1", "text": "내용 → 공통 → 외부 → 제어 → 스탬프 → 자료", "isCorrect": true},
+      {"label": "2", "text": "내용 → 외부 → 공통 → 제어 → 스탬프 → 자료", "isCorrect": false},
+      {"label": "3", "text": "내용 → 공통 → 제어 → 외부 → 스탬프 → 자료", "isCorrect": false},
+      {"label": "4", "text": "자료 → 스탬프 → 제어 → 외부 → 공통 → 내용", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "결합도", "모듈", "내공외제스자"]
+  },
+  {
+    "id": "theory-se_028",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "응집도(Cohesion)를 강한 순서부터 약한 순서로 7단계를 쓰시오.",
+    "answer": "기능적(Functional) → 순차적(Sequential) → 교환적(Communication) → 절차적(Procedural) → 시간적(Temporal) → 논리적(Logical) → 우연적(Coincidental)",
+    "explanation": "응집도 암기법: 기순교절시논우\n1. 기능적: 단일 문제와 연관되어 수행\n2. 순차적: 출력 데이터를 다음 활동 입력으로 사용\n3. 교환적: 동일한 입출력 사용, 서로 다른 기능 수행\n4. 절차적: 기능을 순차적으로 수행\n5. 시간적: 특정 시간에 처리되는 기능 모음\n6. 논리적: 유사한 성격을 특정 형태로 분류\n7. 우연적: 서로 관련 없는 요소로 구성",
+    "choices": [
+      {"label": "1", "text": "기능적 → 순차적 → 교환적 → 절차적 → 시간적 → 논리적 → 우연적", "isCorrect": true},
+      {"label": "2", "text": "기능적 → 교환적 → 순차적 → 절차적 → 시간적 → 논리적 → 우연적", "isCorrect": false},
+      {"label": "3", "text": "기능적 → 순차적 → 절차적 → 교환적 → 시간적 → 논리적 → 우연적", "isCorrect": false},
+      {"label": "4", "text": "우연적 → 논리적 → 시간적 → 절차적 → 교환적 → 순차적 → 기능적", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "응집도", "모듈", "기순교절시논우"]
+  },
+  {
+    "id": "theory-se_029",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "MVC 패턴에서 Model, View, Controller 각각의 역할을 설명하시오.",
+    "answer": "Model: 데이터와 비즈니스 로직을 담당하고 핵심 로직을 처리\nView: 사용자 인터페이스 담당. 데이터 표시나 버튼, 텍스트 필드 등을 포함\nController: 사용자의 입력을 처리하고 뷰를 업데이트하며 모델과 뷰 사이에서 연결하는 역할",
+    "explanation": "MVC(Model-View-Controller):\n- Model: 데이터와 비즈니스 로직, 상태 유지\n- View: 사용자 인터페이스, 데이터 표시\n- Controller: 입력 처리, 모델-뷰 연결",
+    "choices": [
+      {"label": "1", "text": "Model=데이터/로직, View=화면표시, Controller=입력처리/연결", "isCorrect": true},
+      {"label": "2", "text": "Model=화면표시, View=데이터/로직, Controller=입력처리", "isCorrect": false},
+      {"label": "3", "text": "Model=입력처리, View=화면표시, Controller=데이터/로직", "isCorrect": false},
+      {"label": "4", "text": "Model=데이터/로직, View=입력처리, Controller=화면표시", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "MVC", "디자인패턴"]
+  },
+  {
+    "id": "theory-se_030",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "모듈 간 통신 방식을 구현하기 위해 대표적인 프로그래밍 인터페이스 집합인 IPC의 대표 메소드 6가지는?",
+    "answer": "Shared memory, Socket, Semaphores, Pipes & Named Pipes, Message Queueing",
+    "explanation": "IPC(Inter-Process Communication) 프로세스 간 통신:\n- Shared memory: 공유 가능한 메모리 구성\n- Socket: 네트워크 소켓을 이용\n- Semaphores: 공유 자원 접근 제어\n- Pipes & Named Pipes: 선입선출 메모리 공유\n- Message Queueing: 메시지 발생 시 전달",
+    "choices": [
+      {"label": "1", "text": "Shared memory, Socket, Semaphores, Pipes, Message Queueing", "isCorrect": true},
+      {"label": "2", "text": "Shared memory, HTTP, Semaphores, Pipes, RPC", "isCorrect": false},
+      {"label": "3", "text": "Thread, Socket, Mutex, Pipes, Message Queueing", "isCorrect": false},
+      {"label": "4", "text": "Shared memory, Socket, Semaphores, Stream, Signal", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "IPC", "프로세스간통신"]
+  },
+  {
+    "id": "theory-se_031",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "일정 스케줄마다 돌아가면서 일괄처리하는 프로그램은?",
+    "answer": "배치 프로그램",
+    "explanation": "배치(Batch) 프로그램은 일정한 주기로 데이터를 모아서 한꺼번에 처리하는 프로그램입니다.",
+    "choices": [
+      {"label": "1", "text": "배치 프로그램", "isCorrect": true},
+      {"label": "2", "text": "데몬 프로그램", "isCorrect": false},
+      {"label": "3", "text": "스케줄러", "isCorrect": false},
+      {"label": "4", "text": "크론탭", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "배치", "일괄처리"]
+  },
+  {
+    "id": "theory-se_032",
+    "categoryId": "theory-se",
+    "subcategory": "인터페이스",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "정보보안의 3요소를 쓰시오. (기출)",
+    "answer": "기밀성, 무결성, 가용성",
+    "explanation": "정보보안 3요소 (CIA):\n- 기밀성(Confidentiality): 인가된 사용자만 정보 자산에 접근 가능\n- 무결성(Integrity): 시스템 내 정보는 오직 인가된 사용자만 수정 가능\n- 가용성(Availability): 사용자가 필요할 때 데이터에 접근할 수 있는 능력",
+    "choices": [
+      {"label": "1", "text": "기밀성, 무결성, 가용성", "isCorrect": true},
+      {"label": "2", "text": "기밀성, 무결성, 인증성", "isCorrect": false},
+      {"label": "3", "text": "기밀성, 가용성, 부인방지", "isCorrect": false},
+      {"label": "4", "text": "무결성, 가용성, 접근통제", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["인터페이스", "정보보안", "CIA", "기출"]
+  },
+  {
+    "id": "theory-se_033",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "UI의 기본 원칙을 제시하고 약술하시오. (기출)",
+    "answer": "직관성: 누구나 쉽게 이해하고 사용할 수 있어야 함\n유효성: 사용자의 목적을 정확하고 완벽하게 달성해야 함\n학습성: 누구나 쉽게 배우고 익힐 수 있어야 함\n유연성: 사용자의 요구사항을 최대한 수용하고 실수를 최소화해야 함",
+    "explanation": "UI 설계 4대 원칙:\n- 직관성(Intuitiveness)\n- 유효성(Effectiveness)\n- 학습성(Learnability)\n- 유연성(Flexibility)",
+    "choices": [
+      {"label": "1", "text": "직관성, 유효성, 학습성, 유연성", "isCorrect": true},
+      {"label": "2", "text": "직관성, 효율성, 학습성, 유연성", "isCorrect": false},
+      {"label": "3", "text": "직관성, 유효성, 접근성, 유연성", "isCorrect": false},
+      {"label": "4", "text": "직관성, 유효성, 학습성, 확장성", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["화면설계", "UI", "설계원칙", "기출"]
+  },
+  {
+    "id": "theory-se_034",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "기능적 요구사항과 비기능적 요구사항의 차이를 설명하시오.",
+    "answer": "기능적 요구사항: 시스템 입출력으로 포함되어야 할 사항, 동기화 등의 기타 요구사항. 소프트웨어가 가져야할 기능적 속성.\n비기능적 요구사항: 품질에 관한 요구사항(사용성, 신뢰성, 이식성, 표준, 윤리적 등). 제품 품질 기준 등의 만족을 위해 소프트웨어가 가져야할 특성.",
+    "explanation": "기능적: '무엇을' 해야 하는가 (What)\n비기능적: '어떻게' 해야 하는가 (How) - 성능, 보안, 사용성 등 품질 관련",
+    "choices": [
+      {"label": "1", "text": "기능적=시스템 기능 속성, 비기능적=품질 관련 특성", "isCorrect": true},
+      {"label": "2", "text": "기능적=성능 요구, 비기능적=화면 설계", "isCorrect": false},
+      {"label": "3", "text": "기능적=하드웨어 사양, 비기능적=소프트웨어 기능", "isCorrect": false},
+      {"label": "4", "text": "기능적=보안 요구, 비기능적=데이터 처리", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["화면설계", "요구사항", "기능적", "비기능적"]
+  },
+  {
+    "id": "theory-se_035",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "화이트박스 테스트의 정의에 대해 약술하고 테스트 기법 3가지를 쓰시오.",
+    "answer": "정의: 모듈의 원시 코드를 오픈한 상태에서 원시 코드의 모든 문장을 한 번 이상 테스트하여 테스트 케이스를 설계하는 방법\n종류: (1) 기초 경로 검사(Base Path Test) (2) 조건검사, 루프검사, 데이터 흐름 검사",
+    "explanation": "화이트박스 테스트: 내부 로직을 보면서 수행하는 테스트\n- 기초 경로 검사(Base Path Testing): 테스트 설계자가 절차적 설계의 논리적 복잡성 측정\n- 제어 구조 검사: 조건검사, 반복검사, 데이터흐름검사",
+    "choices": [
+      {"label": "1", "text": "원시 코드를 오픈하여 테스트 / 기초경로, 조건, 루프, 데이터흐름 검사", "isCorrect": true},
+      {"label": "2", "text": "기능 테스트 / 동치분할, 경계값, 원인효과", "isCorrect": false},
+      {"label": "3", "text": "블랙박스 방식 / 입출력 기반 테스트", "isCorrect": false},
+      {"label": "4", "text": "원시 코드를 오픈하여 테스트 / 동치분할, 경계값, 오류예측", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "화이트박스", "기초경로"]
+  },
+  {
+    "id": "theory-se_036",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "블랙박스 테스트의 정의에 대해 약술하고 테스트 기법 5가지를 쓰시오.",
+    "answer": "정의: 소프트웨어가 수행할 특정 기능을 알기 위해서 각 기능이 완전히 작동되는 것을 입증하는 테스트로, 기능 테스트라고도 한다.\n종류: (1) 동치분할 검사 (2) 경계값 분석 (3) 원인효과 그래프 검사 (4) 오류 예측 검사 (5) 비교 검사",
+    "explanation": "블랙박스 테스트 기법 (방법별로 키워드 암기):\n1. 동치분할: 정상/비정상 입력자료 개수 맞춤\n2. 경계값 분석: 경계값에서 오류 발생 확률 높음\n3. 원인효과 그래프: 입출력 관계 분석 후 효용성 높은 케이스 선정\n4. 오류 예측: 과거 경험/직감 기반 → 보충적 검사기법\n5. 비교 검사: 여러 버전에 동일 자료 제공하여 결과 비교",
+    "choices": [
+      {"label": "1", "text": "동치분할, 경계값 분석, 원인효과, 오류 예측, 비교 검사", "isCorrect": true},
+      {"label": "2", "text": "기초경로, 조건검사, 루프검사, 데이터흐름, 구문 커버리지", "isCorrect": false},
+      {"label": "3", "text": "동치분할, 경계값, 구문 커버리지, 분기 커버리지, 비교", "isCorrect": false},
+      {"label": "4", "text": "동치분할, 경계값 분석, 원인효과, 회귀 테스트, 비교 검사", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "블랙박스", "기능테스트"]
+  },
+  {
+    "id": "theory-se_037",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "개발 단계에 따른 애플리케이션 테스트 레벨의 유형인 V-모델의 순서를 쓰시오. (기출)",
+    "answer": "요구사항 → 분석 → 설계 → 구현 → 단위 테스트 → 통합 테스트 → 시스템 테스트 → 인수 테스트",
+    "explanation": "V-모델 테스트 단계:\n① 단위 테스트: 코딩 직후 최소 단위인 모듈이나 컴포넌트 테스트\n② 통합 테스트: 단위 테스트가 완료된 모듈을 결합하여 테스트\n③ 시스템 테스트: 해당 컴퓨터에서 완벽히 수행되는지 검증\n④ 인수 테스트: 사용자의 요구사항을 충족하는지 (사용자가 직접 테스트)",
+    "choices": [
+      {"label": "1", "text": "단위 → 통합 → 시스템 → 인수 테스트", "isCorrect": true},
+      {"label": "2", "text": "통합 → 단위 → 시스템 → 인수 테스트", "isCorrect": false},
+      {"label": "3", "text": "단위 → 시스템 → 통합 → 인수 테스트", "isCorrect": false},
+      {"label": "4", "text": "단위 → 통합 → 인수 → 시스템 테스트", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "V모델", "기출", "단위테스트", "통합테스트"]
+  },
+  {
+    "id": "theory-se_038",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "통합 테스트의 상향식과 하향식을 비교하시오.",
+    "answer": "상향식: 드라이버 사용, 가장 하부 모듈부터 통합, 하위→상위, 장점-장애 위치 확인 용이, 단점-초기 프로토타입 불가\n하향식: 스텁 사용, 가장 상부 모듈부터 통합, 상위→하위, 장점-초기 프로토타입 가능, 단점-낮은 수준 모듈 테스트 가능성 부적절",
+    "explanation": "상향식(Bottom-up): 드라이버 필요, 하위→상위\n하향식(Top-down): 스텁 필요, 상위→하위\n\n드라이버: 하위 모듈을 호출하는 테스트 도구\n스텁: 제어 모듈이 호출하는 타 모듈의 기능을 단순히 수행하는 도구",
+    "choices": [
+      {"label": "1", "text": "상향식=드라이버/하위→상위, 하향식=스텁/상위→하위", "isCorrect": true},
+      {"label": "2", "text": "상향식=스텁/상위→하위, 하향식=드라이버/하위→상위", "isCorrect": false},
+      {"label": "3", "text": "상향식=드라이버/상위→하위, 하향식=스텁/하위→상위", "isCorrect": false},
+      {"label": "4", "text": "둘 다 드라이버 사용, 방향만 다름", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "통합테스트", "상향식", "하향식", "드라이버", "스텁"]
+  },
+  {
+    "id": "theory-se_039",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "테스트 하네스 도구의 정의와 구성요소 6가지를 쓰시오.",
+    "answer": "정의: 테스트가 실행될 환경을 시뮬레이션 하여 컴포넌트와 모듈이 정상적으로 테스트되도록 하는 도구\n구성요소: 테스트 드라이버, 테스트 스텁, 테스트 슈트, 테스트 케이스, 테스트 스크립트, 목(mock) 오브젝트",
+    "explanation": "테스트 하네스 구성요소:\n- 테스트 드라이버: 하위 모듈 호출, 결과 도출\n- 테스트 스텁: 단순히 필요한 조건만 가진 테스트용 모듈\n- 테스트 슈트: 테스트 케이스 집합\n- 테스트 케이스: 입력값, 실행조건, 기대결과\n- 테스트 스크립트: 자동화된 실행 절차\n- 목 오브젝트: 사전에 행위를 조건부로 입력해둔 객체",
+    "choices": [
+      {"label": "1", "text": "드라이버, 스텁, 슈트, 케이스, 스크립트, 목 오브젝트", "isCorrect": true},
+      {"label": "2", "text": "드라이버, 스텁, 프레임워크, 케이스, 스크립트, 플러그인", "isCorrect": false},
+      {"label": "3", "text": "드라이버, 스텁, 슈트, 시나리오, 스크립트, 목 오브젝트", "isCorrect": false},
+      {"label": "4", "text": "빌더, 스텁, 슈트, 케이스, 로거, 목 오브젝트", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "테스트하네스", "드라이버", "스텁"]
+  },
+  {
+    "id": "theory-se_040",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "애플리케이션 성능 측정 지표 4가지와 특징을 설명하시오.",
+    "answer": "① 처리량(Throughput): 일정 시간 내에 처리하는 일의 양\n② 응답시간(Response Time): 요청을 전달한 시간부터 응답이 도착할 때까지 걸린 시간\n③ 경과시간(Turn Around Time): 작업을 의뢰한 시간부터 처리가 완료될 때까지 걸린 시간\n④ 자원 사용률(Resource Usage): CPU 사용량, 메모리 사용량, 네트워크 사용량 등",
+    "explanation": "애플리케이션 성능 4대 지표:\n- 처리량: 단위 시간당 처리 건수\n- 응답시간: 요청~응답 시간\n- 경과시간: 의뢰~완료 시간\n- 자원 사용률: 시스템 자원 활용도",
+    "choices": [
+      {"label": "1", "text": "처리량, 응답시간, 경과시간, 자원 사용률", "isCorrect": true},
+      {"label": "2", "text": "처리량, 응답시간, 대기시간, 자원 사용률", "isCorrect": false},
+      {"label": "3", "text": "처리량, 응답시간, 경과시간, 오류율", "isCorrect": false},
+      {"label": "4", "text": "가용성, 응답시간, 경과시간, 자원 사용률", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "성능측정", "처리량", "응답시간"]
+  },
+  {
+    "id": "theory-se_041",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "테스트 오라클이란? 그리고 종류 4가지를 쓰시오.",
+    "answer": "정의: 테스트 결과가 올바른지 판단하기 위해 사전에 정의된 참 값을 대입하여 비교하는 기법\n종류: ① 참 오라클 ② 일관성 검사 오라클 ③ 샘플링 오라클 ④ 휴리스틱(추정) 오라클",
+    "explanation": "테스트 오라클 종류:\n1. 참 오라클: 모든 입력값에 적합한 결과 생성, 오류 모두 검출 가능\n2. 일관성 검사 오라클: 애플리케이션 변경 있을 때, 수행 전과 후의 결과가 같은지 확인\n3. 샘플링 오라클: 특정한 몇 개의 테스트 케이스의 입력값에 대해서만 기대하는 결과를 제공\n4. 휴리스틱(추정) 오라클: 임의의 입력값에 대해 올바른 결과를 제공하고, 나머지 값에 대해서는 추정으로 처리",
+    "choices": [
+      {"label": "1", "text": "참, 일관성 검사, 샘플링, 휴리스틱 오라클", "isCorrect": true},
+      {"label": "2", "text": "참, 거짓, 샘플링, 휴리스틱 오라클", "isCorrect": false},
+      {"label": "3", "text": "참, 일관성 검사, 무작위, 휴리스틱 오라클", "isCorrect": false},
+      {"label": "4", "text": "참, 일관성 검사, 샘플링, 자동화 오라클", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "테스트오라클", "참오라클"]
+  },
+  {
+    "id": "theory-se_042",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "화이트박스 테스트의 검증 기준 4가지를 쓰시오.",
+    "answer": "문장(구문), 분기, 조건, 분기/조건 커버리지",
+    "explanation": "화이트박스 테스트 커버리지:\n- 구문 커버리지: 프로그램 내 모든 명령문을 적어도 한 번 수행\n- 결정 커버리지: 각 분기의 결정 포인트의 전체 조건식을 최소 한 번은 T/F 모두 수행\n- 조건 커버리지: 각 분기의 결정 포인트 내의 개별 조건식을 최소 한 번은 T/F 모두 수행\n- 다중조건 커버리지: 결정 조건 내 모든 개별 조건식의 모든 가능한 조합을 100% 보장",
+    "choices": [
+      {"label": "1", "text": "문장, 분기, 조건, 분기/조건", "isCorrect": true},
+      {"label": "2", "text": "문장, 반복, 조건, 경로", "isCorrect": false},
+      {"label": "3", "text": "구문, 함수, 조건, 분기", "isCorrect": false},
+      {"label": "4", "text": "문장, 분기, 데이터, 경로", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "화이트박스", "커버리지"]
+  },
+  {
+    "id": "theory-se_043",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 테스트의 원리 중 '결과의 80%가 전체 원인 20%에서 발생한다'는 법칙은?",
+    "answer": "결함 집중 (파레토 법칙)",
+    "explanation": "소프트웨어 테스트 원리:\n- 결함 집중(파레토 법칙): 결과 80%가 원인 20%에서 발생\n- 살충제 패러독스: 같은 테스트 케이스를 반복하면 결함을 발견할 수 없다\n- 오류-부재의 궤변: 요구사항을 만족하지 못하는 오류를 제거했어도 품질이 높다고 말할 수 없다",
+    "choices": [
+      {"label": "1", "text": "결함 집중 (파레토 법칙)", "isCorrect": true},
+      {"label": "2", "text": "살충제 패러독스", "isCorrect": false},
+      {"label": "3", "text": "오류-부재의 궤변", "isCorrect": false},
+      {"label": "4", "text": "테스트 완전성 원리", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "파레토법칙", "결함집중"]
+  },
+  {
+    "id": "theory-se_044",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소스코드 품질 분석 도구 종류인 정적분석과 동적분석을 간략히 정의하시오.",
+    "answer": "정적분석: 프로그램을 실행하지 않고 명세서나 소스코드를 대상으로 분석하는 도구. 종류: 워크스루, 인스펙션, 코드 검사\n동적분석: 프로그램을 실행하여 메모리 누수현황, 발생한 스레드 결함 등을 분석하기 위한 도구. 종류: 블랙박스 테스트, 화이트박스 테스트",
+    "explanation": "정적 검사 중 '기술리뷰':\n- 워크스루: 명세서 배포하여 사전검토 회의 진행\n- 인스펙션: 엄격. 작성자를 제외한 다른 전문가들이 결과물 분석\n- 기술리뷰: 정의된 계획, 명세를 준수하는지 검토\n- 관리리뷰: 진행상황 전반적 검토, 통제/의사결정",
+    "choices": [
+      {"label": "1", "text": "정적=실행없이 코드분석, 동적=실행하여 결함분석", "isCorrect": true},
+      {"label": "2", "text": "정적=실행하여 분석, 동적=코드리뷰", "isCorrect": false},
+      {"label": "3", "text": "정적=자동화 테스트, 동적=수동 테스트", "isCorrect": false},
+      {"label": "4", "text": "정적=블랙박스, 동적=화이트박스", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "정적분석", "동적분석", "워크스루", "인스펙션"]
+  },
+  {
+    "id": "theory-se_045",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "소프트웨어 테스트의 산출물 4가지를 쓰시오.",
+    "answer": "① 테스트 계획서 ② 테스트 케이스 ③ 테스트 시나리오 ④ 테스트 결과서",
+    "explanation": "테스트 산출물:\n1. 테스트 계획서: 테스트 전략, 범위, 일정\n2. 테스트 케이스: 입력값, 실행조건, 기대결과\n3. 테스트 시나리오: 여러 테스트 케이스의 동작 순서 정의\n4. 테스트 결과서: 테스트 수행 결과 문서화",
+    "choices": [
+      {"label": "1", "text": "테스트 계획서, 케이스, 시나리오, 결과서", "isCorrect": true},
+      {"label": "2", "text": "테스트 계획서, 케이스, 보고서, 리뷰서", "isCorrect": false},
+      {"label": "3", "text": "테스트 설계서, 케이스, 시나리오, 결과서", "isCorrect": false},
+      {"label": "4", "text": "테스트 계획서, 스크립트, 시나리오, 결과서", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["테스트", "산출물", "계획서", "케이스"]
+  },
+  {
+    "id": "theory-se_046",
+    "categoryId": "theory-se",
+    "subcategory": "패키징",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "DRM의 정의와 기술적 요구사항을 약술하라.",
+    "answer": "정의: 디지털 콘텐츠의 생성부터 실제 사용자까지 유통되는 과정에 걸쳐 콘텐츠를 안전하게 관리 및 보호하고 허가된 사용자만이 접근할 수 있도록 제한하는 기술\n기술적 요구사항: (1) 지속적 보호 (2) 이용 편리성 (3) 유연성 (4) 통합의 용이성",
+    "explanation": "DRM(Digital Rights Management)은 디지털 콘텐츠의 불법 복제와 유통을 방지하는 기술입니다.",
+    "choices": [
+      {"label": "1", "text": "디지털 콘텐츠 보호 기술 / 지속적 보호, 이용 편리성, 유연성, 통합 용이성", "isCorrect": true},
+      {"label": "2", "text": "데이터 암호화 기술 / 기밀성, 무결성, 가용성, 인증", "isCorrect": false},
+      {"label": "3", "text": "저작권 관리 시스템 / 보안성, 확장성, 이식성, 호환성", "isCorrect": false},
+      {"label": "4", "text": "디지털 콘텐츠 보호 기술 / 암호화, 인증, 접근제어, 로깅", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["패키징", "DRM", "디지털콘텐츠"]
+  },
+  {
+    "id": "theory-se_047",
+    "categoryId": "theory-se",
+    "subcategory": "패키징",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "버전관리 도구 5가지를 쓰고 각각의 특징을 설명하시오.",
+    "answer": "CVS: 동시 버전 시스템, 중앙 통제, 범용적 접근 가능\nRCS: 파일 수정을 한 사람만으로 제한, 파일 잠금 처리\nSVN: 중앙 집 중형 버전 관리, 롤백 가능\nBitkeeper: 대규모 프로젝트에서 빠른 속도 개발\nGit: 분산 버전 관리 시스템, 로컬 저장소에서 관리 후 Push",
+    "explanation": "주요 버전관리 도구:\n- CVS: GNU 기반, 클라이언트-서버 구조\n- RCS: 단일 사용자, 파일 잠금\n- SVN: 아파치 최상위 프로젝트, 중앙집중형\n- Bitkeeper: SVN과 비슷하나 대규모에 적합\n- Git: 분산형, 로컬에서 관리 후 원격에 Push",
+    "choices": [
+      {"label": "1", "text": "CVS, RCS, SVN, Bitkeeper, Git", "isCorrect": true},
+      {"label": "2", "text": "CVS, RCS, SVN, Mercurial, Git", "isCorrect": false},
+      {"label": "3", "text": "CVS, RCS, SVN, Bitkeeper, Perforce", "isCorrect": false},
+      {"label": "4", "text": "CVS, TFS, SVN, Bitkeeper, Git", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["패키징", "버전관리", "CVS", "SVN", "Git"]
+  },
+  {
+    "id": "theory-se_048",
+    "categoryId": "theory-se",
+    "subcategory": "패키징",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "빌드 자동화 도구의 처리 절차를 순서대로 쓰시오.",
+    "answer": "종속성 다운로드 → 컴파일 → 패키징 → 테스트 → 배포",
+    "explanation": "빌드 자동화 도구 처리 절차:\n1. 종속성 다운로드: 필요한 라이브러리 다운로드\n2. 컴파일: 소스코드를 바이너리로 변환\n3. 패키징: 실행 파일로 패키징\n4. 테스트: 자동화 테스트 실행\n5. 배포: 서버에 배포",
+    "choices": [
+      {"label": "1", "text": "종속성 다운로드 → 컴파일 → 패키징 → 테스트 → 배포", "isCorrect": true},
+      {"label": "2", "text": "컴파일 → 종속성 다운로드 → 패키징 → 테스트 → 배포", "isCorrect": false},
+      {"label": "3", "text": "종속성 다운로드 → 컴파일 → 테스트 → 패키징 → 배포", "isCorrect": false},
+      {"label": "4", "text": "종속성 다운로드 → 패키징 → 컴파일 → 테스트 → 배포", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["패키징", "빌드자동화", "CI/CD"]
+  },
+  {
+    "id": "theory-se_049",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "객체지향 분석의 방법론 5가지를 쓰시오.",
+    "answer": "럼바우 방법, 부치 방법, 자콥스 방법, Coad와 Yourdon 방법, Wirfs-Brock 방법",
+    "explanation": "객체지향 분석 방법론:\n- 럼바우: 모든 소프트웨어 구성 요소를 그래픽 표기법으로 모델링 (객체/동적/기능 모델링)\n- 부치: 미시적/거시적 개발 프로세스를 모두 사용\n- 자콥스: 유스케이스를 강조하여 사용\n- Coad와 Yourdon: E-R 다이어그램으로 객체의 행위를 모델링\n- Wirfs-Brock: 분석과 설계 간의 구분이 없으며 고객 명세서를 평가해서 설계까지 연속적으로 수행",
+    "choices": [
+      {"label": "1", "text": "럼바우, 부치, 자콥스, Coad와 Yourdon, Wirfs-Brock", "isCorrect": true},
+      {"label": "2", "text": "럼바우, 부치, 자콥스, Gamma, Wirfs-Brock", "isCorrect": false},
+      {"label": "3", "text": "럼바우, 부치, 자콥스, Coad와 Yourdon, Dijkstra", "isCorrect": false},
+      {"label": "4", "text": "럼바우, 부치, Knuth, Coad와 Yourdon, Wirfs-Brock", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "객체지향분석", "럼바우", "부치", "자콥스"]
+  },
+  {
+    "id": "theory-se_050",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "서버 개발 과정은 DTO/VO, SQL, DAO, Service, Controller를 각각 구현하는 과정이다. 각각에 대해서 설명하시오.",
+    "answer": "DTO/VO 구현: 데이터 교환을 위해 사용할 객체 만드는 과정\nSQL 구현: 데이터 삽입/변경/삭제 등의 작업을 수행할 SQL문을 생성하는 과정\nDAO 구현: 데이터베이스에 접근하고 SQL을 활용하여 데이터를 실제로 조작하는 코드를 구현하는 과정\nService 구현: 사용자의 요청에 응답하기 위한 로직을 구현하는 과정\nController 구현: 사용자의 요청에 적절한 서비스를 호출하여 그 결과를 사용자에게 반환하는 코드를 구현하는 과정",
+    "explanation": "서버 개발의 5단계 구현 과정:\nDTO/VO → SQL → DAO → Service → Controller\n각 계층이 역할을 분담하여 유지보수성을 높입니다.",
+    "choices": [
+      {"label": "1", "text": "DTO/VO=데이터객체, SQL=쿼리생성, DAO=DB접근, Service=로직, Controller=요청처리", "isCorrect": true},
+      {"label": "2", "text": "DTO/VO=화면표시, SQL=쿼리생성, DAO=DB접근, Service=로직, Controller=인증", "isCorrect": false},
+      {"label": "3", "text": "DTO/VO=데이터객체, SQL=테이블생성, DAO=로직, Service=DB접근, Controller=요청처리", "isCorrect": false},
+      {"label": "4", "text": "DTO/VO=데이터객체, SQL=쿼리생성, DAO=DB접근, Service=요청처리, Controller=로직", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "DTO", "DAO", "Service", "Controller"]
+  },
+  {
+    "id": "theory-se_051",
+    "categoryId": "theory-se",
+    "subcategory": "인터페이스",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "AJAX의 특징을 쓰시오.",
+    "answer": "비동기 통신, 부분 업데이트, 다양한 데이터 형식 지원, 빠른 응답시간, 서버와 클라이언트 분리",
+    "explanation": "AJAX(Asynchronous JavaScript and XML)의 핵심 특징:\n- 비동기 통신으로 전체 페이지 새로고침 없이 부분 업데이트\n- 다양한 데이터 형식 지원 (XML, JSON 등)\n- 빠른 응답시간\n- 서버와 클라이언트 역할 분리",
+    "choices": [
+      {"label": "1", "text": "비동기 통신, 부분 업데이트, 다양한 데이터 형식, 빠른 응답시간", "isCorrect": true},
+      {"label": "2", "text": "동기 통신, 전체 업데이트, XML만 지원, 빠른 응답시간", "isCorrect": false},
+      {"label": "3", "text": "비동기 통신, 부분 업데이트, JSON만 지원, 서버 렌더링", "isCorrect": false},
+      {"label": "4", "text": "비동기 통신, 전체 업데이트, 다양한 데이터 형식, 느린 응답시간", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["인터페이스", "AJAX", "비동기"]
+  },
+  {
+    "id": "theory-se_052",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "EAI 구축유형 4가지를 쓰고 설명하시오. (기출)",
+    "answer": "(1) Point-to-Point: 미들웨어를 두지 않고 직접 연결\n(2) Hub & Spoke: 단일 접점이 허브 시스템을 통해 중앙 집중적\n(3) Message Bus: 애플리케이션 사이 미들웨어를 두어서 처리\n(4) Hybrid: (2),(3) 혼합방식으로 데이터 병목현상을 최소화",
+    "explanation": "EAI(Enterprise Application Integration) 구축유형:\n- Point-to-Point: 가장 단순, N*(N-1)/2 연결 필요\n- Hub & Spoke: 중앙 허브를 통한 통신\n- Message Bus: 미들웨어(ESB) 기반\n- Hybrid: Hub & Spoke + Message Bus 혼합",
+    "choices": [
+      {"label": "1", "text": "Point-to-Point, Hub & Spoke, Message Bus, Hybrid", "isCorrect": true},
+      {"label": "2", "text": "Direct, Proxy, Message Bus, Hybrid", "isCorrect": false},
+      {"label": "3", "text": "Point-to-Point, Star, Message Bus, Pipeline", "isCorrect": false},
+      {"label": "4", "text": "Point-to-Point, Hub & Spoke, Queue, Hybrid", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["통합구현", "EAI", "구축유형", "기출"]
+  },
+  {
+    "id": "theory-se_053",
+    "categoryId": "theory-se",
+    "subcategory": "디자인패턴",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "컴포넌트 사이의 종속성을 표현하고 결과물, 프로세스, 컴포넌트 등 물리적 요소들의 위치를 표현하는 UML 다이어그램은? (기출)",
+    "answer": "배치 다이어그램",
+    "explanation": "배치(Deployment) 다이어그램은 소프트웨어, 하드웨어, 네트워크를 포함한 실행 시스템의 물리 구조를 표현합니다.\n각 요소를 Node(노드)라고 부르며 연결선을 커넥션이라고 합니다.",
+    "choices": [
+      {"label": "1", "text": "배치 다이어그램", "isCorrect": true},
+      {"label": "2", "text": "컴포넌트 다이어그램", "isCorrect": false},
+      {"label": "3", "text": "패키지 다이어그램", "isCorrect": false},
+      {"label": "4", "text": "클래스 다이어그램", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["소프트웨어공학", "UML", "배치다이어그램", "기출"]
+  },
+  {
+    "id": "theory-se_054",
+    "categoryId": "theory-se",
+    "subcategory": "인터페이스",
+    "type": "theory",
+    "difficulty": 1,
+    "question": "인터페이스 보안을 적용해야 하는 3영역을 쓰시오.",
+    "answer": "데이터베이스 영역, 애플리케이션 영역, 네트워크 영역",
+    "explanation": "인터페이스 보안 적용 3영역:\n- 데이터베이스: DB 접근 제어, 암호화\n- 애플리케이션: 입력 검증, 인증/인가\n- 네트워크: 통신 암호화, 방화벽",
+    "choices": [
+      {"label": "1", "text": "데이터베이스, 애플리케이션, 네트워크", "isCorrect": true},
+      {"label": "2", "text": "서버, 클라이언트, 네트워크", "isCorrect": false},
+      {"label": "3", "text": "데이터베이스, 서버, 클라이언트", "isCorrect": false},
+      {"label": "4", "text": "물리, 논리, 응용", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["인터페이스", "보안", "3영역"]
+  },
+  {
+    "id": "theory-se_055",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "type": "theory",
+    "difficulty": 2,
+    "question": "소프트웨어 재사용을 위한 공통 모듈화 기법 5가지를 쓰시오.",
+    "answer": "분할과 정복, 자료추상화, 모듈 독립성, 정보 은닉, 비용과 모듈",
+    "explanation": "공통 모듈화 기법:\n- 분할과 정복(Divide & Conquer): 복잡한 문제를 분해하여 모듈 단위로 해결\n- 자료추상화: 함수 내의 자료 구조, 표현 내역을 숨기고 인터페이스 통해 접근\n- 모듈 독립성: 각 모듈의 결합도를 줄이고 응집도를 높임\n- 정보 은닉: 중요한 정보나 노출 가능성이 큰 모듈을 은닉\n- 비용과 모듈: 모듈 수가 많아지면 비용도 증가",
+    "choices": [
+      {"label": "1", "text": "분할과 정복, 자료추상화, 모듈 독립성, 정보 은닉, 비용과 모듈", "isCorrect": true},
+      {"label": "2", "text": "분할과 정복, 캡슐화, 모듈 독립성, 정보 은닉, 상속", "isCorrect": false},
+      {"label": "3", "text": "분할과 정복, 자료추상화, 다형성, 정보 은닉, 비용과 모듈", "isCorrect": false},
+      {"label": "4", "text": "분할과 정복, 자료추상화, 모듈 독립성, 접근제어, 비용과 모듈", "isCorrect": false}
+    ],
+    "source": "pdf",
+    "sourceFile": "(유료)_정보처리기사_실기_이론파트_v0.91.pdf",
+    "tags": ["서버프로그램", "모듈화", "재사용", "공통모듈"]
   }
 ]

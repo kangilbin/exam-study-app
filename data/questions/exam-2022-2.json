@@ -11,14 +11,33 @@
     "answer": "관계해석",
     "explanation": "관계해석(Relational Calculus)은 관계 데이터 모델에서 원하는 데이터를 정의하는 비절차적 질의 언어로, 튜플 관계해석과 도메인 관계해석이 있다. 관계대수(Relational Algebra)와 달리 '무엇을' 원하는지만 명시한다.",
     "choices": [
-      {"label": "1", "text": "관계해석", "isCorrect": true},
-      {"label": "2", "text": "관계대수", "isCorrect": false},
-      {"label": "3", "text": "정규화", "isCorrect": false},
-      {"label": "4", "text": "관계모델", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "관계모델",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "관계대수",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "정규화",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "관계해석",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_002",
@@ -32,14 +51,33 @@
     "answer": "1. IDEA\n2. SKIPJACK",
     "explanation": "IDEA(International Data Encryption Algorithm)는 64비트 블록, 128비트 키, 8라운드의 대칭키 암호 알고리즘이다. SKIPJACK은 NSA에서 개발한 64비트 블록, 80비트 키, 32라운드의 알고리즘이다.",
     "choices": [
-      {"label": "1", "text": "1. IDEA / 2. SKIPJACK", "isCorrect": true},
-      {"label": "2", "text": "1. DES / 2. AES", "isCorrect": false},
-      {"label": "3", "text": "1. SEED / 2. RC5", "isCorrect": false},
-      {"label": "4", "text": "1. AES / 2. IDEA", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1. DES / 2. AES",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1. SEED / 2. RC5",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1. IDEA / 2. SKIPJACK",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "1. AES / 2. IDEA",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_003",
@@ -49,18 +87,38 @@
     "difficulty": 3,
     "year": 2022,
     "round": 2,
-    "question": "H회사의 전체 제품 단가보다 큰 제품 출력을 하고자 한다. 괄호안에 들어갈 알맞는 용어를 작성하시오.\n\nSELECT 제조사, 제품명, 단가\nFROM 제품\nWHERE 단가 > ( ) (SELECT 단가 FROM 제품 WHERE 제조사='H')",
+    "question": "H회사의 전체 제품 단가보다 큰 제품을 출력하고자 한다. 괄호 안에 들어갈 알맞은 용어를 쓰시오.",
     "answer": "ALL",
     "explanation": "ALL은 서브쿼리의 모든 결과보다 큰 값을 찾을 때 사용한다. 'H' 회사의 모든 제품 단가보다 큰 단가의 제품을 조회하려면 > ALL을 사용해야 한다.",
     "choices": [
-      {"label": "1", "text": "ALL", "isCorrect": true},
-      {"label": "2", "text": "ANY", "isCorrect": false},
-      {"label": "3", "text": "SOME", "isCorrect": false},
-      {"label": "4", "text": "EXISTS", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "ANY",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "EXISTS",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SOME",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ALL",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ],
+    "codeSnippet": "SELECT 제조사, 제품명, 단가\nFROM 제품\nWHERE 단가 > ( ? )\n  (SELECT 단가 FROM 제품\n   WHERE 제조사 = 'H')"
   },
   {
     "id": "exam-2022-2_004",
@@ -70,18 +128,38 @@
     "difficulty": 2,
     "year": 2022,
     "round": 2,
-    "question": "다음 SQL 결과에 알맞는 답을 작성하시오.\n\n[TABLE]\ncol1 | col2\n1    | 1\n2    | NULL\n3    | 3\n4    | 4\n5    | 5\n6    | 6\n\nSELECT count(col2)\nFROM TABLE\nWHERE col1 IN(2,3) OR col2 IN(3,5);",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "4",
     "explanation": "조건: col1 IN(2,3)이면 행2(col2=NULL), 행3(col2=3). col2 IN(3,5)이면 행3(col2=3), 행5(col2=5). OR로 합치면 행2,3,5가 선택된다. 추가로 col1=5일 때 col2=5도 포함. count(col2)는 NULL을 제외하므로 행2의 NULL 제외. 결과적으로 4개의 non-NULL 값이 카운트된다.",
     "choices": [
-      {"label": "1", "text": "4", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "5", "isCorrect": false},
-      {"label": "4", "text": "6", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "4",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "3",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ],
+    "codeSnippet": "[TABLE]\n col1 | col2\n------+------\n  1   |  1\n  2   | NULL\n  3   |  3\n  4   |  4\n  5   |  5\n  6   | NULL\n\nSELECT COUNT(col2)\nFROM TABLE\nWHERE col1 IN (2, 3)\n   OR col2 IN (3, 5)"
   },
   {
     "id": "exam-2022-2_005",
@@ -95,14 +173,33 @@
     "answer": "VPN",
     "explanation": "VPN(Virtual Private Network, 가상 사설 네트워크)은 공용 네트워크를 통해 사설 네트워크를 구축하여 데이터를 암호화하고 안전하게 전송하는 기술이다.",
     "choices": [
-      {"label": "1", "text": "VPN", "isCorrect": true},
-      {"label": "2", "text": "SSL", "isCorrect": false},
-      {"label": "3", "text": "NAT", "isCorrect": false},
-      {"label": "4", "text": "DMZ", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "DMZ",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "VPN",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "SSL",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "NAT",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_006",
@@ -116,14 +213,33 @@
     "answer": "ISP",
     "explanation": "ISP(Interface Segregation Principle, 인터페이스 분리 원칙)는 클라이언트가 사용하지 않는 메서드에 의존하지 않도록, 인터페이스를 작고 구체적인 단위로 분리해야 한다는 원칙이다.",
     "choices": [
-      {"label": "1", "text": "ISP", "isCorrect": true},
-      {"label": "2", "text": "SRP", "isCorrect": false},
-      {"label": "3", "text": "LSP", "isCorrect": false},
-      {"label": "4", "text": "DIP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "LSP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "SRP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "DIP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ISP",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_007",
@@ -139,14 +255,33 @@
     "codeSnippet": "public static void main(String args[]){\n  int i = 3; int k = 1;\n  switch(i) {\n    case 1: k += 1;\n    case 2: k++;\n    case 3: k = 0;\n    case 4: k += 3;\n    case 5: k -= 10;\n    default: k--;\n  }\n  System.out.print(k);\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "-8", "isCorrect": true},
-      {"label": "2", "text": "-7", "isCorrect": false},
-      {"label": "3", "text": "0", "isCorrect": false},
-      {"label": "4", "text": "-11", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "-11",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "-8",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "-7",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_008",
@@ -162,14 +297,33 @@
     "codeSnippet": "struct A{\n  int n;\n  int g;\n};\n\nint main(){\n  struct A a[2];\n  int i;\n  for(i=0; i<2; i++) {\n    a[i].n = i;\n    a[i].g = i+1;\n  }\n  printf(\"%d\", a[0].n + a[1].g);\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "2", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "1", "isCorrect": false},
-      {"label": "4", "text": "4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "4",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_009",
@@ -183,14 +337,33 @@
     "answer": "(1) 128\n(2) 62",
     "explanation": "서브넷마스크 255.255.255.192는 /26이므로 호스트 비트 6개. 132를 2진수로 변환하면 10000100. AND 연산으로 네트워크 주소는 10000000 = 128. 호스트 범위는 128~191이고, 네트워크 주소(128)와 브로드캐스트(191) 제외하면 62개.",
     "choices": [
-      {"label": "1", "text": "(1) 128 / (2) 62", "isCorrect": true},
-      {"label": "2", "text": "(1) 192 / (2) 30", "isCorrect": false},
-      {"label": "3", "text": "(1) 128 / (2) 64", "isCorrect": false},
-      {"label": "4", "text": "(1) 0 / (2) 254", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "(1) 192 / (2) 30",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "(1) 0 / (2) 254",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "(1) 128 / (2) 62",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "(1) 128 / (2) 64",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_010",
@@ -204,14 +377,33 @@
     "answer": "1. 베타\n2. 알파",
     "explanation": "베타 테스트는 외부 사용자(잠재 고객)가 실제 환경에서 제품을 사용해보는 테스트이고, 알파 테스트는 개발 회사 내부에서 수행하는 첫 번째 테스트이다.",
     "choices": [
-      {"label": "1", "text": "1. 베타 / 2. 알파", "isCorrect": true},
-      {"label": "2", "text": "1. 알파 / 2. 베타", "isCorrect": false},
-      {"label": "3", "text": "1. 인수 / 2. 단위", "isCorrect": false},
-      {"label": "4", "text": "1. 시스템 / 2. 통합", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1. 알파 / 2. 베타",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1. 시스템 / 2. 통합",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1. 인수 / 2. 단위",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1. 베타 / 2. 알파",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_011",
@@ -225,14 +417,33 @@
     "answer": "Regression",
     "explanation": "회귀 테스트(Regression Test)는 소프트웨어의 변경이나 수정 후, 기존 기능이 정상적으로 동작하는지 확인하고 새로운 오류가 유입되지 않았는지 검증하는 테스트이다.",
     "choices": [
-      {"label": "1", "text": "Regression", "isCorrect": true},
-      {"label": "2", "text": "Iterating", "isCorrect": false},
-      {"label": "3", "text": "Debugging", "isCorrect": false},
-      {"label": "4", "text": "Validation", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Debugging",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Regression",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "Iterating",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Validation",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_012",
@@ -246,14 +457,33 @@
     "answer": "부장, 대리, 과장, 차장",
     "explanation": "π(프로젝션)는 관계대수에서 특정 속성(열)만 추출하는 연산이다. πTTL은 TTL 열만 추출하며, 중복을 제거하므로 부장, 대리, 과장, 차장이 결과가 된다.",
     "choices": [
-      {"label": "1", "text": "부장, 대리, 과장, 차장", "isCorrect": true},
-      {"label": "2", "text": "부장, 대리, 과장, 대리, 차장", "isCorrect": false},
-      {"label": "3", "text": "김, 이, 박, 최, 정", "isCorrect": false},
-      {"label": "4", "text": "영업, 기획", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "부장, 대리, 과장, 차장",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "영업, 기획",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "김, 이, 박, 최, 정",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "부장, 대리, 과장, 대리, 차장",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_013",
@@ -269,14 +499,33 @@
     "codeSnippet": "a = \"REMEMBER NOVEMBER\"\nb = a[:3] + a[12:16]\nc = \"R AND %s\" % \"STR\"\nprint(b+c)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "REMEMBER AND STR", "isCorrect": true},
-      {"label": "2", "text": "REMNOVR AND STR", "isCorrect": false},
-      {"label": "3", "text": "REMEMBERAND STR", "isCorrect": false},
-      {"label": "4", "text": "REM EMBE R AND STR", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "REMEMBER AND STR",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "REMNOVR AND STR",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "REMEMBERAND STR",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "REM EMBE R AND STR",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_014",
@@ -290,14 +539,33 @@
     "answer": "1. IGP\n2. EGP\n3. OSPF\n4. BGP",
     "explanation": "IGP(Interior Gateway Protocol)는 도메인 내부 라우팅 프로토콜, EGP(Exterior Gateway Protocol)는 도메인 간 라우팅 프로토콜, OSPF(Open Shortest Path First)는 대규모 네트워크용 내부 라우팅 프로토콜, BGP(Border Gateway Protocol)는 AS 간 라우팅 프로토콜이다.",
     "choices": [
-      {"label": "1", "text": "1. IGP / 2. EGP / 3. OSPF / 4. BGP", "isCorrect": true},
-      {"label": "2", "text": "1. EGP / 2. IGP / 3. RIP / 4. OSPF", "isCorrect": false},
-      {"label": "3", "text": "1. IGP / 2. BGP / 3. OSPF / 4. EGP", "isCorrect": false},
-      {"label": "4", "text": "1. ARP / 2. RARP / 3. OSPF / 4. BGP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1. IGP / 2. BGP / 3. OSPF / 4. EGP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1. IGP / 2. EGP / 3. OSPF / 4. BGP",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "1. EGP / 2. IGP / 3. RIP / 4. OSPF",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1. ARP / 2. RARP / 3. OSPF / 4. BGP",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_015",
@@ -313,14 +581,33 @@
     "codeSnippet": "#include <stdio.h>\n\nint len(char* p);\n\nint main(){\n  char* p1 = \"2022\";\n  char* p2 = \"202207\";\n\n  int a = len(p1);\n  int b = len(p2);\n\n  printf(\"%d\", a + b);\n}\n\nint len(char* p){\n  int r = 0;\n  while(*p != '\\0'){\n    p++;\n    r++;\n  }\n  return r;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "10", "isCorrect": true},
-      {"label": "2", "text": "4", "isCorrect": false},
-      {"label": "3", "text": "6", "isCorrect": false},
-      {"label": "4", "text": "8", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "10",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "4",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_016",
@@ -336,14 +623,33 @@
     "codeSnippet": "#include <stdio.h>\n\nint main(int argc, char *argv[]) {\n  int a[4] = {0, 2, 4, 8};\n  int b[3] = {};\n  int i = 1;\n  int sum = 0;\n  int *p1;\n\n  for (i; i < 4; i++) {\n    p1 = a + i;\n    b[i-1] = *p1 - a[i-1];\n    sum = sum + b[i-1] + a[i];\n  }\n\n  printf(\"%d\", sum);\n  return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "22", "isCorrect": true},
-      {"label": "2", "text": "14", "isCorrect": false},
-      {"label": "3", "text": "18", "isCorrect": false},
-      {"label": "4", "text": "26", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "22",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "26",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "18",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "14",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_017",
@@ -359,14 +665,33 @@
     "codeSnippet": "public class Conv{\n  public Conv(int a) {\n    this.a = a;\n  }\n  int func() {\n    int b = 1;\n    for (int i=1; i<a; i++){\n      b = a * i + b;\n    }\n    return a + b;\n  }\n  int a;\n}\n\npublic static void main(String[] args){\n  Conv obj = new Conv(3);\n  obj.a = 5;\n  int b = obj.func();\n  System.out.print(obj.a + b);\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "61", "isCorrect": true},
-      {"label": "2", "text": "56", "isCorrect": false},
-      {"label": "3", "text": "51", "isCorrect": false},
-      {"label": "4", "text": "46", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "56",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "51",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "61",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "46",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_018",
@@ -380,14 +705,33 @@
     "answer": "1. Full\n2. Partial\n3. Transitive",
     "explanation": "완전 함수 종속(Full FD)은 기본키 전체에 종속되는 것, 부분 함수 종속(Partial FD)은 기본키의 일부에만 종속되는 것, 이행 함수 종속(Transitive FD)은 X→Y→Z에서 X→Z가 성립하는 것이다.",
     "choices": [
-      {"label": "1", "text": "1. Full / 2. Partial / 3. Transitive", "isCorrect": true},
-      {"label": "2", "text": "1. Partial / 2. Full / 3. Transitive", "isCorrect": false},
-      {"label": "3", "text": "1. Full / 2. Transitive / 3. Partial", "isCorrect": false},
-      {"label": "4", "text": "1. Transitive / 2. Partial / 3. Full", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1. Full / 2. Partial / 3. Transitive",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "1. Transitive / 2. Partial / 3. Full",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1. Full / 2. Transitive / 3. Partial",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1. Partial / 2. Full / 3. Transitive",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_019",
@@ -401,14 +745,33 @@
     "answer": "1. HTTP\n2. Hypertext\n3. HTML",
     "explanation": "HTTP(HyperText Transfer Protocol)는 웹에서 문서를 전송하는 통신 프로토콜, Hypertext는 비선형 구조로 정보를 연결하는 방식, HTML(HyperText Markup Language)은 웹 페이지를 만드는 마크업 언어이다.",
     "choices": [
-      {"label": "1", "text": "1. HTTP / 2. Hypertext / 3. HTML", "isCorrect": true},
-      {"label": "2", "text": "1. FTP / 2. HTML / 3. XML", "isCorrect": false},
-      {"label": "3", "text": "1. HTTP / 2. AJAX / 3. XML", "isCorrect": false},
-      {"label": "4", "text": "1. HTML / 2. Hypertext / 3. HTTP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1. HTML / 2. Hypertext / 3. HTTP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1. FTP / 2. HTML / 3. XML",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1. HTTP / 2. AJAX / 3. XML",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1. HTTP / 2. Hypertext / 3. HTML",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   },
   {
     "id": "exam-2022-2_020",
@@ -422,13 +785,32 @@
     "answer": "Fan-in: 3\nFan-out: 2",
     "explanation": "Fan-in은 해당 모듈을 호출하는 상위 모듈의 수(B, C, D → 3), Fan-out은 해당 모듈이 호출하는 하위 모듈의 수(G, H → 2)이다.",
     "choices": [
-      {"label": "1", "text": "Fan-in: 3, Fan-out: 2", "isCorrect": true},
-      {"label": "2", "text": "Fan-in: 2, Fan-out: 3", "isCorrect": false},
-      {"label": "3", "text": "Fan-in: 1, Fan-out: 2", "isCorrect": false},
-      {"label": "4", "text": "Fan-in: 3, Fan-out: 1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Fan-in: 3, Fan-out: 2",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "Fan-in: 2, Fan-out: 3",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Fan-in: 1, Fan-out: 2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Fan-in: 3, Fan-out: 1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/423",
-    "tags": ["2022년", "2회"]
+    "tags": [
+      "2022년",
+      "2회"
+    ]
   }
 ]

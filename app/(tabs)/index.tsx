@@ -15,9 +15,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getCategoriesWithQuestions } from '@/features/categories/services/categoryService';
-import { getTotalQuestionCount } from '@/features/questions/services/questionService';
+import { getQuestionCountExcludingGroup, getQuestionIdsExcludingGroup } from '@/features/questions/services/questionService';
 import { useUserStore } from '@/store/useUserStore';
-import { calculateOverallStats } from '@/features/questions/services/progressService';
+import { calculateOverallStatsFiltered } from '@/features/questions/services/progressService';
 import { COLORS } from '@/lib/constants';
 import type { Category, CategoryId } from '@/features/questions/types';
 
@@ -27,11 +27,12 @@ export default function HomeScreen() {
   const categories = getCategoriesWithQuestions().filter(
     (cat) => cat.group !== 'exam'
   );
-  const totalQuestions = getTotalQuestionCount();
+  const totalQuestions = getQuestionCountExcludingGroup('exam');
+  const studyQuestionIds = getQuestionIdsExcludingGroup('exam');
   const progress = useUserStore((s) => s.progress);
   const overallStats = useMemo(
-    () => calculateOverallStats(progress, totalQuestions),
-    [progress, totalQuestions]
+    () => calculateOverallStatsFiltered(progress, studyQuestionIds),
+    [progress, studyQuestionIds]
   );
 
   const progressPercent =

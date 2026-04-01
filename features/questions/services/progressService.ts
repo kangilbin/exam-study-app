@@ -64,6 +64,28 @@ export function calculateCategoryStats(
   };
 }
 
+/** 특정 문제 ID 목록 기준 통계 계산 */
+export function calculateOverallStatsFiltered(
+  progress: Record<string, QuestionProgress>,
+  questionIds: string[]
+): { totalSeen: number; totalCorrect: number; accuracy: number } {
+  let totalSeen = 0;
+  let totalCorrect = 0;
+
+  for (const qId of questionIds) {
+    const p = progress[qId];
+    if (!p) continue;
+    if (p.status !== 'unseen') totalSeen++;
+    if (p.status === 'correct' || p.status === 'known') totalCorrect++;
+  }
+
+  return {
+    totalSeen,
+    totalCorrect,
+    accuracy: totalSeen > 0 ? totalCorrect / totalSeen : 0,
+  };
+}
+
 /** 전체 통계 계산 */
 export function calculateOverallStats(
   progress: Record<string, QuestionProgress>,

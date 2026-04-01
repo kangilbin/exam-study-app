@@ -3,6 +3,8 @@
  */
 
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Question, CategoryId } from '@/features/questions/types';
 
 interface QuizState {
@@ -18,6 +20,7 @@ interface QuizState {
 
   // 액션
   startQuiz: (categoryId: CategoryId, questions: Question[]) => void;
+  canResume: (categoryId: string) => boolean;
   selectChoice: (index: number) => void;
   submitAnswer: () => void;
   revealExplanation: () => void;
@@ -25,67 +28,9 @@ interface QuizState {
   resetQuiz: () => void;
 }
 
-export const useQuizStore = create<QuizState>()((set, get) => ({
-  categoryId: null,
-  questions: [],
-  currentIndex: 0,
-  selectedChoiceIndex: null,
-  isAnswered: false,
-  isExplanationRevealed: false,
-  results: [],
-  startedAt: null,
-
-  startQuiz: (categoryId, questions) => {
-    set({
-      categoryId,
-      questions,
-      currentIndex: 0,
-      selectedChoiceIndex: null,
-      isAnswered: false,
-      isExplanationRevealed: false,
-      results: [],
-      startedAt: Date.now(),
-    });
-  },
-
-  selectChoice: (index) => {
-    if (get().isAnswered) return;
-    set({ selectedChoiceIndex: index });
-  },
-
-  submitAnswer: () => {
-    const { questions, currentIndex, selectedChoiceIndex, results } = get();
-    if (selectedChoiceIndex === null) return;
-
-    const question = questions[currentIndex];
-    if (!question?.choices) return;
-
-    const isCorrect = question.choices[selectedChoiceIndex]?.isCorrect ?? false;
-
-    set({
-      isAnswered: true,
-      results: [...results, { questionId: question.id, isCorrect }],
-    });
-  },
-
-  revealExplanation: () => {
-    set({ isExplanationRevealed: true });
-  },
-
-  nextQuestion: () => {
-    const { currentIndex, questions } = get();
-    if (currentIndex < questions.length - 1) {
-      set({
-        currentIndex: currentIndex + 1,
-        selectedChoiceIndex: null,
-        isAnswered: false,
-        isExplanationRevealed: false,
-      });
-    }
-  },
-
-  resetQuiz: () => {
-    set({
+export const useQuizStore = create<QuizState>()(
+  persist(
+    (set, get) => ({
       categoryId: null,
       questions: [],
       currentIndex: 0,
@@ -94,9 +39,91 @@ export const useQuizStore = create<QuizState>()((set, get) => ({
       isExplanationRevealed: false,
       results: [],
       startedAt: null,
-    });
-  },
-}));
+
+      startQuiz: (categoryId, questions) => {
+        set({
+          categoryId,
+          questions,
+          currentIndex: 0,
+          selectedChoiceIndex: null,
+          isAnswered: false,
+          isExplanationRevealed: false,
+          results: [],
+          startedAt: Date.now(),
+        });
+      },
+
+      canResume: (categoryId) => {
+        const state = get();
+        return (
+          state.categoryId === categoryId &&
+          state.questions.length > 0 &&
+          state.currentIndex > 0
+        );
+      },
+
+      selectChoice: (index) => {
+        if (get().isAnswered) return;
+        set({ selectedChoiceIndex: index });
+      },
+
+      submitAnswer: () => {
+        const { questions, currentIndex, selectedChoiceIndex, results } = get();
+        if (selectedChoiceIndex === null) return;
+
+        const question = questions[currentIndex];
+        if (!question?.choices) return;
+
+        const isCorrect = question.choices[selectedChoiceIndex]?.isCorrect ?? false;
+
+        set({
+          isAnswered: true,
+          results: [...results, { questionId: question.id, isCorrect }],
+        });
+      },
+
+      revealExplanation: () => {
+        set({ isExplanationRevealed: true });
+      },
+
+      nextQuestion: () => {
+        const { currentIndex, questions } = get();
+        if (currentIndex < questions.length - 1) {
+          set({
+            currentIndex: currentIndex + 1,
+            selectedChoiceIndex: null,
+            isAnswered: false,
+            isExplanationRevealed: false,
+          });
+        }
+      },
+
+      resetQuiz: () => {
+        set({
+          categoryId: null,
+          questions: [],
+          currentIndex: 0,
+          selectedChoiceIndex: null,
+          isAnswered: false,
+          isExplanationRevealed: false,
+          results: [],
+          startedAt: null,
+        });
+      },
+    }),
+    {
+      name: '@quiz-store',
+      storage: createJSONStorage(() => AsyncStorage),
+      partialize: (state) => ({
+        categoryId: state.categoryId,
+        questions: state.questions,
+        currentIndex: state.currentIndex,
+        results: state.results,
+        startedAt: state.startedAt,
+      }),
+    }
+  )
+);
 
 /** 현재 문제 가져오기 */
 export const useCurrentQuestion = () =>

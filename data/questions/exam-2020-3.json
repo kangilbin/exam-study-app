@@ -18,7 +18,7 @@
       },
       {
         "label": "2",
-        "text": "새로운 기능을 추가하기 위함",
+        "text": "보안 취약점을 제거하기 위함",
         "isCorrect": false
       },
       {
@@ -28,7 +28,7 @@
       },
       {
         "label": "4",
-        "text": "보안 취약점을 제거하기 위함",
+        "text": "새로운 기능을 추가하기 위함",
         "isCorrect": false
       }
     ],
@@ -56,22 +56,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "55",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "0",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "3628800",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "10",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "55",
+        "text": "10",
         "isCorrect": false
       }
     ],
@@ -97,22 +97,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "OSPF",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "RIP",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "BGP",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "EIGRP",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "OSPF",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "RIP",
         "isCorrect": false
       }
     ],
@@ -144,17 +144,17 @@
       },
       {
         "label": "2",
-        "text": "형상 관리 대상을 정의 및 식별하는 활동",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "소프트웨어 베이스라인의 무결성을 평가하는 활동",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "변경관리 수행결과를 기록하는 활동",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "형상 관리 대상을 정의 및 식별하는 활동",
         "isCorrect": false
       }
     ],
@@ -180,22 +180,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "프로토콜",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "인터페이스",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "미들웨어",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "게이트웨이",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "프로토콜",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "인터페이스",
         "isCorrect": false
       }
     ],
@@ -226,12 +226,12 @@
       },
       {
         "label": "2",
-        "text": "IGMP",
+        "text": "ARP",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "ARP",
+        "text": "IGMP",
         "isCorrect": false
       },
       {
@@ -262,12 +262,12 @@
     "choices": [
       {
         "label": "1",
-        "text": "1234561, 124567",
-        "isCorrect": true
+        "text": "1234567만 수행",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "1234567만 수행",
+        "text": "1234561만 수행",
         "isCorrect": false
       },
       {
@@ -277,8 +277,8 @@
       },
       {
         "label": "4",
-        "text": "1234561만 수행",
-        "isCorrect": false
+        "text": "1234561, 124567",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -297,14 +297,14 @@
     "difficulty": 3,
     "year": 2020,
     "round": 3,
-    "question": "과목별 점수의 평균이 90 이상인 과목이름, 최소점수, 최대점수를 구하는 SQL문을 작성하시오. (GROUP BY, HAVING, AS 사용)",
+    "question": "과목별 점수의 평균이 90 이상인 과목이름, 최소점수, 최대점수를 구하는 SQL문을 작성하시오.\n(GROUP BY, HAVING, AS 사용)",
     "answer": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 HAVING AVG(점수) >= 90;",
     "explanation": "GROUP BY로 그룹화 후 HAVING으로 그룹 조건을 필터링합니다. WHERE는 그룹화 전, HAVING은 그룹화 후 조건입니다.",
     "choices": [
       {
         "label": "1",
-        "text": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 HAVING AVG(점수) >= 90;",
-        "isCorrect": true
+        "text": "SELECT 과목이름, MIN(점수), MAX(점수) FROM 성적 HAVING AVG(점수) >= 90;",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -313,12 +313,12 @@
       },
       {
         "label": "3",
-        "text": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 WHERE AVG(점수) >= 90;",
-        "isCorrect": false
+        "text": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 HAVING AVG(점수) >= 90;",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "SELECT 과목이름, MIN(점수), MAX(점수) FROM 성적 HAVING AVG(점수) >= 90;",
+        "text": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 WHERE AVG(점수) >= 90;",
         "isCorrect": false
       }
     ],
@@ -330,7 +330,8 @@
       "HAVING",
       "집계함수",
       "2020년3회"
-    ]
+    ],
+    "codeSnippet": "[성적 테이블]\n 과목코드 | 과목이름     | 학점 | 점수\n---------+--------------+------+-----\n 1000    | 컴퓨터과학   | A+   |  95\n 2000    | 운영체제     | B+   |  85\n 1000    | 컴퓨터과학   | B+   |  85\n 2000    | 운영체제     | B    |  80"
   },
   {
     "id": "exam-2020-3_009",
@@ -346,22 +347,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "DELETE FROM 학생 WHERE 이름 = '민수';",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "DROP FROM 학생 WHERE 이름 = '민수';",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "REMOVE FROM 학생 WHERE 이름 = '민수';",
+        "label": "2",
+        "text": "DELETE 학생 WHERE 이름 = '민수';",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "DELETE FROM 학생 WHERE 이름 = '민수';",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "DELETE 학생 WHERE 이름 = '민수';",
+        "text": "REMOVE FROM 학생 WHERE 이름 = '민수';",
         "isCorrect": false
       }
     ],
@@ -371,7 +372,8 @@
       "SQL",
       "DELETE",
       "2020년3회"
-    ]
+    ],
+    "codeSnippet": "DELETE FROM 학생 WHERE 이름 = '민수';"
   },
   {
     "id": "exam-2020-3_010",
@@ -387,22 +389,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "π (프로젝트)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "÷ (디비전)",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "⋈ (조인)",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "σ (셀렉트)",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "π (프로젝트)",
+        "text": "σ (셀렉트)",
         "isCorrect": false
       }
     ],
@@ -429,8 +431,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "헝가리안 표기법",
-        "isCorrect": true
+        "text": "파스칼 표기법",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -439,13 +441,13 @@
       },
       {
         "label": "3",
-        "text": "파스칼 표기법",
+        "text": "스네이크 표기법",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "스네이크 표기법",
-        "isCorrect": false
+        "text": "헝가리안 표기법",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -470,23 +472,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "블랙박스 테스트",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "화이트박스 테스트",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "그레이박스 테스트",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "회귀 테스트",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "블랙박스 테스트",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -513,22 +515,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "234",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "2304",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "234",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "200",
+        "text": "34",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "34",
+        "text": "200",
         "isCorrect": false
       }
     ],
@@ -554,23 +556,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "데이터베이스의 구조와 제약조건을 정의하는 기본 구조",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "데이터베이스에 저장된 실제 데이터",
+        "text": "데이터베이스의 백업 파일",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "데이터베이스의 물리적 저장 방식",
         "isCorrect": false
       },
       {
-        "label": "4",
-        "text": "데이터베이스의 백업 파일",
+        "label": "3",
+        "text": "데이터베이스에 저장된 실제 데이터",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "데이터베이스의 구조와 제약조건을 정의하는 기본 구조",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -597,13 +599,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "Vehicle name:Spark",
-        "isCorrect": true
+        "text": "컴파일 오류",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "Car name:Spark",
-        "isCorrect": false
+        "text": "Vehicle name:Spark",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -612,7 +614,7 @@
       },
       {
         "label": "4",
-        "text": "컴파일 오류",
+        "text": "Car name:Spark",
         "isCorrect": false
       }
     ],
@@ -639,8 +641,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "누구나 쉽게 이해하고 사용할 수 있어야 하는 원칙",
-        "isCorrect": true
+        "text": "누구나 쉽게 배우고 익힐 수 있어야 하는 원칙",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -649,12 +651,12 @@
       },
       {
         "label": "3",
-        "text": "사용자의 목적을 정확하게 달성하는 원칙",
-        "isCorrect": false
+        "text": "누구나 쉽게 이해하고 사용할 수 있어야 하는 원칙",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "누구나 쉽게 배우고 익힐 수 있어야 하는 원칙",
+        "text": "사용자의 목적을 정확하게 달성하는 원칙",
         "isCorrect": false
       }
     ],
@@ -682,22 +684,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "30",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "55",
+        "text": "20",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "25",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "30",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "20",
+        "text": "55",
         "isCorrect": false
       }
     ],
@@ -724,13 +726,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "포인트 투 포인트, 허브 앤 스포크",
-        "isCorrect": true
+        "text": "마이크로서비스, 모놀리식",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "마이크로서비스, 모놀리식",
-        "isCorrect": false
+        "text": "포인트 투 포인트, 허브 앤 스포크",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -765,22 +767,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "상위 클래스의 메서드를 재정의하는 것",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "객체 생성 시 자동으로 호출되는 특수 메서드",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "객체 소멸 시 호출되는 메서드",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "클래스의 정적 메서드",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "상위 클래스의 메서드를 재정의하는 것",
+        "text": "클래스의 정적 메서드",
         "isCorrect": false
       }
     ],
@@ -800,14 +802,14 @@
     "difficulty": 1,
     "year": 2020,
     "round": 3,
-    "question": "학생 테이블에 주소 속성을 추가하는 SQL문의 빈칸을 채우시오. ( 1 ) TABLE 학생 ( 2 ) 주소 VARCHAR(20);",
+    "question": "학생 테이블에 주소 속성을 추가하는 SQL문의 빈칸 (1), (2)를 채우시오.",
     "answer": "1. ALTER  2. ADD",
     "explanation": "ALTER TABLE은 테이블 구조를 변경하는 DDL 명령어이며, ADD는 컬럼을 추가합니다.",
     "choices": [
       {
         "label": "1",
-        "text": "ALTER, ADD",
-        "isCorrect": true
+        "text": "MODIFY, ADD",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -816,12 +818,12 @@
       },
       {
         "label": "3",
-        "text": "ALTER, INSERT",
-        "isCorrect": false
+        "text": "ALTER, ADD",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "MODIFY, ADD",
+        "text": "ALTER, INSERT",
         "isCorrect": false
       }
     ],
@@ -832,6 +834,7 @@
       "ALTER",
       "DDL",
       "2020년3회"
-    ]
+    ],
+    "codeSnippet": "( 1 ) TABLE 학생 ( 2 ) 주소 VARCHAR(20);"
   }
 ]

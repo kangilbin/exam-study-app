@@ -13,14 +13,33 @@
     "codeSnippet": "void main(){\n  int field[4][4] = {{0,1,0,1},{0,0,0,1},{1,1,1,0},{0,1,1,1}};\n  int mines[4][4] = {{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};\n  int w = 4, h = 4;\n  for(int y=0; y<h; y++) {\n    for(int x=0; x<w; x++) {\n      if(field[y][x] == 0) continue;\n      for(int i=y-1; i<=y+1; i++) {\n        for(int j=x-1; j<=x+1; j++) {\n          if(calculate(w,h,j,i) == 1) {\n            mines[i][j] += 1;\n          }\n        }\n      }\n    }\n  }\n  for(int y=0; y<h; y++){\n    for(int x=0; x<w; x++)\n      printf(\"%d\", mines[y][x]);\n    printf(\"\\n\");\n  }\n}\nint calculate(int w, int h, int j, int i) {\n  if (i >= 0 && i < h && j >= 0 && j < w) return 1;\n  return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "1 1 3 2 / 3 4 5 3 / 3 5 6 4 / 3 5 5 3", "isCorrect": true},
-      {"label": "2", "text": "1 2 3 2 / 3 4 5 3 / 3 5 5 4 / 3 5 5 3", "isCorrect": false},
-      {"label": "3", "text": "1 1 2 2 / 3 4 5 3 / 3 5 6 4 / 2 5 5 3", "isCorrect": false},
-      {"label": "4", "text": "1 1 3 1 / 3 4 5 3 / 3 5 6 4 / 3 4 5 3", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1 2 3 2 / 3 4 5 3 / 3 5 5 4 / 3 5 5 3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1 1 3 2 / 3 4 5 3 / 3 5 6 4 / 3 5 5 3",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "1 1 3 1 / 3 4 5 3 / 3 5 6 4 / 3 4 5 3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1 1 2 2 / 3 4 5 3 / 3 5 6 4 / 2 5 5 3",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_002",
@@ -34,14 +53,33 @@
     "answer": "∪, -, ×, π, ⋈",
     "explanation": "관계 대수의 주요 연산 기호입니다.\n∪(합집합): 두 릴레이션의 합집합\n-(차집합): 한 릴레이션에서 다른 릴레이션을 뺀 것\n×(카티션 프로덕트): 두 릴레이션의 모든 튜플 조합\nπ(프로젝트): 특정 속성(열)만 추출\n⋈(조인): 두 릴레이션을 조건에 따라 결합\n이 외에도 σ(셀렉트), ÷(디비전) 등이 있습니다.",
     "choices": [
-      {"label": "1", "text": "∪, -, ×, π, ⋈", "isCorrect": true},
-      {"label": "2", "text": "∩, -, ×, σ, ⋈", "isCorrect": false},
-      {"label": "3", "text": "∪, -, ÷, π, ⋈", "isCorrect": false},
-      {"label": "4", "text": "∪, ∩, ×, π, σ", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "∪, -, ÷, π, ⋈",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "∪, -, ×, π, ⋈",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "∪, ∩, ×, π, σ",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "∩, -, ×, σ, ⋈",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_003",
@@ -55,14 +93,33 @@
     "answer": "Bridge, Observer",
     "explanation": "Bridge 패턴은 구조 패턴으로, 추상화와 구현을 분리하여 독립적으로 확장할 수 있습니다.\nObserver 패턴은 행위 패턴으로, 주체(Subject)의 상태 변화를 관찰자(Observer)들에게 자동으로 통지합니다. 일대다 의존 관계를 정의하며 이벤트 시스템에 활용됩니다.",
     "choices": [
-      {"label": "1", "text": "Bridge, Observer", "isCorrect": true},
-      {"label": "2", "text": "Adapter, Mediator", "isCorrect": false},
-      {"label": "3", "text": "Facade, Strategy", "isCorrect": false},
-      {"label": "4", "text": "Proxy, Command", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Proxy, Command",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Facade, Strategy",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Adapter, Mediator",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Bridge, Observer",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_004",
@@ -78,14 +135,33 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int a[] = {2, 4, 5, 1, 3};\n    int r[5] = {0};\n    int n = 5;\n    for(int i = 0; i < n; i++) {\n        for(int j = 0; j < n; j++) {\n            if(a[i] > a[j]) r[i]++;\n        }\n        r[i]++;\n    }\n    for(int i = 0; i < n; i++)\n        printf(\"%d\", r[i]);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "24513", "isCorrect": true},
-      {"label": "2", "text": "35124", "isCorrect": false},
-      {"label": "3", "text": "24531", "isCorrect": false},
-      {"label": "4", "text": "13542", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "13542",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "35124",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "24531",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "24513",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_005",
@@ -99,14 +175,33 @@
     "answer": "192.168.1.127",
     "explanation": "서브넷 마스크 255.255.255.128은 /25입니다.\n첫 번째 서브넷 범위: 192.168.1.0 ~ 192.168.1.127\n네트워크 주소: 192.168.1.0\n브로드캐스트 주소: 192.168.1.127\n사용 가능 호스트: 192.168.1.1 ~ 192.168.1.126 (126개)",
     "choices": [
-      {"label": "1", "text": "192.168.1.127", "isCorrect": true},
-      {"label": "2", "text": "192.168.1.128", "isCorrect": false},
-      {"label": "3", "text": "192.168.1.255", "isCorrect": false},
-      {"label": "4", "text": "192.168.1.63", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "192.168.1.127",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "192.168.1.128",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "192.168.1.63",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "192.168.1.255",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_006",
@@ -120,14 +215,33 @@
     "answer": "경계값 분석(Boundary Value Analysis)",
     "explanation": "경계값 분석(Boundary Value Analysis)은 블랙박스 테스트 기법 중 하나입니다.\n입력값의 경계(최솟값, 최솟값+1, 최댓값-1, 최댓값) 부근에서 결함이 발생할 확률이 높다는 점을 활용합니다.\n동치 분할과 함께 가장 많이 사용되는 블랙박스 테스트 기법입니다.",
     "choices": [
-      {"label": "1", "text": "경계값 분석(Boundary Value Analysis)", "isCorrect": true},
-      {"label": "2", "text": "동치 분할(Equivalence Partitioning)", "isCorrect": false},
-      {"label": "3", "text": "원인-결과 그래프(Cause-Effect Graph)", "isCorrect": false},
-      {"label": "4", "text": "결정 테이블(Decision Table)", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "원인-결과 그래프(Cause-Effect Graph)",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "동치 분할(Equivalence Partitioning)",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "결정 테이블(Decision Table)",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "경계값 분석(Boundary Value Analysis)",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_007",
@@ -143,14 +257,33 @@
     "codeSnippet": "SELECT COUNT(DISTINCT 과목) FROM 성적 WHERE 학점 = 'A';\nSELECT COUNT(과목) FROM 성적 WHERE 학점 = 'A';",
     "codeLanguage": "sql",
     "choices": [
-      {"label": "1", "text": "3, 4", "isCorrect": true},
-      {"label": "2", "text": "2, 3", "isCorrect": false},
-      {"label": "3", "text": "1, 3", "isCorrect": false},
-      {"label": "4", "text": "4, 5", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "2, 3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "1, 3",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "4, 5",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "3, 4",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_008",
@@ -164,14 +297,33 @@
     "answer": "사회공학(Social Engineering), 다크 데이터(Dark Data)",
     "explanation": "사회공학(Social Engineering)은 기술적 방법이 아닌 사람의 심리를 이용해 보안 정보를 획득하는 기법입니다. 피싱, 프리텍스팅, 테일게이팅 등이 있습니다.\n다크 데이터(Dark Data)는 수집되었지만 분석되지 않은 데이터로, 저장 비용을 발생시키면서도 가치가 활용되지 않는 데이터를 의미합니다.",
     "choices": [
-      {"label": "1", "text": "사회공학, 다크 데이터", "isCorrect": true},
-      {"label": "2", "text": "스피어 피싱, 빅 데이터", "isCorrect": false},
-      {"label": "3", "text": "피싱, 스몰 데이터", "isCorrect": false},
-      {"label": "4", "text": "사회공학, 메타 데이터", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "사회공학, 메타 데이터",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "스피어 피싱, 빅 데이터",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "피싱, 스몰 데이터",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "사회공학, 다크 데이터",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_009",
@@ -187,14 +339,33 @@
     "codeSnippet": "a = [1, 2, 3, 4, 5]\nresult = list(map(lambda x: x + 100, a))\nprint(result)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "[101, 102, 103, 104, 105]", "isCorrect": true},
-      {"label": "2", "text": "[100, 200, 300, 400, 500]", "isCorrect": false},
-      {"label": "3", "text": "[101, 103, 105, 107, 109]", "isCorrect": false},
-      {"label": "4", "text": "[1, 2, 3, 4, 5, 100]", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "[101, 103, 105, 107, 109]",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "[1, 2, 3, 4, 5, 100]",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "[101, 102, 103, 104, 105]",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "[100, 200, 300, 400, 500]",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_010",
@@ -208,14 +379,33 @@
     "answer": "SIEM",
     "explanation": "SIEM(Security Information and Event Management)은 보안 정보 및 이벤트 관리 시스템입니다.\n다양한 보안 장비(방화벽, IDS, IPS 등)와 서버, 네트워크 장비의 로그를 수집하여 통합 관리하고, 실시간으로 분석하여 보안 위협에 대응합니다.\nSIM(보안 정보 관리)과 SEM(보안 이벤트 관리)이 결합된 개념입니다.",
     "choices": [
-      {"label": "1", "text": "SIEM", "isCorrect": true},
-      {"label": "2", "text": "SOAR", "isCorrect": false},
-      {"label": "3", "text": "ESM", "isCorrect": false},
-      {"label": "4", "text": "SOC", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SOC",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "SIEM",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "ESM",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SOAR",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_011",
@@ -229,14 +419,33 @@
     "answer": "CVS, SVN, GIT",
     "explanation": "형상 관리(SCM: Software Configuration Management)는 소프트웨어 개발 과정에서 변경사항을 체계적으로 관리하는 활동입니다.\nCVS(Concurrent Versions System): 가장 오래된 형상 관리 도구\nSVN(Subversion): CVS의 단점을 보완한 중앙집중식 버전 관리\nGIT: 분산 버전 관리 시스템으로 현재 가장 널리 사용됨",
     "choices": [
-      {"label": "1", "text": "CVS, SVN, GIT", "isCorrect": true},
-      {"label": "2", "text": "CVS, SVN, Maven", "isCorrect": false},
-      {"label": "3", "text": "SVN, GIT, Docker", "isCorrect": false},
-      {"label": "4", "text": "GIT, Jenkins, Gradle", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "GIT, Jenkins, Gradle",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "CVS, SVN, GIT",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "SVN, GIT, Docker",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "CVS, SVN, Maven",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_012",
@@ -252,14 +461,33 @@
     "codeSnippet": "SELECT COUNT(*) FROM R1 CROSS JOIN R2;",
     "codeLanguage": "sql",
     "choices": [
-      {"label": "1", "text": "200, 3, 1", "isCorrect": true},
-      {"label": "2", "text": "300, 3, 1", "isCorrect": false},
-      {"label": "3", "text": "200, 6, 2", "isCorrect": false},
-      {"label": "4", "text": "20000, 3, 1", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "300, 3, 1",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "200, 6, 2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "200, 3, 1",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "20000, 3, 1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_013",
@@ -275,14 +503,33 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int count = 0;\n    for(int i = 2; i <= 100; i++) {\n        int sum = 0;\n        for(int j = 1; j < i; j++) {\n            if(i % j == 0) sum += j;\n        }\n        if(sum == i) count++;\n    }\n    printf(\"%d\", count);\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "2", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "1", "isCorrect": false},
-      {"label": "4", "text": "4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "1",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_014",
@@ -296,14 +543,33 @@
     "answer": "Trustzone, Typosquatting",
     "explanation": "TrustZone은 ARM의 하드웨어 보안 기술로, CPU를 Secure World와 Normal World로 분리하여 민감한 데이터를 보호합니다.\nTyposquatting(타이포스쿼팅)은 URL 하이재킹이라고도 하며, 유명 도메인과 유사한 도메인을 등록하여 사용자의 오타를 악용하는 사이버 공격입니다.",
     "choices": [
-      {"label": "1", "text": "Trustzone, Typosquatting", "isCorrect": true},
-      {"label": "2", "text": "TPM, Phishing", "isCorrect": false},
-      {"label": "3", "text": "SecureBoot, Pharming", "isCorrect": false},
-      {"label": "4", "text": "TEE, Smishing", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "TPM, Phishing",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Trustzone, Typosquatting",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "TEE, Smishing",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "SecureBoot, Pharming",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_015",
@@ -317,14 +583,33 @@
     "answer": "SSO(Single Sign-On)",
     "explanation": "SSO(Single Sign-On)는 한 번의 로그인으로 여러 시스템이나 서비스에 접근할 수 있는 통합 인증 솔루션입니다.\n사용자 편의성을 높이고 비밀번호 관리를 단순화합니다.\n구현 방식: 커버로스(Kerberos), SAML, OAuth 등이 있습니다.",
     "choices": [
-      {"label": "1", "text": "SSO", "isCorrect": true},
-      {"label": "2", "text": "OAuth", "isCorrect": false},
-      {"label": "3", "text": "LDAP", "isCorrect": false},
-      {"label": "4", "text": "MFA", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "MFA",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "SSO",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "OAuth",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "LDAP",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_016",
@@ -338,14 +623,33 @@
     "answer": "SJF, RR(Round Robin), SRT",
     "explanation": "SJF(Shortest Job First): 비선점 방식으로 실행 시간이 가장 짧은 프로세스를 먼저 실행합니다. 평균 대기 시간을 최소화합니다.\nRR(Round Robin): 선점 방식으로 시간 할당량만큼 순서대로 CPU를 할당합니다. 시분할 시스템에 적합합니다.\nSRT(Shortest Remaining Time): SJF의 선점형 버전으로, 남은 시간이 가장 짧은 프로세스에 CPU를 할당합니다.",
     "choices": [
-      {"label": "1", "text": "SJF, RR, SRT", "isCorrect": true},
-      {"label": "2", "text": "FCFS, RR, SJF", "isCorrect": false},
-      {"label": "3", "text": "SJF, FCFS, SRT", "isCorrect": false},
-      {"label": "4", "text": "Priority, RR, SRT", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SJF, RR, SRT",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "SJF, FCFS, SRT",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "FCFS, RR, SJF",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Priority, RR, SRT",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_017",
@@ -359,14 +663,33 @@
     "answer": "관계(Relationships), 클래스(Class), 인터페이스(Interface)",
     "explanation": "UML 구성요소:\n관계(Relationships): 사물 사이의 연결을 표현합니다. 연관(Association), 의존(Dependency), 일반화(Generalization), 실체화(Realization) 등이 있습니다.\n클래스(Class): 동일한 속성(attribute)과 연산(operation)을 가진 객체의 집합입니다.\n인터페이스(Interface): 클래스가 외부에 제공하는 오퍼레이션(메서드)의 집합으로, 추상 메서드만 정의합니다.",
     "choices": [
-      {"label": "1", "text": "관계, 클래스, 인터페이스", "isCorrect": true},
-      {"label": "2", "text": "연관, 객체, 추상클래스", "isCorrect": false},
-      {"label": "3", "text": "관계, 패키지, 컴포넌트", "isCorrect": false},
-      {"label": "4", "text": "의존, 클래스, 노드", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "연관, 객체, 추상클래스",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "관계, 패키지, 컴포넌트",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "의존, 클래스, 노드",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "관계, 클래스, 인터페이스",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_018",
@@ -380,14 +703,33 @@
     "answer": "사각형-개체, 마름모-관계, 타원-속성, 이중타원-다중값속성, 밑줄-기본키속성",
     "explanation": "E-R 다이어그램의 주요 기호:\n사각형(Rectangle): 개체(Entity) 타입을 나타냅니다.\n마름모(Diamond): 관계(Relationship) 타입을 나타냅니다.\n타원(Ellipse): 속성(Attribute)을 나타냅니다.\n이중 타원: 다중값 속성(Multi-valued Attribute)을 나타냅니다.\n밑줄 타원: 기본키(Primary Key) 속성을 나타냅니다.",
     "choices": [
-      {"label": "1", "text": "사각형-개체, 마름모-관계, 타원-속성, 이중타원-다중값속성, 밑줄-기본키", "isCorrect": true},
-      {"label": "2", "text": "사각형-관계, 마름모-개체, 타원-속성, 이중타원-유도속성, 밑줄-기본키", "isCorrect": false},
-      {"label": "3", "text": "사각형-개체, 마름모-속성, 타원-관계, 이중타원-다중값속성, 밑줄-외래키", "isCorrect": false},
-      {"label": "4", "text": "사각형-개체, 마름모-관계, 타원-속성, 이중타원-유도속성, 밑줄-후보키", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "사각형-개체, 마름모-관계, 타원-속성, 이중타원-유도속성, 밑줄-후보키",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "사각형-관계, 마름모-개체, 타원-속성, 이중타원-유도속성, 밑줄-기본키",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "사각형-개체, 마름모-관계, 타원-속성, 이중타원-다중값속성, 밑줄-기본키",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "사각형-개체, 마름모-속성, 타원-관계, 이중타원-다중값속성, 밑줄-외래키",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_019",
@@ -403,14 +745,33 @@
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {0, 1, 2, 3};\n        for(int i = 0; i < a.length; i++) {\n            System.out.print(a[i]);\n        }\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "0123", "isCorrect": true},
-      {"label": "2", "text": "1234", "isCorrect": false},
-      {"label": "3", "text": "0 1 2 3", "isCorrect": false},
-      {"label": "4", "text": "3210", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1234",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "3210",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "0 1 2 3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "0123",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   },
   {
     "id": "exam-2022-3_020",
@@ -426,13 +787,32 @@
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        int sum = 0;\n        for(int i = 1; i < 1000; i += 3) {\n            if(i > 990) sum += i;\n        }\n        System.out.print(sum);\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "993", "isCorrect": true},
-      {"label": "2", "text": "997", "isCorrect": false},
-      {"label": "3", "text": "1989", "isCorrect": false},
-      {"label": "4", "text": "2985", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "1989",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "993",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "2985",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "997",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/424",
-    "tags": ["2022년", "3회"]
+    "tags": [
+      "2022년",
+      "3회"
+    ]
   }
 ]

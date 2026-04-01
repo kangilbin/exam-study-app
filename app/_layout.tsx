@@ -16,6 +16,7 @@ export default function RootLayout() {
           headerStyle: { backgroundColor: '#6366f1' },
           headerTintColor: '#ffffff',
           headerTitleStyle: { fontWeight: 'bold' },
+          headerBackTitle: '',
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

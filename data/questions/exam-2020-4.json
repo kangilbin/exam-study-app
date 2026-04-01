@@ -13,23 +13,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "IPv6",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "IPv5",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "IPsec",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "IPv4 NAT",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "IPv5",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "IPv6",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -54,23 +54,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "행위",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "기능",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "인터페이스",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "모듈",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "기능",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "행위",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -95,22 +95,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "패키지 다이어그램",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "클래스 다이어그램",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "패키지 다이어그램",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "컴포넌트 다이어그램",
+        "text": "배포 다이어그램",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "배포 다이어그램",
+        "text": "컴포넌트 다이어그램",
         "isCorrect": false
       }
     ],
@@ -136,22 +136,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "즉각 갱신 회복 기법",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "지연 갱신 회복 기법",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "체크포인트 회복 기법",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "그림자 페이징 회복 기법",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "즉각 갱신 회복 기법",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "지연 갱신 회복 기법",
         "isCorrect": false
       }
     ],
@@ -179,23 +179,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "n > 0, n%2",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "n >= 0, n/2",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "i < 8, n%2",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "n != 0, n&1",
         "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "n >= 0, n/2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "n > 0, n%2",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -223,13 +223,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "3, 5",
-        "isCorrect": true
+        "text": "5, 3",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "5, 3",
-        "isCorrect": false
+        "text": "3, 5",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -269,17 +269,17 @@
       },
       {
         "label": "2",
-        "text": "IP 주소를 위조하여 공격하는 능동적 공격",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "대량의 패킷을 보내 서비스를 마비시키는 공격",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "악성 코드를 삽입하는 공격",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "IP 주소를 위조하여 공격하는 능동적 공격",
         "isCorrect": false
       }
     ],
@@ -306,22 +306,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "DNS",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "NAT",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "VPN",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "Proxy",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "DNS",
+        "text": "Proxy",
         "isCorrect": false
       }
     ],
@@ -354,17 +354,17 @@
       },
       {
         "label": "2",
-        "text": "[1,2,3]과 8",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "1과 7",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "[6,7,8,9]과 2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "[1,2,3]과 8",
         "isCorrect": false
       }
     ],
@@ -391,12 +391,12 @@
     "choices": [
       {
         "label": "1",
-        "text": "블록체인",
-        "isCorrect": true
+        "text": "빅데이터",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "빅데이터",
+        "text": "IoT",
         "isCorrect": false
       },
       {
@@ -406,8 +406,8 @@
       },
       {
         "label": "4",
-        "text": "IoT",
-        "isCorrect": false
+        "text": "블록체인",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -432,22 +432,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "하둡",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "스파크",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "하둡",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "카프카",
+        "text": "플링크",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "플링크",
+        "text": "카프카",
         "isCorrect": false
       }
     ],
@@ -473,22 +473,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "삽입 이상, 삭제 이상, 갱신 이상",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "삽입 이상, 수정 이상, 조회 이상",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "삽입 이상, 삭제 이상, 갱신 이상",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "생성 이상, 삭제 이상, 변경 이상",
+        "text": "중복 이상, 누락 이상, 불일치 이상",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "중복 이상, 누락 이상, 불일치 이상",
+        "text": "생성 이상, 삭제 이상, 변경 이상",
         "isCorrect": false
       }
     ],
@@ -515,22 +515,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "준비, 대기, 완료",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "준비, 실행, 대기",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "생성, 준비, 실행",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "실행, 대기, 완료",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "준비, 대기, 완료",
+        "text": "실행, 대기, 완료",
         "isCorrect": false
       }
     ],
@@ -557,22 +557,22 @@
     "choices": [
       {
         "label": "1",
+        "text": "일관성 검사 오라클",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "샘플링 오라클",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "참 오라클",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "휴리스틱 오라클",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "일관성 검사 오라클",
+        "text": "휴리스틱 오라클",
         "isCorrect": false
       }
     ],
@@ -598,22 +598,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "동등분할 테스트",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "경계값 분석",
+        "text": "오류 예측 검사",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "원인-효과 그래프",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "동등분할 테스트",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "오류 예측 검사",
+        "text": "경계값 분석",
         "isCorrect": false
       }
     ],
@@ -640,13 +640,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "SELECT 학과, COUNT(학과) AS '학과별튜플수' FROM 학생 GROUP BY 학과;",
-        "isCorrect": true
+        "text": "SELECT 학과, SUM(학과) AS '학과별튜플수' FROM 학생 GROUP BY 학과;",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "SELECT 학과, SUM(학과) AS '학과별튜플수' FROM 학생 GROUP BY 학과;",
-        "isCorrect": false
+        "text": "SELECT 학과, COUNT(학과) AS '학과별튜플수' FROM 학생 GROUP BY 학과;",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -666,7 +666,8 @@
       "GROUP BY",
       "COUNT",
       "2020년4회"
-    ]
+    ],
+    "codeSnippet": "[학생 테이블]\n 학과     | 학생\n---------+--------\n 전기     | 이순신\n 컴퓨터   | 안중근\n 컴퓨터   | 윤봉길\n 전자     | 이봉창\n 전자     | 강우규\n\n[예상 결과]\n 학과     | 학과별튜플수\n---------+------------\n 전기     | 1\n 컴퓨터   | 2\n 전자     | 2"
   },
   {
     "id": "exam-2020-4_017",
@@ -682,12 +683,12 @@
     "choices": [
       {
         "label": "1",
-        "text": "유닉스",
-        "isCorrect": true
+        "text": "리눅스",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "리눅스",
+        "text": "macOS",
         "isCorrect": false
       },
       {
@@ -697,8 +698,8 @@
       },
       {
         "label": "4",
-        "text": "macOS",
-        "isCorrect": false
+        "text": "유닉스",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -725,8 +726,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "KOREA, EA, K, E, M",
-        "isCorrect": true
+        "text": "KOREA, EA, K, E, K",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -735,8 +736,8 @@
       },
       {
         "label": "3",
-        "text": "KOREA, EA, K, E, K",
-        "isCorrect": false
+        "text": "KOREA, EA, K, E, M",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -769,22 +770,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "1",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "5",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "2",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "3",
         "isCorrect": false
       }
     ],
@@ -812,8 +813,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "권한을 가진 사용자가 서비스를 지속 사용할 수 있도록 보장하는 특성",
-        "isCorrect": true
+        "text": "사용자의 신원을 확인하는 특성",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -822,12 +823,12 @@
       },
       {
         "label": "3",
-        "text": "데이터가 변경되지 않음을 보장하는 특성",
-        "isCorrect": false
+        "text": "권한을 가진 사용자가 서비스를 지속 사용할 수 있도록 보장하는 특성",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "사용자의 신원을 확인하는 특성",
+        "text": "데이터가 변경되지 않음을 보장하는 특성",
         "isCorrect": false
       }
     ],

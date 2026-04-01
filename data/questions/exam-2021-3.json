@@ -15,22 +15,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "3",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "1",
         "isCorrect": false
       },
       {
+        "label": "2",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
         "label": "3",
-        "text": "0",
+        "text": "2",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "2",
+        "text": "0",
         "isCorrect": false
       }
     ],
@@ -57,23 +57,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "Authentication, Authorization, Accounting",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
         "text": "Authorization, Authentication, Accounting",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "Authentication, Accounting, Authorization",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "3",
         "text": "Accounting, Authentication, Authorization",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Authentication, Authorization, Accounting",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -104,7 +104,7 @@
       },
       {
         "label": "2",
-        "text": "사용자의 권한을 회수하는 명령어",
+        "text": "테이블을 생성하는 명령어",
         "isCorrect": false
       },
       {
@@ -114,7 +114,7 @@
       },
       {
         "label": "4",
-        "text": "테이블을 생성하는 명령어",
+        "text": "사용자의 권한을 회수하는 명령어",
         "isCorrect": false
       }
     ],
@@ -141,23 +141,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "ARP",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "ICMP",
+        "text": "DHCP",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "DNS",
         "isCorrect": false
       },
       {
-        "label": "4",
-        "text": "DHCP",
+        "label": "3",
+        "text": "ICMP",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ARP",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -182,13 +182,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "Control",
-        "isCorrect": true
+        "text": "Stamp",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "Content",
-        "isCorrect": false
+        "text": "Control",
+        "isCorrect": true
       },
       {
         "label": "3",
@@ -197,7 +197,7 @@
       },
       {
         "label": "4",
-        "text": "Stamp",
+        "text": "Content",
         "isCorrect": false
       }
     ],
@@ -223,8 +223,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "데이터링크, 네트워크, 표현",
-        "isCorrect": true
+        "text": "데이터링크, 전송, 표현",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -233,12 +233,12 @@
       },
       {
         "label": "3",
-        "text": "전송, 네트워크, 응용",
-        "isCorrect": false
+        "text": "데이터링크, 네트워크, 표현",
+        "isCorrect": true
       },
       {
         "label": "4",
-        "text": "데이터링크, 전송, 표현",
+        "text": "전송, 네트워크, 응용",
         "isCorrect": false
       }
     ],
@@ -264,22 +264,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "Aggregation, Generalization",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "Generalization, Aggregation",
+        "text": "Association, Dependency",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "Composition, Inheritance",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "Aggregation, Generalization",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "Association, Dependency",
+        "text": "Generalization, Aggregation",
         "isCorrect": false
       }
     ],
@@ -305,8 +305,8 @@
     "choices": [
       {
         "label": "1",
-        "text": "테스트 조건, 데이터, 예상결과",
-        "isCorrect": true
+        "text": "조건, 결과, 검증",
+        "isCorrect": false
       },
       {
         "label": "2",
@@ -315,8 +315,8 @@
       },
       {
         "label": "3",
-        "text": "조건, 결과, 검증",
-        "isCorrect": false
+        "text": "테스트 조건, 데이터, 예상결과",
+        "isCorrect": true
       },
       {
         "label": "4",
@@ -350,17 +350,17 @@
       },
       {
         "label": "2",
-        "text": "동등 분할",
+        "text": "의사결정 테이블",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "경계값 분석",
+        "text": "동등 분할",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "의사결정 테이블",
+        "text": "경계값 분석",
         "isCorrect": false
       }
     ],
@@ -391,17 +391,17 @@
       },
       {
         "label": "2",
-        "text": "AES",
+        "text": "SEED",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "RSA",
+        "text": "AES",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "SEED",
+        "text": "RSA",
         "isCorrect": false
       }
     ],
@@ -430,23 +430,23 @@
     "choices": [
       {
         "label": "1",
-        "text": "7",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "4",
+        "text": "5",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "8",
         "isCorrect": false
       },
       {
-        "label": "4",
-        "text": "5",
+        "label": "3",
+        "text": "4",
         "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "7",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -474,22 +474,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "37",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "36",
+        "text": "49",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "73",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "37",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "49",
+        "text": "36",
         "isCorrect": false
       }
     ],
@@ -510,28 +510,28 @@
     "difficulty": 2,
     "year": 2021,
     "round": 3,
-    "question": "A 테이블에서 S로 시작하는 NAME 2개, T를 포함하는 NAME 2개일 때 CROSS JOIN 결과 행 수는?",
+    "question": "다음 조건에서 CROSS JOIN 결과의 행 수를 구하시오.",
     "answer": "4",
     "explanation": "CROSS JOIN은 모든 조합을 생성하므로 2×2=4",
     "choices": [
       {
         "label": "1",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
         "text": "4",
         "isCorrect": true
       },
       {
-        "label": "2",
+        "label": "3",
         "text": "2",
         "isCorrect": false
       },
       {
-        "label": "3",
-        "text": "8",
-        "isCorrect": false
-      },
-      {
         "label": "4",
-        "text": "6",
+        "text": "8",
         "isCorrect": false
       }
     ],
@@ -541,7 +541,8 @@
       "SQL",
       "CROSS JOIN",
       "2021년3회"
-    ]
+    ],
+    "codeSnippet": "[A 테이블 - NAME 컬럼]\n Smith\n Scott\n Tiger\n Tom\n\nS로 시작하는 NAME: Smith, Scott (2개)\nT를 포함하는 NAME: Tiger, Tom (2개)\n\nCROSS JOIN 결과 행 수 = ?"
   },
   {
     "id": "exam-2021-3_014",
@@ -559,12 +560,12 @@
     "choices": [
       {
         "label": "1",
-        "text": "False",
-        "isCorrect": true
+        "text": "false",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "false",
+        "text": "0",
         "isCorrect": false
       },
       {
@@ -574,8 +575,8 @@
       },
       {
         "label": "4",
-        "text": "0",
-        "isCorrect": false
+        "text": "False",
+        "isCorrect": true
       }
     ],
     "source": "generated",
@@ -610,12 +611,12 @@
       },
       {
         "label": "3",
-        "text": "유스케이스 다이어그램",
+        "text": "활동 다이어그램",
         "isCorrect": false
       },
       {
         "label": "4",
-        "text": "활동 다이어그램",
+        "text": "유스케이스 다이어그램",
         "isCorrect": false
       }
     ],
@@ -646,12 +647,12 @@
       },
       {
         "label": "2",
-        "text": "Abstract Factory",
+        "text": "Builder",
         "isCorrect": false
       },
       {
         "label": "3",
-        "text": "Builder",
+        "text": "Abstract Factory",
         "isCorrect": false
       },
       {
@@ -684,22 +685,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "501",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "342",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "159",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
         "text": "417",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "501",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "342",
         "isCorrect": false
       }
     ],
@@ -726,22 +727,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "인덱스",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "순차",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
         "text": "해싱",
         "isCorrect": false
       },
       {
-        "label": "4",
+        "label": "2",
+        "text": "인덱스",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
         "text": "랜덤",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "순차",
         "isCorrect": false
       }
     ],
@@ -768,22 +769,22 @@
     "choices": [
       {
         "label": "1",
-        "text": "GUI",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "CLI",
+        "text": "VUI",
         "isCorrect": false
       },
       {
-        "label": "3",
+        "label": "2",
         "text": "NUI",
         "isCorrect": false
       },
       {
+        "label": "3",
+        "text": "GUI",
+        "isCorrect": true
+      },
+      {
         "label": "4",
-        "text": "VUI",
+        "text": "CLI",
         "isCorrect": false
       }
     ],
@@ -809,13 +810,13 @@
     "choices": [
       {
         "label": "1",
-        "text": "상향식, 드라이버",
-        "isCorrect": true
+        "text": "하향식, 스텁",
+        "isCorrect": false
       },
       {
         "label": "2",
-        "text": "하향식, 스텁",
-        "isCorrect": false
+        "text": "상향식, 드라이버",
+        "isCorrect": true
       },
       {
         "label": "3",

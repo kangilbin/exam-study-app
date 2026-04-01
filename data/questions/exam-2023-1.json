@@ -13,14 +13,33 @@
     "codeSnippet": "public class main{\n    public static void main(String[] args) {\n        A b = new B();\n        b.paint();\n        b.draw();\n    }\n}\nclass A {\n    public void paint() {\n        System.out.print(\"A\");\n        draw();\n    }\n    public void draw() {\n        System.out.print(\"B\");\n        draw();\n    }\n}\nclass B extends A {\n    public void paint() {\n        super.draw();\n        System.out.print(\"C\");\n        this.draw();\n    }\n    public void draw() {\n        System.out.print(\"D\");\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "ABDCD", "isCorrect": false},
-      {"label": "2", "text": "BDCDD", "isCorrect": true},
-      {"label": "3", "text": "ABCDD", "isCorrect": false},
-      {"label": "4", "text": "BDDCD", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "BDCDD",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "BDDCD",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "ABCDD",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ABDCD",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_002",
@@ -34,14 +53,33 @@
     "answer": "OAuth",
     "explanation": "OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 개방형 표준 프로토콜입니다.",
     "choices": [
-      {"label": "1", "text": "JWT", "isCorrect": false},
-      {"label": "2", "text": "OAuth", "isCorrect": true},
-      {"label": "3", "text": "SSO", "isCorrect": false},
-      {"label": "4", "text": "SAML", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "OAuth",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "SSO",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "SAML",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "JWT",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_003",
@@ -55,14 +93,33 @@
     "answer": "(1) chmod (2) 751",
     "explanation": "chmod는 파일의 권한을 변경하는 명령어입니다.\n사용자(rwx) = 4+2+1 = 7\n그룹(r-x) = 4+0+1 = 5\n기타(--x) = 0+0+1 = 1\n따라서 chmod 751 test.txt",
     "choices": [
-      {"label": "1", "text": "chmod 751", "isCorrect": true},
-      {"label": "2", "text": "chmod 752", "isCorrect": false},
-      {"label": "3", "text": "chown 751", "isCorrect": false},
-      {"label": "4", "text": "chmod 651", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "chmod 751",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "chmod 651",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "chmod 752",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "chown 751",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_004",
@@ -78,14 +135,33 @@
     "codeSnippet": "#include <stdio.h>\nint test(int n) {\n    int i, sum = 0;\n    for (i = 1; i <= n / 2; i++){\n        if (n % i == 0)\n        sum += i;\n    }\n    if (n == sum) \n        return 1;\n    return 0;\n}\nint main(){\n    int i, sum=0;\n    for (i = 2; i <= 100; i++){ \n        if (test(i))\n        sum += i;\n    }\n    printf(\"%d \", sum); \n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "34", "isCorrect": true},
-      {"label": "2", "text": "28", "isCorrect": false},
-      {"label": "3", "text": "6", "isCorrect": false},
-      {"label": "4", "text": "496", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "28",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "496",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "34",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_005",
@@ -101,14 +177,33 @@
     "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Data{\n    char c;\n    int *numPtr; \n} Data;\nint main(){\n    int num = 10;\n    Data d1;    \n    Data *d2 = malloc(sizeof(struct Data));\n    d1.numPtr = &num;  \n    d2->numPtr = &num; \n    printf(\"%d\\n\", *d1.numPtr); \n    printf(\"%d\\n\", *d2->numPtr);\n    free(d2); \n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "->", "isCorrect": true},
-      {"label": "2", "text": ".", "isCorrect": false},
-      {"label": "3", "text": "*", "isCorrect": false},
-      {"label": "4", "text": "&", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "->",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "*",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "&",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": ".",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_006",
@@ -124,14 +219,33 @@
     "codeSnippet": "SELECT A FROM T1\nUNION\nSELECT A FROM T2\nORDER BY A DESC;",
     "codeLanguage": "sql",
     "choices": [
-      {"label": "1", "text": "4, 3, 2, 1", "isCorrect": true},
-      {"label": "2", "text": "3, 1, 4, 2", "isCorrect": false},
-      {"label": "3", "text": "4, 3, 3, 2, 1, 4", "isCorrect": false},
-      {"label": "4", "text": "1, 2, 3, 4", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "4, 3, 3, 2, 1, 4",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "4, 3, 2, 1",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "3, 1, 4, 2",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "1, 2, 3, 4",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_007",
@@ -145,14 +259,33 @@
     "answer": "(1) MAC (2) RBAC (3) DAC",
     "explanation": "MAC(Mandatory Access Control): 강제적 접근 통제, 규칙 기반\nRBAC(Role-Based Access Control): 역할 기반 접근 통제\nDAC(Discretionary Access Control): 임의적 접근 통제, 신분 기반",
     "choices": [
-      {"label": "1", "text": "MAC, RBAC, DAC", "isCorrect": true},
-      {"label": "2", "text": "DAC, RBAC, MAC", "isCorrect": false},
-      {"label": "3", "text": "MAC, DAC, RBAC", "isCorrect": false},
-      {"label": "4", "text": "RBAC, MAC, DAC", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "MAC, DAC, RBAC",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "DAC, RBAC, MAC",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "RBAC, MAC, DAC",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "MAC, RBAC, DAC",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_008",
@@ -168,14 +301,33 @@
     "codeSnippet": "#include <stdio.h>\nint f(int n) {\n    if(n<=1) return 1;\n    else return n*f(n-1);\n}\nint main() {\n    printf(\"%d\", f(7));\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "5040", "isCorrect": true},
-      {"label": "2", "text": "720", "isCorrect": false},
-      {"label": "3", "text": "40320", "isCorrect": false},
-      {"label": "4", "text": "120", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "5040",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "40320",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "120",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "720",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_009",
@@ -189,14 +341,33 @@
     "answer": "ATM",
     "explanation": "ATM(Asynchronous Transfer Mode)은 비동기 전송 모드로, 53바이트 고정 길이 셀을 사용하여 데이터를 전송하는 통신 기술입니다. 가상 채널 기반 연결 지향 서비스를 제공합니다.",
     "choices": [
-      {"label": "1", "text": "ATM", "isCorrect": true},
-      {"label": "2", "text": "MPLS", "isCorrect": false},
-      {"label": "3", "text": "Frame Relay", "isCorrect": false},
-      {"label": "4", "text": "X.25", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "MPLS",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Frame Relay",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "X.25",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "ATM",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_010",
@@ -212,14 +383,33 @@
     "codeSnippet": "#include <stdio.h>\nint main() {\n    char* p = \"KOREA\";\n    printf(\"%s\\n\", p);\n    printf(\"%s\\n\", p+1);\n    printf(\"%c\\n\", *p);\n    printf(\"%c\\n\", *(p+3));\n    printf(\"%c\\n\", *p+4);\n}",
     "codeLanguage": "c",
     "choices": [
-      {"label": "1", "text": "KOREA, OREA, K, E, O", "isCorrect": true},
-      {"label": "2", "text": "KOREA, OREA, K, E, A", "isCorrect": false},
-      {"label": "3", "text": "KOREA, KOREA, K, E, O", "isCorrect": false},
-      {"label": "4", "text": "KOREA, OREA, K, R, O", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "KOREA, KOREA, K, E, O",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "KOREA, OREA, K, R, O",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "KOREA, OREA, K, E, O",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "KOREA, OREA, K, E, A",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_011",
@@ -235,14 +425,33 @@
     "codeSnippet": "class Parent {\n    int compute(int num) {\n        if(num <= 1)\n            return num;\n        return compute(num-1) + compute(num-2);\n    }\n}\nclass Child extends Parent {\n    int compute(int num) {\n        if(num <= 1)\n            return num;\n        return compute(num-1) + compute(num-3);\n    }\n}\npublic class main {\n    public static void main(String args[]) {\n        Parent obj = new Child();\n        System.out.print(obj.compute(7));\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "13", "isCorrect": false},
-      {"label": "2", "text": "2", "isCorrect": true},
-      {"label": "3", "text": "5", "isCorrect": false},
-      {"label": "4", "text": "8", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "13",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "2",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_012",
@@ -256,14 +465,33 @@
     "answer": "NAT",
     "explanation": "NAT(Network Address Translation)는 IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고받는 기술입니다.",
     "choices": [
-      {"label": "1", "text": "NAT", "isCorrect": true},
-      {"label": "2", "text": "DNS", "isCorrect": false},
-      {"label": "3", "text": "DHCP", "isCorrect": false},
-      {"label": "4", "text": "ARP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "DHCP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "DNS",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "ARP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "NAT",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_013",
@@ -279,14 +507,33 @@
     "codeSnippet": "class Person {\n    private String name;\n    public Person(String val) {\n        name = val;\n    }\n    public static String get() {\n        return name;\n    }\n    public void print() {\n        System.out.println(name);\n    }\n}\npublic class main {\n    public static void main(String[] args) {\n        Person obj = new Person(\"Kim\");\n        obj.print();\n    }\n}",
     "codeLanguage": "java",
     "choices": [
-      {"label": "1", "text": "7", "isCorrect": true},
-      {"label": "2", "text": "3", "isCorrect": false},
-      {"label": "3", "text": "14", "isCorrect": false},
-      {"label": "4", "text": "6", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "14",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "6",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_014",
@@ -302,14 +549,33 @@
     "codeSnippet": "print(\"파이썬 입출력에 대한 문제입니다.\")\nnum1, num2 = input().split()\nnum1 = int(num1)\nnum2 = int(num2)\nprint(num1, num2)\nnum3 = num1 + num2\nprint(num1, \"+\", num2, \"=\", num3)",
     "codeLanguage": "python",
     "choices": [
-      {"label": "1", "text": "split", "isCorrect": true},
-      {"label": "2", "text": "strip", "isCorrect": false},
-      {"label": "3", "text": "slice", "isCorrect": false},
-      {"label": "4", "text": "divide", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "slice",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "divide",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "strip",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "split",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_015",
@@ -323,14 +589,33 @@
     "answer": "패키지",
     "explanation": "패키지 다이어그램은 UML에서 관련된 요소들을 그룹화하여 나타내는 다이어그램입니다. 시스템의 구조를 패키지 단위로 표현합니다.",
     "choices": [
-      {"label": "1", "text": "패키지", "isCorrect": true},
-      {"label": "2", "text": "컴포넌트", "isCorrect": false},
-      {"label": "3", "text": "배치", "isCorrect": false},
-      {"label": "4", "text": "클래스", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "컴포넌트",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "패키지",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "클래스",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "배치",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_016",
@@ -344,14 +629,33 @@
     "answer": "Equivalence Partitioning",
     "explanation": "동치 분할(Equivalence Partitioning)은 입력 데이터를 동등한 클래스로 분류하고, 각 클래스에서 대표값을 선택하여 테스트하는 기법입니다. 블랙박스 테스트 기법 중 하나입니다.",
     "choices": [
-      {"label": "1", "text": "Equivalence Partitioning", "isCorrect": true},
-      {"label": "2", "text": "Boundary Value Analysis", "isCorrect": false},
-      {"label": "3", "text": "Error Guessing", "isCorrect": false},
-      {"label": "4", "text": "Statement Coverage", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "Error Guessing",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "Boundary Value Analysis",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "Statement Coverage",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "Equivalence Partitioning",
+        "isCorrect": true
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_017",
@@ -365,14 +669,33 @@
     "answer": "(1) IaaS (2) PaaS (3) SaaS",
     "explanation": "IaaS(Infrastructure as a Service): 인프라 제공\nPaaS(Platform as a Service): 플랫폼 제공\nSaaS(Software as a Service): 소프트웨어 제공",
     "choices": [
-      {"label": "1", "text": "IaaS, PaaS, SaaS", "isCorrect": true},
-      {"label": "2", "text": "PaaS, IaaS, SaaS", "isCorrect": false},
-      {"label": "3", "text": "SaaS, PaaS, IaaS", "isCorrect": false},
-      {"label": "4", "text": "IaaS, SaaS, PaaS", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "SaaS, PaaS, IaaS",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "PaaS, IaaS, SaaS",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "IaaS, PaaS, SaaS",
+        "isCorrect": true
+      },
+      {
+        "label": "4",
+        "text": "IaaS, SaaS, PaaS",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_018",
@@ -386,14 +709,33 @@
     "answer": "RIP",
     "explanation": "RIP(Routing Information Protocol)은 거리 벡터 라우팅 프로토콜로, 최단거리(Hop count)가 적은 경로를 택하여 라우팅합니다. 최대 Hop count는 15이며, IGP로 많이 사용됩니다.",
     "choices": [
-      {"label": "1", "text": "RIP", "isCorrect": true},
-      {"label": "2", "text": "OSPF", "isCorrect": false},
-      {"label": "3", "text": "BGP", "isCorrect": false},
-      {"label": "4", "text": "EIGRP", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "BGP",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "RIP",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "EIGRP",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "OSPF",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_019",
@@ -407,14 +749,33 @@
     "answer": "1. ⋈ 2. π 3. σ 4. ÷",
     "explanation": "관계 대수 기호:\njoin(조인): ⋈\nproject(프로젝트): π (파이)\nselect(셀렉트): σ (시그마)\ndivision(디비전): ÷",
     "choices": [
-      {"label": "1", "text": "⋈, π, σ, ÷", "isCorrect": true},
-      {"label": "2", "text": "σ, π, ⋈, ÷", "isCorrect": false},
-      {"label": "3", "text": "⋈, σ, π, ÷", "isCorrect": false},
-      {"label": "4", "text": "π, ⋈, σ, ÷", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "⋈, π, σ, ÷",
+        "isCorrect": true
+      },
+      {
+        "label": "2",
+        "text": "π, ⋈, σ, ÷",
+        "isCorrect": false
+      },
+      {
+        "label": "3",
+        "text": "⋈, σ, π, ÷",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "σ, π, ⋈, ÷",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   },
   {
     "id": "exam-2023-1_020",
@@ -428,13 +789,32 @@
     "answer": "참조",
     "explanation": "참조 무결성은 외래 키 값이 참조하는 테이블의 기본 키 값이거나 NULL이어야 한다는 제약 조건입니다. 두 테이블 간의 데이터 일관성을 유지합니다.",
     "choices": [
-      {"label": "1", "text": "참조 무결성", "isCorrect": true},
-      {"label": "2", "text": "개체 무결성", "isCorrect": false},
-      {"label": "3", "text": "도메인 무결성", "isCorrect": false},
-      {"label": "4", "text": "키 무결성", "isCorrect": false}
+      {
+        "label": "1",
+        "text": "키 무결성",
+        "isCorrect": false
+      },
+      {
+        "label": "2",
+        "text": "참조 무결성",
+        "isCorrect": true
+      },
+      {
+        "label": "3",
+        "text": "도메인 무결성",
+        "isCorrect": false
+      },
+      {
+        "label": "4",
+        "text": "개체 무결성",
+        "isCorrect": false
+      }
     ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": ["2023년", "1회"]
+    "tags": [
+      "2023년",
+      "1회"
+    ]
   }
 ]
