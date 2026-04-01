@@ -32,6 +32,12 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1bd8b54b-f3ce-4ece-bd7a-9199e512576e"
+      }
+    }
   }
 }
