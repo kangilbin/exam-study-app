@@ -3,11 +3,14 @@
  * 3개 탭: 학습, 기출, 내정보
  */
 
+import { View } from 'react-native';
 import { Tabs } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { BannerAdView } from '@/components/ads/BannerAdView';
 
 export default function TabLayout() {
   return (
+    <View style={{ flex: 1 }}>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#6366f1',
@@ -67,5 +70,7 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    <BannerAdView />
+    </View>
   );
 }

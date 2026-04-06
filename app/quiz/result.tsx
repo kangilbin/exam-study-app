@@ -8,6 +8,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
+import { BannerAdView } from '@/components/ads/BannerAdView';
+import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 
 export default function QuizResultScreen() {
   const router = useRouter();
@@ -17,6 +19,8 @@ export default function QuizResultScreen() {
     correct: string;
     incorrect: string;
   }>();
+
+  const { showAd } = useInterstitialAd();
 
   const total = parseInt(params.total || '0', 10);
   const correct = parseInt(params.correct || '0', 10);
@@ -62,6 +66,11 @@ export default function QuizResultScreen() {
             : '더 많은 연습이 필요합니다. 화이팅!'}
         </Text>
 
+        {/* 광고 배너 */}
+        <View style={styles.adContainer}>
+          <BannerAdView />
+        </View>
+
         {/* 버튼 */}
         <View style={styles.buttonGroup}>
           <Pressable
@@ -76,7 +85,7 @@ export default function QuizResultScreen() {
 
           <Pressable
             style={styles.secondaryButton}
-            onPress={() => router.navigate('/(tabs)')}
+            onPress={() => showAd(() => router.navigate('/(tabs)'))}
           >
             <MaterialCommunityIcons name="home" size={20} color={COLORS.primary} />
             <Text style={styles.secondaryButtonText}>홈으로</Text>
@@ -129,6 +138,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 32,
   },
+  adContainer: { width: '100%', marginBottom: 24 },
   buttonGroup: { width: '100%', gap: 12 },
   primaryButton: {
     backgroundColor: COLORS.primary,

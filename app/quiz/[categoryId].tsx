@@ -25,13 +25,17 @@ import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
 import type { CategoryId } from '@/features/questions/types';
+import { BannerAdView } from '@/components/ads/BannerAdView';
+import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 
 const FONT_SIZE_MAP = { small: 11, medium: 13, large: 16 } as const;
+const INTERSTITIAL_INTERVAL = 5;
 
 export default function QuizScreen() {
   const { categoryId } = useLocalSearchParams<{ categoryId: string }>();
   const router = useRouter();
   const category = getCategoryById(categoryId as CategoryId);
+  const { showAd } = useInterstitialAd();
 
   const startQuiz = useQuizStore((s) => s.startQuiz);
   const resetQuiz = useQuizStore((s) => s.resetQuiz);
@@ -115,7 +119,12 @@ export default function QuizScreen() {
         },
       });
     } else {
-      nextQuestion();
+      const nextIndex = currentIndex + 1;
+      if (nextIndex > 0 && nextIndex % INTERSTITIAL_INTERVAL === 0) {
+        showAd(() => nextQuestion());
+      } else {
+        nextQuestion();
+      }
     }
   };
 
@@ -259,6 +268,9 @@ export default function QuizScreen() {
           </View>
         )}
       </ScrollView>
+
+      {/* 하단 배너 광고 */}
+      <BannerAdView />
 
       {/* 하단 버튼 - 채점 후 다음 문제 이동 */}
       <View style={styles.bottomBar}>
