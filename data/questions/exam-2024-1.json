@@ -137,10 +137,10 @@
     "difficulty": 2,
     "year": 2024,
     "round": 1,
-    "question": "다음 C 코드의 출력값을 작성하시오. 문자열을 역순으로 출력하되 짝수 인덱스만 출력하는 코드이다.",
+    "question": "다음 C 코드의 출력값을 작성하시오. 문자열을 역순으로 변환한 뒤 홀수 인덱스의 문자를 출력하는 코드이다.",
     "answer": "GECA",
-    "explanation": "문자열 \"ABCDEFGH\"를 역순으로 접근하면서 짝수 인덱스(0, 2, 4, 6)에 해당하는 문자만 출력합니다.\n역순: H(7) G(6) F(5) E(4) D(3) C(2) B(1) A(0)\n짝수 인덱스: G(6), E(4), C(2), A(0)\n결과: GECA",
-    "codeSnippet": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char str[] = \"ABCDEFGH\";\n    int len = strlen(str);\n    int i;\n    for(i = len - 1; i >= 0; i--) {\n        if(i % 2 == 0)\n            printf(\"%c\", str[i]);\n    }\n    return 0;\n}",
+    "explanation": "1. reverse() 함수로 \"ABCDEFGH\"를 \"HGFEDCBA\"로 뒤집습니다.\n2. for문에서 i=1부터 i+=2로 홀수 인덱스(1,3,5,7)의 문자를 출력합니다.\n3. \"HGFEDCBA\"에서 인덱스 1=G, 3=E, 5=C, 7=A\n결과: GECA",
+    "codeSnippet": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char* str){\n    int len = strlen(str);\n    char temp;\n    char*p1 = str;\n    char*p2 = str + len - 1;\n    while(p1<p2){\n        temp = *p1;\n        *p1 = *p2;\n        *p2 = temp;\n        p1++;\n        p2--;\n    }\n}\n\nint main(int argc, char* argv[]){\n    char str[100] = \"ABCDEFGH\";\n\n    reverse(str);\n\n    int len = strlen(str);\n\n    for(int i=1; i<len; i+=2){\n        printf(\"%c\",str[i]);\n    }\n\n    printf(\"\\n\");\n\n    return 0;\n}",
     "codeLanguage": "c",
     "choices": [
       {
