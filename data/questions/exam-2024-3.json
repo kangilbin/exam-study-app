@@ -12,28 +12,6 @@
     "explanation": "Java에서 문자열 리터럴은 String Pool에 저장되어 같은 리터럴은 같은 참조를 가집니다.\nString a = \"Hello\", b = \"Hello\"일 때 a==b는 true(같은 Pool 참조)이므로 \"O\"가 출력됩니다.\na.equals(b)도 true이므로 \"O\"가 출력됩니다.\nnew String()으로 생성한 경우 == 비교는 false이지만 equals()는 true입니다.\n최종 출력: OOAAA",
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        String a = \"Hello\";\n        String b = \"Hello\";\n        String c = new String(\"Hello\");\n        System.out.print(a == b ? \"O\" : \"X\");\n        System.out.print(a.equals(b) ? \"O\" : \"X\");\n        System.out.print(a == c ? \"A\" : \"B\");\n        System.out.print(a.equals(c) ? \"A\" : \"B\");\n        System.out.print(b.equals(c) ? \"A\" : \"B\");\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "OOBAA",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "OOBBA",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "OXBAA",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "OOAAA",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -58,28 +36,6 @@
     "explanation": "func(lst)는 리스트를 역순으로 뒤집습니다.\nlst = [1,2,3,4,5,6] → func 실행 후 lst = [6,5,4,3,2,1]\nlst[::2] = [6,4,2] → sum = 12\nlst[1::2] = [5,3,1] → sum = 9\n12 - 9 = 3",
     "codeSnippet": "def func(lst):\n    for i in range(len(lst) // 2):\n        lst[i], lst[-i-1] = lst[-i-1], lst[i]\n\nlst = [1, 2, 3, 4, 5, 6]\nfunc(lst)\nprint(sum(lst[::2]) - sum(lst[1::2]))",
     "codeLanguage": "python",
-    "choices": [
-      {
-        "label": "1",
-        "text": "0",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "6",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "3",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "-3",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -102,28 +58,6 @@
     "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "1",
     "explanation": "INNER JOIN은 두 테이블에서 조인 조건을 만족하는 행만 결합합니다. A와 B를 id로 조인한 후 A.val > 10 조건을 만족하는 행의 수를 COUNT(*)로 세면 1이 됩니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "2",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "0",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "1",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -146,28 +80,6 @@
     "question": "페이지 프레임 수가 3이고, 페이지 참조 순서가 2, 3, 2, 1, 5, 2, 3, 5, 2, 1, 3, 5일 때, LRU(Least Recently Used) 페이지 교체 알고리즘을 사용한 경우 페이지 부재(Page Fault) 횟수를 구하시오. (초기 상태는 비어있음)",
     "answer": "12",
     "explanation": "LRU는 가장 오랫동안 사용되지 않은 페이지를 교체합니다.\n프레임 3개로 참조열을 처리하면:\n2→부재(2), 3→부재(2,3), 2→적중, 1→부재(2,3,1), 5→부재(교체→3,1,5 또는 2,1,5), ...\n전체 과정을 거치면 총 12번의 페이지 부재가 발생합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "12",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "11",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "10",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "9",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -190,28 +102,6 @@
     "question": "IP 변조와 ICMP 패킷을 이용한 DDoS 공격의 일종으로, 출발지 IP를 피해자의 IP로 변조한 ICMP Echo Request 패킷을 브로드캐스트 주소로 전송하여 대량의 응답이 피해자에게 집중되게 하는 공격은?",
     "answer": "스머프(Smurf)",
     "explanation": "스머프(Smurf) 공격은 공격자가 출발지 IP를 피해자의 IP로 위조한 ICMP Echo Request 패킷을 네트워크의 브로드캐스트 주소로 보내, 해당 네트워크의 모든 호스트가 피해자에게 ICMP Echo Reply를 보내도록 유도하는 DDoS 공격입니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "SYN Flooding",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "Ping of Death",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "Land Attack",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "스머프(Smurf)",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -234,28 +124,6 @@
     "question": "GoF 디자인 패턴은 생성, 구조, 행위 3가지로 분류된다. Observer, Strategy, Command, Iterator 패턴이 속하는 분류는?",
     "answer": "행위(Behavioral)",
     "explanation": "GoF 디자인 패턴의 분류:\n- 생성(Creational): Factory Method, Abstract Factory, Builder, Prototype, Singleton\n- 구조(Structural): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy\n- 행위(Behavioral): Observer, Strategy, Command, Iterator, Mediator, Memento, State, Template Method, Visitor, Chain of Responsibility, Interpreter\nObserver, Strategy, Command, Iterator는 모두 행위 패턴에 해당합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "행위(Behavioral)",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "구조(Structural)",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "아키텍처(Architectural)",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "생성(Creational)",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -279,28 +147,6 @@
     "explanation": "func() 내 static 변수 x는 프로그램 실행 동안 값이 유지됩니다.\nmain에서 for문이 4번(i=0,1,2,3) 반복됩니다.\n매 반복마다 x++(main의 x)하고 func()를 호출합니다.\nfunc() 호출 시마다 static x가 2씩 증가:\n1회: static x=2, 2회: x=4, 3회: x=6, 4회: x=8\nsum = 2+4+6+8 = 20",
     "codeSnippet": "#include <stdio.h>\nint func() {\n    int static x = 0;\n    x += 2;\n    return x;\n}\nint main() {\n    int x = 1;\n    int sum = 0;\n    for (int i = 0; i < 4; i++) {\n        x++;\n        sum += func();\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "8",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "24",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "20",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "16",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -322,28 +168,6 @@
     "question": "릴레이션에서 기본키(Primary Key)는 NULL 값을 가질 수 없고 중복될 수 없다는 무결성 제약조건은?",
     "answer": "개체(Entity) 무결성",
     "explanation": "개체 무결성(Entity Integrity)은 기본키를 구성하는 어떠한 속성 값도 NULL이거나 중복될 수 없다는 제약조건입니다.\n- 참조 무결성: 외래키 값은 참조하는 릴레이션의 기본키 값이거나 NULL이어야 함\n- 도메인 무결성: 속성 값이 정의된 도메인에 속해야 함",
-    "choices": [
-      {
-        "label": "1",
-        "text": "참조(Referential) 무결성",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "도메인(Domain) 무결성",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "개체(Entity) 무결성",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "키(Key) 무결성",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -366,28 +190,6 @@
     "question": "URL의 구성요소를 순서대로 나열한 것이다. 빈칸에 해당하는 번호를 순서대로 쓰시오.\n\n(  )://(  ):(  )/(  )?(  )\n1.포트번호 2.경로 3.프로토콜 4.호스트(도메인) 5.쿼리스트링\n\n답을 숫자로 나열하시오.",
     "answer": "43125",
     "explanation": "URL(Uniform Resource Locator)의 구조:\n프로토콜(3)://호스트(4):포트번호(1)/경로(2)?쿼리스트링(5)\n예: https://www.example.com:443/path/page?key=value\n따라서 순서는 4, 3, 1, 2, 5 → 문제 형식에 따라 43125",
-    "choices": [
-      {
-        "label": "1",
-        "text": "34215",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "34125",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "43215",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "43125",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -411,28 +213,6 @@
     "explanation": "func 함수는 인자의 타입에 따라 다른 값을 반환합니다.\nfunc('100.0'): type(str) == type(str) → len('100.0') = 5\nfunc(100.0): type(float) != type(int), type(float) != type(str) → else: 20\nfunc((100,200)): type(tuple) → else: 20\n5 + 20 + 20 = 45",
     "codeSnippet": "def func(value):\n    if type(value) == type(100):\n        return 100\n    elif type(value) == type(\"\"):\n        return len(value)\n    else:\n        return 20\n\na = '100.0'\nb = 100.0\nc = (100, 200)\nprint(func(a) + func(b) + func(c))",
     "codeLanguage": "python",
-    "choices": [
-      {
-        "label": "1",
-        "text": "60",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "45",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "140",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "125",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -456,28 +236,6 @@
     "explanation": "Base a = new Derivate(): 업캐스팅\na.getX(): 오버라이딩된 Derivate의 getX() 호출 → 7*3 = 21\na.x: 선언 타입(Base)의 필드 접근 → 3 (필드는 오버라이딩이 아닌 은닉)\nb.getX(): Derivate의 getX() → 7*3 = 21\nb.x: Derivate의 x → 7\n21 + 3 + 21 + 7 = 52",
     "codeSnippet": "class Base {\n    int x = 3;\n    int getX() { return x * 2; }\n}\nclass Derivate extends Base {\n    int x = 7;\n    int getX() { return x * 3; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Base a = new Derivate();\n        Derivate b = new Derivate();\n        System.out.print(a.getX() + a.x + b.getX() + b.x);\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "40",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "48",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "52",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "56",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -503,28 +261,6 @@
     "explanation": "연결리스트의 노드들을 swap한 후 순회하면서 출력합니다. 초기 연결리스트 1→2→3에서 특정 노드들의 포인터를 교환한 결과, 순회 시 3→1→2 순서로 출력되어 312가 됩니다.",
     "codeSnippet": "#include <stdio.h>\nstruct Node {\n    int data;\n    struct Node* next;\n};\nint main() {\n    struct Node a = {1, NULL};\n    struct Node b = {2, NULL};\n    struct Node c = {3, NULL};\n    struct Node* head = &a;\n    a.next = &b;\n    b.next = &c;\n    head = &c;\n    c.next = &a;\n    a.next = &b;\n    b.next = NULL;\n    struct Node* cur = head;\n    while (cur != NULL) {\n        printf(\"%d\", cur->data);\n        cur = cur->next;\n    }\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "321",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "231",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "123",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "312",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -546,28 +282,6 @@
     "question": "화이트박스 테스트의 테스트 커버리지 유형 3가지를 쓰시오.",
     "answer": "문장, 분기, 조건",
     "explanation": "화이트박스 테스트의 주요 커버리지 유형:\n1) 문장 커버리지(Statement Coverage): 모든 실행 문장을 최소 1번 실행\n2) 분기 커버리지(Branch/Decision Coverage): 모든 분기(참/거짓)를 최소 1번 실행\n3) 조건 커버리지(Condition Coverage): 각 개별 조건식이 참/거짓을 최소 1번씩 가지도록 실행\n이 외에도 경로 커버리지, MC/DC 등이 있습니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "기능, 성능, 보안",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "문장, 분기, 조건",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "블랙박스, 화이트박스, 그레이박스",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "단위, 통합, 시스템",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -589,28 +303,6 @@
     "question": "UML 클래스 다이어그램에서 클래스 간의 관계 유형 중 다음 설명에 해당하는 것을 각각 쓰시오.\n(가) 한 클래스가 다른 클래스를 사용하는 관계 (실선)\n(나) 상속 관계 (빈 삼각형 화살표)\n(다) 한 클래스가 다른 클래스를 일시적으로 사용하는 관계 (점선 화살표)",
     "answer": "연관, 일반화, 의존",
     "explanation": "(가) 연관(Association): 클래스 간에 지속적인 관계가 있음을 나타내며 실선으로 표현합니다.\n(나) 일반화(Generalization): 상속 관계를 나타내며 빈 삼각형 화살표로 표현합니다.\n(다) 의존(Dependency): 한 클래스가 다른 클래스를 일시적으로 사용하는 관계로 점선 화살표로 표현합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "연관, 일반화, 의존",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "연관, 구현, 합성",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "집합, 상속, 실체화",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "의존, 일반화, 연관",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -632,28 +324,6 @@
     "question": "다음 설명에 해당하는 데이터베이스 키(Key)를 각각 쓰시오.\n(가) 다른 릴레이션의 기본키를 참조하는 키\n(나) 유일성과 최소성을 만족하는 키\n(다) 후보키 중 기본키로 선정되지 않은 키\n(라) 유일성은 만족하지만 최소성은 만족하지 않을 수 있는 키",
     "answer": "외래키, 후보키, 대체키, 슈퍼키",
     "explanation": "(가) 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하여 릴레이션 간의 관계를 표현합니다.\n(나) 후보키(Candidate Key): 유일성과 최소성을 모두 만족하는 키로, 기본키가 될 수 있는 후보입니다.\n(다) 대체키(Alternate Key): 후보키 중 기본키로 선정되지 않은 나머지 키입니다.\n(라) 슈퍼키(Super Key): 유일성은 만족하지만 최소성은 만족하지 않을 수 있는 키입니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "외래키, 기본키, 후보키, 복합키",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "참조키, 기본키, 보조키, 복합키",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "참조키, 후보키, 대체키, 기본키",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "외래키, 후보키, 대체키, 슈퍼키",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -680,28 +350,6 @@
     "explanation": "arr={3,1,4,1,5}, p=arr, pp=&p\nfunc에서 이중 포인터를 통해 각 원소를 (arr[i]+i)%5로 변환합니다:\narr[0]=(3+0)%5=3, arr[1]=(1+1)%5=2, arr[2]=(4+2)%5=1\narr[3]=(1+3)%5=4, arr[4]=(5+4)%5=4\nnum = arr[2] = 1",
     "codeSnippet": "#include <stdio.h>\nvoid func(int** arr, int size) {\n    for (int i = 0; i < size; i++) {\n        *(*arr + i) = (*(*arr + i) + i) % size;\n    }\n}\nint main() {\n    int arr[] = {3, 1, 4, 1, 5};\n    int* p = arr;\n    int** pp = &p;\n    int num = 6;\n    func(pp, 5);\n    num = arr[2];\n    printf(\"%d\", num);\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "4",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "1",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "6",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -723,28 +371,6 @@
     "question": "공중 네트워크(인터넷)를 통해 사설 네트워크처럼 안전하게 통신할 수 있도록 암호화된 터널을 생성하는 기술은 무엇인가?",
     "answer": "VPN",
     "explanation": "VPN(Virtual Private Network, 가상 사설망)은 공중 네트워크(인터넷)를 통해 전용 회선처럼 안전한 통신을 제공하는 기술입니다. 터널링, 암호화, 인증 기술을 사용하여 데이터를 보호합니다. IPSec, SSL/TLS 등의 프로토콜을 사용할 수 있습니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "Firewall",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "VPN",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "NAT",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "Proxy",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -768,28 +394,6 @@
     "explanation": "func()에서 NullPointerException을 throw합니다.\ntry 블록에서 func() 호출 시 예외 발생\ncatch(NullPointerException e): NullPointerException이 잡히므로 sum = 0 + 1 = 1\nfinally 블록은 항상 실행: sum = 1 + 100 = 101\n출력: 101",
     "codeSnippet": "public class ExceptionHandling {\n    public static void main(String[] args) {\n        int sum = 0;\n        try {\n            func();\n        } catch (NullPointerException e) {\n            sum = sum + 1;\n        } catch (Exception e) {\n            sum = sum + 10;\n        } finally {\n            sum = sum + 100;\n        }\n        System.out.print(sum);\n    }\n    static void func() throws Exception {\n        throw new NullPointerException();\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "111",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "100",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "110",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "101",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -814,28 +418,6 @@
     "explanation": "Java의 제네릭은 컴파일 시 타입 소거(Type Erasure)가 적용됩니다. 런타임에는 제네릭 타입 정보가 사라지므로 List<String>과 List<Integer>의 getClass()가 동일합니다. 이를 이용한 조건 분기와 연산 결과로 \"B0\"이 출력됩니다.",
     "codeSnippet": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<String> a = new ArrayList<>();\n        List<Integer> b = new ArrayList<>();\n        if (a.getClass() == b.getClass()) {\n            System.out.print(\"B\");\n        } else {\n            System.out.print(\"A\");\n        }\n        System.out.print(a.size());\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "A0",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "B0",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "B1",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "A1",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [
@@ -857,28 +439,6 @@
     "question": "별도의 고정된 기반 네트워크 장치(기지국, 액세스 포인트 등) 없이 이동 단말기들만으로 구성되어, 각 노드가 라우터 역할을 하면서 동적으로 경로를 설정하는 네트워크를 무엇이라 하는가?",
     "answer": "Ad-hoc Network",
     "explanation": "Ad-hoc Network(애드혹 네트워크)는 고정된 인프라(기지국, 라우터 등) 없이 이동 노드들만으로 구성되는 자율적인 네트워크입니다. 각 노드가 호스트이자 라우터 역할을 수행하며, 멀티홉 라우팅을 통해 통신합니다. MANET(Mobile Ad-hoc Network)이라고도 합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "Mesh Network",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "Sensor Network",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "Ad-hoc Network",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "Peer-to-Peer Network",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/495",
     "tags": [

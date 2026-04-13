@@ -5,7 +5,9 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { Question, CategoryId } from '@/features/questions/types';
+import { detectAnswerType, gradeAnswer } from '@/features/questions/services/gradingService';
+import { getQuestionById } from '@/features/questions/services/questionService';
+import type { Question, CategoryId, GradeResult } from '@/features/questions/types';
 
 interface QuizState {
   // 상태
@@ -18,6 +20,10 @@ interface QuizState {
   results: { questionId: string; isCorrect: boolean }[];
   startedAt: number | null;
 
+  // 주관식 상태
+  userAnswers: Record<string, string>;
+  gradeResult: GradeResult | null;
+
   // 액션
   startQuiz: (categoryId: CategoryId, questions: Question[]) => void;
   canResume: (categoryId: string) => boolean;
@@ -26,6 +32,11 @@ interface QuizState {
   revealExplanation: () => void;
   nextQuestion: () => void;
   resetQuiz: () => void;
+
+  // 주관식 액션
+  setUserAnswer: (key: string, value: string) => void;
+  removeUserAnswers: (prefix: string) => void;
+  submitSubjectiveAnswer: () => void;
 }
 
 export const useQuizStore = create<QuizState>()(
@@ -39,6 +50,8 @@ export const useQuizStore = create<QuizState>()(
       isExplanationRevealed: false,
       results: [],
       startedAt: null,
+      userAnswers: {},
+      gradeResult: null,
 
       startQuiz: (categoryId, questions) => {
         set({
@@ -50,6 +63,8 @@ export const useQuizStore = create<QuizState>()(
           isExplanationRevealed: false,
           results: [],
           startedAt: Date.now(),
+          userAnswers: {},
+          gradeResult: null,
         });
       },
 
@@ -94,6 +109,8 @@ export const useQuizStore = create<QuizState>()(
             selectedChoiceIndex: null,
             isAnswered: false,
             isExplanationRevealed: false,
+            userAnswers: {},
+            gradeResult: null,
           });
         }
       },
@@ -108,6 +125,36 @@ export const useQuizStore = create<QuizState>()(
           isExplanationRevealed: false,
           results: [],
           startedAt: null,
+          userAnswers: {},
+          gradeResult: null,
+        });
+      },
+
+      setUserAnswer: (key, value) => {
+        set({ userAnswers: { ...get().userAnswers, [key]: value } });
+      },
+
+      removeUserAnswers: (prefix) => {
+        const current = get().userAnswers;
+        const updated: Record<string, string> = {};
+        for (const [k, v] of Object.entries(current)) {
+          if (!k.startsWith(prefix)) updated[k] = v;
+        }
+        set({ userAnswers: updated });
+      },
+
+      submitSubjectiveAnswer: () => {
+        const { questions, currentIndex, userAnswers, results } = get();
+        const question = questions[currentIndex];
+        if (!question) return;
+
+        const answerMeta = detectAnswerType(question);
+        const result = gradeAnswer(userAnswers, answerMeta);
+
+        set({
+          isAnswered: true,
+          gradeResult: result,
+          results: [...results, { questionId: question.id, isCorrect: result.isCorrect }],
         });
       },
     }),
@@ -116,11 +163,23 @@ export const useQuizStore = create<QuizState>()(
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (state) => ({
         categoryId: state.categoryId,
-        questions: state.questions,
+        questionIds: state.questions.map((q) => q.id),
         currentIndex: state.currentIndex,
         results: state.results,
         startedAt: state.startedAt,
+        userAnswers: state.userAnswers,
       }),
+      onRehydrateStorage: () => (state) => {
+        // questionIds → questions 복원 (항상 최신 JSON 데이터 사용)
+        if (!state) return;
+        const stored = (state as any).questionIds as string[] | undefined;
+        if (stored && stored.length > 0 && state.questions.length === 0) {
+          const questions = stored
+            .map((id: string) => getQuestionById(id))
+            .filter((q): q is Question => q !== null);
+          state.questions = questions;
+        }
+      },
     }
   )
 );

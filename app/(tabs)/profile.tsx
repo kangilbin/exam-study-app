@@ -27,7 +27,7 @@ export default function ProfileScreen() {
   const updateSettings = useUserStore((s) => s.updateSettings);
 
   const incorrectCount = useMemo(
-    () => Object.values(progress).filter((p) => p.status === 'incorrect').length,
+    () => getIncorrectQuestions(progress, 'exam').length,
     [progress]
   );
 

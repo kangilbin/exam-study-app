@@ -41,6 +41,9 @@ interface UserState {
   // 액션 (설정)
   updateSettings: (settings: Partial<UserSettings>) => void;
 
+  // 액션 (초기화)
+  resetCategoryProgress: (categoryId: CategoryId) => void;
+
   // 액션 (통계)
   getCategoryStats: (categoryId: CategoryId) => CategoryStats;
   getOverallStats: () => {
@@ -112,6 +115,17 @@ export const useUserStore = create<UserState>()(
         set((state) => ({
           settings: { ...state.settings, ...newSettings },
         }));
+      },
+
+      resetCategoryProgress: (categoryId) => {
+        const { progress } = get();
+        const questions = loadQuestionsByCategory(categoryId);
+        const questionIds = new Set(questions.map((q) => q.id));
+        const updated = { ...progress };
+        for (const id of questionIds) {
+          delete updated[id];
+        }
+        set({ progress: updated });
       },
 
       getCategoryStats: (categoryId) => {

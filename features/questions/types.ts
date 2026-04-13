@@ -78,6 +78,9 @@ export interface Question {
   codeSnippet?: string;             // 코드 스니펫
   codeLanguage?: CodeLanguage;      // 코드 언어
 
+  // 이미지 문제 전용
+  imageUrl?: string;                // 문제 이미지 경로 (테이블/다이어그램 등)
+
   // 객관식 전용
   choices?: Choice[];                // 선택지 (없으면 단답형/서술형으로 암기 모드만)
 
@@ -123,4 +126,53 @@ export interface UserSettings {
   darkMode: boolean;
   shuffleMode: boolean;
   fontSize: 'small' | 'medium' | 'large'; // 코드 블록 폰트 크기
+}
+
+/** 주관식 답변 유형 */
+export type AnswerType =
+  | 'text'           // 일반 한글/텍스트
+  | 'abbreviation'   // 영문 약어 (CRC, ARP)
+  | 'fullName'       // 영문명 (Observer Pattern)
+  | 'multiple'       // 복수 답변 ((1) ARP (2) RARP)
+  | 'ordering'       // 순서 나열 (기능적 > 통신적 > 시간적)
+  | 'codeOutput'     // 코드 출력값
+  | 'sql'            // SQL문
+  | 'sqlResult';     // SQL 쿼리 실행 결과 (열별 입력)
+
+/** 복수 답변의 개별 파트 */
+export interface AnswerPart {
+  label: string;     // "(1)", "ㄱ" 등
+  answer: string;    // 해당 파트의 정답
+  alternatives?: string[];  // 보기 라벨 등 대안 정답
+}
+
+/** 순서 나열 보기 항목 */
+export interface OrderingItem {
+  label: string;     // "ㄱ", "ㄴ", "ㄷ"
+  text: string;      // "기능적 응집도"
+}
+
+/** 답변 분석 결과 (런타임 생성) */
+export interface AnswerMeta {
+  type: AnswerType;
+  hint: string;                   // 입력칸 placeholder
+  parts?: AnswerPart[];           // multiple일 때 각 파트
+  alternatives?: string[];        // 동의어 목록
+  orderingItems?: OrderingItem[]; // ordering 보기 목록
+  correctOrder?: string;          // ordering 정답 기호 순서
+  sqlColumns?: string[];          // sqlResult 컬럼명 목록
+  sqlExpectedRows?: string[][];   // sqlResult 정답 행들
+  primaryAnswer: string;          // 정규화된 주요 정답
+}
+
+/** 주관식 채점 결과 */
+export interface GradeResult {
+  isCorrect: boolean;
+  partResults?: {
+    label: string;
+    isCorrect: boolean;
+    userAnswer: string;
+    correctAnswer: string;
+  }[];
+  correctAnswer: string;          // 표시용 정답 텍스트
 }

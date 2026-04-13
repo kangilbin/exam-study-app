@@ -10,28 +10,6 @@
     "question": "시스템을 폴더 모양의 단위로 구분하여 구성 요소 간의 관계를 표현하며 <<import>>, <<access>> 등의 의존관계를 나타내는 UML 다이어그램은?",
     "answer": "패키지 다이어그램",
     "explanation": "패키지 다이어그램은 시스템 구조를 패키지 단위로 나누어 의존성을 시각적으로 표현합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "컴포넌트 다이어그램",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "패키지 다이어그램",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "배포 다이어그램",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "클래스 다이어그램",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -51,28 +29,6 @@
     "question": "화이트박스 테스트에서 결정문 내 각 개별 조건식이 True/False 두 가지를 모두 만족하도록 테스트케이스를 설계하는 커버리지는?",
     "answer": "조건 커버리지 (Condition Coverage)",
     "explanation": "조건 커버리지는 각 개별 조건의 참/거짓을 테스트하지만, 전체 결정식의 결과가 모두 수행된다고 보장하지는 않습니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "문장 커버리지",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "결정 커버리지",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "조건 커버리지",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "경로 커버리지",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -92,28 +48,6 @@
     "question": "리눅스 명령어에서 (1)현재 디렉터리 경로 출력, (2)디렉터리 내용 목록 표시, (3)디렉터리 이동, (4)파일 복사 명령어는?",
     "answer": "1. pwd  2. ls  3. cd  4. cp",
     "explanation": "pwd: 현재 경로, ls: 목록, cd: 이동, cp: 복사, mv: 이동/이름변경, rm: 삭제",
-    "choices": [
-      {
-        "label": "1",
-        "text": "pwd, ls, cd, cp",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "ls, pwd, mv, cp",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "ls, cd, pwd, mv",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "pwd, dir, cd, copy",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -133,28 +67,6 @@
     "question": "오류검출에서 (1)검사비트 추가로 오류 수정 가능한 코드, (2)수신측 자체 수정 방식, (3)재전송 요구 방식, (4)1비트 검사비트 추가, (5)다항식 사용 검출은?",
     "answer": "1. 해밍 코드  2. FEC  3. BEC  4. 패리티 검사  5. CRC 검사",
     "explanation": "FEC(Forward Error Correction): 전진 오류 수정\nBEC(Backward Error Correction): 역방향 오류 수정(재전송)",
-    "choices": [
-      {
-        "label": "1",
-        "text": "CRC, FEC, BEC, Parity, Hamming",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "Hamming, FEC, BEC, Parity, CRC",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "Hamming, BEC, FEC, CRC, Parity",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "Parity, FEC, BEC, Hamming, CRC",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -178,28 +90,6 @@
     "explanation": "p는 test[1]={2,\"DC\"}를 가리킴. p->g는 \"DC\", p->i-1=2-1=1. \"DC\"+1=\"C\"",
     "codeSnippet": "#include <stdio.h>\nstruct Test {\n    int i;\n    const char *g;\n};\nint main() {\n    struct Test test[] = {{1,\"AB\"},{2,\"DC\"},{3,\"EB\"}};\n    struct Test *p = &test[1];\n    printf(\"%s\", p->g + (p->i - 1));\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "C",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "D",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "DC",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "AB",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -222,28 +112,6 @@
     "explanation": "문자열 길이 a=15. str[15-2]=str[13]='E' (REPUBLICOFKOR'E'A)",
     "codeSnippet": "#include <stdio.h>\nint main(void) {\n    char str[] = \"REPUBLICOFKOREA\";\n    int a = 0;\n    while(str[a] != '\\0') ++a;\n    putchar(str[a-2]);\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "E",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "R",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "K",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "A",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -266,28 +134,6 @@
     "explanation": "t3→t2→t1 순회: sum=0*3+11=11, 11*3+7=40, 40*3+5=125. (125^42)+100=83+100 에러... 실제 125^42=87, 87+100=187",
     "codeSnippet": "#include <stdio.h>\nstruct Node {\n    struct Node* next;\n    unsigned int x;\n};\nint main() {\n    struct Node t1={0,5u}, t2={0,7u}, t3={0,11u};\n    t3.next=&t2; t2.next=&t1;\n    struct Node* curr=&t3;\n    int sum=0;\n    while(curr) {\n        sum = sum*3 + curr->x;\n        curr = curr->next;\n    }\n    sum = (sum^42u) + 100u;\n    printf(\"%u\\n\", sum);\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "225",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "167",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "187",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "142",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -310,28 +156,6 @@
     "explanation": "class WashingMachine implements Machine { ... } 형태로 인터페이스를 구현합니다.",
     "codeSnippet": "interface Machine {\n    void run();\n}\nclass WashingMachine (_____) Machine {\n    public void run() {\n        System.out.println(\"Washing machine running\");\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "interface",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "implements",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "extends",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "abstract",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -354,28 +178,6 @@
     "explanation": "enumerate로 인덱스와 리스트를 순회하며 sum과 len을 딕셔너리에 저장합니다.",
     "codeSnippet": "data = [[3,5,2,4,1],[4,5,1],[4,4,1,5,4],[4,5]]\nresult = {}\nfor index, lis in enumerate(data):\n    list_sum = sum(lis)\n    list_len = len(lis)\n    result[index] = (list_sum, list_len)\nprint(result)",
     "codeLanguage": "python",
-    "choices": [
-      {
-        "label": "1",
-        "text": "{0:(15,5), 1:(10,3), 2:(18,5), 3:(9,2)}",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "{0:(15,4), 1:(10,3), 2:(18,4), 3:(9,2)}",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "{1:(15,5), 2:(10,3), 3:(18,5), 4:(9,2)}",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "{0:[15,5], 1:[10,3], 2:[18,5], 3:[9,2]}",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -396,28 +198,6 @@
     "question": "다음 테이블에서 쿼리 실행 결과를 구하시오.",
     "answer": "4",
     "explanation": "조건에 맞는 행의 수를 구하는 문제입니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "6",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "2",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "8",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "4",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -438,28 +218,6 @@
     "question": "한 번 사용하면 즉시 폐기되어 재사용이 불가능하며, 은행 인증 등 고보안 영역에서 사용하는 인증 기술은?",
     "answer": "OTP (One-Time Password)",
     "explanation": "OTP는 일회용 비밀번호로, 시간 동기화 또는 카운터 기반으로 매번 새로운 값을 생성합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "MFA",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "PKI",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "SSO",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "OTP",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -482,28 +240,6 @@
     "explanation": "super(a,a)로 부모 클래스 Rectangle의 생성자 Rectangle(int,int)를 호출합니다.",
     "codeSnippet": "class Rectangle {\n    int width, height;\n    Rectangle(int w, int h) { this.width=w; this.height=h; }\n}\nclass Square extends Rectangle {\n    Square(int a) { ____(a,a); }\n    int getSquareArea() { return width*height; }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "extends",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "parent",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "this",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "super",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -524,28 +260,6 @@
     "question": "사용자가 다른 서비스의 계정으로 로그인할 수 있게 하며, Access Token을 발급하여 API를 호출하는 인증 위임 기술은?",
     "answer": "OAuth",
     "explanation": "OAuth는 인가(Authorization)를 통해 제3자에게 접근 권한을 위임하는 기술입니다. 소셜 로그인이 대표적 예입니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "SSO",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "OAuth",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "SAML",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "OpenID",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -568,28 +282,6 @@
     "explanation": "디비전은 S의 모든 튜플과 연관된 R의 튜플을 반환합니다.",
     "codeSnippet": "[R 테이블]\n  A  |   B\n-----+-----\n a1  |  b1\n a2  |  b2\n a1  |  b3\n\n[S 테이블]\n B\n-----\nb1\nb3\n",
     "codeLanguage": "sql",
-    "choices": [
-      {
-        "label": "1",
-        "text": "a1",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "a1, a2",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "a1, a2, a3",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "a2",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -612,28 +304,6 @@
     "explanation": "y%3=1, 1<3이므로 z=2. z&(z>>1)=2&1=0. x>5(true)&&z<=3(true)이므로 z*x=0*7=0",
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int x=7, y=4, z;\n    z = y%3<3 ? 2 : 1;\n    z = z & z >> 1;\n    z = x>5 && z<=3 ? z*x : z/x;\n    printf(\"%d\", z);\n    return 0;\n}",
     "codeLanguage": "c",
-    "choices": [
-      {
-        "label": "1",
-        "text": "14",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "2",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "0",
-        "isCorrect": true
-      },
-      {
-        "label": "4",
-        "text": "7",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -654,28 +324,6 @@
     "question": "관계형 DB에서 (ㄱ)한 행을 의미하는 것, (ㄴ)실제 저장된 데이터 전체, (ㄷ)행의 총 개수는?",
     "answer": "ㄱ. 튜플  ㄴ. 인스턴스  ㄷ. 카디널리티",
     "explanation": "튜플=행=레코드, 인스턴스=실제 데이터, 카디널리티=행 수, 차수(Degree)=열 수",
-    "choices": [
-      {
-        "label": "1",
-        "text": "튜플, 스키마, 차수",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "레코드, 테이블, 도메인",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "속성, 스키마, 차수",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "튜플, 인스턴스, 카디널리티",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -698,28 +346,6 @@
     "explanation": "Tri.A.name()=\"A\", length()=1. Tri.values()[1]=Tri.B. Tri.B.code()=\"AB\"",
     "codeSnippet": "enum Tri {\n    A(\"A\"), B(\"AB\"), C(\"ABC\");\n    private String code;\n    Tri(String code) { this.code = code; }\n    public String code() { return code; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Tri t = Tri.values()[Tri.A.name().length()];\n        System.out.print(t.code());\n    }\n}",
     "codeLanguage": "java",
-    "choices": [
-      {
-        "label": "1",
-        "text": "AB",
-        "isCorrect": true
-      },
-      {
-        "label": "2",
-        "text": "B",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "A",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "ABC",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -739,28 +365,6 @@
     "question": "접근통제에서 (ㄱ)보안 등급에 따라 중앙에서 일괄 설정, (ㄴ)역할에 따라 권한 부여, (ㄷ)소유자가 자유롭게 권한 설정하는 방식은?",
     "answer": "ㄱ. MAC  ㄴ. RBAC  ㄷ. DAC",
     "explanation": "MAC: 강제적(보안등급), RBAC: 역할기반, DAC: 임의적(소유자)",
-    "choices": [
-      {
-        "label": "1",
-        "text": "DAC, MAC, RBAC",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "RBAC, DAC, MAC",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "MAC, DAC, RBAC",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "MAC, RBAC, DAC",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -782,28 +386,6 @@
     "question": "테스트케이스 구성요소에서  식별자 ID - 테스트항목 - (1) - (2) - (3) ()안에 들어갈 알맞는 보기를 고르시오.",
     "answer": "1. 테스트 조건  2. 테스트 데이터  3. 예상 결과",
     "explanation": "테스트 케이스의 핵심 구성요소입니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "테스트 조건, 테스트 환경, 성공기준",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "테스트 조건, 테스트 데이터, 예상 결과",
-        "isCorrect": true
-      },
-      {
-        "label": "3",
-        "text": "테스트 데이터, 수행 단계, 테스트 유형",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "테스트 환경, 테스트 유형, 수행 단계",
-        "isCorrect": false
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [
@@ -822,28 +404,6 @@
     "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "4",
     "explanation": "col1 IN (2,3) 또는 col2 IN (3,5) 조건을 만족하는 행 중 col2가 NULL이 아닌 행의 수를 구합니다.",
-    "choices": [
-      {
-        "label": "1",
-        "text": "6",
-        "isCorrect": false
-      },
-      {
-        "label": "2",
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "label": "3",
-        "text": "5",
-        "isCorrect": false
-      },
-      {
-        "label": "4",
-        "text": "4",
-        "isCorrect": true
-      }
-    ],
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/558",
     "tags": [

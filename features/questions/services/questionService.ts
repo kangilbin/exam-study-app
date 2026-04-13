@@ -126,14 +126,22 @@ export function filterQuestions(options: {
   return result;
 }
 
-/** 오답 문제만 조회 (userStore 진행도 기반) */
+/** 오답 문제만 조회 (userStore 진행도 기반, group 필터 가능) */
 export function getIncorrectQuestions(
-  progress: Record<string, QuestionProgress>
+  progress: Record<string, QuestionProgress>,
+  group?: string
 ): Question[] {
+  const categories: Category[] = require('@/data/categories.json');
+  const groupCatIds = group
+    ? new Set(categories.filter((c) => c.group === group).map((c) => c.id))
+    : null;
+
   const all = loadAllQuestions();
   return all.filter((q) => {
     const p = progress[q.id];
-    return p && p.status === 'incorrect';
+    if (!p || p.status !== 'incorrect') return false;
+    if (groupCatIds && !groupCatIds.has(q.categoryId)) return false;
+    return true;
   });
 }
 
