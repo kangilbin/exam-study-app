@@ -62,7 +62,7 @@ export default function ExamScreen() {
         title: `${year}년`,
         data: examCategories
           .filter((c) => extractYear(c.id) === year)
-          .sort((a, b) => a.id.localeCompare(b.id)),
+          .sort((a, b) => b.id.localeCompare(a.id)),
       }))
       .filter((s) => s.data.length > 0);
   }, []);
