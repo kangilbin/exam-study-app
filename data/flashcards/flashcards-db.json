@@ -1,0 +1,1886 @@
+[
+  {
+    "id": "card-memorize-db_001",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "term": "DDL",
+    "definition": "DDL (Data Definition Language, 데이터 정의어)\n데이터베이스 구조(스키마, 테이블, 인덱스 등)를 정의·변경·삭제하는 SQL\n• CREATE: 객체 생성\n• ALTER: 객체 구조 변경\n• DROP: 객체 완전 삭제\n• TRUNCATE: 테이블 데이터 전체 삭제(구조 유지)\n※ DDL은 자동 COMMIT되어 ROLLBACK 불가",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_002",
+    "tags": [
+      "SQL",
+      "DDL",
+      "DML",
+      "DCL"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_002",
+      "card-memorize-db_003",
+      "card-memorize-db_004"
+    ],
+    "tip": "시험에서 DDL과 DML을 혼동하는 보기가 자주 출제됩니다. CREATE/ALTER/DROP/TRUNCATE는 무조건 DDL! TRUNCATE는 DML의 DELETE와 달리 롤백이 불가능합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_002",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "term": "DML",
+    "definition": "DML (Data Manipulation Language, 데이터 조작어)\n테이블의 데이터를 조회·삽입·수정·삭제하는 SQL\n• SELECT: 데이터 조회\n• INSERT: 데이터 삽입\n• UPDATE: 데이터 수정\n• DELETE: 데이터 삭제\n※ DML은 COMMIT 전까지 ROLLBACK 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_002",
+    "tags": [
+      "SQL",
+      "DDL",
+      "DML",
+      "DCL"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_001",
+      "card-memorize-db_003",
+      "card-memorize-db_004"
+    ],
+    "tip": "SELECT를 DQL(Data Query Language)로 별도 분류하는 경우도 있으나, 시험에서는 DML에 포함시키는 것이 정답입니다. DELETE vs TRUNCATE 비교 문제가 빈출됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_003",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "term": "DCL",
+    "definition": "DCL (Data Control Language, 데이터 제어어)\n데이터베이스 접근 권한을 부여·회수하는 SQL\n• GRANT: 사용자에게 권한 부여\n  - 문법: GRANT 권한 ON 객체 TO 사용자 [WITH GRANT OPTION]\n• REVOKE: 사용자 권한 회수\n  - 문법: REVOKE 권한 ON 객체 FROM 사용자 [CASCADE]\n※ WITH GRANT OPTION: 부여받은 권한을 다른 사용자에게 재부여 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_002",
+    "tags": [
+      "SQL",
+      "DDL",
+      "DML",
+      "DCL"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_001",
+      "card-memorize-db_002",
+      "card-memorize-db_004"
+    ],
+    "tip": "GRANT의 WITH GRANT OPTION과 REVOKE의 CASCADE 키워드가 시험에 자주 출제됩니다. DCL은 DBA(데이터베이스 관리자)가 주로 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_004",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "term": "TCL",
+    "definition": "TCL (Transaction Control Language, 트랜잭션 제어어)\n트랜잭션의 결과를 확정하거나 취소하는 SQL\n• COMMIT: 트랜잭션 결과를 영구 반영\n• ROLLBACK: 트랜잭션을 취소하고 이전 상태로 복구\n• SAVEPOINT: 트랜잭션 중간 저장점 설정\n  - ROLLBACK TO SAVEPOINT명 으로 특정 지점까지만 취소 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_002",
+    "tags": [
+      "SQL",
+      "DDL",
+      "DML",
+      "DCL"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_001",
+      "card-memorize-db_002",
+      "card-memorize-db_003"
+    ],
+    "tip": "TCL을 DCL에 포함시키는 분류도 있으나, 최근 시험에서는 TCL을 별도로 구분하는 문제가 출제됩니다. SAVEPOINT 문법도 함께 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_005",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "정규화 단계를",
+    "definition": "정규화(Normalization) 단계:\n1NF → 2NF → 3NF → BCNF → 4NF → 5NF\n• 목적: 데이터 중복 최소화, 이상현상(Anomaly) 방지\n• 단계가 높아질수록 제약조건이 엄격해짐\n• 실무에서는 보통 3NF 또는 BCNF까지 적용\n• 암기: '도부이결다조'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_006",
+      "card-memorize-db_007",
+      "card-memorize-db_008",
+      "card-memorize-db_009",
+      "card-memorize-db_010",
+      "card-memorize-db_011"
+    ],
+    "tip": "정규화 단계 순서와 각 단계별 제거 대상을 묶어 외우세요. '도부이결다조'는 정처기 단골 문제입니다. 반정규화(역정규화)와 비교 문제도 출제됩니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_006",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "1NF",
+    "definition": "제1정규형 (1NF, First Normal Form)\n모든 속성의 도메인이 원자값(Atomic Value)만 포함\n• 조건: 반복 그룹이나 다중값 속성이 없어야 함\n• 예: '전화번호' 컬럼에 여러 번호를 콤마로 넣으면 1NF 위반\n• 해결: 다중값을 별도 행으로 분리하거나 별도 테이블로 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_007",
+      "card-memorize-db_008",
+      "card-memorize-db_009",
+      "card-memorize-db_010",
+      "card-memorize-db_011"
+    ],
+    "tip": "1NF의 핵심은 '원자값'입니다. 하나의 셀에 여러 값이 들어가면 1NF 위반! 시험에서 테이블을 보여주고 몇 정규형인지 묻는 문제가 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_007",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "2NF",
+    "definition": "제2정규형 (2NF, Second Normal Form)\n1NF를 만족하면서 부분 함수 종속을 제거한 상태\n• 조건: 기본키가 복합키일 때, 모든 비주요 속성이 기본키 전체에 완전 함수 종속\n• 부분 함수 종속: 복합키의 일부에만 종속되는 관계\n• 기본키가 단일 속성이면 자동으로 2NF 만족",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_006",
+      "card-memorize-db_008",
+      "card-memorize-db_009",
+      "card-memorize-db_010",
+      "card-memorize-db_011"
+    ],
+    "tip": "2NF는 '부분 함수 종속 제거'가 핵심입니다. 기본키가 하나뿐이면 부분 종속이 발생할 수 없으므로 자동으로 2NF를 만족합니다. 복합키일 때만 주의하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_008",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "3NF",
+    "definition": "제3정규형 (3NF, Third Normal Form)\n2NF를 만족하면서 이행적 함수 종속을 제거한 상태\n• 이행적 종속: A→B→C일 때 A→C가 성립하는 관계\n• 조건: 비주요 속성이 기본키에만 직접 종속해야 함\n• 예: 학번→학과→학과사무실이면 학과사무실 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_006",
+      "card-memorize-db_007",
+      "card-memorize-db_009",
+      "card-memorize-db_010",
+      "card-memorize-db_011"
+    ],
+    "tip": "3NF의 핵심은 '이행적 함수 종속 제거'입니다. X→Y→Z에서 X→Z를 제거하는 것! 시험에서 종속 관계 다이어그램을 주고 정규형을 판별하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_009",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "BCNF",
+    "definition": "BCNF (Boyce-Codd Normal Form)\n3NF를 만족하면서, 모든 결정자가 후보키인 상태\n• 조건: X→Y에서 X가 반드시 후보키여야 함\n• 3NF보다 엄격한 조건\n• 후보키가 아닌 속성이 결정자가 되면 BCNF 위반\n• 강한 3정규형이라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_006",
+      "card-memorize-db_007",
+      "card-memorize-db_008",
+      "card-memorize-db_010",
+      "card-memorize-db_011"
+    ],
+    "tip": "'결정자이면서 후보키가 아닌 것 제거'가 BCNF의 핵심입니다. 3NF와 BCNF의 차이를 묻는 문제가 출제됩니다. BCNF는 3NF를 만족하지만, 3NF가 BCNF를 만족하지는 않습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_010",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "4NF",
+    "definition": "제4정규형 (4NF, Fourth Normal Form)\nBCNF를 만족하면서 다치 종속(MVD)을 제거한 상태\n• 다치 종속: A→→B로 표기, A 하나에 B값이 여러 개 대응\n• 조건: 다치 종속 A→→B가 존재하면 A가 후보키여야 함\n• 불필요한 데이터 중복을 제거하여 이상현상 방지",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_006",
+      "card-memorize-db_007",
+      "card-memorize-db_008",
+      "card-memorize-db_009",
+      "card-memorize-db_011"
+    ],
+    "tip": "4NF는 다치 종속(Multi-Valued Dependency) 제거가 핵심입니다. 화살표 표기 →→를 기억하세요. 시험에서 4NF/5NF는 개념만 출제되는 경우가 많습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_011",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "5NF",
+    "definition": "제5정규형 (5NF, Fifth Normal Form, PJ/NF)\n4NF를 만족하면서 조인 종속(JD)을 제거한 상태\n• 조인 종속: 테이블을 분해 후 다시 조인하면 원래 테이블 복원 가능\n• 조건: 모든 조인 종속이 후보키를 통해서만 성립\n• 프로젝트-조인 정규형(PJ/NF)이라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_003",
+    "tags": [
+      "정규화"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_005",
+      "card-memorize-db_006",
+      "card-memorize-db_007",
+      "card-memorize-db_008",
+      "card-memorize-db_009",
+      "card-memorize-db_010"
+    ],
+    "tip": "5NF는 '조인 종속 이용'으로 암기합니다. 실무에서는 거의 적용하지 않으며, 시험에서도 정의 수준만 출제됩니다. 정규화 단계 전체 순서(도부이결다조) 암기가 더 중요합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_012",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "로킹",
+    "definition": "로킹(Locking) - 병행제어 기법\n상호배제(Mutual Exclusion) 방식으로 데이터 접근을 제어하는 기법\n• 트랜잭션이 데이터에 접근하기 전 Lock을 획득해야 함\n• Lock 종류: 공유 Lock(S-Lock, 읽기), 배타 Lock(X-Lock, 읽기+쓰기)\n• 2단계 로킹(2PL): 확장 단계(Lock만)→축소 단계(Unlock만)\n• 단점: 교착상태(Deadlock) 발생 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_007",
+    "tags": [
+      "병행제어"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_013",
+      "card-memorize-db_014"
+    ],
+    "tip": "로킹의 핵심은 '상호배제'입니다. 공유 Lock과 배타 Lock의 차이, 2단계 로킹 프로토콜(2PL)이 시험에 자주 출제됩니다. 로킹 단위와 병행성의 관계도 중요합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_013",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "타임스탬프",
+    "definition": "타임스탬프(Timestamp) - 병행제어 기법\n각 트랜잭션에 고유한 시간표(타임스탬프)를 부여하여 순서대로 처리하는 기법\n• 트랜잭션 시작 시 시스템 시계 값 또는 논리적 카운터 값 부여\n• 타임스탬프 순서대로 직렬화 보장\n• 교착상태(Deadlock)가 발생하지 않음\n• 단점: 롤백 발생 빈도가 높을 수 있음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_007",
+    "tags": [
+      "병행제어"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_012",
+      "card-memorize-db_014"
+    ],
+    "tip": "타임스탬프 기법은 '교착상태 없음'이 장점이고, 로킹 기법은 '교착상태 가능'이 단점입니다. 두 기법의 장단점 비교가 시험에 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_014",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "다중 버전 기법",
+    "definition": "다중 버전 기법 (MVCC, Multi-Version Concurrency Control)\n데이터 항목의 여러 버전을 유지하여 병행성을 높이는 기법\n• 각 트랜잭션이 시작 시점의 데이터 버전(스냅샷)을 읽음\n• 읽기 연산이 쓰기 연산을 차단하지 않음\n• 동시 접근 시에도 일관된 읽기 보장\n• 대부분의 상용 DBMS(Oracle, PostgreSQL 등)에서 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_007",
+    "tags": [
+      "병행제어"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_012",
+      "card-memorize-db_013"
+    ],
+    "tip": "MVCC는 '읽기와 쓰기가 서로 차단하지 않는다'는 것이 핵심 장점입니다. 실무에서 가장 많이 사용되는 병행제어 기법이며, 시험에서도 개념 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_015",
+    "categoryId": "memorize-db",
+    "subcategory": "용어",
+    "term": "카디널리티와 차수(Degree)의 차이",
+    "definition": "카디널리티(Cardinality)와 차수(Degree)의 차이:\n• 카디널리티(Cardinality): 릴레이션에서 튜플(행, Row)의 수. 데이터 삽입/삭제에 따라 변동\n• 차수(Degree): 릴레이션에서 속성(열, Column)의 수. 스키마에 의해 고정\n• 예: 학생 5명, 속성 3개인 테이블 → 카디널리티=5, 차수=3",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_009",
+    "tags": [
+      "카디널리티",
+      "Degree"
+    ],
+    "tip": "카디널리티=행 수(변동), 차수=열 수(고정)를 바꿔 적은 함정 보기가 빈출됩니다. '카행차열'로 외우세요 (카=행, 차=열).",
+    "mnemonic": "카행차열"
+  },
+  {
+    "id": "card-memorize-db_016",
+    "categoryId": "memorize-db",
+    "subcategory": "설계",
+    "term": "데이터베이스 설계 절차를",
+    "definition": "데이터베이스 설계 절차 (5단계):\n요구사항 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현\n• 요구사항 분석: 사용자 요구 수집·분석\n• 개념적 설계: E-R 다이어그램 작성\n• 논리적 설계: 정규화, 스키마 설계\n• 물리적 설계: 저장구조, 인덱스 설계\n• 구현: DDL로 스키마 생성, 데이터 적재",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_010",
+    "tags": [
+      "DB설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_017",
+      "card-memorize-db_018",
+      "card-memorize-db_019"
+    ],
+    "tip": "DB 설계 5단계 순서를 정확히 암기하세요. '요개논물구'로 외울 수 있습니다. 각 단계의 산출물(E-R 다이어그램, 정규화 등)을 매칭하는 문제가 출제됩니다.",
+    "mnemonic": "요개논물구"
+  },
+  {
+    "id": "card-memorize-db_017",
+    "categoryId": "memorize-db",
+    "subcategory": "설계",
+    "term": "개념적",
+    "definition": "개념적 설계 (Conceptual Design)\nDB 설계 2단계로, 현실 세계를 추상적 개념으로 표현하는 과정\n• 핵심 산출물: E-R 다이어그램 (개체-관계 다이어그램)\n• DBMS 독립적 (특정 DBMS에 종속되지 않음)\n• 개체(Entity), 속성(Attribute), 관계(Relationship) 정의\n• 사각형=개체, 마름모=관계, 타원=속성, 이중타원=다중값속성",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_010",
+    "tags": [
+      "DB설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_016",
+      "card-memorize-db_018",
+      "card-memorize-db_019"
+    ],
+    "tip": "개념적 설계='E-R 다이어그램'으로 연결하세요. E-R 다이어그램의 기호(사각형, 마름모, 타원)를 묻는 문제가 빈출됩니다. DBMS 독립적이라는 점이 논리적 설계와의 차이입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_018",
+    "categoryId": "memorize-db",
+    "subcategory": "설계",
+    "term": "논리적",
+    "definition": "논리적 설계 (Logical Design)\nDB 설계 3단계로, 개념적 설계 결과를 DBMS에 맞는 논리적 스키마로 변환하는 과정\n• 핵심 작업: 정규화, 스키마 설계, 트랜잭션 인터페이스 설계\n• E-R 다이어그램 → 릴레이션 스키마로 변환\n• 데이터 모델에 맞는 논리적 구조 설계\n• 관계형 모델의 경우 테이블 구조로 변환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_010",
+    "tags": [
+      "DB설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_016",
+      "card-memorize-db_017",
+      "card-memorize-db_019"
+    ],
+    "tip": "논리적 설계='정규화+스키마 설계'로 연결하세요. 개념적 설계(E-R)와 물리적 설계(저장구조) 사이의 단계로, 정규화가 이 단계에서 수행된다는 것이 핵심입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_019",
+    "categoryId": "memorize-db",
+    "subcategory": "설계",
+    "term": "물리적",
+    "definition": "물리적 설계 (Physical Design)\nDB 설계 4단계로, 논리적 설계 결과를 실제 저장장치에 구현하기 위한 물리적 구조를 설계하는 과정\n• 핵심 작업: 저장구조 설계, 인덱스 설계, 접근 경로 설계\n• 성능을 고려한 반정규화(역정규화) 수행 가능\n• 저장 레코드 양식, 레코드 집중 방법 결정\n• 디스크 공간, 접근 속도 등 물리적 요소 고려",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_010",
+    "tags": [
+      "DB설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_016",
+      "card-memorize-db_017",
+      "card-memorize-db_018"
+    ],
+    "tip": "물리적 설계='저장구조+인덱스 설계'로 연결하세요. 논리적 설계와 혼동하지 마세요. 물리적 설계에서 성능 향상을 위해 반정규화를 수행할 수 있습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_020",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "정규화 6단계를",
+    "definition": "정규화 6단계 (도부이결다조):\n비정규→1NF(도메인 원자값)→2NF(부분함수종속 제거)→3NF(이행함수종속 제거)→BCNF(결정자이면서 후보키 아닌 것 제거)→4NF(다치종속 제거)→5NF(조인종속 이용)\n• 목적: 이상현상(삽입/삭제/갱신 이상) 방지\n• 정규화 ↔ 반정규화는 성능과 무결성의 트레이드오프",
+    "mnemonic": "도부이결다조",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_021",
+      "card-memorize-db_022",
+      "card-memorize-db_023",
+      "card-memorize-db_024",
+      "card-memorize-db_025",
+      "card-memorize-db_026"
+    ],
+    "tip": "'도부이결다조' 두문자어가 시험에 직접 출제됩니다. 각 글자가 어떤 정규형의 어떤 조건인지 정확히 매칭해야 합니다. BCNF까지가 시험 핵심 범위입니다."
+  },
+  {
+    "id": "card-memorize-db_021",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "도",
+    "definition": "도 = 도메인이 원자값 (1NF)\n정규화 두문자어 '도부이결다조'의 첫 글자\n• 1NF 조건: 모든 속성값이 더 이상 분해할 수 없는 원자값이어야 함\n• 반복 그룹, 다중값 속성 불허\n• 정규화의 가장 기본 단계",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_022",
+      "card-memorize-db_023",
+      "card-memorize-db_024",
+      "card-memorize-db_025",
+      "card-memorize-db_026"
+    ],
+    "tip": "정규화 두문자어의 순서가 중요합니다. '도'가 1NF의 '도메인 원자값'이라는 것을 기억하세요.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_022",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "부",
+    "definition": "부 = 부분함수종속 제거 (2NF)\n정규화 두문자어 '도부이결다조'의 두 번째 글자\n• 2NF 조건: 기본키의 일부에만 종속되는 속성을 분리\n• 복합키에서만 발생하는 문제\n• 완전 함수 종속만 남겨야 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_021",
+      "card-memorize-db_023",
+      "card-memorize-db_024",
+      "card-memorize-db_025",
+      "card-memorize-db_026"
+    ],
+    "tip": "'부'가 2NF의 '부분함수종속 제거'라는 것을 기억하세요. 단일 기본키면 자동으로 2NF 만족합니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_023",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "이",
+    "definition": "이 = 이행함수종속 제거 (3NF)\n정규화 두문자어 '도부이결다조'의 세 번째 글자\n• 3NF 조건: A→B→C에서 A→C를 제거\n• 비주요 속성 간의 종속 관계를 분리\n• 기본키에 직접 종속되지 않는 속성을 별도 테이블로 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_021",
+      "card-memorize-db_022",
+      "card-memorize-db_024",
+      "card-memorize-db_025",
+      "card-memorize-db_026"
+    ],
+    "tip": "'이'가 3NF의 '이행함수종속 제거'라는 것을 기억하세요. A→B→C 관계에서 C를 별도 테이블로 분리합니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_024",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "결",
+    "definition": "결 = 결정자이면서 후보키가 아닌 것 제거 (BCNF)\n정규화 두문자어 '도부이결다조'의 네 번째 글자\n• BCNF 조건: 모든 결정자가 후보키여야 함\n• 3NF보다 엄격한 정규형\n• 결정자가 후보키가 아닌 경우 테이블을 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_021",
+      "card-memorize-db_022",
+      "card-memorize-db_023",
+      "card-memorize-db_025",
+      "card-memorize-db_026"
+    ],
+    "tip": "'결'이 BCNF의 '결정자→후보키' 조건이라는 것을 기억하세요. 3NF와 BCNF 차이를 묻는 문제가 출제됩니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_025",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "다",
+    "definition": "다 = 다치종속 제거 (4NF)\n정규화 두문자어 '도부이결다조'의 다섯 번째 글자\n• 4NF 조건: 다치 종속(MVD, →→) 관계를 분리\n• A→→B에서 A가 후보키가 아니면 분리 필요\n• 불필요한 튜플 중복 제거",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_021",
+      "card-memorize-db_022",
+      "card-memorize-db_023",
+      "card-memorize-db_024",
+      "card-memorize-db_026"
+    ],
+    "tip": "'다'가 4NF의 '다치종속 제거'라는 것을 기억하세요. 4NF 이상은 개념 위주로 출제됩니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_026",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "조",
+    "definition": "조 = 조인종속 이용 (5NF)\n정규화 두문자어 '도부이결다조'의 마지막 글자\n• 5NF 조건: 조인 종속이 후보키를 통해서만 성립\n• 테이블을 분해 후 자연 조인으로 원래 테이블 복원 가능\n• PJ/NF(프로젝트-조인 정규형)라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_011",
+    "tags": [
+      "정규화",
+      "도부이결다조"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_020",
+      "card-memorize-db_021",
+      "card-memorize-db_022",
+      "card-memorize-db_023",
+      "card-memorize-db_024",
+      "card-memorize-db_025"
+    ],
+    "tip": "'조'가 5NF의 '조인종속'이라는 것을 기억하세요. 5NF는 이론적 의미가 크고 실무/시험에서는 정의만 알면 충분합니다.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_027",
+    "categoryId": "memorize-db",
+    "subcategory": "트랜잭션",
+    "term": "원자성(Atomicity)",
+    "definition": "원자성 (Atomicity) - ACID 속성\n트랜잭션의 연산은 모두 실행되거나 모두 취소되어야 함\n• All or Nothing 원칙\n• 부분적 실행 불가 (중간에 실패하면 전체 취소)\n• ROLLBACK으로 트랜잭션 전체 취소 가능\n• 회복 관리자(Recovery Manager)가 보장\n• 예: 계좌이체 시 출금+입금이 모두 성공하거나 모두 취소",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_012",
+    "tags": [
+      "트랜잭션",
+      "ACID"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_028",
+      "card-memorize-db_029",
+      "card-memorize-db_030"
+    ],
+    "tip": "원자성='All or Nothing'이 핵심 키워드입니다. ACID 4가지 속성 각각의 의미를 정확히 구분하는 문제가 단골 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_028",
+    "categoryId": "memorize-db",
+    "subcategory": "트랜잭션",
+    "term": "일관성(Consistency)",
+    "definition": "일관성 (Consistency) - ACID 속성\n트랜잭션 실행 전후로 데이터베이스가 일관된 상태를 유지해야 함\n• 무결성 제약조건을 항상 만족\n• 트랜잭션 수행 중 일시적 불일치 허용, 완료 후 반드시 일관성 회복\n• 예: 이체 전후 총 잔액이 동일해야 함\n• 무결성 제어 모듈이 보장",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_012",
+    "tags": [
+      "트랜잭션",
+      "ACID"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_027",
+      "card-memorize-db_029",
+      "card-memorize-db_030"
+    ],
+    "tip": "일관성='실행 전후 일관된 상태 유지'가 핵심입니다. 원자성과 혼동하기 쉬우니 주의하세요. 원자성=실행/취소, 일관성=상태 유지입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_029",
+    "categoryId": "memorize-db",
+    "subcategory": "트랜잭션",
+    "term": "격리성(Isolation)",
+    "definition": "격리성 (Isolation) - ACID 속성\n동시에 실행되는 트랜잭션들이 서로 간섭할 수 없음\n• 각 트랜잭션은 다른 트랜잭션의 중간 결과를 참조할 수 없음\n• 동시 실행 결과 = 순차적 실행 결과 (직렬 가능성)\n• 병행제어 모듈(Concurrency Control)이 보장\n• 격리 수준: Read Uncommitted < Read Committed < Repeatable Read < Serializable",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_012",
+    "tags": [
+      "트랜잭션",
+      "ACID"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_027",
+      "card-memorize-db_028",
+      "card-memorize-db_030"
+    ],
+    "tip": "격리성='트랜잭션 간 상호 간섭 불가'가 핵심입니다. 격리 수준 4단계(Read Uncommitted~Serializable)와 각 수준에서 발생 가능한 문제(Dirty Read, Non-repeatable Read, Phantom Read)도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_030",
+    "categoryId": "memorize-db",
+    "subcategory": "트랜잭션",
+    "term": "지속성(Durability)",
+    "definition": "지속성 (Durability) - ACID 속성\n완료(Commit)된 트랜잭션의 결과는 영구적으로 DB에 반영되어야 함\n• 시스템 장애가 발생해도 커밋된 결과는 보존\n• 회복 기법(Redo 등)으로 보장\n• 비휘발성 저장장치에 기록\n• 로그 파일과 백업을 통해 지속성 보장\n• 영속성, 내구성이라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_012",
+    "tags": [
+      "트랜잭션",
+      "ACID"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_027",
+      "card-memorize-db_028",
+      "card-memorize-db_029"
+    ],
+    "tip": "지속성='커밋 완료 → 영구 반영'이 핵심입니다. ACID 중 가장 직관적인 속성이며, 회복 기법과 연결하여 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_031",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "개체 무결성",
+    "definition": "개체 무결성 (Entity Integrity)\n기본키는 NULL 값을 가질 수 없고, 중복될 수 없다는 제약조건\n• 기본키의 각 속성은 반드시 값이 존재해야 함\n• 릴레이션에서 튜플을 유일하게 식별하기 위한 필수 규칙\n• SQL: PRIMARY KEY 제약조건으로 구현\n• 위반 시 INSERT/UPDATE 거부",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_032",
+      "card-memorize-db_033",
+      "card-memorize-db_034",
+      "card-memorize-db_035",
+      "card-memorize-db_036",
+      "card-memorize-db_037"
+    ],
+    "tip": "개체 무결성='기본키 NOT NULL + UNIQUE'로 암기하세요. 참조 무결성과 함께 가장 빈출되는 무결성 유형입니다. '개체=기본키'로 연결하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_032",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "참조 무결성",
+    "definition": "참조 무결성 (Referential Integrity)\n외래키 값은 참조하는 테이블의 기본키에 존재하는 값이거나 NULL이어야 한다는 제약조건\n• 외래키가 참조할 수 없는 값을 가지면 안 됨\n• SQL: FOREIGN KEY ... REFERENCES 구문으로 구현\n• 위반 방지 옵션: CASCADE, SET NULL, SET DEFAULT, RESTRICT(NO ACTION)\n• 예: 수강 테이블의 학번이 학생 테이블에 없는 값이면 참조 무결성 위반",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_033",
+      "card-memorize-db_034",
+      "card-memorize-db_035",
+      "card-memorize-db_036",
+      "card-memorize-db_037"
+    ],
+    "tip": "참조 무결성 위반 시 처리 옵션(CASCADE/SET NULL/SET DEFAULT/RESTRICT)이 시험에 자주 출제됩니다. 외래키=참조 무결성으로 연결 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_033",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "도메인 무결성",
+    "definition": "도메인 무결성 (Domain Integrity)\n속성값이 정의된 도메인(허용 범위)에 속한 값이어야 한다는 제약조건\n• 데이터 타입, 범위, 형식 등을 제한\n• SQL: CHECK, DEFAULT, NOT NULL 등으로 구현\n• 예: '성별' 속성에 '남' 또는 '여'만 허용\n• 예: '나이' 속성에 0~150 범위만 허용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_032",
+      "card-memorize-db_034",
+      "card-memorize-db_035",
+      "card-memorize-db_036",
+      "card-memorize-db_037"
+    ],
+    "tip": "도메인 무결성은 CHECK 제약조건으로 구현되는 경우가 많습니다. 개체/참조/도메인 무결성 3가지를 비교하는 문제가 빈출됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_034",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "고유 무결성",
+    "definition": "고유 무결성 (Unique Integrity)\nUNIQUE 제약조건으로 특정 속성값의 중복을 금지하는 제약\n• 기본키가 아닌 속성에도 유일성을 부여\n• NULL은 허용될 수 있음 (기본키와의 차이점)\n• SQL: UNIQUE 제약조건으로 구현\n• 예: 주민등록번호, 이메일 등 고유한 값이어야 하는 속성",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_032",
+      "card-memorize-db_033",
+      "card-memorize-db_035",
+      "card-memorize-db_036",
+      "card-memorize-db_037"
+    ],
+    "tip": "고유 무결성(UNIQUE)과 개체 무결성(PRIMARY KEY)의 차이점: UNIQUE는 NULL 허용, PK는 NULL 불가! 이 차이가 시험에 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_035",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "NULL 무결성",
+    "definition": "NULL 무결성\nNOT NULL 제약조건으로 특정 속성에 NULL 값을 허용하지 않는 제약\n• 반드시 값이 입력되어야 하는 속성에 적용\n• 기본키는 자동으로 NOT NULL\n• SQL: 컬럼 정의 시 NOT NULL 키워드 사용\n• 예: CREATE TABLE 학생 (이름 VARCHAR(20) NOT NULL);",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_032",
+      "card-memorize-db_033",
+      "card-memorize-db_034",
+      "card-memorize-db_036",
+      "card-memorize-db_037"
+    ],
+    "tip": "NULL 무결성은 NOT NULL 제약으로 구현됩니다. 기본키는 자동으로 NOT NULL + UNIQUE가 적용된다는 점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_036",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "관계 무결성",
+    "definition": "관계 무결성 (Relationship Integrity)\n릴레이션 간의 관계에 대한 적절한 조건을 만족해야 한다는 제약\n• 두 릴레이션의 데이터가 논리적으로 일관되어야 함\n• 삽입/삭제/갱신 시 관계 조건 유지 필요\n• 참조 무결성보다 넓은 개념\n• 예: 부서-사원 관계에서 사원은 반드시 존재하는 부서에 소속되어야 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_032",
+      "card-memorize-db_033",
+      "card-memorize-db_034",
+      "card-memorize-db_035",
+      "card-memorize-db_037"
+    ],
+    "tip": "관계 무결성은 참조 무결성과 혼동하기 쉽습니다. 관계 무결성은 릴레이션 '간'의 조건, 참조 무결성은 외래키에 국한된 제약입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_037",
+    "categoryId": "memorize-db",
+    "subcategory": "무결성",
+    "term": "키 무결성",
+    "definition": "키 무결성 (Key Integrity)\n모든 릴레이션에는 최소한 하나의 키가 존재해야 한다는 제약\n• 릴레이션은 반드시 튜플을 유일하게 식별할 수 있는 키를 가져야 함\n• 키가 없으면 튜플 간 구분이 불가능\n• 관계형 데이터베이스의 기본 원칙\n• 슈퍼키 → 후보키 → 기본키 구조에서 최소 하나의 후보키 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_013",
+    "tags": [
+      "무결성",
+      "제약조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_031",
+      "card-memorize-db_032",
+      "card-memorize-db_033",
+      "card-memorize-db_034",
+      "card-memorize-db_035",
+      "card-memorize-db_036"
+    ],
+    "tip": "키 무결성은 '릴레이션에 반드시 키가 하나 이상 존재'라는 간단한 규칙입니다. 다른 무결성들과 함께 7가지 무결성을 모두 열거하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_038",
+    "categoryId": "memorize-db",
+    "subcategory": "이상현상",
+    "term": "삽입이상",
+    "definition": "삽입 이상 (Insertion Anomaly)\n원하는 데이터만 삽입하려 해도 불필요한 정보까지 함께 삽입해야 하는 현상\n• 정규화가 불충분할 때 발생\n• 예: 학과 정보만 입력하려면 학생 정보도 필수로 입력해야 함\n• 원인: 서로 다른 엔터티가 하나의 테이블에 혼합\n• 해결: 정규화를 통해 테이블 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_014",
+    "tags": [
+      "이상현상",
+      "Anomaly"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_039",
+      "card-memorize-db_040"
+    ],
+    "tip": "삽입 이상은 '불필요한 데이터까지 함께 삽입'이 핵심입니다. 이상현상 3가지(삽입/삭제/갱신)를 각각 구분하고, 정규화가 해결 방법이라는 것을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_039",
+    "categoryId": "memorize-db",
+    "subcategory": "이상현상",
+    "term": "삭제이상",
+    "definition": "삭제 이상 (Deletion Anomaly)\n원하는 데이터만 삭제하려 해도 의도하지 않은 정보까지 함께 삭제되는 현상\n• 정규화가 불충분할 때 발생\n• 예: 마지막 수강생이 수강 취소하면 과목 정보도 함께 삭제됨\n• 원인: 서로 다른 엔터티가 하나의 테이블에 혼합\n• 해결: 정규화를 통해 테이블 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_014",
+    "tags": [
+      "이상현상",
+      "Anomaly"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_038",
+      "card-memorize-db_040"
+    ],
+    "tip": "삭제 이상은 '의도하지 않은 정보까지 삭제'가 핵심입니다. 삽입 이상(불필요 삽입)과 삭제 이상(의도하지 않은 삭제)의 방향성 차이를 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_040",
+    "categoryId": "memorize-db",
+    "subcategory": "이상현상",
+    "term": "갱신이상",
+    "definition": "갱신 이상 (Update Anomaly)\n중복 데이터 중 일부만 수정되어 데이터 모순(불일치)이 발생하는 현상\n• 정규화가 불충분하여 동일 데이터가 여러 곳에 중복 저장될 때 발생\n• 예: 학과사무실이 여러 행에 중복 저장된 상태에서 일부만 수정\n• 원인: 데이터 중복\n• 해결: 정규화를 통해 중복 제거",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_014",
+    "tags": [
+      "이상현상",
+      "Anomaly"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_038",
+      "card-memorize-db_039"
+    ],
+    "tip": "갱신 이상은 '일부만 수정 → 데이터 불일치'가 핵심입니다. 갱신 이상의 원인은 '데이터 중복'이며, 정규화로 중복을 제거하면 해결됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_041",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "즉시갱신",
+    "definition": "즉시 갱신 기법 (Immediate Update)\n트랜잭션 수행 도중에도 변경 내용을 즉시 DB에 기록하는 회복 기법\n• Redo + Undo 모두 필요\n• 트랜잭션 완료 전이라도 DB에 반영\n• 장애 시: 커밋된 것은 Redo, 커밋 안 된 것은 Undo\n• 로그(Log) 파일에 변경 전/후 값 모두 기록",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_015",
+    "tags": [
+      "회복기법",
+      "DB"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_042",
+      "card-memorize-db_043",
+      "card-memorize-db_044",
+      "card-memorize-db_045"
+    ],
+    "tip": "즉시 갱신은 Redo+Undo 둘 다 필요, 지연 갱신은 Redo만 필요(Undo 불필요)! 이 차이가 시험 핵심 포인트입니다. '즉시=둘 다, 지연=Redo만'으로 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_042",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "지연갱신",
+    "definition": "지연 갱신 기법 (Deferred Update)\n커밋(Commit) 전까지 DB에 기록하지 않고 로그에만 기록하는 회복 기법\n• Redo만 필요 (Undo 불필요)\n• 커밋 전 장애 시 로그만 폐기하면 됨 (DB 변경 없으므로)\n• 커밋 후 장애 시 로그를 이용하여 Redo\n• NO-UNDO/REDO 기법이라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_015",
+    "tags": [
+      "회복기법",
+      "DB"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_041",
+      "card-memorize-db_043",
+      "card-memorize-db_044",
+      "card-memorize-db_045"
+    ],
+    "tip": "지연 갱신='Redo만 필요'가 시험 핵심입니다. DB에 실제 기록하지 않았으므로 Undo할 필요가 없다는 논리를 이해하세요. NO-UNDO/REDO 키워드도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_043",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "검사시점(체크포인트)",
+    "definition": "검사 시점 기법 (Checkpoint Recovery)\n주기적으로 체크포인트를 설정하여, 장애 시 체크포인트 이후만 회복하는 기법\n• 체크포인트 시점에 모든 변경 내용을 DB에 반영\n• 장애 시 체크포인트 이전 트랜잭션은 회복 불필요\n• 체크포인트 이후 트랜잭션만 Redo/Undo 수행\n• 회복 시간을 크게 단축하는 장점",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_015",
+    "tags": [
+      "회복기법",
+      "DB"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_041",
+      "card-memorize-db_042",
+      "card-memorize-db_044",
+      "card-memorize-db_045"
+    ],
+    "tip": "검사 시점 기법은 회복 범위를 '체크포인트 이후'로 한정하여 회복 시간을 줄입니다. 체크포인트 전후 트랜잭션 상태(커밋 여부)에 따라 Redo/Undo를 판단하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_044",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "그림자페이징",
+    "definition": "그림자 페이징 기법 (Shadow Paging)\n현재 페이지 테이블과 그림자 페이지 테이블을 이용한 회복 기법\n• 로그(Log) 불필요\n• 트랜잭션 시작 시 현재 페이지 테이블을 복사하여 그림자 페이지 테이블 생성\n• 장애 시 그림자 페이지 테이블로 복원\n• 정상 완료 시 그림자 페이지 테이블 폐기\n• Redo/Undo 불필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_015",
+    "tags": [
+      "회복기법",
+      "DB"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_041",
+      "card-memorize-db_042",
+      "card-memorize-db_043",
+      "card-memorize-db_045"
+    ],
+    "tip": "그림자 페이징은 '로그 불필요'가 핵심 키워드입니다. 다른 회복 기법(즉시/지연/검사시점)은 모두 로그 기반인데, 그림자 페이징만 페이지 테이블 기반입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_045",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "미디어",
+    "definition": "미디어 회복 기법 (Media Recovery)\n디스크 등 비휘발성 저장장치의 물리적 손상 시 덤프(백업)를 이용한 회복 기법\n• 주기적으로 DB 전체를 다른 저장장치에 백업(덤프)\n• 디스크 장애 시 가장 최근 덤프를 복원 후 로그로 Redo\n• 물리적 손상에 대비하는 유일한 방법\n• 전체 백업, 증분 백업, 차등 백업 방식 사용 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_015",
+    "tags": [
+      "회복기법",
+      "DB"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_041",
+      "card-memorize-db_042",
+      "card-memorize-db_043",
+      "card-memorize-db_044"
+    ],
+    "tip": "미디어 회복은 '디스크 손상'에 대비하는 기법입니다. 다른 회복 기법은 논리적 장애 대비인 반면, 미디어 회복은 물리적 장애 대비라는 차이를 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_046",
+    "categoryId": "memorize-db",
+    "subcategory": "분산DB",
+    "term": "위치 투명성",
+    "definition": "위치 투명성 (Location Transparency)\n분산 DB에서 사용자가 데이터의 물리적 위치를 알 필요 없이 논리적 명칭으로 접근할 수 있는 성질\n• 데이터가 어느 사이트에 저장되어 있는지 몰라도 접근 가능\n• 분산 DB 투명성의 가장 기본이 되는 개념\n• 시스템이 자동으로 데이터 위치를 찾아줌\n• 분산 DB 투명성 4가지: 위치, 중복, 병행, 장애",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_016",
+    "tags": [
+      "분산DB",
+      "투명성"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_047",
+      "card-memorize-db_048",
+      "card-memorize-db_049"
+    ],
+    "tip": "분산 DB 투명성 4가지(위치/중복/병행/장애)를 모두 열거하는 문제가 출제됩니다. 위치 투명성은 '논리적 명칭으로 접근'이 핵심 키워드입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_047",
+    "categoryId": "memorize-db",
+    "subcategory": "분산DB",
+    "term": "중복 투명성",
+    "definition": "중복 투명성 (Replication Transparency)\n사용자가 데이터의 중복 여부를 알 필요 없이 하나만 존재하는 것처럼 사용할 수 있는 성질\n• 데이터가 여러 사이트에 복제되어 있어도 사용자는 모름\n• 시스템이 자동으로 데이터 동기화 관리\n• 가용성과 성능 향상을 위해 데이터를 복제\n• 사용자는 하나의 논리적 데이터로 인식",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_016",
+    "tags": [
+      "분산DB",
+      "투명성"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_046",
+      "card-memorize-db_048",
+      "card-memorize-db_049"
+    ],
+    "tip": "중복 투명성은 '데이터가 하나만 존재하는 것처럼 사용'이 핵심입니다. 실제로는 여러 곳에 복제되어 있지만 사용자에게 투명하게 처리됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_048",
+    "categoryId": "memorize-db",
+    "subcategory": "분산DB",
+    "term": "병행 투명성",
+    "definition": "병행 투명성 (Concurrency Transparency)\n여러 트랜잭션이 동시에 실행되어도 결과에 영향을 주지 않는 성질\n• 다수의 사용자가 동시에 분산 DB에 접근해도 일관성 유지\n• 결과가 마치 단독으로 실행한 것과 동일\n• 분산 환경에서의 병행제어가 보장\n• 트랜잭션의 격리성(Isolation)과 관련",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_016",
+    "tags": [
+      "분산DB",
+      "투명성"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_046",
+      "card-memorize-db_047",
+      "card-memorize-db_049"
+    ],
+    "tip": "병행 투명성은 트랜잭션의 '격리성'과 유사한 개념입니다. 분산 환경에서 동시 접근해도 정확한 결과를 보장한다는 것이 핵심입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_049",
+    "categoryId": "memorize-db",
+    "subcategory": "분산DB",
+    "term": "장애 투명성",
+    "definition": "장애 투명성 (Failure Transparency)\n분산 DB 시스템의 일부에 장애가 발생해도 트랜잭션이 정확하게 처리되는 성질\n• 네트워크 장애나 사이트 장애가 발생해도 정상 처리\n• 장애 감지 및 자동 복구 기능 필요\n• 사용자는 장애 발생 여부를 인지하지 못함\n• 분산 DB의 가용성(Availability)과 직결",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_016",
+    "tags": [
+      "분산DB",
+      "투명성"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_046",
+      "card-memorize-db_047",
+      "card-memorize-db_048"
+    ],
+    "tip": "장애 투명성은 '장애 발생해도 정확하게 처리'가 핵심입니다. 분산 DB 4가지 투명성(위치/중복/병행/장애)을 모두 설명할 수 있어야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_050",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "Select(σ)",
+    "definition": "Select (σ, 시그마) - 순수 관계 연산자\n조건을 만족하는 튜플(행)을 선택하는 수평적 연산\n• 기호: σ<조건>(R)\n• SQL 대응: WHERE절\n• 결과: 조건을 만족하는 행들의 부분집합\n• 차수(열 수)는 변하지 않고, 카디널리티(행 수)만 감소\n• 예: σ학과='컴공'(학생) → 학과가 컴공인 행만 선택",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_017",
+    "tags": [
+      "관계대수",
+      "연산자"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_051",
+      "card-memorize-db_052",
+      "card-memorize-db_053"
+    ],
+    "tip": "Select(σ)는 행 선택(수평), Project(π)는 열 선택(수직)입니다. 시험에서 기호와 연산을 매칭하는 문제가 빈출됩니다. σ=시그마=Select=WHERE를 연결 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_051",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "Project(π)",
+    "definition": "Project (π, 파이) - 순수 관계 연산자\n특정 속성(열)만 추출하는 수직적 연산\n• 기호: π<속성리스트>(R)\n• SQL 대응: SELECT절의 컬럼 지정\n• 결과: 지정한 열만 포함하는 부분집합 (중복 튜플 제거)\n• 카디널리티(행 수)가 줄어들 수 있음 (중복 제거 때문)\n• 예: π이름,학과(학생) → 이름과 학과 열만 추출",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_017",
+    "tags": [
+      "관계대수",
+      "연산자"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_050",
+      "card-memorize-db_052",
+      "card-memorize-db_053"
+    ],
+    "tip": "Project(π)는 중복 튜플을 자동 제거합니다. SQL의 SELECT DISTINCT와 유사합니다. 시험에서 σ(행)와 π(열)를 반대로 적용하는 오답 보기가 자주 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_052",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "Join(⋈)",
+    "definition": "Join (⋈, 보타이) - 순수 관계 연산자\n공통 속성을 기준으로 두 릴레이션을 결합하는 연산\n• 기호: R ⋈ S\n• SQL 대응: JOIN (INNER JOIN)\n• 종류:\n  - 자연 조인(Natural Join): 중복 속성 자동 제거\n  - 세타 조인(θ-Join): 비교 조건으로 결합\n  - 동등 조인(Equi Join): = 조건으로 결합\n• 결과 차수 = R 차수 + S 차수 - 공통 속성 수",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_017",
+    "tags": [
+      "관계대수",
+      "연산자"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_050",
+      "card-memorize-db_051",
+      "card-memorize-db_053"
+    ],
+    "tip": "자연 조인은 중복 속성을 제거하고, 동등 조인은 제거하지 않는다는 차이를 기억하세요. 조인 종류별 차이를 묻는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_053",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "Division(÷)",
+    "definition": "Division (÷) - 순수 관계 연산자\n나누는 릴레이션(S)의 모든 값을 포함하는 튜플을 선택하는 연산\n• 기호: R ÷ S\n• SQL 대응: NOT EXISTS + NOT EXISTS (이중 부정) 또는 GROUP BY + HAVING COUNT\n• '모든'이라는 조건을 표현할 때 사용\n• 결과 속성 = R 속성 - S 속성\n• 예: 모든 과목을 수강한 학생 찾기",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_017",
+    "tags": [
+      "관계대수",
+      "연산자"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_050",
+      "card-memorize-db_051",
+      "card-memorize-db_052"
+    ],
+    "tip": "Division은 '모든'이라는 키워드가 나오면 떠올리세요. SQL로 직접 대응되는 단일 키워드가 없어 NOT EXISTS를 중첩하거나 HAVING을 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_054",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "term": "기본키",
+    "definition": "기본키 (Primary Key, PK)\n릴레이션에서 튜플을 유일하게 구별하는 대표 키\n• 유일성: 중복 불가 (각 행을 유일하게 식별)\n• NOT NULL: NULL 값 불가 (개체 무결성)\n• 후보키 중에서 선택된 하나의 키\n• 하나의 릴레이션에 하나만 존재\n• SQL: PRIMARY KEY 제약조건으로 지정",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_018",
+    "tags": [
+      "키",
+      "기본키",
+      "후보키"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_055",
+      "card-memorize-db_056",
+      "card-memorize-db_057",
+      "card-memorize-db_058"
+    ],
+    "tip": "기본키='유일성+NOT NULL'이 핵심입니다. 후보키 중에서 선택되며, 선택되지 못한 후보키는 대체키가 됩니다. 키의 계층 관계(슈퍼키⊃후보키⊃기본키)를 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_055",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "term": "후보키",
+    "definition": "후보키 (Candidate Key)\n유일성과 최소성을 모두 만족하는 키\n• 유일성: 각 튜플을 유일하게 식별\n• 최소성: 최소한의 속성으로 유일하게 식별 (불필요한 속성 없음)\n• 후보키 중 하나가 기본키로 선택됨\n• 나머지 후보키는 대체키가 됨\n• 슈퍼키에서 최소성을 만족하는 것이 후보키",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_018",
+    "tags": [
+      "키",
+      "기본키",
+      "후보키"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_054",
+      "card-memorize-db_056",
+      "card-memorize-db_057",
+      "card-memorize-db_058"
+    ],
+    "tip": "후보키='유일성+최소성'이고, 슈퍼키='유일성만'입니다. 시험에서 최소성 유무로 슈퍼키와 후보키를 구분하는 문제가 빈출됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_056",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "term": "슈퍼키",
+    "definition": "슈퍼키 (Super Key)\n유일성은 만족하지만 최소성은 만족하지 않는 키\n• 유일성 O: 튜플을 유일하게 식별 가능\n• 최소성 X: 불필요한 속성이 포함될 수 있음\n• 예: {학번}이 후보키이면 {학번, 이름}도 슈퍼키\n• 모든 후보키는 슈퍼키에 포함됨 (슈퍼키 ⊃ 후보키)\n• 키 계층: 슈퍼키 → 후보키 → 기본키/대체키",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_018",
+    "tags": [
+      "키",
+      "기본키",
+      "후보키"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_054",
+      "card-memorize-db_055",
+      "card-memorize-db_057",
+      "card-memorize-db_058"
+    ],
+    "tip": "슈퍼키는 유일성만 있고 최소성이 없습니다. '{학번, 이름}'처럼 불필요한 속성이 포함되어도 유일하게 식별 가능하면 슈퍼키입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_057",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "term": "대체키",
+    "definition": "대체키 (Alternate Key)\n후보키 중 기본키로 선택되지 않은 나머지 키\n• 유일성 + 최소성 모두 만족 (후보키이므로)\n• 기본키의 대안으로 사용 가능\n• SQL: UNIQUE 제약조건으로 구현\n• 예: 학생 테이블에서 학번이 기본키이면, 주민등록번호는 대체키\n• 보조키라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_018",
+    "tags": [
+      "키",
+      "기본키",
+      "후보키"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_054",
+      "card-memorize-db_055",
+      "card-memorize-db_056",
+      "card-memorize-db_058"
+    ],
+    "tip": "대체키='후보키-기본키'로 암기하세요. 후보키 집합에서 기본키 하나를 빼면 나머지가 모두 대체키입니다. UNIQUE 제약조건과 연결하여 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_058",
+    "categoryId": "memorize-db",
+    "subcategory": "키",
+    "term": "외래키",
+    "definition": "외래키 (Foreign Key, FK)\n다른 릴레이션의 기본키를 참조하는 속성 또는 속성의 집합\n• 참조 무결성을 보장하는 핵심 도구\n• 참조하는 테이블의 기본키 값 또는 NULL만 허용\n• SQL: FOREIGN KEY ... REFERENCES 구문으로 지정\n• 참조 무결성 위반 시 처리: CASCADE, SET NULL, SET DEFAULT, RESTRICT\n• 같은 릴레이션의 기본키를 참조할 수도 있음 (자기 참조)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_018",
+    "tags": [
+      "키",
+      "기본키",
+      "후보키"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_054",
+      "card-memorize-db_055",
+      "card-memorize-db_056",
+      "card-memorize-db_057"
+    ],
+    "tip": "외래키는 '다른 테이블의 기본키를 참조'하며, 참조 무결성과 직결됩니다. 외래키 값으로 NULL이 허용된다는 점과, 참조 무결성 위반 시 처리 옵션(CASCADE 등)을 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_059",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "로킹",
+    "definition": "로킹(Locking) 기법 상세\nLock이 허락되어야만 데이터에 접근(액세스) 가능한 병행제어 기법\n• 공유 Lock(S-Lock): 읽기만 가능, 다른 트랜잭션도 읽기 가능\n• 배타 Lock(X-Lock): 읽기+쓰기 가능, 다른 트랜잭션 접근 불가\n• 2단계 로킹 규약(2PL): Lock과 Unlock을 확장/축소 단계로 구분하여 직렬 가능성 보장\n• 교착상태 발생 가능 → 탐지/예방 기법 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_019",
+    "tags": [
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_060",
+      "card-memorize-db_061"
+    ],
+    "tip": "2단계 로킹(2PL)은 확장 단계에서 Lock만 수행, 축소 단계에서 Unlock만 수행합니다. 2PL을 따르면 직렬 가능성이 보장되지만 교착상태는 방지하지 못합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_060",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "로킹 단위가 크면",
+    "definition": "로킹 단위가 크면 (예: 테이블 단위 Lock)\n• 관리가 쉬움 (Lock 개수 적음)\n• 병행성(동시성)이 낮음 (다른 트랜잭션 대기 증가)\n• 오버헤드 감소\n• 반대: 로킹 단위가 작으면(레코드/필드 단위) 관리 복잡, 병행성 높음\n• 로킹 단위: DB > 테이블 > 페이지 > 레코드 > 필드",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_019",
+    "tags": [
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_059",
+      "card-memorize-db_061"
+    ],
+    "tip": "로킹 단위와 병행성은 반비례 관계입니다. '단위 크면=관리 쉬움+병행성 낮음', '단위 작으면=관리 복잡+병행성 높음'을 쌍으로 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_061",
+    "categoryId": "memorize-db",
+    "subcategory": "병행제어",
+    "term": "로킹 단위가 작으면",
+    "definition": "로킹 단위가 작으면 (예: 레코드/필드 단위 Lock)\n• 관리가 복잡함 (Lock 개수 많음)\n• 병행성(동시성)이 높음 (여러 트랜잭션 동시 접근 가능)\n• 오버헤드 증가\n• 세밀한 제어 가능\n• 로킹 단위: DB > 테이블 > 페이지 > 레코드 > 필드",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_019",
+    "tags": [
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_059",
+      "card-memorize-db_060"
+    ],
+    "tip": "로킹 단위의 크기 순서(DB>테이블>페이지>레코드>필드)와 각 단위의 특성을 암기하세요. 시험에서 로킹 단위와 병행성/오버헤드의 관계를 묻는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_062",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "REDO(재수행)",
+    "definition": "REDO (재수행)\n커밋된 트랜잭션의 변경 내용을 DB에 다시 반영하는 회복 연산\n• 장애 발생 전 커밋 완료했지만 DB에 미반영된 트랜잭션에 적용\n• 로그의 변경 후(After Image) 값을 이용하여 재실행\n• 지연 갱신 기법에서 핵심 연산\n• '앞으로 되돌리기(Roll Forward)'라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_020",
+    "tags": [
+      "REDO",
+      "UNDO",
+      "회복"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_063"
+    ],
+    "tip": "REDO='커밋 O, DB 반영 X → 재실행', UNDO='커밋 X, DB 반영 O → 취소'로 구분하세요. REDO는 로그의 After Image, UNDO는 Before Image를 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_063",
+    "categoryId": "memorize-db",
+    "subcategory": "회복기법",
+    "term": "UNDO(취소)",
+    "definition": "UNDO (취소)\n커밋되지 않은 트랜잭션의 변경 내용을 취소하여 원래 상태로 복구하는 회복 연산\n• 장애 발생 시 커밋하지 않은 트랜잭션에 적용\n• 로그의 변경 전(Before Image) 값을 이용하여 원상 복구\n• 즉시 갱신 기법에서 필수 연산\n• '뒤로 되돌리기(Roll Back)'라고도 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-db_020",
+    "tags": [
+      "REDO",
+      "UNDO",
+      "회복"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_062"
+    ],
+    "tip": "UNDO='커밋 X → 원래 상태로 복구'가 핵심입니다. 즉시 갱신에서는 Redo+Undo 둘 다, 지연 갱신에서는 Redo만 필요한 이유를 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_064",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "차수(Degree)",
+    "definition": "차수(Degree)와 카디널리티(Cardinality):\n• 차수(Degree): 릴레이션의 속성(열/Column) 수\n• 카디널리티(Cardinality): 릴레이션의 튜플(행/Row) 수\n• 차수는 릴레이션 스키마에 의해 고정\n• 카디널리티는 튜플 삽입/삭제에 따라 변동",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_001",
+    "tags": [
+      "데이터베이스",
+      "차수",
+      "Degree",
+      "릴레이션"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_085"
+    ],
+    "tip": "차수=열 수, 카디널리티=행 수를 혼동하는 문제가 매우 자주 출제됩니다. '차(茶)를 세로로 따르니 열(Column)', '카디널리티=카드가 쌓이니 행'으로 연상하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_065",
+    "categoryId": "memorize-db",
+    "subcategory": "스키마",
+    "term": "개념 스키마",
+    "definition": "스키마 3계층 (3-Schema Architecture):\n• 외부 스키마(External Schema, 서브 스키마): 사용자별 논리적 구조. 여러 개 존재 가능\n• 개념 스키마(Conceptual Schema): DB 전체 논리적 구조. 조직 전체에 하나만 존재. DBA가 관리\n• 내부 스키마(Internal Schema): 물리적 저장 구조. 실제 데이터 저장 방법\n※ 각 스키마 간의 매핑을 '사상(Mapping)'이라 하며, 데이터 독립성을 보장",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_002",
+    "tags": [
+      "데이터베이스",
+      "스키마",
+      "개념스키마"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_086"
+    ],
+    "tip": "개념 스키마='하나만 존재', 외부 스키마='여러 개 가능', 내부 스키마='물리적 구조'로 구분하세요. 논리적/물리적 데이터 독립성과 연결하여 이해하면 좋습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_066",
+    "categoryId": "memorize-db",
+    "subcategory": "파일접근",
+    "term": "인덱스(Index) 방법",
+    "definition": "물리적 파일 접근 방법 3가지:\n• 순차 접근(Sequential Access): 레코드를 순서대로 접근. 테이프 방식\n• 해싱(Hashing): 해시 함수를 이용하여 키 값으로 직접 접근. 평균 O(1)\n• 인덱스(Indexing): 키-주소 쌍의 인덱스 테이블을 이용한 접근\n  - B-트리, B+트리 등의 인덱스 구조 사용\n  - 인덱스를 통해 빠른 검색 가능\n  - 삽입/삭제 시 인덱스 유지 비용 발생",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_004",
+    "tags": [
+      "데이터베이스",
+      "인덱스",
+      "파일접근"
+    ],
+    "tip": "인덱스 접근 방법에서 B-트리와 B+트리의 차이를 묻는 문제가 출제됩니다. B+트리는 리프 노드에만 데이터가 있고 리프 노드 간 연결 리스트로 연결됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_067",
+    "categoryId": "memorize-db",
+    "subcategory": "스키마",
+    "term": "내부 스키마",
+    "definition": "스키마 3종류 상세:\n• 외부 스키마(서브 스키마): 사용자 관점의 논리적 구조, 여러 개 존재 가능. 뷰(View)에 해당\n• 개념 스키마: DB 전체 논리적 구조, 조직 전체에 하나만 존재. DBA가 정의. 개체, 관계, 제약조건 포함\n• 내부 스키마: 물리적 저장 구조, 실제 데이터 저장 방법 기술. 인덱스, 레코드 형식 등\n※ 논리적 데이터 독립성: 개념↔외부, 물리적 데이터 독립성: 개념↔내부",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_006",
+    "tags": [
+      "데이터베이스",
+      "스키마",
+      "내부스키마",
+      "외부스키마"
+    ],
+    "tip": "스키마 3계층과 데이터 독립성(논리적/물리적)을 함께 암기하세요. 개념 스키마가 변경되면 외부 스키마에 영향(논리적 독립성), 내부 스키마 변경은 개념 스키마에 영향(물리적 독립성).",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_068",
+    "categoryId": "memorize-db",
+    "subcategory": "릴레이션",
+    "term": "튜플(Tuple)",
+    "definition": "릴레이션 구성요소:\n• 튜플(Tuple): 릴레이션의 행(Row). 레코드에 해당. 카디널리티로 개수 표현\n• 속성(Attribute): 릴레이션의 열(Column). 필드에 해당. 차수(Degree)로 개수 표현\n• 도메인(Domain): 하나의 속성이 취할 수 있는 원자값의 집합\n• 스키마(Schema): 릴레이션의 이름과 속성 집합. 릴레이션의 구조\n• 인스턴스(Instance): 실제 데이터(튜플)의 집합",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_007",
+    "tags": [
+      "데이터베이스",
+      "릴레이션",
+      "튜플",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_087"
+    ],
+    "tip": "릴레이션 용어 매칭(튜플=행=레코드, 속성=열=필드=컬럼)이 빈출 문제입니다. 차수=속성 수, 카디널리티=튜플 수를 정확히 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_069",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "교차곱(Cartesian Product, x)",
+    "definition": "일반 집합 연산자 4가지 (관계대수):\n• 합집합(∪, Union): 두 릴레이션의 모든 튜플 합침 (중복 제거)\n  - SQL: UNION\n• 교집합(∩, Intersection): 공통 튜플만 선택\n  - SQL: INTERSECT\n• 차집합(-, Difference): 한쪽에만 있는 튜플\n  - SQL: EXCEPT (또는 MINUS)\n• 교차곱(×, Cartesian Product): 모든 조합 생성\n  - SQL: CROSS JOIN\n※ 합·교·차 연산은 합병 가능(Union-Compatible)해야 함",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_008",
+    "tags": [
+      "데이터베이스",
+      "관계대수",
+      "집합연산자",
+      "교차곱"
+    ],
+    "tip": "합병 가능 조건(속성 수 동일, 대응 도메인 동일)을 반드시 기억하세요. 교차곱의 결과 튜플 수 = R의 행 수 × S의 행 수 입니다. 시험에서 연산 결과 행 수를 구하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_070",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "수평 연산(행 단위 선택)",
+    "definition": "Select (σ, 시그마) - 수평 연산:\n선택 조건을 만족하는 튜플의 부분집합을 구하는 관계대수 연산\n• 수평 연산: 행(Row) 단위로 선택\n• σ<조건>(R) 형태로 표기\n• WHERE절에 대응\n• 반면 Project(π)는 수직 연산으로 열(Column) 단위 선택\n• σ와 π를 조합하여 원하는 데이터 추출 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_009",
+    "tags": [
+      "데이터베이스",
+      "관계대수",
+      "Select",
+      "시그마"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_088"
+    ],
+    "tip": "수평(σ, 행)과 수직(π, 열)을 혼동하는 문제가 매우 빈출됩니다. '시그마=수평=SELECT WHERE', '파이=수직=SELECT 컬럼'으로 연결하여 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_071",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "조인(Join, ⋈)",
+    "definition": "Join (⋈) 상세:\n공통 속성을 중심으로 두 릴레이션을 하나로 합치는 연산\n• 자연 조인(Natural Join): 같은 이름의 속성으로 결합, 중복 속성 제거\n• 세타 조인(Theta Join): 비교 연산자(>, <, =, ≠ 등)로 결합 조건 지정\n• 동등 조인(Equi Join): = 조건만 사용하는 세타 조인의 특수 형태\n• 외부 조인(Outer Join): 매칭되지 않는 튜플도 NULL로 포함\n  - Left/Right/Full Outer Join",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_010",
+    "tags": [
+      "데이터베이스",
+      "관계대수",
+      "Join",
+      "조인"
+    ],
+    "tip": "자연 조인과 동등 조인의 차이(중복 속성 제거 여부)를 반드시 구분하세요. 외부 조인(Left/Right/Full)도 시험에 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_072",
+    "categoryId": "memorize-db",
+    "subcategory": "관계대수",
+    "term": "디비전(Division, ÷)",
+    "definition": "Division (÷) 상세:\nR÷S 연산 시 S의 모든 튜플과 관련 있는 R의 튜플을 선택\n• 결과 속성: R의 속성에서 S의 속성을 제외\n• '모든'이라는 전칭 한정자를 표현하는 연산\n• 예: R(학생, 과목), S(과목)일 때 R÷S = 모든 과목을 수강한 학생\n• SQL에서는 NOT EXISTS 중첩 또는 GROUP BY + HAVING COUNT로 구현",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_011",
+    "tags": [
+      "데이터베이스",
+      "관계대수",
+      "Division",
+      "디비전"
+    ],
+    "tip": "Division 연산의 결과를 직접 구하는 문제가 출제될 수 있습니다. 'S의 모든 값을 포함하는 R의 튜플'이라는 정의를 정확히 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_073",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "비정규형 → 1NF → 2NF → 3NF → BCNF → 4NF → 5NF",
+    "definition": "정규화 6단계 (도부이결다조):\n• 도메인이 원자값 → 1NF (도)\n• 부분 함수 종속 제거 → 2NF (부)\n• 이행 함수 종속 제거 → 3NF (이)\n• 결정자이면서 후보키가 아닌 것 제거 → BCNF (결)\n• 다치 종속 제거 → 4NF (다)\n• 조인 종속 제거 → 5NF (조)\n※ 정규화의 목적: 이상현상(삽입/삭제/갱신 이상) 방지, 데이터 중복 최소화",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_012",
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "도부이결다조"
+    ],
+    "tip": "정규화 단계별 제거 대상을 정확히 매칭하는 문제가 빈출됩니다. 특히 2NF(부분함수종속)와 3NF(이행함수종속)를 혼동하지 마세요.",
+    "mnemonic": "도부이결다조"
+  },
+  {
+    "id": "card-memorize-db_074",
+    "categoryId": "memorize-db",
+    "subcategory": "릴레이션",
+    "term": "도메인(Domain)",
+    "definition": "도메인(Domain):\n하나의 애트리뷰트(속성)가 취할 수 있는 같은 타입의 원자값(Atomic Value)들의 집합\n• 속성의 데이터 타입과 허용 범위를 정의\n• 예: '성별' 도메인 = {남, 여}\n• 예: '학년' 도메인 = {1, 2, 3, 4}\n• SQL의 CHECK 제약조건으로 구현 가능\n• 도메인 무결성: 속성값이 도메인에 속해야 한다는 규칙",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_014",
+    "tags": [
+      "데이터베이스",
+      "도메인",
+      "릴레이션",
+      "기출"
+    ],
+    "tip": "도메인은 '속성이 가질 수 있는 값의 범위'입니다. 1NF의 조건인 '도메인이 원자값'과 연결하여 이해하세요. 도메인 무결성과도 관련됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_075",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "반정규화(Denormalization)",
+    "definition": "반정규화(Denormalization, 역정규화):\n성능 향상을 위해 정규화된 데이터 모델을 의도적으로 중복·통합하는 과정\n• 방법: 테이블 통합, 테이블 분할(수평/수직), 중복 테이블 추가, 중복 속성 추가\n• 장점: 조회 성능 향상, JOIN 감소\n• 단점: 데이터 무결성 저하, 저장 공간 증가\n• 정규화 후 성능 저하가 발생할 때 선택적으로 적용",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_015",
+    "tags": [
+      "데이터베이스",
+      "반정규화",
+      "정규화",
+      "성능"
+    ],
+    "tip": "반정규화는 '성능 향상 목적'이 핵심 키워드입니다. 정규화와 반정규화의 트레이드오프(무결성 vs 성능)를 이해해야 합니다. 테이블 분할 방법(수평/수직)도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_076",
+    "categoryId": "memorize-db",
+    "subcategory": "데이터베이스",
+    "term": "시스템 카탈로그(System Catalog)",
+    "definition": "시스템 카탈로그(System Catalog) = 데이터 사전(Data Dictionary):\n시스템 관련 객체 정보를 포함하는 시스템 데이터베이스\n• 테이블, 인덱스, 뷰, 사용자 권한, 통계 정보 등을 저장\n• DBMS가 자동으로 생성·관리 (사용자 직접 수정 불가)\n• SQL로 조회 가능 (읽기 전용)\n• 메타데이터(데이터에 대한 데이터)를 관리\n• 시스템 테이블 또는 데이터 딕셔너리라고도 함",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_016",
+    "tags": [
+      "데이터베이스",
+      "시스템카탈로그",
+      "데이터사전"
+    ],
+    "tip": "시스템 카탈로그='데이터 사전'='읽기 전용'이 핵심 키워드입니다. 사용자가 직접 수정할 수 없고 DBMS가 자동 관리한다는 점이 시험에 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_077",
+    "categoryId": "memorize-db",
+    "subcategory": "보안",
+    "term": "RBAC(Role-Based Access Control)",
+    "definition": "접근통제 기술 3가지:\n• DAC(Discretionary AC, 임의적 접근통제): 데이터 소유자가 접근 권한 결정. GRANT/REVOKE로 구현\n• MAC(Mandatory AC, 강제적 접근통제): 보안 등급(레이블)에 따라 시스템이 결정. 군사/정부 기관에서 사용\n• RBAC(Role-Based AC, 역할 기반 접근통제): 사용자 역할(Role)에 따라 권한 부여. 관리 용이\n※ DAC은 유연하지만 보안 약함, MAC은 엄격하지만 유연성 부족, RBAC이 절충안",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_018",
+    "tags": [
+      "데이터베이스",
+      "보안",
+      "접근통제",
+      "RBAC"
+    ],
+    "tip": "DAC(임의적)=소유자 결정, MAC(강제적)=시스템 결정, RBAC(역할 기반)=역할별 권한으로 구분하세요. 시험에서 각 방식의 특징과 차이를 묻는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_078",
+    "categoryId": "memorize-db",
+    "subcategory": "데이터베이스",
+    "term": "파티션(Partition)",
+    "definition": "파티션(Partition) 종류:\n대용량 테이블을 분할하여 관리하는 기법\n• 범위 분할(Range): 지정된 범위 기준으로 분할 (예: 날짜별, 금액별)\n• 해시 분할(Hash): 해시 함수 적용하여 균등 분할\n• 목록 분할(List): 특정 값 목록 기준으로 분할 (예: 지역별)\n• 조합 분할(Composite): 범위+해시 등 복합 방식\n• 장점: 성능 향상, 가용성 향상, 관리 용이",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_019",
+    "tags": [
+      "데이터베이스",
+      "파티션",
+      "범위분할",
+      "해시분할"
+    ],
+    "tip": "파티션 4가지 종류(범위/해시/목록/조합)의 특징과 예시를 암기하세요. 시험에서 '날짜별 분할=범위 분할', '균등 분할=해시 분할' 등으로 매칭하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_079",
+    "categoryId": "memorize-db",
+    "subcategory": "데이터베이스",
+    "term": "클러스터링(Clustering)",
+    "definition": "클러스터링(Clustering):\n동일한 성격의 데이터를 동일한 데이터 블록에 물리적으로 저장하는 기법\n• 디스크 I/O를 줄여 조회(액세스) 효율 향상\n• 대량의 범위 조회(Range Query)에 유리\n• 분포가 넓은 테이블에 효과적\n• 단점: 입력/수정/삭제(DML) 시 성능 저하 가능\n• 클러스터드 인덱스(Clustered Index)와 관련",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_021",
+    "tags": [
+      "데이터베이스",
+      "클러스터링",
+      "물리적저장"
+    ],
+    "tip": "클러스터링은 '조회 성능 향상, DML 성능 저하'가 핵심 트레이드오프입니다. 인덱스와 함께 물리적 설계 단계에서 고려되는 기법입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_080",
+    "categoryId": "memorize-db",
+    "subcategory": "데이터모델",
+    "term": "구조(Structure), 연산(Operation), 제약조건(Constraint)",
+    "definition": "데이터 모델 3요소:\n• 구조(Structure): 데이터베이스에 논리적으로 표현될 대상(개체 타입과 관계)\n• 연산(Operation): 데이터베이스에 저장된 실제 데이터를 처리하는 방법(CRUD)\n• 제약조건(Constraint): 데이터의 논리적 제약(무결성 규칙 등)\n※ '구연제'로 암기\n※ 데이터 모델 종류: 계층형, 네트워크형, 관계형, 객체지향형",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_022",
+    "tags": [
+      "데이터베이스",
+      "데이터모델",
+      "구조",
+      "연산",
+      "제약조건"
+    ],
+    "tip": "데이터 모델 3요소 '구조-연산-제약조건(구연제)'이 시험에 직접 출제됩니다. 데이터 모델의 종류(계층/네트워크/관계형)와 혼동하지 마세요.",
+    "mnemonic": "구연제"
+  },
+  {
+    "id": "card-memorize-db_081",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "함수적 종속(Functional Dependency)",
+    "definition": "함수적 종속(Functional Dependency, FD):\nX→Y로 표기. X(결정자)의 값을 알면 Y(종속자)의 값이 유일하게 결정됨\n• 완전 함수 종속: 기본키 전체에 종속 (2NF 조건)\n• 부분 함수 종속: 기본키 일부에 종속 (2NF에서 제거)\n• 이행 함수 종속: X→Y→Z일 때 X→Z (3NF에서 제거)\n• 정규화의 이론적 기반이 되는 핵심 개념",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_023",
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "함수적종속",
+      "종속성"
+    ],
+    "tip": "함수적 종속 유형(완전/부분/이행)과 정규화 단계의 매칭이 시험 핵심입니다. 종속 다이어그램을 보고 정규형을 판별하는 실기 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_082",
+    "categoryId": "memorize-db",
+    "subcategory": "정규화",
+    "term": "삭제 이상(Deletion Anomaly)",
+    "definition": "이상(Anomaly) 3종류:\n정규화가 불충분할 때 발생하는 데이터 조작 이상 현상\n• 삽입 이상(Insertion Anomaly): 데이터 삽입 시 불필요한 데이터도 함께 삽입해야 하는 현상\n• 삭제 이상(Deletion Anomaly): 데이터 삭제 시 의도하지 않은 정보까지 함께 삭제되는 현상\n• 갱신 이상(Update Anomaly): 중복 데이터 중 일부만 수정되어 데이터 불일치가 발생하는 현상\n※ 정규화를 통해 이상현상을 방지",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_024",
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "이상",
+      "삭제이상",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_089",
+      "card-memorize-db_090"
+    ],
+    "tip": "이상현상 3가지(삽입/삭제/갱신)의 정의를 정확히 구분해야 합니다. 시험에서 사례를 주고 어떤 이상인지 묻는 문제가 출제됩니다. 정규화의 필요성을 설명하는 근거이기도 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_083",
+    "categoryId": "memorize-db",
+    "subcategory": "회복",
+    "term": "지연 갱신 회복 기법(Deferred Update)",
+    "definition": "DB 회복 기법 5가지:\n• 즉시 갱신(Immediate Update): 수행 중 즉시 DB 반영. UNDO/REDO 모두 필요\n• 지연 갱신(Deferred Update): 커밋까지 지연 후 반영. REDO만 필요 (NO-UNDO/REDO)\n• 검사 시점(Checkpoint): 체크포인트까지의 변경을 DB에 반영. 회복 범위 축소\n• 그림자 페이징(Shadow Paging): 페이지 단위 보관. 로그 불필요\n• 미디어 회복(Media Recovery): 디스크 장애 시 덤프(백업) 이용\n※ '즉지검그미'로 암기",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_025",
+    "tags": [
+      "데이터베이스",
+      "회복",
+      "지연갱신",
+      "회복기법"
+    ],
+    "tip": "회복 기법 5가지의 핵심 특징을 비교 암기하세요. 특히 즉시 갱신(Redo+Undo)과 지연 갱신(Redo만)의 차이, 그림자 페이징(로그 불필요)이 빈출됩니다.",
+    "mnemonic": "즉지검그미"
+  },
+  {
+    "id": "card-memorize-db_084",
+    "categoryId": "memorize-db",
+    "subcategory": "SQL",
+    "term": "ADD",
+    "definition": "ALTER TABLE 상세 (DDL 명령어):\n• ADD: 새 컬럼 추가\n  ALTER TABLE 테이블명 ADD 컬럼명 데이터타입;\n• MODIFY: 기존 컬럼 데이터타입 변경\n  ALTER TABLE 테이블명 MODIFY 컬럼명 새_데이터타입;\n• DROP COLUMN: 컬럼 삭제\n  ALTER TABLE 테이블명 DROP COLUMN 컬럼명;\n• RENAME COLUMN: 컬럼명 변경\n  ALTER TABLE 테이블명 RENAME COLUMN 기존명 TO 새이름;",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_030",
+    "tags": [
+      "데이터베이스",
+      "SQL",
+      "DDL",
+      "ALTER",
+      "ADD"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_091",
+      "card-memorize-db_092",
+      "card-memorize-db_093"
+    ],
+    "tip": "ALTER TABLE의 세부 명령어(ADD, MODIFY, DROP COLUMN, RENAME COLUMN) 문법이 빈출됩니다. Oracle과 MySQL 문법 차이에 주의하세요. 시험에서는 Oracle 기준이 많습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_085",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "term": "카디널리티(Cardinality)",
+    "definition": "카디널리티(Cardinality)\n릴레이션에서 튜플(행, Row)의 수\n• 데이터 삽입/삭제에 따라 값이 변동됨\n• 차수(Degree)는 속성(열)의 수로 고정값\n• 카디널리티는 인스턴스(실제 데이터) 관점의 개념\n• 예: 학생 테이블에 100명의 데이터가 있으면 카디널리티=100",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_001",
+    "tags": [
+      "데이터베이스",
+      "차수",
+      "Degree",
+      "릴레이션"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_064"
+    ],
+    "tip": "차수(Degree)=열 수(고정), 카디널리티(Cardinality)=행 수(변동)를 혼동하는 문제가 단골 출제됩니다. 두 개념을 반드시 쌍으로 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_086",
+    "categoryId": "theory-db",
+    "subcategory": "스키마",
+    "term": "외부 스키마",
+    "definition": "외부 스키마 (External Schema, 서브 스키마)\n개별 사용자(또는 응용 프로그램) 관점에서 본 데이터베이스의 논리적 구조\n• 사용자마다 필요한 데이터만 정의\n• 여러 개 존재 가능 (사용자별로 다른 뷰)\n• SQL의 VIEW와 관련\n• 개념 스키마의 부분집합\n• 논리적 데이터 독립성: 개념 스키마 변경 시 외부 스키마에 영향 없음",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_002",
+    "tags": [
+      "데이터베이스",
+      "스키마",
+      "개념스키마"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_065"
+    ],
+    "tip": "외부 스키마='사용자별 뷰'='여러 개 존재 가능'으로 암기하세요. 개념 스키마(하나만)와 대비하여 기억하면 효과적입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_087",
+    "categoryId": "theory-db",
+    "subcategory": "릴레이션",
+    "term": "속성(Attribute)",
+    "definition": "속성(Attribute)\n릴레이션의 열(Column)에 해당하는 구성요소\n• 필드(Field)라고도 함\n• 속성의 수 = 차수(Degree)\n• 각 속성은 도메인(허용 값 범위)을 가짐\n• 릴레이션 스키마에 의해 정의됨\n• 예: 학생(학번, 이름, 학과) → 속성 3개, 차수=3",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_007",
+    "tags": [
+      "데이터베이스",
+      "릴레이션",
+      "튜플",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_068"
+    ],
+    "tip": "속성=열=컬럼=필드는 모두 같은 개념입니다. 튜플=행=레코드와 대비하여 기억하세요. 속성의 수를 차수(Degree)라고 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_088",
+    "categoryId": "theory-db",
+    "subcategory": "관계대수",
+    "term": "수평 연산으로 조건을 만족하는 행을 선택한다",
+    "definition": "σ(시그마) 연산의 특징:\n관계대수에서 Select 연산은 조건을 만족하는 튜플의 부분집합을 구하는 수평 연산\n• 수평 연산: 행(튜플) 단위로 선택\n• SQL의 WHERE절에 대응\n• 결과 릴레이션의 차수(열 수)는 원래와 동일\n• 카디널리티(행 수)만 줄어듦\n• π(Project)의 수직 연산과 대비되는 개념",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_009",
+    "tags": [
+      "데이터베이스",
+      "관계대수",
+      "Select",
+      "시그마"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_070"
+    ],
+    "tip": "시험에서 '수평 연산으로 조건을 만족하는 행을 선택한다'는 설명이 σ(Select) 연산의 정답 보기입니다. π(Project)와 혼동하지 마세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_089",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "term": "삽입 이상(Insertion Anomaly)",
+    "definition": "삽입 이상(Insertion Anomaly)\n데이터를 삽입할 때 의도하지 않은 불필요한 데이터도 함께 삽입해야 하는 현상\n• 예: 학생-과목 테이블에서 과목 정보만 삽입하려면 학생 정보도 필수로 입력해야 함\n• 원인: 테이블이 충분히 정규화되지 않아 여러 엔터티가 하나의 테이블에 혼합\n• 해결: 정규화를 통해 테이블 분리",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_024",
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "이상",
+      "삭제이상",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_082",
+      "card-memorize-db_090"
+    ],
+    "tip": "삽입 이상의 예시를 구체적으로 설명할 수 있어야 합니다. 시험에서 테이블 예시를 주고 어떤 이상이 발생하는지 묻는 서술형 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_090",
+    "categoryId": "theory-db",
+    "subcategory": "정규화",
+    "term": "갱신 이상(Update Anomaly)",
+    "definition": "갱신 이상(Update Anomaly)\n중복된 데이터 중 일부만 수정되어 데이터 불일치(모순)가 발생하는 현상\n• 예: 학생-학과 테이블에서 학과 사무실이 중복 저장된 경우, 일부 행만 수정하면 불일치 발생\n• 원인: 동일 정보가 여러 튜플에 중복 저장\n• 해결: 정규화를 통해 중복 제거",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_024",
+    "tags": [
+      "데이터베이스",
+      "정규화",
+      "이상",
+      "삭제이상",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_082",
+      "card-memorize-db_089"
+    ],
+    "tip": "갱신 이상은 '데이터 불일치'가 핵심 키워드입니다. 삽입/삭제/갱신 이상 3가지를 각각의 특징과 예시로 구분할 수 있어야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_091",
+    "categoryId": "theory-db",
+    "subcategory": "SQL",
+    "term": "MODIFY",
+    "definition": "MODIFY (ALTER TABLE 하위 명령어)\n기존 컬럼의 데이터 타입이나 크기를 변경하는 DDL 명령\n• 문법: ALTER TABLE 테이블명 MODIFY 컬럼명 새_데이터타입;\n• 데이터가 존재하면 호환 가능한 타입으로만 변경 가능\n• 컬럼 크기를 줄일 때 기존 데이터보다 작으면 오류 발생",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_030",
+    "tags": [
+      "데이터베이스",
+      "SQL",
+      "DDL",
+      "ALTER",
+      "ADD"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_084",
+      "card-memorize-db_092",
+      "card-memorize-db_093"
+    ],
+    "tip": "MODIFY와 ALTER COLUMN을 혼동하지 마세요. Oracle에서는 MODIFY, SQL Server에서는 ALTER COLUMN을 사용합니다. 시험은 Oracle 문법 기준이 대부분입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_092",
+    "categoryId": "theory-db",
+    "subcategory": "SQL",
+    "term": "DROP COLUMN",
+    "definition": "DROP COLUMN (ALTER TABLE 하위 명령어)\n테이블에서 기존 컬럼을 완전히 삭제하는 DDL 명령\n• 문법: ALTER TABLE 테이블명 DROP COLUMN 컬럼명;\n• 삭제된 컬럼의 데이터는 복구 불가\n• 참조 무결성 제약이 있는 컬럼은 CASCADE 옵션 필요",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_030",
+    "tags": [
+      "데이터베이스",
+      "SQL",
+      "DDL",
+      "ALTER",
+      "ADD"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_084",
+      "card-memorize-db_091",
+      "card-memorize-db_093"
+    ],
+    "tip": "DROP TABLE(테이블 삭제)과 DROP COLUMN(컬럼 삭제)을 혼동하는 함정 보기가 출제됩니다. DROP COLUMN은 ALTER TABLE의 하위 명령입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-db_093",
+    "categoryId": "theory-db",
+    "subcategory": "SQL",
+    "term": "RENAME",
+    "definition": "RENAME COLUMN (ALTER TABLE 하위 명령어)\n테이블의 컬럼 이름을 변경하는 DDL 명령\n• 문법: ALTER TABLE 테이블명 RENAME COLUMN 기존컬럼명 TO 새컬럼명;\n• 컬럼의 데이터 타입이나 데이터에는 영향 없음\n• 해당 컬럼을 참조하는 뷰, 인덱스 등에 영향을 줄 수 있음",
+    "source": "theory",
+    "sourceQuestionId": "theory-db_030",
+    "tags": [
+      "데이터베이스",
+      "SQL",
+      "DDL",
+      "ALTER",
+      "ADD"
+    ],
+    "relatedTerms": [
+      "card-memorize-db_084",
+      "card-memorize-db_091",
+      "card-memorize-db_092"
+    ],
+    "tip": "RENAME COLUMN과 RENAME TABLE(테이블 이름 변경)을 구분하세요. 시험에서 ALTER TABLE의 세부 옵션(ADD/MODIFY/DROP/RENAME) 4가지를 모두 아는지 확인하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  }
+]

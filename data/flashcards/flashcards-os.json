@@ -1,0 +1,1811 @@
+[
+  {
+    "id": "card-memorize-os_001",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "FCFS",
+    "definition": "FCFS(First Come First Served) — 먼저 도착한 프로세스 순서대로 처리\n• 비선점형(Non-preemptive) 스케줄링\n• 구현이 가장 단순(FIFO 큐 사용)\n• 단점: 호위 효과(Convoy Effect) — 긴 작업 뒤에 짧은 작업이 대기하여 평균 대기시간 증가\n• 공정하지만 응답시간이 불균등",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_001",
+    "tags": [
+      "스케줄링",
+      "비선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_002",
+      "card-memorize-os_003"
+    ],
+    "tip": "FCFS는 '비선점형'이라는 점과 '호위 효과(Convoy Effect)'를 묻는 문제가 자주 출제됩니다. SJF와 비교하여 평균 대기시간이 길다는 점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_002",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "SJF",
+    "definition": "SJF(Shortest Job First) — 실행시간이 가장 짧은 프로세스를 먼저 처리\n• 비선점형(Non-preemptive) 스케줄링\n• 평균 대기시간이 가장 짧음(최적)\n• 단점: 기아 현상(Starvation) — 긴 작업이 계속 밀려 무한 대기\n• 실행시간 예측이 어려운 것이 현실적 한계",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_001",
+    "tags": [
+      "스케줄링",
+      "비선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_001",
+      "card-memorize-os_003"
+    ],
+    "tip": "SJF가 '평균 대기시간 최소'라는 점은 단골 출제 포인트입니다. 선점형 버전인 SRT와 혼동하지 않도록 주의하세요. 기아 현상 해결책은 HRN(에이징)입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_003",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "HRN",
+    "definition": "HRN(Highest Response-ratio Next) — SJF의 기아 현상을 보완하기 위해 대기시간을 고려\n• 비선점형(Non-preemptive) 스케줄링\n• 우선순위 = (대기시간 + 서비스시간) / 서비스시간\n• 에이징(Aging) 기법 적용 — 대기시간이 길수록 우선순위 상승\n• 우선순위 값이 클수록 먼저 실행",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_001",
+    "tags": [
+      "스케줄링",
+      "비선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_001",
+      "card-memorize-os_002"
+    ],
+    "tip": "HRN 공식 '(대기시간+서비스시간)/서비스시간'은 서술형·단답형 빈출입니다. 분모가 '서비스시간'이라는 점을 정확히 외우세요. SJF의 단점(기아 현상)을 보완한다는 관계도 함께 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_004",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "RR(Round Robin)",
+    "definition": "RR(Round Robin) — 각 프로세스에 동일한 시간 할당량(Time Slice/Quantum)을 부여\n• 선점형(Preemptive) 스케줄링\n• 시간 할당량 초과 시 준비 큐의 맨 뒤로 이동\n• 시분할 시스템(Time Sharing)에 적합\n• Time Slice가 너무 크면 → FCFS와 동일\n• Time Slice가 너무 작으면 → 문맥 교환(Context Switch) 오버헤드 증가",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_002",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_005",
+      "card-memorize-os_006",
+      "card-memorize-os_007",
+      "card-memorize-os_008"
+    ],
+    "tip": "RR에서 Time Slice 크기에 따른 성능 변화를 묻는 문제가 자주 나옵니다. '너무 크면 FCFS, 너무 작으면 오버헤드'를 기억하세요. 선점형이라는 점도 중요합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_005",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "SRT",
+    "definition": "SRT(Shortest Remaining Time) — SJF의 선점형 버전\n• 선점형(Preemptive) 스케줄링\n• 현재 실행 중인 프로세스의 남은 시간보다 더 짧은 프로세스가 도착하면 CPU를 빼앗음\n• 평균 대기시간 면에서 SJF보다 우수\n• 단점: 잦은 문맥 교환 오버헤드, 기아 현상 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_002",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_004",
+      "card-memorize-os_006",
+      "card-memorize-os_007",
+      "card-memorize-os_008"
+    ],
+    "tip": "SRT는 SJF의 '선점형 버전'이라는 관계를 정확히 외우세요. '남은 실행시간'을 기준으로 비교한다는 점이 핵심입니다. SJF와 SRT를 비교하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_006",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "선점 우선순위",
+    "definition": "선점 우선순위(Preemptive Priority) — 더 높은 우선순위의 프로세스가 도착하면 즉시 CPU를 빼앗음\n• 선점형(Preemptive) 스케줄링\n• 우선순위는 정적(고정) 또는 동적(변경 가능)으로 할당\n• 단점: 기아 현상(Starvation) — 낮은 우선순위 프로세스가 영원히 대기\n• 해결: 에이징(Aging) 기법으로 대기시간에 따라 우선순위 상향",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_002",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_004",
+      "card-memorize-os_005",
+      "card-memorize-os_007",
+      "card-memorize-os_008"
+    ],
+    "tip": "선점 우선순위에서는 '기아 현상'과 그 해결책인 '에이징(Aging)'을 함께 묻는 경우가 많습니다. 비선점 우선순위와의 차이도 정리해 두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_007",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "다단계 큐",
+    "definition": "다단계 큐(MLQ, Multi-Level Queue) — 준비 큐를 여러 개로 분리하여 각각 다른 스케줄링 알고리즘 적용\n• 선점형(Preemptive) 스케줄링\n• 프로세스를 유형별로 그룹화(전경/배경, 시스템/대화형/배치 등)\n• 각 큐는 독립적 스케줄링 정책 사용\n• 단점: 큐 간 이동 불가 → 유연성 부족",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_002",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_004",
+      "card-memorize-os_005",
+      "card-memorize-os_006",
+      "card-memorize-os_008"
+    ],
+    "tip": "다단계 큐는 '큐 간 이동이 불가능'하다는 점이 핵심입니다. 이동이 가능한 것은 다단계 피드백 큐(MFQ)이므로 둘의 차이를 반드시 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_008",
+    "categoryId": "memorize-os",
+    "subcategory": "스케줄링",
+    "term": "다단계 피드백 큐",
+    "definition": "다단계 피드백 큐(MFQ, Multi-Level Feedback Queue) — 다단계 큐에서 큐 간 이동이 가능하도록 개선\n• 선점형(Preemptive) 스케줄링\n• 프로세스가 CPU를 많이 사용하면 하위 큐로 이동(강등)\n• 하위 큐일수록 Time Slice가 커짐\n• 에이징 기법으로 오래 대기한 프로세스를 상위 큐로 승격\n• 가장 일반적이고 복잡한 CPU 스케줄링 알고리즘",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_002",
+    "tags": [
+      "스케줄링",
+      "선점형"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_004",
+      "card-memorize-os_005",
+      "card-memorize-os_006",
+      "card-memorize-os_007"
+    ],
+    "tip": "MFQ는 '큐 간 이동 가능'이 핵심 키워드입니다. '가장 일반적인 스케줄링'으로 출제되기도 합니다. 다단계 큐(MLQ)와 비교하여 차이점을 정확히 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_009",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "term": "FIFO",
+    "definition": "FIFO(First In First Out) — 가장 먼저 적재된 페이지를 교체\n• 가장 단순한 페이지 교체 알고리즘\n• 벨레이디의 모순(Belady's Anomaly) 발생 가능 — 프레임 수를 늘려도 페이지 부재가 증가하는 현상\n• 구현: 큐(Queue) 자료구조 사용\n• LRU, OPT보다 성능이 떨어짐",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_006",
+    "tags": [
+      "페이지교체",
+      "메모리"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_010",
+      "card-memorize-os_011",
+      "card-memorize-os_012"
+    ],
+    "tip": "FIFO에서 가장 중요한 포인트는 '벨레이디의 모순(Belady's Anomaly)'입니다. '프레임 수 증가 → 페이지 부재 증가'라는 역설적 현상을 반드시 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_010",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "term": "LRU",
+    "definition": "LRU(Least Recently Used) — 가장 오랫동안 사용하지 않은 페이지를 교체\n• 최근 사용 이력을 기반으로 판단(시간 지역성 활용)\n• 벨레이디의 모순이 발생하지 않음\n• 구현: 카운터, 스택 등 사용\n• 실제 시스템에서 가장 많이 사용되는 알고리즘 중 하나\n• OPT에 가장 근접한 성능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_006",
+    "tags": [
+      "페이지교체",
+      "메모리"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_009",
+      "card-memorize-os_011",
+      "card-memorize-os_012"
+    ],
+    "tip": "LRU는 '가장 오래 사용 안 한' 페이지를 교체한다는 점에서 FIFO(가장 오래 적재된)와 혼동하기 쉽습니다. LRU는 '사용 시점', FIFO는 '적재 시점' 기준입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_011",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "term": "LFU",
+    "definition": "LFU(Least Frequently Used) — 사용 빈도가 가장 낮은 페이지를 교체\n• 참조 횟수(빈도)를 기록하여 판단\n• 최근에 적재된 페이지가 불리할 수 있음(아직 참조 횟수가 적으므로)\n• 구현 오버헤드가 큼(카운터 관리 필요)\n• LRU와 비교: LRU는 '시간', LFU는 '횟수' 기준",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_006",
+    "tags": [
+      "페이지교체",
+      "메모리"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_009",
+      "card-memorize-os_010",
+      "card-memorize-os_012"
+    ],
+    "tip": "LRU와 LFU를 비교하는 문제가 자주 출제됩니다. LRU = '시간(최근 사용 여부)', LFU = '횟수(사용 빈도)'로 기준이 다릅니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_012",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "term": "OPT",
+    "definition": "OPT(OPTimal, 최적 페이지 교체) — 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체\n• 이론적으로 가장 적은 페이지 부재 발생(최적)\n• 벨레이디의 모순이 발생하지 않음\n• 실현 불가능(미래 참조를 예측할 수 없으므로)\n• 다른 알고리즘의 성능 비교 기준(상한선)으로 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_006",
+    "tags": [
+      "페이지교체",
+      "메모리"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_009",
+      "card-memorize-os_010",
+      "card-memorize-os_011"
+    ],
+    "tip": "OPT는 '실현 불가능한 이론적 최적 알고리즘'이라는 점이 가장 중요합니다. 시험에서 '실제 구현 가능한 알고리즘'을 고르는 문제에서 OPT를 제외해야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_013",
+    "categoryId": "memorize-os",
+    "subcategory": "리눅스",
+    "term": "리눅스 파일 권한 chmod의 8진법",
+    "definition": "리눅스 파일 권한 chmod의 8진법 표기\n• 읽기(r) = 4, 쓰기(w) = 2, 실행(x) = 1\n• 각 자릿수: 소유자(Owner) / 그룹(Group) / 기타(Others)\n• 예시: chmod 755 → rwxr-xr-x (소유자: 모든 권한, 그룹·기타: 읽기+실행)\n• chmod 644 → rw-r--r-- (소유자: 읽기+쓰기, 그룹·기타: 읽기만)\n• 기호 방식: chmod u+x file (소유자에 실행 권한 추가)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_007",
+    "tags": [
+      "chmod",
+      "리눅스"
+    ],
+    "tip": "chmod 숫자 변환 문제가 자주 출제됩니다. 755, 644, 777 등 대표적인 조합을 외우고, rwx → 숫자 변환 연습을 해두세요. 'r=4, w=2, x=1' 합산 방식입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_014",
+    "categoryId": "memorize-os",
+    "subcategory": "리눅스",
+    "term": "리눅스 기본 명령어",
+    "definition": "리눅스 기본 명령어 모음\n• 파일/디렉토리: ls(목록), cd(이동), pwd(현재경로), cp(복사), mv(이동/이름변경), rm(삭제), mkdir(디렉토리생성), rmdir(빈 디렉토리삭제)\n• 파일 내용: cat(출력), head/tail(앞/뒤 출력), grep(패턴검색), find(파일검색)\n• 권한: chmod(권한변경), chown(소유자변경)\n• 프로세스: ps(프로세스목록), kill(프로세스종료), top(실시간 모니터링)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_008",
+    "tags": [
+      "리눅스",
+      "명령어"
+    ],
+    "tip": "리눅스 명령어는 매 회차 1~2문제씩 출제됩니다. 특히 chmod, grep, find, ps, kill의 옵션과 사용법을 정확히 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_015",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "term": "공유 메모리",
+    "definition": "공유 메모리(Shared Memory) — 두 개 이상의 프로세스가 동일한 메모리 공간을 공유하여 데이터 교환\n• IPC(Inter-Process Communication) 기법 중 가장 빠른 통신 방식\n• 커널 개입 없이 직접 메모리에 접근 → 오버헤드 최소\n• 단점: 동기화 문제 발생 가능 → 세마포어 등으로 해결\n• 대량 데이터 교환에 적합",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_009",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_016",
+      "card-memorize-os_017",
+      "card-memorize-os_018",
+      "card-memorize-os_019"
+    ],
+    "tip": "공유 메모리는 IPC 중 '가장 빠른 방식'이라는 점이 시험에서 핵심 포인트입니다. 단, 동기화를 별도로 처리해야 한다는 단점도 함께 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_016",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "term": "메시지 큐",
+    "definition": "메시지 큐(Message Queue) — 프로세스 간 메시지 단위로 데이터를 송수신하는 IPC 기법\n• 커널이 관리하는 메시지 링크드 리스트 사용\n• 비동기적 통신 가능(송신자와 수신자가 동시에 활성화될 필요 없음)\n• 메시지 타입별 선택적 수신 가능\n• 파이프와 달리 양방향 통신 지원",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_009",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_015",
+      "card-memorize-os_017",
+      "card-memorize-os_018",
+      "card-memorize-os_019"
+    ],
+    "tip": "메시지 큐는 '비동기 통신'과 '양방향'이라는 특성이 파이프(동기, 단방향)와의 차이점입니다. 비교 문제에서 이 차이를 물어봅니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_017",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "term": "파이프",
+    "definition": "파이프(Pipe) — 하나의 프로세스가 쓴 데이터를 다른 프로세스가 읽는 단방향 통신 채널\n• 단방향(Half-duplex) 통신 — 양방향 시 파이프 2개 필요\n• 부모-자식 프로세스 간 통신에 주로 사용\n• 명명된 파이프(Named Pipe/FIFO): 관계없는 프로세스 간에도 사용 가능\n• 익명 파이프(Anonymous Pipe): fork()로 생성된 부모-자식 간에만 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_009",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_015",
+      "card-memorize-os_016",
+      "card-memorize-os_018",
+      "card-memorize-os_019"
+    ],
+    "tip": "파이프가 '단방향'이라는 점은 필수 암기입니다. 명명된 파이프(Named Pipe)와 익명 파이프(Anonymous Pipe)의 차이도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_018",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "term": "소켓",
+    "definition": "소켓(Socket) — 네트워크를 통해 서로 다른 시스템의 프로세스 간 통신을 지원하는 IPC 기법\n• 양방향(Full-duplex) 통신 가능\n• 클라이언트-서버 모델 기반\n• 같은 시스템뿐 아니라 원격 시스템 간에도 통신 가능\n• TCP(스트림) 소켓과 UDP(데이터그램) 소켓으로 구분\n• IP 주소 + 포트 번호로 통신 대상 식별",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_009",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_015",
+      "card-memorize-os_016",
+      "card-memorize-os_017",
+      "card-memorize-os_019"
+    ],
+    "tip": "소켓은 IPC 중 유일하게 '네트워크(원격) 통신'이 가능한 기법이라는 점이 핵심입니다. TCP/UDP 소켓 차이도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_019",
+    "categoryId": "memorize-os",
+    "subcategory": "IPC",
+    "term": "세마포어",
+    "definition": "세마포어(Semaphore) — 프로세스 간 동기화를 위한 정수 변수 기반 기법\n• Dijkstra가 제안\n• P연산(Wait/Proberen): 자원 요청, 값 감소\n• V연산(Signal/Verhogen): 자원 해제, 값 증가\n• 이진 세마포어(0 또는 1) → 뮤텍스(Mutex)와 유사\n• 카운팅 세마포어 → 여러 자원 관리 가능\n• 상호배제(Mutual Exclusion) 보장",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_009",
+    "tags": [
+      "IPC",
+      "프로세스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_015",
+      "card-memorize-os_016",
+      "card-memorize-os_017",
+      "card-memorize-os_018"
+    ],
+    "tip": "세마포어의 P연산(Wait)과 V연산(Signal)은 필수 암기입니다. '프로세스 동기화 기법'으로 출제되며, 뮤텍스와의 차이(세마포어는 카운팅 가능)도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_020",
+    "categoryId": "memorize-os",
+    "subcategory": "유닉스",
+    "term": "유닉스(UNIX)의 특징",
+    "definition": "유닉스(UNIX)의 특징\n• 대화식(Interactive) 운영체제\n• 다중 작업(Multi-tasking): 여러 작업 동시 수행\n• 다중 사용자(Multi-user): 여러 사용자 동시 접속\n• 이식성(Portability): C언어로 작성되어 다양한 하드웨어에 이식 가능\n• 계층적 트리 구조 파일 시스템(/ 루트 디렉토리 기반)\n• 개방형 시스템(Open System)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_010",
+    "tags": [
+      "유닉스",
+      "운영체제"
+    ],
+    "tip": "유닉스 특징 중 'C언어로 작성 → 이식성 높음'은 단골 출제 포인트입니다. '계층적 트리 구조 파일 시스템'도 함께 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_021",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "처리능력(Throughput)",
+    "definition": "처리능력(Throughput) — 운영체제 성능 평가 기준\n• 일정 시간 내에 시스템이 처리하는 작업(Job)의 양\n• 단위: 작업 수 / 시간\n• 처리능력이 높을수록 시스템 성능이 우수\n• CPU 활용률, 스케줄링 알고리즘과 밀접한 관계\n• 운영체제 목적 4가지: 처리능력, 반환시간, 사용가능도, 신뢰도 → '처반사신'",
+    "mnemonic": "처반사신",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_011",
+    "tags": [
+      "운영체제",
+      "처반사신"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_022",
+      "card-memorize-os_023",
+      "card-memorize-os_024"
+    ],
+    "tip": "운영체제 목적 4가지 '처반사신'은 거의 매 회차 출제됩니다. 처리능력은 '단위시간당 처리량'이라는 정의를 정확히 암기하세요."
+  },
+  {
+    "id": "card-memorize-os_022",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "반환시간(Turn Around Time)",
+    "definition": "반환시간(Turn Around Time) — 운영체제 성능 평가 기준\n• 작업을 의뢰(제출)한 시점부터 완료(결과 반환)까지의 총 소요 시간\n• 반환시간 = 대기시간 + 실행시간\n• 반환시간이 짧을수록 시스템 성능이 우수\n• 스케줄링 알고리즘의 성능 비교에 핵심 지표\n• 운영체제 목적 4가지: 처반사신",
+    "mnemonic": "처반사신",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_011",
+    "tags": [
+      "운영체제",
+      "처반사신"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_021",
+      "card-memorize-os_023",
+      "card-memorize-os_024"
+    ],
+    "tip": "반환시간 = '대기시간 + 실행시간' 공식이 계산 문제로 출제됩니다. 응답시간(Response Time)과 혼동하지 마세요. 응답시간은 첫 응답까지의 시간입니다."
+  },
+  {
+    "id": "card-memorize-os_023",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "사용가능도(Availability)",
+    "definition": "사용가능도(Availability) — 운영체제 성능 평가 기준\n• 시스템을 필요할 때 즉시 사용할 수 있는 정도\n• 고장이나 유지보수 없이 정상 작동하는 시간 비율\n• 가용도 = MTBF / (MTBF + MTTR)\n  - MTBF(평균 고장 간격), MTTR(평균 수리 시간)\n• 사용가능도가 높을수록 시스템 안정성이 우수\n• 운영체제 목적 4가지: 처반사신",
+    "mnemonic": "처반사신",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_011",
+    "tags": [
+      "운영체제",
+      "처반사신"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_021",
+      "card-memorize-os_022",
+      "card-memorize-os_024"
+    ],
+    "tip": "사용가능도는 '시스템을 사용할 수 있는 정도'이며, MTBF·MTTR 공식과 함께 출제됩니다. 신뢰도(정확성)와 혼동하지 마세요."
+  },
+  {
+    "id": "card-memorize-os_024",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "신뢰도(Reliability)",
+    "definition": "신뢰도(Reliability) — 운영체제 성능 평가 기준\n• 시스템이 주어진 문제를 정확하게 처리하는 정도\n• 오류 없이 올바른 결과를 산출하는 능력\n• 하드웨어·소프트웨어 모두 포함\n• MTBF(Mean Time Between Failures)로 측정\n• 신뢰도가 높을수록 시스템 품질이 우수\n• 운영체제 목적 4가지: 처반사신",
+    "mnemonic": "처반사신",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_011",
+    "tags": [
+      "운영체제",
+      "처반사신"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_021",
+      "card-memorize-os_022",
+      "card-memorize-os_023"
+    ],
+    "tip": "신뢰도는 '정확하게 처리하는 정도', 사용가능도는 '사용할 수 있는 정도'입니다. 두 개념의 차이를 명확히 구분하세요. MTBF는 두 곳 모두에서 사용됩니다."
+  },
+  {
+    "id": "card-memorize-os_025",
+    "categoryId": "memorize-os",
+    "subcategory": "유닉스",
+    "term": "커널(Kernel)",
+    "definition": "커널(Kernel) — UNIX 운영체제의 핵심 구성요소\n• 하드웨어와 직접 상호작용하는 가장 낮은 계층\n• 주요 기능: 프로세스 관리, 메모리 관리, 파일 시스템 관리, 입출력 관리, 프로세스 간 통신\n• 하드웨어 보호 및 추상화 제공\n• 항상 메모리에 상주(Resident)\n• 구조: 커널(Kernel) → 쉘(Shell) → 유틸리티(Utility) 순서",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_012",
+    "tags": [
+      "UNIX",
+      "커널",
+      "쉘"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_026",
+      "card-memorize-os_027"
+    ],
+    "tip": "커널은 '하드웨어와 직접 상호작용'하며 '항상 메모리에 상주'한다는 점이 핵심입니다. 쉘(Shell)과의 역할 차이를 비교하는 문제가 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_026",
+    "categoryId": "memorize-os",
+    "subcategory": "유닉스",
+    "term": "쉘(Shell)",
+    "definition": "쉘(Shell) — 사용자와 커널 사이의 인터페이스 역할을 하는 명령어 해석기\n• 사용자 명령을 해석하여 커널에 전달하고 결과를 반환\n• 종류: Bourne Shell(sh), C Shell(csh), Korn Shell(ksh), Bash Shell(bash)\n• 쉘 스크립트: 반복 작업을 자동화하는 프로그래밍 가능\n• 파이프라인, 리다이렉션 등 고급 기능 제공",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_012",
+    "tags": [
+      "UNIX",
+      "커널",
+      "쉘"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_025",
+      "card-memorize-os_027"
+    ],
+    "tip": "쉘은 '명령어 해석기'이자 '사용자와 커널 사이의 인터페이스'라는 정의가 시험에 나옵니다. Bourne Shell, C Shell, Korn Shell 종류도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_027",
+    "categoryId": "memorize-os",
+    "subcategory": "유닉스",
+    "term": "유틸리티(Utility)",
+    "definition": "유틸리티(Utility) — 사용자 편의를 위한 응용 프로그램 모음\n• UNIX 시스템의 최상위 계층에 위치\n• 에디터(vi, emacs), 컴파일러(gcc), 디버거 등 외부 프로그램\n• 사용자가 직접 사용하는 도구\n• 쉘(Shell)을 통해 호출되어 실행\n• 커널 기능을 활용하지만 커널에 포함되지 않음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_012",
+    "tags": [
+      "UNIX",
+      "커널",
+      "쉘"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_025",
+      "card-memorize-os_026"
+    ],
+    "tip": "유닉스 구조 문제에서 커널-쉘-유틸리티 3계층의 순서와 역할을 정확히 구분해야 합니다. 유틸리티는 '가장 바깥 계층'이며 에디터, 컴파일러 등이 해당됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_028",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "예방(Prevention)",
+    "definition": "예방(Prevention) — 교착상태 4가지 필요조건 중 하나 이상을 사전에 제거하는 기법\n• 상호배제 부정: 공유 가능한 자원으로 변환\n• 점유대기 부정: 필요한 모든 자원을 한꺼번에 요청\n• 비선점 부정: 자원 강제 회수 허용\n• 환형대기 부정: 자원에 순서 부여(번호 할당)\n• 가장 확실하지만 자원 낭비가 심함",
+    "mnemonic": "예발회회",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_013",
+    "tags": [
+      "교착상태",
+      "예발회회"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_029",
+      "card-memorize-os_030",
+      "card-memorize-os_031"
+    ],
+    "tip": "예방 기법은 '4가지 조건 중 하나를 부정'한다는 점이 핵심입니다. 각 조건을 어떻게 부정하는지 구체적으로 묻는 서술형 문제가 출제됩니다."
+  },
+  {
+    "id": "card-memorize-os_029",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "발견(Detection)",
+    "definition": "발견/탐지(Detection) — 교착상태 발생을 허용하고, 발생 여부를 주기적으로 점검하여 발견하는 기법\n• 자원 할당 그래프(Resource Allocation Graph)를 이용하여 순환(사이클) 탐지\n• 교착상태 감시 알고리즘 사용\n• 발견 후에는 회복(Recovery) 기법과 함께 사용\n• 오버헤드: 주기적 점검 비용 발생",
+    "mnemonic": "예발회회",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_013",
+    "tags": [
+      "교착상태",
+      "예발회회"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_028",
+      "card-memorize-os_030",
+      "card-memorize-os_031"
+    ],
+    "tip": "탐지 기법은 '자원 할당 그래프'에서 '순환(사이클)'을 찾는 것이 핵심입니다. 탐지 후에는 반드시 '회복' 단계가 필요하다는 점도 기억하세요."
+  },
+  {
+    "id": "card-memorize-os_030",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "회피(Avoidance)",
+    "definition": "회피(Avoidance) — 교착상태가 발생할 가능성이 있는 자원 할당을 회피하는 기법\n• 은행원 알고리즘(Banker's Algorithm): Dijkstra가 제안, 안전 상태(Safe State)일 때만 자원 할당\n• 안전 상태: 모든 프로세스가 정상 종료 가능한 순서(안전 순서열)가 존재\n• 불안전 상태: 교착상태 발생 가능성 있음\n• 자원의 최대 요구량을 미리 알아야 함",
+    "mnemonic": "예발회회",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_013",
+    "tags": [
+      "교착상태",
+      "예발회회"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_028",
+      "card-memorize-os_029",
+      "card-memorize-os_031"
+    ],
+    "tip": "회피 기법에서 '은행원 알고리즘'과 '안전 상태(Safe State)'는 필수 키워드입니다. 'Dijkstra가 제안'이라는 점과 '최대 요구량을 미리 파악해야 한다'는 전제조건도 출제됩니다."
+  },
+  {
+    "id": "card-memorize-os_031",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "회복(Recovery)",
+    "definition": "회복(Recovery) — 교착상태 발견(탐지) 후 정상 상태로 복원하는 기법\n• 프로세스 종료: 교착상태 프로세스 전부 또는 하나씩 강제 종료\n• 자원 선점: 교착상태 프로세스로부터 자원을 강제로 회수하여 다른 프로세스에 할당\n• 체크포인트/롤백(Rollback): 이전 안전 상태로 복원\n• 프로세스 종료 순서 결정 시 우선순위, 진행률 등을 고려",
+    "mnemonic": "예발회회",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_013",
+    "tags": [
+      "교착상태",
+      "예발회회"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_028",
+      "card-memorize-os_029",
+      "card-memorize-os_030"
+    ],
+    "tip": "회복 기법은 '프로세스 종료'와 '자원 선점' 두 가지 방법이 핵심입니다. '탐지 후 회복'이라는 순서 관계도 기억하세요. 예발회회(예방-발견-회피-회복)로 외웁니다."
+  },
+  {
+    "id": "card-memorize-os_032",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리",
+    "term": "스래싱(Thrashing)이란 무엇인지 설명하시오.",
+    "definition": "스래싱(Thrashing) — 페이지 부재(Page Fault)가 과도하게 발생하여 실제 작업보다 페이지 교체에 소비되는 시간이 더 많아지는 현상\n• 다중 프로그래밍 정도가 높아질수록 발생 가능성 증가\n• 원인: 프로세스에 할당된 프레임 수 부족\n• 해결: 워킹 셋(Working Set) 유지, PFF(Page Fault Frequency) 조절\n• CPU 이용률이 급격히 떨어지는 특징",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_014",
+    "tags": [
+      "스래싱",
+      "Thrashing",
+      "메모리"
+    ],
+    "tip": "스래싱은 서술형 단골 문제입니다. '페이지 부재 과다 → CPU 이용률 저하'의 인과관계와 해결책인 '워킹 셋(Working Set)'을 함께 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_033",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "세마포어(Semaphore)",
+    "definition": "세마포어(Semaphore) — Dijkstra가 제안한 프로세스 동기화 기법\n• P연산(Wait/Proberen): 임계구역 진입 시 세마포어 값 감소(S=S-1), 값이 음수이면 대기\n• V연산(Signal/Verhogen): 임계구역 탈출 시 세마포어 값 증가(S=S+1), 대기 중인 프로세스 깨움\n• 상호배제(Mutual Exclusion)와 프로세스 간 동기화 보장\n• 이진 세마포어(0/1)와 카운팅 세마포어로 구분",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_015",
+    "tags": [
+      "세마포어",
+      "Semaphore",
+      "동기화"
+    ],
+    "tip": "세마포어는 'P연산(Wait)과 V연산(Signal)'이 핵심 키워드입니다. Dijkstra가 제안했다는 점, 상호배제를 보장한다는 점이 출제 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_034",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "생성(New)",
+    "definition": "프로세스 상태 전이도 — 프로세스의 5가지 상태\n• 생성(New): 프로세스가 생성되어 PCB 할당\n• 준비(Ready): CPU 할당을 기다리는 상태(준비 큐에서 대기)\n• 실행(Running): CPU를 할당받아 명령어를 실행하는 상태\n• 대기(Waiting/Blocked): I/O 요청 등으로 이벤트를 기다리는 상태\n• 완료(Terminated): 실행이 끝나고 자원을 반납한 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_016",
+    "tags": [
+      "프로세스",
+      "상태전이",
+      "디스패치"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_035",
+      "card-memorize-os_036",
+      "card-memorize-os_037",
+      "card-memorize-os_038"
+    ],
+    "tip": "프로세스 상태 전이도는 5가지 상태(생성→준비→실행→대기→완료)와 전이 이름(디스패치, 타이머런아웃, 블록, 웨이크업)을 함께 외워야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_035",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "디스패치",
+    "definition": "디스패치(Dispatch) — 프로세스 상태 전이: 준비(Ready) → 실행(Running)\n• CPU 스케줄러가 준비 큐에서 프로세스를 선택하여 CPU 할당\n• 문맥 교환(Context Switch) 발생\n• 선택 기준: 스케줄링 알고리즘에 따라 결정(FCFS, SJF, RR 등)\n• 디스패처(Dispatcher)가 실제 CPU 제어권을 넘기는 역할 수행",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_016",
+    "tags": [
+      "프로세스",
+      "상태전이",
+      "디스패치"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_034",
+      "card-memorize-os_036",
+      "card-memorize-os_037",
+      "card-memorize-os_038"
+    ],
+    "tip": "디스패치는 '준비→실행' 전이입니다. 문맥 교환이 일어나는 시점이며, 디스패처의 역할(CPU 제어권 전환)과 함께 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_036",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "타이머 런아웃",
+    "definition": "타이머 런아웃(Timer Runout) — 프로세스 상태 전이: 실행(Running) → 준비(Ready)\n• 할당된 시간(Time Slice)이 초과되어 CPU를 반납하고 준비 상태로 복귀\n• 선점형 스케줄링에서 발생(RR, SRT 등)\n• 타이머 인터럽트(Timer Interrupt)에 의해 구현\n• 프로세스는 다시 준비 큐의 맨 뒤로 이동",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_016",
+    "tags": [
+      "프로세스",
+      "상태전이",
+      "디스패치"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_034",
+      "card-memorize-os_035",
+      "card-memorize-os_037",
+      "card-memorize-os_038"
+    ],
+    "tip": "타이머 런아웃은 '실행→준비' 전이이며 선점형 스케줄링과 관련됩니다. '할당 시간 초과 → 준비 큐로 복귀'라는 흐름을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_037",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "블록(Block)",
+    "definition": "블록(Block) — 프로세스 상태 전이: 실행(Running) → 대기(Waiting)\n• I/O 요청, 자원 요청 등으로 인해 실행을 중단하고 대기 상태로 전환\n• 프로세스 스스로 요청하는 전이(자발적)\n• I/O 작업이 완료되면 웨이크업(Wakeup)으로 준비 상태로 복귀\n• 대기 큐(Wait Queue)에서 이벤트 완료를 기다림",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_016",
+    "tags": [
+      "프로세스",
+      "상태전이",
+      "디스패치"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_034",
+      "card-memorize-os_035",
+      "card-memorize-os_036",
+      "card-memorize-os_038"
+    ],
+    "tip": "블록은 '실행→대기' 전이이며 I/O 요청 등 '자발적 전이'라는 점이 핵심입니다. 웨이크업(대기→준비)과 쌍으로 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_038",
+    "categoryId": "memorize-os",
+    "subcategory": "프로세스",
+    "term": "웨이크업(Wakeup)",
+    "definition": "웨이크업(Wakeup) — 프로세스 상태 전이: 대기(Waiting) → 준비(Ready)\n• I/O 완료, 이벤트 발생 등으로 대기 상태에서 준비 상태로 복귀\n• 인터럽트에 의해 발생하는 전이\n• 웨이크업 후 프로세스는 준비 큐에 삽입되어 CPU 할당을 기다림\n• 블록(Block)과 대응하는 전이",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_016",
+    "tags": [
+      "프로세스",
+      "상태전이",
+      "디스패치"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_034",
+      "card-memorize-os_035",
+      "card-memorize-os_036",
+      "card-memorize-os_037"
+    ],
+    "tip": "웨이크업은 '대기→준비' 전이이며 블록(실행→대기)과 쌍입니다. I/O 완료가 웨이크업의 대표적 트리거라는 점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_039",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "일괄처리(Batch Processing)",
+    "definition": "일괄처리(Batch Processing) — 운영체제 운영 방식\n• 일정량의 데이터를 모아서 한꺼번에 처리하는 방식\n• 초기 컴퓨터 시대의 대표적 처리 방식\n• 응답시간이 느리지만 시스템 자원 활용률이 높음\n• 사용자와의 상호작용(대화)이 없음\n• 급여 계산, 세금 처리 등 정기적 대량 작업에 적합",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_040",
+      "card-memorize-os_041",
+      "card-memorize-os_042",
+      "card-memorize-os_043",
+      "card-memorize-os_044",
+      "card-memorize-os_045"
+    ],
+    "tip": "일괄처리는 '작업을 모아서 한꺼번에'가 핵심 키워드입니다. '대화형이 아니다'라는 점에서 시분할(대화형)과 대비됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_040",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "다중프로그래밍(Multi-programming)",
+    "definition": "다중프로그래밍(Multi-programming) — 운영체제 운영 방식\n• 여러 프로그램을 동시에 메모리에 적재하여 CPU 활용률을 극대화\n• 하나의 프로그램이 I/O 대기 중일 때 다른 프로그램에 CPU 할당\n• CPU 유휴시간(Idle Time) 최소화\n• 주기억장치 관리 기법(파티션, 페이징 등) 필요\n• 다중처리(Multi-processing)와 구분: 다중프로그래밍은 CPU 1개, 다중처리는 CPU 여러 개",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_041",
+      "card-memorize-os_042",
+      "card-memorize-os_043",
+      "card-memorize-os_044",
+      "card-memorize-os_045"
+    ],
+    "tip": "다중프로그래밍은 'CPU 1개 + 메모리에 여러 프로그램 적재'입니다. 다중처리(CPU 여러 개)와 혼동하는 함정 문제가 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_041",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "시분할(Time Sharing)",
+    "definition": "시분할(Time Sharing) — 운영체제 운영 방식\n• CPU 사용 시간을 일정한 시간 단위(Time Slice)로 분할하여 여러 사용자에게 할당\n• 대화형(Interactive) 처리 가능 — 각 사용자가 마치 독점 사용하는 것처럼 느낌\n• 라운드 로빈(Round Robin) 스케줄링 기반\n• 응답시간이 빠름\n• 대표 시스템: UNIX, CTSS, Multics",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_040",
+      "card-memorize-os_042",
+      "card-memorize-os_043",
+      "card-memorize-os_044",
+      "card-memorize-os_045"
+    ],
+    "tip": "시분할은 '대화형(Interactive)' + 'Time Slice 분할'이 핵심입니다. RR 스케줄링과의 관계, 일괄처리와의 차이를 비교하는 문제가 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_042",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "다중처리(Multi-processing)",
+    "definition": "다중처리(Multi-processing) — 운영체제 운영 방식\n• 여러 개의 CPU(프로세서)를 사용하여 동시에 여러 작업을 병렬 처리\n• 하나의 CPU 고장 시 다른 CPU가 대체 → 신뢰성 향상\n• 대칭형(SMP): 모든 CPU가 동등한 역할\n• 비대칭형(AMP): 주(Master) CPU가 작업 할당\n• 다중프로그래밍(CPU 1개)과 구분",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_040",
+      "card-memorize-os_041",
+      "card-memorize-os_043",
+      "card-memorize-os_044",
+      "card-memorize-os_045"
+    ],
+    "tip": "다중처리는 'CPU 여러 개'가 핵심이며, 다중프로그래밍(CPU 1개)과의 차이를 묻는 문제가 빈출합니다. SMP와 AMP 구분도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_043",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "실시간(Real Time)",
+    "definition": "실시간(Real-Time) — 운영체제 운영 방식\n• 데이터 발생 즉시 처리하여 결과를 제한 시간(Deadline) 내에 반환\n• 경성 실시간(Hard Real-Time): 마감시간 엄수 필수(미사일 제어, 원자로 제어)\n• 연성 실시간(Soft Real-Time): 마감시간 초과 허용(멀티미디어 스트리밍)\n• 항공기 예약, 은행 온라인 업무 등에 활용\n• 응답시간이 가장 중요한 성능 지표",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_040",
+      "card-memorize-os_041",
+      "card-memorize-os_042",
+      "card-memorize-os_044",
+      "card-memorize-os_045"
+    ],
+    "tip": "실시간 시스템은 '경성(Hard)'과 '연성(Soft)'의 구분이 시험에 나옵니다. 경성은 '마감 엄수', 연성은 '마감 초과 허용'입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_044",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "다중모드(Multi-mode)",
+    "definition": "다중모드(Multi-mode) — 운영체제 운영 방식\n• 일괄처리(Batch) + 시분할(Time Sharing) + 실시간(Real-Time)을 혼합한 운영 방식\n• 작업 특성에 따라 적절한 처리 방식을 선택적으로 적용\n• 현대 운영체제의 일반적 형태\n• 시스템 자원을 효율적으로 활용 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_040",
+      "card-memorize-os_041",
+      "card-memorize-os_042",
+      "card-memorize-os_043",
+      "card-memorize-os_045"
+    ],
+    "tip": "다중모드는 '일괄+시분할+실시간 혼합'이라는 정의만 기억하면 됩니다. 운영방식 7가지를 나열하는 문제에서 빠지지 않고 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_045",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "분산처리(Distributed)",
+    "definition": "분산처리(Distributed Processing) — 운영체제 운영 방식\n• 여러 컴퓨터를 네트워크로 연결하여 작업을 분산 처리\n• 자원 공유: 프린터, 파일 등 원격 자원 활용\n• 신뢰성 향상: 하나의 시스템 고장 시 다른 시스템이 대체\n• 연산 속도 향상: 병렬 처리 가능\n• 투명성(Transparency) 제공: 사용자는 분산 여부를 인식하지 못함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_017",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_039",
+      "card-memorize-os_040",
+      "card-memorize-os_041",
+      "card-memorize-os_042",
+      "card-memorize-os_043",
+      "card-memorize-os_044"
+    ],
+    "tip": "분산처리는 '네트워크 연결 + 자원 공유 + 신뢰성 향상'이 핵심 키워드입니다. '투명성(사용자가 분산을 인식 못함)'도 출제 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_046",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "상호배제(Mutual Exclusion)",
+    "definition": "상호배제(Mutual Exclusion) — 교착상태의 4가지 필요조건 중 하나\n• 하나의 자원은 한 번에 하나의 프로세스만 사용 가능\n• 다른 프로세스가 해당 자원을 사용 중이면 반드시 대기해야 함\n• 공유 자원(예: 읽기 전용 파일)에는 상호배제가 불필요\n• 예방법: 자원을 공유 가능하도록 변경(현실적으로 어려움)",
+    "mnemonic": "상점비환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_018",
+    "tags": [
+      "교착상태",
+      "상점비환",
+      "필요조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_047",
+      "card-memorize-os_048",
+      "card-memorize-os_049"
+    ],
+    "tip": "상호배제는 교착상태 4조건 중 가장 기본입니다. '한 자원 = 한 프로세스'만 사용 가능이라는 정의를 정확히 외우세요. 두문자 '상점비환'으로 4조건을 함께 암기합니다."
+  },
+  {
+    "id": "card-memorize-os_047",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "점유와 대기(Hold and Wait)",
+    "definition": "점유와 대기(Hold and Wait) — 교착상태의 4가지 필요조건 중 하나\n• 프로세스가 최소 하나의 자원을 점유한 채로 다른 자원을 추가로 요청하며 대기\n• 이미 할당된 자원을 해제하지 않고 새로운 자원 요청\n• 예방법: 필요한 모든 자원을 한꺼번에 요청(자원 이용률 저하)\n• 또는 자원 미보유 상태에서만 요청 허용",
+    "mnemonic": "상점비환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_018",
+    "tags": [
+      "교착상태",
+      "상점비환",
+      "필요조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_046",
+      "card-memorize-os_048",
+      "card-memorize-os_049"
+    ],
+    "tip": "점유와 대기는 '이미 자원을 갖고 있으면서 추가 자원을 기다리는 상태'입니다. 예방법인 '한꺼번에 요청'은 자원 낭비가 크다는 단점도 함께 기억하세요."
+  },
+  {
+    "id": "card-memorize-os_048",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "비선점(Non-preemption)",
+    "definition": "비선점(Non-preemption) — 교착상태의 4가지 필요조건 중 하나\n• 프로세스에 할당된 자원은 사용이 끝날 때까지 강제로 빼앗을 수 없음\n• 자원을 자발적으로 반납할 때까지 대기\n• 예방법: 자원을 강제로 회수(선점) 가능하도록 변경\n• 프린터 등 선점이 불가능한 자원에서 문제 발생",
+    "mnemonic": "상점비환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_018",
+    "tags": [
+      "교착상태",
+      "상점비환",
+      "필요조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_046",
+      "card-memorize-os_047",
+      "card-memorize-os_049"
+    ],
+    "tip": "비선점은 '자원을 강제로 빼앗을 수 없다'는 조건입니다. '비선점 → 선점 허용'으로 예방하는 방법과 연결하여 출제됩니다."
+  },
+  {
+    "id": "card-memorize-os_049",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "환형 대기(Circular Wait)",
+    "definition": "환형 대기(Circular Wait) — 교착상태의 4가지 필요조건 중 하나\n• 프로세스 간 자원 요구 관계가 원형(순환) 고리를 형성\n• P1→P2→P3→P1 형태로 서로의 자원을 기다림\n• 예방법: 자원에 고유 번호를 부여하고 오름차순으로만 요청 허용\n• 자원 할당 그래프에서 사이클이 존재하는 상태",
+    "mnemonic": "상점비환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_018",
+    "tags": [
+      "교착상태",
+      "상점비환",
+      "필요조건"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_046",
+      "card-memorize-os_047",
+      "card-memorize-os_048"
+    ],
+    "tip": "환형 대기는 '원형 고리' 형태의 대기 관계입니다. 예방법인 '자원 번호 부여 + 오름차순 요청'은 서술형에서 자주 출제됩니다. 상점비환 중 마지막 조건입니다."
+  },
+  {
+    "id": "card-memorize-os_050",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "LLM",
+    "definition": "LLM(Large Language Model) — 대규모 언어 모델\n• 대량의 텍스트 데이터로 학습한 인공지능 모델\n• 자연어 이해, 생성, 번역, 요약 등 다양한 언어 작업 수행\n• 대표 모델: GPT, BERT, LLaMA, Claude 등\n• 트랜스포머(Transformer) 아키텍처 기반\n• 파라미터 수가 수십억~수천억 개에 달하는 초대형 모델",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "LLM은 최신 IT 트렌드 용어로 출제 가능성이 높습니다. '대규모 언어 모델'이라는 풀네임과 GPT, BERT 등 대표 모델을 함께 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_051",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "VPN",
+    "definition": "VPN(Virtual Private Network) — 가상 사설 네트워크\n• 공중 네트워크(인터넷)를 통해 사설 네트워크처럼 안전하게 통신하는 기술\n• 터널링(Tunneling) 프로토콜 사용: IPSec, SSL/TLS, PPTP, L2TP\n• 데이터 암호화로 기밀성 보장\n• 원격 근무, 지사 간 연결 등에 활용\n• 비용 절감(전용선 대비) + 보안 강화",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "VPN은 '터널링'과 '암호화'가 핵심 키워드입니다. IPSec, SSL 등 프로토콜 이름과 함께 출제됩니다. '가상 사설 네트워크'라는 풀네임을 정확히 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_052",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "CI/CD",
+    "definition": "CI/CD — 지속적 통합(Continuous Integration) / 지속적 배포(Continuous Deployment)\n• CI: 개발자들이 코드 변경사항을 자주 통합하고, 자동 빌드·테스트 수행\n• CD: 통합된 코드를 자동으로 운영 환경에 배포\n• 도구: Jenkins, GitHub Actions, GitLab CI, Travis CI 등\n• DevOps 문화의 핵심 실천 방법\n• 코드 품질 향상 + 배포 주기 단축",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "CI/CD는 DevOps와 연계하여 출제됩니다. CI는 '통합+자동 테스트', CD는 '자동 배포'로 구분하세요. Jenkins가 대표 도구입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_053",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "NLP",
+    "definition": "NLP(Natural Language Processing) — 자연어 처리\n• 컴퓨터가 인간의 자연어를 이해, 해석, 생성하는 인공지능 기술\n• 응용 분야: 기계번역, 감성분석, 텍스트 요약, 챗봇, 음성인식\n• 핵심 기술: 형태소 분석, 구문 분석, 의미 분석\n• LLM(대규모 언어 모델)의 기반 기술\n• 정보처리기사 시험에서는 IT 신기술 용어로 출제",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "NLP는 '자연어 처리'라는 풀네임이 핵심입니다. '기계번역, 감성분석, 챗봇' 등 응용 분야를 알아두면 객관식에서 도움됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_054",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "RPA",
+    "definition": "RPA(Robotic Process Automation) — 로봇 프로세스 자동화\n• 소프트웨어 로봇이 반복적인 사무 업무를 자동으로 수행하는 기술\n• 사람이 하는 단순 반복 작업(데이터 입력, 이메일 처리 등)을 대체\n• 기존 시스템을 변경하지 않고 UI 수준에서 자동화\n• 도구: UiPath, Blue Prism, Automation Anywhere 등\n• 업무 효율성 향상, 인건비 절감 효과",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "RPA는 '소프트웨어 로봇 + 단순 반복 업무 자동화'가 핵심입니다. AI와 달리 규칙 기반 자동화라는 점에서 차이가 있습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_055",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "NoSQL",
+    "definition": "NoSQL(Not Only SQL) — 비관계형 데이터베이스\n• 관계형 DB(RDBMS)의 한계를 보완하기 위해 등장\n• 스키마 없이 유연한 데이터 구조 지원\n• 유형: Key-Value(Redis), Document(MongoDB), Column(Cassandra), Graph(Neo4j)\n• 대용량 데이터, 분산 환경에 적합\n• 수평적 확장(Scale-out) 용이\n• CAP 이론: 일관성(C), 가용성(A), 분할 허용성(P) 중 2가지만 보장",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "NoSQL은 4가지 유형(Key-Value, Document, Column, Graph)과 대표 DB를 함께 외우세요. CAP 이론도 출제 가능성이 있습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_056",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "엣지컴퓨팅",
+    "definition": "엣지 컴퓨팅(Edge Computing) — 데이터 발생지(엣지) 근처에서 데이터를 처리하는 기술\n• 클라우드까지 데이터를 전송하지 않고 로컬에서 처리\n• IoT(사물인터넷) 환경에서 지연시간(Latency) 최소화\n• 네트워크 대역폭 절약\n• 실시간 처리 필요한 분야: 자율주행, 스마트팩토리, AR/VR\n• 클라우드 컴퓨팅과 상호 보완 관계\n• 포그 컴퓨팅(Fog Computing)과 유사 개념",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "엣지 컴퓨팅은 '데이터 발생지 근처에서 처리' + 'IoT + 지연시간 감소'가 핵심입니다. 클라우드 컴퓨팅과의 차이를 비교하는 문제가 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_057",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "프록시서버",
+    "definition": "프록시 서버(Proxy Server) — 클라이언트와 서버 사이에서 중계 역할을 하는 대리 서버\n• 캐싱: 자주 요청되는 콘텐츠를 저장하여 응답 속도 향상\n• 보안: 클라이언트 IP를 숨기고 접근 제어 수행\n• 필터링: 특정 사이트 접속 차단 가능\n• 종류: 포워드 프록시(클라이언트 대리), 리버스 프록시(서버 대리)\n• 네트워크 트래픽 감소 효과",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_058",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "프록시 서버는 '대리 서버' + '캐싱/보안/필터링' 기능이 핵심입니다. 포워드 프록시와 리버스 프록시의 차이도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_058",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "SSO",
+    "definition": "SSO(Single Sign-On) — 한 번의 로그인으로 여러 시스템에 접근할 수 있는 통합 인증 기술\n• 사용자 편의성 향상: 여러 번 로그인할 필요 없음\n• 중앙 집중식 인증 관리\n• 구현 방식: Kerberos, SAML, OAuth, LDAP 등\n• 보안 위험: SSO 인증 정보가 탈취되면 모든 시스템에 접근 가능\n• 엔터프라이즈 환경에서 널리 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_059",
+      "card-memorize-os_060"
+    ],
+    "tip": "SSO는 '한 번 로그인 → 여러 시스템 접근'이 핵심 정의입니다. Kerberos, SAML 등 구현 기술과 보안 위험(인증 탈취 시 전체 노출)도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_059",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "ORM",
+    "definition": "ORM(Object-Relational Mapping) — 객체-관계 매핑\n• 객체지향 프로그래밍의 객체와 관계형 데이터베이스의 테이블을 자동으로 매핑하는 기술\n• SQL을 직접 작성하지 않고 객체를 통해 DB를 조작\n• 대표 도구: Hibernate(Java), SQLAlchemy(Python), TypeORM(Node.js)\n• 장점: 개발 생산성 향상, DB 종류 변경 용이\n• 단점: 복잡한 쿼리 성능 저하 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_060"
+    ],
+    "tip": "ORM은 '객체와 테이블 간 매핑'이라는 정의와 Hibernate, SQLAlchemy 등 대표 도구를 함께 외우세요. SQL을 직접 안 써도 된다는 점이 핵심입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_060",
+    "categoryId": "memorize-os",
+    "subcategory": "신기술",
+    "term": "VLAN",
+    "definition": "VLAN(Virtual Local Area Network) — 가상 근거리 통신망\n• 물리적 위치와 관계없이 논리적으로 LAN을 구성하는 기술\n• 스위치(Switch)에서 포트 또는 MAC 주소 기반으로 그룹 분리\n• 브로드캐스트 도메인 분리 → 네트워크 성능 향상\n• 보안 강화: 부서별 트래픽 격리 가능\n• 유연한 네트워크 관리: 물리적 이동 없이 네트워크 그룹 변경",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_019",
+    "tags": [
+      "신기술",
+      "IT용어"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_050",
+      "card-memorize-os_051",
+      "card-memorize-os_052",
+      "card-memorize-os_053",
+      "card-memorize-os_054",
+      "card-memorize-os_055",
+      "card-memorize-os_056",
+      "card-memorize-os_057",
+      "card-memorize-os_058",
+      "card-memorize-os_059"
+    ],
+    "tip": "VLAN은 '논리적 LAN 구성' + '브로드캐스트 도메인 분리'가 핵심입니다. 물리적 위치와 무관하게 네트워크를 분리한다는 점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_061",
+    "categoryId": "memorize-os",
+    "subcategory": "전산용어",
+    "term": "RAID",
+    "definition": "RAID(Redundant Array of Independent Disks) — 여러 디스크를 묶어 성능 향상 및 안정성 확보\n• RAID 0(스트라이핑): 데이터를 분산 저장, 성능 향상, 장애 시 복구 불가\n• RAID 1(미러링): 데이터를 동일하게 복제, 안정성 확보, 용량 50% 사용\n• RAID 5(패리티 분산): 패리티 정보를 분산 저장, 성능+안정성 균형, 디스크 1개 장애 복구 가능\n• RAID 6: 이중 패리티, 디스크 2개 장애 복구 가능\n• RAID 10(1+0): 미러링+스트라이핑 조합",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_020",
+    "tags": [
+      "전산용어",
+      "RAID",
+      "DevOps"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_062",
+      "card-memorize-os_063",
+      "card-memorize-os_064",
+      "card-memorize-os_065"
+    ],
+    "tip": "RAID 0(성능), RAID 1(안정성), RAID 5(균형)의 차이를 정확히 구분하세요. 특히 RAID 5의 '패리티 분산'은 서술형 빈출 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_062",
+    "categoryId": "memorize-os",
+    "subcategory": "전산용어",
+    "term": "CSMA/CA",
+    "definition": "CSMA/CA(Carrier Sense Multiple Access / Collision Avoidance) — 충돌 회피 방식\n• 무선 네트워크(IEEE 802.11 Wi-Fi)에서 사용하는 매체 접근 제어 방식\n• 데이터 전송 전에 채널이 비어있는지 확인(Carrier Sense)\n• 충돌을 사전에 회피(Avoidance)하는 방식\n• RTS/CTS 핸드셰이크: 전송 전 예약을 통해 충돌 방지\n• CSMA/CD(충돌 감지)는 유선 LAN(이더넷)에서 사용 → 비교 필수",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_020",
+    "tags": [
+      "전산용어",
+      "RAID",
+      "DevOps"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_061",
+      "card-memorize-os_063",
+      "card-memorize-os_064",
+      "card-memorize-os_065"
+    ],
+    "tip": "CSMA/CA(무선, 충돌 회피)와 CSMA/CD(유선, 충돌 감지)를 비교하는 문제가 자주 출제됩니다. CA=Avoidance(회피), CD=Detection(감지)로 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_063",
+    "categoryId": "memorize-os",
+    "subcategory": "전산용어",
+    "term": "인터럽트",
+    "definition": "인터럽트(Interrupt) — 프로그램 실행 중 예기치 않은 상황 발생 시 현재 작업을 중단하고 해당 상황을 처리한 후 복귀하는 메커니즘\n• 외부 인터럽트: 전원 이상, I/O 장치, 타이머\n• 내부 인터럽트: 잘못된 명령어, 오버플로우, 0으로 나누기 등 프로그램 오류\n• 소프트웨어 인터럽트(SVC): 사용자가 시스템 호출(System Call)을 요청\n• 인터럽트 발생 → 현재 상태 저장(PCB) → 인터럽트 처리 루틴(ISR) 실행 → 복귀",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_020",
+    "tags": [
+      "전산용어",
+      "RAID",
+      "DevOps"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_061",
+      "card-memorize-os_062",
+      "card-memorize-os_064",
+      "card-memorize-os_065"
+    ],
+    "tip": "인터럽트는 외부/내부/소프트웨어(SVC) 3가지 분류를 정확히 알아야 합니다. 특히 'SVC 인터럽트 = 시스템 호출'이라는 점이 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_064",
+    "categoryId": "memorize-os",
+    "subcategory": "전산용어",
+    "term": "DevOps",
+    "definition": "DevOps — 개발(Development)과 운영(Operations)의 통합\n• 소프트웨어 개발과 IT 운영을 결합한 문화·방법론\n• 애자일(Agile) 문화 기반\n• 자동화 도구 활용: CI/CD, 컨테이너(Docker), 오케스트레이션(Kubernetes)\n• 지속적 통합(CI), 지속적 배포(CD), 모니터링 포함\n• 개발-테스트-배포-운영 주기를 단축\n• 인프라를 코드로 관리(IaC: Infrastructure as Code)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_020",
+    "tags": [
+      "전산용어",
+      "RAID",
+      "DevOps"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_061",
+      "card-memorize-os_062",
+      "card-memorize-os_063",
+      "card-memorize-os_065"
+    ],
+    "tip": "DevOps는 'Dev+Ops 통합' + '자동화' + '애자일'이 핵심입니다. CI/CD와 함께 출제되는 경우가 많으며, IaC(Infrastructure as Code) 개념도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_065",
+    "categoryId": "memorize-os",
+    "subcategory": "전산용어",
+    "term": "SQL Injection",
+    "definition": "SQL Injection — SQL 삽입 공격\n• 웹 애플리케이션의 입력 필드에 악의적인 SQL 구문을 삽입하여 데이터베이스를 조작하는 공격\n• 비정상적인 SQL 쿼리 실행으로 인증 우회, 데이터 유출, 데이터 삭제 가능\n• 대표 공격: ' OR 1=1 -- (항상 참인 조건 삽입)\n• 대응 방법: 입력값 검증, 매개변수화된 쿼리(Prepared Statement), ORM 사용, WAF 적용\n• OWASP Top 10 보안 취약점 중 하나",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-os_020",
+    "tags": [
+      "전산용어",
+      "RAID",
+      "DevOps"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_061",
+      "card-memorize-os_062",
+      "card-memorize-os_063",
+      "card-memorize-os_064"
+    ],
+    "tip": "SQL Injection은 보안 파트에서 단골 출제됩니다. 공격 원리('OR 1=1')와 대응 방법(Prepared Statement, 입력값 검증)을 함께 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_066",
+    "categoryId": "memorize-os",
+    "subcategory": "교착상태",
+    "term": "상호배제, 점유와 대기, 비선점, 환형 대기",
+    "definition": "교착상태(Deadlock)의 4가지 필요조건\n• 아래 4가지 조건이 동시에 성립해야 교착상태 발생:\n1. 상호배제(Mutual Exclusion): 자원은 한 프로세스만 사용\n2. 점유와 대기(Hold and Wait): 자원을 가진 채 다른 자원 대기\n3. 비선점(Non-preemption): 할당된 자원을 강제 회수 불가\n4. 환형 대기(Circular Wait): 자원 요구가 원형으로 연결\n• 암기법: '상점비환'",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_003",
+    "tags": [
+      "운영체제",
+      "교착상태",
+      "데드락"
+    ],
+    "tip": "교착상태 4조건은 거의 매 회차 출제됩니다. '상점비환' 두문자로 외우고, 4가지 조건이 '모두 동시에 성립'해야 교착상태가 발생한다는 점이 중요합니다. 하나라도 제거하면 예방 가능합니다.",
+    "mnemonic": "상점비환"
+  },
+  {
+    "id": "card-memorize-os_067",
+    "categoryId": "memorize-os",
+    "subcategory": "웹기술",
+    "term": "AJAX(Asynchronous JavaScript and XML)",
+    "definition": "AJAX(Asynchronous JavaScript and XML) — 비동기 자바스크립트와 XML\n• XMLHttpRequest 객체를 이용하여 서버와 비동기 통신 수행\n• 페이지 전체를 새로고침하지 않고 부분적으로 데이터를 갱신\n• 사용자 경험(UX) 향상: 빠른 응답, 끊김 없는 인터페이스\n• 현대 웹에서는 XML 대신 JSON을 주로 사용\n• Fetch API, Axios 등으로 대체되는 추세",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_004",
+    "tags": [
+      "웹기술",
+      "AJAX",
+      "비동기"
+    ],
+    "tip": "AJAX는 '비동기 통신 + 페이지 새로고침 없이 데이터 갱신'이 핵심입니다. XMLHttpRequest가 기반이라는 점과 현재는 JSON을 주로 사용한다는 점도 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_068",
+    "categoryId": "memorize-os",
+    "subcategory": "네트워크",
+    "term": "애드혹(Ad-hoc) 네트워크",
+    "definition": "애드혹(Ad-hoc) 네트워크 — 기반 인프라(AP, 라우터) 없이 무선 단말들끼리 직접 통신하는 자율 네트워크\n• 별도의 고정 인프라 불필요\n• 각 노드가 라우터 역할을 겸하여 데이터 중계(멀티홉)\n• 긴급 상황, 군사 작전, 재난 구조 등에 활용\n• 네트워크 토폴로지가 유동적(노드 이동에 따라 변화)\n• MANET(Mobile Ad-hoc Network)으로도 불림",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_005",
+    "tags": [
+      "네트워크",
+      "애드혹",
+      "무선"
+    ],
+    "tip": "애드혹 네트워크는 '인프라 없이 단말 간 직접 통신'이 핵심 정의입니다. '멀티홉' 방식과 군사·재난 활용 사례를 함께 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_069",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "운영체제의 목적 4가지를 암기법 '처반사신'으로 외울 수 있다. 다음 중...",
+    "definition": "운영체제의 목적 4가지 — '처반사신'\n• 처리능력(Throughput): 일정 시간 내 처리하는 작업의 양\n• 반환시간(Turn Around Time): 작업 제출부터 완료까지의 시간\n• 사용가능도(Availability): 시스템을 사용할 수 있는 정도\n• 신뢰도(Reliability): 정확하게 처리하는 정도\n• 처리능력·사용가능도는 최대화, 반환시간은 최소화가 목표",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_006",
+    "tags": [
+      "운영체제",
+      "목적",
+      "처반사신"
+    ],
+    "tip": "운영체제 목적 '처반사신'은 단답형·서술형 단골 문제입니다. '처리능력 최대화, 반환시간 최소화'처럼 방향성도 함께 외우세요.",
+    "mnemonic": "처반사신"
+  },
+  {
+    "id": "card-memorize-os_070",
+    "categoryId": "memorize-os",
+    "subcategory": "운영체제",
+    "term": "일괄처리, 다중프로그래밍, 시분할, 다중처리, 실시간, 다중모드, 분산처리",
+    "definition": "운영체제의 운영 방식 7가지\n1. 일괄처리(Batch Processing): 작업을 모아서 한꺼번에 처리\n2. 다중프로그래밍(Multi-Programming): 여러 프로그램을 메모리에 적재하여 CPU 활용 극대화\n3. 시분할(Time Sharing): CPU 시간을 분할하여 대화형 처리\n4. 다중처리(Multi-Processing): 여러 CPU로 동시 처리\n5. 실시간(Real-Time): 즉각적 응답, 마감시간(Deadline) 내 처리\n6. 다중모드(Multi-Mode): 일괄+시분할+실시간 혼합\n7. 분산처리(Distributed): 네트워크로 연결된 여러 컴퓨터에서 분산 처리",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_007",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_077"
+    ],
+    "tip": "운영방식 7가지 중 '해당하지 않는 것'을 고르는 객관식이 자주 출제됩니다. '객체지향 시스템'은 운영방식이 아닙니다. 7가지를 모두 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_071",
+    "categoryId": "memorize-os",
+    "subcategory": "메모리관리",
+    "term": "스래싱(Thrashing)",
+    "definition": "스래싱(Thrashing) — 다중 프로그래밍 환경에서 프로세스에 할당된 프레임 수가 부족하여 발생하는 현상\n• 페이지 부재(Page Fault)가 과도하게 발생\n• 실제 작업보다 페이지 교체 작업이 더 많아져 시스템 성능 급격히 저하\n• 원인: 다중 프로그래밍 정도 과다, 프레임 부족\n• 해결: 워킹 셋(Working Set) 적절히 유지, PFF(Page Fault Frequency) 알고리즘 사용\n• 다중 프로그래밍 정도를 높이면 어느 시점부터 CPU 이용률이 급감하는 현상",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_009",
+    "tags": [
+      "운영체제",
+      "메모리관리",
+      "스래싱",
+      "페이징"
+    ],
+    "tip": "스래싱은 서술형 문제에서 '정의, 원인, 해결책'을 모두 물어봅니다. 워킹 셋(Working Set)과 PFF(Page Fault Frequency)를 해결책으로 반드시 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_072",
+    "categoryId": "memorize-os",
+    "subcategory": "개발모델",
+    "term": "나선형 모델(Spiral Model)",
+    "definition": "나선형 모델(Spiral Model) — Boehm이 제안한 소프트웨어 생명주기 모델\n• 계획수립 → 위험분석 → 개발 → 고객평가 단계를 반복(나선형으로 점진 확대)\n• 위험 관리(Risk Management)에 중점을 둔 모델\n• 대규모 프로젝트에 적합\n• 비교 모델:\n  - 폭포수(Waterfall): 순차적 진행, 이전 단계 복귀 불가\n  - 프로토타이핑(Prototyping): 시제품으로 요구사항 파악\n  - 애자일(Agile): 짧은 반복 주기, 고객 피드백 중심",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_014",
+    "tags": [
+      "소프트웨어공학",
+      "생명주기",
+      "나선형모델"
+    ],
+    "tip": "나선형 모델은 'Boehm 제안' + '위험분석 중심' + '4단계 반복'이 핵심입니다. 폭포수 모델과의 차이(반복 여부)를 비교하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_073",
+    "categoryId": "memorize-os",
+    "subcategory": "병행제어",
+    "term": "로킹(Locking)",
+    "definition": "로킹(Locking) — 병행 제어(Concurrency Control) 기법\n• 트랜잭션이 데이터에 잠금(Lock)을 설정하면 다른 트랜잭션은 해당 데이터에 접근 불가\n• 공유 잠금(Shared Lock, S-Lock): 읽기만 가능, 여러 트랜잭션이 동시 공유 가능\n• 배타 잠금(Exclusive Lock, X-Lock): 읽기·쓰기 모두 독점\n• 2단계 로킹 규약(2PL): 확장 단계(잠금만) → 축소 단계(해제만)\n• 비교: 낙관적 검증(완료 후 검증), 타임스탬프 순서(시간 기반)",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_015",
+    "tags": [
+      "데이터베이스",
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_078",
+      "card-memorize-os_079"
+    ],
+    "tip": "로킹의 '공유잠금(S)과 배타잠금(X)' 차이는 필수 암기입니다. 2단계 로킹 규약(2PL)의 '확장→축소' 단계도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_074",
+    "categoryId": "memorize-os",
+    "subcategory": "디스크",
+    "term": "SSTF(Shortest Seek Time First)",
+    "definition": "디스크 스케줄링 알고리즘 모음\n1. FCFS: 요청 순서대로 처리(가장 단순)\n2. SSTF(Shortest Seek Time First): 현재 헤드에서 가장 가까운 트랙 먼저 처리, 기아 현상 가능\n3. SCAN(엘리베이터): 한 방향으로 이동하며 처리 → 끝에서 반대 방향\n4. C-SCAN: 한 방향으로만 처리 → 끝에서 처음으로 되돌아감\n5. LOOK: SCAN과 유사, 요청이 없으면 미리 방향 전환\n6. C-LOOK: C-SCAN과 유사, 요청이 없으면 미리 되돌아감",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_016",
+    "tags": [
+      "운영체제",
+      "디스크",
+      "스케줄링",
+      "SSTF"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_080",
+      "card-memorize-os_081"
+    ],
+    "tip": "SSTF의 '기아 현상'과 SCAN의 '엘리베이터 알고리즘'이라는 별칭은 단골 출제 포인트입니다. SCAN vs C-SCAN, LOOK vs C-LOOK의 차이를 정리하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_075",
+    "categoryId": "memorize-os",
+    "subcategory": "인터페이스",
+    "term": "MUI(Menu User Interface)",
+    "definition": "사용자 인터페이스(UI)의 종류\n• CLI(Command Line Interface): 명령어를 직접 입력하여 시스템 조작. 텍스트 기반\n• GUI(Graphical User Interface): 그래픽 요소(아이콘, 메뉴, 윈도우 등)로 조작. 직관적\n• MUI(Menu User Interface): 메뉴를 기반으로 선택하여 작업 수행\n• NUI(Natural User Interface): 터치, 음성, 제스처 등 자연스러운 동작으로 조작\n• OUI(Organic User Interface): 유기적 상호작용, 구부리기·접기 등 물리적 변형 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_019",
+    "tags": [
+      "인터페이스",
+      "MUI",
+      "사용자인터페이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_082",
+      "card-memorize-os_083",
+      "card-memorize-os_084"
+    ],
+    "tip": "UI 종류에서 NUI(Natural)와 OUI(Organic)를 혼동하는 함정 문제가 나옵니다. NUI는 '터치/음성', OUI는 '물리적 변형'입니다. CLI/GUI/NUI 비교가 핵심입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_076",
+    "categoryId": "memorize-os",
+    "subcategory": "보안",
+    "term": "기밀성(Confidentiality)",
+    "definition": "소프트웨어 개발 보안의 3대 요소 — CIA\n1. 기밀성(Confidentiality): 인가된 사용자만 정보에 접근 가능. 허가되지 않은 정보 공개 차단\n2. 무결성(Integrity): 인가된 방법으로만 정보 변경 가능. 정보의 정확성과 완전성 보장\n3. 가용성(Availability): 인가된 사용자가 필요할 때 정보에 접근 가능하도록 보장\n• 암기법: CIA (Confidentiality, Integrity, Availability)\n• 보안 위협: 기밀성→도청/스니핑, 무결성→변조/위조, 가용성→DoS 공격",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_020",
+    "tags": [
+      "보안",
+      "기밀성",
+      "무결성",
+      "가용성"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_085",
+      "card-memorize-os_086"
+    ],
+    "tip": "보안 3요소 'CIA(기밀성·무결성·가용성)'는 거의 매 회차 출제됩니다. 각 요소에 대응하는 보안 위협(도청, 변조, DoS)도 함께 외우면 객관식에서 유리합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_077",
+    "categoryId": "theory-os",
+    "subcategory": "운영체제",
+    "term": "객체지향 시스템",
+    "definition": "객체지향 시스템 — 운영체제의 운영 방식에 해당하지 않는 것\n• 운영체제 7가지 운영 방식: 일괄처리, 다중프로그래밍, 시분할, 다중처리, 실시간, 다중모드, 분산처리\n• 객체지향은 프로그래밍 패러다임이지 운영체제 운영 방식이 아님\n• 객체지향의 특성: 캡슐화, 상속, 다형성, 추상화\n• 혼동 주의: 운영 방식 vs 프로그래밍 패러다임 구분",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_007",
+    "tags": [
+      "운영체제",
+      "운영방식"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_070"
+    ],
+    "tip": "운영 방식 7가지에 '해당하지 않는 것'을 고르는 문제에서 '객체지향 시스템'이 오답 선지로 자주 등장합니다. 운영 방식 7가지를 확실히 암기하면 소거법으로 풀 수 있습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_078",
+    "categoryId": "theory-os",
+    "subcategory": "병행제어",
+    "term": "낙관적 검증(Optimistic Validation)",
+    "definition": "낙관적 검증(Optimistic Validation) — 병행 제어 기법\n• 트랜잭션 수행 동안 어떤 검사도 하지 않고, 완료 후에 검증 수행\n• 3단계: 읽기(Read) → 확인(Validation) → 기록(Write)\n• 충돌이 드문 환경에서 효율적(대부분의 트랜잭션이 충돌 없이 완료)\n• 충돌 발견 시 해당 트랜잭션을 롤백(Rollback)\n• 로킹 기법보다 동시성(Concurrency)이 높음\n• 비교: 로킹(사전 잠금), 타임스탬프(시간 순서)",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_015",
+    "tags": [
+      "데이터베이스",
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_073",
+      "card-memorize-os_079"
+    ],
+    "tip": "낙관적 검증은 '수행 중에는 검사 안 함 → 완료 후 검증'이 핵심입니다. '읽기→확인→기록' 3단계와 로킹(비관적)과의 차이를 비교하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_079",
+    "categoryId": "theory-os",
+    "subcategory": "병행제어",
+    "term": "타임스탬프 순서(Timestamp Ordering)",
+    "definition": "타임스탬프 순서(Timestamp Ordering) — 병행 제어 기법\n• 트랜잭션에 시간 도장(타임스탬프)을 부여하고 그 순서대로 처리\n• 트랜잭션 시작 시점의 시스템 시계값 또는 논리적 카운터 사용\n• 직렬가능성(Serializability)을 보장\n• 데드락(교착상태)이 발생하지 않음\n• 충돌 시 롤백(Rollback)하여 재시작\n• 비교: 로킹(잠금 기반), 낙관적 검증(사후 검증)",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_015",
+    "tags": [
+      "데이터베이스",
+      "병행제어",
+      "로킹"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_073",
+      "card-memorize-os_078"
+    ],
+    "tip": "타임스탬프 기법은 '교착상태가 발생하지 않는다'는 점이 로킹과의 핵심 차이입니다. 시간 순서대로 직렬화를 보장한다는 원리를 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_080",
+    "categoryId": "theory-os",
+    "subcategory": "디스크",
+    "term": "SCAN",
+    "definition": "SCAN(스캔) — 디스크 스케줄링 알고리즘\n• 별칭: 엘리베이터 알고리즘(Elevator Algorithm)\n• 디스크 헤드가 한 방향으로 이동하면서 요청을 처리\n• 끝(최내측 또는 최외측)에 도달하면 반대 방향으로 전환\n• SSTF보다 공정하지만 양 끝단의 요청이 불리\n• 변형: C-SCAN(한 방향만), LOOK(요청 없으면 방향 전환)",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_016",
+    "tags": [
+      "운영체제",
+      "디스크",
+      "스케줄링",
+      "SSTF"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_074",
+      "card-memorize-os_081"
+    ],
+    "tip": "SCAN은 '엘리베이터 알고리즘'이라는 별칭이 시험에서 그대로 출제됩니다. C-SCAN과의 차이(양방향 vs 한 방향)를 반드시 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_081",
+    "categoryId": "theory-os",
+    "subcategory": "디스크",
+    "term": "C-SCAN",
+    "definition": "C-SCAN(Circular SCAN) — 디스크 스케줄링 알고리즘\n• SCAN의 변형으로 한 방향으로만 요청을 처리\n• 끝에 도달하면 반대쪽 끝(처음)으로 즉시 되돌아감(처리 없이 이동)\n• 되돌아가는 동안에는 요청을 처리하지 않음\n• SCAN보다 균등한 대기시간 제공\n• 변형: C-LOOK(요청이 있는 범위까지만 이동)",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_016",
+    "tags": [
+      "운영체제",
+      "디스크",
+      "스케줄링",
+      "SSTF"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_074",
+      "card-memorize-os_080"
+    ],
+    "tip": "C-SCAN은 '한 방향만 처리 + 되돌아감(처리 없이)'이 핵심입니다. SCAN과 비교하여 '균등한 대기시간'을 제공한다는 장점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_082",
+    "categoryId": "theory-os",
+    "subcategory": "인터페이스",
+    "term": "GUI(Graphical User Interface)",
+    "definition": "GUI(Graphical User Interface) — 그래픽 사용자 인터페이스\n• 아이콘, 메뉴, 윈도우, 버튼 등 그래픽 요소를 이용하여 시스템을 조작\n• 마우스, 터치 등 포인팅 장치로 직관적 조작 가능\n• CLI보다 사용하기 쉽지만 자동화에는 CLI가 유리\n• 대표: Windows, macOS의 데스크톱 환경\n• WIMP(Window, Icon, Menu, Pointer) 패러다임",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_019",
+    "tags": [
+      "인터페이스",
+      "MUI",
+      "사용자인터페이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_075",
+      "card-memorize-os_083",
+      "card-memorize-os_084"
+    ],
+    "tip": "GUI는 '그래픽 요소로 조작하는 인터페이스'입니다. WIMP 패러다임과 CLI와의 비교(편의성 vs 자동화)가 출제 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_083",
+    "categoryId": "theory-os",
+    "subcategory": "인터페이스",
+    "term": "CLI(Command Line Interface)",
+    "definition": "CLI(Command Line Interface) — 명령줄 인터페이스\n• 사용자가 텍스트 명령어를 직접 입력하여 시스템을 조작\n• 터미널, 콘솔, 쉘을 통해 사용\n• 스크립트를 통한 자동화에 유리\n• GUI보다 시스템 자원 소모가 적음\n• 숙련자에게 효율적, 초보자에게는 진입 장벽 높음\n• 대표: Linux Shell(Bash), Windows CMD/PowerShell",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_019",
+    "tags": [
+      "인터페이스",
+      "MUI",
+      "사용자인터페이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_075",
+      "card-memorize-os_082",
+      "card-memorize-os_084"
+    ],
+    "tip": "CLI는 '명령어 직접 입력'이 핵심입니다. GUI와의 비교 문제에서 'CLI는 자동화에 유리, GUI는 직관적'이라는 차이를 명확히 하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_084",
+    "categoryId": "theory-os",
+    "subcategory": "인터페이스",
+    "term": "NUI(Natural User Interface)",
+    "definition": "NUI(Natural User Interface) — 자연 사용자 인터페이스\n• 사용자의 자연스러운 동작(터치, 음성, 제스처, 시선 등)으로 시스템 조작\n• 별도의 입력장치 학습 없이 직관적 사용 가능\n• 적용: 스마트폰 터치, 음성비서(Siri, Alexa), 키넥트(Kinect)\n• GUI의 진화된 형태로 볼 수 있음\n• OUI(Organic UI)와 구분: OUI는 물리적 변형(접기, 구부리기) 기반",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_019",
+    "tags": [
+      "인터페이스",
+      "MUI",
+      "사용자인터페이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_075",
+      "card-memorize-os_082",
+      "card-memorize-os_083"
+    ],
+    "tip": "NUI는 '터치, 음성, 제스처' 등 자연스러운 동작이 핵심입니다. OUI(물리적 변형)와의 차이를 묻는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_085",
+    "categoryId": "theory-os",
+    "subcategory": "보안",
+    "term": "무결성(Integrity)",
+    "definition": "무결성(Integrity) — 소프트웨어 개발 보안의 3대 요소 중 하나\n• 적절한 권한을 가진 사용자만 인가된 방법으로 정보를 변경할 수 있음\n• 정보의 정확성(Accuracy)과 완전성(Completeness)을 보장\n• 위협: 데이터 변조, 위조, 중간자 공격(MITM)\n• 보장 방법: 해시 함수, 디지털 서명, MAC(메시지 인증 코드)\n• 기밀성(접근 제한), 가용성(사용 보장)과 함께 CIA 3요소 구성",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_020",
+    "tags": [
+      "보안",
+      "기밀성",
+      "무결성",
+      "가용성"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_076",
+      "card-memorize-os_086"
+    ],
+    "tip": "무결성은 '정보의 정확성과 완전성 보장'이 핵심 정의입니다. 기밀성(접근 제한)과 혼동하지 마세요. 해시 함수, 디지털 서명이 보장 수단입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-os_086",
+    "categoryId": "theory-os",
+    "subcategory": "보안",
+    "term": "가용성(Availability)",
+    "definition": "가용성(Availability) — 소프트웨어 개발 보안의 3대 요소 중 하나\n• 인가된 사용자가 필요할 때 정보 자산에 접근하고 사용할 수 있도록 보장\n• 위협: DoS(서비스 거부) 공격, DDoS(분산 서비스 거부) 공격, 시스템 장애\n• 보장 방법: 이중화(Redundancy), 백업, 로드밸런싱, CDN\n• 가용도 = MTBF / (MTBF + MTTR)\n• 기밀성(접근 제한), 무결성(정확성 보장)과 함께 CIA 3요소 구성",
+    "source": "theory",
+    "sourceQuestionId": "theory-os_020",
+    "tags": [
+      "보안",
+      "기밀성",
+      "무결성",
+      "가용성"
+    ],
+    "relatedTerms": [
+      "card-memorize-os_076",
+      "card-memorize-os_085"
+    ],
+    "tip": "가용성의 대표적 위협은 'DoS/DDoS 공격'입니다. 가용도 공식 'MTBF/(MTBF+MTTR)'과 보장 방법(이중화, 백업)을 함께 외우세요.",
+    "mnemonic": "암기 TIP"
+  }
+]

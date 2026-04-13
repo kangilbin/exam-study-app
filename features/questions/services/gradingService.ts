@@ -38,13 +38,13 @@ const normalizeSql = (s: string): string =>
 const extractOrderSymbols = (s: string): string =>
   s.replace(/[^ㄱ-ㅎ]/g, '');
 
-/** 범용 답변 정규화 (한글이면 공백 제거, 영문이면 소문자) */
+/** 범용 답변 정규화 (한글이면 공백 제거, 영문이면 소문자 + 쉼표 주변 공백 무시) */
 const normalizeAnswer = (s: string): string => {
   const trimmed = s.trim();
   if (containsKorean(trimmed)) {
     return normalizeKorean(trimmed);
   }
-  return normalizeEnglish(trimmed);
+  return normalizeEnglish(trimmed).replace(/\s*,\s*/g, ',');
 };
 
 // ─── 순서 라벨 상수 ─────────────────────────────────
@@ -257,6 +257,17 @@ const normalizeLabelSelection = (s: string): string =>
 /** 문제의 답변 유형을 판별하여 AnswerMeta 생성 */
 export const detectAnswerType = (question: Question): AnswerMeta => {
   const { answer, type: questionType } = question;
+
+  // 0. "또는"으로 구분된 복수 정답: "A 또는 B" → 둘 다 정답
+  if (answer.includes(' 또는 ')) {
+    const alternatives = answer.split(' 또는 ').map((s) => s.trim());
+    return {
+      type: 'text',
+      hint: '답을 입력하세요',
+      primaryAnswer: alternatives[0],
+      alternatives,
+    };
+  }
 
   // 1. 코드 문제 → codeOutput (항상 textarea)
   if (questionType === 'code') {

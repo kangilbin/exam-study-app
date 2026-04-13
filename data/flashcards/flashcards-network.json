@@ -1,0 +1,2140 @@
+[
+  {
+    "id": "card-memorize-network_001",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "OSI 7계층을 순서대로 쓰시오.",
+    "definition": "OSI 7계층 (하위→상위):\n• 1계층 물리(Physical): 비트 전송, 전기적/물리적 신호\n• 2계층 데이터링크(Data Link): 프레임, MAC 주소\n• 3계층 네트워크(Network): 패킷, IP 주소, 라우팅\n• 4계층 전송(Transport): 세그먼트, TCP/UDP\n• 5계층 세션(Session): 연결 설정/유지/해제\n• 6계층 표현(Presentation): 데이터 변환, 암호화\n• 7계층 응용(Application): 사용자 인터페이스\n암기: 물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_001",
+    "tags": [
+      "OSI",
+      "7계층"
+    ],
+    "tip": "OSI 7계층 순서는 거의 매회 출제됩니다. '물데네전세표응'을 반드시 암기하세요. 각 계층의 PDU(비트→프레임→패킷→세그먼트)도 함께 물어봅니다.",
+    "mnemonic": "물데네전세표응"
+  },
+  {
+    "id": "card-memorize-network_002",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "ARP와 RARP의 차이를 설명하시오.",
+    "definition": "ARP(Address Resolution Protocol): 논리주소(IP)→물리주소(MAC) 변환\nRARP(Reverse ARP): 물리주소(MAC)→논리주소(IP) 변환\n• ARP: IP 주소는 알지만 MAC 주소를 모를 때 브로드캐스트로 질의\n• RARP: MAC 주소만 알고 IP를 모를 때(디스크 없는 단말) 사용\n• 둘 다 OSI 3계층(네트워크), TCP/IP 인터넷 계층에 속함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_003",
+    "tags": [
+      "ARP",
+      "RARP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_003",
+      "card-memorize-network_004"
+    ],
+    "tip": "ARP와 RARP를 뒤바꿔 출제하는 문제가 자주 나옵니다. ARP=IP→MAC(논리→물리), RARP는 반대! 'ARP의 A=Address=IP주소를 넣으면 MAC이 나온다'로 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_003",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "ARP(Address Resolution Protocol)",
+    "definition": "ARP(Address Resolution Protocol)\n논리주소(IP)→물리주소(MAC) 변환 프로토콜\n• 목적지 IP는 알지만 MAC 주소를 모를 때 사용\n• 동작: ARP Request(브로드캐스트)→ARP Reply(유니캐스트)\n• ARP 캐시 테이블에 IP-MAC 매핑 정보를 저장\n• OSI 3계층, TCP/IP 인터넷 계층 소속",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_003",
+    "tags": [
+      "ARP",
+      "RARP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_002",
+      "card-memorize-network_004"
+    ],
+    "tip": "ARP 스푸핑 공격과 연계하여 출제됩니다. ARP 캐시를 위조하여 중간자 공격(MITM)을 수행하는 원리를 함께 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_004",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "RARP(Reverse ARP)",
+    "definition": "RARP(Reverse Address Resolution Protocol)\n물리주소(MAC)→논리주소(IP) 변환 프로토콜\n• 디스크가 없는 단말기가 부팅 시 자신의 IP를 알아내기 위해 사용\n• RARP 서버가 MAC 주소를 보고 해당 IP를 응답\n• 현재는 BOOTP, DHCP로 대체되었으나 시험에 자주 출제\n• OSI 3계층, TCP/IP 인터넷 계층 소속",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_003",
+    "tags": [
+      "ARP",
+      "RARP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_002",
+      "card-memorize-network_003"
+    ],
+    "tip": "RARP는 'Reverse'가 핵심! ARP의 반대 방향입니다. 최근에는 DHCP가 이 역할을 대신하지만, 시험에서는 RARP 개념 자체를 묻습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_005",
+    "categoryId": "memorize-network",
+    "subcategory": "IP",
+    "term": "IPv4와 IPv6의 차이",
+    "definition": "IPv4 vs IPv6 비교:\n• IPv4: 32비트(8비트×4), 약 43억 개 주소, 10진수 표기(예: 192.168.0.1)\n• IPv6: 128비트(16비트×8), 거의 무한한 주소, 16진수 표기(콜론 구분)\n• IPv6 특징: IPSec 기본 내장, 이동성 지원, 헤더 단순화\n• IPv6 주소체계: Unicast(1:1), Anycast(1:가장가까운1), Multicast(1:N)\n• IPv6에는 Broadcast 없음 (Multicast로 대체)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_005",
+    "tags": [
+      "IPv4",
+      "IPv6"
+    ],
+    "tip": "IPv4는 32비트, IPv6는 128비트는 기본! IPv6의 Broadcast 부재와 Anycast 개념을 혼동하지 마세요. 'IPv6=UAM(유니·애니·멀티)'으로 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_006",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "대칭키",
+    "definition": "대칭키(Symmetric Key) 암호화\n암호화와 복호화에 동일한 키를 사용하는 방식\n• 대표 알고리즘: AES, DES, 3DES, SEED, ARIA, IDEA\n• 장점: 암·복호화 속도가 빠름, 대용량 데이터 처리에 적합\n• 단점: 키 분배(전달) 문제 발생 → n명이면 n(n-1)/2개 키 필요\n• 블록 암호(AES, DES)와 스트림 암호(RC4)로 구분",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_008",
+    "tags": [
+      "대칭키",
+      "비대칭키",
+      "암호화"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_007"
+    ],
+    "tip": "대칭키 vs 비대칭키 비교는 단골 출제! '대칭=같은키=빠름=키분배문제' vs '비대칭=공개키/개인키=느림=키분배용이'. 키 개수 공식도 나옵니다: 대칭키 n(n-1)/2, 비대칭키 2n.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_007",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "비대칭키",
+    "definition": "비대칭키(Asymmetric Key, 공개키) 암호화\n공개키와 개인키 쌍을 사용하는 방식\n• 대표 알고리즘: RSA, ECC, ElGamal, DSA\n• 공개키로 암호화 → 개인키로 복호화 (기밀성)\n• 개인키로 암호화 → 공개키로 복호화 (전자서명, 인증)\n• 장점: 키 분배 용이 (n명이면 2n개 키)\n• 단점: 연산 속도 느림, 대칭키보다 처리 시간 길음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_008",
+    "tags": [
+      "대칭키",
+      "비대칭키",
+      "암호화"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_006"
+    ],
+    "tip": "RSA는 소인수분해 난이도 기반으로, 가장 대표적인 비대칭키 알고리즘입니다. 공개키/개인키 역할(기밀성 vs 전자서명)을 구분하여 답하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_008",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "DAC(임의적)",
+    "definition": "DAC(Discretionary Access Control, 임의적 접근통제)\n데이터 소유자가 자신의 판단에 따라 다른 사용자에게 접근 권한을 부여/회수하는 방식\n• 유연하지만 보안 수준이 상대적으로 낮음\n• 신원(Identity) 기반 정책\n• 대표 구현: UNIX 파일 퍼미션(rwx), ACL(접근제어목록)\n• cf. MAC(강제적), RBAC(역할 기반)과 비교 출제",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_009",
+    "tags": [
+      "접근통제",
+      "DAC",
+      "MAC",
+      "RBAC"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_009",
+      "card-memorize-network_010"
+    ],
+    "tip": "접근통제 3가지(DAC/MAC/RBAC)를 비교하는 문제가 빈출! DAC='소유자 재량', MAC='보안등급 강제', RBAC='역할에 부여'. 'DMR'로 순서 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_009",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "MAC(강제적)",
+    "definition": "MAC(Mandatory Access Control, 강제적 접근통제)\n시스템이 보안 등급(레이블)에 따라 접근을 강제로 통제하는 방식\n• 관리자(중앙)가 보안 정책을 설정, 사용자가 변경 불가\n• 군사/국방 등 높은 보안이 필요한 곳에서 사용\n• 주체와 객체에 보안 등급(Top Secret > Secret > Confidential)을 부여\n• 대표 모델: Bell-LaPadula(기밀성), Biba(무결성)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_009",
+    "tags": [
+      "접근통제",
+      "DAC",
+      "MAC",
+      "RBAC"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_008",
+      "card-memorize-network_010"
+    ],
+    "tip": "MAC은 '강제적'이라는 키워드가 핵심! Bell-LaPadula(No Read Up, No Write Down)와 함께 출제됩니다. DAC과 혼동하지 마세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_010",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "RBAC(역할 기반)",
+    "definition": "RBAC(Role-Based Access Control, 역할 기반 접근통제)\n사용자의 역할(Role)에 따라 접근 권한을 부여하는 방식\n• 사용자→역할→권한의 3단계 구조\n• 조직 내 직무별 권한 관리에 적합 (기업 환경에서 가장 많이 사용)\n• 관리가 용이하고 최소 권한 원칙 적용 가능\n• 사용자가 퇴사/이동 시 역할만 변경하면 됨\n• cf. DAC(소유자 재량), MAC(보안등급 강제)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_009",
+    "tags": [
+      "접근통제",
+      "DAC",
+      "MAC",
+      "RBAC"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_008",
+      "card-memorize-network_009"
+    ],
+    "tip": "RBAC는 현대 기업 환경에서 가장 널리 사용됩니다. '역할(Role)'에 권한을 부여한다는 점이 핵심! 사용자에게 직접 권한을 주는 것이 아님을 강조하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_011",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "SQL Injection",
+    "definition": "SQL Injection(SQL 삽입 공격)\n웹 입력란에 악의적인 SQL 구문을 삽입하여 DB를 비정상적으로 조작하는 공격\n• 공격 예: ' OR 1=1 -- 입력으로 인증 우회\n• 유형: Error-based, Union-based, Blind SQL Injection\n• 대응법:\n  - 입력값 검증(Validation)\n  - PreparedStatement(매개변수화 쿼리) 사용\n  - 최소 권한 원칙 적용\n  - WAF(웹방화벽) 도입",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_010",
+    "tags": [
+      "SQL Injection",
+      "보안"
+    ],
+    "tip": "SQL Injection 대응법으로 'PreparedStatement' 또는 '입력값 검증'이 답으로 자주 나옵니다. XSS와 혼동하지 말 것! SQL Injection=DB 조작, XSS=스크립트 삽입.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_012",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "XSS(Cross-Site Scripting)",
+    "definition": "XSS(Cross-Site Scripting)\n웹 페이지에 악성 스크립트(JavaScript 등)를 삽입하여 사용자 정보를 탈취하는 공격\n• 유형: Stored XSS(저장형), Reflected XSS(반사형), DOM-based XSS\n• 공격 대상: 서버가 아닌 사용자(클라이언트)\n• 대응법:\n  - 입출력 값 검증 및 HTML 엔티티 인코딩(<, > 등 치환)\n  - Content-Security-Policy 헤더 적용\n  - HttpOnly 쿠키 설정",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_011",
+    "tags": [
+      "XSS",
+      "보안"
+    ],
+    "tip": "XSS는 'Script' 삽입, SQL Injection은 'SQL' 삽입으로 구분! 약어가 CSS와 혼동되지 않도록 X를 사용합니다. CSRF와도 구분하세요(XSS=스크립트 삽입, CSRF=위조 요청).",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_013",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "IPSec",
+    "definition": "IPSec(IP Security Protocol)\nIP 계층(네트워크 계층)에서 보안 서비스를 제공하는 프로토콜 모음\n• AH(Authentication Header): 무결성 + 인증 제공 (암호화 없음)\n• ESP(Encapsulating Security Payload): 기밀성 + 무결성 + 인증 제공\n• 동작 모드: 전송 모드(데이터만 암호화), 터널 모드(헤더 포함 전체 암호화)\n• VPN 구현에 주로 사용\n• IPv6에 기본 내장",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_012",
+    "tags": [
+      "IPSec",
+      "보안"
+    ],
+    "tip": "AH vs ESP 비교가 출제 포인트! AH=인증+무결성(암호화X), ESP=인증+무결성+기밀성(암호화O). 'ESP가 더 많은 보안 제공'으로 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_014",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "기밀성(Confidentiality)",
+    "definition": "기밀성(Confidentiality)\n인가된 사용자만 정보에 접근할 수 있도록 보호하는 성질\n• 비인가자의 정보 접근을 차단\n• 구현 방법: 암호화(대칭키/비대칭키), 접근통제\n• 위협 요소: 도청, 스니핑, 사회공학 공격\n• 보안 3요소(CIA) 중 C에 해당\n• cf. 무결성(I)=변경 방지, 가용성(A)=서비스 지속",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_013",
+    "tags": [
+      "CIA",
+      "보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_015",
+      "card-memorize-network_016"
+    ],
+    "tip": "CIA 트라이어드(기밀성/무결성/가용성)는 보안 기본 문제! 기밀성=읽기 차단, 무결성=변경 차단, 가용성=서비스 보장으로 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_015",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "무결성(Integrity)",
+    "definition": "무결성(Integrity)\n정보가 인가되지 않은 방법으로 변경·파괴되지 않도록 보호하는 성질\n• 데이터의 정확성과 완전성을 보장\n• 구현 방법: 해시 함수(SHA, MD5), 전자서명, MAC(메시지 인증 코드)\n• 위협 요소: 데이터 변조, 중간자 공격(MITM)\n• 보안 3요소(CIA) 중 I에 해당\n• 대표 보안 모델: Biba 모델(무결성 중심)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_013",
+    "tags": [
+      "CIA",
+      "보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_014",
+      "card-memorize-network_016"
+    ],
+    "tip": "무결성 관련 보안 모델로 Biba 모델이 자주 출제됩니다. Biba=무결성, Bell-LaPadula=기밀성으로 짝을 지어 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_016",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "가용성(Availability)",
+    "definition": "가용성(Availability)\n인가된 사용자가 필요한 시점에 정보·서비스에 접근할 수 있도록 보장하는 성질\n• 서비스의 연속성과 접근성을 보장\n• 구현 방법: 이중화(Redundancy), 백업, RAID, 클러스터링\n• 위협 요소: DoS/DDoS 공격, 시스템 장애, 자연재해\n• 보안 3요소(CIA) 중 A에 해당",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_013",
+    "tags": [
+      "CIA",
+      "보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_014",
+      "card-memorize-network_015"
+    ],
+    "tip": "가용성을 위협하는 대표적 공격이 DoS/DDoS입니다. 시험에서 CIA 중 가용성에 해당하는 것을 고르라는 문제가 나오면, '서비스 지속 보장'이 키워드입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_017",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "물리(리피터",
+    "definition": "OSI 1계층 - 물리 계층(Physical Layer)\n• 전송 단위: 비트(Bit)\n• 역할: 전기적·기계적·물리적 신호 전송\n• 대표 장비: 리피터(Repeater), 허브(Hub)\n• 리피터: 감쇠된 신호를 증폭·재생하여 전달\n• 허브: 다수의 포트에 데이터를 브로드캐스트(충돌 도메인 공유)\n• 프로토콜: RS-232C, X.21 등",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_018",
+      "card-memorize-network_019",
+      "card-memorize-network_020",
+      "card-memorize-network_021",
+      "card-memorize-network_022",
+      "card-memorize-network_023"
+    ],
+    "tip": "물리 계층 장비를 묻는 문제에서 '리피터'와 '허브'를 기억하세요. 허브는 브로드캐스트 장비로, 스위치(2계층)와 구분됩니다."
+  },
+  {
+    "id": "card-memorize-network_018",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "허브) → 데이터링크(브리지",
+    "definition": "OSI 2계층 - 데이터링크 계층(Data Link Layer)\n• 전송 단위: 프레임(Frame)\n• 역할: 물리적 주소(MAC) 기반 통신, 오류 검출/흐름 제어\n• 대표 장비: 브리지(Bridge), L2 스위치\n• 브리지: MAC 주소 학습 테이블로 프레임 필터링\n• 스위치: 브리지의 발전형, 포트별 충돌 도메인 분리\n• 프로토콜: HDLC, PPP, LLC, MAC",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_019",
+      "card-memorize-network_020",
+      "card-memorize-network_021",
+      "card-memorize-network_022",
+      "card-memorize-network_023"
+    ],
+    "tip": "데이터링크 계층은 'MAC 주소'와 '프레임'이 키워드! 오류 검출(CRC), 흐름 제어(슬라이딩 윈도우) 기능도 이 계층입니다."
+  },
+  {
+    "id": "card-memorize-network_019",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "스위치) → 네트워크(라우터",
+    "definition": "OSI 3계층 - 네트워크 계층(Network Layer)\n• 전송 단위: 패킷(Packet)\n• 역할: 논리적 주소(IP) 기반 라우팅(경로 설정)\n• 대표 장비: 라우터(Router), L3 스위치\n• 라우터: 서로 다른 네트워크 간 패킷 전달 및 최적 경로 선택\n• 프로토콜: IP, ICMP, IGMP, ARP, RARP\n• 라우팅 프로토콜: RIP, OSPF, BGP",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_018",
+      "card-memorize-network_020",
+      "card-memorize-network_021",
+      "card-memorize-network_022",
+      "card-memorize-network_023"
+    ],
+    "tip": "네트워크 계층은 'IP 주소'와 '패킷', '라우팅'이 핵심! 라우터가 이 계층의 대표 장비이며, ARP/ICMP 등도 이 계층 소속입니다."
+  },
+  {
+    "id": "card-memorize-network_020",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "ICMP) → 전송(TCP",
+    "definition": "OSI 4계층 - 전송 계층(Transport Layer)\n• 전송 단위: 세그먼트(Segment)\n• 역할: 종단 간(End-to-End) 신뢰성 있는 데이터 전송\n• 포트 번호로 프로세스 식별\n• 대표 프로토콜: TCP(연결형, 신뢰성), UDP(비연결형, 빠름)\n• 기능: 흐름 제어, 오류 제어, 혼잡 제어\n• TCP 3-Way Handshake: SYN → SYN+ACK → ACK",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_018",
+      "card-memorize-network_019",
+      "card-memorize-network_021",
+      "card-memorize-network_022",
+      "card-memorize-network_023"
+    ],
+    "tip": "전송 계층은 '세그먼트'와 '포트 번호'가 키워드! TCP와 UDP의 차이(연결형 vs 비연결형)를 반드시 구분하세요."
+  },
+  {
+    "id": "card-memorize-network_021",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "UDP) → 세션(RPC",
+    "definition": "OSI 5계층 - 세션 계층(Session Layer)\n• 역할: 통신 세션(연결)의 설정·유지·해제 관리\n• 대화 제어(Dialog Control): 반이중/전이중 방식 결정\n• 동기점(Synchronization Point) 설정으로 오류 복구 지원\n• 대표 프로토콜: RPC(Remote Procedure Call), NetBIOS\n• 체크포인트를 설정하여 전송 중 오류 시 해당 지점부터 재전송",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_018",
+      "card-memorize-network_019",
+      "card-memorize-network_020",
+      "card-memorize-network_022",
+      "card-memorize-network_023"
+    ],
+    "tip": "세션 계층은 '연결 설정/해제'와 '동기점(체크포인트)'이 핵심! 5~7계층은 상위 계층으로, 전송 계층 이상의 논리적 통신을 담당합니다."
+  },
+  {
+    "id": "card-memorize-network_022",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "NetBIOS) → 표현(JPEG",
+    "definition": "OSI 6계층 - 표현 계층(Presentation Layer)\n• 역할: 데이터의 형식 변환, 암호화/복호화, 압축/해제\n• 서로 다른 시스템 간 데이터 표현 차이를 해결\n• 인코딩/디코딩: ASCII, EBCDIC, Unicode 변환\n• 대표 프로토콜/포맷: JPEG, MPEG, GIF, SSL/TLS(암호화)\n• 데이터 압축으로 전송 효율 향상",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_018",
+      "card-memorize-network_019",
+      "card-memorize-network_020",
+      "card-memorize-network_021",
+      "card-memorize-network_023"
+    ],
+    "tip": "표현 계층은 '변환·암호화·압축'이 키워드! JPEG, MPEG 같은 데이터 포맷이 이 계층에 해당합니다. SSL/TLS도 표현 계층에서 동작합니다."
+  },
+  {
+    "id": "card-memorize-network_023",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI",
+    "term": "MPEG) → 응용(HTTP",
+    "definition": "OSI 7계층 - 응용 계층(Application Layer)\n• 역할: 사용자와 네트워크 서비스 사이의 인터페이스 제공\n• 사용자가 직접 접하는 최상위 계층\n• 대표 프로토콜:\n  - HTTP(80): 웹 통신\n  - FTP(20/21): 파일 전송\n  - SMTP(25): 메일 전송\n  - DNS(53): 도메인→IP 변환\n  - SNMP(161): 네트워크 관리\n  - Telnet(23)/SSH(22): 원격 접속",
+    "mnemonic": "물데네전세표응",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_014",
+    "tags": [
+      "OSI",
+      "7계층",
+      "물데네전세표응"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_017",
+      "card-memorize-network_018",
+      "card-memorize-network_019",
+      "card-memorize-network_020",
+      "card-memorize-network_021",
+      "card-memorize-network_022"
+    ],
+    "tip": "응용 계층 프로토콜과 포트 번호를 함께 암기하세요. HTTP=80, FTP=20/21, SSH=22, Telnet=23, SMTP=25, DNS=53이 시험 빈출입니다."
+  },
+  {
+    "id": "card-memorize-network_024",
+    "categoryId": "memorize-network",
+    "subcategory": "TCP/IP",
+    "term": "응용계층",
+    "definition": "TCP/IP 4계층 - 응용 계층(Application Layer)\nOSI 5·6·7계층에 대응하는 최상위 계층\n• 사용자에게 네트워크 서비스를 직접 제공\n• 대표 프로토콜:\n  - HTTP: 웹 브라우징 (포트 80)\n  - FTP: 파일 전송 (포트 20/21)\n  - SMTP: 메일 송신 (포트 25)\n  - DNS: 도메인→IP 변환 (포트 53)\n  - SNMP: 네트워크 관리 (포트 161)\n  - TELNET: 원격 접속 (포트 23)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_015",
+    "tags": [
+      "TCP/IP",
+      "4계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_025",
+      "card-memorize-network_026",
+      "card-memorize-network_027"
+    ],
+    "tip": "TCP/IP 응용 계층은 OSI의 5·6·7계층을 하나로 합친 것! 프로토콜과 포트 번호 매칭이 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_025",
+    "categoryId": "memorize-network",
+    "subcategory": "TCP/IP",
+    "term": "전송계층",
+    "definition": "TCP/IP 4계층 - 전송 계층(Transport Layer)\nOSI 4계층(전송)에 대응\n• 종단 간(End-to-End) 데이터 전송 담당\n• 대표 프로토콜:\n  - TCP: 연결형, 신뢰성 보장, 3-Way Handshake\n  - UDP: 비연결형, 빠른 전송, 실시간 스트리밍\n  - RTCP: RTP 전송 품질 모니터링\n• 포트 번호로 응용 프로세스를 식별",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_015",
+    "tags": [
+      "TCP/IP",
+      "4계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_024",
+      "card-memorize-network_026",
+      "card-memorize-network_027"
+    ],
+    "tip": "TCP/IP 전송 계층에서 TCP와 UDP의 차이는 필수! TCP=연결형+신뢰성, UDP=비연결형+빠름. RTCP는 실시간 전송 품질 제어 프로토콜입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_026",
+    "categoryId": "memorize-network",
+    "subcategory": "TCP/IP",
+    "term": "인터넷계층",
+    "definition": "TCP/IP 4계층 - 인터넷 계층(Internet Layer)\nOSI 3계층(네트워크)에 대응\n• 논리적 주소(IP) 기반 패킷 라우팅 담당\n• 대표 프로토콜:\n  - IP: 비연결형 데이터그램 전송\n  - ICMP: 오류 메시지/제어 메시지 전달 (예: Ping)\n  - IGMP: 멀티캐스트 그룹 관리\n  - ARP: IP→MAC 변환\n  - RARP: MAC→IP 변환",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_015",
+    "tags": [
+      "TCP/IP",
+      "4계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_024",
+      "card-memorize-network_025",
+      "card-memorize-network_027"
+    ],
+    "tip": "인터넷 계층의 5가지 프로토콜(IP, ICMP, IGMP, ARP, RARP)을 모두 외우세요. 'IP를 IIAR로 보조한다'는 식으로 연상하면 좋습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_027",
+    "categoryId": "memorize-network",
+    "subcategory": "TCP/IP",
+    "term": "네트워크 액세스계층",
+    "definition": "TCP/IP 4계층 - 네트워크 액세스 계층(Network Access Layer)\nOSI 1·2계층(물리+데이터링크)에 대응하는 최하위 계층\n• 실제 물리적 네트워크를 통한 데이터 전송 담당\n• 대표 프로토콜/표준:\n  - Ethernet(IEEE 802.3): 유선 LAN 표준\n  - IEEE 802.11: 무선 LAN(Wi-Fi)\n  - X.25: 패킷 교환 네트워크\n  - HDLC: 데이터링크 제어\n  - ARQ: 오류 제어(Stop-and-Wait, Go-Back-N, SR)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_015",
+    "tags": [
+      "TCP/IP",
+      "4계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_024",
+      "card-memorize-network_025",
+      "card-memorize-network_026"
+    ],
+    "tip": "TCP/IP 4계층 순서를 묻는 문제가 빈출! 아래부터 '네트워크 액세스→인터넷→전송→응용'. OSI 7계층과의 매핑 관계를 반드시 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_028",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "TCP",
+    "definition": "TCP(Transmission Control Protocol)\n연결형(Connection-Oriented) 전송 프로토콜\n• 가상회선 방식, 1:1 통신\n• 신뢰성 높음: 순서 보장, 재전송, 흐름 제어, 혼잡 제어\n• 3-Way Handshake로 연결 설정: SYN → SYN+ACK → ACK\n• 4-Way Handshake로 연결 해제: FIN → ACK → FIN → ACK\n• 전송 단위: 세그먼트(Segment)\n• 대표 서비스: HTTP, FTP, SMTP, Telnet",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_016",
+    "tags": [
+      "TCP",
+      "UDP",
+      "비교"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_029"
+    ],
+    "tip": "3-Way Handshake 순서(SYN→SYN+ACK→ACK)는 거의 매회 출제! TCP의 신뢰성 보장 메커니즘(순서 보장, 흐름/혼잡 제어)도 함께 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_029",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "UDP",
+    "definition": "UDP(User Datagram Protocol)\n비연결형(Connectionless) 전송 프로토콜\n• 데이터그램 방식, 1:1/1:N/N:N 통신 가능\n• 신뢰성 낮음: 순서 미보장, 재전송 없음, 흐름 제어 없음\n• 연결 설정 없이 바로 전송 → 빠른 속도\n• 전송 단위: 데이터그램(Datagram)\n• 대표 서비스: DNS(53), SNMP(161), 실시간 스트리밍, VoIP\n• 헤더가 단순(8바이트)하여 오버헤드 적음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_016",
+    "tags": [
+      "TCP",
+      "UDP",
+      "비교"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_028"
+    ],
+    "tip": "TCP vs UDP 비교표를 통으로 암기! UDP='비연결+비신뢰+빠름+멀티캐스트 가능'. DNS가 UDP를 쓴다는 것도 출제 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_030",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "단방향(해시)",
+    "definition": "단방향 암호화(해시 함수)\n암호화만 가능하고 복호화가 불가능한 일방향 함수\n• 대표 알고리즘: SHA(SHA-256, SHA-512), MD5, N-NASH, SNEFRU\n• 입력값이 조금만 변해도 결과(해시값)가 완전히 달라짐(눈사태 효과)\n• 용도: 비밀번호 저장, 무결성 검증, 전자서명\n• MD5: 128비트 출력, 현재 보안 취약으로 권장하지 않음\n• SHA-256: 256비트 출력, 현재 가장 많이 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_017",
+    "tags": [
+      "암호화",
+      "대칭키",
+      "비대칭키",
+      "해시"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_031",
+      "card-memorize-network_032"
+    ],
+    "tip": "해시 함수는 '복호화 불가'가 핵심! MD5와 SHA의 출력 비트 수를 묻는 문제가 나옵니다. MD5=128비트, SHA-256=256비트. 양방향 암호화와 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_031",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "양방향 대칭키",
+    "definition": "양방향 대칭키(비밀키) 암호 알고리즘\n암호화와 복호화에 동일한 키를 사용하는 양방향 암호화 방식\n• 대표 알고리즘:\n  - SEED: 한국(KISA) 개발, 128비트 블록 암호\n  - ARIA: 국정원/산학연 개발, 경량 환경용\n  - DES: 1975년 NBS 개발, 56비트 키 (현재 취약)\n  - AES: 2001년 NIST 개발, DES 대체, 128/192/256비트 키\n• 블록 암호 방식으로 데이터를 고정 크기 블록 단위로 암호화",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_017",
+    "tags": [
+      "암호화",
+      "대칭키",
+      "비대칭키",
+      "해시"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_030",
+      "card-memorize-network_032"
+    ],
+    "tip": "SEED(한국), ARIA(한국경량), DES(구식), AES(현재 표준) 순서로 외우세요. 특히 SEED·ARIA는 한국산 알고리즘으로 출제 빈도가 높습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_032",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "양방향 비대칭키",
+    "definition": "양방향 비대칭키(공개키) 암호 알고리즘\n공개키와 개인키 쌍을 사용하는 양방향 암호화 방식\n• 대표 알고리즘:\n  - RSA: 소인수분해 기반, 가장 대표적인 공개키 암호 (1978년 MIT)\n  - ECC: 타원곡선 이산대수 기반, RSA보다 짧은 키로 동등한 보안\n  - ElGamal: 이산대수 기반\n  - DSA: 전자서명 전용 알고리즘\n• 키 분배 문제 해결, 전자서명 가능\n• 대칭키보다 연산 속도 느림",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_017",
+    "tags": [
+      "암호화",
+      "대칭키",
+      "비대칭키",
+      "해시"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_030",
+      "card-memorize-network_031"
+    ],
+    "tip": "비대칭키 = 공개키 암호! RSA가 대표이며, '소인수분해'라는 수학적 기반이 시험에 나옵니다. ECC는 모바일/IoT 환경에서 각광받는 알고리즘입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_033",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "Ping of Death",
+    "definition": "Ping of Death (죽음의 핑)\nICMP Echo Request 패킷을 규정 크기(65,536바이트) 이상으로 전송하여 시스템을 마비시키는 DoS 공격\n• 초대형 ICMP 패킷이 분할(Fragment)되어 전송\n• 수신 측에서 재조립 시 버퍼 오버플로우 발생\n• 대응법: ICMP 패킷 크기 제한, 패킷 필터링\n• DoS 공격의 한 유형",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_034",
+      "card-memorize-network_035",
+      "card-memorize-network_036",
+      "card-memorize-network_037",
+      "card-memorize-network_038"
+    ],
+    "tip": "DoS 공격 유형(Ping of Death, Smurf, SYN Flooding, TearDrop, Land)을 모두 구분할 수 있어야 합니다. 각 공격의 '원리'를 한 줄로 설명할 수 있도록 준비하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_034",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "SMURFING",
+    "definition": "Smurf Attack (스머프 공격)\n출발지 IP를 공격 대상의 IP로 위조(스푸핑)하여 브로드캐스트 주소로 ICMP Echo Request를 대량 전송하는 DoS 공격\n• 동작: 위조된 IP로 브로드캐스트 → 모든 호스트가 공격 대상에 응답\n• 공격 대상이 대량의 ICMP Echo Reply를 수신하여 마비\n• 대응법: 브로드캐스트 주소 사용 차단, 라우터에서 Directed Broadcast 비활성화",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_033",
+      "card-memorize-network_035",
+      "card-memorize-network_036",
+      "card-memorize-network_037",
+      "card-memorize-network_038"
+    ],
+    "tip": "스머프 공격의 핵심은 '브로드캐스트 + IP 스푸핑'! 출발지 IP를 위조한다는 점에서 일반 Ping of Death와 구분됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_035",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "SYN Flooding",
+    "definition": "SYN Flooding (SYN 플러딩)\nTCP 3-Way Handshake의 취약점을 이용한 DoS 공격\n• 공격자가 SYN 패킷만 대량으로 전송하고 ACK 응답을 보내지 않음\n• 서버의 대기 큐(Backlog Queue)가 가득 차서 정상 연결 불가\n• Half-Open 연결 상태가 누적되어 시스템 자원 소진\n• 대응법: SYN Cookie, 대기 큐 크기 증가, 타임아웃 단축, IPS 도입",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_033",
+      "card-memorize-network_034",
+      "card-memorize-network_036",
+      "card-memorize-network_037",
+      "card-memorize-network_038"
+    ],
+    "tip": "SYN Flooding은 TCP 3-Way Handshake와 연계하여 출제됩니다. 'SYN만 보내고 ACK을 안 보냄 → 대기큐 마비'로 기억하세요. 대응법으로 SYN Cookie가 자주 답이 됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_036",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "TearDrop",
+    "definition": "TearDrop Attack (티어드롭 공격)\nIP 패킷의 분할(Fragment) 오프셋을 조작하여 수신 측에서 재조립 시 오류를 발생시키는 DoS 공격\n• IP 단편화(Fragmentation) 시 오프셋 값을 중첩/비정상으로 설정\n• 수신 측에서 패킷을 재조립할 때 시스템 크래시 또는 재부팅 유발\n• 대응법: IP Fragment 패킷 필터링, OS 패치 적용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_033",
+      "card-memorize-network_034",
+      "card-memorize-network_035",
+      "card-memorize-network_037",
+      "card-memorize-network_038"
+    ],
+    "tip": "TearDrop은 'IP 패킷 분할 순서 조작'이 키워드! Ping of Death(크기 초과)와 혼동하지 마세요. TearDrop=오프셋 조작, PoD=크기 초과.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_037",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "LAND Attack",
+    "definition": "LAND Attack (랜드 공격)\n출발지 IP와 목적지 IP를 동일하게 설정하여 패킷을 전송하는 DoS 공격\n• 공격 대상이 자기 자신에게 계속 응답을 보내며 무한 루프에 빠짐\n• 시스템 자원(CPU, 메모리)이 소진되어 마비\n• 출발지 포트와 목적지 포트도 동일하게 설정\n• 대응법: 출발지·목적지 IP가 동일한 패킷 필터링",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_033",
+      "card-memorize-network_034",
+      "card-memorize-network_035",
+      "card-memorize-network_036",
+      "card-memorize-network_038"
+    ],
+    "tip": "LAND Attack은 '출발지 IP = 목적지 IP'가 핵심! 이 한 문장이 답의 전부입니다. '자기 자신에게 보내는 공격'으로 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_038",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "DDoS",
+    "definition": "DDoS(Distributed Denial of Service, 분산 서비스 거부 공격)\n다수의 좀비PC(봇넷)를 이용하여 동시에 대량의 트래픽을 전송하는 공격\n• 구조: 공격자→C&C 서버→좀비PC(봇넷)→공격 대상\n• DoS의 분산 확장 버전으로, 공격 근원지 추적이 어려움\n• 대표 도구: Trinoo, TFN, Stacheldraht\n• 대응법: 트래픽 분석, CDN/로드밸런서, IPS, 블랙홀 라우팅",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_018",
+    "tags": [
+      "DoS",
+      "DDoS",
+      "서비스공격"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_033",
+      "card-memorize-network_034",
+      "card-memorize-network_035",
+      "card-memorize-network_036",
+      "card-memorize-network_037"
+    ],
+    "tip": "DoS vs DDoS 구분! DoS=단일 공격자, DDoS=다수의 좀비PC. 시험에서는 DDoS의 공격 구조(공격자→C&C→좀비PC→대상)를 묻습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_039",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "방화벽",
+    "definition": "방화벽(Firewall)\n내부 네트워크와 외부 네트워크 사이에서 접근을 제어하는 보안 시스템\n• 패킷 필터링: IP 주소, 포트 번호 기반으로 트래픽 허용/차단\n• 상태 기반 검사(Stateful Inspection): 연결 상태를 추적하여 필터링\n• 프록시 방화벽: 응용 계층에서 대리 접속\n• 보안 정책(ACL)에 따라 허용/차단 결정\n• 네트워크 보안의 1차 방어선",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "방화벽은 가장 기본적인 네트워크 보안 솔루션! IDS/IPS와의 차이를 묻는 문제가 빈출. 방화벽=접근 제어(차단), IDS=탐지만, IPS=탐지+차단.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_040",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "웹방화벽(WAF)",
+    "definition": "WAF(Web Application Firewall, 웹방화벽)\n웹 애플리케이션 계층(OSI 7계층)에서 동작하는 전문 보안 장비\n• SQL Injection, XSS, CSRF 등 웹 공격을 탐지·차단\n• HTTP/HTTPS 트래픽을 분석하여 악성 요청 필터링\n• 일반 방화벽(L3/L4)과 달리 응용 계층 페이로드까지 검사\n• 대응 공격: OWASP Top 10 (SQL Injection, XSS, CSRF 등)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "WAF는 '웹 전용 방화벽'으로, 일반 방화벽이 못 막는 웹 공격을 차단합니다. SQL Injection/XSS 대응 솔루션으로 WAF를 답하면 됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_041",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "IDS",
+    "definition": "IDS(Intrusion Detection System, 침입 탐지 시스템)\n네트워크/시스템에 대한 침입 시도를 탐지하여 관리자에게 알리는 보안 시스템\n• 탐지만 수행하고 차단은 하지 않음 (수동적 대응)\n• 탐지 방식:\n  - 오용 탐지(Misuse Detection): 알려진 공격 패턴 매칭(시그니처 기반)\n  - 이상 탐지(Anomaly Detection): 정상 행위 기준 이탈 탐지\n• NIDS(네트워크 기반), HIDS(호스트 기반)로 구분",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "IDS='탐지만', IPS='탐지+차단'이 핵심 차이! 오용 탐지(시그니처)와 이상 탐지(프로파일)의 차이도 시험에 나옵니다. 오용=알려진 공격, 이상=미지의 공격 탐지 가능.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_042",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "IPS",
+    "definition": "IPS(Intrusion Prevention System, 침입 방지 시스템)\n침입을 탐지하고 자동으로 차단까지 수행하는 능동적 보안 시스템\n• IDS의 확장: 탐지(Detection) + 차단(Prevention)\n• 실시간으로 악성 트래픽을 탐지하여 즉시 차단\n• 인라인(In-line) 방식으로 네트워크에 설치\n• IDS(수동적) vs IPS(능동적) 비교가 시험 빈출\n• 오탐(False Positive) 시 정상 트래픽도 차단될 위험",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "IPS는 IDS의 진화형! '능동적'이라는 키워드가 답에 포함되어야 합니다. 네트워크에 인라인으로 설치되어 실시간 차단한다는 점이 핵심.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_043",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "DMZ",
+    "definition": "DMZ(DeMilitarized Zone, 비무장 지대)\n내부 네트워크와 외부 네트워크(인터넷) 사이의 완충 영역\n• 외부에서 접근이 필요한 서버(웹, 메일, DNS)를 DMZ에 배치\n• 내부 네트워크를 직접 노출하지 않고 보호\n• 방화벽 2개 사이에 위치: 외부↔방화벽↔DMZ↔방화벽↔내부\n• 외부→DMZ 접근 허용, 외부→내부 접근 차단\n• 내부→DMZ, 내부→외부 접근은 정책에 따라 결정",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "DMZ는 '완충지대'로 기억! 웹 서버 등 외부 공개 서버는 DMZ에 배치하고, DB 서버 등 중요 자산은 내부 네트워크에 둡니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_044",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "NAC",
+    "definition": "NAC(Network Access Control, 네트워크 접근 제어)\n네트워크에 접속하는 단말기의 보안 상태를 검증하여 접근을 제어하는 솔루션\n• 접속 단말의 보안 정책 준수 여부 확인 (백신 설치, OS 패치 등)\n• 미준수 단말은 격리 또는 접근 거부\n• 내부 네트워크 보안 강화 목적\n• 802.1X 인증과 연계하여 사용\n• BYOD(개인 기기 반입) 환경에서 특히 중요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_045",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "NAC는 '단말기의 보안 상태를 검증'하는 것이 핵심! 방화벽(외부 차단)과 달리 내부 네트워크 접속 단말을 관리합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_045",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "DLP",
+    "definition": "DLP(Data Loss Prevention, 데이터 유출 방지)\n기업 내부의 중요 정보가 외부로 유출되는 것을 탐지·차단하는 보안 솔루션\n• USB, 이메일, 클라우드, 프린터 등 모든 유출 경로 모니터링\n• 중요 데이터(개인정보, 영업비밀 등)의 이동을 감시\n• 정책 기반으로 데이터 전송 허용/차단 결정\n• 네트워크 DLP + 엔드포인트 DLP로 구분\n• 개인정보보호법 준수에 필수적",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_046",
+      "card-memorize-network_047"
+    ],
+    "tip": "DLP='데이터 유출 방지'로, 내부→외부 정보 유출을 막습니다. 방화벽(외부→내부 차단)과 방향이 반대! '유출(Loss)'이라는 키워드에 주목하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_046",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "ESM",
+    "definition": "ESM(Enterprise Security Management, 통합 보안 관리)\n방화벽, IDS, IPS, VPN 등 여러 보안 장비의 로그와 이벤트를 통합 관리하는 시스템\n• 다양한 보안 솔루션의 이벤트를 수집·분석·상관 분석\n• 중앙 집중식 보안 관리 콘솔 제공\n• 보안 이벤트 간 상관관계를 분석하여 위협 탐지\n• SIEM(Security Information and Event Management)으로 발전\n• 실시간 모니터링 + 사후 분석 기능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_047"
+    ],
+    "tip": "ESM='여러 보안 장비 통합 관리'가 핵심! 개별 보안 솔루션(방화벽, IDS, IPS 등)의 상위 관리 시스템으로 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_047",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "VPN",
+    "definition": "VPN(Virtual Private Network, 가상 사설 네트워크)\n공중 네트워크(인터넷)를 통해 사설 네트워크처럼 안전하게 통신하는 기술\n• 터널링(Tunneling): 데이터를 암호화하여 가상 전용선처럼 전송\n• 주요 프로토콜: IPSec, SSL/TLS, PPTP, L2TP\n• 장점: 전용선 대비 비용 절감, 원격 근무 지원\n• IPSec VPN: 네트워크 계층 암호화 (사이트 간 연결)\n• SSL VPN: 응용 계층 암호화 (웹 브라우저 기반)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_019",
+    "tags": [
+      "보안솔루션",
+      "방화벽",
+      "IDS",
+      "IPS"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_039",
+      "card-memorize-network_040",
+      "card-memorize-network_041",
+      "card-memorize-network_042",
+      "card-memorize-network_043",
+      "card-memorize-network_044",
+      "card-memorize-network_045",
+      "card-memorize-network_046"
+    ],
+    "tip": "VPN은 '터널링'과 '암호화'가 핵심! IPSec VPN vs SSL VPN 비교가 시험에 나옵니다. IPSec=네트워크 계층, SSL=응용 계층(웹 기반).",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_048",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "피싱(Phishing)",
+    "definition": "피싱(Phishing)\n신뢰할 수 있는 기관(은행, 공공기관 등)을 사칭한 가짜 웹사이트나 이메일로 개인정보를 탈취하는 사회공학적 공격\n• 이메일, 문자, 전화 등으로 가짜 사이트 접속 유도\n• 아이디, 비밀번호, 금융정보 등을 입력하도록 속임\n• 대응법: URL 확인, 의심 링크 클릭 금지, 2단계 인증 사용\n• cf. 파밍(DNS 변조), 스미싱(문자), 큐싱(QR코드)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_020",
+    "tags": [
+      "사회공학",
+      "피싱",
+      "파밍",
+      "스미싱"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_049",
+      "card-memorize-network_050",
+      "card-memorize-network_051",
+      "card-memorize-network_052"
+    ],
+    "tip": "피싱·파밍·스미싱·큐싱을 구분하는 문제가 자주 나옵니다! 피싱=이메일/가짜사이트, 파밍=DNS변조, 스미싱=SMS, 큐싱=QR코드.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_049",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "파밍(Pharming)",
+    "definition": "파밍(Pharming)\nDNS 서버를 해킹하거나 사용자 PC의 hosts 파일을 변조하여 정상 주소 입력 시 가짜 사이트로 자동 이동시키는 공격\n• 피싱과 달리 사용자가 정확한 URL을 입력해도 가짜 사이트로 연결\n• DNS 캐시 포이즈닝을 이용하기도 함\n• 대응법: DNS 보안(DNSSEC), 보안 소프트웨어 설치\n• 피싱보다 탐지가 어렵고 위험도가 높음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_020",
+    "tags": [
+      "사회공학",
+      "피싱",
+      "파밍",
+      "스미싱"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_048",
+      "card-memorize-network_050",
+      "card-memorize-network_051",
+      "card-memorize-network_052"
+    ],
+    "tip": "파밍은 'DNS 변조'가 핵심! 피싱은 사용자를 속이지만, 파밍은 시스템(DNS)을 변조합니다. 사용자가 정확한 URL을 입력해도 당하는 점이 차이!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_050",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "스미싱(Smishing)",
+    "definition": "스미싱(Smishing = SMS + Phishing)\n문자 메시지(SMS)에 포함된 악성 URL 링크를 클릭하도록 유도하여 악성코드를 설치하거나 개인정보를 탈취하는 공격\n• 택배 배송, 모바일 청첩장, 공공기관 사칭 등의 문자 이용\n• 스마트폰에 악성 앱 설치 → 금융정보 탈취\n• 대응법: 출처 불분명 URL 클릭 금지, 앱 설치 제한 설정\n• SMS + Phishing의 합성어",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_020",
+    "tags": [
+      "사회공학",
+      "피싱",
+      "파밍",
+      "스미싱"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_048",
+      "card-memorize-network_049",
+      "card-memorize-network_051",
+      "card-memorize-network_052"
+    ],
+    "tip": "스미싱은 'SMS + Phishing' 합성어! 문자 메시지를 통한 공격이라는 점에서 이메일 기반 피싱과 구분됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_051",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "스니핑(Sniffing)",
+    "definition": "스니핑(Sniffing)\n네트워크 상의 패킷을 몰래 엿들어 정보를 탈취하는 수동적 공격\n• 네트워크 카드(NIC)를 무차별 모드(Promiscuous Mode)로 설정\n• 암호화되지 않은 데이터(ID, PW, 이메일 등)를 도청\n• 도구: Wireshark, tcpdump 등\n• 대응법: 데이터 암호화(SSL/TLS), VPN 사용, SSH 사용\n• 능동적 공격(스푸핑)과 구분: 스니핑=엿듣기(수동), 스푸핑=위장(능동)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_020",
+    "tags": [
+      "사회공학",
+      "피싱",
+      "파밍",
+      "스미싱"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_048",
+      "card-memorize-network_049",
+      "card-memorize-network_050",
+      "card-memorize-network_052"
+    ],
+    "tip": "스니핑='엿듣기(수동적)'이 핵심! 스푸핑(위장, 능동적)과 헷갈리지 마세요. 대응법으로 '암호화'를 답하면 됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_052",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "큐싱(Qshing)",
+    "definition": "큐싱(Qshing = QR코드 + Phishing)\nQR코드를 스캔하면 악성 앱 설치 페이지나 피싱 사이트로 이동하도록 유도하는 공격\n• 정상 QR코드 위에 악성 QR코드를 덮어씌우는 방식\n• 모바일 결제, 인증 등에서 악용\n• 대응법: 출처 불분명 QR코드 스캔 자제, QR코드 스캐너 보안 앱 사용\n• 비교: 피싱(이메일), 스미싱(SMS), 큐싱(QR)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_020",
+    "tags": [
+      "사회공학",
+      "피싱",
+      "파밍",
+      "스미싱"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_048",
+      "card-memorize-network_049",
+      "card-memorize-network_050",
+      "card-memorize-network_051"
+    ],
+    "tip": "큐싱='QR + Phishing'! 사회공학적 공격 4종(피싱/파밍/스미싱/큐싱)을 매체별로 구분하세요. 이메일=피싱, DNS=파밍, SMS=스미싱, QR=큐싱.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_053",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "웜(Worm)",
+    "definition": "웜(Worm)\n네트워크를 통해 스스로 복제·확산하는 악성코드\n• 숙주 파일 없이 독립적으로 실행 (바이러스와의 핵심 차이)\n• 네트워크 대역폭 소모, 시스템 자원 고갈\n• 자가 복제(Self-Replicating) 능력 보유\n• 대표 사례: SQL Slammer, Code Red, Nimda\n• 대응법: 네트워크 모니터링, 방화벽, 보안 패치\n• cf. 바이러스(숙주 필요), 트로이목마(자가복제 불가)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_021",
+    "tags": [
+      "악성코드",
+      "웜",
+      "랜섬웨어"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_054",
+      "card-memorize-network_055",
+      "card-memorize-network_056"
+    ],
+    "tip": "악성코드 3종 비교가 빈출! 웜=자가복제+숙주불필요, 바이러스=자가복제+숙주필요, 트로이목마=자가복제불가+위장. 이 구분이 시험 핵심입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_054",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "트로이목마(Trojan Horse)",
+    "definition": "트로이목마(Trojan Horse)\n정상 프로그램으로 위장하여 사용자가 직접 설치하도록 속이는 악성코드\n• 자기 복제 능력 없음 (웜, 바이러스와의 핵심 차이)\n• 백도어(Backdoor)를 설치하여 원격 제어 가능하게 함\n• 사용자 정보 탈취, 시스템 파괴 등 다양한 악성 행위 수행\n• 사용자가 직접 설치(실행)해야 동작\n• 대응법: 출처 불분명 프로그램 설치 금지, 백신 검사",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_021",
+    "tags": [
+      "악성코드",
+      "웜",
+      "랜섬웨어"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_053",
+      "card-memorize-network_055",
+      "card-memorize-network_056"
+    ],
+    "tip": "트로이목마='위장+자가복제 불가'가 핵심! 사용자가 직접 설치한다는 점과, 백도어 역할을 한다는 점을 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_055",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "랜섬웨어(Ransomware)",
+    "definition": "랜섬웨어(Ransomware = Ransom + Software)\n사용자의 파일이나 시스템을 암호화한 후 복호화 대가로 금전(랜섬)을 요구하는 악성코드\n• 감염 경로: 피싱 이메일, 악성 웹사이트, 취약점 악용\n• 대표 사례: WannaCry, Petya, GandCrab\n• 대응법: 주기적 백업, 보안 업데이트, 의심 파일 실행 금지\n• 암호화된 파일은 키 없이 복구 불가",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_021",
+    "tags": [
+      "악성코드",
+      "웜",
+      "랜섬웨어"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_053",
+      "card-memorize-network_054",
+      "card-memorize-network_056"
+    ],
+    "tip": "랜섬웨어는 '암호화 + 금전 요구'가 핵심! 최근 사이버 공격에서 가장 큰 피해를 주는 유형입니다. 예방법으로 '백업'이 가장 효과적입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_056",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "키로거(Keylogger)",
+    "definition": "키로거(Keylogger)\n사용자의 키보드 입력을 몰래 기록하여 민감 정보(ID, 비밀번호, 카드 번호 등)를 탈취하는 악성 프로그램\n• 소프트웨어형: 악성코드로 설치되어 백그라운드에서 동작\n• 하드웨어형: 키보드와 PC 사이에 물리적 장치 부착\n• 대응법: 가상 키보드 사용, 보안 프로그램 설치, 2단계 인증\n• 스니핑(네트워크 도청)과 구분: 키로거는 단말기(엔드포인트) 레벨",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_021",
+    "tags": [
+      "악성코드",
+      "웜",
+      "랜섬웨어"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_053",
+      "card-memorize-network_054",
+      "card-memorize-network_055"
+    ],
+    "tip": "키로거='키보드 입력 감시'! 스니핑(네트워크 패킷 도청)과 구분하세요. 키로거=단말기, 스니핑=네트워크 레벨의 도청입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_057",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "term": "- RIP",
+    "definition": "RIP(Routing Information Protocol)\nIGP(내부 게이트웨이 프로토콜)에 속하는 거리벡터(Distance-Vector) 라우팅 프로토콜\n• 홉 수(Hop Count)를 메트릭으로 사용 (최대 15홉, 16=무한대=도달 불가)\n• 30초마다 라우팅 테이블 전체를 이웃 라우터에 브로드캐스트\n• 벨만-포드(Bellman-Ford) 알고리즘 사용\n• 소규모 네트워크에 적합\n• 단점: 수렴 시간 느림, 라우팅 루프 발생 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_022",
+    "tags": [
+      "라우팅",
+      "RIP",
+      "OSPF",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_058",
+      "card-memorize-network_059",
+      "card-memorize-network_060"
+    ],
+    "tip": "RIP='거리벡터+홉수+최대15'가 세트! OSPF(링크상태+다익스트라+대규모)와 비교하여 출제됩니다. 홉 수 최대 15라는 수치를 외워두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_058",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "term": "- OSPF",
+    "definition": "OSPF(Open Shortest Path First)\nIGP에 속하는 링크상태(Link-State) 라우팅 프로토콜\n• 다익스트라(Dijkstra) 알고리즘으로 최단 경로 계산\n• 대규모 네트워크에 적합, 홉 수 제한 없음\n• 변경된 라우팅 정보만 전파 → RIP보다 효율적\n• Area 단위로 계층적 구성 가능\n• 수렴 시간이 빠르고 라우팅 루프 없음\n• 멀티캐스트(224.0.0.5/6)로 업데이트 전파",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_022",
+    "tags": [
+      "라우팅",
+      "RIP",
+      "OSPF",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_057",
+      "card-memorize-network_059",
+      "card-memorize-network_060"
+    ],
+    "tip": "OSPF='링크상태+다익스트라+대규모'가 세트! RIP(거리벡터+벨만포드+소규모)와 대비하여 암기하세요. '다익스트라'가 답으로 자주 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_059",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "term": "- EGP",
+    "definition": "EGP(Exterior Gateway Protocol, 외부 게이트웨이 프로토콜)\n서로 다른 자율시스템(AS) 간에 라우팅 정보를 교환하는 초기 프로토콜\n• AS(Autonomous System): 하나의 관리 기관이 관리하는 네트워크 집합\n• 현재는 BGP로 대체됨\n• IGP(내부): RIP, OSPF vs EGP(외부): EGP, BGP\n• 라우팅 프로토콜의 대분류: IGP와 EGP",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_022",
+    "tags": [
+      "라우팅",
+      "RIP",
+      "OSPF",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_057",
+      "card-memorize-network_058",
+      "card-memorize-network_060"
+    ],
+    "tip": "EGP는 '외부(AS 간) 라우팅'이라는 카테고리명이기도 합니다. 실질적으로 현재 사용되는 것은 BGP! IGP(내부) vs EGP(외부)의 분류를 먼저 이해하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_060",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "term": "- BGP",
+    "definition": "BGP(Border Gateway Protocol)\nAS(자율시스템) 간 라우팅 정보를 교환하는 외부 게이트웨이 프로토콜(EGP)\n• 경로벡터(Path-Vector) 알고리즘 사용\n• 현재 인터넷의 표준 라우팅 프로토콜 (인터넷 백본에서 사용)\n• TCP 179번 포트를 사용하여 신뢰성 있는 연결 기반\n• 정책 기반 라우팅 가능 (경로 선호도 설정)\n• eBGP(AS 간), iBGP(AS 내부)로 구분",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_022",
+    "tags": [
+      "라우팅",
+      "RIP",
+      "OSPF",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_057",
+      "card-memorize-network_058",
+      "card-memorize-network_059"
+    ],
+    "tip": "BGP='AS 간 라우팅의 현재 표준'이 핵심! 인터넷이 동작하는 핵심 프로토콜입니다. TCP 기반이라는 점이 다른 라우팅 프로토콜과의 차이입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_061",
+    "categoryId": "memorize-network",
+    "subcategory": "IP",
+    "term": "IPv6의 특징과 주소체계",
+    "definition": "IPv6 특징과 주소체계\n• 128비트 주소 체계 (IPv4는 32비트)\n• 16비트씩 8부분, 콜론(:)으로 구분하여 16진수 표기\n• 보안 기능: IPSec 기본 내장 (인증성, 기밀성, 데이터 무결성)\n• 주소체계 3가지:\n  - Unicast(유니캐스트): 1:1 통신\n  - Anycast(애니캐스트): 1:가장 가까운 1 통신\n  - Multicast(멀티캐스트): 1:N 통신\n• Broadcast 없음 → Multicast로 대체\n• 자동 주소 설정(Stateless Auto-configuration) 지원",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_023",
+    "tags": [
+      "IPv6",
+      "주소체계"
+    ],
+    "tip": "IPv6에 'Broadcast가 없다'는 것이 시험 단골! Anycast는 IPv6에서 새로 추가된 개념입니다. 'UAM(유니·애니·멀티)'으로 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_062",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "구문(Syntax)",
+    "definition": "프로토콜 3요소 - 구문(Syntax)\n데이터의 형식, 부호화, 신호 레벨 등 구조적 정의\n• '데이터를 어떤 형식으로 보낼 것인가'에 대한 정의\n• 데이터 구조, 필드 순서, 비트 배열 등을 규정\n• 예: HTTP 헤더 형식, 패킷 구조 정의\n• cf. 의미(Semantics)=해석 방법, 타이밍(Timing)=전송 시점/속도",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_024",
+    "tags": [
+      "프로토콜",
+      "3요소"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_063",
+      "card-memorize-network_064"
+    ],
+    "tip": "프로토콜 3요소(구문/의미/타이밍)는 빈출! 구문=형식(어떤 모양으로), 의미=해석(무슨 뜻으로), 타이밍=속도/순서(언제/얼마나 빨리).",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_063",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "의미(Semantics)",
+    "definition": "프로토콜 3요소 - 의미(Semantics)\n전송 제어, 오류 처리를 위한 제어 정보 해석\n• '데이터에 대한 해석과 처리 방법'을 정의\n• 어떤 제어 정보가 어떤 동작을 의미하는지 규정\n• 오류 제어, 동기화, 흐름 제어 등의 의미 해석\n• 예: ACK=수신 확인, SYN=연결 요청의 의미\n• cf. 구문(Syntax)=형식, 타이밍(Timing)=시간",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_024",
+    "tags": [
+      "프로토콜",
+      "3요소"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_062",
+      "card-memorize-network_064"
+    ],
+    "tip": "의미(Semantics)='해석과 처리 방법'이 키워드! 구문은 '형식', 의미는 '해석', 타이밍은 '순서/속도'로 각각의 키워드를 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_064",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "타이밍(Timing)",
+    "definition": "프로토콜 3요소 - 타이밍(Timing)\n통신 속도, 메시지 순서 등 시간적 조건 제어\n• '데이터를 언제, 얼마나 빨리 보낼 것인가'를 정의\n• 전송 속도 매칭, 순서 제어, 동기화\n• 송·수신 측의 속도 차이 조절\n• 예: 보율(Baud rate) 설정, 타임아웃 규정\n• cf. 구문(Syntax)=형식, 의미(Semantics)=해석",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_024",
+    "tags": [
+      "프로토콜",
+      "3요소"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_062",
+      "card-memorize-network_063"
+    ],
+    "tip": "타이밍(Timing)='언제, 얼마나 빨리'가 키워드! 속도와 순서 관련이면 타이밍, 형식 관련이면 구문, 해석 관련이면 의미입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_065",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크장비",
+    "term": "L2 스위치",
+    "definition": "L2 스위치(Layer 2 Switch)\nOSI 2계층(데이터링크)에서 동작하는 네트워크 장비\n• MAC 주소 기반으로 프레임을 전달\n• MAC 주소 테이블(CAM Table)을 학습하여 포트별 전달\n• 브리지의 발전형, 충돌 도메인을 포트 단위로 분리\n• VLAN(가상 LAN) 기능 지원\n• cf. L3(IP 기반), L4(포트 기반), L7(애플리케이션 기반)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_025",
+    "tags": [
+      "스위치",
+      "로드밸런싱",
+      "네트워크장비"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_066",
+      "card-memorize-network_067",
+      "card-memorize-network_068"
+    ],
+    "tip": "스위치 계층(L2/L3/L4/L7)별 기능을 비교하는 문제가 빈출! L2=MAC, L3=IP, L4=TCP/UDP 포트, L7=애플리케이션 콘텐츠 기반으로 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_066",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크장비",
+    "term": "L3 스위치",
+    "definition": "L3 스위치(Layer 3 Switch)\nOSI 3계층(네트워크)에서 동작하는 네트워크 장비\n• IP 주소 기반으로 패킷 라우팅 수행\n• 라우터 기능을 하드웨어로 구현하여 고속 처리\n• 서브넷 간 라우팅, VLAN 간 라우팅 가능\n• 라우터보다 빠르고, L2 스위치보다 기능이 많음\n• ACL(접근제어목록) 기반 보안 정책 적용 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_025",
+    "tags": [
+      "스위치",
+      "로드밸런싱",
+      "네트워크장비"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_065",
+      "card-memorize-network_067",
+      "card-memorize-network_068"
+    ],
+    "tip": "L3 스위치는 '라우터 기능을 가진 스위치'! 하드웨어 기반이라 소프트웨어 라우터보다 빠릅니다. VLAN 간 라우팅이 주요 용도입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_067",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크장비",
+    "term": "L4 스위치",
+    "definition": "L4 스위치(Layer 4 Switch)\nOSI 4계층(전송)에서 동작하는 네트워크 장비\n• TCP/UDP 포트 번호 기반으로 트래픽 분산 처리\n• 로드밸런싱(부하 분산)이 주요 기능\n• 서버 팜(Server Farm)의 트래픽을 여러 서버로 분배\n• 로드밸런싱 알고리즘: 라운드 로빈, 가중치, 최소 연결\n• cf. L7 스위치는 콘텐츠(URL, 쿠키 등) 기반으로 더 세밀한 분산",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_025",
+    "tags": [
+      "스위치",
+      "로드밸런싱",
+      "네트워크장비"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_065",
+      "card-memorize-network_066",
+      "card-memorize-network_068"
+    ],
+    "tip": "L4='포트 기반 로드밸런싱'이 핵심! L4 vs L7 스위치 비교: L4=IP+Port, L7=콘텐츠(URL, 쿠키). 서버 부하 분산 문제에서 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_068",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크장비",
+    "term": "L7 스위치",
+    "definition": "L7 스위치(Layer 7 Switch)\nOSI 7계층(응용)에서 동작하는 네트워크 장비\n• 애플리케이션 콘텐츠(URL, 쿠키, HTTP 헤더 등) 기반으로 세밀한 로드밸런싱\n• L4보다 정교한 트래픽 분산 가능\n• 콘텐츠 스위칭, URL 스위칭이라고도 함\n• 웹 서비스 최적화, 보안 정책 적용에 활용\n• WAF(웹방화벽) 기능 통합 가능\n• 예: 이미지 요청→이미지 서버, API 요청→API 서버로 분배",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-network_025",
+    "tags": [
+      "스위치",
+      "로드밸런싱",
+      "네트워크장비"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_065",
+      "card-memorize-network_066",
+      "card-memorize-network_067"
+    ],
+    "tip": "L7='콘텐츠 기반 로드밸런싱'! URL에 따라 다른 서버로 보내는 것이 대표적 예입니다. L4(포트 기반)보다 세밀한 분산이 가능합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_069",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI 7계층",
+    "term": "물리 - 데이터링크 - 네트워크 - 전송 - 세션 - 표현 - 응용",
+    "definition": "OSI 7계층 (아래에서 위):\n1. 물리(Physical): 비트 전송, 리피터/허브\n2. 데이터링크(Data Link): 프레임 전송, MAC 주소, 브리지/스위치\n3. 네트워크(Network): 패킷 라우팅, IP 주소, 라우터\n4. 전송(Transport): 세그먼트, TCP/UDP, 포트 번호\n5. 세션(Session): 연결 설정/해제, RPC\n6. 표현(Presentation): 데이터 변환, 암호화, JPEG/MPEG\n7. 응용(Application): 사용자 인터페이스, HTTP/FTP/DNS\n암기: 물데네전세표응",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_001",
+    "tags": [
+      "네트워크",
+      "OSI",
+      "7계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_091"
+    ],
+    "tip": "OSI 7계층은 거의 매회 출제! 각 계층의 PDU(비트→프레임→패킷→세그먼트), 장비(허브→스위치→라우터→게이트웨이), 프로토콜을 세트로 암기하세요.",
+    "mnemonic": "물데네전세표응"
+  },
+  {
+    "id": "card-memorize-network_070",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "SSH(Secure Shell)",
+    "definition": "SSH(Secure Shell)\n공개키 암호화 방식으로 원격 시스템에 안전하게 접속하는 프로토콜\n• 포트 번호: 22번\n• Telnet(23번 포트)을 대체하는 보안 프로토콜\n• 데이터를 암호화하여 전송 → 스니핑 방지\n• 상호 인증 + 데이터 암호화 + 무결성 보장\n• SCP, SFTP 등 파일 전송에도 활용\n• cf. Telnet은 평문 전송이라 보안에 취약",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_002",
+    "tags": [
+      "네트워크",
+      "SSH",
+      "프로토콜"
+    ],
+    "tip": "SSH=22번 포트, Telnet=23번 포트는 필수 암기! 'SSH가 Telnet의 보안 버전'이라는 관계가 시험에 자주 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_071",
+    "categoryId": "memorize-network",
+    "subcategory": "보안공격",
+    "term": "스캐어웨어(Scareware)",
+    "definition": "스캐어웨어(Scareware)\n사회공학적 기법을 활용하여 사용자를 겁주고(Scare) 금전을 요구하거나 악성코드를 설치하게 유도하는 공격\n• '바이러스에 감염되었습니다' 등 허위 경고 메시지 표시\n• 가짜 백신/보안 프로그램 구매를 유도\n• 불안감을 조성하여 사용자가 스스로 악성코드를 설치하게 만듦\n• 대응법: 허위 경고 무시, 정품 백신만 사용\n• cf. 랜섬웨어(실제 암호화), 스캐어웨어(허위 위협)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_003",
+    "tags": [
+      "보안",
+      "스캐어웨어",
+      "악성코드"
+    ],
+    "tip": "스캐어웨어='겁주기(Scare)+소프트웨어'! 랜섬웨어는 실제로 암호화하지만, 스캐어웨어는 허위 경고로 겁만 줍니다. 이 차이를 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_072",
+    "categoryId": "memorize-network",
+    "subcategory": "오류검출",
+    "term": "CRC",
+    "definition": "CRC(Cyclic Redundancy Check, 순환 중복 검사)\n다항식(생성 다항식)을 이용하여 데이터의 오류를 검출하는 방식\n• 연속된 비트 오류(Burst Error) 감지에 매우 효과적\n• 동작: 송신 측에서 CRC 코드를 계산하여 데이터에 추가 → 수신 측에서 검증\n• 오류 검출만 가능, 오류 정정은 불가 (정정은 해밍코드 등)\n• 이더넷, USB, 하드디스크 등에서 광범위하게 사용\n• cf. 패리티 비트(단순), 체크섬, 해밍코드(오류 정정 가능)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_005",
+    "tags": [
+      "네트워크",
+      "CRC",
+      "오류검출"
+    ],
+    "tip": "CRC='순환 중복 검사'로 '오류 검출'만 가능! 오류 '정정'까지 가능한 것은 해밍코드입니다. 이 구분이 시험에 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_073",
+    "categoryId": "memorize-network",
+    "subcategory": "OSI 7계층",
+    "term": "스위치, 브리지 / HDLC, MAC",
+    "definition": "OSI 각 계층별 장비와 프로토콜:\n1계층(물리): 케이블, 허브, 리피터\n2계층(데이터링크): 스위치, 브리지 / HDLC, PPP, MAC\n3계층(네트워크): 라우터 / IP, ICMP, ARP\n4계층(전송): 게이트웨이 / TCP, UDP\n5계층(세션): RPC, NetBIOS\n6계층(표현): JPEG, MPEG, SSL/TLS\n7계층(응용): HTTP, FTP, DNS, SMTP, SSH\n장비: 허브(L1)→스위치(L2)→라우터(L3)→게이트웨이(L4~L7)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_006",
+    "tags": [
+      "네트워크",
+      "OSI",
+      "데이터링크",
+      "프로토콜"
+    ],
+    "tip": "계층별 장비·프로토콜 매칭이 빈출! 허브=1계층, 스위치=2계층, 라우터=3계층, 게이트웨이=4~7계층. 이 매핑을 반드시 외우세요.",
+    "mnemonic": "물데네전세표응"
+  },
+  {
+    "id": "card-memorize-network_074",
+    "categoryId": "memorize-network",
+    "subcategory": "TCP/IP",
+    "term": "IP, ICMP, IGMP, ARP, RARP",
+    "definition": "TCP/IP 4계층 구조:\n1. 응용 계층(Application): HTTP, FTP, SMTP, DNS, SNMP, Telnet, SSH\n   → OSI 5·6·7계층에 대응\n2. 전송 계층(Transport): TCP, UDP, RTCP\n   → OSI 4계층에 대응\n3. 인터넷 계층(Internet): IP, ICMP, IGMP, ARP, RARP\n   → OSI 3계층에 대응\n4. 네트워크 액세스 계층(Network Access): Ethernet, IEEE 802, HDLC\n   → OSI 1·2계층에 대응",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_007",
+    "tags": [
+      "네트워크",
+      "TCP/IP",
+      "인터넷계층"
+    ],
+    "tip": "TCP/IP 4계층과 OSI 7계층의 매핑 관계가 자주 출제! 특히 인터넷 계층의 5개 프로토콜(IP, ICMP, IGMP, ARP, RARP)을 모두 열거할 수 있어야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_075",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "UDP는 3-way-handshake를 사용하여 연결을 설정한다.",
+    "definition": "TCP vs UDP 비교:\n• TCP: 연결형, 가상회선 방식, 1:1 통신, 신뢰성 높음, 3-Way Handshake 사용\n  - 순서 보장, 흐름/혼잡 제어, 전이중(Full-Duplex)\n• UDP: 비연결형, 데이터그램 방식, 1:N/N:N 통신, 신뢰성 낮음\n  - 순서 미보장, 제어 없음, 빠른 전송 속도\n• 3-Way Handshake는 TCP에서만 사용 (UDP는 연결 설정 없음)\n• TCP: HTTP, FTP, SMTP / UDP: DNS, SNMP, 스트리밍",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_008",
+    "tags": [
+      "네트워크",
+      "TCP",
+      "UDP",
+      "프로토콜"
+    ],
+    "tip": "'UDP는 3-Way Handshake를 사용한다'는 틀린 보기로 자주 출제! UDP는 비연결형이므로 연결 설정 과정이 없습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_076",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "ICMP, IGMP",
+    "definition": "ICMP(Internet Control Message Protocol)\nIP 통신 중 발생하는 오류 메시지를 전달하는 프로토콜\n• Ping, Traceroute 등에 사용\n• 오류 보고 및 네트워크 상태 진단 목적\n\nIGMP(Internet Group Management Protocol)\n멀티캐스트 그룹의 가입/탈퇴를 관리하는 프로토콜\n• 호스트와 라우터 간 멀티캐스트 그룹 멤버십 관리\n\n• 두 프로토콜 모두 TCP/IP 인터넷 계층에 속함\n• ICMP는 Ping of Death, Smurf 공격에 악용되기도 함",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_010",
+    "tags": [
+      "네트워크",
+      "ICMP",
+      "IGMP",
+      "프로토콜"
+    ],
+    "tip": "ICMP='오류 메시지/Ping', IGMP='멀티캐스트 그룹 관리'로 구분! 두 프로토콜 모두 인터넷 계층(OSI 3계층)에 속합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_077",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크",
+    "term": "서브넷마스크(Subnet Mask)",
+    "definition": "서브넷마스크(Subnet Mask)\nIP 주소에서 네트워크 부분과 호스트 부분을 구분하는 32비트 값\n• 네트워크 부분=1, 호스트 부분=0으로 표현\n• 예: 255.255.255.0 → 상위 24비트 네트워크, 하위 8비트 호스트\n• 서브네팅(Subnetting): 하나의 네트워크를 여러 서브넷으로 분할\n• CIDR 표기법: /24 = 255.255.255.0\n• 호스트 수 계산: 2^(호스트비트수) - 2 (네트워크 주소, 브로드캐스트 제외)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_011",
+    "tags": [
+      "네트워크",
+      "서브넷마스크",
+      "서브네팅",
+      "IP"
+    ],
+    "tip": "서브넷마스크 계산 문제가 실기에 나옵니다! /24면 호스트 8비트 → 2^8-2=254대. /25면 호스트 7비트 → 2^7-2=126대. 계산 연습을 해두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_078",
+    "categoryId": "memorize-network",
+    "subcategory": "IPv6",
+    "term": "주소 체계는 Unicast, Broadcast, Multicast로 구성된다.",
+    "definition": "IPv6 특징:\n• 128비트 주소 체계 (IPv4=32비트)\n• 인증성, 기밀성, 데이터 무결성 지원 (IPSec 기본 내장)\n• 주소 체계: Unicast(1:1), Anycast(1:가장 가까운 1), Multicast(1:N)\n• IPv6에는 Broadcast가 없음 → Multicast로 대체\n• 자동 주소 설정(Stateless Auto-configuration) 지원\n• 이동성(Mobility) 지원 향상\n• 헤더 단순화로 처리 효율 향상",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_012",
+    "tags": [
+      "네트워크",
+      "IPv6",
+      "기출"
+    ],
+    "tip": "'IPv6에 Broadcast가 있다'는 대표적 오답 보기! Anycast는 IPv6에서 새로 도입된 개념으로, 가장 가까운 노드 1개에 전달됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_079",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "DNS(Domain Name System)",
+    "definition": "DNS(Domain Name System)\n도메인 네임(www.example.com)을 IP 주소(93.184.216.34)로 변환하는 시스템\n• 응용 계층 프로토콜, UDP 53번 포트 사용 (대용량은 TCP 53번)\n• 계층적 구조: 루트 DNS→최상위 도메인(TLD)→권한 DNS 서버\n• 정방향 조회: 도메인→IP / 역방향 조회: IP→도메인\n• DNS 캐시 포이즈닝: DNS 응답을 위조하는 공격 (파밍과 연관)\n• nslookup, dig 명령어로 조회 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_013",
+    "tags": [
+      "네트워크",
+      "DNS",
+      "프로토콜"
+    ],
+    "tip": "DNS='도메인→IP 변환'이 기본! UDP 53번 포트를 사용한다는 점, 파밍 공격이 DNS를 악용한다는 점을 함께 기억하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_080",
+    "categoryId": "memorize-network",
+    "subcategory": "라우팅",
+    "term": "OSPF(Open Shortest Path First)",
+    "definition": "라우팅 프로토콜 분류:\n• IGP(내부 게이트웨이 프로토콜):\n  - RIP: 거리벡터 알고리즘, 홉 수(최대 15) 기반, 소규모 네트워크\n  - OSPF: 링크상태 알고리즘, 다익스트라 기반, 대규모 네트워크\n• EGP(외부 게이트웨이 프로토콜):\n  - EGP: 초기 외부 라우팅 프로토콜 (현재 미사용)\n  - BGP: 경로벡터 알고리즘, 현재 인터넷 표준\n• 정적 라우팅: 관리자가 수동 설정\n• 동적 라우팅: 프로토콜이 자동으로 경로 갱신",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_015",
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "OSPF",
+      "RIP",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_092",
+      "card-memorize-network_093",
+      "card-memorize-network_094"
+    ],
+    "tip": "IGP(내부)와 EGP(외부) 분류 후, 각 프로토콜의 알고리즘을 암기! RIP=거리벡터/벨만포드, OSPF=링크상태/다익스트라, BGP=경로벡터.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_081",
+    "categoryId": "memorize-network",
+    "subcategory": "프로토콜",
+    "term": "구문(Syntax), 의미(Semantics), 타이밍(Timing)",
+    "definition": "프로토콜의 기본 3요소:\n1. 구문(Syntax): 데이터의 형식, 부호화, 신호 레벨 등 구조적 정의\n   → '어떤 형식으로 보낼 것인가'\n2. 의미(Semantics): 제어 정보, 오류 처리 등 의미 해석\n   → '무슨 뜻으로 해석할 것인가'\n3. 타이밍(Timing): 전송 속도, 순서 등 시간적 조건\n   → '언제, 얼마나 빨리 보낼 것인가'\n프로토콜: 통신 규약으로, 서로 다른 시스템 간 데이터 교환을 위한 표준화된 규칙",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_016",
+    "tags": [
+      "네트워크",
+      "프로토콜",
+      "3요소"
+    ],
+    "tip": "프로토콜 3요소는 '구의타(구문/의미/타이밍)'로 외우세요! 각 요소의 한 줄 설명을 쓸 수 있어야 합니다. 빈칸 채우기로 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_082",
+    "categoryId": "memorize-network",
+    "subcategory": "데이터베이스",
+    "term": "대체키(Alternate Key)",
+    "definition": "키의 종류:\n• 슈퍼키(Super Key): 유일성을 만족하는 속성 집합 (최소성 불필요)\n• 후보키(Candidate Key): 유일성 + 최소성을 만족하는 키\n• 기본키(Primary Key): 후보키 중 선택된 대표 키 (NULL 불가)\n• 대체키(Alternate Key): 후보키 중 기본키가 아닌 키\n• 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하는 키\n슈퍼키 ⊃ 후보키 ⊃ 기본키 + 대체키",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_017",
+    "tags": [
+      "데이터베이스",
+      "키",
+      "기본키",
+      "대체키"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_095",
+      "card-memorize-network_096",
+      "card-memorize-network_097"
+    ],
+    "tip": "키의 포함 관계(슈퍼키⊃후보키⊃기본키)를 이해하면 쉽습니다. 대체키='기본키로 선택되지 않은 후보키'가 정의의 핵심!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_083",
+    "categoryId": "memorize-network",
+    "subcategory": "네트워크",
+    "term": "가상회선 방식, 데이터그램 방식",
+    "definition": "교환 회선 방식 분류:\n1. 회선교환(Circuit Switching): 통신 전 전용 경로 설정, 실시간 통신\n2. 축적교환(Store-and-Forward):\n   • 메시지 교환: 메시지 단위로 저장 후 전달 (크기 제한 없음)\n   • 패킷 교환:\n     - 가상회선(Virtual Circuit): 논리적 경로를 미리 설정 후 패킷 전송 → 순서 보장\n     - 데이터그램(Datagram): 각 패킷이 독립적으로 경로 선택 → 순서 미보장\n• TCP=가상회선, UDP=데이터그램에 대응",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_018",
+    "tags": [
+      "네트워크",
+      "교환방식",
+      "패킷교환",
+      "가상회선",
+      "데이터그램"
+    ],
+    "tip": "가상회선 vs 데이터그램 비교가 빈출! 가상회선=경로 설정+순서 보장(TCP), 데이터그램=독립 전송+순서 미보장(UDP)로 연결하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_084",
+    "categoryId": "memorize-network",
+    "subcategory": "보안",
+    "term": "효율성(Efficiency)",
+    "definition": "정보보안 5대 요소:\n1. 기밀성(Confidentiality): 인가된 사용자만 정보에 접근 → 암호화\n2. 무결성(Integrity): 정보가 불법적으로 변경되지 않음 → 해시, 전자서명\n3. 가용성(Availability): 인가된 사용자가 필요할 때 접근 가능 → 이중화\n4. 인증(Authentication): 사용자 신원 확인 → ID/PW, 생체인식\n5. 부인방지(Non-Repudiation): 송수신 사실을 부인할 수 없음 → 전자서명\n기본 3요소: CIA(기밀성, 무결성, 가용성)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_019",
+    "tags": [
+      "보안",
+      "기밀성",
+      "무결성",
+      "가용성",
+      "인증",
+      "부인방지"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_098"
+    ],
+    "tip": "기본 CIA 3요소에 인증+부인방지를 더하면 5대 요소! '기무가인부'로 외우세요. 각 요소에 대한 구현 기술도 함께 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_085",
+    "categoryId": "memorize-network",
+    "subcategory": "암호화",
+    "term": "해시(Hash) 함수",
+    "definition": "암호 알고리즘 분류:\n1. 단방향(해시): SHA, MD5, N-NASH, SNEFRU\n   • 복호화 불가, 무결성 검증·비밀번호 저장에 사용\n2. 양방향:\n   • 대칭키(비밀키): SEED, ARIA, DES, AES, IDEA\n     → 암·복호화 키 동일, 속도 빠름\n   • 비대칭키(공개키): RSA, ECC, ElGamal, DSA\n     → 암·복호화 키 다름(공개키/개인키), 키분배 용이\n\n단방향: 해시 → 암호화만 가능\n양방향: 대칭키/비대칭키 → 암·복호화 모두 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_020",
+    "tags": [
+      "보안",
+      "암호화",
+      "해시",
+      "SHA",
+      "MD5"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_099"
+    ],
+    "tip": "암호 알고리즘 분류 트리(단방향→해시 / 양방향→대칭키+비대칭키)를 그림으로 외우세요. 각 분류의 대표 알고리즘을 3개 이상 열거할 수 있어야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_086",
+    "categoryId": "memorize-network",
+    "subcategory": "암호화",
+    "term": "AES는 2001년 NIST에서 DES를 대체하기 위해 개발되었다.",
+    "definition": "양방향 암호화 알고리즘 (전체 기출):\n• SEED: 한국 KISA 개발, 128비트 블록 암호, 국내 전자상거래 표준\n• ARIA: 국정원/산학연 개발, 경량 환경용, 128/192/256비트 키\n• DES: 1975년 NBS 개발, 56비트 키, 현재 보안 취약 → AES로 대체\n• AES: 2001년 NIST 개발, DES 대체, 128/192/256비트 키, 현재 표준\n• RSA: 1978년 MIT 개발, 소인수분해 기반, 대표적 공개키(비대칭키) 알고리즘\n• 대칭키: SEED, ARIA, DES, AES / 비대칭키: RSA",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_021",
+    "tags": [
+      "보안",
+      "암호화",
+      "AES",
+      "DES",
+      "RSA",
+      "SEED",
+      "ARIA",
+      "기출"
+    ],
+    "tip": "각 알고리즘의 개발 기관과 키 길이가 시험에 나옵니다! SEED=KISA, ARIA=국정원, DES=NBS(56비트), AES=NIST(128/192/256비트), RSA=MIT.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_087",
+    "categoryId": "memorize-network",
+    "subcategory": "보안공격",
+    "term": "제로데이 공격(Zero-Day Attack)",
+    "definition": "주요 공격 기법:\n• 제로데이 공격(Zero-Day Attack): 취약점 발견 후 패치가 나오기 전 공격 (대응 시간 0일)\n  - 알려지지 않은 취약점을 이용하므로 방어가 매우 어려움\n• 무차별 대입(Brute-Force Attack): 가능한 모든 조합을 시도하여 비밀번호 해독\n  - 대응법: 계정 잠금, 복잡한 비밀번호, CAPTCHA\n• APT(Advanced Persistent Threat): 특정 대상에 장기간 지속적이고 지능적으로 해킹\n  - 기업·기관 타겟, 정찰→침투→확산→유출 단계",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_025",
+    "tags": [
+      "보안",
+      "제로데이",
+      "공격"
+    ],
+    "tip": "제로데이='패치 전 공격(0일)'이 핵심 키워드! APT는 '지능형 지속 위협'으로 장기간 은밀한 공격이라는 점이 차이입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_088",
+    "categoryId": "memorize-network",
+    "subcategory": "보안공격",
+    "term": "CSRF(Cross-Site Request Forgery)",
+    "definition": "주요 보안 공격 기법:\n• CSRF(Cross-Site Request Forgery): 인증된 사용자의 권한으로 위조된 요청을 서버에 전송\n  - 사용자 의지와 무관하게 공격자가 의도한 행위 수행\n  - 대응법: CSRF 토큰, Referer 검증, SameSite 쿠키\n• 스피어 피싱(Spear Phishing): 특정 대상을 겨냥한 맞춤형 피싱 공격\n• 백도어(Backdoor): 시스템에 몰래 설치된 비인가 접근 통로\n• Rainbow Table Attack: 미리 계산된 해시값 테이블로 비밀번호 역추적\n  - 대응법: Salt(솔트) 적용",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_026",
+    "tags": [
+      "보안",
+      "CSRF",
+      "웹보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_100",
+      "card-memorize-network_101"
+    ],
+    "tip": "CSRF와 XSS를 구분하세요! CSRF=사용자의 인증된 세션을 악용(서버 대상), XSS=스크립트 삽입(클라이언트 대상). Rainbow Table 대응은 'Salt'!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_089",
+    "categoryId": "memorize-network",
+    "subcategory": "보안솔루션",
+    "term": "IDS, IPS",
+    "definition": "보안 솔루션 유형:\n• 방화벽(Firewall): 네트워크 접근 제어 (패킷 필터링, L3/L4)\n• WAF(웹방화벽): 웹 애플리케이션 보호 (SQL Injection, XSS 차단, L7)\n• IDS(Intrusion Detection System): 침입 탐지 시스템 (탐지만, 수동적)\n• IPS(Intrusion Prevention System): 침입 방지 시스템 (탐지+차단, 능동적)\n• DMZ: 외부-내부 네트워크 사이 완충 영역\n• NAC: 네트워크 접근 제어 (단말 보안 상태 검증)\n• DLP: 데이터 유출 방지\n• VPN: 가상 사설 네트워크 (터널링+암호화)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_028",
+    "tags": [
+      "보안",
+      "IDS",
+      "IPS",
+      "방화벽",
+      "보안솔루션"
+    ],
+    "tip": "보안 솔루션 전체를 한눈에 비교할 수 있어야 합니다! 특히 IDS(탐지)와 IPS(탐지+차단)의 차이, 방화벽(L3/4)과 WAF(L7)의 차이가 빈출.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_090",
+    "categoryId": "memorize-network",
+    "subcategory": "인증",
+    "term": "공인인증서, OTP, 보안카드",
+    "definition": "사용자 인증 기법 3가지:\n1. 지식 기반(Something you know): ID/PW, PIN 등 사용자가 알고 있는 정보\n2. 소유 기반(Something you have): 공인인증서, OTP, 보안카드, 스마트카드 등 물리적 소유물\n3. 생체 기반(Something you are): 지문, 홍채, 얼굴, 정맥 등 고유한 생체 정보\n\n• 2단계 인증(2FA): 위 3가지 중 2가지 이상 결합 (예: PW + OTP)\n• 다중 인증(MFA): 2가지 이상의 인증 방식 결합\n• 생체 인증은 FAR(오수락률)과 FRR(오거부률)로 성능 평가",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_029",
+    "tags": [
+      "보안",
+      "인증",
+      "소유기반",
+      "지식기반",
+      "생체기반"
+    ],
+    "tip": "'지식/소유/생체' 3가지 인증 유형 분류가 빈출! 각 예시를 2~3개씩 쓸 수 있어야 합니다. 생체인증의 FAR/FRR 개념도 함께 암기하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_091",
+    "categoryId": "theory-network",
+    "subcategory": "OSI 7계층",
+    "term": "물리-데이터링크-네트워크-전송-세션-표현-응용",
+    "definition": "OSI 7계층을 물리 계층부터 순서대로:\n1. 물리(Physical) - 비트 전송\n2. 데이터링크(Data Link) - 프레임, MAC 주소\n3. 네트워크(Network) - 패킷, IP 주소, 라우팅\n4. 전송(Transport) - 세그먼트, TCP/UDP, 포트 번호\n5. 세션(Session) - 연결 설정/유지/해제\n6. 표현(Presentation) - 데이터 변환, 암호화\n7. 응용(Application) - 사용자 인터페이스\n암기: 물데네전세표응",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_001",
+    "tags": [
+      "네트워크",
+      "OSI",
+      "7계층"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_069"
+    ],
+    "tip": "'물데네전세표응'은 정보처리기사 필수 암기! 각 계층의 PDU와 대표 장비/프로토콜을 세트로 외워야 서술형에 대비할 수 있습니다.",
+    "mnemonic": "물데네전세표응"
+  },
+  {
+    "id": "card-memorize-network_092",
+    "categoryId": "theory-network",
+    "subcategory": "라우팅",
+    "term": "RIP",
+    "definition": "RIP(Routing Information Protocol)\nIGP(내부 게이트웨이 프로토콜)의 거리벡터 라우팅 프로토콜\n• 홉 수(Hop Count)를 메트릭으로 사용 (최대 15홉)\n• 30초 주기로 라우팅 테이블 전체 브로드캐스트\n• 벨만-포드(Bellman-Ford) 알고리즘 사용\n• 소규모 네트워크에 적합\n• 단점: 수렴 시간 느림, 대규모 네트워크 부적합\n• cf. OSPF=링크상태+다익스트라+대규모",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_015",
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "OSPF",
+      "RIP",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_080",
+      "card-memorize-network_093",
+      "card-memorize-network_094"
+    ],
+    "tip": "RIP vs OSPF 비교가 가장 빈출! RIP=거리벡터/벨만포드/홉15/소규모, OSPF=링크상태/다익스트라/대규모. 이 대비를 표로 정리해 외우세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_093",
+    "categoryId": "theory-network",
+    "subcategory": "라우팅",
+    "term": "BGP",
+    "definition": "BGP(Border Gateway Protocol)\nEGP(외부 게이트웨이 프로토콜)의 경로벡터 라우팅 프로토콜\n• AS(자율시스템) 간 라우팅 정보 교환에 사용\n• 현재 인터넷의 표준 라우팅 프로토콜\n• TCP 179번 포트 사용 (신뢰성 있는 연결 기반)\n• 정책 기반 라우팅 가능\n• eBGP(AS 간 연결), iBGP(AS 내부 연결)\n• cf. RIP/OSPF는 IGP(내부), BGP는 EGP(외부)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_015",
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "OSPF",
+      "RIP",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_080",
+      "card-memorize-network_092",
+      "card-memorize-network_094"
+    ],
+    "tip": "BGP='AS 간(외부) 라우팅의 현재 표준'! RIP/OSPF와 BGP를 IGP vs EGP로 분류하는 것이 첫 번째 단계입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_094",
+    "categoryId": "theory-network",
+    "subcategory": "라우팅",
+    "term": "EGP",
+    "definition": "EGP(Exterior Gateway Protocol)\n서로 다른 자율시스템(AS) 간 라우팅 정보를 교환하는 초기 외부 라우팅 프로토콜\n• AS(Autonomous System) 간 경로 정보 교환 담당\n• 현재는 BGP(Border Gateway Protocol)로 완전히 대체\n• 라우팅 프로토콜 분류상 EGP는 '외부 게이트웨이 프로토콜' 카테고리명이기도 함\n• cf. IGP(내부): RIP, OSPF / EGP(외부): EGP(프로토콜), BGP",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_015",
+    "tags": [
+      "네트워크",
+      "라우팅",
+      "OSPF",
+      "RIP",
+      "BGP"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_080",
+      "card-memorize-network_092",
+      "card-memorize-network_093"
+    ],
+    "tip": "EGP는 프로토콜 이름이자 카테고리명! 시험에서 '외부 게이트웨이 프로토콜에 속하는 것은?'이라고 물으면 BGP를 답하세요 (현재 표준).",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_095",
+    "categoryId": "theory-network",
+    "subcategory": "데이터베이스",
+    "term": "외래키",
+    "definition": "외래키(Foreign Key, FK)\n다른 릴레이션(테이블)의 기본키를 참조하는 속성 또는 속성 집합\n• 릴레이션 간 관계(참조 무결성)를 표현\n• 참조되는 릴레이션의 기본키 값이거나 NULL이어야 함\n• 자기 자신의 기본키를 참조할 수도 있음(자기 참조)\n• 참조 무결성 제약조건의 핵심\n• cf. 기본키(대표키, NULL 불가), 후보키(유일+최소), 대체키(기본키 아닌 후보키)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_017",
+    "tags": [
+      "데이터베이스",
+      "키",
+      "기본키",
+      "대체키"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_082",
+      "card-memorize-network_096",
+      "card-memorize-network_097"
+    ],
+    "tip": "외래키='다른 테이블의 기본키를 참조'가 정의의 핵심! 참조 무결성과 연계하여 출제됩니다. NULL은 허용되지만, 참조 릴레이션에 없는 값은 불가.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_096",
+    "categoryId": "theory-network",
+    "subcategory": "데이터베이스",
+    "term": "슈퍼키",
+    "definition": "슈퍼키(Super Key)\n유일성(Uniqueness)을 만족하는 속성 또는 속성들의 집합\n• 릴레이션 내에서 각 튜플을 고유하게 식별할 수 있는 속성 조합\n• 최소성은 만족하지 않아도 됨 (불필요한 속성 포함 가능)\n• 예: {학번}, {학번, 이름}, {학번, 이름, 전화번호} 모두 슈퍼키\n• 키의 포함 관계: 슈퍼키 ⊃ 후보키 ⊃ 기본키\n• cf. 후보키는 유일성 + 최소성을 모두 만족",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_017",
+    "tags": [
+      "데이터베이스",
+      "키",
+      "기본키",
+      "대체키"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_082",
+      "card-memorize-network_095",
+      "card-memorize-network_097"
+    ],
+    "tip": "슈퍼키='유일성만 만족'(최소성 불필요)! 후보키='유일성+최소성'. 이 차이가 시험 포인트입니다. 슈퍼키에서 불필요한 속성을 제거하면 후보키!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_097",
+    "categoryId": "theory-network",
+    "subcategory": "데이터베이스",
+    "term": "후보키",
+    "definition": "후보키(Candidate Key)\n유일성(Uniqueness)과 최소성(Minimality)을 모두 만족하는 속성 또는 속성 집합\n• 릴레이션 내에서 각 튜플을 고유하게 식별하는 최소한의 속성 조합\n• 후보키 중 하나가 기본키(Primary Key)로 선택됨\n• 나머지 후보키는 대체키(Alternate Key)가 됨\n• 하나의 릴레이션에 여러 후보키가 존재 가능\n• 예: 학생 테이블에서 {학번}과 {주민번호}가 모두 후보키",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_017",
+    "tags": [
+      "데이터베이스",
+      "키",
+      "기본키",
+      "대체키"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_082",
+      "card-memorize-network_095",
+      "card-memorize-network_096"
+    ],
+    "tip": "후보키='유일성+최소성'이 핵심 정의! 기본키와 대체키의 상위 개념입니다. '후보키 중 선택된 것=기본키, 나머지=대체키'로 정리하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_098",
+    "categoryId": "theory-network",
+    "subcategory": "보안",
+    "term": "부인방지",
+    "definition": "부인방지(Non-Repudiation)\n정보의 송신자 또는 수신자가 송수신 사실을 부인(거부)할 수 없도록 보장하는 보안 서비스\n• 전자서명(Digital Signature)으로 구현\n• 발신 부인방지: 송신자가 전송 사실을 부인할 수 없음\n• 수신 부인방지: 수신자가 수신 사실을 부인할 수 없음\n• 전자상거래, 전자계약 등에서 필수적\n• 정보보안 5대 요소 중 하나 (기밀성, 무결성, 가용성, 인증, 부인방지)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_019",
+    "tags": [
+      "보안",
+      "기밀성",
+      "무결성",
+      "가용성",
+      "인증",
+      "부인방지"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_084"
+    ],
+    "tip": "부인방지='전자서명'으로 구현! '송수신 사실을 부인할 수 없음'이 정의의 핵심입니다. CIA + 인증 + 부인방지 = 5대 보안 요소.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_099",
+    "categoryId": "theory-network",
+    "subcategory": "암호화",
+    "term": "해시(Hash) 함수 - SHA, MD5 등",
+    "definition": "해시(Hash) 함수 - 단방향 암호화\n임의 길이의 입력을 고정 길이의 출력(해시값)으로 변환하는 일방향 함수\n• 복호화 불가능 (단방향)\n• 대표 알고리즘: SHA-256(256비트), MD5(128비트), N-NASH, SNEFRU\n• 특성: 눈사태 효과(입력 변화에 출력 크게 변함), 충돌 저항성\n• 용도: 비밀번호 저장, 무결성 검증, 전자서명\n• MD5는 현재 보안 취약, SHA-256 이상 권장",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_020",
+    "tags": [
+      "보안",
+      "암호화",
+      "해시",
+      "SHA",
+      "MD5"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_085"
+    ],
+    "tip": "해시 함수는 '복호화 불가(단방향)'가 핵심! 대칭키/비대칭키는 양방향(복호화 가능). 이 분류가 시험에서 가장 많이 물어보는 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_100",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "term": "스피어 피싱",
+    "definition": "스피어 피싱(Spear Phishing)\n불특정 다수가 아닌 특정 개인이나 조직을 겨냥한 맞춤형 피싱 공격\n• 대상의 개인정보, 업무 내용 등을 사전 조사하여 정교한 공격 수행\n• 신뢰할 수 있는 발신자(동료, 거래처 등)로 위장\n• 일반 피싱보다 성공률이 높고 피해 규모가 큼\n• APT 공격의 초기 단계로 활용되기도 함\n• 대응법: 보안 인식 교육, 의심 이메일 검증, 이중 인증",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_026",
+    "tags": [
+      "보안",
+      "CSRF",
+      "웹보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_088",
+      "card-memorize-network_101"
+    ],
+    "tip": "스피어 피싱='특정 대상 맞춤형 피싱'! 일반 피싱(불특정 다수)과의 차이를 명확히 하세요. APT 공격과 연계하여 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_101",
+    "categoryId": "theory-network",
+    "subcategory": "보안공격",
+    "term": "Rainbow Table Attack",
+    "definition": "Rainbow Table Attack (레인보우 테이블 공격)\n미리 계산된 해시값 테이블(Rainbow Table)을 이용하여 비밀번호를 역추적하는 공격\n• 가능한 비밀번호의 해시값을 미리 계산하여 저장\n• 탈취한 해시값과 테이블을 대조하여 원래 비밀번호를 찾아냄\n• Brute-Force보다 빠름 (사전 계산된 테이블 활용)\n• 대응법: Salt(솔트) - 비밀번호에 랜덤 값을 추가하여 해시\n• Salt 적용 시 같은 비밀번호도 다른 해시값 생성",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_026",
+    "tags": [
+      "보안",
+      "CSRF",
+      "웹보안"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_088",
+      "card-memorize-network_100"
+    ],
+    "tip": "Rainbow Table 대응='Salt(솔트)'가 정답 키워드! Salt는 비밀번호에 랜덤 문자열을 추가하여 같은 비밀번호도 다른 해시값을 만듭니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_102",
+    "categoryId": "theory-network",
+    "subcategory": "악성코드",
+    "term": "트로이 목마(Trojan Horse)",
+    "definition": "트로이 목마(Trojan Horse)\n정상 프로그램으로 위장하여 사용자가 직접 설치하도록 속이는 악성코드\n• 자가 복제 불가 (웜, 바이러스와의 핵심 차이)\n• 사용자가 직접 설치(실행)해야 동작\n• 백도어(Backdoor) 역할을 수행하여 원격 제어 가능\n• 악성코드 비교:\n  - 웜: 자가복제 O, 숙주 불필요, 네트워크 전파\n  - 바이러스: 자가복제 O, 숙주 필요, 파일에 기생\n  - 트로이목마: 자가복제 X, 위장, 백도어",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_027",
+    "tags": [
+      "보안",
+      "웜",
+      "트로이목마",
+      "악성코드"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_103"
+    ],
+    "tip": "악성코드 3종 비교는 필수 암기! 웜=자가복제+독립, 바이러스=자가복제+숙주, 트로이목마=위장+자가복제X. 이 표를 그릴 수 있어야 합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-network_103",
+    "categoryId": "theory-network",
+    "subcategory": "악성코드",
+    "term": "바이러스(Virus)",
+    "definition": "바이러스(Virus)\n다른 프로그램(숙주 파일)에 기생하여 자가 복제로 전파되는 악성코드\n• 자가 복제 가능하지만, 반드시 숙주 파일이 필요 (웜과의 차이)\n• 숙주 프로그램이 실행될 때 함께 동작\n• 파일 감염, 부트 섹터 감염, 매크로 감염 등 유형 다양\n• 대응법: 백신(안티바이러스) 프로그램, 보안 업데이트\n• cf. 웜(숙주 불필요, 네트워크 전파), 트로이목마(자가복제 불가)",
+    "source": "theory",
+    "sourceQuestionId": "theory-network_027",
+    "tags": [
+      "보안",
+      "웜",
+      "트로이목마",
+      "악성코드"
+    ],
+    "relatedTerms": [
+      "card-memorize-network_102"
+    ],
+    "tip": "바이러스='숙주(파일)에 기생+자가복제'가 핵심! 웜은 독립적으로 실행되지만, 바이러스는 숙주가 실행되어야 동작합니다.",
+    "mnemonic": "암기 TIP"
+  }
+]

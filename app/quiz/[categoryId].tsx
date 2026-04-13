@@ -1,9 +1,9 @@
 /**
  * 퀴즈(문제 풀이) 화면
- * 문제 표시 + 선택지 + 해설
+ * memorize 카테고리 → 카드형 암기, 그 외 → 문제 풀이
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -12,10 +12,12 @@ import {
   StyleSheet,
   ScrollView,
   TextInput,
+  Modal,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import questionImages from '@/assets/images/questions';
 import {
   useQuizStore,
@@ -24,7 +26,14 @@ import {
   useIsQuizComplete,
 } from '@/store/useQuizStore';
 import { useUserStore } from '@/store/useUserStore';
+import { useFlashcardStore } from '@/store/useFlashcardStore';
 import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from '@/features/questions/services/questionService';
+import {
+  loadFlashcards,
+  shuffleCards,
+  isMemorizeCategory,
+} from '@/features/flashcards/services/flashcardService';
+import FlashCardDeck from '@/components/FlashCardDeck';
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
 import { detectAnswerType } from '@/features/questions/services/gradingService';
@@ -40,6 +49,178 @@ export default function QuizScreen() {
   const router = useRouter();
   const category = getCategoryById(categoryId as CategoryId);
   const { showAd } = useInterstitialAd();
+
+  // ─── memorize 카테고리 → 카드형 암기 UI ───
+  const isCardMode = isMemorizeCategory(categoryId || '');
+
+  const fcStartSession = useFlashcardStore((s) => s.startSession);
+  const fcFlipCard = useFlashcardStore((s) => s.flipCard);
+  const fcMarkKnown = useFlashcardStore((s) => s.markKnown);
+  const fcMarkUnknown = useFlashcardStore((s) => s.markUnknown);
+  const fcToggleDisplayMode = useFlashcardStore((s) => s.toggleDisplayMode);
+  const fcResetSession = useFlashcardStore((s) => s.resetSession);
+  const fcDisplayMode = useFlashcardStore((s) => s.displayMode);
+  const fcCards = useFlashcardStore((s) => s.cards);
+  const fcCurrentIndex = useFlashcardStore((s) => s.currentIndex);
+  const fcIsFlipped = useFlashcardStore((s) => s.isFlipped);
+  const fcCardProgress = useFlashcardStore((s) => s.cardProgress);
+  const fcGetSessionStats = useFlashcardStore((s) => s.getSessionStats);
+
+  const [showComplete, setShowComplete] = useState(false);
+
+  // 카드 세션 초기화
+  useEffect(() => {
+    if (!isCardMode || !categoryId) return;
+    let cards = loadFlashcards(categoryId as CategoryId);
+    if (mode === 'unknown') {
+      cards = cards.filter((c) => {
+        const p = fcCardProgress[c.id];
+        return p && p.status === 'unknown';
+      });
+    }
+    if (cards.length === 0) cards = loadFlashcards(categoryId as CategoryId);
+    fcStartSession(categoryId as CategoryId, cards);
+  }, [categoryId, isCardMode]);
+
+  const fcIsComplete = fcCurrentIndex >= fcCards.length && fcCards.length > 0;
+  useEffect(() => {
+    if (fcIsComplete) setShowComplete(true);
+  }, [fcIsComplete]);
+
+  const fcStats = useMemo(() => fcGetSessionStats(), [fcCurrentIndex, fcCardProgress]);
+  const fcProgress = fcCards.length > 0 ? fcCurrentIndex / fcCards.length : 0;
+
+  const handleFcKnown = useCallback(() => fcMarkKnown(), [fcMarkKnown]);
+  const handleFcUnknown = useCallback(() => fcMarkUnknown(), [fcMarkUnknown]);
+
+  // 카드형 UI 렌더링
+  if (isCardMode) {
+    const categoryName = category?.name || '암기 카드';
+
+    const handleRetryUnknown = () => {
+      setShowComplete(false);
+      let cards = loadFlashcards(categoryId as CategoryId).filter((c) => {
+        const p = fcCardProgress[c.id];
+        return p && p.status === 'unknown';
+      });
+      if (cards.length === 0) cards = loadFlashcards(categoryId as CategoryId);
+      fcStartSession(categoryId as CategoryId, cards);
+    };
+
+    const handleRetryAll = () => {
+      setShowComplete(false);
+      const cards = shuffleCards(loadFlashcards(categoryId as CategoryId));
+      fcStartSession(categoryId as CategoryId, cards);
+    };
+
+    const handleGoBack = () => {
+      fcResetSession();
+      router.back();
+    };
+
+    return (
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <SafeAreaView style={styles.container}>
+          <Stack.Screen options={{ headerShown: false }} />
+
+          {/* 헤더 */}
+          <View style={styles.fcHeader}>
+            <Pressable onPress={handleGoBack} hitSlop={12}>
+              <MaterialCommunityIcons name="arrow-left" size={24} color={COLORS.text} />
+            </Pressable>
+            <View style={styles.fcHeaderCenter}>
+              <Text style={styles.fcHeaderTitle} numberOfLines={1}>{categoryName}</Text>
+              <Text style={styles.fcHeaderCount}>
+                {Math.min(fcCurrentIndex + 1, fcCards.length)} / {fcCards.length}
+              </Text>
+            </View>
+            <Pressable onPress={fcToggleDisplayMode} style={styles.fcToggle}>
+              <MaterialCommunityIcons
+                name={fcDisplayMode === 'term-first' ? 'card-text-outline' : 'card-text'}
+                size={20}
+                color={COLORS.primary}
+              />
+              <Text style={styles.fcToggleText}>
+                {fcDisplayMode === 'term-first' ? '용어→설명' : '설명→용어'}
+              </Text>
+            </Pressable>
+          </View>
+
+          {/* 프로그레스 바 */}
+          <View style={styles.fcProgressBg}>
+            <View style={[styles.fcProgressFill, { width: `${fcProgress * 100}%` }]} />
+          </View>
+
+          {/* 카드 덱 */}
+          <View style={styles.fcDeckArea}>
+            <FlashCardDeck
+              cards={fcCards}
+              currentIndex={fcCurrentIndex}
+              displayMode={fcDisplayMode}
+              onKnown={handleFcKnown}
+              onUnknown={handleFcUnknown}
+              onFlip={fcFlipCard}
+              isFlipped={fcIsFlipped}
+            />
+          </View>
+
+          {/* 하단 버튼 */}
+          {!fcIsComplete && fcCards.length > 0 && (
+            <View style={styles.fcActionRow}>
+              <Pressable style={[styles.fcActionBtn, styles.fcUnknownBtn]} onPress={handleFcUnknown}>
+                <MaterialCommunityIcons name="close" size={24} color={COLORS.danger} />
+                <Text style={styles.fcUnknownText}>모르겠어요</Text>
+              </Pressable>
+              <Pressable style={[styles.fcActionBtn, styles.fcKnownBtn]} onPress={handleFcKnown}>
+                <MaterialCommunityIcons name="check" size={24} color={COLORS.success} />
+                <Text style={styles.fcKnownText}>알아요</Text>
+              </Pressable>
+            </View>
+          )}
+
+          <BannerAdView />
+
+          {/* 완료 모달 */}
+          <Modal visible={showComplete} transparent animationType="fade">
+            <View style={styles.fcModalOverlay}>
+              <View style={styles.fcModalContent}>
+                <MaterialCommunityIcons name="check-circle" size={56} color={COLORS.success} />
+                <Text style={styles.fcModalTitle}>학습 완료!</Text>
+                <View style={styles.fcStatsRow}>
+                  <View style={styles.fcStatItem}>
+                    <Text style={styles.fcStatValue}>{fcStats.known}</Text>
+                    <Text style={[styles.fcStatLabel, { color: COLORS.success }]}>알아요</Text>
+                  </View>
+                  <View style={styles.fcStatDivider} />
+                  <View style={styles.fcStatItem}>
+                    <Text style={styles.fcStatValue}>{fcStats.unknown}</Text>
+                    <Text style={[styles.fcStatLabel, { color: COLORS.danger }]}>모르겠어요</Text>
+                  </View>
+                  <View style={styles.fcStatDivider} />
+                  <View style={styles.fcStatItem}>
+                    <Text style={styles.fcStatValue}>{fcStats.total}</Text>
+                    <Text style={styles.fcStatLabel}>전체</Text>
+                  </View>
+                </View>
+                {fcStats.unknown > 0 && (
+                  <Pressable style={[styles.fcModalBtn, { backgroundColor: COLORS.danger }]} onPress={handleRetryUnknown}>
+                    <Text style={styles.fcModalBtnText}>모르겠어요 다시 학습 ({fcStats.unknown}장)</Text>
+                  </Pressable>
+                )}
+                <Pressable style={[styles.fcModalBtn, { backgroundColor: COLORS.primary }]} onPress={handleRetryAll}>
+                  <Text style={styles.fcModalBtnText}>전체 다시 학습</Text>
+                </Pressable>
+                <Pressable style={[styles.fcModalBtn, styles.fcModalBtnOutline]} onPress={handleGoBack}>
+                  <Text style={[styles.fcModalBtnText, { color: COLORS.text }]}>목록으로 돌아가기</Text>
+                </Pressable>
+              </View>
+            </View>
+          </Modal>
+        </SafeAreaView>
+      </GestureHandlerRootView>
+    );
+  }
+  // ─── 여기서부터 기존 문제 풀이 UI ───
 
   const startQuiz = useQuizStore((s) => s.startQuiz);
   const resetQuiz = useQuizStore((s) => s.resetQuiz);
@@ -71,14 +252,18 @@ export default function QuizScreen() {
   const setUserAnswer = useQuizStore((s) => s.setUserAnswer);
   const removeUserAnswers = useQuizStore((s) => s.removeUserAnswers);
   const submitSubjectiveAnswer = useQuizStore((s) => s.submitSubjectiveAnswer);
-  const isExamCategory = categoryId?.startsWith('exam-')
+  const isSubjectiveCategory = categoryId?.startsWith('exam-')
+    || categoryId?.startsWith('code-')
+    || categoryId?.startsWith('sql-')
     || currentQuestion?.categoryId?.startsWith('exam-')
+    || currentQuestion?.categoryId?.startsWith('code-')
+    || currentQuestion?.categoryId?.startsWith('sql-')
     || false;
 
   // 현재 문제의 답변 메타 정보 (주관식일 때만 계산)
   const answerMeta = useMemo(
-    () => (isExamCategory && currentQuestion ? detectAnswerType(currentQuestion) : null),
-    [isExamCategory, currentQuestion?.id],
+    () => (isSubjectiveCategory && currentQuestion ? detectAnswerType(currentQuestion) : null),
+    [isSubjectiveCategory, currentQuestion?.id],
   );
 
   // SQL 결과 행 수 관리 - userAnswers에서 복원
@@ -273,7 +458,7 @@ export default function QuizScreen() {
         )}
 
         {/* 주관식 (기출 카테고리) */}
-        {isExamCategory && answerMeta ? (
+        {isSubjectiveCategory && answerMeta ? (
           <View style={styles.subjectiveArea}>
             {!isAnswered ? (
               <>
@@ -828,4 +1013,32 @@ const styles = StyleSheet.create({
   gradeTitle: { fontSize: 16, fontWeight: '700', color: COLORS.text, marginBottom: 4 },
   gradeUserAnswer: { fontSize: 14, color: COLORS.danger, marginTop: 2 },
   gradeCorrectAnswer: { fontSize: 14, color: COLORS.success, fontWeight: '600', marginTop: 2 },
+
+  // ─── 카드형 암기 스타일 ───
+  fcHeader: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingVertical: 12, gap: 12 },
+  fcHeaderCenter: { flex: 1 },
+  fcHeaderTitle: { fontSize: 16, fontWeight: '700', color: COLORS.text },
+  fcHeaderCount: { fontSize: 12, color: COLORS.textSecondary, marginTop: 2 },
+  fcToggle: { flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 16, backgroundColor: COLORS.gray[100] },
+  fcToggleText: { fontSize: 12, fontWeight: '600', color: COLORS.primary },
+  fcProgressBg: { height: 4, backgroundColor: COLORS.gray[200], marginHorizontal: 16, borderRadius: 2 },
+  fcProgressFill: { height: '100%', backgroundColor: COLORS.primary, borderRadius: 2 },
+  fcDeckArea: { flex: 1, paddingVertical: 16 },
+  fcActionRow: { flexDirection: 'row', paddingHorizontal: 24, paddingBottom: 12, gap: 16 },
+  fcActionBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingVertical: 14, borderRadius: 12 },
+  fcUnknownBtn: { backgroundColor: COLORS.dangerLight },
+  fcKnownBtn: { backgroundColor: COLORS.successLight },
+  fcUnknownText: { fontSize: 15, fontWeight: '700', color: COLORS.danger },
+  fcKnownText: { fontSize: 15, fontWeight: '700', color: COLORS.success },
+  fcModalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', alignItems: 'center', padding: 24 },
+  fcModalContent: { backgroundColor: '#fff', borderRadius: 20, padding: 32, alignItems: 'center', width: '100%', maxWidth: 360 },
+  fcModalTitle: { fontSize: 24, fontWeight: '700', color: COLORS.text, marginTop: 12, marginBottom: 24 },
+  fcStatsRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 24, gap: 16 },
+  fcStatItem: { alignItems: 'center' },
+  fcStatValue: { fontSize: 28, fontWeight: '800', color: COLORS.text },
+  fcStatLabel: { fontSize: 12, color: COLORS.textSecondary, marginTop: 4 },
+  fcStatDivider: { width: 1, height: 32, backgroundColor: COLORS.gray[200] },
+  fcModalBtn: { width: '100%', paddingVertical: 14, borderRadius: 12, alignItems: 'center', marginTop: 8 },
+  fcModalBtnOutline: { backgroundColor: 'transparent', borderWidth: 1, borderColor: COLORS.gray[300] },
+  fcModalBtnText: { fontSize: 15, fontWeight: '700', color: '#fff' },
 });

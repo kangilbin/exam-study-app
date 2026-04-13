@@ -1,0 +1,5153 @@
+[
+  {
+    "id": "card-memorize-se_001",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "term": "애자일 방법론의 4가지 핵심 가치",
+    "definition": "[애자일 방식이란?] 완벽한 계획 대신, 일단 만들고 피드백 받아 고쳐나가는 방식 \n\n(암기 키워드: 개동고변)\n1. 개인과 상호작용\n-팀원 간의 소통과 협력이 프로젝트 성패를 결정\n\n2. 동작하는 소프트웨어\n-수실제로 작동하는 결과물을 보여주는 것\n\n3. 고객과의 협력\n-고객과 수시로 소통하며 요구사항을 반영\n\n4. 변화에 대응\n-고객 상황이 변하면 유연하게 수정",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_001",
+    "tags": [
+      "애자일",
+      "방법론"
+    ],
+    "tip": "시험에서 '프로세스와 도구보다 개인과 상호작용'처럼 대비 구조로 출제됩니다. 4가지 가치 각각의 '~보다'를 정확히 암기하세요. (암기: 개동고변)",
+    "mnemonic": "개동고변"
+  },
+  {
+    "id": "card-memorize-se_002",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "term": "스크럼(Scrum)의 주요 구성요소",
+    "definition": "애자일의 대표적 방법론, 2~4주 단위 반복 개발 프레임워크\n\n[1. 역할 (Roles)]\n• 제품 책임자(PO): 백로그 우선순위 결정, 고객 대변인\n• 스크럼 마스터(SM): 장애물 제거, 스크럼 원칙 조력자\n• 개발 팀: 실제 개발 수행 (5~9명)\n\n[2. 산출물 (Artifacts)]\n• 제품 백로그: 전체 할 일 목록 (우선순위 정렬)\n• 스프린트 백로그: 이번 스프린트 할 일 목록\n• 실행 결과물(Increment): 완성된 동작 소프트웨어\n\n[3. 활동 (Events)]\n• 스프린트: 2~4주 개발 반복 주기\n• 스프린트 계획 회의: 할 일 선정\n• 데일리 스크럼: 매일 15분 진척 공유\n• 스프린트 검토(Review): 결과물 시연\n• 스프린트 회고(Retrospective): 과정 반성/개선",
+    "mnemonic": "암기 TIP",
+    "tip": "스크럼 문제는 \"스프린트 기간에는 백로그를 수정하지 않는다\"거나, \"스크럼 마스터가 팀원을 통제한다\"는 식의 보기가 오답으로 자주 나옵니다. (마스터는 통제가 아닌 지원 역할!)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_002",
+    "tags": [
+      "스크럼",
+      "애자일"
+    ]
+  },
+  {
+    "id": "card-memorize-se_003",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "term": "XP(eXtreme Programming)의 5가지 핵심 가치",
+    "definition": "(암기: 용단피의존)\n\n1. 용기(Courage): 요구사항 변화에 능동적으로 대처하고, 필요하면 코드를 과감히 수정함\n2. 단순성(Simplicity): 부가적인 기능은 빼고, 필요한 것만 가장 간단하게 설계함\n3. 피드백(Feedback): 지속적인 테스트와 고객의 의견을 즉각 반영함\n4. 의사소통(Communication): 개발자, 고객, 관리자 간의 긴밀한 대화를 중시함\n5. 존중(Respect): 팀원 간의 전문성을 인정하고 성과를 공유함",
+    "mnemonic": "암기 TIP",
+    "tip": "전문성(Expertise)이나 효율성(Efficiency) 같은 그럴싸한 단어를 넣어놓고 5대 가치 중 하나라고 우기는 보기가 오답으로 자주 나옵니다. (무조건 의용피단존만 맞음!)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_003",
+    "tags": [
+      "XP",
+      "애자일"
+    ]
+  },
+  {
+    "id": "card-memorize-se_003b",
+    "categoryId": "memorize-se",
+    "subcategory": "방법론",
+    "term": "XP(eXtreme Programming)의 주요 실천 방법",
+    "definition": "이 단어가 보이면 무조건 XP!\n\n• Pair Programming (짝 프로그래밍): 개발자 두 명이 한 대의 컴퓨터로 함께 코딩 (한 명은 코딩, 한 명은 검토)\n• TDD (테스트 주도 개발): 실제 코드를 짜기 전에 테스트 케이스부터 먼저 만듦\n• Refactoring (리팩토링): 기능은 그대로 두되, 코드의 구조를 개선하여 읽기 쉽고 관리하기 좋게 만듦\n• CI (지속적 통합): 매일 여러 번 코드를 통합하여 항상 최신 상태를 유지함\n• Small Releases (소규모 릴리즈): 짧은 주기로 실제 작동하는 소프트웨어를 고객에게 전달함\n• Whole Team (전체 팀): 고객도 프로젝트 팀의 일원으로 참여하여 언제든 소통함",
+    "mnemonic": "암기 TIP",
+    "tip": "XP 문제는 리팩토링의 기능 변경 유무, TDD의 테스트 시점(전/후), CI의 통합 빈도를 살짝 뒤틀어서 오답을 만드니 이 키워드들을 꼭 확인해!",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_003",
+    "tags": [
+      "XP",
+      "애자일"
+    ]
+  },
+  {
+    "id": "card-memorize-se_004",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "결합도가 강한 순으로 나열하시오.",
+    "definition": "(암기: 내공외제스자)\n\n결합도(Coupling)란 모듈 간 상호 의존도를 나타내는 척도\n• 결합도가 낮을수록(약할수록) 좋은 설계\n\n[강한 → 약한 순서]\n내용(Content) > 공통(Common) > 외부(External) > 제어(Control) > 스탬프(Stamp) > 자료(Data)\n\n→ 자료 결합도가 가장 바람직한 결합",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_005",
+      "card-memorize-se_006",
+      "card-memorize-se_007",
+      "card-memorize-se_008",
+      "card-memorize-se_009",
+      "card-memorize-se_010"
+    ],
+    "tip": "순서를 바꿔 출제하는 문제가 매우 자주 나옵니다. '내공외제스자'를 반드시 순서대로 암기하세요. '강한→약한'인지 '약한→강한'인지 방향도 확인!",
+    "mnemonic": "내공외제스자"
+  },
+  {
+    "id": "card-memorize-se_005",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "내용(Content) 결합도",
+    "definition": "Content Coupling\n한 모듈이 다른 모듈의 내부 데이터나 코드를 직접 참조하거나 수정하는 가장 강한 결합도\n\n• 비유: 남의 집 서랍을 마음대로 뒤지는 것\n• 예: 모듈A가 모듈B의 지역변수를 직접 변경\n• 결합도 6단계 중 최상위(가장 나쁨)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_006",
+      "card-memorize-se_007",
+      "card-memorize-se_008",
+      "card-memorize-se_009",
+      "card-memorize-se_010"
+    ],
+    "tip": "'내부 기능/자료를 직접 참조·수정'이라는 키워드가 보이면 무조건 내용 결합도입니다. 공통 결합도(전역변수 공유)와 헷갈리지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_006",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "공통(Common) 결합도",
+    "definition": "Common Coupling\n여러 모듈이 하나의 전역 변수(Global Variable)를 공유하여 사용하는 결합도\n\n• 비유: 여러 사람이 하나의 공용 게시판에 동시에 글을 쓰는 것\n• 예: 전역 변수 count를 모듈A, B, C가 모두 읽고 수정\n• 한 모듈이 전역 변수를 바꾸면 다른 모듈도 영향 받음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_005",
+      "card-memorize-se_007",
+      "card-memorize-se_008",
+      "card-memorize-se_009",
+      "card-memorize-se_010"
+    ],
+    "tip": "'전역 변수를 여러 모듈이 공유'라는 키워드가 핵심입니다. 외부 결합도(외부 프로토콜 공유)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_007",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "외부(External) 결합도",
+    "definition": "External Coupling\n외부에서 도입된 데이터 포맷, 통신 프로토콜, 디바이스 인터페이스 등을 여러 모듈이 공유하는 결합도\n\n• 비유: 여러 앱이 같은 통신 규약(HTTP)을 따르는 것\n• 예: 두 모듈이 동일한 외부 파일 포맷을 공유\n• 공통 결합도와 달리 '외부에서 정해진' 규격을 공유",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_005",
+      "card-memorize-se_006",
+      "card-memorize-se_008",
+      "card-memorize-se_009",
+      "card-memorize-se_010"
+    ],
+    "tip": "'외부 프로토콜/데이터 포맷 공유'가 키워드입니다. 공통 결합도(전역 변수)와 외부 결합도(외부 규격)를 구분하는 문제가 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_008",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "제어(Control) 결합도",
+    "definition": "Control Coupling\n한 모듈이 다른 모듈에게 무엇을 할지 결정하는 제어 요소(플래그/Flag 값)를 전달하여 내부 처리 로직을 제어하는 결합도\n\n• 비유: '이 일을 해'라고 지시하는 것\n• 예: printReport(flag=true) → flag에 따라 상세/요약 출력 결정\n• 스탬프 결합도(구조체 전달)와 구분 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_005",
+      "card-memorize-se_006",
+      "card-memorize-se_007",
+      "card-memorize-se_009",
+      "card-memorize-se_010"
+    ],
+    "tip": "'플래그(Flag)' 또는 '제어 신호를 전달'이라는 키워드가 보이면 제어 결합도입니다. 자료 결합도(순수 데이터)와 혼동 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_009",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "스탬프(Stamp) 결합도",
+    "definition": "Stamp Coupling\n배열, 레코드, 구조체, 객체 등 자료구조 전체를 다른 모듈에 전달하는 결합도\n\n• 비유: 필요한 항목만 알려주면 되는데 전체 서류 묶음을 넘기는 것\n• 예: 함수에 Student 객체 전체를 전달하지만 이름만 사용\n• 자료 결합도(필요한 값만 전달)보다 한 단계 강함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_005",
+      "card-memorize-se_006",
+      "card-memorize-se_007",
+      "card-memorize-se_008",
+      "card-memorize-se_010"
+    ],
+    "tip": "'배열/객체/구조체 전체를 전달'이라는 키워드가 핵심입니다. 자료 결합도(단순 데이터 값만 전달)와 비교 출제가 잦습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_010",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "자료(Data) 결합도",
+    "definition": "Data Coupling\n모듈 간에 필요한 순수 데이터 값만 매개변수(파라미터)로 전달하는 가장 약한(가장 바람직한) 결합도\n\n• 비유: 정확히 필요한 정보만 메모지에 적어 전달하는 것\n• 예: calculate(price, quantity) → 단순 값만 전달\n• 결합도 6단계 중 최하위(가장 좋음)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_004",
+    "tags": [
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_004",
+      "card-memorize-se_005",
+      "card-memorize-se_006",
+      "card-memorize-se_007",
+      "card-memorize-se_008",
+      "card-memorize-se_009"
+    ],
+    "tip": "'순수 데이터 값만 파라미터로 전달'이 핵심 키워드입니다. 가장 바람직한 결합도 = 자료(Data) 결합도를 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_011",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "응집도의 종류를 약한순으로 나열하시오.",
+    "definition": "(암기: 우논시절교순기)\n\n응집도(Cohesion)란 모듈 내부 요소들이 얼마나 밀접하게 관련되어 있는지의 척도\n• 응집도가 높을수록 좋은 설계\n\n[약한 → 강한 순서]\n우연적 > 논리적 > 시간적 > 절차적 > 교환적(통신적) > 순차적 > 기능적\n\n→ 기능적 응집도가 가장 바람직한 응집",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'약한→강한' 순서인지 '강한→약한' 순서인지 반드시 확인! 결합도는 '강한 순'이 출제 기본이고, 응집도는 '약한 순'이 출제 기본입니다. 우논시절교순기 암기!",
+    "mnemonic": "우논시절교순기"
+  },
+  {
+    "id": "card-memorize-se_012",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "우연적 응집도 (Coincidental)",
+    "definition": "Coincidental Cohesion\n모듈 내부 요소들이 서로 아무런 관련 없이 무작위로 모여 있는 상태 (가장 약한 응집도)\n\n• 비유: 서랍에 아무거나 마구 넣어둔 것\n• 예: 로그출력, 계산, 화면표시가 한 모듈에 혼재\n• 유지보수가 가장 어려운 최악의 응집도",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'서로 관련 없는 요소가 모여 있다'는 키워드가 보이면 우연적 응집도입니다. 논리적 응집도(유사 성격으로 묶임)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_013",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "논리적 응집도 (Logical)",
+    "definition": "유사한 성격의 기능을 수행하지만, 실제로는 논리적으로만 묶여 있고 실행 시에는 선택적으로 동작하는 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'유사한 성격'이지만 '실행 시 선택적으로 동작'이라는 점이 핵심입니다. 절차적 응집도(정해진 순서)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_014",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "시간적 응집도 (Temporal)",
+    "definition": "Temporal Cohesion\n특정 시간대에 함께 실행되어야 하는 활동들을 한 모듈에 모아놓은 상태\n\n• 비유: 아침에 하는 루틴(세수, 양치, 식사)을 하나로 묶은 것\n• 예: 시스템 초기화 시 변수 초기화 + 파일 열기 + 로그 시작\n• 시간적 연관은 있지만 기능적 연관은 약함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'같은 시간대에 실행'이 키워드입니다. 초기화(init) 모듈이 대표적인 예시로 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_015",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "절차적 응집도 (Procedural)",
+    "definition": "Procedural Cohesion\n모듈 안의 작업들이 정해진 순서대로 수행되지만, 데이터 간의 연관성은 적은 상태\n\n• 비유: 레시피 순서(재료준비→조리→담기)는 있지만 각 단계가 다른 재료 사용\n• 순차적 응집도와 차이: 절차적은 '순서만 공유', 순차적은 '출력→입력 데이터 연결'\n• 교환적(통신적) 응집도보다 한 단계 약함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_016",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'순서대로 수행하지만 데이터 연관 없음'이 핵심입니다. 순차적 응집도(출력이 다음 입력)와의 차이를 묻는 문제가 자주 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_016",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "통신적(교환적) 응집도 (Communication)",
+    "definition": "Communication Cohesion (교환적/통신적 응집도)\n동일한 입출력 데이터를 사용하여 서로 다른 기능을 수행하는 활동들이 모인 상태\n\n• 비유: 같은 고객 데이터로 '주소 출력'과 '이름 출력'을 함께 처리\n• 순차적 응집도와 차이: 교환적은 '같은 데이터 공유', 순차적은 '데이터 흐름 연결'\n• 절차적 응집도보다 한 단계 강함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_017",
+      "card-memorize-se_018"
+    ],
+    "tip": "'동일한 데이터를 사용하는 서로 다른 기능'이 핵심입니다. 순차적 응집도(데이터 흐름 연결)와 비교 출제가 빈번합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_017",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "순차적 응집도 (Sequential)",
+    "definition": "Sequential Cohesion\n한 활동의 출력값이 다음 활동의 입력값으로 사용되는 상태\n\n• 비유: 공장 컨베이어 벨트처럼 이전 공정 결과물이 다음 공정의 재료\n• 예: 파일 읽기 → 데이터 파싱 → 결과 저장 (각 단계 출력이 다음 입력)\n• 기능적 응집도 다음으로 강한 응집도",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_018"
+    ],
+    "tip": "'출력이 다음 입력'이 핵심 키워드입니다. 절차적 응집도(순서만 있고 데이터 연관 없음)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_018",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "기능적 응집도 (Functional)",
+    "definition": "Functional Cohesion\n모듈 내부의 모든 요소가 하나의 단일 기능을 수행하기 위해 밀접하게 결합된 최상의 상태 (가장 강한 응집도)\n\n• 비유: 계산기의 '더하기' 버튼 → 오직 덧셈만 수행\n• 예: calculateTax() → 세금 계산만 담당\n• 유지보수 용이, 재사용성 높음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_005",
+    "tags": [
+      "응집도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_011",
+      "card-memorize-se_012",
+      "card-memorize-se_013",
+      "card-memorize-se_014",
+      "card-memorize-se_015",
+      "card-memorize-se_016",
+      "card-memorize-se_017"
+    ],
+    "tip": "'단일 기능만 수행'이 핵심입니다. 가장 바람직한 응집도 = 기능적(Functional) 응집도를 반드시 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_019",
+    "categoryId": "memorize-se",
+    "subcategory": "형상관리",
+    "term": "형상관리 절차 4단계를",
+    "definition": "(암기: 식통감기)\n\n형상관리(SCM, Software Configuration Management) 절차 4단계:\n1. 형상 식별: 형상 항목에 이름과 번호 부여\n2. 형상 통제(변경 통제): 변경 요청을 검토·승인·반영하는 절차 (CCB: 형상통제위원회)\n3. 형상 감사: 변경이 제대로 반영되었는지 검증\n4. 형상 기록(상태 보고): 변경 이력과 현재 상태를 기록·보고",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_006",
+    "tags": [
+      "형상관리"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_020",
+      "card-memorize-se_021",
+      "card-memorize-se_022",
+      "card-memorize-se_023"
+    ],
+    "tip": "형상 '통제'에서 CCB(Configuration Control Board)가 함께 출제됩니다. 순서를 '식통감기'로 암기하세요!",
+    "mnemonic": "식통감기"
+  },
+  {
+    "id": "card-memorize-se_024",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "블랙박스 테스트 기법 5가지",
+    "definition": "(암기: 동경원오비)\n\n블랙박스 테스트(Black-Box Test)는 내부 구조를 모른 채 입출력만으로 기능을 검증하는 기법\n\n5가지 기법:\n1. 동치분할: 입력값을 동치 클래스로 나눠 대표값 테스트\n2. 경계값 분석: 입력 범위 경계에서 집중 테스트\n3. 원인-효과 그래프: 입력 조건과 출력 결과의 논리 관계\n4. 오류 예측: 경험 기반으로 오류 발생 부분 추측\n5. 비교 검사: 여러 버전의 결과를 비교",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_024a",
+      "card-memorize-se_024b",
+      "card-memorize-se_024c",
+      "card-memorize-se_024d",
+      "card-memorize-se_024e"
+    ],
+    "tip": "블랙박스 기법 5가지를 '동경원오비'로 암기하세요. 화이트박스(구조 기반)와 블랙박스(기능 기반)의 차이를 묻는 문제가 단골입니다.",
+    "mnemonic": "동경원오비"
+  },
+  {
+    "id": "card-memorize-se_024a",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "동치분할 (Equivalence Partitioning)",
+    "definition": "입력 데이터를 유사한 특성을 가진 그룹(동치 클래스)으로 나누고, 각 그룹에서 대표값 하나만 골라 테스트하는 기법\n\n예) 1~100 입력 가능 → 유효: 50, 무효: -1, 101\n→ 모든 값을 다 넣지 않아도 대표값으로 효율적 테스트 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "tip": "동치분할과 경계값 분석은 항상 함께 출제됩니다. 동치분할은 '대표값 하나', 경계값은 '경계 부근 값'이 핵심 차이입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_024b",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "경계값 분석 (Boundary Value Analysis)",
+    "definition": "입력 범위의 경계(최솟값, 최댓값 부근)에서 오류가 잘 발생하므로 경계값을 집중 테스트하는 기법\n\n예) 1~100 입력 가능 → 0, 1, 2, 99, 100, 101을 테스트\n→ 동치분할을 보완하는 기법으로 자주 함께 출제됨",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "tip": "경계값 분석에서 최솟값-1, 최솟값, 최솟값+1, 최댓값-1, 최댓값, 최댓값+1을 테스트한다는 점을 기억하세요. 동치분할의 보완 기법입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_024c",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "원인-효과 그래프 (Cause-Effect Graph)",
+    "definition": "입력 조건(원인)과 출력 결과(효과)의 관계를 논리적 그래프로 표현하여 테스트 케이스를 도출하는 기법\n\n→ 입력 조건들의 조합이 복잡할 때 유용\n→ 그래프를 의사결정 테이블로 변환하여 테스트 케이스 생성",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "tip": "원인-효과 그래프는 '의사결정 테이블(Decision Table)'로 변환하여 테스트 케이스를 생성한다는 점이 출제 포인트입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_024d",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "오류 예측 (Error Guessing)",
+    "definition": "테스터의 경험과 직관을 바탕으로 오류가 발생할 것 같은 부분을 추측하여 집중 테스트하는 기법\n\n→ 체계적 기법이 아닌 경험 기반 기법\n→ 다른 기법으로 발견하기 어려운 결함을 찾을 수 있음\n→ 숙련된 테스터일수록 효과적",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "tip": "오류 예측은 '경험과 직관 기반'이라는 점이 핵심입니다. 체계적 기법이 아닌 비정형 기법이라는 점에서 다른 기법과 구별됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_024e",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "비교 검사 (Comparison Testing)",
+    "definition": "동일한 입력을 여러 버전의 프로그램에 넣어 결과를 비교하는 기법\n\n→ 여러 개발자가 같은 기능을 독립적으로 개발한 뒤 결과를 비교\n→ 항공, 의료 등 신뢰성이 중요한 시스템에서 주로 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_007",
+    "tags": [
+      "블랙박스",
+      "테스트"
+    ],
+    "tip": "비교 검사는 '동일한 입력, 여러 버전의 프로그램, 결과 비교'가 키워드입니다. 항공/의료 등 고신뢰성 시스템에서 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_025",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "문장 커버리지 (Statement Coverage)",
+    "definition": "프로그램의 모든 실행 문장을 최소 1회 이상 수행하는 커버리지\n\n→ 가장 기본적이고 약한 수준의 커버리지\n→ 모든 코드 라인을 한 번이라도 지나갔는지 확인\n\n예) if (A > 0) print(\"양수\");\n→ A=1 넣으면 print문 실행 → 문장 커버리지 100%\n→ 하지만 A=-1인 경우는 테스트하지 않아도 됨",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_026",
+      "card-memorize-se_027",
+      "card-memorize-se_028",
+      "card-memorize-se_029",
+      "card-memorize-se_030"
+    ],
+    "tip": "문장 커버리지는 가장 약한 기준입니다. '모든 코드 라인을 한 번 지나감'이 핵심. 분기(결정) 커버리지보다 약하다는 점을 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_026",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "결정(분기) 커버리지 (Decision/Branch Coverage)",
+    "definition": "모든 조건식의 전체 결과가 True / False를 각각 한 번 이상 수행하는 커버리지\n\n→ 문장 커버리지보다 강한 기준\n→ if문 전체의 결과가 참/거짓 모두 나오도록 테스트\n\n예) if (A > 0 && B > 0)\n→ 전체 조건식이 T가 되는 경우: A=1, B=1\n→ 전체 조건식이 F가 되는 경우: A=-1, B=1\n→ 2개의 테스트 케이스로 분기 커버리지 달성",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_025",
+      "card-memorize-se_027",
+      "card-memorize-se_028",
+      "card-memorize-se_029",
+      "card-memorize-se_030"
+    ],
+    "tip": "결정(분기) 커버리지는 '전체 조건식'의 T/F를 봅니다. 조건 커버리지는 '개별 조건'의 T/F를 봅니다. 이 차이가 시험 단골 포인트!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_027",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "조건 커버리지 (Condition Coverage)",
+    "definition": "조건식 안의 개별 조건 각각이 True / False를 한 번 이상 수행하는 커버리지\n\n→ 전체 결과가 아니라 개별 조건 하나하나를 본다는 점이 핵심!\n→ 결정 커버리지와 헷갈리기 쉬움 (시험 단골)\n\n예) if (A > 0 && B > 0)\n→ A>0이 T/F, B>0이 T/F 각각 나오면 OK\n→ (A=1,B=-1) + (A=-1,B=1) → 조건 커버리지 달성\n⚠️ 하지만 전체 결과는 둘 다 F → 분기 커버리지는 미달!",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_025",
+      "card-memorize-se_026",
+      "card-memorize-se_028",
+      "card-memorize-se_029",
+      "card-memorize-se_030"
+    ],
+    "tip": "조건 커버리지를 만족해도 결정 커버리지를 만족하지 못할 수 있다는 점이 핵심입니다. 예제의 ⚠️ 부분이 시험 출제 포인트!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_028",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "조건/결정 커버리지 (Condition/Decision Coverage)",
+    "definition": "조건 커버리지 + 결정 커버리지를 동시에 만족하는 커버리지\n\n→ 개별 조건 각각 T/F + 전체 조건식도 T/F 모두 충족\n→ 조건 커버리지의 약점을 보완한 기준\n\n예) if (A > 0 && B > 0)\n→ (A=1,B=1) → 개별 T,T / 전체 T\n→ (A=-1,B=-1) → 개별 F,F / 전체 F\n→ 조건/결정 커버리지 달성",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_025",
+      "card-memorize-se_026",
+      "card-memorize-se_027",
+      "card-memorize-se_029",
+      "card-memorize-se_030"
+    ],
+    "tip": "조건/결정 커버리지 = 조건 커버리지 + 결정 커버리지를 '동시에' 만족. MC/DC보다는 약한 기준입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_029",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "변경 조건/결정 커버리지 (MC/DC)",
+    "definition": "Modified Condition/Decision Coverage\n\n각 개별 조건이 전체 결과에 독립적으로 영향을 미치는 것을 증명하는 커버리지\n\n→ 가장 강력한 커버리지 중 하나\n→ 항공/국방 등 안전 필수 소프트웨어에서 요구\n\n예) if (A && B)\n→ A가 결과를 바꾸는 쌍: (T,T)→T vs (F,T)→F (B 고정)\n→ B가 결과를 바꾸는 쌍: (T,T)→T vs (T,F)→F (A 고정)\n→ 각 조건이 독립적으로 전체 결과를 뒤집을 수 있음을 보여야 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_025",
+      "card-memorize-se_026",
+      "card-memorize-se_027",
+      "card-memorize-se_028",
+      "card-memorize-se_030"
+    ],
+    "tip": "MC/DC는 항공(DO-178B/C) 소프트웨어에서 필수 요구되는 커버리지입니다. '각 조건이 독립적으로 전체 결과를 변경'이 핵심 키워드!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_030",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "다중 조건 커버리지 (Multiple Condition Coverage)",
+    "definition": "모든 개별 조건의 가능한 조합을 전부 테스트하는 커버리지\n\n→ 가장 강력하지만 테스트 케이스 수가 폭발적으로 증가\n→ 조건이 N개이면 최대 2^N개의 테스트 케이스 필요\n\n예) if (A && B) → 조건 2개\n→ (T,T), (T,F), (F,T), (F,F) → 4개 모두 테스트\n→ 조건 3개면 8개, 4개면 16개... 실무에서는 비용 문제로 MC/DC를 더 많이 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_008",
+    "tags": [
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_025",
+      "card-memorize-se_026",
+      "card-memorize-se_027",
+      "card-memorize-se_028",
+      "card-memorize-se_029"
+    ],
+    "tip": "다중 조건 커버리지는 '2^N개 조합'으로 가장 강력하지만 비용이 큽니다. 실무에서는 MC/DC를 더 많이 사용한다는 점도 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_031",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "테스트 레벨 4단계를",
+    "definition": "(암기: 단통시인)\n\n테스트 레벨 4단계 - 개발 완료 후 순서대로 수행:\n1. 단위 테스트(Unit): 모듈/컴포넌트 단위 검증 (개발자)\n2. 통합 테스트(Integration): 모듈 간 인터페이스 검증\n3. 시스템 테스트(System): 전체 시스템 요구사항 검증\n4. 인수 테스트(Acceptance): 사용자 관점 최종 검증 (알파/베타)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_009",
+    "tags": [
+      "테스트레벨"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_032",
+      "card-memorize-se_033",
+      "card-memorize-se_034",
+      "card-memorize-se_035"
+    ],
+    "tip": "V-모델과 연계하여 각 테스트 레벨이 어떤 개발 단계에 대응하는지 묻는 문제가 자주 나옵니다. 단통시인 순서를 외우세요!",
+    "mnemonic": "단통시인"
+  },
+  {
+    "id": "card-memorize-se_032",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "단위",
+    "definition": "단위 테스트(Unit Test)\n모듈(컴포넌트) 단위로 기능을 검증하는 가장 작은 단위의 테스트\n\n• 개발자가 직접 수행\n• 화이트박스 테스트 위주\n• 드라이버(Driver)와 스텁(Stub)을 활용\n• 구현 단계에 대응 (V-모델)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_009",
+    "tags": [
+      "테스트레벨"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_031",
+      "card-memorize-se_033",
+      "card-memorize-se_034",
+      "card-memorize-se_035"
+    ],
+    "tip": "단위 테스트의 대상은 '모듈(컴포넌트)'입니다. V-모델에서 구현 단계에 대응합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_033",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "통합",
+    "definition": "통합 테스트(Integration Test)\n모듈 간 인터페이스를 검증하는 테스트\n\n• 상향식: 드라이버(Driver) 사용, 하위→상위 모듈 순\n• 하향식: 스텁(Stub) 사용, 상위→하위 모듈 순\n• 빅뱅: 모든 모듈을 한꺼번에 통합\n• 설계 단계에 대응 (V-모델)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_009",
+    "tags": [
+      "테스트레벨"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_031",
+      "card-memorize-se_032",
+      "card-memorize-se_034",
+      "card-memorize-se_035"
+    ],
+    "tip": "상향식=드라이버, 하향식=스텁 조합이 시험 단골입니다. 반대로 바꿔 출제하는 오답에 주의하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_034",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "시스템",
+    "definition": "시스템 테스트(System Test)\n전체 시스템이 요구사항을 만족하는지 검증하는 테스트\n\n• 기능 테스트 + 비기능 테스트(성능, 보안, 안정성 등) 모두 포함\n• 개발팀이 수행\n• 실제 운영 환경과 유사한 환경에서 진행\n• 분석 단계에 대응 (V-모델)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_009",
+    "tags": [
+      "테스트레벨"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_031",
+      "card-memorize-se_032",
+      "card-memorize-se_033",
+      "card-memorize-se_035"
+    ],
+    "tip": "시스템 테스트는 '전체 시스템'을 대상으로 하며, 비기능적 요구사항(성능, 보안)도 검증합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_035",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "인수",
+    "definition": "인수 테스트(Acceptance Test)\n사용자 관점에서 시스템이 요구사항을 충족하는지 최종 검증하는 테스트\n\n• 알파 테스트: 개발자 환경에서 사용자가 수행, 개발자 참관\n• 베타 테스트: 실제 사용 환경에서 사용자가 수행, 개발자 없음\n• 요구사항 단계에 대응 (V-모델)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_009",
+    "tags": [
+      "테스트레벨"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_031",
+      "card-memorize-se_032",
+      "card-memorize-se_033",
+      "card-memorize-se_034"
+    ],
+    "tip": "알파=개발자 환경+개발자 참관, 베타=사용자 환경+개발자 없음. 이 차이를 바꿔 출제하는 문제가 자주 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_036",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "통합 테스트",
+    "definition": "통합 테스트의 방식별 테스트 보조 도구:\n\n• 상향식(Bottom-Up) 통합: 드라이버(Driver) 사용\n  - 하위 모듈부터 통합, 상위 모듈을 대신 호출해주는 도구\n• 하향식(Top-Down) 통합: 스텁(Stub) 사용\n  - 상위 모듈부터 통합, 하위 모듈을 대신하는 더미 모듈\n\n(암기: 상드하스 - 상향식=드라이버, 하향식=스텁)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_010",
+    "tags": [
+      "통합테스트",
+      "드라이버",
+      "스텁"
+    ],
+    "tip": "드라이버는 '위에서 호출해주는 것', 스텁은 '아래를 대신하는 것'. 상향식↔드라이버, 하향식↔스텁을 뒤바꿔 출제하는 함정에 주의!",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_037",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "생성 패턴",
+    "definition": "GoF 생성 패턴(Creational Pattern) 5가지\n객체의 생성 과정을 캡슐화하여 유연하게 객체를 만드는 패턴\n\n(암기: 싱팩추빌프)\n• 싱글톤(Singleton): 인스턴스를 하나만 생성\n• 팩토리 메서드(Factory Method): 생성을 서브클래스에 위임\n• 추상 팩토리(Abstract Factory): 관련 객체군 생성 인터페이스\n• 빌더(Builder): 복잡한 객체를 단계별 생성\n• 프로토타입(Prototype): 원본 객체 복제",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_011",
+    "tags": [
+      "디자인패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_038",
+      "card-memorize-se_039"
+    ],
+    "tip": "생성 패턴 5개를 '싱팩추빌프'로 외우세요. 각 패턴의 목적(언제 쓰는가)을 설명하는 문제가 자주 나옵니다.",
+    "mnemonic": "싱팩추빌프"
+  },
+  {
+    "id": "card-memorize-se_038",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "구조 패턴",
+    "definition": "GoF 구조 패턴(Structural Pattern) 7가지\n클래스나 객체를 조합하여 더 큰 구조를 만드는 패턴\n\n(암기: 어브컴데퍼플프)\n• 어댑터(Adapter): 호환되지 않는 인터페이스 변환\n• 브릿지(Bridge): 추상화와 구현 분리\n• 컴포지트(Composite): 트리 구조 부분-전체 계층\n• 데코레이터(Decorator): 동적 기능 추가\n• 퍼사드(Facade): 단순한 인터페이스 제공\n• 플라이웨이트(Flyweight): 공유로 메모리 절약\n• 프록시(Proxy): 대리 객체로 접근 제어",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_011",
+    "tags": [
+      "디자인패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_037",
+      "card-memorize-se_039"
+    ],
+    "tip": "구조 패턴은 7개로 가장 많습니다. 어댑터(변환)와 퍼사드(단순화), 프록시(대리)의 차이를 묻는 문제가 단골입니다.",
+    "mnemonic": "어브컴데퍼플프"
+  },
+  {
+    "id": "card-memorize-se_039",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "행위 패턴",
+    "definition": "GoF 행위 패턴(Behavioral Pattern) 11가지\n객체 간의 상호작용과 책임 분배를 정의하는 패턴\n\n주요 패턴:\n• 옵저버(Observer): 상태 변화를 구독자에게 알림\n• 전략(Strategy): 알고리즘을 캡슐화하여 교환\n• 커맨드(Command): 요청을 객체로 캡슐화\n• 이터레이터(Iterator): 순차 접근 제공\n• 템플릿 메서드(Template Method): 알고리즘 골격 정의\n• 스테이트(State): 상태에 따라 행위 변경\n• 기타: 인터프리터, 미디에이터, 메멘토, 비지터, 책임연쇄",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_011",
+    "tags": [
+      "디자인패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_037",
+      "card-memorize-se_038"
+    ],
+    "tip": "행위 패턴은 11개로 가장 많습니다. 옵저버(1:N 알림), 전략(알고리즘 교체), 커맨드(요청 캡슐화)가 가장 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_040",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "싱글톤 패턴",
+    "definition": "Singleton Pattern (생성 패턴)\n클래스의 인스턴스가 오직 하나만 생성되는 것을 보장하고, 어디서든 그 인스턴스에 접근할 수 있게 하는 패턴\n\n• 사용 시점: DB 커넥션 풀, 로그 관리자, 설정 관리자 등 전역에서 하나만 필요할 때\n• 구현: private 생성자 + static getInstance() 메서드\n• 주의: 멀티스레드 환경에서 동기화 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_012",
+    "tags": [
+      "싱글톤",
+      "디자인패턴"
+    ],
+    "tip": "'하나만 생성'과 '전역 접근'이 핵심 키워드입니다. getInstance() 메서드와 private 생성자가 구현의 특징입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_041",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "구조",
+    "definition": "UML 구조적 다이어그램(Structural Diagram) 6가지\n시스템의 정적 구조를 표현하는 다이어그램\n\n(암기: 클객컴배복패)\n• 클래스(Class): 클래스 간 관계와 속성/메서드\n• 객체(Object): 특정 시점의 객체 인스턴스 정보\n• 컴포넌트(Component): 컴포넌트 간 의존 관계\n• 배포(Deployment): 물리적 노드에 SW 배치 구조\n• 복합체 구조(Composite Structure): 클래스 내부 구조\n• 패키지(Package): 모델 요소를 그룹화",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_013",
+    "tags": [
+      "UML",
+      "다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_042"
+    ],
+    "tip": "구조적 다이어그램 6가지와 행위 다이어그램 7가지를 구분하는 문제가 자주 나옵니다. '클객컴배복패'로 암기하세요!",
+    "mnemonic": "클객컴배복패"
+  },
+  {
+    "id": "card-memorize-se_042",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "행위",
+    "definition": "UML 행위 다이어그램(Behavioral Diagram) 7가지\n시스템의 동적 행위를 표현하는 다이어그램\n\n(암기: 유활상시통상타)\n• 유스케이스(Use Case): 사용자 관점 시스템 기능\n• 활동(Activity): 업무 처리 흐름/워크플로\n• 상태머신(State Machine): 객체 상태 변화\n• 시퀀스(Sequence): 시간 흐름에 따른 객체 상호작용\n• 통신(Communication): 객체 간 메시지 교환 관계\n• 상호작용 개요(Interaction Overview): 상호작용의 전체 흐름\n• 타이밍(Timing): 시간 제약 조건 표현",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_013",
+    "tags": [
+      "UML",
+      "다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_041"
+    ],
+    "tip": "시퀀스 다이어그램(시간 순서)과 통신 다이어그램(객체 관계)의 차이를 묻는 문제가 자주 출제됩니다.",
+    "mnemonic": "유활상시통상타"
+  },
+  {
+    "id": "card-memorize-se_043",
+    "categoryId": "memorize-se",
+    "subcategory": "릴리스노트",
+    "term": "릴리스 노트의 작성 항목",
+    "definition": "헤더, 개요, 목적, 문제요약, 재현항목, 수정/개선내용, 사용자영향도, SW지원영향도, 노트, 면책조항, 연락처",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_014",
+    "tags": [
+      "릴리스노트"
+    ],
+    "tip": "릴리스 노트 작성 항목 중 '헤더, 개요, 목적'은 필수 3대 항목입니다. 작성 항목 전체를 나열하는 문제가 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_044",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "term": "EAI의 4가지 유형",
+    "definition": "EAI(Enterprise Application Integration)\n기업 내 각종 애플리케이션 및 플랫폼 간의 데이터를 통합하는 솔루션\n\n4가지 유형:\n1. Point-to-Point: 1:1 직접 연결 (스파게티 구조, 변경 어려움)\n2. Hub & Spoke: 중앙 허브가 중계 (허브 장애 시 전체 마비)\n3. Message Bus(ESB): 미들웨어 기반 메시지 통합 (확장성 우수)\n4. Hybrid: Hub & Spoke + Message Bus 결합 (유연성+안정성)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_015",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ],
+    "tip": "EAI 4가지 유형은 기출 빈도가 매우 높습니다. 각 유형의 장단점(특히 Point-to-Point의 '변경 어려움'과 Hub & Spoke의 '허브 장애 시 전체 영향')을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_045",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "레이어 패턴",
+    "definition": "Layered Pattern (레이어 패턴)\n시스템을 계층별로 분리하여 각 계층이 특정 역할만 담당하는 아키텍처 패턴\n\n• 구조: 프레젠테이션 → 비즈니스 로직 → 데이터 접근\n• 장점: 관심사 분리, 유지보수 용이, 재사용성 높음\n• 단점: 계층 간 의존으로 성능 저하 가능\n• 사용: 웹 애플리케이션(MVC), 운영체제(OSI 7계층)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_046",
+      "card-memorize-se_047",
+      "card-memorize-se_048",
+      "card-memorize-se_049",
+      "card-memorize-se_050"
+    ],
+    "tip": "레이어 패턴은 '계층별 역할 분리'가 핵심입니다. MVC 패턴과 함께 가장 자주 출제되는 아키텍처 패턴입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_046",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "클라이언트-서버 패턴",
+    "definition": "Client-Server Pattern (클라이언트-서버 패턴)\n클라이언트가 요청(Request)하고 서버가 응답(Response)하는 구조의 아키텍처 패턴\n\n• 장점: 데이터 중앙 관리, 보안 용이\n• 단점: 서버 과부하 시 병목, 서버 장애 시 전체 영향\n• 사용: 웹 브라우저-웹 서버, 이메일 클라이언트-메일 서버\n• 비유: 고객(클라이언트)이 식당(서버)에 주문하고 음식을 받는 구조",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_045",
+      "card-memorize-se_047",
+      "card-memorize-se_048",
+      "card-memorize-se_049",
+      "card-memorize-se_050"
+    ],
+    "tip": "'요청-응답 구조'가 핵심 키워드입니다. 파이프-필터(데이터 스트림), 브로커(중개자)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_047",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "파이프-필터 패턴",
+    "definition": "Pipe-Filter Pattern (파이프-필터 패턴)\n데이터 스트림을 각 단계(필터)에서 처리하고, 파이프로 다음 단계에 전달하는 아키텍처 패턴\n\n• 장점: 필터 추가/제거/교체 용이, 재사용성 높음\n• 단점: 데이터 변환 오버헤드, 대화형 시스템에 부적합\n• 사용: UNIX 셸 명령어 파이프(|), 컴파일러, 데이터 분석 파이프라인\n• 비유: 정수기 필터처럼 물(데이터)이 여러 필터를 순서대로 거침",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_045",
+      "card-memorize-se_046",
+      "card-memorize-se_048",
+      "card-memorize-se_049",
+      "card-memorize-se_050"
+    ],
+    "tip": "'데이터 스트림을 단계별로 처리'가 핵심입니다. UNIX의 '|'(파이프) 명령이 대표적 예시로 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_048",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "MVC 패턴",
+    "definition": "MVC Pattern (Model-View-Controller 패턴)\n애플리케이션을 Model(데이터/로직), View(화면), Controller(제어)로 분리하는 아키텍처 패턴\n\n• Model: 데이터와 비즈니스 로직 처리\n• View: 사용자 인터페이스(화면 표시)\n• Controller: 사용자 입력 처리, Model-View 연결\n• 장점: 관심사 분리, 동시 개발 가능, 유지보수 용이\n• 사용: Spring MVC, Django, Rails",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_045",
+      "card-memorize-se_046",
+      "card-memorize-se_047",
+      "card-memorize-se_049",
+      "card-memorize-se_050"
+    ],
+    "tip": "MVC 각 구성요소의 역할을 묻는 문제가 매우 자주 출제됩니다. Model=데이터, View=화면, Controller=입력처리/연결 역할을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_049",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "마스터-슬레이브 패턴",
+    "definition": "Master-Slave Pattern (마스터-슬레이브 패턴)\n마스터가 작업을 분배하고, 슬레이브가 처리한 결과를 마스터에게 반환하는 아키텍처 패턴\n\n• 장점: 병렬 처리로 성능 향상, 정확성 향상\n• 단점: 마스터 장애 시 전체 중단, 슬레이브 의존적\n• 사용: DB 복제(Master-Slave Replication), 멀티스레드 분산 처리\n• 비유: 팀장(마스터)이 업무를 분배하고 팀원(슬레이브)이 처리 후 보고",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_045",
+      "card-memorize-se_046",
+      "card-memorize-se_047",
+      "card-memorize-se_048",
+      "card-memorize-se_050"
+    ],
+    "tip": "'마스터가 작업 분배, 슬레이브가 처리 후 반환'이 핵심입니다. 클라이언트-서버와 달리 마스터가 일을 지시한다는 차이점을 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_050",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "브로커 패턴",
+    "definition": "Broker Pattern (브로커 패턴)\n분산 시스템에서 클라이언트와 서버 사이에 중개자(브로커)를 두어 통신을 조정하는 아키텍처 패턴\n\n• 장점: 위치 투명성, 컴포넌트 교체 용이\n• 단점: 브로커 장애 시 영향, 통신 오버헤드\n• 사용: CORBA, 웹 서비스, 메시지 브로커(RabbitMQ, Kafka)\n• 비유: 부동산 중개인처럼 매매자와 매수자를 연결",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_016",
+    "tags": [
+      "아키텍처패턴",
+      "소프트웨어설계"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_045",
+      "card-memorize-se_046",
+      "card-memorize-se_047",
+      "card-memorize-se_048",
+      "card-memorize-se_049"
+    ],
+    "tip": "'분산 시스템의 중개자 역할'이 핵심입니다. 클라이언트-서버(직접 통신)와 달리 중간에 브로커가 있다는 점이 차이!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_051",
+    "categoryId": "memorize-se",
+    "subcategory": "생명주기",
+    "term": "폭포수 모델",
+    "definition": "Waterfall Model (폭포수 모델)\n각 단계를 확실히 마무리한 후 다음 단계로 진행하는 순차적(선형) 개발 모델\n\n• 단계: 요구분석→설계→구현→테스트→유지보수\n• 장점: 이해 쉬움, 관리 용이, 문서화 철저\n• 단점: 요구사항 변경 어려움, 후반에 오류 발견 시 비용 큼\n• 특징: 가장 오래된 전통적 모델, Boehm이 제안",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_017",
+    "tags": [
+      "생명주기",
+      "폭포수",
+      "나선형",
+      "프로토타이핑"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_052",
+      "card-memorize-se_053"
+    ],
+    "tip": "폭포수 모델의 최대 단점은 '요구사항 변경이 어렵다'는 점입니다. 나선형 모델(위험 분석)과 비교 출제가 빈번합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_052",
+    "categoryId": "memorize-se",
+    "subcategory": "생명주기",
+    "term": "프로토타이핑 모델",
+    "definition": "Prototyping Model (프로토타이핑 모델)\n요구사항을 프로토타입(시제품)으로 먼저 구현하여 사용자 피드백을 반영하는 개발 모델\n\n• 장점: 사용자 요구사항을 명확히 파악, 의사소통 용이\n• 단점: 프로토타입을 최종 제품으로 착각할 위험\n• 특징: 요구사항이 불명확할 때 특히 유용\n• 비유: 완성 전 샘플을 먼저 보여주고 피드백 받는 것",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_017",
+    "tags": [
+      "생명주기",
+      "폭포수",
+      "나선형",
+      "프로토타이핑"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_051",
+      "card-memorize-se_053"
+    ],
+    "tip": "'요구사항이 불명확할 때' 사용하는 모델이라는 점이 핵심입니다. 폭포수 모델(요구사항 확정 후 진행)과의 차이를 비교하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_053",
+    "categoryId": "memorize-se",
+    "subcategory": "생명주기",
+    "term": "나선형 모델",
+    "definition": "위험을 최소화하면서 점진적으로 완벽한 시스템을 개발하는 모델(계획→위험분석→개발→평가 반복)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_017",
+    "tags": [
+      "생명주기",
+      "폭포수",
+      "나선형",
+      "프로토타이핑"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_051",
+      "card-memorize-se_052"
+    ],
+    "tip": "나선형 모델의 핵심은 '위험 분석(Risk Analysis)'입니다. 4단계(계획→위험분석→개발→평가)를 반복하는 점진적 모델이며, Boehm이 제안했습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_054",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항분석",
+    "term": "구조적 분석 기법의 3가지 도구",
+    "definition": "구조적 분석(Structured Analysis) 기법의 3가지 핵심 도구:\n\n1. 자료 흐름도(DFD, Data Flow Diagram)\n  - 데이터의 흐름을 그래프로 표현\n  - 구성요소: 프로세스(○), 데이터 흐름(→), 저장소(=), 외부 엔터티(□)\n\n2. 자료 사전(DD, Data Dictionary)\n  - 데이터 항목의 정의와 속성을 기록하는 메타데이터 저장소\n\n3. 소단위 명세서(Mini-Spec)\n  - 각 프로세스의 상세 처리 로직을 기술",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_018",
+    "tags": [
+      "구조적분석",
+      "DFD",
+      "자료사전"
+    ],
+    "tip": "DFD의 4가지 구성요소(프로세스, 데이터흐름, 저장소, 외부엔터티)를 각각의 기호와 함께 암기하세요. 기출 빈도가 높습니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_055",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "빌더",
+    "definition": "Builder Pattern (빌더 패턴) - GoF 생성 패턴\n복잡한 객체를 단계별로 생성하며, 구성(Construction)과 표현(Representation)을 분리하는 패턴\n\n• 사용 시점: 생성자 매개변수가 많거나 생성 과정이 복잡할 때\n• 예: 피자 주문 → 도우 선택→소스 선택→토핑 선택→완성\n• 팩토리 패턴과 차이: 빌더는 '단계별 조립', 팩토리는 '한 번에 생성'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_019",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_056",
+      "card-memorize-se_057",
+      "card-memorize-se_058",
+      "card-memorize-se_059"
+    ],
+    "tip": "'단계별 생성'과 '구성과 표현 분리'가 핵심 키워드입니다. 팩토리 메서드(서브클래스 위임)와의 차이를 묻는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_056",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "프로토타입",
+    "definition": "Prototype Pattern (프로토타입 패턴) - GoF 생성 패턴\n원본(Prototype) 객체를 복제(Clone)하여 새 객체를 생성하는 패턴\n\n• 사용 시점: 객체 생성 비용이 크거나, 유사한 객체를 대량 생성할 때\n• 핵심 메서드: clone()\n• 예: 게임에서 동일한 몬스터를 여러 마리 생성할 때\n• 얕은 복사(Shallow Copy) vs 깊은 복사(Deep Copy) 구분 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_019",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_055",
+      "card-memorize-se_057",
+      "card-memorize-se_058",
+      "card-memorize-se_059"
+    ],
+    "tip": "'복제(Clone)'가 핵심 키워드입니다. 프로토타이핑 모델(개발 생명주기)과 프로토타입 패턴(디자인 패턴)을 혼동하지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_057",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "팩토리 메서드",
+    "definition": "Factory Method Pattern (팩토리 메서드 패턴) - GoF 생성 패턴\n객체 생성을 서브클래스에 위임하여, 어떤 클래스의 인스턴스를 만들지를 서브클래스가 결정하는 패턴\n\n• 사용 시점: 생성할 객체의 타입을 미리 알 수 없을 때\n• 예: 문서 앱에서 createDocument() → 서브클래스가 PDF/Word/Excel 결정\n• 추상 팩토리와 차이: 팩토리 메서드는 '하나의 객체', 추상 팩토리는 '관련 객체군'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_019",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_055",
+      "card-memorize-se_056",
+      "card-memorize-se_058",
+      "card-memorize-se_059"
+    ],
+    "tip": "'서브클래스에 위임'이 핵심 키워드입니다. 추상 팩토리(관련 객체 '군' 생성)와의 차이를 묻는 문제가 자주 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_058",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "추상 팩토리",
+    "definition": "Abstract Factory Pattern (추상 팩토리 패턴) - GoF 생성 패턴\n서로 관련 있는 객체들의 군(Family)을 생성하기 위한 인터페이스를 제공하는 패턴\n\n• 사용 시점: 관련 객체들을 일관성 있게 생성해야 할 때\n• 예: UI 테마 → WindowsFactory가 WindowsButton + WindowsCheckbox 생성\n• 팩토리 메서드와 차이: 추상 팩토리는 '여러 관련 객체를 세트로 생성'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_019",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_055",
+      "card-memorize-se_056",
+      "card-memorize-se_057",
+      "card-memorize-se_059"
+    ],
+    "tip": "'관련 객체군/세트 생성'이 핵심 키워드입니다. 팩토리 메서드(단일 객체 생성 위임)와의 차이가 출제 핵심!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_059",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "싱글턴",
+    "definition": "Singleton Pattern (싱글턴 패턴) - GoF 생성 패턴\n클래스의 인스턴스가 오직 하나만 생성되도록 보장하고, 전역 접근점을 제공하는 패턴\n\n• 사용 시점: 시스템 전체에서 하나의 인스턴스만 필요할 때\n• 구현: private 생성자 + static getInstance()\n• 예: DB 커넥션 풀, 로그 관리, 캐시, 설정 매니저\n• 주의: 멀티스레드 환경에서 동기화 처리 필요",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_019",
+    "tags": [
+      "디자인패턴",
+      "생성패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_055",
+      "card-memorize-se_056",
+      "card-memorize-se_057",
+      "card-memorize-se_058"
+    ],
+    "tip": "'인스턴스가 하나만 생성'과 'private 생성자'가 핵심 키워드입니다. 생성 패턴 중 가장 자주 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_060",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "브릿지",
+    "definition": "Bridge Pattern (브릿지 패턴) - GoF 구조 패턴\n추상화(Abstraction)와 구현(Implementation)을 분리하여 각각 독립적으로 변경할 수 있게 하는 패턴\n\n• 사용 시점: 추상화와 구현이 각각 독립적으로 확장되어야 할 때\n• 예: 도형(원, 사각형) × 색상(빨강, 파랑)을 독립적으로 조합\n• 어댑터와 차이: 브릿지는 '설계 시점', 어댑터는 '기존 코드 호환'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_061",
+      "card-memorize-se_062",
+      "card-memorize-se_063",
+      "card-memorize-se_064",
+      "card-memorize-se_065",
+      "card-memorize-se_066"
+    ],
+    "tip": "'추상화와 구현을 분리'가 핵심 키워드입니다. 어댑터(기존 인터페이스 변환)와 혼동하지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_061",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "데코레이터",
+    "definition": "Decorator Pattern (데코레이터 패턴) - GoF 구조 패턴\n객체에 동적으로 새로운 기능을 추가하는 패턴. 상속 대신 조합(Composition)을 사용\n\n• 사용 시점: 기존 객체에 기능을 유연하게 추가/제거하고 싶을 때\n• 예: 커피 주문 → 기본커피에 우유 데코레이터 + 시럽 데코레이터 추가\n• 상속과 차이: 데코레이터는 '런타임에 동적 추가', 상속은 '컴파일타임에 고정'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_062",
+      "card-memorize-se_063",
+      "card-memorize-se_064",
+      "card-memorize-se_065",
+      "card-memorize-se_066"
+    ],
+    "tip": "'동적으로 기능 추가'와 '상속 대신 조합'이 핵심입니다. 프록시(접근 제어)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_062",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "퍼사드",
+    "definition": "Facade Pattern (퍼사드 패턴) - GoF 구조 패턴\n복잡한 서브시스템에 단순한 통합 인터페이스를 제공하는 패턴\n\n• 사용 시점: 복잡한 시스템을 간단하게 사용하고 싶을 때\n• 예: 홈시어터 리모컨 하나로 TV+앰프+DVD를 한 번에 제어\n• 어댑터와 차이: 퍼사드는 '단순화', 어댑터는 '호환성 변환'\n• 핵심: 서브시스템 내부를 감추고 간편한 창구 제공",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_061",
+      "card-memorize-se_063",
+      "card-memorize-se_064",
+      "card-memorize-se_065",
+      "card-memorize-se_066"
+    ],
+    "tip": "'복잡한 서브시스템에 단순한 인터페이스 제공'이 핵심입니다. 어댑터(인터페이스 변환)와의 차이를 묻는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_063",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "플라이웨이트",
+    "definition": "Flyweight Pattern (플라이웨이트 패턴) - GoF 구조 패턴\n동일하거나 유사한 객체를 공유(Sharing)하여 메모리 사용을 최소화하는 패턴\n\n• 사용 시점: 많은 수의 유사 객체가 필요하지만 메모리가 부족할 때\n• 예: 문서 편집기에서 동일한 글자 객체를 공유하여 재사용\n• 핵심: 불변(Intrinsic) 상태는 공유, 가변(Extrinsic) 상태는 개별 관리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_061",
+      "card-memorize-se_062",
+      "card-memorize-se_064",
+      "card-memorize-se_065",
+      "card-memorize-se_066"
+    ],
+    "tip": "'공유를 통해 메모리 절약'이 핵심입니다. '불변 상태 공유 + 가변 상태 개별 관리' 키워드를 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_064",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "프록시",
+    "definition": "Proxy Pattern (프록시 패턴) - GoF 구조 패턴\n실제 객체에 대한 대리 객체(Proxy)를 통해 접근을 제어하는 패턴\n\n• 사용 시점: 원본 객체에 대한 접근 제어, 지연 로딩, 캐싱이 필요할 때\n• 종류: 원격 프록시, 가상 프록시(지연 로딩), 보호 프록시(접근 권한)\n• 예: 대용량 이미지를 실제 필요할 때만 로드하는 가상 프록시\n• 데코레이터와 차이: 프록시는 '접근 제어', 데코레이터는 '기능 추가'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_061",
+      "card-memorize-se_062",
+      "card-memorize-se_063",
+      "card-memorize-se_065",
+      "card-memorize-se_066"
+    ],
+    "tip": "'대리 객체를 통한 접근 제어'가 핵심입니다. 데코레이터(기능 동적 추가)와 구분하는 문제가 자주 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_065",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "컴포지트",
+    "definition": "Composite Pattern (컴포지트 패턴) - GoF 구조 패턴\n트리 구조로 부분(Part)과 전체(Whole)의 계층을 표현하여, 개별 객체와 복합 객체를 동일하게 다루는 패턴\n\n• 사용 시점: 부분-전체 관계를 트리로 구성해야 할 때\n• 예: 파일 시스템(파일+폴더), 조직도(사원+부서)\n• 핵심: Leaf(개별)와 Composite(복합)가 같은 인터페이스 구현",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_061",
+      "card-memorize-se_062",
+      "card-memorize-se_063",
+      "card-memorize-se_064",
+      "card-memorize-se_066"
+    ],
+    "tip": "'트리 구조의 부분-전체 계층'과 '개별 객체와 복합 객체를 동일하게 처리'가 핵심 키워드입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_066",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "어댑터",
+    "definition": "Adapter Pattern (어댑터 패턴) - GoF 구조 패턴\n호환되지 않는 인터페이스를 변환하여 함께 동작할 수 있게 해주는 패턴\n\n• 사용 시점: 기존 클래스를 수정하지 않고 다른 인터페이스와 호환시키고 싶을 때\n• 예: 220V 콘센트에 110V 기기를 연결하는 변환 어댑터\n• 구현 방식: 클래스 어댑터(상속), 객체 어댑터(위임)\n• 퍼사드와 차이: 어댑터는 '1:1 변환', 퍼사드는 '여러 시스템을 하나로 단순화'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_020",
+    "tags": [
+      "디자인패턴",
+      "구조패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_060",
+      "card-memorize-se_061",
+      "card-memorize-se_062",
+      "card-memorize-se_063",
+      "card-memorize-se_064",
+      "card-memorize-se_065"
+    ],
+    "tip": "'호환되지 않는 인터페이스 변환'이 핵심입니다. 일상의 '충전기 어댑터'와 동일한 개념으로 이해하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_067",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "인터프리터",
+    "definition": "Interpreter Pattern (인터프리터 패턴) - GoF 행위 패턴\n문법 규칙을 클래스로 표현하고, 주어진 언어(문장)를 해석(Interpret)하는 패턴\n\n• 사용 시점: 간단한 언어나 규칙을 해석해야 할 때\n• 예: SQL 파서, 정규 표현식 처리기, 수식 계산기\n• 구성: AbstractExpression, TerminalExpression, Context",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'문법 규칙을 클래스로 표현'이 핵심입니다. 간단한 언어 해석기를 만들 때 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_068",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "템플릿 메서드",
+    "definition": "Template Method Pattern (템플릿 메서드 패턴) - GoF 행위 패턴\n알고리즘의 골격(뼈대)을 상위 클래스에 정의하고, 세부 단계는 서브클래스에서 구현하는 패턴\n\n• 사용 시점: 알고리즘 구조는 동일하지만 세부 구현만 다를 때\n• 예: 음료 만들기 → 물 끓이기→재료 넣기→컵에 따르기 (재료만 다름)\n• 전략 패턴과 차이: 템플릿은 '상속+골격 고정', 전략은 '위임+알고리즘 교체'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'알고리즘 골격 정의 + 세부 단계 서브클래스 구현'이 핵심입니다. 전략 패턴(알고리즘 자체를 교체)과의 차이를 묻는 문제가 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_069",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "책임의 고리",
+    "definition": "Chain of Responsibility Pattern (책임 연쇄/고리 패턴) - GoF 행위 패턴\n요청을 처리할 수 있는 객체들을 체인(사슬)으로 연결하고, 요청을 처리할 수 있는 객체를 만날 때까지 전달하는 패턴\n\n• 사용 시점: 요청의 처리자를 미리 알 수 없을 때\n• 예: 고객센터 → 1차 상담원 → 2차 관리자 → 3차 팀장으로 에스컬레이션\n• 핵심: 요청 발신자와 수신자 간 결합도를 낮춤",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'요청을 체인으로 전달'이 핵심 키워드입니다. 미디에이터(중재자가 조정)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_070",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "커맨드",
+    "definition": "Command Pattern (커맨드 패턴) - GoF 행위 패턴\n요청(명령)을 객체로 캡슐화하여, 요청의 매개변수화, 큐잉, 로깅, 취소(Undo)를 가능하게 하는 패턴\n\n• 사용 시점: 실행 취소(Undo/Redo), 매크로 기록, 요청 큐잉이 필요할 때\n• 구성: Command(명령), Invoker(호출자), Receiver(수신자)\n• 예: 리모컨 버튼 → Command 객체 → 전등 켜기/끄기",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'요청을 객체로 캡슐화'와 '실행 취소(Undo)'가 핵심 키워드입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_071",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "이터레이터",
+    "definition": "Iterator Pattern (이터레이터 패턴) - GoF 행위 패턴\n컬렉션의 내부 구조를 노출하지 않고 원소들에 순차적으로 접근할 수 있게 하는 패턴\n\n• 사용 시점: 다양한 컬렉션을 동일한 방식으로 순회하고 싶을 때\n• 예: Java의 Iterator 인터페이스 (hasNext(), next())\n• 핵심: 컬렉션과 순회 알고리즘을 분리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'내부 구조 노출 없이 순차 접근'이 핵심입니다. Java의 Iterator 인터페이스가 대표적 구현 예시입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_072",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "미디에이터",
+    "definition": "Mediator Pattern (미디에이터/중재자 패턴) - GoF 행위 패턴\n여러 객체 간의 복잡한 상호작용을 중재자(Mediator) 객체가 캡슐화하여 조정하는 패턴\n\n• 사용 시점: 객체 간 의존관계가 복잡하여 결합도를 줄이고 싶을 때\n• 예: 채팅방(미디에이터)이 참여자들 간의 메시지를 중개\n• 옵저버와 차이: 미디에이터는 '양방향 중재', 옵저버는 '1:N 알림'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'중재자가 상호작용 조정'이 핵심 키워드입니다. 옵저버(1:N 상태 변화 알림)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_073",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "메멘토",
+    "definition": "Memento Pattern (메멘토 패턴) - GoF 행위 패턴\n객체의 상태를 저장해 두었다가 이전 상태로 복원(Undo)할 수 있게 하는 패턴\n\n• 사용 시점: 실행 취소(Undo) 기능이 필요할 때\n• 구성: Originator(원본), Memento(상태 저장), Caretaker(관리자)\n• 예: 텍스트 편집기의 Ctrl+Z(되돌리기)\n• 캡슐화를 위반하지 않고 상태를 외부에 저장",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'객체 상태 저장/복원'과 'Undo 기능'이 핵심입니다. 커맨드 패턴의 Undo와 함께 출제될 수 있습니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_074",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "옵저버",
+    "definition": "Observer Pattern (옵저버 패턴) - GoF 행위 패턴\n객체의 상태가 변하면 그 변화를 구독(Subscribe)하고 있는 모든 객체에게 자동으로 알리는 패턴 (1:N 의존 관계)\n\n• 사용 시점: 한 객체의 변화가 다른 여러 객체에 영향을 줄 때\n• 예: 유튜브 구독 → 새 영상 올리면 모든 구독자에게 알림\n• 다른 이름: Publish-Subscribe 패턴\n• 핵심: 느슨한 결합(Loose Coupling) 유지",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_075",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'상태 변화 시 구독자에게 자동 알림'과 '1:N 관계'가 핵심입니다. 미디에이터(양방향 중재)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_075",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "스테이트",
+    "definition": "State Pattern (스테이트 패턴) - GoF 행위 패턴\n객체의 내부 상태가 변할 때마다 객체의 행위가 변경되는 패턴. 상태를 객체로 캡슐화\n\n• 사용 시점: if-else/switch 문으로 상태를 관리하는 코드가 복잡해질 때\n• 예: 자판기 → 동전 투입 상태, 음료 선택 상태, 배출 상태에 따라 동작 변경\n• 전략 패턴과 차이: 스테이트는 '상태 전이', 전략은 '알고리즘 선택'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_076",
+      "card-memorize-se_077"
+    ],
+    "tip": "'상태에 따라 행위 변경'이 핵심입니다. 전략(Strategy) 패턴과 구조는 유사하지만 '상태 전이' vs '알고리즘 교체'로 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_076",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "스트레티지",
+    "definition": "Strategy Pattern (전략/스트레티지 패턴) - GoF 행위 패턴\n알고리즘을 캡슐화하여 동일한 문제를 다른 알고리즘으로 교환(교체)할 수 있게 하는 패턴\n\n• 사용 시점: 동일한 목적의 여러 알고리즘 중 하나를 선택해야 할 때\n• 예: 결제 시스템 → 신용카드/페이팔/가상화폐 전략을 런타임에 교체\n• 템플릿 메서드와 차이: 전략은 '위임+교체', 템플릿은 '상속+골격 고정'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_077"
+    ],
+    "tip": "'알고리즘 캡슐화 + 교환 가능'이 핵심입니다. 스테이트 패턴(상태 전이)과 혼동하는 오답에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_077",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "비지터",
+    "definition": "Visitor Pattern (비지터 패턴) - GoF 행위 패턴\n객체 구조(데이터)를 변경하지 않고 새로운 연산(기능)을 추가할 수 있게 하는 패턴\n\n• 사용 시점: 객체 구조는 고정이지만 연산을 자주 추가해야 할 때\n• 예: 파일 시스템의 파일/폴더에 압축, 바이러스 검사 등 연산을 추가\n• 핵심: 더블 디스패치(Double Dispatch) 기법 사용\n• OCP(개방-폐쇄 원칙)를 따르지만 새 요소 추가 시에는 불리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_021",
+    "tags": [
+      "디자인패턴",
+      "행위패턴",
+      "GoF"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_067",
+      "card-memorize-se_068",
+      "card-memorize-se_069",
+      "card-memorize-se_070",
+      "card-memorize-se_071",
+      "card-memorize-se_072",
+      "card-memorize-se_073",
+      "card-memorize-se_074",
+      "card-memorize-se_075",
+      "card-memorize-se_076"
+    ],
+    "tip": "'구조 변경 없이 새 연산 추가'가 핵심입니다. 데코레이터(기능 추가)와 달리 '연산'을 추가한다는 점이 차이!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_078",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "결합도 6단계를 강한",
+    "definition": "(암기: 내공외제스자)\n\n결합도(Coupling) 6단계 [강한 → 약한 순서]:\n• 내용(Content): 다른 모듈 내부 직접 참조/수정\n• 공통(Common): 전역 변수 공유\n• 외부(External): 외부 프로토콜/데이터 포맷 공유\n• 제어(Control): 제어 플래그(Flag) 전달\n• 스탬프(Stamp): 자료구조(배열/객체) 전체 전달\n• 자료(Data): 순수 데이터 값만 전달 (가장 바람직)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_079",
+      "card-memorize-se_080",
+      "card-memorize-se_081",
+      "card-memorize-se_082",
+      "card-memorize-se_083",
+      "card-memorize-se_084"
+    ],
+    "tip": "'내공외제스자' 순서를 반드시 암기하세요. 결합도는 약할수록(자료 결합도) 좋은 설계입니다. 순서를 바꿔 출제하는 문제가 매우 빈번합니다!",
+    "mnemonic": "내공외제스자"
+  },
+  {
+    "id": "card-memorize-se_079",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "내용결합도",
+    "definition": "내용 결합도(Content Coupling)\n다른 모듈의 내부 기능이나 자료를 직접 참조하거나 수정하는 가장 강한 결합도\n\n• 가장 피해야 할 결합 형태\n• 예: 모듈A가 모듈B의 내부 변수를 직접 변경\n• 모듈 간 독립성이 완전히 깨짐",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_080",
+      "card-memorize-se_081",
+      "card-memorize-se_082",
+      "card-memorize-se_083",
+      "card-memorize-se_084"
+    ],
+    "tip": "'내부 직접 참조/수정'이 핵심입니다. 결합도 6단계 중 가장 강한(나쁜) 결합도!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_080",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "공통결합도",
+    "definition": "공통 결합도(Common Coupling)\n여러 모듈이 하나의 전역 변수(Global Variable)를 공유하는 결합도\n\n• 한 모듈이 전역 변수를 변경하면 다른 모듈도 영향\n• 예: 전역변수 config를 여러 모듈이 읽고 수정\n• 디버깅이 어렵고 부작용(Side Effect) 발생 가능",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_079",
+      "card-memorize-se_081",
+      "card-memorize-se_082",
+      "card-memorize-se_083",
+      "card-memorize-se_084"
+    ],
+    "tip": "'전역 변수 공유'가 핵심 키워드입니다. 외부 결합도(외부 프로토콜 공유)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_081",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "외부결합도",
+    "definition": "외부 결합도(External Coupling)\n외부에서 도입된 데이터 포맷이나 통신 프로토콜, 장치 인터페이스 등을 여러 모듈이 공유하는 결합도\n\n• 공통 결합도와 차이: 공통은 '전역 변수', 외부는 '외부 규격'\n• 예: 두 모듈이 동일한 외부 API의 JSON 형식에 의존",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_079",
+      "card-memorize-se_080",
+      "card-memorize-se_082",
+      "card-memorize-se_083",
+      "card-memorize-se_084"
+    ],
+    "tip": "'외부에서 정해진 규격/프로토콜 공유'가 핵심입니다. 공통 결합도(전역 변수)와의 차이를 묻는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_082",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "제어결합도",
+    "definition": "제어 결합도(Control Coupling)\n제어 요소(플래그/Flag)를 전달하여 다른 모듈의 내부 처리 로직을 제어하는 결합도\n\n• 예: printReport(isDetailed=true) → 플래그에 따라 상세/요약 출력\n• 호출하는 모듈이 호출받는 모듈의 동작을 좌우",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_079",
+      "card-memorize-se_080",
+      "card-memorize-se_081",
+      "card-memorize-se_083",
+      "card-memorize-se_084"
+    ],
+    "tip": "'플래그(Flag) 전달로 내부 로직 제어'가 핵심입니다. 자료 결합도(순수 데이터)와 혼동하지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_083",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "스탬프결합도",
+    "definition": "스탬프 결합도(Stamp Coupling)\n배열, 레코드, 구조체, 객체 등 자료구조 전체를 다른 모듈에 전달하는 결합도\n\n• 필요한 항목만 전달하면 자료 결합도가 되지만, 구조체 전체를 넘기면 스탬프\n• 예: Student 객체 전체를 전달하지만 이름만 사용\n• 자료 결합도보다 한 단계 강함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_079",
+      "card-memorize-se_080",
+      "card-memorize-se_081",
+      "card-memorize-se_082",
+      "card-memorize-se_084"
+    ],
+    "tip": "'배열/객체/구조체 전체 전달'이 핵심입니다. 자료 결합도(필요한 값만)와 비교 출제가 잦습니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_084",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "자료결합도",
+    "definition": "자료 결합도(Data Coupling)\n매개변수로 순수 데이터(단순 값)만 전달하는 가장 약한(가장 바람직한) 결합도\n\n• 모듈 간 독립성이 가장 높은 이상적인 형태\n• 예: calculate(10, 20) → 단순 정수값만 전달\n• 결합도 6단계 중 최하위(가장 좋음)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_022",
+    "tags": [
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_078",
+      "card-memorize-se_079",
+      "card-memorize-se_080",
+      "card-memorize-se_081",
+      "card-memorize-se_082",
+      "card-memorize-se_083"
+    ],
+    "tip": "'순수 데이터 값만 파라미터로 전달'이 핵심입니다. 가장 바람직한 결합도 = 자료(Data)!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_085",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "응집도 7단계를 강한",
+    "definition": "(암기: 기순교절시논우)\n\n응집도(Cohesion) 7단계 [강한 → 약한 순서]:\n• 기능적(Functional): 단일 기능 수행 (가장 바람직)\n• 순차적(Sequential): 출력→입력 데이터 연결\n• 교환적(Communication): 동일 데이터 사용 다른 기능\n• 절차적(Procedural): 순서만 있고 데이터 연관 없음\n• 시간적(Temporal): 같은 시간대 실행\n• 논리적(Logical): 유사 성격으로 묶임\n• 우연적(Coincidental): 관련 없이 모임 (가장 나쁨)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'기순교절시논우' 순서를 암기하세요. 응집도는 높을수록(기능적) 좋은 설계입니다. 결합도(낮을수록 좋음)와 방향이 반대임을 기억!",
+    "mnemonic": "기순교절시논우"
+  },
+  {
+    "id": "card-memorize-se_086",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "기능적",
+    "definition": "기능적 응집도(Functional Cohesion)\n모듈 내 모든 요소가 하나의 단일 기능을 수행하기 위해 구성된 상태 (가장 바람직한 응집도)\n\n• 예: calculateTax() → 세금 계산만 담당\n• 유지보수 용이, 재사용성 높음, 테스트 쉬움\n• 응집도 7단계 중 최상위(가장 좋음)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'하나의 단일 기능만 수행'이 핵심입니다. 가장 좋은 응집도 = 기능적!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_087",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "순차적",
+    "definition": "순차적 응집도(Sequential Cohesion)\n한 활동의 출력(결과)이 다음 활동의 입력(데이터)으로 사용되는 상태\n\n• 비유: 컨베이어 벨트 → 이전 공정의 결과물이 다음 공정의 재료\n• 예: 파일 읽기 → 데이터 파싱 → 결과 저장\n• 기능적 응집도 다음으로 강한 응집도",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'출력이 다음 입력'이 핵심입니다. 절차적(순서만 있고 데이터 연관 없음)과 반드시 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_088",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "교환적(통신적)",
+    "definition": "교환적(통신적) 응집도(Communication Cohesion)\n동일한 입출력 데이터를 사용하여 서로 다른 기능을 수행하는 활동이 모인 상태\n\n• 비유: 같은 고객 데이터로 '주소 출력'과 '이름 출력'을 함께 처리\n• 순차적과 차이: 교환적은 '같은 데이터 공유', 순차적은 '데이터 흐름 연결'\n• 절차적보다 한 단계 강함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'동일한 데이터를 사용하는 서로 다른 기능'이 핵심입니다. 순차적(데이터 흐름)과 비교 출제가 빈번합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_089",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "절차적",
+    "definition": "절차적 응집도(Procedural Cohesion)\n모듈 안의 작업들이 정해진 순서대로 수행되지만, 데이터 간의 연관성은 없는 상태\n\n• 순차적과 차이: 절차적은 '순서만 공유', 순차적은 '출력→입력 연결'\n• 예: 파일 열기→데이터 출력→통계 계산 (각 단계 데이터가 다름)\n• 교환적(통신적)보다 한 단계 약함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_090",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'순서대로 수행하지만 데이터 연관 없음'이 핵심입니다. 순차적 응집도와의 차이를 명확히 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_090",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "시간적",
+    "definition": "시간적 응집도(Temporal Cohesion)\n같은 시간대에 함께 실행되어야 하는 활동들이 모인 상태\n\n• 비유: 아침 루틴(세수, 양치, 식사)을 하나의 모듈로 묶음\n• 예: 시스템 초기화 시 변수 초기화 + 파일 열기 + 로그 시작\n• 기능적 관련성은 없고 실행 시점만 같음",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_091",
+      "card-memorize-se_092"
+    ],
+    "tip": "'같은 시간대에 실행'이 핵심 키워드입니다. 초기화(init) 모듈이 대표적 예시입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_091",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "논리적",
+    "definition": "논리적 응집도(Logical Cohesion)\n유사한 성격(논리적 분류)의 처리 요소를 한 모듈에 모아둔 상태로, 실행 시에는 선택적으로 하나만 동작\n\n• 예: 입력 모듈(키보드/마우스/터치 입력을 하나로 묶음)\n• 실행 시 매개변수에 따라 어떤 기능을 수행할지 결정\n• 우연적 응집도보다 한 단계 강함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_092"
+    ],
+    "tip": "'유사 성격으로 묶이지만 선택적으로 동작'이 핵심입니다. 우연적(관련 없음)과 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_092",
+    "categoryId": "memorize-se",
+    "subcategory": "모듈",
+    "term": "우연적",
+    "definition": "우연적 응집도(Coincidental Cohesion)\n서로 관련 없는 요소들이 무작위로 모여 있는 상태 (가장 나쁜 응집도)\n\n• 비유: 아무 물건이나 마구 넣어둔 잡동사니 서랍\n• 유지보수가 가장 어렵고 이해하기 힘든 모듈\n• 응집도 7단계 중 최하위(가장 나쁨)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_023",
+    "tags": [
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_085",
+      "card-memorize-se_086",
+      "card-memorize-se_087",
+      "card-memorize-se_088",
+      "card-memorize-se_089",
+      "card-memorize-se_090",
+      "card-memorize-se_091"
+    ],
+    "tip": "'서로 관련 없는 요소의 모임'이 핵심입니다. 가장 나쁜 응집도 = 우연적(Coincidental)!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_093",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "구문 커버리지",
+    "definition": "구문(문장) 커버리지(Statement Coverage)\n프로그램 내 모든 실행 구문(명령문)을 최소 1회 이상 수행하는 커버리지\n\n• 가장 기본적이고 약한 커버리지 기준\n• 예: if문의 한 분기만 테스트해도 그 안의 구문이 실행되면 달성\n• 결정(분기) 커버리지보다 약한 기준",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_094",
+      "card-memorize-se_095",
+      "card-memorize-se_096",
+      "card-memorize-se_097",
+      "card-memorize-se_098"
+    ],
+    "tip": "'모든 구문을 최소 1회 실행'이 핵심입니다. 커버리지 기준 중 가장 약합니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_094",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "결정 커버리지",
+    "definition": "결정(분기) 커버리지(Decision/Branch Coverage)\n모든 조건식의 전체 결과가 True와 False를 각각 최소 1회 이상 수행하는 커버리지\n\n• 구문 커버리지보다 강한 기준\n• '전체 조건식'의 결과를 봄 (개별 조건 X)\n• 조건 커버리지와의 차이: 결정은 '전체 결과', 조건은 '개별 조건'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_093",
+      "card-memorize-se_095",
+      "card-memorize-se_096",
+      "card-memorize-se_097",
+      "card-memorize-se_098"
+    ],
+    "tip": "'전체 조건식의 T/F'가 핵심입니다. 조건 커버리지(개별 조건의 T/F)와 구분하는 문제가 시험 단골!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_095",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "조건 커버리지",
+    "definition": "조건 커버리지(Condition Coverage)\n조건식 안의 개별 조건 각각이 True와 False를 최소 1회 이상 수행하는 커버리지\n\n• '개별 조건 하나하나'를 봄 (전체 결과 X)\n• 조건 커버리지를 만족해도 결정 커버리지를 만족하지 못할 수 있음!\n• 결정 커버리지와의 차이가 시험 핵심 포인트",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_093",
+      "card-memorize-se_094",
+      "card-memorize-se_096",
+      "card-memorize-se_097",
+      "card-memorize-se_098"
+    ],
+    "tip": "'개별 조건의 T/F'가 핵심입니다. 조건 커버리지 만족 ≠ 결정 커버리지 만족이라는 점이 시험 출제 핵심!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_096",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "다중 조건 커버리지",
+    "definition": "다중 조건 커버리지(Multiple Condition Coverage)\n모든 개별 조건의 가능한 모든 조합을 전부 테스트하는 커버리지\n\n• 가장 강력한 커버리지 기준\n• 조건이 N개이면 최대 2^N개 테스트 케이스 필요\n• 비용이 높아 실무에서는 MC/DC를 더 많이 사용",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_093",
+      "card-memorize-se_094",
+      "card-memorize-se_095",
+      "card-memorize-se_097",
+      "card-memorize-se_098"
+    ],
+    "tip": "'모든 조합을 전부 테스트'와 '2^N개 테스트 케이스'가 핵심 키워드입니다. 가장 강력하지만 비용이 큽니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_097",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "제어흐름 테스트",
+    "definition": "제어 흐름 테스트(Control Flow Testing)\n프로그램의 제어 흐름 그래프(Control Flow Graph)를 기반으로 실행 경로를 테스트하는 화이트박스 기법\n\n• 기초 경로 검사(Basis Path Testing)가 대표적\n• 맥케이브(McCabe)의 순환 복잡도(Cyclomatic Complexity)를 활용\n• 순환 복잡도 = E - N + 2 (E: 간선 수, N: 노드 수)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_093",
+      "card-memorize-se_094",
+      "card-memorize-se_095",
+      "card-memorize-se_096",
+      "card-memorize-se_098"
+    ],
+    "tip": "'제어 흐름 그래프'와 '순환 복잡도(V(G) = E - N + 2)'가 핵심입니다. 맥케이브(McCabe)와 함께 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_098",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "루프 테스트",
+    "definition": "루프 테스트(Loop Testing)\n프로그램의 반복문(Loop)의 경계 조건을 집중적으로 테스트하는 화이트박스 기법\n\n• 테스트 항목: 루프 0회, 1회, 2회, m회, 최대-1회, 최대회, 최대+1회 실행\n• 단순 루프, 중첩 루프, 연결 루프, 비구조적 루프를 각각 테스트\n• 반복문에서 발생하는 무한 루프, 경계 오류를 발견",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_024",
+    "tags": [
+      "테스트",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_093",
+      "card-memorize-se_094",
+      "card-memorize-se_095",
+      "card-memorize-se_096",
+      "card-memorize-se_097"
+    ],
+    "tip": "'반복문의 경계 조건(0회, 1회, 최대회 등)을 테스트'가 핵심입니다. 경계값 분석(입력값 범위 경계)과 혼동하지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_099",
+    "categoryId": "memorize-se",
+    "subcategory": "설계원칙",
+    "term": "객체지향 설계 SOLID 원칙 5가지",
+    "definition": "S: 단일 책임 원칙(SRP), O: 개방-폐쇄 원칙(OCP), L: 리스코프 치환 원칙(LSP), I: 인터페이스 분리 원칙(ISP), D: 의존 역전 원칙(DIP)",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_025",
+    "tags": [
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "tip": "SOLID 5가지 원칙 각각의 영문 약어와 한글 의미를 정확히 매칭하는 문제가 자주 출제됩니다. 특히 LSP(부모→자식 대체)와 DIP(추상에 의존)를 혼동하지 마세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_100",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "term": "Point-to-Point",
+    "definition": "Point-to-Point (점대점 방식)\n애플리케이션 간 1:1로 직접 연결하는 가장 단순한 EAI 유형\n\n• 장점: 구현이 단순, 소규모 시스템에 적합\n• 단점: 시스템 수 증가 시 연결 수가 N(N-1)/2로 폭증 (스파게티 구조)\n• 변경·재사용이 어렵고 유지보수 비용 높음\n• 비유: 전화선으로 집집마다 직접 연결한 구조",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_026",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_101",
+      "card-memorize-se_102",
+      "card-memorize-se_103"
+    ],
+    "tip": "'1:1 직접 연결'과 '변경·재사용 어려움'이 핵심 키워드입니다. Hub & Spoke(중앙 집중)와의 차이를 묻는 문제가 자주 나옵니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_101",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "term": "Hub & Spoke",
+    "definition": "Hub & Spoke (허브 앤 스포크 방식)\n중앙 허브가 모든 데이터 전송을 담당하는 EAI 유형\n\n• 장점: 중앙에서 일괄 관리 가능, Point-to-Point보다 관리 용이\n• 단점: 허브 장애 시 전체 시스템에 영향 (SPOF: 단일 장애점)\n• 비유: 공항 허브처럼 모든 노선이 중앙을 경유\n• 데이터 변환, 라우팅을 허브에서 처리",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_026",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_100",
+      "card-memorize-se_102",
+      "card-memorize-se_103"
+    ],
+    "tip": "'중앙 허브'와 '허브 장애 시 전체 영향(SPOF)'이 핵심입니다. Message Bus(분산형)와의 차이를 묻는 문제가 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_102",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "term": "Message Bus",
+    "definition": "Message Bus (메시지 버스 방식)\n미들웨어(ESB: Enterprise Service Bus)를 통해 메시지 기반으로 시스템을 통합하는 EAI 유형\n\n• 장점: 확장성 우수, 느슨한 결합(Loose Coupling)\n• 특징: 애플리케이션 간 직접 연결 없이 버스를 통해 통신\n• 비유: 도시 버스 노선처럼 정류장(시스템)이 버스(메시지)를 통해 연결\n• Hub & Spoke보다 분산된 구조",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_026",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_100",
+      "card-memorize-se_101",
+      "card-memorize-se_103"
+    ],
+    "tip": "'ESB(Enterprise Service Bus)'와 '확장성 우수'가 핵심 키워드입니다. 미들웨어를 통한 메시지 기반 통합이라는 점을 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_103",
+    "categoryId": "memorize-se",
+    "subcategory": "EAI",
+    "term": "Hybrid",
+    "definition": "Hybrid (하이브리드 방식)\nHub & Spoke와 Message Bus를 결합한 EAI 유형\n\n• 장점: 유연성과 안정성을 동시에 확보\n• 특징: 그룹 내부는 Hub & Spoke, 그룹 간에는 Message Bus 사용\n• 대규모 기업 환경에서 가장 많이 채택\n• 비유: 부서 내부는 팀장(허브) 중심, 부서 간에는 메신저(버스)로 소통",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_026",
+    "tags": [
+      "EAI",
+      "시스템통합"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_100",
+      "card-memorize-se_101",
+      "card-memorize-se_102"
+    ],
+    "tip": "Hybrid는 'Hub & Spoke + Message Bus 결합'이라는 점을 반드시 기억하세요. EAI 4가지 유형 중 가장 발전된 형태입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_104",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "유스케이스 뷰",
+    "definition": "유스케이스 뷰(Use Case View)\n사용자(Actor) 관점에서 시스템의 기능을 표현하는 뷰\n\n• 4+1 뷰 모델에서 '+1'에 해당 (다른 4개 뷰를 검증하는 역할)\n• 유스케이스 다이어그램으로 표현\n• 고객/사용자/분석가가 주요 이해관계자\n• 시스템이 무엇을 해야 하는지(What)를 정의",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_027",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_105",
+      "card-memorize-se_106",
+      "card-memorize-se_107",
+      "card-memorize-se_108"
+    ],
+    "tip": "'4+1 뷰의 +1'이자 '다른 뷰를 검증'하는 역할이라는 점이 핵심입니다. 유스케이스 뷰가 중심이 되어 나머지 4개 뷰를 묶는다는 개념!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_105",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "논리 뷰",
+    "definition": "논리 뷰(Logical View)\n시스템의 기능적 요구사항을 표현하는 뷰로, 클래스/패키지 구조를 다룸\n\n• 설계자(Designer) 관점\n• 시스템의 정적 구조를 클래스 다이어그램으로 표현\n• 객체 간의 관계, 상속, 인터페이스를 정의",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_027",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_104",
+      "card-memorize-se_106",
+      "card-memorize-se_107",
+      "card-memorize-se_108"
+    ],
+    "tip": "'기능적 요구사항'과 '클래스/패키지 구조'가 핵심 키워드입니다. 구현 뷰(개발자 관점, 모듈 구성)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_106",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "프로세스 뷰",
+    "definition": "프로세스 뷰(Process View)\n시스템의 동시성, 동기화, 성능 등 비기능적 요구사항을 표현하는 뷰\n\n• 시스템 통합자(Integrator) 관점\n• 프로세스, 스레드, 동기화 메커니즘을 다룸\n• 활동(Activity) 다이어그램으로 표현\n• 성능, 가용성, 확장성 등을 분석",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_027",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_104",
+      "card-memorize-se_105",
+      "card-memorize-se_107",
+      "card-memorize-se_108"
+    ],
+    "tip": "'비기능적 요구사항'과 '동시성/동기화'가 핵심 키워드입니다. 논리 뷰(기능적 요구사항)와 대비되는 뷰입니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_107",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "구현 뷰",
+    "definition": "구현 뷰(Implementation/Development View)\n개발자 관점에서 소프트웨어의 모듈 구성과 컴포넌트 구조를 표현하는 뷰\n\n• 프로그래머(Programmer) 관점\n• 소스코드의 구조, 모듈 분할, 라이브러리 의존성\n• 컴포넌트 다이어그램으로 표현\n• 논리 뷰와 차이: 구현 뷰는 '물리적 코드 구조', 논리 뷰는 '논리적 설계 구조'",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_027",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_104",
+      "card-memorize-se_105",
+      "card-memorize-se_106",
+      "card-memorize-se_108"
+    ],
+    "tip": "'개발자 관점'과 '모듈/컴포넌트 구조'가 핵심입니다. 논리 뷰(설계 구조)와 구현 뷰(코드 구조)의 차이를 묻는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_108",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "배포 뷰",
+    "definition": "배포 뷰(Physical/Deployment View)\n물리적 노드(서버, 하드웨어)에 소프트웨어가 어떻게 배치되는지를 표현하는 뷰\n\n• 시스템 엔지니어(System Engineer) 관점\n• 배포(Deployment) 다이어그램으로 표현\n• 노드 간 통신, 네트워크 구성, 설치 위치를 정의\n• 성능, 확장성, 가용성에 영향",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_027",
+    "tags": [
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_104",
+      "card-memorize-se_105",
+      "card-memorize-se_106",
+      "card-memorize-se_107"
+    ],
+    "tip": "'물리적 노드에 SW 배치'가 핵심 키워드입니다. 구현 뷰(코드 구조)와 배포 뷰(물리적 배치)를 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_109",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "CMMi(Capability Maturity Model Integration) 5단계를",
+    "definition": "CMMi(Capability Maturity Model Integration)\n카네기 멜런 대학 SEI에서 개발한 소프트웨어 프로세스 성숙도 모델\n\n(암기: 초관정정최)\n5단계:\n1. 초기(Initial): 프로세스 정의 없음, 개인 역량에 의존\n2. 관리(Managed): 기본 프로젝트 관리 프로세스 확립\n3. 정의(Defined): 조직 차원 표준 프로세스 정의\n4. 정량적 관리(Quantitatively Managed): 정량적 측정/분석 통제\n5. 최적화(Optimizing): 지속적 프로세스 개선",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_110",
+      "card-memorize-se_111",
+      "card-memorize-se_112",
+      "card-memorize-se_113",
+      "card-memorize-se_114"
+    ],
+    "tip": "'초관정정최' 순서를 암기하세요. 각 단계의 핵심 키워드(초기=개인의존, 관리=프로젝트관리, 정의=조직표준, 정량적=측정분석, 최적화=지속개선)도 함께!",
+    "mnemonic": "초관정정최"
+  },
+  {
+    "id": "card-memorize-se_110",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "초기(Initial)",
+    "definition": "CMMi 1단계 - 초기(Initial)\n프로세스가 정의되어 있지 않고, 개인의 역량에 전적으로 의존하는 단계\n\n• 프로젝트 성공이 우연에 좌우됨\n• 일정, 비용 예측이 불가능\n• 비유: 각자 알아서 일하는 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_109",
+      "card-memorize-se_111",
+      "card-memorize-se_112",
+      "card-memorize-se_113",
+      "card-memorize-se_114"
+    ],
+    "tip": "'프로세스 정의 없음'과 '개인 역량에 의존'이 핵심 키워드입니다. CMMi 5단계의 시작점입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_111",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "관리(Managed)",
+    "definition": "CMMi 2단계 - 관리(Managed)\n기본적인 프로젝트 관리 프로세스가 확립되어 프로젝트 단위로 관리가 이루어지는 단계\n\n• 일정, 비용, 범위를 관리\n• 프로젝트별로 프로세스가 다를 수 있음\n• 비유: 각 프로젝트 팀이 자기만의 규칙을 가진 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_109",
+      "card-memorize-se_110",
+      "card-memorize-se_112",
+      "card-memorize-se_113",
+      "card-memorize-se_114"
+    ],
+    "tip": "'프로젝트 단위 관리'가 핵심입니다. 정의 단계(조직 차원 표준)와의 차이를 묻는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_112",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "정의(Defined)",
+    "definition": "CMMi 3단계 - 정의(Defined)\n조직 차원에서 표준 프로세스가 정의되어 모든 프로젝트가 이를 따르는 단계\n\n• 프로젝트별 프로세스가 아닌 조직 표준 프로세스\n• 프로젝트마다 테일러링(Tailoring)하여 적용\n• 비유: 회사 전체가 같은 업무 매뉴얼을 따르는 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_109",
+      "card-memorize-se_110",
+      "card-memorize-se_111",
+      "card-memorize-se_113",
+      "card-memorize-se_114"
+    ],
+    "tip": "'조직 차원 표준 프로세스 정의'가 핵심입니다. 관리 단계(프로젝트 단위)와의 차이를 명확히 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_113",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "정량적 관리(Quantitatively Managed)",
+    "definition": "CMMi 4단계 - 정량적 관리(Quantitatively Managed)\n프로세스를 정량적(수치적)으로 측정하고 분석하여 통제하는 단계\n\n• 통계적 기법을 활용한 프로세스 관리\n• 품질과 프로세스 성과를 수치로 예측 가능\n• 비유: 대시보드로 실시간 수치 모니터링하는 상태",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_109",
+      "card-memorize-se_110",
+      "card-memorize-se_111",
+      "card-memorize-se_112",
+      "card-memorize-se_114"
+    ],
+    "tip": "'정량적 측정/분석'과 '통계적 통제'가 핵심 키워드입니다. 최적화(지속 개선)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_114",
+    "categoryId": "memorize-se",
+    "subcategory": "프로세스",
+    "term": "최적화(Optimizing)",
+    "definition": "CMMi 5단계 - 최적화(Optimizing)\n정량적 데이터를 기반으로 지속적인 프로세스 개선 활동을 수행하는 최상위 단계\n\n• 결함 원인 분석 및 예방\n• 신기술 도입을 통한 프로세스 혁신\n• 비유: 끊임없이 업그레이드하는 학습 조직",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_028",
+    "tags": [
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_109",
+      "card-memorize-se_110",
+      "card-memorize-se_111",
+      "card-memorize-se_112",
+      "card-memorize-se_113"
+    ],
+    "tip": "'지속적 프로세스 개선'과 '결함 예방'이 핵심 키워드입니다. CMMi 5단계의 최상위!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_115",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "결함 집중(파레토 법칙)",
+    "definition": "결함 집중 = 파레토 법칙(Pareto Principle)\n전체 결함의 80%는 전체 모듈의 20%에서 발생한다는 소프트웨어 테스트 원리\n\n• 80:20 법칙이라고도 함\n• 결함이 집중된 모듈에 테스트를 집중해야 효율적\n• 테스트 7대 원리 중 하나",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_029",
+    "tags": [
+      "테스트원리",
+      "파레토",
+      "살충제패러독스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_116",
+      "card-memorize-se_117"
+    ],
+    "tip": "'80%의 결함이 20%의 모듈에서 발생'이 핵심입니다. 살충제 패러독스(테스트 반복→새 결함 발견 불가)와 함께 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_116",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "살충제 패러독스",
+    "definition": "동일한 테스트를 반복하면 새로운 결함을 발견할 수 없으므로 테스트를 주기적으로 개선해야 함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_029",
+    "tags": [
+      "테스트원리",
+      "파레토",
+      "살충제패러독스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_115",
+      "card-memorize-se_117"
+    ],
+    "tip": "살충제 패러독스는 '동일 테스트 반복 시 새 결함 발견 불가'가 핵심입니다. 해결책은 '테스트를 주기적으로 개선/변경'하는 것!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_117",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "오류-부재의 궤변",
+    "definition": "오류-부재의 궤변(Absence of Errors Fallacy)\n결함을 모두 제거해도 사용자 요구사항을 충족하지 못하면 품질이 높다고 할 수 없다는 테스트 원리\n\n• 테스트의 궁극적 목적은 '사용자 만족'\n• 기술적 완벽함 ≠ 사용자 만족\n• 테스트 7대 원리 중 하나",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_029",
+    "tags": [
+      "테스트원리",
+      "파레토",
+      "살충제패러독스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_115",
+      "card-memorize-se_116"
+    ],
+    "tip": "'결함이 없어도 요구사항 미충족이면 무의미'가 핵심입니다. 테스트의 목적은 결함 발견이 아니라 '사용자 만족'임을 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_118",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "빌드 자동화의 처리 절차를",
+    "definition": "(암기: 종컴패테배)\n\n빌드 자동화(Build Automation)의 처리 절차:\n1. 종속성 다운로드: 프로젝트에 필요한 외부 라이브러리/모듈 다운로드\n2. 컴파일: 소스코드를 기계어/바이트코드로 변환\n3. 패키징: 실행 가능한 형태(JAR, WAR, APK 등)로 묶음\n4. 테스트: 자동화된 단위/통합 테스트 실행\n5. 배포: 빌드 결과물을 서버/운영 환경에 배포",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_119",
+      "card-memorize-se_120",
+      "card-memorize-se_121",
+      "card-memorize-se_122",
+      "card-memorize-se_123",
+      "card-memorize-se_124"
+    ],
+    "tip": "'종컴패테배' 순서를 암기하세요. 빌드 도구(Jenkins, Maven, Gradle)와 함께 출제됩니다.",
+    "mnemonic": "종컴패테배"
+  },
+  {
+    "id": "card-memorize-se_119",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "종속성 다운로드",
+    "definition": "종속성 다운로드(Dependency Download)\n프로젝트에 필요한 외부 라이브러리와 모듈을 자동으로 다운로드하는 빌드의 첫 번째 단계\n\n• Maven: pom.xml, Gradle: build.gradle에 의존성 정의\n• 중앙 저장소(Maven Central, npm Registry 등)에서 다운로드\n• 빌드 자동화의 시작점",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_120",
+      "card-memorize-se_121",
+      "card-memorize-se_122",
+      "card-memorize-se_123",
+      "card-memorize-se_124"
+    ],
+    "tip": "Maven의 pom.xml, Gradle의 build.gradle이 의존성 관리 파일이라는 점도 함께 알아두세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_120",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "컴파일",
+    "definition": "컴파일(Compile)\n소스코드를 기계어 또는 바이트코드로 변환하는 빌드의 두 번째 단계\n\n• Java: .java → .class (바이트코드)\n• C/C++: .c/.cpp → .o → 실행파일 (기계어)\n• 문법 오류(Syntax Error)는 이 단계에서 발견됨",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_119",
+      "card-memorize-se_121",
+      "card-memorize-se_122",
+      "card-memorize-se_123",
+      "card-memorize-se_124"
+    ],
+    "tip": "컴파일은 '소스코드→기계어/바이트코드 변환'이 핵심입니다. 인터프리터(한 줄씩 실행)와 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_121",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "패키징",
+    "definition": "패키징(Packaging)\n컴파일된 결과물을 실행 가능한 형태로 묶는 빌드의 세 번째 단계\n\n• Java: JAR(라이브러리), WAR(웹 애플리케이션), EAR(엔터프라이즈)\n• 모바일: APK(Android), IPA(iOS)\n• Node.js: npm package\n• 배포에 필요한 리소스(설정파일, 이미지 등)도 함께 포함",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_119",
+      "card-memorize-se_120",
+      "card-memorize-se_122",
+      "card-memorize-se_123",
+      "card-memorize-se_124"
+    ],
+    "tip": "JAR, WAR, EAR의 차이를 묻는 문제가 출제됩니다. JAR=라이브러리, WAR=웹앱, EAR=엔터프라이즈!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_122",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "테스트",
+    "definition": "테스트(Test)\n빌드 과정의 네 번째 단계로, 자동화된 단위 테스트와 통합 테스트를 실행하여 결함을 조기 발견\n\n• 단위 테스트: 개별 모듈 기능 검증\n• 통합 테스트: 모듈 간 인터페이스 검증\n• CI/CD 파이프라인에서 자동 실행\n• 테스트 실패 시 빌드가 중단됨",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_119",
+      "card-memorize-se_120",
+      "card-memorize-se_121",
+      "card-memorize-se_123",
+      "card-memorize-se_124"
+    ],
+    "tip": "빌드 자동화에서 테스트는 '패키징 후, 배포 전'에 수행됩니다. CI/CD에서 자동으로 실행된다는 점을 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_123",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "배포",
+    "definition": "배포(Deploy)\n빌드 결과물을 실제 운영 환경(서버)에 배포하는 빌드의 마지막 단계\n\n• 배포 방식: Rolling, Blue-Green, Canary 등\n• CI/CD의 CD(Continuous Delivery/Deployment)에 해당\n• 자동 배포 도구: Jenkins, GitLab CI, AWS CodeDeploy 등",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_119",
+      "card-memorize-se_120",
+      "card-memorize-se_121",
+      "card-memorize-se_122",
+      "card-memorize-se_124"
+    ],
+    "tip": "배포는 빌드 자동화의 마지막 단계입니다. CI(지속적 통합)와 CD(지속적 배포)의 차이도 알아두세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_124",
+    "categoryId": "memorize-se",
+    "subcategory": "빌드",
+    "term": "대표 도구",
+    "definition": "빌드 자동화 대표 도구:\n\n• Jenkins: 오픈소스 CI/CD 서버, 플러그인 생태계 풍부\n• Maven: Java 빌드 도구, pom.xml 기반, 표준화된 프로젝트 구조\n• Gradle: Groovy/Kotlin DSL 기반, Maven보다 빠르고 유연\n• Ant: XML 기반 빌드 도구, 자유도 높지만 표준 부재\n\n→ 최근 추세: Gradle > Maven > Ant",
+    "source": "memorize",
+    "sourceQuestionId": "memorize-se_030",
+    "tags": [
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_118",
+      "card-memorize-se_119",
+      "card-memorize-se_120",
+      "card-memorize-se_121",
+      "card-memorize-se_122",
+      "card-memorize-se_123"
+    ],
+    "tip": "Jenkins는 CI/CD 서버(빌드 자동화), Maven/Gradle/Ant는 빌드 도구라는 차이를 기억하세요. Gradle이 최신 트렌드!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_125",
+    "categoryId": "memorize-se",
+    "subcategory": "개발방법론",
+    "term": "피드백, 존중, 용기, 단순성, 소통(의사소통)",
+    "definition": "XP의 5가지 핵심가치 (피존의 용기는 단순하게 소통한다):\n- 피드백: 지속적인 테스트와 반복적 결함 수정\n- 존중: 모든 프로젝트 관리자는 팀원의 기여 존중\n- 용기: 고객 요구사항 변화에 능동적인 대처\n- 단순성: 부가적 기능, 사용않는 알고리즘 배제\n- 소통: 개발자, 관리자, 고객 간의 원활한 소통",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_001",
+    "tags": [
+      "소프트웨어공학",
+      "XP",
+      "애자일",
+      "핵심가치"
+    ],
+    "tip": "XP 5가지 핵심가치는 '피존용단소(피드백, 존중, 용기, 단순성, 소통)'으로 암기하세요. '전문성', '효율성' 같은 보기는 오답입니다!",
+    "mnemonic": "피존용단소"
+  },
+  {
+    "id": "card-memorize-se_126",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "생성",
+    "definition": "GoF 생성 패턴(Creational Pattern) 5가지:\n추상팩토리, 빌더, 팩토리메서드, 프로토타입, 싱글턴\n\n• 목적: 객체 생성 과정을 캡슐화하여 유연하게 생성\n• (암기: 추빌팩프싱)\n• 구조 패턴(7개), 행위 패턴(11개)과 함께 GoF 23개 패턴 구성",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_002",
+    "tags": [
+      "소프트웨어공학",
+      "디자인패턴",
+      "GoF"
+    ],
+    "tip": "생성 패턴 5개를 나열하는 문제가 자주 나옵니다. '추빌팩프싱'으로 암기! 구조/행위 패턴과 혼동하지 마세요.",
+    "mnemonic": "추빌팩프싱"
+  },
+  {
+    "id": "card-memorize-se_127",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "클래스, 패키지, 복합체 구조, 객체, 컴포넌트, 배치 다이어그램",
+    "definition": "구조적 다이어그램: 시스템의 정적 구조를 표현\n- 클래스: 클래스 사이 관계\n- 패키지: 모델 요소를 그룹화\n- 복합체 구조: 내부 구조 표현\n- 객체: 객체 정보\n- 컴포넌트: 컴포넌트 간 관계\n- 배치: 물리적 배포 구조",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_003",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_201"
+    ],
+    "tip": "구조적 다이어그램 6가지를 '클패복객컴배'로 암기하세요. 행위 다이어그램과 혼동하는 오답에 주의!",
+    "mnemonic": "클패복객컴배"
+  },
+  {
+    "id": "card-memorize-se_128",
+    "categoryId": "memorize-se",
+    "subcategory": "비용산정",
+    "term": "COCOMO",
+    "definition": "COCOMO(COnstructive COst MOdel)는 보헴이 제안한 모형입니다.\n프로그램 규모에 따라 Organic, Semi-detached, Embedded 모드로 분류합니다.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_004",
+    "tags": [
+      "소프트웨어공학",
+      "비용산정",
+      "COCOMO"
+    ],
+    "tip": "COCOMO의 3가지 모드(Organic=소규모, Semi-detached=중간, Embedded=대규모)를 구분하세요. Boehm이 제안한 모형입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_129",
+    "categoryId": "memorize-se",
+    "subcategory": "결합도",
+    "term": "a",
+    "definition": "내용 결합도(Content Coupling)\n한 모듈이 다른 모듈의 내부 데이터나 코드를 직접 참조/수정하는 가장 강한 결합도\n\n• 결합도 6단계: 내용 > 공통 > 외부 > 제어 > 스탬프 > 자료\n• 모듈 독립성이 완전히 깨지므로 가장 피해야 할 결합 형태",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_005",
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_130",
+      "card-memorize-se_131",
+      "card-memorize-se_202",
+      "card-memorize-se_203"
+    ],
+    "tip": "'다른 모듈 내부를 직접 참조/수정'이라는 키워드가 보이면 무조건 내용 결합도입니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_130",
+    "categoryId": "memorize-se",
+    "subcategory": "결합도",
+    "term": "b",
+    "definition": "공통(공유) 결합도(Common Coupling)\n여러 모듈이 하나의 전역 변수를 공유하여 사용하는 결합도\n\n• 한 모듈이 전역 변수를 변경하면 다른 모듈도 영향\n• 디버깅이 어렵고 부작용(Side Effect) 발생 가능\n• 내용 결합도 다음으로 강한 결합도",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_005",
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_129",
+      "card-memorize-se_131",
+      "card-memorize-se_202",
+      "card-memorize-se_203"
+    ],
+    "tip": "'전역 변수를 공유'라는 키워드가 핵심입니다. 외부 결합도(외부 프로토콜 공유)와 구분!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_131",
+    "categoryId": "memorize-se",
+    "subcategory": "결합도",
+    "term": "c",
+    "definition": "스탬프 결합도(Stamp Coupling)\n배열, 레코드, 구조체 등 자료구조 전체를 다른 모듈에 전달하는 결합도\n\n• 필요한 항목만 전달하면 자료 결합도(Data)이지만, 전체를 넘기면 스탬프\n• 예: Student 객체 전체를 전달하지만 이름만 사용\n• 자료 결합도보다 한 단계 강함",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_005",
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_129",
+      "card-memorize-se_130",
+      "card-memorize-se_202",
+      "card-memorize-se_203"
+    ],
+    "tip": "'자료구조 전체 전달'이 핵심입니다. 자료 결합도(필요한 값만)와 비교 출제가 빈번합니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_132",
+    "categoryId": "memorize-se",
+    "subcategory": "개발방법론",
+    "term": "분석 → 구성 → 역공학 → 이식",
+    "definition": "소프트웨어 제공학(Re-engineering) 과정:\n1. 분석: 기존 시스템 분석\n2. 구성(재구성): 시스템 재구성\n3. 역공학: 설계 복원\n4. 이식: 새로운 환경으로 이전",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_006",
+    "tags": [
+      "소프트웨어공학",
+      "제공학",
+      "순서"
+    ],
+    "tip": "소프트웨어 재공학(Re-engineering) 순서를 '분구역이(분석→구성→역공학→이식)'로 암기하세요. 역공학은 '기존 코드에서 설계를 복원'하는 것입니다.",
+    "mnemonic": "분구역이"
+  },
+  {
+    "id": "card-memorize-se_133",
+    "categoryId": "memorize-se",
+    "subcategory": "개발방법론",
+    "term": "스크럼마스터에 대해 설명하시오.",
+    "definition": "업무 배분만 하고 일은 강요하지 않음. 팀을 스스로 조직하고 관리하도록 지원. 개발 과정에서 스크럼의 원칙과 가치 지원. 개발 과정 장애 요소를 찾아 제거.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_007",
+    "tags": [
+      "소프트웨어공학",
+      "스크럼",
+      "스크럼마스터",
+      "애자일"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_204"
+    ],
+    "tip": "스크럼 마스터는 '지원자'이지 '관리자'가 아닙니다. '팀을 통제한다'는 보기는 무조건 오답! 장애 요소 제거가 핵심 역할입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_134",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항",
+    "term": "1단계",
+    "definition": "현행 시스템 파악 1단계: 시스템 구성/기능/인터페이스 파악\n\n• 시스템 구성 파악: 현행 시스템의 하위 시스템과 구성요소 확인\n• 시스템 기능 파악: 각 시스템이 제공하는 기능 목록 정리\n• 시스템 인터페이스 파악: 시스템 간 데이터 교환 방식과 현황 확인",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_008",
+    "tags": [
+      "소프트웨어공학",
+      "현행시스템",
+      "파악절차"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_135",
+      "card-memorize-se_136",
+      "card-memorize-se_205"
+    ],
+    "tip": "현행 시스템 파악 3단계 순서가 자주 출제됩니다. 1단계=구성/기능/인터페이스, 2단계=아키텍처/SW, 3단계=HW/네트워크!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_135",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항",
+    "term": "2단계",
+    "definition": "현행 시스템 파악 2단계: 아키텍처/소프트웨어 구성 파악\n\n• 아키텍처 파악: 시스템의 전체 구조와 기술 스택 확인\n• 소프트웨어 구성 파악: 사용 중인 SW(OS, 미들웨어, DBMS, WAS 등) 현황 파악",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_008",
+    "tags": [
+      "소프트웨어공학",
+      "현행시스템",
+      "파악절차"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_134",
+      "card-memorize-se_136",
+      "card-memorize-se_205"
+    ],
+    "tip": "2단계는 '아키텍처와 소프트웨어 구성'을 파악하는 단계입니다. 1단계(시스템 구성/기능/인터페이스)와 3단계(HW/네트워크)와 구분!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_136",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항",
+    "term": "3단계",
+    "definition": "현행 시스템 파악 3단계: 하드웨어/네트워크 구성 파악\n\n• 시스템 하드웨어 현황 파악: 서버, 스토리지 등 물리적 장비 현황\n• 네트워크 구성 파악: 네트워크 토폴로지, 대역폭, 프로토콜 현황\n• 물리적 인프라에 대한 최종 파악 단계",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_008",
+    "tags": [
+      "소프트웨어공학",
+      "현행시스템",
+      "파악절차"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_134",
+      "card-memorize-se_135",
+      "card-memorize-se_205"
+    ],
+    "tip": "3단계는 물리적 인프라(HW/네트워크)를 파악하는 마지막 단계입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_137",
+    "categoryId": "memorize-se",
+    "subcategory": "요구사항",
+    "term": "시스템 정의서, 시스템 요구사항 명세서, 소프트웨어 요구사항 명세서",
+    "definition": "요구사항 명세 문서 3종류:\n- 시스템 정의서: 전체 시스템 범위 정의\n- 시스템 요구사항 명세서: 시스템 수준 요구사항\n- 소프트웨어 요구사항 명세서: SW 수준 상세 요구사항",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_009",
+    "tags": [
+      "소프트웨어공학",
+      "요구사항",
+      "명세"
+    ],
+    "tip": "요구사항 명세 문서 3종류의 범위를 구분하세요. 시스템 정의서(전체 범위) > 시스템 요구사항 명세서(시스템 수준) > SW 요구사항 명세서(SW 상세)!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_138",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "유스케이스, 활동, 콜라보레이션, 상태머신, 순차, 통신, 상호작용 개요, 타이밍",
+    "definition": "행위 다이어그램: 시스템의 동적 행위를 표현\n- 유스케이스: 사용자 관점 시스템 행위\n- 활동: 업무 처리 과정\n- 순차: 시간 흐름에 따른 객체 상호작용\n- 상태머신: 객체 생명주기\n- 통신: 객체 간 관계 중심 상호작용\n- 타이밍: 시간 제약 명시적 표현",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_010",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "행위다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_206"
+    ],
+    "tip": "행위 다이어그램 8가지 중 순차(Sequence)와 통신(Communication)의 차이를 묻는 문제가 자주 나옵니다. 순차=시간 순서, 통신=객체 관계!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_139",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "스테레오 타입(Stereotype)",
+    "definition": "스테레오타입은 UML의 확장 메커니즘으로, 기존 모델 요소에 새로운 의미를 부여합니다.\n- 길러멧(《》)으로 표기\n- 종류: include, extend, interface, exception, constructor",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_011",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "스테레오타입"
+    ],
+    "tip": "스테레오타입은 '길러멧(《》)으로 표기'한다는 점이 핵심입니다. <<include>>, <<extend>>가 유스케이스에서 자주 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_140",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "구성요소",
+    "definition": "유스케이스 다이어그램의 3가지 구성요소:\n\n• 시스템(System): 네모(사각형)로 표기, 시스템 범위를 나타냄\n• 액터(Actor): 사람 모양(스틱맨)으로 표기, 시스템 외부의 사용자/시스템\n• 유스케이스: 타원형(Ellipse)으로 표기, 시스템이 제공하는 기능\n• 관계: 연관, 포함(include), 확장(extend), 일반화 화살표",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_012",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "유스케이스",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_207"
+    ],
+    "tip": "시스템=네모, 액터=사람 모양, 유스케이스=타원형 기호를 묻는 문제가 기출입니다. 관계 중 include(필수)와 extend(선택)의 차이도 중요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_141",
+    "categoryId": "memorize-se",
+    "subcategory": "UML",
+    "term": "럼바우 객체지향 분석",
+    "definition": "객체 모델링(Object Modeling) → 동적 모델링(Dynamic Modeling) → 기능 모델링(Functional Modeling)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_013",
+    "tags": [
+      "소프트웨어공학",
+      "럼바우",
+      "객체지향분석"
+    ],
+    "tip": "럼바우의 3단계 순서가 자주 출제됩니다. 객체 모델링(객체 다이어그램)→동적 모델링(상태 다이어그램)→기능 모델링(DFD)! 각 단계의 다이어그램을 연결하세요.",
+    "mnemonic": "객동기"
+  },
+  {
+    "id": "card-memorize-se_142",
+    "categoryId": "memorize-se",
+    "subcategory": "비용산정",
+    "term": "델파이 기법",
+    "definition": "하향식 산정방법:\n- 전문가 판단: 경험에 기반한 추정\n- 델파이 기법: 여러 전문가의 의견을 반복적으로 수렴\n\n상향식 산정방법:\n(1) LoC: 원시 코드 라인 수 기반\n(2) COCOMO: 프로그램 규모별 비용 산정\n(3) Man Month: 1인 1개월 작업량 기준",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_014",
+    "tags": [
+      "소프트웨어공학",
+      "비용산정",
+      "델파이"
+    ],
+    "tip": "비용산정의 하향식(전문가 판단, 델파이)과 상향식(LoC, COCOMO, Man Month)을 구분하세요. 델파이 기법의 핵심은 '여러 전문가 의견의 반복적 수렴'입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_143",
+    "categoryId": "memorize-se",
+    "subcategory": "프로젝트관리",
+    "term": "응답시간, 가용성, 사용률",
+    "definition": "플랫폼 성능 특성 분석의 3가지 핵심 항목:\n- 응답시간(Response Time): 요청에 대한 응답 속도\n- 가용성(Availability): 시스템 사용 가능 비율\n- 사용률(Utilization): 자원 활용 정도",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_016",
+    "tags": [
+      "소프트웨어공학",
+      "플랫폼",
+      "성능분석"
+    ],
+    "tip": "플랫폼 성능 분석 3요소: 응답시간(속도), 가용성(사용 가능 비율), 사용률(자원 활용도). 각각의 정의를 정확히 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_144",
+    "categoryId": "memorize-se",
+    "subcategory": "프로젝트관리",
+    "term": "초기단계 → 관리단계 → 정의단계 → 정량적 관리단계 → 최적화 단계",
+    "definition": "CMMi(Capability Maturity Model Integration)는 카네기 멜런 대학의 소프트웨어 공학 연구소의 지침입니다.\n5단계: 초기→관리→정의→정량적 관리→최적화",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_017",
+    "tags": [
+      "소프트웨어공학",
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_209"
+    ],
+    "tip": "CMMi는 '카네기 멜런 대학 SEI'가 개발했다는 점이 자주 출제됩니다. 5단계 순서를 정확히 암기하세요!",
+    "mnemonic": "초관정정최"
+  },
+  {
+    "id": "card-memorize-se_145",
+    "categoryId": "memorize-se",
+    "subcategory": "아키텍처",
+    "term": "SAAM, ATAM, CBAM, ADR, ARID",
+    "definition": "- SAAM(Software Architecture Analysis Method)\n- ATAM(Architecture Trade-off Analysis Method)\n- CBAM(Cost Benefit Analysis Method)\n- ADR(Active Design Review)\n- ARID(Active Review for Intermediate Designs)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_018",
+    "tags": [
+      "소프트웨어공학",
+      "아키텍처",
+      "평가기술"
+    ],
+    "tip": "아키텍처 평가 기술 중 ATAM(Architecture Trade-off Analysis Method)이 가장 자주 출제됩니다. 품질 속성 간의 트레이드오프를 분석하는 기법입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_146",
+    "categoryId": "memorize-se",
+    "subcategory": "통합구현",
+    "term": "UDDI",
+    "definition": "웹 서비스의 3요소 (기출):\n① UDDI: 웹 서비스 등록/검색 저장소\n② WSDL: 웹 서비스 상세 정보가 기술된 XML 언어\n③ SOAP: HTTP, HTTPS, SMTP 등을 이용하여 XML 기반 메시지를 교환하는 프로토콜",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_019",
+    "tags": [
+      "소프트웨어공학",
+      "웹서비스",
+      "UDDI",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_210",
+      "card-memorize-se_211"
+    ],
+    "tip": "웹 서비스 3요소는 UDDI(등록/검색), WSDL(서비스 기술), SOAP(메시지 교환)입니다. 각각의 역할을 바꿔 출제하는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_147",
+    "categoryId": "memorize-se",
+    "subcategory": "통합구현",
+    "term": "송신시스템, 중계시스템, 수신시스템",
+    "definition": "연계(인터페이스) 구성:\n- 송신시스템: 데이터를 보내는 시스템\n- 중계시스템: 데이터를 중개하는 시스템\n- 수신시스템: 데이터를 받는 시스템",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_020",
+    "tags": [
+      "소프트웨어공학",
+      "연계",
+      "인터페이스"
+    ],
+    "tip": "연계 시스템의 3가지 구성(송신, 중계, 수신)은 데이터 흐름의 기본 구조입니다. 중계시스템은 EAI/ESB 등의 미들웨어가 담당합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_148",
+    "categoryId": "memorize-se",
+    "subcategory": "통합구현",
+    "term": "EAI(Enterprise Application Integration)",
+    "definition": "간접 연계: EAI - 실제 송수신 처리와 진행 현황을 모니터링 및 통제하는 솔루션\n\nEAI 구축유형 (기출):\n1. Point-to-Point: 미들웨어 없이 직접 연결\n2. Hub & Spoke: 단일 허브 시스템으로 중앙 집중\n3. Message Bus: 미들웨어를 두어 처리\n4. Hybrid: (2),(3) 혼합방식",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_021",
+    "tags": [
+      "소프트웨어공학",
+      "EAI",
+      "간접연계",
+      "기출"
+    ],
+    "tip": "EAI 4가지 유형(Point-to-Point, Hub & Spoke, Message Bus, Hybrid)은 기출 빈도가 매우 높습니다. 각 유형의 특징과 장단점을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_149",
+    "categoryId": "memorize-se",
+    "subcategory": "통합구현",
+    "term": "연계 방식의 종류 중 직접 연계 종류 5가지를 제시하라.",
+    "definition": "직접 연계 방식 5가지:\n\n1. DB Link: 데이터베이스 간 직접 링크\n2. DB Connection Pool: 미리 생성된 DB 연결 재사용\n3. JDBC: Java 표준 DB 접속 API\n4. 화면 링크: 웹 화면 URL을 통한 연계\n5. API/Open API: 프로그래밍 인터페이스를 통한 연계\n\n→ 간접 연계(EAI, ESB, Socket)와 비교 출제 빈번",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_022",
+    "tags": [
+      "소프트웨어공학",
+      "직접연계",
+      "연계방식"
+    ],
+    "tip": "직접 연계 5가지와 간접 연계(EAI, ESB)를 구분하는 문제가 자주 나옵니다. 직접 연계는 '중간 매개체 없이 직접 연결'이 특징!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_150",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "적정성, 효율성, 이식성, 친밀성, 범용성",
+    "definition": "개발 언어 선정 시 고려해야 할 5가지 기준:\n- 적정성: 프로젝트에 적합한지\n- 효율성: 실행 성능이 좋은지\n- 이식성: 다른 환경으로 이전 가능한지\n- 친밀성: 개발자가 익숙한지\n- 범용성: 널리 사용되는지",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_023",
+    "tags": [
+      "서버프로그램",
+      "개발언어",
+      "선정기준"
+    ],
+    "tip": "개발 언어 선정 기준 5가지를 '적효이친범'으로 암기하세요. 시험에서 선정 기준을 나열하는 문제가 출제됩니다.",
+    "mnemonic": "적효이친범"
+  },
+  {
+    "id": "card-memorize-se_151",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "소프트웨어 아키텍처의 설계 과정 5단계를 순서대로 쓰시오.",
+    "definition": "설계 목표 설정 → 시스템 타입 결정 → 아키텍처 패턴 적용 → 서브 시스템 구체화 → 검토",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_024",
+    "tags": [
+      "서버프로그램",
+      "아키텍처",
+      "설계과정"
+    ],
+    "tip": "아키텍처 설계 과정 5단계 순서를 정확히 암기하세요. '설계 목표→시스템 타입→패턴 적용→서브시스템→검토' 순서입니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_152",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "단일 책임 원칙(SRP)",
+    "definition": "SRP(Single Responsibility Principle) - 단일 책임 원칙\n클래스는 하나의 책임(기능)만 가져야 하며, 그 책임에 대해서만 변경 이유가 있어야 함\n\n• SOLID의 S에 해당\n• 예: 주문 클래스는 주문 처리만 담당 (로그 기록은 별도 클래스)\n• 위반 시: 한 클래스에 여러 기능이 몰려 유지보수 어려움",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_153",
+      "card-memorize-se_154",
+      "card-memorize-se_155",
+      "card-memorize-se_156",
+      "card-memorize-se_212"
+    ],
+    "tip": "'하나의 책임만 가져야 함'이 핵심입니다. '변경 이유가 하나뿐이어야 한다'는 표현도 같은 의미!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_153",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "개방-폐쇄 원칙(OCP)",
+    "definition": "OCP(Open-Closed Principle) - 개방-폐쇄 원칙\n소프트웨어 요소는 확장에는 열려 있고(Open), 수정에는 닫혀 있어야(Closed) 함\n\n• SOLID의 O에 해당\n• 예: 새 결제 수단 추가 시 기존 코드 수정 없이 클래스 추가만으로 해결\n• 인터페이스/추상 클래스를 활용하여 구현",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_152",
+      "card-memorize-se_154",
+      "card-memorize-se_155",
+      "card-memorize-se_156",
+      "card-memorize-se_212"
+    ],
+    "tip": "'확장에 열림, 수정에 닫힘'이 핵심입니다. 새 기능은 추가(확장)하되 기존 코드는 변경하지 않는다는 원칙!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_154",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "리스코프 치환 원칙(LSP)",
+    "definition": "LSP(Liskov Substitution Principle) - 리스코프 치환 원칙\n자식 클래스는 부모 클래스를 완전히 대체할 수 있어야 함 (상위 타입 자리에 하위 타입을 넣어도 프로그램이 정상 동작)\n\n• SOLID의 L에 해당\n• 예: 직사각형을 상속한 정사각형이 부모의 동작을 깨뜨리면 위반\n• 위반 시: 다형성이 깨지고 예외 상황 발생",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_152",
+      "card-memorize-se_153",
+      "card-memorize-se_155",
+      "card-memorize-se_156",
+      "card-memorize-se_212"
+    ],
+    "tip": "'자식이 부모를 대체할 수 있어야 함'이 핵심입니다. '직사각형-정사각형' 예시가 대표적 위반 사례로 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_155",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "인터페이스 분리 원칙(ISP)",
+    "definition": "ISP(Interface Segregation Principle) - 인터페이스 분리 원칙\n클라이언트가 사용하지 않는 인터페이스에 의존하지 않아야 하며, 범용 인터페이스보다 특화된 여러 인터페이스가 나음\n\n• SOLID의 I에 해당\n• 예: '동물' 인터페이스에 swim()이 있으면 고양이 클래스가 불필요하게 구현해야 함 → 분리!\n• 위반 시: 불필요한 메서드 구현 강제",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_152",
+      "card-memorize-se_153",
+      "card-memorize-se_154",
+      "card-memorize-se_156",
+      "card-memorize-se_212"
+    ],
+    "tip": "'사용하지 않는 인터페이스에 의존하지 말 것'이 핵심입니다. 큰 인터페이스를 작은 단위로 쪼개라는 원칙!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_156",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "의존 역전 원칙(DIP)",
+    "definition": "DIP(Dependency Inversion Principle) - 의존 역전 원칙\n고수준 모듈은 저수준 모듈에 의존하지 않고, 둘 다 추상화(인터페이스/추상 클래스)에 의존해야 함\n\n• SOLID의 D에 해당\n• 예: Service가 구체적인 MySQLDAO가 아닌 DAO 인터페이스에 의존\n• 핵심: 구체 클래스보다 추상화에 의존할 것",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_152",
+      "card-memorize-se_153",
+      "card-memorize-se_154",
+      "card-memorize-se_155",
+      "card-memorize-se_212"
+    ],
+    "tip": "'구체적 클래스가 아닌 추상화(인터페이스)에 의존'이 핵심입니다. LSP(상속 관계)와 DIP(의존 관계)를 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_157",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "모듈화, 추상화, 단계적 분해, 정보 은닉",
+    "definition": "설계 기본 원리:\n- 모듈화: 기능들을 모듈 단위로 나누는 것\n- 추상화: 전체적이고 포괄적인 개념을 설계한 후 구체화\n- 단계적 분해: 상위 개념에서 하위 개념으로 구체화\n- 정보 은닉: 모듈 내부의 자료를 감추어 다른 모듈이 접근하거나 변경하지 못하도록 하는 기법",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_026",
+    "tags": [
+      "서버프로그램",
+      "설계원리",
+      "모듈화",
+      "추상화"
+    ],
+    "tip": "설계 기본 원리 4가지를 '모추단정(모듈화, 추상화, 단계적 분해, 정보 은닉)'으로 암기하세요. 각 원리의 정의를 간략히 설명하는 문제가 출제됩니다.",
+    "mnemonic": "모추단정"
+  },
+  {
+    "id": "card-memorize-se_158",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "결합도(Coupling)를 강한 순서부터 약한 순서로 6단계",
+    "definition": "내용(Content) → 공통(Common) → 외부(External) → 제어(Control) → 스탬프(Stamp) → 자료(Data)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_027",
+    "tags": [
+      "서버프로그램",
+      "결합도",
+      "모듈",
+      "내공외제스자"
+    ],
+    "tip": "결합도 순서를 '내공외제스자(강→약)'로 반드시 암기하세요. 순서를 바꿔 출제하는 문제가 매우 빈번합니다!",
+    "mnemonic": "내공외제스자"
+  },
+  {
+    "id": "card-memorize-se_159",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "응집도(Cohesion)를 강한 순서부터 약한 순서로 7단계",
+    "definition": "기능적(Functional) → 순차적(Sequential) → 교환적(Communication) → 절차적(Procedural) → 시간적(Temporal) → 논리적(Logical) → 우연적(Coincidental)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_028",
+    "tags": [
+      "서버프로그램",
+      "응집도",
+      "모듈",
+      "기순교절시논우"
+    ],
+    "tip": "응집도 순서를 '기순교절시논우(강→약)'로 암기하세요. 결합도(낮을수록 좋음)와 응집도(높을수록 좋음)의 방향이 반대임을 기억!",
+    "mnemonic": "기순교절시논우"
+  },
+  {
+    "id": "card-memorize-se_160",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "Model",
+    "definition": "Model (MVC 패턴 구성요소)\n데이터와 비즈니스 로직을 담당하는 컴포넌트. 핵심 로직을 처리하고 데이터를 관리\n\n• DB와 직접 상호작용\n• View와 Controller와 독립적으로 동작\n• 예: Spring의 @Entity, @Service 클래스\n• 데이터 변경 시 View에 통지 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_029",
+    "tags": [
+      "서버프로그램",
+      "MVC",
+      "디자인패턴"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_161",
+      "card-memorize-se_162",
+      "card-memorize-se_213"
+    ],
+    "tip": "Model은 '데이터 + 비즈니스 로직'을 담당합니다. View(화면), Controller(입력처리)와 역할을 명확히 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_161",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "View",
+    "definition": "View (MVC 패턴 구성요소)\n사용자 인터페이스(UI)를 담당하는 컴포넌트. 데이터를 화면에 표시하고 사용자의 입력을 받음\n\n• 버튼, 텍스트 필드, 테이블 등 UI 요소 포함\n• Model의 데이터를 시각적으로 표현\n• 예: JSP, HTML, React 컴포넌트\n• 여러 View가 하나의 Model을 공유 가능",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_029",
+    "tags": [
+      "서버프로그램",
+      "MVC",
+      "디자인패턴"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_160",
+      "card-memorize-se_162",
+      "card-memorize-se_213"
+    ],
+    "tip": "View는 '화면 표시/UI 담당'입니다. 비즈니스 로직은 View가 아닌 Model에 있어야 합니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_162",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "Controller",
+    "definition": "Controller (MVC 패턴 구성요소)\n사용자의 입력을 처리하고, Model과 View 사이에서 연결·제어하는 컴포넌트\n\n• 사용자 요청 → 적절한 Model 호출 → 결과를 View에 전달\n• 비즈니스 로직은 직접 수행하지 않고 Model에 위임\n• 예: Spring의 @Controller, @RestController\n• Model과 View의 결합도를 낮추는 역할",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_029",
+    "tags": [
+      "서버프로그램",
+      "MVC",
+      "디자인패턴"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_160",
+      "card-memorize-se_161",
+      "card-memorize-se_213"
+    ],
+    "tip": "Controller는 '입력 처리 + Model-View 연결'입니다. 로직 자체를 처리하는 것은 Model의 역할!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_163",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "모듈 간 통신 방식을 구현하기 위해 대표적인 프로그래밍 인터페이스 집합인...",
+    "definition": "IPC(Inter-Process Communication, 프로세스 간 통신)\n모듈 간 통신을 구현하기 위한 대표적 프로그래밍 인터페이스 집합\n\n대표 메소드:\n• Shared Memory: 공유 메모리 영역을 통한 통신 (가장 빠름)\n• Socket: 네트워크 기반 양방향 통신\n• Semaphores: 프로세스 간 동기화 도구\n• Pipes & Named Pipes: 단방향 데이터 흐름\n• Message Queueing: 메시지 큐를 통한 비동기 통신",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_030",
+    "tags": [
+      "서버프로그램",
+      "IPC",
+      "프로세스간통신"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_214"
+    ],
+    "tip": "IPC 메소드 5가지를 나열하는 문제가 출제됩니다. Shared Memory(가장 빠름)와 Socket(네트워크 기반)의 특징을 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_164",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "배치 프로그램",
+    "definition": "배치(Batch) 프로그램은 일정한 주기로 데이터를 모아서 한꺼번에 처리하는 프로그램입니다.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_031",
+    "tags": [
+      "서버프로그램",
+      "배치",
+      "일괄처리"
+    ],
+    "tip": "배치 프로그램의 특징은 '주기적/대량 처리/자동 실행'입니다. 온라인 프로그램(실시간)과 배치 프로그램(일괄)의 차이를 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_165",
+    "categoryId": "memorize-se",
+    "subcategory": "인터페이스",
+    "term": "기밀성, 무결성, 가용성",
+    "definition": "정보보안 3요소 (CIA):\n- 기밀성(Confidentiality): 인가된 사용자만 정보 자산에 접근 가능\n- 무결성(Integrity): 시스템 내 정보는 오직 인가된 사용자만 수정 가능\n- 가용성(Availability): 사용자가 필요할 때 데이터에 접근할 수 있는 능력",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_032",
+    "tags": [
+      "인터페이스",
+      "정보보안",
+      "CIA",
+      "기출"
+    ],
+    "tip": "CIA 3요소(기밀성, 무결성, 가용성) 각각의 정의를 바꿔 출제하는 문제가 단골입니다. 기밀성=접근, 무결성=수정, 가용성=사용으로 구분!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_166",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "직관성",
+    "definition": "직관성(Intuitiveness)\nUI 설계 4대 원칙 중 하나. 누구나 쉽게 이해하고 사용할 수 있어야 함\n\n• 사용자가 별도 학습 없이도 인터페이스를 바로 이해\n• 예: 아이콘만 봐도 기능을 알 수 있는 디자인\n• UI 원칙: 직관성, 유효성, 학습성, 유연성",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_033",
+    "tags": [
+      "화면설계",
+      "UI",
+      "설계원칙",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_167",
+      "card-memorize-se_168",
+      "card-memorize-se_169",
+      "card-memorize-se_215"
+    ],
+    "tip": "UI 4대 원칙(직유학유: 직관성, 유효성, 학습성, 유연성)을 묻는 문제가 기출입니다. 직관성='쉽게 이해'가 핵심!",
+    "mnemonic": "직유학유"
+  },
+  {
+    "id": "card-memorize-se_167",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "유효성",
+    "definition": "유효성(Effectiveness)\nUI 설계 4대 원칙 중 하나. 사용자의 목적을 정확하고 완벽하게 달성할 수 있어야 함\n\n• 사용자가 원하는 작업을 오류 없이 완료할 수 있는 정도\n• 예: 결제 버튼을 누르면 정확히 결제가 완료됨\n• 직관성(이해 용이)과 구분: 유효성은 '목적 달성'에 초점",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_033",
+    "tags": [
+      "화면설계",
+      "UI",
+      "설계원칙",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_166",
+      "card-memorize-se_168",
+      "card-memorize-se_169",
+      "card-memorize-se_215"
+    ],
+    "tip": "'목적을 정확히 달성'이 핵심입니다. 직관성(이해 용이), 학습성(배우기 쉬움)과 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_168",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "학습성",
+    "definition": "학습성(Learnability)\nUI 설계 4대 원칙 중 하나. 누구나 쉽게 배우고 익힐 수 있어야 함\n\n• 새로운 사용자도 빠르게 사용법을 습득\n• 예: 도움말, 튜토리얼, 툴팁 등을 통한 학습 지원\n• 직관성과 차이: 직관성은 '바로 이해', 학습성은 '배워서 익힘'",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_033",
+    "tags": [
+      "화면설계",
+      "UI",
+      "설계원칙",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_166",
+      "card-memorize-se_167",
+      "card-memorize-se_169",
+      "card-memorize-se_215"
+    ],
+    "tip": "'쉽게 배우고 익힘'이 핵심입니다. 직관성(바로 이해)과의 미묘한 차이를 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_169",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "유연성",
+    "definition": "유연성(Flexibility)\nUI 설계 4대 원칙 중 하나. 사용자의 요구사항을 최대한 수용하고 실수를 최소화해야 함\n\n• 다양한 사용자 환경과 요구에 대응\n• 예: 키보드/마우스/터치 등 다양한 입력 방식 지원, 실수 복구(Undo) 기능\n• 오류 방지와 오류 복구 메커니즘 포함",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_033",
+    "tags": [
+      "화면설계",
+      "UI",
+      "설계원칙",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_166",
+      "card-memorize-se_167",
+      "card-memorize-se_168",
+      "card-memorize-se_215"
+    ],
+    "tip": "'요구사항 수용 + 실수 최소화'가 핵심입니다. 유효성(목적 달성)과 유연성(다양한 요구 수용)을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_170",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "기능적 요구사항",
+    "definition": "시스템 입출력으로 포함되어야 할 사항, 동기화 등의 기타 요구사항. 소프트웨어가 가져야할 기능적 속성.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_171",
+      "card-memorize-se_216",
+      "card-memorize-se_217",
+      "card-memorize-se_218",
+      "card-memorize-se_219"
+    ],
+    "tip": "기능적 요구사항은 시스템이 '무엇을(What)' 해야 하는지를 정의합니다. 비기능적 요구사항(품질 특성)과 구분하는 문제가 매우 자주 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_171",
+    "categoryId": "memorize-se",
+    "subcategory": "화면설계",
+    "term": "비기능적 요구사항",
+    "definition": "품질에 관한 요구사항(사용성, 신뢰성, 이식성, 표준, 윤리적 등). 제품 품질 기준 등의 만족을 위해 소프트웨어가 가져야할 특성.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_170",
+      "card-memorize-se_216",
+      "card-memorize-se_217",
+      "card-memorize-se_218",
+      "card-memorize-se_219"
+    ],
+    "tip": "비기능적 요구사항은 '품질(어떻게/How)'에 관한 것입니다. 성능, 보안, 사용성, 이식성 등이 해당됩니다. 기능적(What) vs 비기능적(How)를 구분!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_172",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "종류",
+    "definition": "화이트박스 테스트 기법의 종류:\n\n1. 기초 경로 검사(Base Path Test): 맥케이브 순환 복잡도를 이용한 경로 분석\n2. 조건 검사: 논리적 조건을 테스트\n3. 루프 검사: 반복 구조의 경계 조건 테스트\n4. 데이터 흐름 검사: 변수의 정의-사용 관계를 분석\n\n→ 소스코드를 공개(Open)하여 내부 구조 기반으로 테스트",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_035",
+    "tags": [
+      "테스트",
+      "화이트박스",
+      "기초경로"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_220"
+    ],
+    "tip": "화이트박스 = '소스코드 공개', 블랙박스 = '소스코드 비공개'의 차이를 기억! 기초 경로 검사에서 순환 복잡도(V(G))가 함께 출제됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_173",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "개발 단계에 따른 애플리케이션 테스트 레벨의 유형인 V-모델의 순서",
+    "definition": "요구사항 → 분석 → 설계 → 구현 → 단위 테스트 → 통합 테스트 → 시스템 테스트 → 인수 테스트",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_037",
+    "tags": [
+      "테스트",
+      "V모델",
+      "기출",
+      "단위테스트",
+      "통합테스트"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_222"
+    ],
+    "tip": "V-모델에서 개발 단계와 테스트 단계의 대응 관계를 묻는 문제가 기출입니다. 요구사항↔인수, 설계↔통합, 구현↔단위 테스트!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_174",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "상향식",
+    "definition": "드라이버 사용, 가장 하부 모듈부터 통합, 하위→상위, 장점-장애 위치 확인 용이, 단점-초기 프로토타입 불가",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_175",
+      "card-memorize-se_223",
+      "card-memorize-se_224",
+      "card-memorize-se_225",
+      "card-memorize-se_226"
+    ],
+    "tip": "상향식=드라이버, 하향식=스텁을 바꿔 출제하는 함정이 자주 나옵니다. '상드하스(상향식-드라이버, 하향식-스텁)'로 암기!",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_175",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "하향식",
+    "definition": "스텁 사용, 가장 상부 모듈부터 통합, 상위→하위, 장점-초기 프로토타입 가능, 단점-낮은 수준 모듈 테스트 가능성 부적절",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_174",
+      "card-memorize-se_223",
+      "card-memorize-se_224",
+      "card-memorize-se_225",
+      "card-memorize-se_226"
+    ],
+    "tip": "하향식의 장점은 '초기 프로토타입 가능', 단점은 '하위 모듈 테스트 부적절'. 상향식과 장단점이 정반대!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_176",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "① 처리량(Throughput)",
+    "definition": "처리량(Throughput)\n일정 시간 내에 처리하는 일의 양(작업량)을 나타내는 성능 지표\n\n• 단위: TPS(Transactions Per Second), RPS(Requests Per Second) 등\n• 예: 초당 1000건의 요청 처리\n• 높을수록 성능이 좋음\n• 성능 테스트의 4대 지표 중 하나",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_040",
+    "tags": [
+      "테스트",
+      "성능측정",
+      "처리량",
+      "응답시간"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_177",
+      "card-memorize-se_178",
+      "card-memorize-se_179",
+      "card-memorize-se_228"
+    ],
+    "tip": "'일정 시간 내 처리량'이 핵심입니다. 응답시간(요청→응답 시간)과 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_177",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "② 응답시간(Response Time)",
+    "definition": "응답시간(Response Time)\n사용자가 요청을 전달한 시간부터 응답이 도착할 때까지 걸린 시간\n\n• 사용자가 체감하는 가장 직접적인 성능 지표\n• 짧을수록 성능이 좋음\n• 경과시간(TAT)과 차이: 응답시간은 '첫 응답까지', 경과시간은 '완전 처리까지'",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_040",
+    "tags": [
+      "테스트",
+      "성능측정",
+      "처리량",
+      "응답시간"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_176",
+      "card-memorize-se_178",
+      "card-memorize-se_179",
+      "card-memorize-se_228"
+    ],
+    "tip": "'요청→응답까지의 시간'이 핵심입니다. 경과시간(TAT: 요청→완전 처리)과의 차이를 묻는 문제가 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_178",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "③ 경과시간(Turn Around Time)",
+    "definition": "경과시간(Turn Around Time, TAT)\n작업을 의뢰한 시간부터 처리가 완전히 완료될 때까지 걸린 총 시간\n\n• 응답시간보다 넓은 개념 (대기시간 + 처리시간 포함)\n• 배치 작업의 성능 측정에 주로 사용\n• 예: 보고서 생성 요청부터 완성까지의 총 시간",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_040",
+    "tags": [
+      "테스트",
+      "성능측정",
+      "처리량",
+      "응답시간"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_176",
+      "card-memorize-se_177",
+      "card-memorize-se_179",
+      "card-memorize-se_228"
+    ],
+    "tip": "'요청→완전 처리까지의 총 시간'이 핵심입니다. 응답시간(첫 응답까지)과 차이를 정확히 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_179",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "④ 자원 사용률(Resource Usage)",
+    "definition": "자원 사용률(Resource Usage)\nCPU 사용량, 메모리 사용량, 네트워크 사용량, 디스크 I/O 등 시스템 자원의 활용 정도\n\n• 자원 사용률이 과도하면 병목(Bottleneck) 발생\n• 모니터링 도구: top, htop, JMeter, nmon 등\n• 적정 사용률 유지가 중요 (100%는 과부하)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_040",
+    "tags": [
+      "테스트",
+      "성능측정",
+      "처리량",
+      "응답시간"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_176",
+      "card-memorize-se_177",
+      "card-memorize-se_178",
+      "card-memorize-se_228"
+    ],
+    "tip": "자원 사용률은 CPU, 메모리, 네트워크, 디스크를 모두 포함합니다. 과도한 사용률은 병목의 원인이 됩니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_180",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "문장(구문), 분기, 조건, 분기/조건 커버리지",
+    "definition": "화이트박스 테스트 커버리지:\n- 구문 커버리지: 프로그램 내 모든 명령문을 적어도 한 번 수행\n- 결정 커버리지: 각 분기의 결정 포인트의 전체 조건식을 최소 한 번은 T/F 모두 수행\n- 조건 커버리지: 각 분기의 결정 포인트 내의 개별 조건식을 최소 한 번은 T/F 모두 수행\n- 다중조건 커버리지: 결정 조건 내 모든 개별 조건식의 모든 가능한 조합을 100% 보장",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_042",
+    "tags": [
+      "테스트",
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_230"
+    ],
+    "tip": "화이트박스 커버리지 4가지(구문, 결정, 조건, 다중조건) 각각의 정의를 정확히 구분하세요. 결정(전체)과 조건(개별)의 차이가 핵심!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_181",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "정적분석",
+    "definition": "프로그램을 실행하지 않고 명세서나 소스코드를 대상으로 분석하는 도구. 종류: 워크스루, 인스펙션, 코드 검사",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_044",
+    "tags": [
+      "테스트",
+      "정적분석",
+      "동적분석",
+      "워크스루",
+      "인스펙션"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_182",
+      "card-memorize-se_231"
+    ],
+    "tip": "정적 분석은 '실행 없이' 코드를 분석합니다. 워크스루(비공식 검토)와 인스펙션(공식 검토)의 차이도 함께 알아두세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_182",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "동적분석",
+    "definition": "프로그램을 실행하여 메모리 누수현황, 발생한 스레드 결함 등을 분석하기 위한 도구. 종류: 블랙박스 테스트, 화이트박스 테스트",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_044",
+    "tags": [
+      "테스트",
+      "정적분석",
+      "동적분석",
+      "워크스루",
+      "인스펙션"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_181",
+      "card-memorize-se_231"
+    ],
+    "tip": "동적 분석은 '프로그램을 실행하여' 분석합니다. 메모리 누수, 스레드 결함 등을 발견할 수 있습니다. 정적 분석(실행 없이)과 반대!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_183",
+    "categoryId": "memorize-se",
+    "subcategory": "테스트",
+    "term": "① 테스트 계획서 ② 테스트 케이스 ③ 테스트 시나리오 ④ 테스트 결과서",
+    "definition": "테스트 산출물:\n1. 테스트 계획서: 테스트 전략, 범위, 일정\n2. 테스트 케이스: 입력값, 실행조건, 기대결과\n3. 테스트 시나리오: 여러 테스트 케이스의 동작 순서 정의\n4. 테스트 결과서: 테스트 수행 결과 문서화",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_045",
+    "tags": [
+      "테스트",
+      "산출물",
+      "계획서",
+      "케이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_232"
+    ],
+    "tip": "테스트 산출물 4가지를 '계케시결(계획서, 케이스, 시나리오, 결과서)'로 암기하세요. 테스트 케이스(입력값+기대결과)의 정의가 자주 출제됩니다.",
+    "mnemonic": "계케시결"
+  },
+  {
+    "id": "card-memorize-se_184",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "기술적 요구사항",
+    "definition": "DRM(Digital Rights Management) 기술적 요구사항:\n\n1. 지속적 보호: 콘텐츠 유통 전 과정에서 보호\n2. 이용 편리성: 사용자에게 불편을 주지 않는 보호\n3. 유연성: 다양한 콘텐츠 형식과 환경에 대응\n4. 통합의 용이성: 기존 시스템과 쉽게 통합\n\n→ DRM = 디지털 콘텐츠의 저작권을 보호하는 기술",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_046",
+    "tags": [
+      "패키징",
+      "DRM",
+      "디지털콘텐츠"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_233"
+    ],
+    "tip": "DRM 기술적 요구사항 4가지를 '지이유통(지속적 보호, 이용 편리성, 유연성, 통합 용이성)'으로 암기하세요!",
+    "mnemonic": "지이유통"
+  },
+  {
+    "id": "card-memorize-se_185",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "CVS",
+    "definition": "CVS(Concurrent Versions System)\n중앙 서버에서 소스코드를 관리하는 동시 버전 시스템\n\n• 특징: 여러 사용자가 동시에 접근 가능\n• 중앙 집중형(Centralized) 버전 관리\n• 가장 오래된 버전 관리 도구 중 하나\n• 현재는 SVN이나 Git으로 대부분 대체됨",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_186",
+      "card-memorize-se_187",
+      "card-memorize-se_188",
+      "card-memorize-se_189",
+      "card-memorize-se_234"
+    ],
+    "tip": "CVS는 '중앙 집중형 + 동시 접근 가능'이 핵심입니다. SVN(CVS 개선), Git(분산형)과 비교 출제!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_186",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "RCS",
+    "definition": "RCS(Revision Control System)\n파일 수정을 한 사람만으로 제한하고, 파일 잠금(Lock) 방식으로 관리하는 버전 관리 도구\n\n• 특징: 파일 잠금 방식 → 동시 수정 불가\n• CVS와 차이: CVS는 동시 접근 가능, RCS는 잠금 방식\n• 소규모 프로젝트에 적합",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_185",
+      "card-memorize-se_187",
+      "card-memorize-se_188",
+      "card-memorize-se_189",
+      "card-memorize-se_234"
+    ],
+    "tip": "'파일 잠금 방식(한 사람만 수정 가능)'이 핵심입니다. CVS(동시 접근)와의 차이를 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_187",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "SVN",
+    "definition": "SVN(Subversion)\n중앙 집중형 버전 관리 시스템으로, CVS의 단점을 개선한 도구\n\n• 특징: 디렉토리 단위 버전 관리, 커밋 원자성 보장\n• 롤백(Rollback) 기능 지원\n• 중앙 서버에 이력 저장\n• Git 등장 전까지 가장 널리 사용",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_185",
+      "card-memorize-se_186",
+      "card-memorize-se_188",
+      "card-memorize-se_189",
+      "card-memorize-se_234"
+    ],
+    "tip": "'중앙 집중형 + CVS 개선 + 롤백 가능'이 핵심입니다. Git(분산형)과의 차이를 묻는 문제가 자주 나옵니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_188",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "Bitkeeper",
+    "definition": "Bitkeeper\n대규모 프로젝트에서 빠른 속도로 개발할 수 있도록 설계된 분산 버전 관리 도구\n\n• 리눅스 커널 개발에 사용되었던 상용 도구\n• Git 탄생의 계기: Bitkeeper 무료 라이선스 종료 → 리누스 토르발스가 Git 개발\n• 현재는 거의 사용되지 않음",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_185",
+      "card-memorize-se_186",
+      "card-memorize-se_187",
+      "card-memorize-se_189",
+      "card-memorize-se_234"
+    ],
+    "tip": "Bitkeeper는 'Git 탄생의 계기가 된 도구'라는 점이 출제 포인트입니다. 대규모 + 빠른 속도가 키워드!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_189",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "Git",
+    "definition": "Git\n분산 버전 관리 시스템(DVCS)으로, 로컬 저장소에서 관리 후 원격 저장소에 Push하는 구조\n\n• 리누스 토르발스가 개발\n• 특징: 분산형, 브랜치/머지 강력, 오프라인 작업 가능\n• 로컬에 전체 이력 보관 → 네트워크 없이도 커밋 가능\n• GitHub, GitLab 등 플랫폼과 함께 사용",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_185",
+      "card-memorize-se_186",
+      "card-memorize-se_187",
+      "card-memorize-se_188",
+      "card-memorize-se_234"
+    ],
+    "tip": "'분산형 + 로컬 저장소 관리 + Push'가 핵심입니다. SVN(중앙 집중형)과의 차이를 묻는 문제가 자주 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_190",
+    "categoryId": "memorize-se",
+    "subcategory": "패키징",
+    "term": "종속성 다운로드 → 컴파일 → 패키징 → 테스트 → 배포",
+    "definition": "빌드 자동화 도구 처리 절차:\n1. 종속성 다운로드: 필요한 라이브러리 다운로드\n2. 컴파일: 소스코드를 바이너리로 변환\n3. 패키징: 실행 파일로 패키징\n4. 테스트: 자동화 테스트 실행\n5. 배포: 서버에 배포",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_048",
+    "tags": [
+      "패키징",
+      "빌드자동화",
+      "CI/CD"
+    ],
+    "tip": "빌드 자동화 처리 절차 '종컴패테배'를 순서대로 암기하세요. 각 단계의 역할을 간략히 설명하는 문제가 출제됩니다.",
+    "mnemonic": "종컴패테배"
+  },
+  {
+    "id": "card-memorize-se_191",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "객체지향 분석의 방법론 5가지",
+    "definition": "럼바우 방법, 부치 방법, 자콥스 방법, Coad와 Yourdon 방법, Wirfs-Brock 방법",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_049",
+    "tags": [
+      "서버프로그램",
+      "객체지향분석",
+      "럼바우",
+      "부치",
+      "자콥스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_235"
+    ],
+    "tip": "객체지향 분석 방법론 5가지 중 럼바우가 가장 자주 출제됩니다. 럼바우=객체/동적/기능 모델링 3단계를 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_192",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "DTO/VO 구현",
+    "definition": "DTO/VO(Data Transfer Object / Value Object) 구현\n계층 간 데이터 교환을 위해 사용할 객체를 만드는 과정\n\n• DTO: 데이터 전송 전용 객체 (getter/setter)\n• VO: 값 객체 (읽기 전용, equals/hashCode 재정의)\n• 서버 개발 과정의 첫 번째 단계",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_193",
+      "card-memorize-se_194",
+      "card-memorize-se_195",
+      "card-memorize-se_196",
+      "card-memorize-se_236"
+    ],
+    "tip": "DTO(전송용, 수정 가능)와 VO(값 객체, 읽기 전용)의 차이를 묻는 문제가 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_193",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "SQL 구현",
+    "definition": "SQL 구현\n데이터 삽입(INSERT), 변경(UPDATE), 삭제(DELETE), 조회(SELECT) 등의 작업을 수행할 SQL문을 생성하는 과정\n\n• ORM(MyBatis, JPA) 또는 직접 SQL 작성\n• 서버 개발 과정의 두 번째 단계\n• CRUD(Create, Read, Update, Delete) 기본 연산 정의",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_192",
+      "card-memorize-se_194",
+      "card-memorize-se_195",
+      "card-memorize-se_196",
+      "card-memorize-se_236"
+    ],
+    "tip": "SQL 구현은 CRUD 연산을 정의하는 단계입니다. DAO(DB 접근)와 SQL(쿼리 생성)의 역할을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_194",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "DAO 구현",
+    "definition": "DAO(Data Access Object) 구현\n데이터베이스에 접근하고 SQL을 활용하여 데이터를 실제로 조작하는 코드를 구현하는 과정\n\n• DB 연결, SQL 실행, 결과 매핑 담당\n• 서버 개발 과정의 세 번째 단계\n• 비즈니스 로직과 DB 접근 로직을 분리하는 역할",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_192",
+      "card-memorize-se_193",
+      "card-memorize-se_195",
+      "card-memorize-se_196",
+      "card-memorize-se_236"
+    ],
+    "tip": "DAO는 'DB에 직접 접근하여 데이터를 조작'하는 역할입니다. Service(비즈니스 로직)와 역할을 구분!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_195",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "Service 구현",
+    "definition": "Service 구현\n사용자의 요청에 응답하기 위한 비즈니스 로직을 구현하는 과정\n\n• 트랜잭션 관리, 비즈니스 규칙 처리\n• DAO를 호출하여 데이터 접근\n• 서버 개발 과정의 네 번째 단계\n• 예: 주문 처리, 결제 검증, 재고 확인 등의 로직",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_192",
+      "card-memorize-se_193",
+      "card-memorize-se_194",
+      "card-memorize-se_196",
+      "card-memorize-se_236"
+    ],
+    "tip": "Service는 '비즈니스 로직 처리'를 담당합니다. Controller(요청 접수/응답 반환)와 역할을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_196",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "Controller 구현",
+    "definition": "Controller 구현\n사용자의 요청(Request)을 접수하고, 적절한 Service를 호출하여 결과를 사용자에게 반환(Response)하는 코드를 구현하는 과정\n\n• URL 매핑, 요청 파라미터 처리\n• 서버 개발 과정의 다섯 번째(마지막) 단계\n• 예: @GetMapping, @PostMapping 등으로 요청 처리",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_192",
+      "card-memorize-se_193",
+      "card-memorize-se_194",
+      "card-memorize-se_195",
+      "card-memorize-se_236"
+    ],
+    "tip": "서버 개발 순서: DTO/VO → SQL → DAO → Service → Controller. Controller는 마지막 단계로 '요청 접수 + 응답 반환'!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_197",
+    "categoryId": "memorize-se",
+    "subcategory": "인터페이스",
+    "term": "AJAX의 특징",
+    "definition": "비동기 통신, 부분 업데이트, 다양한 데이터 형식 지원, 빠른 응답시간, 서버와 클라이언트 분리",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_051",
+    "tags": [
+      "인터페이스",
+      "AJAX",
+      "비동기"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_237"
+    ],
+    "tip": "AJAX의 핵심은 '비동기 통신으로 페이지 전체를 새로고침하지 않고 부분 업데이트'하는 것입니다. XMLHttpRequest 객체를 사용합니다.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_198",
+    "categoryId": "memorize-se",
+    "subcategory": "디자인패턴",
+    "term": "배치 다이어그램",
+    "definition": "배치(Deployment) 다이어그램은 소프트웨어, 하드웨어, 네트워크를 포함한 실행 시스템의 물리 구조를 표현합니다.\n각 요소를 Node(노드)라고 부르며 연결선을 커넥션이라고 합니다.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_053",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "배치다이어그램",
+      "기출"
+    ],
+    "tip": "배치(Deployment) 다이어그램은 UML 구조적 다이어그램 중 하나로, '노드'와 '커넥션'이 핵심 요소입니다. 물리적 배포 구조를 표현!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_199",
+    "categoryId": "memorize-se",
+    "subcategory": "인터페이스",
+    "term": "데이터베이스 영역, 애플리케이션 영역, 네트워크 영역",
+    "definition": "인터페이스 보안 적용 3영역:\n- 데이터베이스: DB 접근 제어, 암호화\n- 애플리케이션: 입력 검증, 인증/인가\n- 네트워크: 통신 암호화, 방화벽",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_054",
+    "tags": [
+      "인터페이스",
+      "보안",
+      "3영역"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_239"
+    ],
+    "tip": "인터페이스 보안 3영역(DB, 애플리케이션, 네트워크)을 모두 나열하는 문제가 출제됩니다. 각 영역별 보안 기법도 함께 알아두세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_200",
+    "categoryId": "memorize-se",
+    "subcategory": "서버프로그램",
+    "term": "분할과 정복, 자료추상화, 모듈 독립성, 정보 은닉, 비용과 모듈",
+    "definition": "공통 모듈화 기법:\n- 분할과 정복(Divide & Conquer): 복잡한 문제를 분해하여 모듈 단위로 해결\n- 자료추상화: 함수 내의 자료 구조, 표현 내역을 숨기고 인터페이스 통해 접근\n- 모듈 독립성: 각 모듈의 결합도를 줄이고 응집도를 높임\n- 정보 은닉: 중요한 정보나 노출 가능성이 큰 모듈을 은닉\n- 비용과 모듈: 모듈 수가 많아지면 비용도 증가",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_055",
+    "tags": [
+      "서버프로그램",
+      "모듈화",
+      "재사용",
+      "공통모듈"
+    ],
+    "tip": "공통 모듈화 기법 5가지를 '분자모정비(분할과정복, 자료추상화, 모듈독립성, 정보은닉, 비용과모듈)'로 암기하세요!",
+    "mnemonic": "분자모정비"
+  },
+  {
+    "id": "card-memorize-se_201",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "term": "클래스, 패키지, 복합체 구조, 객체, 컴포넌트, 배치",
+    "definition": "UML의 구조적 다이어그램 6가지:\n클래스, 패키지, 복합체 구조, 객체, 컴포넌트, 배치\n\n(암기: 클패복객컴배)\n→ 시스템의 정적 구조를 표현하는 다이어그램",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_003",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_127"
+    ],
+    "tip": "구조적 다이어그램 6가지를 나열하는 문제가 자주 출제됩니다. '클패복객컴배'로 암기!",
+    "mnemonic": "클패복객컴배"
+  },
+  {
+    "id": "card-memorize-se_202",
+    "categoryId": "theory-se",
+    "subcategory": "결합도",
+    "term": "내용, 공통, 스탬프 결합도",
+    "definition": "스탬프 결합도 관련 문제 보기\n\n'전체 자료 구조를 전달'하는 결합도 → 스탬프 결합도(Stamp Coupling)\n• 내용 결합도: 내부 직접 참조/수정\n• 공통 결합도: 전역 변수 공유\n• 스탬프 결합도: 자료구조 전체 전달",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_005",
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_129",
+      "card-memorize-se_130",
+      "card-memorize-se_131",
+      "card-memorize-se_203"
+    ],
+    "tip": "'전체 자료 구조 전달'이 보이면 스탬프 결합도입니다. 이 보기에서 내용·공통과 함께 나오면 스탬프가 정답!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_203",
+    "categoryId": "theory-se",
+    "subcategory": "결합도",
+    "term": "내용, 외부, 스탬프 결합도",
+    "definition": "결합도 비교 문제 오답 보기\n\n• 내용 결합도: 내부 데이터 직접 참조/수정\n• 외부 결합도: 외부 프로토콜/데이터 포맷 공유\n• 스탬프 결합도: 자료구조 전체 전달\n→ '전체 자료 구조 전달'은 스탬프 결합도가 정답",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_005",
+    "tags": [
+      "소프트웨어공학",
+      "결합도",
+      "모듈"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_129",
+      "card-memorize-se_130",
+      "card-memorize-se_131",
+      "card-memorize-se_202"
+    ],
+    "tip": "결합도 문제에서 각 유형의 키워드를 정확히 매칭하세요. 내용=직접참조, 공통=전역변수, 외부=외부규격, 제어=플래그, 스탬프=구조체전달, 자료=순수값",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_204",
+    "categoryId": "theory-se",
+    "subcategory": "개발방법론",
+    "term": "팀의 장애 요소를 제거하고 스크럼 원칙을 지원하는 역할",
+    "definition": "스크럼 마스터(Scrum Master)의 역할:\n\n• 팀의 장애 요소를 찾아 제거하는 지원자\n• 스크럼 원칙과 가치를 지원\n• 팀이 스스로 조직하고 관리하도록 돕는 역할\n• 업무 배분은 하되 일을 강요하지 않음\n\n⚠️ '관리자'가 아닌 '지원자/조력자'가 핵심!",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_007",
+    "tags": [
+      "소프트웨어공학",
+      "스크럼",
+      "스크럼마스터",
+      "애자일"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_133"
+    ],
+    "tip": "스크럼 마스터는 '지원/조력' 역할입니다. '팀을 통제/관리한다'는 보기가 나오면 무조건 오답!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_205",
+    "categoryId": "theory-se",
+    "subcategory": "요구사항",
+    "term": "시스템 구성→기능→인터페이스, 아키텍처→SW구성, HW→네트워크",
+    "definition": "현행 시스템 파악절차 3단계:\n\n1단계: 시스템 구성 → 기능 → 인터페이스 파악\n2단계: 아키텍처 → 소프트웨어 구성 파악\n3단계: 하드웨어 → 네트워크 구성 파악\n\n(암기: 구기인 / 아소 / 하네)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_008",
+    "tags": [
+      "소프트웨어공학",
+      "현행시스템",
+      "파악절차"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_134",
+      "card-memorize-se_135",
+      "card-memorize-se_136"
+    ],
+    "tip": "3단계 순서를 정확히 암기하세요. 1단계=시스템, 2단계=SW, 3단계=HW 순서로 점점 물리적 영역으로 내려갑니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_206",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "term": "유스케이스, 활동, 콜라보레이션, 상태머신, 순차, 통신, 상호작용개요, 타이밍",
+    "definition": "UML 행위 다이어그램 8가지:\n유스케이스, 활동, 콜라보레이션, 상태머신, 순차, 통신, 상호작용 개요, 타이밍\n\n→ 시스템의 동적 행위를 표현하는 다이어그램\n→ 구조적 다이어그램(6가지)과 구분 필요",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_010",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "행위다이어그램"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_138"
+    ],
+    "tip": "행위 다이어그램 8가지를 모두 나열할 수 있어야 합니다. 구조적(정적)과 행위(동적)를 구분하는 문제가 단골!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_207",
+    "categoryId": "theory-se",
+    "subcategory": "UML",
+    "term": "시스템(네모), 액터(타원형), 관계(화살표)",
+    "definition": "유스케이스 다이어그램의 정의와 구성요소 (기출):\n\n• 정의: 사용자(Actor)와 시스템 간의 상호작용을 표현하는 다이어그램\n• 시스템: 네모(사각형)로 표기\n• 액터: 사람 모양(스틱맨)으로 표기\n• 유스케이스: 타원형으로 표기\n• 관계: 연관, include, extend, 일반화",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_012",
+    "tags": [
+      "소프트웨어공학",
+      "UML",
+      "유스케이스",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_140"
+    ],
+    "tip": "유스케이스 다이어그램의 구성요소와 기호를 묻는 기출 문제입니다. 시스템=네모, 액터=사람, 유스케이스=타원형을 정확히!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_208",
+    "categoryId": "theory-se",
+    "subcategory": "아키텍처",
+    "term": "유스케이스, 논리, 프로세스, 구현, 배포 뷰",
+    "definition": "소프트웨어 아키텍처 4+1 뷰:\n\n• 유스케이스 뷰(+1): 사용자 관점, 다른 4개 뷰를 검증\n• 논리 뷰: 기능적 요구사항, 클래스/패키지 구조\n• 프로세스 뷰: 비기능적 요구사항, 동시성/동기화\n• 구현 뷰: 개발자 관점, 모듈/컴포넌트 구조\n• 배포 뷰: 물리적 노드에 SW 배치",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_015",
+    "tags": [
+      "소프트웨어공학",
+      "아키텍처",
+      "4+1뷰"
+    ],
+    "tip": "4+1 뷰 각각의 역할을 설명하는 문제가 자주 출제됩니다. 유스케이스가 '+1'로 나머지 4개를 검증한다는 점이 핵심!",
+    "mnemonic": "유논프구배"
+  },
+  {
+    "id": "card-memorize-se_209",
+    "categoryId": "theory-se",
+    "subcategory": "프로젝트관리",
+    "term": "초기 → 관리 → 정의 → 정량적 관리 → 최적화",
+    "definition": "CMMi 5단계 순서:\n초기(Initial) → 관리(Managed) → 정의(Defined) → 정량적 관리(Quantitatively Managed) → 최적화(Optimizing)\n\n(암기: 초관정정최)\n→ 카네기 멜런 대학 SEI 개발 소프트웨어 프로세스 성숙도 모델",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_017",
+    "tags": [
+      "소프트웨어공학",
+      "CMMi",
+      "성숙도모델"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_144"
+    ],
+    "tip": "'초관정정최' 순서를 정확히 암기하세요. 각 단계의 핵심 키워드도 함께 기억!",
+    "mnemonic": "초관정정최"
+  },
+  {
+    "id": "card-memorize-se_210",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "term": "WSDL",
+    "definition": "WSDL(Web Services Description Language)\n웹 서비스의 상세 정보가 기술된 XML 형식의 언어\n\n• 서비스의 위치, 메서드, 매개변수, 반환값 등을 정의\n• 웹 서비스 3요소: UDDI(등록/검색), WSDL(서비스 기술), SOAP(메시지 교환)\n• 개발자가 웹 서비스를 이해하고 사용하기 위한 설명서 역할",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_019",
+    "tags": [
+      "소프트웨어공학",
+      "웹서비스",
+      "UDDI",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_146",
+      "card-memorize-se_211"
+    ],
+    "tip": "WSDL은 '웹 서비스의 설명서(XML)'입니다. UDDI(전화번호부), SOAP(통신 프로토콜)과 역할을 구분하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_211",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "term": "SOAP",
+    "definition": "SOAP(Simple Object Access Protocol)\nHTTP, HTTPS, SMTP 등을 이용하여 XML 기반의 메시지를 교환하는 프로토콜\n\n• 웹 서비스 3요소 중 통신 담당\n• 플랫폼/언어 독립적\n• REST와 비교: SOAP은 XML 기반 + 엄격한 표준, REST는 JSON 기반 + 유연함",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_019",
+    "tags": [
+      "소프트웨어공학",
+      "웹서비스",
+      "UDDI",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_146",
+      "card-memorize-se_210"
+    ],
+    "tip": "'XML 기반 메시지 교환 프로토콜'이 핵심입니다. REST(JSON, 유연)와 SOAP(XML, 엄격)의 차이가 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_212",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "term": "단일책임, 개방폐쇄, 리스코프치환, 인터페이스분리, 의존역전",
+    "definition": "SOLID 5가지 원칙:\n\n• S(SRP): 단일 책임 - 클래스는 하나의 책임만\n• O(OCP): 개방-폐쇄 - 확장에 열림, 수정에 닫힘\n• L(LSP): 리스코프 치환 - 자식이 부모를 대체 가능\n• I(ISP): 인터페이스 분리 - 불필요한 인터페이스 의존 금지\n• D(DIP): 의존 역전 - 추상화에 의존할 것",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_025",
+    "tags": [
+      "서버프로그램",
+      "SOLID",
+      "객체지향",
+      "설계원칙"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_152",
+      "card-memorize-se_153",
+      "card-memorize-se_154",
+      "card-memorize-se_155",
+      "card-memorize-se_156"
+    ],
+    "tip": "SOLID 5가지 원칙의 영문 약어와 한글 정의를 정확히 매칭하는 문제가 단골입니다. 각 원칙의 핵심 키워드를 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_213",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "term": "Model=데이터/로직, View=화면표시, Controller=입력처리/연결",
+    "definition": "MVC 패턴의 각 구성요소 역할:\n\n• Model: 데이터와 비즈니스 로직 처리, DB 상호작용\n• View: 사용자 인터페이스(화면) 표시, UI 요소 포함\n• Controller: 사용자 입력 처리, Model-View 연결/제어\n\n→ 관심사 분리로 유지보수성과 확장성 향상",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_029",
+    "tags": [
+      "서버프로그램",
+      "MVC",
+      "디자인패턴"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_160",
+      "card-memorize-se_161",
+      "card-memorize-se_162"
+    ],
+    "tip": "Model=데이터/로직, View=화면, Controller=연결/제어. 각 역할을 설명하는 문제가 매우 자주 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_214",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "term": "Shared memory, Socket, Semaphores, Pipes, Message Queueing",
+    "definition": "IPC(Inter-Process Communication) 대표 메소드:\n\n• Shared Memory: 공유 메모리 (가장 빠름)\n• Socket: 네트워크 기반 양방향 통신\n• Semaphores: 프로세스 동기화 (상호배제)\n• Pipes & Named Pipes: 단방향 데이터 흐름\n• Message Queueing: 메시지 큐 기반 비동기 통신",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_030",
+    "tags": [
+      "서버프로그램",
+      "IPC",
+      "프로세스간통신"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_163"
+    ],
+    "tip": "IPC 5가지를 나열하는 문제가 출제됩니다. Shared Memory(가장 빠름)와 Semaphore(동기화 도구)의 특징을 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_215",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "term": "직관성, 유효성, 학습성, 유연성",
+    "definition": "UI의 기본 원칙 4가지 (기출):\n\n• 직관성(Intuitiveness): 누구나 쉽게 이해하고 사용\n• 유효성(Effectiveness): 사용자 목적을 정확히 달성\n• 학습성(Learnability): 누구나 쉽게 배우고 익힘\n• 유연성(Flexibility): 요구사항 수용 + 실수 최소화\n\n(암기: 직유학유)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_033",
+    "tags": [
+      "화면설계",
+      "UI",
+      "설계원칙",
+      "기출"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_166",
+      "card-memorize-se_167",
+      "card-memorize-se_168",
+      "card-memorize-se_169"
+    ],
+    "tip": "UI 4대 원칙을 '직유학유'로 암기하세요. 각 원칙의 정의를 약술하는 기출 문제가 있습니다!",
+    "mnemonic": "직유학유"
+  },
+  {
+    "id": "card-memorize-se_216",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "term": "기능적=시스템 기능 속성, 비기능적=품질 관련 특성",
+    "definition": "기능적 요구사항과 비기능적 요구사항의 구분:\n\n• 기능적 요구사항: 시스템이 '무엇을(What)' 해야 하는가\n  - 시스템 입출력, 데이터 처리, 동기화 등\n• 비기능적 요구사항: 시스템이 '어떻게(How)' 동작해야 하는가\n  - 품질 관련 특성(성능, 보안, 사용성, 이식성 등)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_170",
+      "card-memorize-se_171",
+      "card-memorize-se_217",
+      "card-memorize-se_218",
+      "card-memorize-se_219"
+    ],
+    "tip": "기능적(What) vs 비기능적(How)의 구분이 핵심입니다. 성능, 보안 등은 비기능적 요구사항!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_217",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "term": "기능적=성능 요구, 비기능적=화면 설계",
+    "definition": "기능적/비기능적 요구사항 구분 문제 (오답 보기):\n\n• 성능 요구 → 비기능적 요구사항 (기능적이 아님!)\n• 화면 설계 → 기능적 요구사항 (비기능적이 아님!)\n\n⚠️ 이 보기 조합은 기능적/비기능적이 뒤바뀐 오답입니다",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_170",
+      "card-memorize-se_171",
+      "card-memorize-se_216",
+      "card-memorize-se_218",
+      "card-memorize-se_219"
+    ],
+    "tip": "성능 요구는 '비기능적', 화면 설계(시스템이 무엇을 보여줄지)는 '기능적'입니다. 뒤바꿔 출제하는 오답에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_218",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "term": "기능적=하드웨어 사양, 비기능적=소프트웨어 기능",
+    "definition": "기능적/비기능적 요구사항 구분 문제 (오답 보기):\n\n• 하드웨어 사양 → 비기능적 요구사항 (기능적이 아님!)\n• 소프트웨어 기능 → 기능적 요구사항 (비기능적이 아님!)\n\n⚠️ 이 보기 조합은 기능적/비기능적이 뒤바뀐 오답입니다",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_170",
+      "card-memorize-se_171",
+      "card-memorize-se_216",
+      "card-memorize-se_217",
+      "card-memorize-se_219"
+    ],
+    "tip": "하드웨어 사양은 '비기능적', 소프트웨어 기능(What)은 '기능적'입니다. 시험에서 자주 뒤바꿔 출제합니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_219",
+    "categoryId": "theory-se",
+    "subcategory": "화면설계",
+    "term": "기능적=보안 요구, 비기능적=데이터 처리",
+    "definition": "기능적/비기능적 요구사항 구분 문제 (오답 보기):\n\n• 보안 요구 → 비기능적 요구사항 (기능적이 아님!)\n• 데이터 처리 → 기능적 요구사항 (비기능적이 아님!)\n\n⚠️ 이 보기 조합은 기능적/비기능적이 뒤바뀐 오답입니다",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_034",
+    "tags": [
+      "화면설계",
+      "요구사항",
+      "기능적",
+      "비기능적"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_170",
+      "card-memorize-se_171",
+      "card-memorize-se_216",
+      "card-memorize-se_217",
+      "card-memorize-se_218"
+    ],
+    "tip": "보안은 '비기능적', 데이터 처리(시스템 기능)는 '기능적'입니다. 기능적/비기능적 구분 문제의 오답 패턴을 파악하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_220",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "원시 코드를 오픈하여 테스트 / 기초경로, 조건, 루프, 데이터흐름 검사",
+    "definition": "화이트박스 테스트 정의와 기법 (문제 형태):\n\n• 정의: 원시 코드를 오픈하여 내부 구조를 기반으로 테스트\n• 기법:\n  1. 기초 경로 검사(Basis Path): 순환 복잡도 활용\n  2. 조건 검사: 논리 조건 테스트\n  3. 루프 검사: 반복문 경계 테스트\n  4. 데이터 흐름 검사: 변수 정의-사용 분석",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_035",
+    "tags": [
+      "테스트",
+      "화이트박스",
+      "기초경로"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_172"
+    ],
+    "tip": "화이트박스='소스코드 공개 + 내부 구조 기반'. 기초 경로 검사가 가장 중요한 기법이며 맥케이브의 순환 복잡도와 함께 출제!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_221",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "동치분할, 경계값 분석, 원인효과, 오류 예측, 비교 검사",
+    "definition": "블랙박스 테스트 정의와 기법 5가지 (문제 형태):\n\n• 정의: 내부 구조를 모른 채 입출력만으로 기능 검증\n• (암기: 동경원오비)\n  1. 동치분할: 입력값을 동치 클래스로 나눠 대표값\n  2. 경계값 분석: 경계 부근 집중 테스트\n  3. 원인-효과 그래프: 입력-출력 논리 관계\n  4. 오류 예측: 경험 기반 추측\n  5. 비교 검사: 여러 버전 결과 비교",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_036",
+    "tags": [
+      "테스트",
+      "블랙박스",
+      "기능테스트"
+    ],
+    "tip": "블랙박스='소스코드 비공개 + 기능 기반'. 5가지 기법을 '동경원오비'로 암기하세요!",
+    "mnemonic": "동경원오비"
+  },
+  {
+    "id": "card-memorize-se_222",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "단위 → 통합 → 시스템 → 인수 테스트",
+    "definition": "V-모델 테스트 레벨 순서 (기출):\n\n개발 단계: 요구사항 → 분석 → 설계 → 구현\n테스트 단계: 단위 → 통합 → 시스템 → 인수 테스트\n\n대응 관계:\n• 요구사항 ↔ 인수 테스트\n• 분석 ↔ 시스템 테스트\n• 설계 ↔ 통합 테스트\n• 구현 ↔ 단위 테스트",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_037",
+    "tags": [
+      "테스트",
+      "V모델",
+      "기출",
+      "단위테스트",
+      "통합테스트"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_173"
+    ],
+    "tip": "V-모델에서 개발 단계와 테스트 단계의 대응 관계가 기출입니다. 요구사항↔인수, 설계↔통합, 구현↔단위!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_223",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "상향식=드라이버/하위→상위, 하향식=스텁/상위→하위",
+    "definition": "통합 테스트 방식 (정답 보기):\n\n• 상향식(Bottom-Up): 드라이버(Driver) 사용, 하위→상위 통합\n• 하향식(Top-Down): 스텁(Stub) 사용, 상위→하위 통합\n\n(암기: 상드하스)\n→ 이 조합이 정답입니다",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_174",
+      "card-memorize-se_175",
+      "card-memorize-se_224",
+      "card-memorize-se_225",
+      "card-memorize-se_226"
+    ],
+    "tip": "상향식=드라이버, 하향식=스텁. '상드하스'로 암기! 이 조합을 뒤바꾼 보기는 모두 오답입니다.",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_224",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "상향식=스텁/상위→하위, 하향식=드라이버/하위→상위",
+    "definition": "통합 테스트 방식 (오답 보기):\n\n⚠️ 상향식=스텁, 하향식=드라이버 → 이것은 오답!\n\n정답: 상향식=드라이버(Driver), 하향식=스텁(Stub)\n(암기: 상드하스)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_174",
+      "card-memorize-se_175",
+      "card-memorize-se_223",
+      "card-memorize-se_225",
+      "card-memorize-se_226"
+    ],
+    "tip": "이 보기는 상향식/하향식의 도구가 뒤바뀐 대표적 오답입니다. '상드하스'를 기억하면 바로 거를 수 있습니다!",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_225",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "상향식=드라이버/상위→하위, 하향식=스텁/하위→상위",
+    "definition": "통합 테스트 방식 (오답 보기):\n\n⚠️ 상향식=드라이버/상위→하위, 하향식=스텁/하위→상위 → 이것은 오답!\n\n정답: 상향식=드라이버/하위→상위, 하향식=스텁/상위→하위\n→ 도구는 맞지만 방향이 반대로 뒤바뀜",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_174",
+      "card-memorize-se_175",
+      "card-memorize-se_223",
+      "card-memorize-se_224",
+      "card-memorize-se_226"
+    ],
+    "tip": "도구(상향식=드라이버, 하향식=스텁)는 맞지만 방향이 반대인 오답 보기입니다. 상향식=하위→상위, 하향식=상위→하위!",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_226",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "둘 다 드라이버 사용, 방향만 다름",
+    "definition": "통합 테스트 방식 (오답 보기):\n\n⚠️ '둘 다 드라이버 사용' → 이것은 오답!\n\n정답:\n• 상향식 = 드라이버(Driver)\n• 하향식 = 스텁(Stub)\n→ 각각 다른 도구를 사용합니다",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_038",
+    "tags": [
+      "테스트",
+      "통합테스트",
+      "상향식",
+      "하향식",
+      "드라이버",
+      "스텁"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_174",
+      "card-memorize-se_175",
+      "card-memorize-se_223",
+      "card-memorize-se_224",
+      "card-memorize-se_225"
+    ],
+    "tip": "'둘 다 같은 도구 사용'이라는 보기는 무조건 오답입니다. 상향식=드라이버, 하향식=스텁으로 서로 다릅니다!",
+    "mnemonic": "상드하스"
+  },
+  {
+    "id": "card-memorize-se_227",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "드라이버, 스텁, 슈트, 케이스, 스크립트, 목 오브젝트",
+    "definition": "테스트 하네스(Test Harness) 구성요소 6가지:\n\n1. 드라이버(Driver): 상위 모듈 대신 하위 모듈을 호출하는 도구\n2. 스텁(Stub): 하위 모듈을 대신하는 더미 모듈\n3. 슈트(Suite): 테스트 케이스를 묶은 집합\n4. 케이스(Case): 입력값, 실행조건, 기대결과\n5. 스크립트(Script): 테스트 실행 절차를 자동화한 스크립트\n6. 목 오브젝트(Mock Object): 의존 객체를 시뮬레이션",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_039",
+    "tags": [
+      "테스트",
+      "테스트하네스",
+      "드라이버",
+      "스텁"
+    ],
+    "tip": "테스트 하네스 6가지 구성요소를 모두 나열하는 문제가 출제됩니다. 드라이버/스텁의 역할 차이도 함께 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_228",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "처리량, 응답시간, 경과시간, 자원 사용률",
+    "definition": "애플리케이션 성능 측정 지표 4가지:\n\n1. 처리량(Throughput): 일정 시간 내 처리하는 작업량\n2. 응답시간(Response Time): 요청→응답까지의 시간\n3. 경과시간(Turn Around Time): 요청→완전 처리까지의 총 시간\n4. 자원 사용률(Resource Usage): CPU/메모리/네트워크 활용도",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_040",
+    "tags": [
+      "테스트",
+      "성능측정",
+      "처리량",
+      "응답시간"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_176",
+      "card-memorize-se_177",
+      "card-memorize-se_178",
+      "card-memorize-se_179"
+    ],
+    "tip": "성능 측정 4대 지표를 '처응경자'로 암기하세요. 응답시간(첫 응답)과 경과시간(완전 처리)의 차이가 핵심!",
+    "mnemonic": "처응경자"
+  },
+  {
+    "id": "card-memorize-se_229",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "참, 일관성 검사, 샘플링, 휴리스틱 오라클",
+    "definition": "테스트 오라클(Test Oracle)의 정의와 4가지 종류:\n\n• 정의: 테스트 결과가 올바른지 판단하는 기준/메커니즘\n\n1. 참(True) 오라클: 모든 입력에 대해 기대 결과 제공 (완벽)\n2. 일관성 검사(Consistent) 오라클: 동일 입력에 동일 결과 확인\n3. 샘플링(Sampling) 오라클: 특정 입력 샘플에 대해서만 결과 제공\n4. 휴리스틱(Heuristic) 오라클: 경험적 규칙으로 판단 (나머지는 추정)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_041",
+    "tags": [
+      "테스트",
+      "테스트오라클",
+      "참오라클"
+    ],
+    "tip": "테스트 오라클 4종류를 '참일샘휴'로 암기하세요. 참 오라클(완벽한 기준)은 현실적으로 구현이 어렵다는 점도 기억!",
+    "mnemonic": "참일샘휴"
+  },
+  {
+    "id": "card-memorize-se_230",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "문장, 분기, 조건, 분기/조건",
+    "definition": "화이트박스 테스트의 검증 기준(커버리지) 4가지:\n\n1. 문장(구문) 커버리지: 모든 구문을 최소 1회 실행\n2. 분기(결정) 커버리지: 전체 조건식의 T/F를 모두 수행\n3. 조건 커버리지: 개별 조건의 T/F를 모두 수행\n4. 분기/조건 커버리지: 분기 + 조건을 동시에 만족\n\n→ 강도: 문장 < 분기 < 조건 < 분기/조건 < MC/DC < 다중조건",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_042",
+    "tags": [
+      "테스트",
+      "화이트박스",
+      "커버리지"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_180"
+    ],
+    "tip": "커버리지 4가지를 나열하는 문제가 자주 출제됩니다. 강도 순서를 기억하고, 결정(전체)과 조건(개별)의 차이를 확실히!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_231",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "정적=실행없이 코드분석, 동적=실행하여 결함분석",
+    "definition": "소스코드 품질 분석 도구:\n\n• 정적 분석: 프로그램을 실행하지 않고 소스코드/명세서를 분석\n  - 종류: 워크스루, 인스펙션, 코드 검사, 정적 분석 도구\n• 동적 분석: 프로그램을 실행하여 메모리 누수, 스레드 결함 등을 분석\n  - 종류: 블랙박스 테스트, 화이트박스 테스트",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_044",
+    "tags": [
+      "테스트",
+      "정적분석",
+      "동적분석",
+      "워크스루",
+      "인스펙션"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_181",
+      "card-memorize-se_182"
+    ],
+    "tip": "정적 분석='실행 없이 코드 분석', 동적 분석='실행하여 결함 분석'. 이 정의를 바꿔 출제하는 문제에 주의!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_232",
+    "categoryId": "theory-se",
+    "subcategory": "테스트",
+    "term": "테스트 계획서, 케이스, 시나리오, 결과서",
+    "definition": "소프트웨어 테스트 산출물 4가지:\n\n1. 테스트 계획서: 테스트 전략, 범위, 일정, 자원 정의\n2. 테스트 케이스: 입력값, 실행 조건, 기대 결과 정의\n3. 테스트 시나리오: 여러 테스트 케이스의 동작 순서\n4. 테스트 결과서: 테스트 수행 결과 문서화\n\n(암기: 계케시결)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_045",
+    "tags": [
+      "테스트",
+      "산출물",
+      "계획서",
+      "케이스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_183"
+    ],
+    "tip": "테스트 산출물 4가지를 '계케시결'로 암기하세요. 테스트 케이스의 정의(입력값+실행조건+기대결과)가 자주 출제!",
+    "mnemonic": "계케시결"
+  },
+  {
+    "id": "card-memorize-se_233",
+    "categoryId": "theory-se",
+    "subcategory": "패키징",
+    "term": "디지털 콘텐츠 보호 기술 / 지속적 보호, 이용 편리성, 유연성, 통합 용이성",
+    "definition": "DRM(Digital Rights Management):\n\n• 정의: 디지털 콘텐츠의 저작권을 보호하는 기술\n• 기술적 요구사항 4가지:\n  1. 지속적 보호: 유통 전 과정에서 보호\n  2. 이용 편리성: 사용자 불편 최소화\n  3. 유연성: 다양한 환경 대응\n  4. 통합 용이성: 기존 시스템과 쉽게 통합",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_046",
+    "tags": [
+      "패키징",
+      "DRM",
+      "디지털콘텐츠"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_184"
+    ],
+    "tip": "DRM 기술적 요구사항 4가지를 '지이유통'으로 암기하세요. DRM의 정의도 함께 출제됩니다!",
+    "mnemonic": "지이유통"
+  },
+  {
+    "id": "card-memorize-se_234",
+    "categoryId": "theory-se",
+    "subcategory": "패키징",
+    "term": "CVS, RCS, SVN, Bitkeeper, Git",
+    "definition": "버전관리 도구 5가지와 특징:\n\n• CVS: 중앙 집중형, 동시 접근 가능, 가장 오래됨\n• RCS: 파일 잠금 방식, 한 사람만 수정\n• SVN: 중앙 집중형, CVS 개선, 롤백 가능\n• Bitkeeper: 분산형, 대규모/빠른 속도, Git의 계기\n• Git: 분산형, 로컬 저장소 관리 후 Push, 가장 널리 사용",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_047",
+    "tags": [
+      "패키징",
+      "버전관리",
+      "CVS",
+      "SVN",
+      "Git"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_185",
+      "card-memorize-se_186",
+      "card-memorize-se_187",
+      "card-memorize-se_188",
+      "card-memorize-se_189"
+    ],
+    "tip": "CVS/SVN(중앙 집중형)과 Git(분산형)의 차이를 묻는 문제가 핵심입니다. 각 도구의 특징 키워드를 매칭하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_235",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "term": "럼바우, 부치, 자콥스, Coad와 Yourdon, Wirfs-Brock",
+    "definition": "객체지향 분석 방법론 5가지:\n\n• 럼바우(Rumbaugh): 객체→동적→기능 모델링 (가장 유명)\n• 부치(Booch): 미시적/거시적 관점의 반복적 개발\n• 자콥슨(Jacobson): 유스케이스 기반 분석\n• Coad & Yourdon: E-R 다이어그램 기반\n• Wirfs-Brock: 책임 주도 설계(RDD)",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_049",
+    "tags": [
+      "서버프로그램",
+      "객체지향분석",
+      "럼바우",
+      "부치",
+      "자콥스"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_191"
+    ],
+    "tip": "럼바우(객동기 3단계)가 가장 자주 출제됩니다. 자콥슨=유스케이스도 함께 기억하세요!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_236",
+    "categoryId": "theory-se",
+    "subcategory": "서버프로그램",
+    "term": "DTO/VO=데이터객체, SQL=쿼리생성, DAO=DB접근, Service=로직, Controller=요청처리",
+    "definition": "서버 개발 과정은 DTO/VO, SQL, DAO, Service, Controller를 각각 구현하는 과정이다. 각각에 대해서 설명하시오.",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_050",
+    "tags": [
+      "서버프로그램",
+      "DTO",
+      "DAO",
+      "Service",
+      "Controller"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_192",
+      "card-memorize-se_193",
+      "card-memorize-se_194",
+      "card-memorize-se_195",
+      "card-memorize-se_196"
+    ],
+    "tip": "서버 개발 5단계 순서: DTO/VO → SQL → DAO → Service → Controller. 각 단계의 역할을 간략히 설명하는 문제가 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_237",
+    "categoryId": "theory-se",
+    "subcategory": "인터페이스",
+    "term": "비동기 통신, 부분 업데이트, 다양한 데이터 형식, 빠른 응답시간",
+    "definition": "AJAX(Asynchronous JavaScript and XML)의 특징:\n\n• 비동기 통신: 페이지 전체 새로고침 없이 서버와 통신\n• 부분 업데이트: 필요한 부분만 갱신\n• 다양한 데이터 형식 지원: XML, JSON, HTML 등\n• 빠른 응답시간: 전체 페이지 로딩 불필요\n• 서버와 클라이언트 분리: 독립적 동작",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_051",
+    "tags": [
+      "인터페이스",
+      "AJAX",
+      "비동기"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_197"
+    ],
+    "tip": "AJAX의 핵심은 '비동기 + 부분 업데이트'입니다. XMLHttpRequest 또는 fetch API를 사용한다는 점도 기억!",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_238",
+    "categoryId": "theory-se",
+    "subcategory": "통합구현",
+    "term": "Point-to-Point, Hub & Spoke, Message Bus, Hybrid",
+    "definition": "EAI(Enterprise Application Integration) 구축유형 4가지 (기출):\n\n1. Point-to-Point: 1:1 직접 연결, 변경/재사용 어려움\n2. Hub & Spoke: 중앙 허브 중계, 허브 장애 시 전체 영향\n3. Message Bus: ESB 미들웨어 기반, 확장성 우수\n4. Hybrid: Hub & Spoke + Message Bus 결합",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_052",
+    "tags": [
+      "통합구현",
+      "EAI",
+      "구축유형",
+      "기출"
+    ],
+    "tip": "EAI 4가지 유형은 기출 빈도가 매우 높습니다! 각 유형의 핵심 키워드와 장단점을 반드시 구분하세요.",
+    "mnemonic": "암기 TIP"
+  },
+  {
+    "id": "card-memorize-se_239",
+    "categoryId": "theory-se",
+    "subcategory": "인터페이스",
+    "term": "데이터베이스, 애플리케이션, 네트워크",
+    "definition": "인터페이스 보안 적용 3영역:\n\n1. 데이터베이스 영역: DB 접근 제어, 데이터 암호화, SQL 인젝션 방지\n2. 애플리케이션 영역: 입력값 검증, 인증/인가, 세션 관리\n3. 네트워크 영역: 통신 암호화(SSL/TLS), 방화벽, VPN\n\n→ 3영역 모두에 보안을 적용해야 함",
+    "source": "theory",
+    "sourceQuestionId": "theory-se_054",
+    "tags": [
+      "인터페이스",
+      "보안",
+      "3영역"
+    ],
+    "relatedTerms": [
+      "card-memorize-se_199"
+    ],
+    "tip": "인터페이스 보안 3영역(DB, 애플리케이션, 네트워크)을 나열하고 각 영역별 보안 기법을 묻는 문제가 출제됩니다!",
+    "mnemonic": "암기 TIP"
+  }
+]

@@ -10,6 +10,17 @@
   - [Analysis](exam-tab/exam-tab.analysis.md)
   - [Report](exam-tab/exam-tab.report.md)
 
+## flashcards
+- **완료일**: 2026-04-13
+- **Match Rate**: 97%
+- **Iteration**: 0회 (불필요)
+- **성과**: 523장 암기카드 definition 보강 + tip/mnemonic 전체 추가 (4개 파일 병렬 처리)
+- **문서**:
+  - [Plan](flashcards/flashcards.plan.md)
+  - [Design](flashcards/flashcards.design.md)
+  - [Analysis](flashcards/flashcards.analysis.md)
+  - [Report](flashcards/flashcards.report.md)
+
 ## theory-data-expansion
 - **완료일**: 2026-04-02
 - **Match Rate**: 93%

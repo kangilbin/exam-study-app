@@ -16,6 +16,12 @@ import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getCategoriesWithQuestions } from '@/features/categories/services/categoryService';
 import { getQuestionCountExcludingGroup, getQuestionIdsExcludingGroup } from '@/features/questions/services/questionService';
+import {
+  isMemorizeCategory,
+  isAlgorithmCategory,
+  getFlashcardCount,
+} from '@/features/flashcards/services/flashcardService';
+import { useFlashcardStore } from '@/store/useFlashcardStore';
 import { useUserStore } from '@/store/useUserStore';
 import { calculateOverallStatsFiltered } from '@/features/questions/services/progressService';
 import { COLORS } from '@/lib/constants';
@@ -30,6 +36,8 @@ export default function HomeScreen() {
   const totalQuestions = getQuestionCountExcludingGroup('exam');
   const studyQuestionIds = getQuestionIdsExcludingGroup('exam');
   const progress = useUserStore((s) => s.progress);
+  const cardProgress = useFlashcardStore((s) => s.cardProgress);
+  const getCategoryProgress = useFlashcardStore((s) => s.getCategoryProgress);
   const overallStats = useMemo(
     () => calculateOverallStatsFiltered(progress, studyQuestionIds),
     [progress, studyQuestionIds]
@@ -45,6 +53,42 @@ export default function HomeScreen() {
   };
 
   const renderCategory = ({ item }: { item: Category }) => {
+    const isCard = isMemorizeCategory(item.id);
+
+    if (isCard) {
+      const flashcardTotal = getFlashcardCount(item.id);
+      const { known, rate } = getCategoryProgress(item.id, flashcardTotal);
+      const percent = Math.round(rate * 100);
+
+      return (
+        <Pressable
+          style={styles.categoryCard}
+          onPress={() => handleCategoryPress(item.id)}
+        >
+          <MaterialCommunityIcons
+            name={item.icon as any}
+            size={32}
+            color={COLORS.primary}
+          />
+          <Text style={styles.categoryName}>{item.name}</Text>
+          <Text style={styles.categoryCount}>
+            {known}/{flashcardTotal} 암기
+          </Text>
+          <View style={styles.progressBarContainer}>
+            <View
+              style={[
+                styles.progressBar,
+                {
+                  width: `${percent}%`,
+                  backgroundColor: percent >= 70 ? COLORS.success : COLORS.primary,
+                },
+              ]}
+            />
+          </View>
+        </Pressable>
+      );
+    }
+
     const stats = useUserStore.getState().getCategoryStats(item.id);
     const catProgress =
       item.questionCount > 0
@@ -80,6 +124,7 @@ export default function HomeScreen() {
         data={categories}
         renderItem={renderCategory}
         keyExtractor={(item) => item.id}
+        extraData={[progress, cardProgress]}
         numColumns={2}
         columnWrapperStyle={styles.row}
         ListHeaderComponent={

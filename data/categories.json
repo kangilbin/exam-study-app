@@ -63,76 +63,40 @@
     "subcategories": ["UNION", "INTERSECT", "EXCEPT", "집계함수"]
   },
   {
-    "id": "theory-se",
+    "id": "memorize-se",
     "name": "소프트웨어공학",
     "icon": "cog-outline",
     "group": "theory",
-    "description": "요구사항, 통합구현, 서버프로그램, 테스트, 화면설계, 패키징",
+    "description": "개발방법론, UML, 디자인패턴, 테스트, 아키텍처, 통합구현",
     "questionCount": 0,
-    "subcategories": ["개발방법론", "요구사항", "UML", "디자인패턴", "비용산정", "아키텍처", "프로젝트관리", "통합구현", "서버프로그램", "인터페이스", "화면설계", "테스트", "패키징"]
+    "subcategories": ["개발방법론", "요구사항", "UML", "디자인패턴", "아키텍처", "테스트", "모듈", "형상관리", "SOLID", "EAI", "CMMi", "빌드", "통합구현", "화면설계", "패키징"]
   },
   {
-    "id": "theory-network",
+    "id": "memorize-network",
     "name": "네트워크/보안",
     "icon": "shield-lock-outline",
     "group": "theory",
     "description": "OSI 7계층, TCP/IP, 프로토콜, 암호화, 보안공격, 보안솔루션",
     "questionCount": 0,
-    "subcategories": ["OSI 7계층", "TCP/IP", "프로토콜", "암호화", "보안공격", "보안솔루션", "접근통제", "VPN", "오류검출", "라우팅", "스위치", "IPv6", "인증"]
+    "subcategories": ["OSI", "TCP/IP", "프로토콜", "암호화", "보안공격", "보안솔루션", "접근통제", "라우팅", "IP", "DoS", "네트워크장비"]
   },
   {
-    "id": "theory-db",
+    "id": "memorize-db",
     "name": "데이터베이스",
     "icon": "database",
     "group": "theory",
     "description": "스키마, 정규화, 관계대수, 트랜잭션, 회복, 병행제어",
     "questionCount": 0,
-    "subcategories": ["스키마", "릴레이션", "정규화", "관계대수", "무결성", "트랜잭션", "회복", "병행제어", "데이터베이스", "데이터모델", "보안", "키", "SQL분류", "SQL", "파일접근"]
-  },
-  {
-    "id": "theory-os",
-    "name": "운영체제",
-    "icon": "monitor",
-    "group": "theory",
-    "description": "프로세스, 스케줄링, 메모리관리, 교착상태, UNIX",
-    "questionCount": 0,
-    "subcategories": ["프로세스", "스케줄링", "메모리관리", "디스크", "교착상태", "운영체제", "UNIX", "병행제어", "개발모델", "인터페이스", "보안", "웹기술", "네트워크"]
-  },
-  {
-    "id": "memorize-se",
-    "name": "암기: 소프트웨어공학",
-    "icon": "brain",
-    "group": "theory",
-    "description": "소프트웨어 공학 핵심 개념 암기",
-    "questionCount": 0,
-    "subcategories": ["방법론", "모듈", "형상관리", "테스트", "디자인패턴", "UML", "아키텍처", "SOLID", "EAI", "CMMi", "빌드"]
-  },
-  {
-    "id": "memorize-network",
-    "name": "암기: 네트워크/보안",
-    "icon": "brain",
-    "group": "theory",
-    "description": "네트워크/보안 핵심 개념 암기",
-    "questionCount": 0,
-    "subcategories": ["OSI", "프로토콜", "IP", "DoS", "암호화", "접근통제"]
-  },
-  {
-    "id": "memorize-db",
-    "name": "암기: 데이터베이스",
-    "icon": "brain",
-    "group": "theory",
-    "description": "데이터베이스 핵심 개념 암기",
-    "questionCount": 0,
-    "subcategories": ["트랜잭션", "SQL분류", "정규화", "관계대수", "회복기법"]
+    "subcategories": ["스키마", "정규화", "관계대수", "트랜잭션", "회복기법", "병행제어", "무결성", "키", "SQL분류", "분산DB", "파일접근"]
   },
   {
     "id": "memorize-os",
-    "name": "암기: 운영체제",
-    "icon": "brain",
+    "name": "운영체제",
+    "icon": "monitor",
     "group": "theory",
-    "description": "운영체제 핵심 개념 암기",
+    "description": "프로세스, 스케줄링, 메모리관리, 교착상태, UNIX/리눅스",
     "questionCount": 0,
-    "subcategories": ["스케줄링", "교착상태", "프로세스", "메모리", "리눅스"]
+    "subcategories": ["스케줄링", "교착상태", "프로세스", "메모리", "운영체제", "유닉스", "리눅스", "IPC", "신기술", "전산용어"]
   },
   {
     "id": "exam-2020-1",
