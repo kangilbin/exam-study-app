@@ -13,6 +13,7 @@ import type { Category } from '@/features/questions/types';
 
 export default function QuizTab() {
   const router = useRouter();
+  const progress = useUserStore((s) => s.progress);
   const categories = getCategoriesWithQuestions();
 
   const renderItem = ({ item }: { item: Category }) => {
@@ -61,6 +62,7 @@ export default function QuizTab() {
         data={categories}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        extraData={progress}
         contentContainerStyle={styles.listContent}
         ListHeaderComponent={
           <Text style={styles.header}>

@@ -20,14 +20,7 @@ export default function RootLayout() {
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="quiz/[categoryId]"
-          options={{ title: '문제 풀이', presentation: 'card' }}
-        />
-        <Stack.Screen
-          name="quiz/result"
-          options={{ title: '풀이 결과', presentation: 'card' }}
-        />
+        <Stack.Screen name="quiz" options={{ headerShown: false }} />
         <Stack.Screen
           name="bookmarks"
           options={{ title: '북마크', presentation: 'card' }}
