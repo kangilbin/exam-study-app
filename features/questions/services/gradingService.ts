@@ -30,9 +30,14 @@ const normalizeEnglish = (s: string): string =>
 const normalizeCodeOutput = (s: string): string =>
   s.replace(/\s+/g, '');
 
-/** SQL 정규화: 소문자 + 공백 정리 + 세미콜론 제거 */
+/** SQL 정규화: 소문자 + 공백 정리 + 세미콜론 제거 + 괄호/쉼표/연산자 주변 공백 무시 */
 const normalizeSql = (s: string): string =>
-  s.trim().replace(/;$/, '').replace(/\s+/g, ' ').toLowerCase();
+  s.trim()
+    .replace(/;$/, '')
+    .replace(/\s+/g, ' ')
+    .toLowerCase()
+    .replace(/\s*([(),])\s*/g, '$1')
+    .replace(/\s*([=<>!])\s*/g, '$1');
 
 /** 순서 기호 추출: ㄱ~ㅎ만 추출 */
 const extractOrderSymbols = (s: string): string =>
@@ -254,6 +259,16 @@ const isLabelSelection = (answer: string): boolean => {
 const normalizeLabelSelection = (s: string): string =>
   s.replace(/[^ㄱ-ㅎ]/g, '').split('').sort().join('');
 
+/** 쉼표로 구분된 복수 정답 여부 확인 */
+const isCommaSeparatedMulti = (s: string): boolean => {
+  const parts = s.split(',').map((p) => p.trim());
+  return parts.length >= 2 && parts.every((p) => p.length > 0);
+};
+
+/** 쉼표로 구분된 복수 답변 정규화: 각 항목 정규화 후 정렬 (순서 무관 비교) */
+const normalizeCommaSeparated = (s: string): string =>
+  s.split(',').map((p) => normalizeAnswer(p.trim())).sort().join(',');
+
 /** 문제의 답변 유형을 판별하여 AnswerMeta 생성 */
 export const detectAnswerType = (question: Question): AnswerMeta => {
   const { answer, type: questionType } = question;
@@ -269,8 +284,19 @@ export const detectAnswerType = (question: Question): AnswerMeta => {
     };
   }
 
-  // 1. 코드 문제 → codeOutput (항상 textarea)
+  // 1. 코드 문제 → 복수 빈칸이면 multiple, 아니면 codeOutput
   if (questionType === 'code') {
+    if (isMultipleAnswer(answer)) {
+      const parts = parseMultipleAnswer(answer);
+      if (parts.length >= 2) {
+        return {
+          type: 'multiple',
+          hint: '',
+          parts,
+          primaryAnswer: answer,
+        };
+      }
+    }
     return {
       type: 'codeOutput',
       hint: '출력 결과를 입력하세요',
@@ -470,6 +496,10 @@ const compareAnswer = (
       // 라벨 선택형: 기호 추출 + 정렬 비교 (순서/구분자 무관)
       if (isLabelSelection(correctAnswer)) {
         return normalizeLabelSelection(userAnswer) === normalizeLabelSelection(correctAnswer);
+      }
+      // 쉼표로 구분된 복수 항목: 순서 무관 비교 (예: "원자성, 독립성" = "독립성, 원자성")
+      if (isCommaSeparatedMulti(correctAnswer)) {
+        return normalizeCommaSeparated(userAnswer) === normalizeCommaSeparated(correctAnswer);
       }
       // 한글 포함 시 공백 제거, 영문이면 소문자 비교
       return normalizeAnswer(userAnswer) === normalizeAnswer(correctAnswer);

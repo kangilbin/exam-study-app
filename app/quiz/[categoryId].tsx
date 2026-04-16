@@ -494,7 +494,7 @@ export default function QuizScreen() {
   /** 주관식 제출 */
   const handleSubjectiveSubmit = () => {
     if (!currentQuestion) return;
-    submitSubjectiveAnswer();
+    submitSubjectiveAnswer(answerMeta);
     const result = useQuizStore.getState().gradeResult;
     if (currentQuestion && result) {
       updateProgress(currentQuestion.id, result.isCorrect ? 'correct' : 'incorrect');

@@ -6,6 +6,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { detectAnswerType, gradeAnswer } from '@/features/questions/services/gradingService';
+import type { AnswerMeta } from '@/features/questions/types';
 import { getQuestionById } from '@/features/questions/services/questionService';
 import type { Question, CategoryId, GradeResult } from '@/features/questions/types';
 
@@ -64,7 +65,7 @@ interface QuizState {
   // 주관식 액션
   setUserAnswer: (key: string, value: string) => void;
   removeUserAnswers: (prefix: string) => void;
-  submitSubjectiveAnswer: () => void;
+  submitSubjectiveAnswer: (answerMeta?: AnswerMeta | null) => void;
 }
 
 export const useQuizStore = create<QuizState>()(
@@ -316,12 +317,13 @@ export const useQuizStore = create<QuizState>()(
         set({ userAnswers: updated });
       },
 
-      submitSubjectiveAnswer: () => {
+      submitSubjectiveAnswer: (precomputedMeta?: AnswerMeta | null) => {
         const { questions, currentIndex, userAnswers, results, answeredStates } = get();
         const question = questions[currentIndex];
         if (!question) return;
 
-        const answerMeta = detectAnswerType(question);
+        // 화면에서 이미 계산된 answerMeta를 우선 사용 (순서 나열 문제의 셔플 일관성 보장)
+        const answerMeta = precomputedMeta ?? detectAnswerType(question);
         const result = gradeAnswer(userAnswers, answerMeta);
 
         set({
