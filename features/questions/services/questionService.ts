@@ -7,9 +7,6 @@ import type {
   Question,
   Category,
   CategoryId,
-  QuestionType,
-  Difficulty,
-  QuestionSource,
   QuestionProgress,
 } from '../types';
 import { shuffle } from '@/lib/utils';
@@ -72,58 +69,15 @@ export function loadQuestionsByCategory(categoryId: CategoryId): Question[] {
   return questionFiles[categoryId] || [];
 }
 
-/** 여러 카테고리의 문제 로드 */
-export function loadQuestionsByCategories(categoryIds: CategoryId[]): Question[] {
-  const result: Question[] = [];
-  for (const id of categoryIds) {
-    result.push(...loadQuestionsByCategory(id));
-  }
-  return result;
-}
-
 /** 특정 문제 ID로 조회 */
 export function getQuestionById(questionId: string): Question | null {
   const all = loadAllQuestions();
   return all.find((q) => q.id === questionId) || null;
 }
 
-/** 태그로 문제 검색 */
-export function searchQuestionsByTag(tag: string): Question[] {
-  const all = loadAllQuestions();
-  return all.filter((q) => q.tags.some((t) => t.includes(tag)));
-}
-
 /** 문제 배열 셔플 (Fisher-Yates) */
 export function shuffleQuestions(questions: Question[]): Question[] {
   return shuffle(questions);
-}
-
-/** 필터 조건에 맞는 문제 조회 */
-export function filterQuestions(options: {
-  categoryId?: CategoryId;
-  type?: QuestionType;
-  difficulty?: Difficulty;
-  source?: QuestionSource;
-  year?: number;
-}): Question[] {
-  let result = options.categoryId
-    ? loadQuestionsByCategory(options.categoryId)
-    : loadAllQuestions();
-
-  if (options.type) {
-    result = result.filter((q) => q.type === options.type);
-  }
-  if (options.difficulty) {
-    result = result.filter((q) => q.difficulty === options.difficulty);
-  }
-  if (options.source) {
-    result = result.filter((q) => q.source === options.source);
-  }
-  if (options.year) {
-    result = result.filter((q) => q.year === options.year);
-  }
-
-  return result;
 }
 
 /** 오답 문제만 조회 (userStore 진행도 기반, group 필터 가능) */
@@ -143,11 +97,6 @@ export function getIncorrectQuestions(
     if (groupCatIds && !groupCatIds.has(q.categoryId)) return false;
     return true;
   });
-}
-
-/** 전체 문제 수 */
-export function getTotalQuestionCount(): number {
-  return loadAllQuestions().length;
 }
 
 /** 특정 그룹의 문제 ID 목록 */

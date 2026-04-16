@@ -9,6 +9,24 @@ import { detectAnswerType, gradeAnswer } from '@/features/questions/services/gra
 import { getQuestionById } from '@/features/questions/services/questionService';
 import type { Question, CategoryId, GradeResult } from '@/features/questions/types';
 
+/** 문제별 답변 상태 (이전 문제 복원용) */
+interface QuestionAnswerState {
+  selectedChoiceIndex: number | null;
+  isAnswered: boolean;
+  isExplanationRevealed: boolean;
+  userAnswers: Record<string, string>;
+  gradeResult: GradeResult | null;
+}
+
+/** 카테고리별 저장된 세션 */
+interface SavedSession {
+  questionIds: string[];
+  currentIndex: number;
+  results: { questionId: string; isCorrect: boolean }[];
+  answeredStates: Record<number, QuestionAnswerState>;
+  startedAt: number | null;
+}
+
 interface QuizState {
   // 상태
   categoryId: CategoryId | null;
@@ -24,13 +42,23 @@ interface QuizState {
   userAnswers: Record<string, string>;
   gradeResult: GradeResult | null;
 
+  // 문제별 답변 상태 저장소
+  answeredStates: Record<number, QuestionAnswerState>;
+
+  // 카테고리별 세션 저장소 (다른 카테고리 갔다 돌아와도 유지)
+  savedSessions: Record<string, SavedSession>;
+
   // 액션
   startQuiz: (categoryId: CategoryId, questions: Question[]) => void;
+  startQuizAt: (categoryId: CategoryId, questions: Question[], startIndex: number) => void;
   canResume: (categoryId: string) => boolean;
+  saveCurrentSession: () => void;
+  restoreSavedSession: (categoryId: string) => boolean;
   selectChoice: (index: number) => void;
   submitAnswer: () => void;
   revealExplanation: () => void;
   nextQuestion: () => void;
+  goToPrevious: () => void;
   resetQuiz: () => void;
 
   // 주관식 액션
@@ -52,8 +80,12 @@ export const useQuizStore = create<QuizState>()(
       startedAt: null,
       userAnswers: {},
       gradeResult: null,
+      answeredStates: {},
+      savedSessions: {},
 
       startQuiz: (categoryId, questions) => {
+        // 현재 세션을 먼저 저장
+        get().saveCurrentSession();
         set({
           categoryId,
           questions,
@@ -65,11 +97,33 @@ export const useQuizStore = create<QuizState>()(
           startedAt: Date.now(),
           userAnswers: {},
           gradeResult: null,
+          answeredStates: {},
+        });
+      },
+
+      startQuizAt: (categoryId, questions, startIndex) => {
+        // 현재 세션을 먼저 저장
+        get().saveCurrentSession();
+        const safeIndex = Math.min(startIndex, questions.length - 1);
+        set({
+          categoryId,
+          questions,
+          currentIndex: Math.max(0, safeIndex),
+          selectedChoiceIndex: null,
+          isAnswered: false,
+          isExplanationRevealed: false,
+          results: [],
+          startedAt: Date.now(),
+          userAnswers: {},
+          gradeResult: null,
+          answeredStates: {},
         });
       },
 
       canResume: (categoryId) => {
         const state = get();
+        // 현재 활성 세션이거나 저장된 세션이 있으면 이어서 가능
+        if (state.savedSessions[categoryId]) return true;
         return (
           state.categoryId === categoryId &&
           state.questions.length > 0 &&
@@ -83,7 +137,7 @@ export const useQuizStore = create<QuizState>()(
       },
 
       submitAnswer: () => {
-        const { questions, currentIndex, selectedChoiceIndex, results } = get();
+        const { questions, currentIndex, selectedChoiceIndex, results, answeredStates } = get();
         if (selectedChoiceIndex === null) return;
 
         const question = questions[currentIndex];
@@ -94,28 +148,88 @@ export const useQuizStore = create<QuizState>()(
         set({
           isAnswered: true,
           results: [...results, { questionId: question.id, isCorrect }],
+          // 답변 상태 즉시 저장
+          answeredStates: {
+            ...answeredStates,
+            [currentIndex]: {
+              selectedChoiceIndex,
+              isAnswered: true,
+              isExplanationRevealed: false,
+              userAnswers: {},
+              gradeResult: null,
+            },
+          },
         });
       },
 
       revealExplanation: () => {
-        set({ isExplanationRevealed: true });
+        const { currentIndex, answeredStates, selectedChoiceIndex, userAnswers, gradeResult } = get();
+        set({
+          isExplanationRevealed: true,
+          answeredStates: {
+            ...answeredStates,
+            [currentIndex]: {
+              selectedChoiceIndex,
+              isAnswered: true,
+              isExplanationRevealed: true,
+              userAnswers: { ...userAnswers },
+              gradeResult,
+            },
+          },
+        });
       },
 
       nextQuestion: () => {
-        const { currentIndex, questions } = get();
-        if (currentIndex < questions.length - 1) {
-          set({
-            currentIndex: currentIndex + 1,
-            selectedChoiceIndex: null,
-            isAnswered: false,
-            isExplanationRevealed: false,
-            userAnswers: {},
-            gradeResult: null,
-          });
-        }
+        const { currentIndex, questions, answeredStates, selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers, gradeResult } = get();
+        if (currentIndex >= questions.length - 1) return;
+
+        // 현재 문제 상태 저장
+        const saved = {
+          ...answeredStates,
+          [currentIndex]: { selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers: { ...userAnswers }, gradeResult },
+        };
+
+        const nextIdx = currentIndex + 1;
+        const restored = saved[nextIdx];
+
+        set({
+          answeredStates: saved,
+          currentIndex: nextIdx,
+          selectedChoiceIndex: restored?.selectedChoiceIndex ?? null,
+          isAnswered: restored?.isAnswered ?? false,
+          isExplanationRevealed: restored?.isExplanationRevealed ?? false,
+          userAnswers: restored?.userAnswers ?? {},
+          gradeResult: restored?.gradeResult ?? null,
+        });
+      },
+
+      goToPrevious: () => {
+        const { currentIndex, answeredStates, selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers, gradeResult } = get();
+        if (currentIndex <= 0) return;
+
+        // 현재 문제 상태 저장
+        const saved = {
+          ...answeredStates,
+          [currentIndex]: { selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers: { ...userAnswers }, gradeResult },
+        };
+
+        const prevIdx = currentIndex - 1;
+        const restored = saved[prevIdx];
+
+        set({
+          answeredStates: saved,
+          currentIndex: prevIdx,
+          selectedChoiceIndex: restored?.selectedChoiceIndex ?? null,
+          isAnswered: restored?.isAnswered ?? false,
+          isExplanationRevealed: restored?.isExplanationRevealed ?? false,
+          userAnswers: restored?.userAnswers ?? {},
+          gradeResult: restored?.gradeResult ?? null,
+        });
       },
 
       resetQuiz: () => {
+        // 현재 세션 저장 후 초기화
+        get().saveCurrentSession();
         set({
           categoryId: null,
           questions: [],
@@ -127,7 +241,66 @@ export const useQuizStore = create<QuizState>()(
           startedAt: null,
           userAnswers: {},
           gradeResult: null,
+          answeredStates: {},
         });
+      },
+
+      saveCurrentSession: () => {
+        const { categoryId, questions, currentIndex, results, answeredStates,
+                selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers, gradeResult,
+                savedSessions } = get();
+        if (!categoryId || questions.length === 0) return;
+
+        // 현재 문제 상태도 answeredStates에 반영
+        const finalStates = {
+          ...answeredStates,
+          [currentIndex]: { selectedChoiceIndex, isAnswered, isExplanationRevealed, userAnswers: { ...userAnswers }, gradeResult },
+        };
+
+        set({
+          savedSessions: {
+            ...savedSessions,
+            [categoryId]: {
+              questionIds: questions.map((q) => q.id),
+              currentIndex,
+              results,
+              answeredStates: finalStates,
+              startedAt: get().startedAt,
+            },
+          },
+        });
+      },
+
+      restoreSavedSession: (categoryId) => {
+        // 현재 세션을 먼저 저장
+        get().saveCurrentSession();
+        const { savedSessions } = get();
+        const saved = savedSessions[categoryId];
+        if (!saved || saved.questionIds.length === 0) return false;
+
+        // questionIds → questions 복원
+        const questions = saved.questionIds
+          .map((id) => getQuestionById(id))
+          .filter((q): q is Question => q !== null);
+        if (questions.length === 0) return false;
+
+        const safeIndex = Math.min(saved.currentIndex, questions.length - 1);
+        const restored = saved.answeredStates[safeIndex];
+
+        set({
+          categoryId: categoryId as CategoryId,
+          questions,
+          currentIndex: safeIndex,
+          results: saved.results,
+          answeredStates: saved.answeredStates,
+          startedAt: saved.startedAt,
+          selectedChoiceIndex: restored?.selectedChoiceIndex ?? null,
+          isAnswered: restored?.isAnswered ?? false,
+          isExplanationRevealed: restored?.isExplanationRevealed ?? false,
+          userAnswers: restored?.userAnswers ?? {},
+          gradeResult: restored?.gradeResult ?? null,
+        });
+        return true;
       },
 
       setUserAnswer: (key, value) => {
@@ -144,7 +317,7 @@ export const useQuizStore = create<QuizState>()(
       },
 
       submitSubjectiveAnswer: () => {
-        const { questions, currentIndex, userAnswers, results } = get();
+        const { questions, currentIndex, userAnswers, results, answeredStates } = get();
         const question = questions[currentIndex];
         if (!question) return;
 
@@ -155,6 +328,17 @@ export const useQuizStore = create<QuizState>()(
           isAnswered: true,
           gradeResult: result,
           results: [...results, { questionId: question.id, isCorrect: result.isCorrect }],
+          // 답변 상태 즉시 저장
+          answeredStates: {
+            ...answeredStates,
+            [currentIndex]: {
+              selectedChoiceIndex: null,
+              isAnswered: true,
+              isExplanationRevealed: false,
+              userAnswers: { ...userAnswers },
+              gradeResult: result,
+            },
+          },
         });
       },
     }),
@@ -168,6 +352,8 @@ export const useQuizStore = create<QuizState>()(
         results: state.results,
         startedAt: state.startedAt,
         userAnswers: state.userAnswers,
+        answeredStates: state.answeredStates,
+        savedSessions: state.savedSessions,
       }),
       onRehydrateStorage: () => (state) => {
         // questionIds → questions 복원 (항상 최신 JSON 데이터 사용)
@@ -196,8 +382,3 @@ export const useCorrectCount = () =>
 export const useIsQuizComplete = () =>
   useQuizStore((s) => s.currentIndex >= s.questions.length - 1 && s.isAnswered);
 
-/** 경과 시간 (초) */
-export const useElapsedTime = () =>
-  useQuizStore((s) =>
-    s.startedAt ? Math.floor((Date.now() - s.startedAt) / 1000) : 0
-  );

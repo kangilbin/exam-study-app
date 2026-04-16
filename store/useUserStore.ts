@@ -15,7 +15,6 @@ import type {
 import {
   recordAnswer,
   calculateCategoryStats,
-  calculateOverallStats,
 } from '@/features/questions/services/progressService';
 import { loadQuestionsByCategory } from '@/features/questions/services/questionService';
 import { nowISO } from '@/lib/utils';
@@ -31,12 +30,9 @@ interface UserState {
     questionId: string,
     result: 'correct' | 'incorrect' | 'known' | 'unknown'
   ) => void;
-  getProgress: (questionId: string) => QuestionProgress | undefined;
 
   // 액션 (북마크)
   toggleBookmark: (questionId: string) => void;
-  isBookmarked: (questionId: string) => boolean;
-  getBookmarkedQuestions: () => string[];
 
   // 액션 (설정)
   updateSettings: (settings: Partial<UserSettings>) => void;
@@ -46,11 +42,6 @@ interface UserState {
 
   // 액션 (통계)
   getCategoryStats: (categoryId: CategoryId) => CategoryStats;
-  getOverallStats: () => {
-    totalSeen: number;
-    totalCorrect: number;
-    accuracy: number;
-  };
 }
 
 export const useUserStore = create<UserState>()(
@@ -59,7 +50,6 @@ export const useUserStore = create<UserState>()(
       progress: {},
       bookmarks: [],
       settings: {
-        darkMode: false,
         shuffleMode: false,
         fontSize: 'medium' as const,
       },
@@ -72,10 +62,6 @@ export const useUserStore = create<UserState>()(
         set({
           progress: { ...progress, [questionId]: updated },
         });
-      },
-
-      getProgress: (questionId) => {
-        return get().progress[questionId];
       },
 
       toggleBookmark: (questionId) => {
@@ -103,14 +89,6 @@ export const useUserStore = create<UserState>()(
         });
       },
 
-      isBookmarked: (questionId) => {
-        return get().bookmarks.includes(questionId);
-      },
-
-      getBookmarkedQuestions: () => {
-        return get().bookmarks;
-      },
-
       updateSettings: (newSettings) => {
         set((state) => ({
           settings: { ...state.settings, ...newSettings },
@@ -133,13 +111,6 @@ export const useUserStore = create<UserState>()(
         const questions = loadQuestionsByCategory(categoryId);
         const questionIds = questions.map((q) => q.id);
         return calculateCategoryStats(categoryId, progress, questionIds);
-      },
-
-      getOverallStats: () => {
-        const { progress } = get();
-        // 전체 문제 수는 동적으로 계산
-        const totalQuestions = Object.keys(progress).length;
-        return calculateOverallStats(progress, totalQuestions);
       },
     }),
     {

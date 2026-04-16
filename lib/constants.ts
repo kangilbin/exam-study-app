@@ -2,11 +2,6 @@
  * 앱 전역 상수 정의
  */
 
-/** AsyncStorage 키 */
-export const STORAGE_KEYS = {
-  USER_STORE: '@user-store',
-} as const;
-
 /** 앱 색상 팔레트 */
 export const COLORS = {
   primary: '#6366f1',      // 인디고
@@ -29,9 +24,6 @@ export const COLORS = {
     900: '#111827',
   },
   background: '#ffffff',
-  backgroundDark: '#111827',
   text: '#111827',
-  textDark: '#f9fafb',
   textSecondary: '#6b7280',
-  textSecondaryDark: '#9ca3af',
 } as const;

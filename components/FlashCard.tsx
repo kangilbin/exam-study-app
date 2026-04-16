@@ -2,7 +2,7 @@
  * 플래시카드 컴포넌트
  */
 
-import { Pressable, Text, View, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { Pressable, Text, View, StyleSheet, Dimensions } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import type { FlashCard as FlashCardType, CardDisplayMode } from '@/features/flashcards/types';
@@ -127,12 +127,6 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.5)',
     letterSpacing: 1,
     marginBottom: 8,
-  },
-  backScroll: {
-    flex: 1,
-  },
-  backScrollContent: {
-    paddingBottom: 8,
   },
   backText: {
     fontSize: 15,

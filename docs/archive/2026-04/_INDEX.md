@@ -1,5 +1,27 @@
 # Archive Index - 2026-04
 
+## study-resume
+- **완료일**: 2026-04-14
+- **Match Rate**: 98.5%
+- **Iteration**: 0회 (불필요)
+- **성과**: 학습탭 이어서 학습 모달, 카드 이전/다음 탐색, 종료확인 모달, 세션 영속화, 전체 진행도 통합
+- **문서**:
+  - [Plan](study-resume/study-resume.plan.md)
+  - [Design](study-resume/study-resume.design.md)
+  - [Analysis](study-resume/study-resume.analysis.md)
+  - [Report](study-resume/study-resume.report.md)
+
+## exam-score
+- **완료일**: 2026-04-14
+- **Match Rate**: 100%
+- **Iteration**: 0회 (불필요)
+- **성과**: 기출문제 100% 완료 시 점수/합격 표시, 틀린 문제만 다시 풀기 (FR-01~04)
+- **문서**:
+  - [Plan](exam-score/exam-score.plan.md)
+  - [Design](exam-score/exam-score.design.md)
+  - [Analysis](exam-score/exam-score.analysis.md)
+  - [Report](exam-score/exam-score.report.md)
+
 ## exam-tab
 - **완료일**: 2026-04-13
 - **Match Rate**: 96% → 100% (14건 추가 개선)

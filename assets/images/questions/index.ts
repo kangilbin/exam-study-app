@@ -11,6 +11,11 @@
 
 const questionImages: Record<string, ReturnType<typeof require>> = {
   "exam-2025-2_011.png": require("./exam-2025-2_011.png"),
+  "exam-2025-3_019.png": require("./exam-2025-3_019.png"),
+  "exam-2024-3_008.png": require("./exam-2024-3_008.png"),
+  "exam-2024-3_014.png": require("./exam-2024-3_014.png"),
+  "exam-2024-1_005.png": require("./exam-2024-1_005.png"),
+  "exam-2024-1_006.png": require("./exam-2024-1_006.png"),
 };
 
 export default questionImages;

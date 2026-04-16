@@ -37,7 +37,7 @@ import FlashCardDeck from '@/components/FlashCardDeck';
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
 import { detectAnswerType } from '@/features/questions/services/gradingService';
-import type { CategoryId } from '@/features/questions/types';
+import type { CategoryId, Question } from '@/features/questions/types';
 import { BannerAdView } from '@/components/ads/BannerAdView';
 import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 
@@ -59,6 +59,12 @@ export default function QuizScreen() {
   const fcMarkUnknown = useFlashcardStore((s) => s.markUnknown);
   const fcToggleDisplayMode = useFlashcardStore((s) => s.toggleDisplayMode);
   const fcResetSession = useFlashcardStore((s) => s.resetSession);
+  const fcGoToPrevious = useFlashcardStore((s) => s.goToPrevious);
+  const fcGoToNext = useFlashcardStore((s) => s.goToNext);
+  const fcSaveSession = useFlashcardStore((s) => s.saveSession);
+  const fcResumeSession = useFlashcardStore((s) => s.resumeSession);
+  const fcResumeFromProgress = useFlashcardStore((s) => s.resumeFromProgress);
+  const fcClearLastSession = useFlashcardStore((s) => s.clearLastSession);
   const fcDisplayMode = useFlashcardStore((s) => s.displayMode);
   const fcCards = useFlashcardStore((s) => s.cards);
   const fcCurrentIndex = useFlashcardStore((s) => s.currentIndex);
@@ -67,10 +73,24 @@ export default function QuizScreen() {
   const fcGetSessionStats = useFlashcardStore((s) => s.getSessionStats);
 
   const [showComplete, setShowComplete] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
 
   // 카드 세션 초기화
   useEffect(() => {
     if (!isCardMode || !categoryId) return;
+
+    // mode=resume → lastSession 복원 또는 cardProgress 기반 이어서 학습
+    if (mode === 'resume') {
+      const lastSession = useFlashcardStore.getState().lastSession;
+      if (lastSession?.categoryId === categoryId) {
+        const success = fcResumeSession();
+        if (success) return;
+      }
+      // lastSession 없으면 cardProgress 기반으로 첫 unseen 카드부터
+      fcResumeFromProgress(categoryId as CategoryId);
+      return;
+    }
+
     let cards = loadFlashcards(categoryId as CategoryId);
     if (mode === 'unknown') {
       cards = cards.filter((c) => {
@@ -114,6 +134,18 @@ export default function QuizScreen() {
     };
 
     const handleGoBack = () => {
+      setShowExitModal(true);
+    };
+
+    const handleConfirmExit = () => {
+      setShowExitModal(false);
+      fcSaveSession();
+      fcResetSession();
+      router.back();
+    };
+
+    const handleExitAfterComplete = () => {
+      fcClearLastSession();
       fcResetSession();
       router.back();
     };
@@ -164,6 +196,39 @@ export default function QuizScreen() {
             />
           </View>
 
+          {/* 이전/다음 네비게이션 */}
+          {!fcIsComplete && fcCards.length > 0 && (
+            <View style={styles.fcNavRow}>
+              <Pressable
+                style={[styles.fcNavBtn, fcCurrentIndex === 0 && styles.fcNavBtnDisabled]}
+                onPress={fcGoToPrevious}
+                disabled={fcCurrentIndex === 0}
+              >
+                <MaterialCommunityIcons
+                  name="chevron-left"
+                  size={20}
+                  color={fcCurrentIndex === 0 ? COLORS.gray[300] : COLORS.text}
+                />
+                <Text style={[styles.fcNavText, fcCurrentIndex === 0 && styles.fcNavTextDisabled]}>이전</Text>
+              </Pressable>
+              <Text style={styles.fcNavCounter}>
+                {fcCurrentIndex + 1} / {fcCards.length}
+              </Text>
+              <Pressable
+                style={[styles.fcNavBtn, fcCurrentIndex >= fcCards.length - 1 && styles.fcNavBtnDisabled]}
+                onPress={fcGoToNext}
+                disabled={fcCurrentIndex >= fcCards.length - 1}
+              >
+                <Text style={[styles.fcNavText, fcCurrentIndex >= fcCards.length - 1 && styles.fcNavTextDisabled]}>다음</Text>
+                <MaterialCommunityIcons
+                  name="chevron-right"
+                  size={20}
+                  color={fcCurrentIndex >= fcCards.length - 1 ? COLORS.gray[300] : COLORS.text}
+                />
+              </Pressable>
+            </View>
+          )}
+
           {/* 하단 버튼 */}
           {!fcIsComplete && fcCards.length > 0 && (
             <View style={styles.fcActionRow}>
@@ -210,11 +275,34 @@ export default function QuizScreen() {
                 <Pressable style={[styles.fcModalBtn, { backgroundColor: COLORS.primary }]} onPress={handleRetryAll}>
                   <Text style={styles.fcModalBtnText}>전체 다시 학습</Text>
                 </Pressable>
-                <Pressable style={[styles.fcModalBtn, styles.fcModalBtnOutline]} onPress={handleGoBack}>
+                <Pressable style={[styles.fcModalBtn, styles.fcModalBtnOutline]} onPress={handleExitAfterComplete}>
                   <Text style={[styles.fcModalBtnText, { color: COLORS.text }]}>목록으로 돌아가기</Text>
                 </Pressable>
               </View>
             </View>
+          </Modal>
+
+          {/* 종료 확인 모달 */}
+          <Modal visible={showExitModal} transparent animationType="fade">
+            <Pressable style={styles.fcModalOverlay} onPress={() => setShowExitModal(false)}>
+              <Pressable style={styles.exitModalContent} onPress={() => {}}>
+                <MaterialCommunityIcons name="bookmark-check" size={40} color={COLORS.primary} />
+                <Text style={styles.exitModalTitle}>학습을 종료하시겠습니까?</Text>
+                <Text style={styles.exitModalDesc}>진행 상태는 저장됩니다.</Text>
+                <Pressable
+                  style={[styles.fcModalBtn, { backgroundColor: COLORS.primary }]}
+                  onPress={handleConfirmExit}
+                >
+                  <Text style={styles.fcModalBtnText}>나가기</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.fcModalBtn, styles.fcModalBtnOutline]}
+                  onPress={() => setShowExitModal(false)}
+                >
+                  <Text style={[styles.fcModalBtnText, { color: COLORS.text }]}>계속 학습</Text>
+                </Pressable>
+              </Pressable>
+            </Pressable>
           </Modal>
         </SafeAreaView>
       </GestureHandlerRootView>
@@ -223,6 +311,9 @@ export default function QuizScreen() {
   // ─── 여기서부터 기존 문제 풀이 UI ───
 
   const startQuiz = useQuizStore((s) => s.startQuiz);
+  const startQuizAt = useQuizStore((s) => s.startQuizAt);
+  const restoreSavedSession = useQuizStore((s) => s.restoreSavedSession);
+  const quizGoToPrevious = useQuizStore((s) => s.goToPrevious);
   const resetQuiz = useQuizStore((s) => s.resetQuiz);
   const selectChoice = useQuizStore((s) => s.selectChoice);
   const submitAnswer = useQuizStore((s) => s.submitAnswer);
@@ -243,8 +334,6 @@ export default function QuizScreen() {
   const shuffleMode = useUserStore((s) => s.settings.shuffleMode);
   const fontSize = useUserStore((s) => s.settings.fontSize);
   const codeFontSize = FONT_SIZE_MAP[fontSize];
-
-  const canResume = useQuizStore((s) => s.canResume);
 
   // 주관식 상태
   const userAnswers = useQuizStore((s) => s.userAnswers);
@@ -297,18 +386,93 @@ export default function QuizScreen() {
       return;
     }
 
-    // mode=resume → 세션 복원 (이어서 풀기)
+    // mode=resume → 기존 세션 복원 (퀴즈 세션 이어서)
     if (mode === 'resume') {
+      const quizState = useQuizStore.getState();
+      const restored = quizState.answeredStates[quizState.currentIndex];
       useQuizStore.setState({
-        selectedChoiceIndex: null,
-        isAnswered: false,
-        isExplanationRevealed: false,
+        selectedChoiceIndex: restored?.selectedChoiceIndex ?? null,
+        isAnswered: restored?.isAnswered ?? false,
+        isExplanationRevealed: restored?.isExplanationRevealed ?? false,
+        userAnswers: restored?.userAnswers ?? {},
+        gradeResult: restored?.gradeResult ?? null,
       });
       return;
     }
 
-    // mode=unseen → 안 푼 문제만
     const allQs = loadQuestionsByCategory(categoryId as CategoryId);
+
+    // mode=resume-progress → 전체 문제 중 첫 unseen 위치부터 (세션 복원 우선)
+    if (mode === 'resume-progress') {
+      const quizState = useQuizStore.getState();
+      const userProgress = useUserStore.getState().progress;
+
+      // 1순위: 현재 활성 세션이 같은 카테고리
+      // 2순위: savedSessions에서 복원
+      let qs: Question[] = [];
+      let states: Record<number, any> = {};
+
+      if (quizState.categoryId === categoryId && quizState.questions.length > 0) {
+        qs = quizState.questions;
+        states = quizState.answeredStates;
+      } else if (restoreSavedSession(categoryId as string)) {
+        // restoreSavedSession이 상태를 복원함
+        const restored = useQuizStore.getState();
+        qs = restored.questions;
+        states = restored.answeredStates;
+      }
+
+      if (qs.length > 0) {
+        // 첫 unseen 위치 찾기
+        let resumeIndex = 0;
+        for (let i = 0; i < qs.length; i++) {
+          const p = userProgress[qs[i].id];
+          if (!p || p.status === 'unseen') {
+            resumeIndex = i;
+            break;
+          }
+          if (i === qs.length - 1) resumeIndex = 0;
+        }
+        const restoredState = states[resumeIndex];
+        useQuizStore.setState({
+          currentIndex: resumeIndex,
+          selectedChoiceIndex: restoredState?.selectedChoiceIndex ?? null,
+          isAnswered: restoredState?.isAnswered ?? false,
+          isExplanationRevealed: restoredState?.isExplanationRevealed ?? false,
+          userAnswers: restoredState?.userAnswers ?? {},
+          gradeResult: restoredState?.gradeResult ?? null,
+        });
+        return;
+      }
+
+      // 저장된 세션 없으면 새로 시작
+      let resumeIndex = 0;
+      for (let i = 0; i < allQs.length; i++) {
+        const p = userProgress[allQs[i].id];
+        if (!p || p.status === 'unseen') {
+          resumeIndex = i;
+          break;
+        }
+        if (i === allQs.length - 1) resumeIndex = 0;
+      }
+      startQuizAt(categoryId as CategoryId, allQs, resumeIndex);
+      return;
+    }
+
+    // mode=incorrect → 틀린 문제만
+    if (mode === 'incorrect') {
+      const userProgress = useUserStore.getState().progress;
+      const incorrectQs = allQs.filter((q) => {
+        const p = userProgress[q.id];
+        return p?.status === 'incorrect';
+      });
+      let qs = incorrectQs.length > 0 ? incorrectQs : allQs;
+      if (shuffleMode) qs = shuffleQuestions(qs);
+      startQuiz(categoryId as CategoryId, qs);
+      return;
+    }
+
+    // mode=unseen → 안 푼 문제만
     if (mode === 'unseen') {
       const userProgress = useUserStore.getState().progress;
       const unseenQs = allQs.filter((q) => {
@@ -741,16 +905,48 @@ export default function QuizScreen() {
       {/* 하단 배너 광고 */}
       <BannerAdView />
 
-      {/* 하단 버튼 - 채점 후 다음 문제 이동 */}
+      {/* 하단 버튼 - 이전 문제 + 다음 문제 */}
       <View style={styles.bottomBar}>
-        {isAnswered ? (
-          <Pressable style={styles.primaryButton} onPress={handleNext}>
-            <Text style={styles.primaryButtonText}>
-              {isComplete ? '결과 보기' : '다음 문제'}
-            </Text>
-            <MaterialCommunityIcons name="arrow-right" size={20} color="#fff" />
+        <View style={styles.bottomBarRow}>
+          <Pressable
+            style={[styles.prevButton, currentIndex === 0 && styles.prevButtonDisabled]}
+            onPress={quizGoToPrevious}
+            disabled={currentIndex === 0}
+          >
+            <MaterialCommunityIcons
+              name="chevron-left"
+              size={20}
+              color={currentIndex === 0 ? COLORS.gray[300] : COLORS.primary}
+            />
+            <Text style={[styles.prevButtonText, currentIndex === 0 && { color: COLORS.gray[300] }]}>이전</Text>
           </Pressable>
-        ) : null}
+          {isAnswered ? (
+            <>
+              <Pressable
+                style={styles.retryButton}
+                onPress={() => {
+                  useQuizStore.setState({
+                    selectedChoiceIndex: null,
+                    isAnswered: false,
+                    isExplanationRevealed: false,
+                    userAnswers: {},
+                    gradeResult: null,
+                  });
+                }}
+              >
+                <MaterialCommunityIcons name="refresh" size={18} color={COLORS.primary} />
+              </Pressable>
+              <Pressable style={[styles.primaryButton, { flex: 1 }]} onPress={handleNext}>
+                <Text style={styles.primaryButtonText}>
+                  {isComplete ? '결과 보기' : '다음 문제'}
+                </Text>
+                <MaterialCommunityIcons name="arrow-right" size={20} color="#fff" />
+              </Pressable>
+            </>
+          ) : (
+            <View style={{ flex: 1 }} />
+          )}
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -803,10 +999,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: COLORS.gray[200],
   },
-  choiceSelected: { borderColor: COLORS.primary, backgroundColor: '#eef2ff' },
-  choiceCorrect: { borderColor: COLORS.success, backgroundColor: COLORS.success },
-  choiceIncorrect: { borderColor: COLORS.danger, backgroundColor: COLORS.danger },
-  choiceDisabled: { borderColor: COLORS.gray[200], backgroundColor: COLORS.gray[100] },
   choiceText: { fontSize: 14, color: COLORS.text, flex: 1 },
   shortAnswer: { marginTop: 20 },
   showAnswerButton: {
@@ -839,6 +1031,11 @@ const styles = StyleSheet.create({
   },
   explanationText: { fontSize: 14, lineHeight: 22, color: COLORS.textSecondary },
   bottomBar: { padding: 16, paddingBottom: 24 },
+  bottomBarRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  prevButton: { flexDirection: 'row', alignItems: 'center', paddingVertical: 16, paddingHorizontal: 12, borderRadius: 12, borderWidth: 2, borderColor: COLORS.gray[200], gap: 2 },
+  prevButtonDisabled: { opacity: 0.4 },
+  prevButtonText: { fontSize: 15, fontWeight: '600', color: COLORS.primary },
+  retryButton: { paddingVertical: 16, paddingHorizontal: 14, borderRadius: 12, borderWidth: 2, borderColor: COLORS.gray[200], alignItems: 'center', justifyContent: 'center' },
   primaryButton: {
     backgroundColor: COLORS.primary,
     borderRadius: 12,
@@ -1041,4 +1238,18 @@ const styles = StyleSheet.create({
   fcModalBtn: { width: '100%', paddingVertical: 14, borderRadius: 12, alignItems: 'center', marginTop: 8 },
   fcModalBtnOutline: { backgroundColor: 'transparent', borderWidth: 1, borderColor: COLORS.gray[300] },
   fcModalBtnText: { fontSize: 15, fontWeight: '700', color: '#fff' },
+
+  // 이전/다음 네비게이션
+  fcNavRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 8 },
+  fcNavBtn: { flexDirection: 'row', alignItems: 'center', paddingVertical: 8, paddingHorizontal: 12, borderRadius: 8, gap: 4 },
+  fcNavBtnDisabled: { opacity: 0.4 },
+  fcNavText: { fontSize: 14, fontWeight: '600', color: COLORS.text },
+  fcNavTextDisabled: { color: COLORS.gray[300] },
+  fcNavCounter: { fontSize: 13, color: COLORS.textSecondary, fontWeight: '500' },
+
+  // 문제 풀이 이전/다음 네비게이션
+  // 종료 확인 모달
+  exitModalContent: { backgroundColor: '#fff', borderRadius: 20, padding: 28, alignItems: 'center', marginHorizontal: 40, gap: 12, width: '100%', maxWidth: 320 },
+  exitModalTitle: { fontSize: 18, fontWeight: '700', color: COLORS.text },
+  exitModalDesc: { fontSize: 14, color: COLORS.textSecondary, marginBottom: 8 },
 });

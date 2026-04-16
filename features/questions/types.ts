@@ -123,7 +123,6 @@ export interface CategoryStats {
 
 /** 사용자 설정 */
 export interface UserSettings {
-  darkMode: boolean;
   shuffleMode: boolean;
   fontSize: 'small' | 'medium' | 'large'; // 코드 블록 폰트 크기
 }

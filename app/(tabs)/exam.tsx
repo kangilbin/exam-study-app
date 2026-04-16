@@ -44,6 +44,11 @@ interface ResumeInfo {
   canResume: boolean;
   resumeIndex: number;
   resumeTotal: number;
+  correctCount: number;
+  incorrectCount: number;
+  score: number;
+  isPassed: boolean;
+  isCompleted: boolean;
 }
 
 export default function ExamScreen() {
@@ -83,11 +88,16 @@ export default function ExamScreen() {
 
     // 학습 기록이 없으면 바로 진입
     if (seenCount === 0 && !quizCanResume) {
-      router.push(`/quiz/${item.id}?mode=unseen`);
+      router.push(`/quiz/${item.id}`);
       return;
     }
 
     // 기록이 있으면 모달 표시
+    const stats = useUserStore.getState().getCategoryStats(item.id);
+    const score = allQs.length > 0
+      ? Math.round((stats.correctCount / allQs.length) * 100)
+      : 0;
+
     setModalInfo({
       categoryId: item.id,
       categoryName: item.name,
@@ -97,6 +107,11 @@ export default function ExamScreen() {
       canResume: quizCanResume,
       resumeIndex: useQuizStore.getState().currentIndex,
       resumeTotal: useQuizStore.getState().questions.length,
+      correctCount: stats.correctCount,
+      incorrectCount: stats.incorrectCount,
+      score,
+      isPassed: score >= 60,
+      isCompleted: unseenQs.length === 0,
     });
   };
 
@@ -223,56 +238,108 @@ export default function ExamScreen() {
               <Text style={styles.modalTitle}>{modalInfo?.categoryName}</Text>
             </View>
 
-            {/* 진행 상태 */}
-            <View style={styles.modalStats}>
-              <View style={styles.modalStatItem}>
-                <Text style={styles.modalStatValue}>{modalInfo?.totalCount}</Text>
-                <Text style={styles.modalStatLabel}>전체</Text>
+            {/* 진행 상태: 완료 시 점수 카드, 미완료 시 기존 통계 */}
+            {modalInfo?.isCompleted ? (
+              <View style={styles.modalStats}>
+                <View style={{ flex: 1, alignItems: 'center' }}>
+                  <Text style={styles.scoreValue}>
+                    {modalInfo.score}
+                    <Text style={styles.scoreSuffix}>점</Text>
+                  </Text>
+                  <View
+                    style={[
+                      styles.passBadge,
+                      {
+                        backgroundColor: modalInfo.isPassed
+                          ? COLORS.successLight
+                          : COLORS.dangerLight,
+                      },
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        styles.passBadgeText,
+                        {
+                          color: modalInfo.isPassed
+                            ? COLORS.success
+                            : COLORS.danger,
+                        },
+                      ]}
+                    >
+                      {modalInfo.isPassed ? '합격' : '불합격'}
+                    </Text>
+                  </View>
+                  <View style={styles.scoreDetailRow}>
+                    <View style={styles.scoreDetailItem}>
+                      <MaterialCommunityIcons
+                        name="check-circle"
+                        size={16}
+                        color={COLORS.success}
+                      />
+                      <Text style={[styles.scoreDetailText, { color: COLORS.success }]}>
+                        정답 {modalInfo.correctCount}개
+                      </Text>
+                    </View>
+                    <View style={styles.scoreDetailItem}>
+                      <MaterialCommunityIcons
+                        name="close-circle"
+                        size={16}
+                        color={COLORS.danger}
+                      />
+                      <Text style={[styles.scoreDetailText, { color: COLORS.danger }]}>
+                        오답 {modalInfo.incorrectCount}개
+                      </Text>
+                    </View>
+                  </View>
+                </View>
               </View>
-              <View style={styles.modalStatDivider} />
-              <View style={styles.modalStatItem}>
-                <Text style={[styles.modalStatValue, { color: COLORS.success }]}>
-                  {modalInfo?.seenCount}
-                </Text>
-                <Text style={styles.modalStatLabel}>학습완료</Text>
+            ) : (
+              <View style={styles.modalStats}>
+                <View style={styles.modalStatItem}>
+                  <Text style={styles.modalStatValue}>{modalInfo?.totalCount}</Text>
+                  <Text style={styles.modalStatLabel}>전체</Text>
+                </View>
+                <View style={styles.modalStatDivider} />
+                <View style={styles.modalStatItem}>
+                  <Text style={[styles.modalStatValue, { color: COLORS.success }]}>
+                    {modalInfo?.seenCount}
+                  </Text>
+                  <Text style={styles.modalStatLabel}>학습완료</Text>
+                </View>
+                <View style={styles.modalStatDivider} />
+                <View style={styles.modalStatItem}>
+                  <Text style={[styles.modalStatValue, { color: COLORS.primary }]}>
+                    {modalInfo?.unseenCount}
+                  </Text>
+                  <Text style={styles.modalStatLabel}>미학습</Text>
+                </View>
               </View>
-              <View style={styles.modalStatDivider} />
-              <View style={styles.modalStatItem}>
-                <Text style={[styles.modalStatValue, { color: COLORS.primary }]}>
-                  {modalInfo?.unseenCount}
-                </Text>
-                <Text style={styles.modalStatLabel}>미학습</Text>
-              </View>
-            </View>
+            )}
 
             {/* 버튼들 */}
             <View style={styles.modalButtons}>
-              {/* 이어서 풀기 (퀴즈 세션이 있을 때) */}
-              {modalInfo?.canResume && (
+              {/* 이어서 풀기: 전체 문제 중 첫 unseen 위치부터 */}
+              {modalInfo && modalInfo.unseenCount > 0 && (
                 <Pressable
                   style={[styles.modalButton, styles.modalButtonPrimary]}
-                  onPress={() => navigateWithMode('resume')}
+                  onPress={() => navigateWithMode('resume-progress')}
                 >
                   <MaterialCommunityIcons name="play-circle" size={20} color="#fff" />
                   <Text style={styles.modalButtonPrimaryText}>
-                    이어서 풀기 ({(modalInfo.resumeIndex + 1)}/{modalInfo.resumeTotal})
+                    이어서 풀기 ({modalInfo.unseenCount}문제 남음)
                   </Text>
                 </Pressable>
               )}
 
-              {/* 안 푼 문제만 */}
-              {modalInfo && modalInfo.unseenCount > 0 && (
+              {/* 틀린 문제만 다시 풀기 (완료 + 틀린 문제 있을 때) */}
+              {modalInfo?.isCompleted && modalInfo.incorrectCount > 0 && (
                 <Pressable
-                  style={[styles.modalButton, !modalInfo.canResume ? styles.modalButtonPrimary : styles.modalButtonOutline]}
-                  onPress={() => navigateWithMode('unseen')}
+                  style={[styles.modalButton, styles.modalButtonPrimary]}
+                  onPress={() => navigateWithMode('incorrect')}
                 >
-                  <MaterialCommunityIcons
-                    name="checkbox-marked-circle-outline"
-                    size={20}
-                    color={!modalInfo.canResume ? '#fff' : COLORS.primary}
-                  />
-                  <Text style={!modalInfo.canResume ? styles.modalButtonPrimaryText : styles.modalButtonOutlineText}>
-                    안 푼 문제만 ({modalInfo.unseenCount}문제)
+                  <MaterialCommunityIcons name="close-circle-outline" size={20} color="#fff" />
+                  <Text style={styles.modalButtonPrimaryText}>
+                    틀린 문제만 다시 풀기 ({modalInfo.incorrectCount}문제)
                   </Text>
                 </Pressable>
               )}
@@ -442,6 +509,42 @@ const styles = StyleSheet.create({
   modalStatDivider: {
     width: 1,
     backgroundColor: COLORS.gray[200],
+  },
+  scoreValue: {
+    fontSize: 36,
+    fontWeight: '800',
+    color: COLORS.text,
+    textAlign: 'center',
+  },
+  scoreSuffix: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: COLORS.textSecondary,
+  },
+  passBadge: {
+    paddingHorizontal: 16,
+    paddingVertical: 4,
+    borderRadius: 20,
+    marginTop: 8,
+  },
+  passBadgeText: {
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  scoreDetailRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 24,
+    marginTop: 12,
+  },
+  scoreDetailItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  scoreDetailText: {
+    fontSize: 14,
+    fontWeight: '600',
   },
   modalButtons: {
     gap: 10,
