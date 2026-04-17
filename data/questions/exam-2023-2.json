@@ -33,7 +33,7 @@
     "question": "다음은 JAVA 코드 문제이다. 가지고 있는 돈이 총 4620원일 경우 1000원, 500원, 100원, 10원의 지폐 및 동전을 이용하여 괄호 안에 알맞은 코드를 작성하시오.(입력시 띄어쓰기 x)\n출력: 천원짜리 4장, 오백원짜리 1개, 백원짜리 1개, 십원짜리 2개",
     "answer": "(1) m/1000 (2) (m%1000)/500 (3) (m%500)/100 (4) (m%100)/10",
     "explanation": "4620 / 1000 = 4(천원), 4620 % 1000 = 620, 620 / 500 = 1(오백원), 620 % 500 = 120, 120 / 100 = 1(백원), 120 % 100 = 20, 20 / 10 = 2(십원). 나누기와 나머지 연산을 활용하여 각 화폐 단위별 개수를 구합니다.",
-    "codeSnippet": "public class Problem{\n    public static void main(String[] args){\n        m = 4620;\n        a = (              );\n        b = (              );\n        c = (              );\n        d = (              );\n        System.out.println(a);\n        System.out.println(b);\n        System.out.println(c);\n        System.out.println(d);\n    }\n}",
+    "codeSnippet": "public class Problem{\n    public static void main(String[] args){\n        m = 4620;\n        a = (       1      );\n        b = (       2      );\n        c = (       3      );\n        d = (       4      );\n        System.out.println(a);\n        System.out.println(b);\n        System.out.println(c);\n        System.out.println(d);\n    }\n}",
     "codeLanguage": "java",
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/372",

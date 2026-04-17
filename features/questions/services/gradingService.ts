@@ -81,7 +81,7 @@ const parseMultipleAnswer = (answer: string): AnswerPart[] => {
   }
 
   // 패턴 3: 1., 2., 3.
-  const numPattern = /(\d+)\.\s*(.+?)(?=\d+\.|$)/g;
+  const numPattern = /(\d+)\.\s+(.+?)(?=\d+\.\s|$)/g;
   matches = [...answer.matchAll(numPattern)];
   if (matches.length >= 2) {
     return matches.map((m) => ({
@@ -245,7 +245,7 @@ const isMultipleAnswer = (answer: string): boolean => {
   return (
     /\(\d+\)\s*.+\(\d+\)/.test(answer) ||
     /[ㄱ-ㅎ]\.\s*.+[ㄱ-ㅎ]\./.test(answer) ||
-    /^\d+\.\s*.+\d+\./.test(answer)
+    /^\d+\.\s+.+\d+\./.test(answer)
   );
 };
 
@@ -353,6 +353,15 @@ export const detectAnswerType = (question: Question): AnswerMeta => {
         primaryAnswer: answer,
       };
     }
+  }
+
+  // 3-1. SQL 타입 나머지: 키워드/값 단답 (ABBR_PATTERN 약어로 오탐 방지)
+  if (questionType === 'sql') {
+    return {
+      type: 'text',
+      hint: 'SQL 키워드 또는 값을 입력하세요',
+      primaryAnswer: answer.trim(),
+    };
   }
 
   // 4. 순서 나열

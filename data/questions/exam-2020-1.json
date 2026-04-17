@@ -45,7 +45,7 @@
     "year": 2020,
     "round": 1,
     "question": "프로토콜의 기본 요소 3가지를 쓰시오.",
-    "answer": "(1) 구문 (2) 의미 (3) 순서",
+    "answer": "구문, 의미, 순서",
     "explanation": "구문: 데이터의 형식이나 부호화 및 신호 레벨 등을 규정\n의미: 전송의 조작이나 오류 제어를 위한 제어 정보에 대한 규정\n순서: 접속되어 있는 개체 간의 통신 속도의 조정이나 메시지의 순서 제어 등을 규정",
     "source": "generated",
     "sourceFile": "https://chobopark.tistory.com/196",

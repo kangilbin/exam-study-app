@@ -318,7 +318,9 @@ export const useQuizStore = create<QuizState>()(
       },
 
       submitSubjectiveAnswer: (precomputedMeta?: AnswerMeta | null) => {
-        const { questions, currentIndex, userAnswers, results, answeredStates } = get();
+        const { questions, currentIndex, userAnswers, results, answeredStates, isAnswered } = get();
+        // 이미 답변한 경우 이중 제출 방지 (onSubmitEditing + 버튼 동시 트리거 방어)
+        if (isAnswered) return;
         const question = questions[currentIndex];
         if (!question) return;
 

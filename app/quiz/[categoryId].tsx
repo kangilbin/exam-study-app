@@ -805,15 +805,17 @@ export default function QuizScreen() {
                           <Text style={styles.gradeUserAnswer}>
                             내 답: {userAnswers['main'] || '(미입력)'}
                           </Text>
-                          <Text style={styles.gradeCorrectAnswer}>
-                            정답: {gradeResult.correctAnswer}
-                          </Text>
+                          <View style={styles.gradeCorrectAnswerBox}>
+                            <Text style={styles.gradeCorrectAnswerLabel}>정답:</Text>
+                            <Text style={styles.gradeCorrectAnswer}>{gradeResult.correctAnswer}</Text>
+                          </View>
                         </>
                       )}
                       {gradeResult.isCorrect && (
-                        <Text style={styles.gradeCorrectAnswer}>
-                          정답: {gradeResult.correctAnswer}
-                        </Text>
+                        <View style={styles.gradeCorrectAnswerBox}>
+                          <Text style={styles.gradeCorrectAnswerLabel}>정답:</Text>
+                          <Text style={styles.gradeCorrectAnswer}>{gradeResult.correctAnswer}</Text>
+                        </View>
                       )}
                     </View>
                   </View>
@@ -1209,6 +1211,8 @@ const styles = StyleSheet.create({
   gradeTextArea: { flex: 1 },
   gradeTitle: { fontSize: 16, fontWeight: '700', color: COLORS.text, marginBottom: 4 },
   gradeUserAnswer: { fontSize: 14, color: COLORS.danger, marginTop: 2 },
+  gradeCorrectAnswerBox: { marginTop: 4 },
+  gradeCorrectAnswerLabel: { fontSize: 13, color: COLORS.success, fontWeight: '600' },
   gradeCorrectAnswer: { fontSize: 14, color: COLORS.success, fontWeight: '600', marginTop: 2 },
 
   // ─── 카드형 암기 스타일 ───
