@@ -3,7 +3,7 @@
 ## study-resume
 - **완료일**: 2026-04-14
 - **Match Rate**: 98.5%
-- **Iteration**: 0회 (불필요)
+- **성과**: 523장 tip/mnemonic 100% 보강 + 데드 파일 10개 제거 + 전체 진행도 이중계산 버그 수정
 - **성과**: 학습탭 이어서 학습 모달, 카드 이전/다음 탐색, 종료확인 모달, 세션 영속화, 전체 진행도 통합
 - **문서**:
   - [Plan](study-resume/study-resume.plan.md)
@@ -14,7 +14,7 @@
 ## exam-score
 - **완료일**: 2026-04-14
 - **Match Rate**: 100%
-- **Iteration**: 0회 (불필요)
+- **성과**: 523장 tip/mnemonic 100% 보강 + 데드 파일 10개 제거 + 전체 진행도 이중계산 버그 수정
 - **성과**: 기출문제 100% 완료 시 점수/합격 표시, 틀린 문제만 다시 풀기 (FR-01~04)
 - **문서**:
   - [Plan](exam-score/exam-score.plan.md)
@@ -23,7 +23,7 @@
   - [Report](exam-score/exam-score.report.md)
 
 ## exam-tab
-- **완료일**: 2026-04-13
+- **완료일**: 2026-04-20 (재검토 완료)
 - **Match Rate**: 96% → 100% (14건 추가 개선)
 - **성과**: 기출문제 380문제 객관식→주관식 변환, 채점 엔진(7종 유형), 학습 모드 모달, 데이터 정리
 - **문서**:
@@ -33,10 +33,9 @@
   - [Report](exam-tab/exam-tab.report.md)
 
 ## flashcards
-- **완료일**: 2026-04-13
-- **Match Rate**: 97%
-- **Iteration**: 0회 (불필요)
-- **성과**: 523장 암기카드 definition 보강 + tip/mnemonic 전체 추가 (4개 파일 병렬 처리)
+- **완료일**: 2026-04-20 (재검토 완료)
+- **Match Rate**: 100%
+- **성과**: 523장 tip/mnemonic 100% 보강 + 데드 파일 10개 제거 + 전체 진행도 이중계산 버그 수정
 - **문서**:
   - [Plan](flashcards/flashcards.plan.md)
   - [Design](flashcards/flashcards.design.md)

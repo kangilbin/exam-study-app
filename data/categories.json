@@ -45,24 +45,6 @@
     "subcategories": ["SELECT", "JOIN", "서브쿼리", "GROUP BY", "HAVING", "ORDER BY"]
   },
   {
-    "id": "sql-ddl",
-    "name": "SQL DDL",
-    "icon": "database-cog",
-    "group": "sql",
-    "description": "CREATE, ALTER, DROP 등 데이터 정의어",
-    "questionCount": 0,
-    "subcategories": ["CREATE", "ALTER", "DROP", "제약조건", "인덱스", "뷰"]
-  },
-  {
-    "id": "sql-set",
-    "name": "SQL 집합",
-    "icon": "set-all",
-    "group": "sql",
-    "description": "UNION, INTERSECT, EXCEPT 등 집합 연산",
-    "questionCount": 0,
-    "subcategories": ["UNION", "INTERSECT", "EXCEPT", "집계함수"]
-  },
-  {
     "id": "memorize-se",
     "name": "소프트웨어공학",
     "icon": "cog-outline",

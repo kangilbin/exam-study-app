@@ -18,12 +18,6 @@ const questionFiles: Record<string, Question[]> = {
   'code-python': require('@/data/questions/code-python.json'),
   'code-common': require('@/data/questions/code-common.json'),
   'sql-dml': require('@/data/questions/sql-dml.json'),
-  'sql-ddl': require('@/data/questions/sql-ddl.json'),
-  'sql-set': require('@/data/questions/sql-set.json'),
-  'theory-se': require('@/data/questions/theory-se.json'),
-  'theory-network': require('@/data/questions/theory-network.json'),
-  'theory-db': require('@/data/questions/theory-db.json'),
-  'theory-os': require('@/data/questions/theory-os.json'),
   'exam-2020-1': require('@/data/questions/exam-2020-1.json'),
   'exam-2020-2': require('@/data/questions/exam-2020-2.json'),
   'exam-2020-3': require('@/data/questions/exam-2020-3.json'),
@@ -43,10 +37,6 @@ const questionFiles: Record<string, Question[]> = {
   'exam-2025-1': require('@/data/questions/exam-2025-1.json'),
   'exam-2025-2': require('@/data/questions/exam-2025-2.json'),
   'exam-2025-3': require('@/data/questions/exam-2025-3.json'),
-  'memorize-se': require('@/data/questions/memorize-se.json'),
-  'memorize-network': require('@/data/questions/memorize-network.json'),
-  'memorize-db': require('@/data/questions/memorize-db.json'),
-  'memorize-os': require('@/data/questions/memorize-os.json'),
 };
 
 /** 메모리 캐시 (앱 실행 중 유지) */
