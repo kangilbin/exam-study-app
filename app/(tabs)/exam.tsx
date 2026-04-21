@@ -60,7 +60,11 @@ export default function ExamScreen() {
   /** 기출 카테고리를 연도별로 그룹핑 */
   const sections = useMemo<ExamSection[]>(() => {
     const examCategories = getCategoriesByGroup('exam');
-    const years = [2025, 2024, 2023, 2022, 2021, 2020];
+    
+    // 카테고리 ID에서 연도를 추출하여 중복 제거 후 내림차순 정렬
+    const years = Array.from(
+      new Set(examCategories.map((c) => extractYear(c.id)))
+    ).sort((a, b) => b - a);
 
     return years
       .map((year) => ({
