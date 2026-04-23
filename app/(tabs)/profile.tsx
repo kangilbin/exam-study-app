@@ -9,6 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useUserStore } from '@/store/useUserStore';
+import { useFlashcardStore } from '@/store/useFlashcardStore';
 import { getQuestionIdsByGroup, getIncorrectQuestions } from '@/features/questions/services/questionService';
 import { calculateOverallStatsFiltered } from '@/features/questions/services/progressService';
 import { COLORS } from '@/lib/constants';
@@ -23,6 +24,7 @@ export default function ProfileScreen() {
     [progress, examQuestionIds]
   );
   const bookmarks = useUserStore((s) => s.bookmarks);
+  const flashcardBookmarks = useFlashcardStore((s) => s.flashcardBookmarks);
   const settings = useUserStore((s) => s.settings);
   const updateSettings = useUserStore((s) => s.updateSettings);
 
@@ -71,9 +73,19 @@ export default function ProfileScreen() {
             style={styles.menuItem}
             onPress={() => router.push('/bookmarks')}
           >
-            <MaterialCommunityIcons name="bookmark" size={24} color={COLORS.primary} />
-            <Text style={styles.menuText}>북마크</Text>
+            <MaterialCommunityIcons name="cards-heart" size={24} color={COLORS.primary} />
+            <Text style={styles.menuText}>기출 북마크</Text>
             <Text style={styles.menuBadge}>{bookmarks.length}</Text>
+            <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.gray[400]} />
+          </Pressable>
+
+          <Pressable
+            style={styles.menuItem}
+            onPress={() => router.push('/flashcard-bookmarks')}
+          >
+            <MaterialCommunityIcons name="bookmark" size={24} color={COLORS.primary} />
+            <Text style={styles.menuText}>학습 북마크</Text>
+            <Text style={styles.menuBadge}>{flashcardBookmarks.length}</Text>
             <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.gray[400]} />
           </Pressable>
 

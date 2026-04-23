@@ -71,6 +71,8 @@ export default function QuizScreen() {
   const fcIsFlipped = useFlashcardStore((s) => s.isFlipped);
   const fcCardProgress = useFlashcardStore((s) => s.cardProgress);
   const fcGetSessionStats = useFlashcardStore((s) => s.getSessionStats);
+  const fcFlashcardBookmarks = useFlashcardStore((s) => s.flashcardBookmarks);
+  const fcToggleFlashcardBookmark = useFlashcardStore((s) => s.toggleFlashcardBookmark);
 
   const [showComplete, setShowComplete] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
@@ -78,6 +80,9 @@ export default function QuizScreen() {
   // 카드 세션 초기화
   useEffect(() => {
     if (!isCardMode || !categoryId) return;
+
+    // 북마크 세션은 외부에서 startSession 완료 후 진입 — 재초기화 방지
+    if (categoryId === 'flashcard-bookmark') return;
 
     // mode=resume → lastSession 복원 또는 cardProgress 기반 이어서 학습
     if (mode === 'resume') {
@@ -166,6 +171,18 @@ export default function QuizScreen() {
                 {Math.min(fcCurrentIndex + 1, fcCards.length)} / {fcCards.length}
               </Text>
             </View>
+            {!fcIsComplete && fcCards.length > 0 && fcCurrentIndex < fcCards.length && (
+              <Pressable
+                onPress={() => fcToggleFlashcardBookmark(fcCards[fcCurrentIndex].id)}
+                hitSlop={12}
+              >
+                <MaterialCommunityIcons
+                  name={fcFlashcardBookmarks.includes(fcCards[fcCurrentIndex].id) ? 'bookmark' : 'bookmark-outline'}
+                  size={22}
+                  color={fcFlashcardBookmarks.includes(fcCards[fcCurrentIndex].id) ? COLORS.primary : COLORS.gray[400]}
+                />
+              </Pressable>
+            )}
             <Pressable onPress={fcToggleDisplayMode} style={styles.fcToggle}>
               <MaterialCommunityIcons
                 name={fcDisplayMode === 'term-first' ? 'card-text-outline' : 'card-text'}

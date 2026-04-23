@@ -22,9 +22,9 @@ export default function BookmarksScreen() {
     .filter(Boolean) as Question[];
 
   const handleQuestionPress = (item: Question) => {
-    // 해당 문제 1개를 퀴즈로 시작
-    useQuizStore.getState().startQuiz(item.categoryId as CategoryId, [item]);
-    router.push(`/quiz/${item.categoryId}`);
+    // 'bookmark' categoryId 사용 → quiz 화면에서 전체 문제 재로딩 방지
+    useQuizStore.getState().startQuiz('bookmark' as CategoryId, [item]);
+    router.push('/quiz/bookmark');
   };
 
   const handlePlayAll = () => {

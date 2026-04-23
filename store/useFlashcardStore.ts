@@ -30,6 +30,9 @@ interface FlashcardState {
   // 카드별 암기 상태 (영속화)
   cardProgress: Record<string, CardProgress>;
 
+  // 북마크된 카드 ID (영속화)
+  flashcardBookmarks: string[];
+
   // 마지막 세션 (영속화)
   lastSession: LastSession | null;
 
@@ -44,6 +47,9 @@ interface FlashcardState {
   // 네비게이션 액션
   goToPrevious: () => void;
   goToNext: () => void;
+
+  // 북마크 액션
+  toggleFlashcardBookmark: (cardId: string) => void;
 
   // 세션 저장/복원
   saveSession: () => void;
@@ -73,6 +79,7 @@ export const useFlashcardStore = create<FlashcardState>()(
       isFlipped: false,
       displayMode: 'term-first',
       cardProgress: {},
+      flashcardBookmarks: [],
       lastSession: null,
 
       startSession: (categoryId, cards) => {
@@ -235,6 +242,16 @@ export const useFlashcardStore = create<FlashcardState>()(
         get().saveSession();
       },
 
+      toggleFlashcardBookmark: (cardId) => {
+        const { flashcardBookmarks } = get();
+        const isBookmarked = flashcardBookmarks.includes(cardId);
+        set({
+          flashcardBookmarks: isBookmarked
+            ? flashcardBookmarks.filter((id) => id !== cardId)
+            : [...flashcardBookmarks, cardId],
+        });
+      },
+
       clearLastSession: () => {
         set({ lastSession: null });
       },
@@ -282,6 +299,7 @@ export const useFlashcardStore = create<FlashcardState>()(
         cardProgress: state.cardProgress,
         displayMode: state.displayMode,
         lastSession: state.lastSession,
+        flashcardBookmarks: state.flashcardBookmarks,
       }),
     }
   )

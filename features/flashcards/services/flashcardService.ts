@@ -27,9 +27,9 @@ export const getFlashcardCount = (categoryId: CategoryId): number => {
 /** 카드 셔플 */
 export const shuffleCards = (cards: FlashCard[]): FlashCard[] => shuffle(cards);
 
-/** 암기 카테고리 여부 확인 */
+/** 암기 카테고리 여부 확인 (flashcard-bookmark는 북마크 카드 세션용) */
 export const isMemorizeCategory = (categoryId: string): boolean => {
-  return categoryId.startsWith('memorize-');
+  return categoryId.startsWith('memorize-') || categoryId === 'flashcard-bookmark';
 };
 
 /** 알고리즘 카테고리 여부 확인 */
