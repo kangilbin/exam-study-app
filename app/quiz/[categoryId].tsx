@@ -13,6 +13,8 @@ import {
   ScrollView,
   TextInput,
   Modal,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
@@ -589,7 +591,7 @@ export default function QuizScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
-
+      <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       {/* 진행도 */}
       <View style={styles.progressContainer}>
         <View style={styles.progressBarBg}>
@@ -605,7 +607,7 @@ export default function QuizScreen() {
         </Text>
       </View>
 
-      <ScrollView style={styles.scrollContent} contentContainerStyle={styles.scrollContentInner}>
+      <ScrollView style={styles.scrollContent} contentContainerStyle={styles.scrollContentInner} keyboardShouldPersistTaps="handled">
         {/* 문제 헤더 (번호 + 북마크) */}
         <View style={styles.questionHeader}>
           <Text style={styles.questionLabel}>Q{currentIndex + 1}.</Text>
@@ -967,6 +969,7 @@ export default function QuizScreen() {
           )}
         </View>
       </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
