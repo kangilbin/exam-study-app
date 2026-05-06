@@ -40,8 +40,8 @@ import { getCategoryById } from '@/features/categories/services/categoryService'
 import { COLORS } from '@/lib/constants';
 import { detectAnswerType } from '@/features/questions/services/gradingService';
 import type { CategoryId, Question } from '@/features/questions/types';
-import { BannerAdView } from '@/components/ads/BannerAdView';
 import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
+import { useAdStore } from '@/store/useAdStore';
 
 const FONT_SIZE_MAP = { small: 11, medium: 13, large: 16 } as const;
 const INTERSTITIAL_INTERVAL = 5;
@@ -78,6 +78,7 @@ export default function QuizScreen() {
 
   const [showComplete, setShowComplete] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
+  const bannerHeight = useAdStore((s) => s.bannerHeight);
 
   // 카드 세션 초기화
   useEffect(() => {
@@ -262,7 +263,8 @@ export default function QuizScreen() {
             </View>
           )}
 
-          <BannerAdView />
+          {/* 전역 배너 광고 높이만큼 공간 확보 */}
+          <View style={{ height: bannerHeight }} />
 
           {/* 완료 모달 */}
           <Modal visible={showComplete} transparent animationType="fade">
@@ -923,9 +925,6 @@ export default function QuizScreen() {
         )}
       </ScrollView>
 
-      {/* 하단 배너 광고 */}
-      <BannerAdView />
-
       {/* 하단 버튼 - 이전 문제 + 다음 문제 */}
       <View style={styles.bottomBar}>
         <View style={styles.bottomBarRow}>
@@ -969,6 +968,9 @@ export default function QuizScreen() {
           )}
         </View>
       </View>
+
+      {/* 전역 배너 광고 높이만큼 공간 확보 - 버튼이 배너에 가려지지 않도록 */}
+      <View style={{ height: bannerHeight }} />
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

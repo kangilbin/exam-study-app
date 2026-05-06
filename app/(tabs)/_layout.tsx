@@ -1,16 +1,17 @@
 /**
  * 탭 네비게이션 레이아웃
  * 3개 탭: 학습, 기출, 내정보
+ * 배너 광고는 app/_layout.tsx에서 전역 관리 → 여기선 spacer만 처리
  */
 
-import { View } from 'react-native';
 import { Tabs } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { BannerAdView } from '@/components/ads/BannerAdView';
+import { useAdStore } from '@/store/useAdStore';
 
 export default function TabLayout() {
+  const bannerHeight = useAdStore((s) => s.bannerHeight);
+
   return (
-    <View style={{ flex: 1 }}>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#6366f1',
@@ -21,6 +22,7 @@ export default function TabLayout() {
           borderTopColor: '#e5e7eb',
           paddingBottom: 4,
           height: 60,
+          marginBottom: bannerHeight,
         },
         tabBarLabelStyle: {
           fontSize: 11,
@@ -70,7 +72,5 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
-    <BannerAdView />
-    </View>
   );
 }

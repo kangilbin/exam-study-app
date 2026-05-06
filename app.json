@@ -4,6 +4,7 @@
     "slug": "exam-study-app",
     "version": "1.0.0",
     "orientation": "portrait",
+    "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "scheme": "exam-study",
@@ -25,10 +26,6 @@
       },
       "package": "com.examstudy.app",
       "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
     },
     "plugins": [
       "expo-router",

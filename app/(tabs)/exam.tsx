@@ -11,6 +11,8 @@ import {
   Pressable,
   StyleSheet,
   Modal,
+  Alert,
+  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -19,6 +21,7 @@ import { getCategoriesByGroup } from '@/features/categories/services/categorySer
 import { loadQuestionsByCategory } from '@/features/questions/services/questionService';
 import { useQuizStore } from '@/store/useQuizStore';
 import { useUserStore } from '@/store/useUserStore';
+import { useRewardedAd } from '@/components/ads/useRewardedAd';
 import { COLORS } from '@/lib/constants';
 import type { Category, CategoryId } from '@/features/questions/types';
 
@@ -56,6 +59,21 @@ export default function ExamScreen() {
   /** progress 구독으로 학습 후 돌아왔을 때 리렌더링 보장 */
   const progress = useUserStore((s) => s.progress);
   const [modalInfo, setModalInfo] = useState<ResumeInfo | null>(null);
+  const [isWaitingForAd, setIsWaitingForAd] = useState(false);
+  const { showAd } = useRewardedAd();
+
+  /** 광고 로딩 대기 상태를 포함한 showAd 래퍼 */
+  const showAdWithLoading = (callbacks: Parameters<typeof showAd>[0]) => {
+    setIsWaitingForAd(true);
+    showAd({
+      onRewarded: () => { setIsWaitingForAd(false); callbacks.onRewarded(); },
+      onDismissed: () => { setIsWaitingForAd(false); callbacks.onDismissed?.(); },
+      onError: () => {
+        setIsWaitingForAd(false);
+        Alert.alert('알림', '광고를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
+      },
+    });
+  };
 
   /** 기출 카테고리를 연도별로 그룹핑 */
   const sections = useMemo<ExamSection[]>(() => {
@@ -90,9 +108,13 @@ export default function ExamScreen() {
       && useQuizStore.getState().questions.length > 0
       && useQuizStore.getState().currentIndex > 0;
 
-    // 학습 기록이 없으면 바로 진입
+    // 처음 도전: 보상형 광고 시청 후 진입
     if (seenCount === 0 && !quizCanResume) {
-      router.push(`/quiz/${item.id}`);
+      showAdWithLoading({
+        onRewarded: () => router.push(`/quiz/${item.id}`),
+        onDismissed: () =>
+          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
+      });
       return;
     }
 
@@ -123,11 +145,22 @@ export default function ExamScreen() {
   const navigateWithMode = (mode: string) => {
     if (!modalInfo) return;
     const catId = modalInfo.categoryId;
-    setModalInfo(null);
-    // 전체 다시 풀기 → 학습 기록 초기화
+
+    // 전체 다시 풀기: 보상형 광고 시청 후 기록 초기화 → 진입
     if (mode === 'all') {
-      useUserStore.getState().resetCategoryProgress(catId);
+      setModalInfo(null);
+      showAdWithLoading({
+        onRewarded: () => {
+          useUserStore.getState().resetCategoryProgress(catId);
+          router.push(`/quiz/${catId}?mode=${mode}`);
+        },
+        onDismissed: () =>
+          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
+      });
+      return;
     }
+
+    setModalInfo(null);
     router.push(`/quiz/${catId}?mode=${mode}`);
   };
 
@@ -219,6 +252,16 @@ export default function ExamScreen() {
           </View>
         }
       />
+
+      {/* 광고 로딩 오버레이 */}
+      {isWaitingForAd && (
+        <View style={styles.adLoadingOverlay}>
+          <View style={styles.adLoadingBox}>
+            <ActivityIndicator size="large" color={COLORS.primary} />
+            <Text style={styles.adLoadingText}>광고 불러오는 중...</Text>
+          </View>
+        </View>
+      )}
 
       {/* 학습 모드 선택 모달 */}
       <Modal
@@ -583,6 +626,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 14,
     marginTop: 8,
+  },
+  adLoadingOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  adLoadingBox: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    paddingVertical: 28,
+    paddingHorizontal: 40,
+    alignItems: 'center',
+    gap: 14,
+  },
+  adLoadingText: {
+    fontSize: 15,
+    color: COLORS.textSecondary,
   },
   modalCloseText: {
     fontSize: 15,
