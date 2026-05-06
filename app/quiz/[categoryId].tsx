@@ -969,9 +969,10 @@ export default function QuizScreen() {
         </View>
       </View>
 
-      {/* 전역 배너 광고 높이만큼 공간 확보 - 버튼이 배너에 가려지지 않도록 */}
-      <View style={{ height: bannerHeight }} />
       </KeyboardAvoidingView>
+
+      {/* 배너 spacer: KAV 밖 → 키보드 이벤트와 완전히 분리 */}
+      <View style={{ height: bannerHeight }} />
     </SafeAreaView>
   );
 }

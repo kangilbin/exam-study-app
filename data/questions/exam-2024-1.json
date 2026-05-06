@@ -4,281 +4,132 @@
     "categoryId": "exam-2024-1",
     "subcategory": "Java 싱글턴패턴",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "다음 Java 코드의 출력값을 작성하시오. (싱글턴 패턴을 이용한 Connection 클래스)",
     "answer": "4",
     "explanation": "Connection은 싱글턴 패턴입니다. get() 메서드로 항상 같은 인스턴스를 반환합니다.\nconn1.count() → count=1\nconn2.count() → count=2 (같은 인스턴스)\nconn3.count() → count=3\nconn1.count() → count=4\nconn1.getCount() → 4 출력",
     "codeSnippet": "class Connection {\n    private static Connection _inst = null;\n    private int count = 0;\n    static public Connection get() {\n        if (_inst == null) {\n            _inst = new Connection();\n            return _inst;\n        }\n        return _inst;\n    }\n    public void count() { count++; }\n    public int getCount() { return count; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Connection conn1 = Connection.get();\n        conn1.count();\n        Connection conn2 = Connection.get();\n        conn2.count();\n        Connection conn3 = Connection.get();\n        conn3.count();\n        conn1.count();\n        System.out.print(conn1.getCount());\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "Java",
-      "싱글턴",
-      "디자인패턴",
-      "2024년1회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-1_002",
     "categoryId": "exam-2024-1",
     "subcategory": "C언어 비트연산/삼항연산자",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": "다음 C 코드의 출력값을 작성하시오.",
     "answer": "151",
     "explanation": "v1=0, v2=35, v3=29\nv1>v2?v2:v1 → (0>35)?35:0 → 0 → false(0)\nelse 블록 실행: v3 = v3 << 2 = 29 * 4 = 116\nv2+v3 = 35+116 = 151",
     "codeSnippet": "#include <stdio.h>\nint main() {\n    int v1 = 0, v2 = 35, v3 = 29;\n    if (v1 > v2 ? v2 : v1) {\n        v2 = v2 << 2;\n    } else {\n        v3 = v3 << 2;\n    }\n    printf(\"%d\", v2 + v3);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "C언어",
-      "비트연산",
-      "삼항연산자",
-      "2024년1회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-1_003",
     "categoryId": "exam-2024-1",
     "subcategory": "소프트웨어공학 응집도",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "응집도와 관련해서 보기에서 응집도가 높은 순으로 나열하시오.",
     "answer": "기능적 > 통신적 > 시간적 > 우연적",
-    "explanation": "응집도(Cohesion)는 모듈 내부 요소들이 얼마나 밀접하게 관련되어 있는지를 나타냅니다.\n높은 순서: 기능적(Functional) > 순차적(Sequential) > 통신적(Communication) > 절차적(Procedural) > 시간적(Temporal) > 논리적(Logical) > 우연적(Coincidental)\n응집도가 높을수록 좋은 모듈 설계입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "소프트웨어공학",
-      "응집도",
-      "모듈",
-      "2024년1회"
-    ]
+    "explanation": "응집도(Cohesion)는 모듈 내부 요소들이 얼마나 밀접하게 관련되어 있는지를 나타냅니다.\n높은 순서: 기능적(Functional) > 순차적(Sequential) > 통신적(Communication) > 절차적(Procedural) > 시간적(Temporal) > 논리적(Logical) > 우연적(Coincidental)\n응집도가 높을수록 좋은 모듈 설계입니다."
   },
   {
     "id": "exam-2024-1_004",
     "categoryId": "exam-2024-1",
     "subcategory": "C언어 문자열역순",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "다음 C 코드의 출력값을 작성하시오.",
     "answer": "GECA",
     "explanation": "1. reverse() 함수로 \"ABCDEFGH\"를 \"HGFEDCBA\"로 뒤집습니다.\n2. for문에서 i=1부터 i+=2로 홀수 인덱스(1,3,5,7)의 문자를 출력합니다.\n3. \"HGFEDCBA\"에서 인덱스 1=G, 3=E, 5=C, 7=A\n결과: GECA",
     "codeSnippet": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char* str){\n    int len = strlen(str);\n    char temp;\n    char*p1 = str;\n    char*p2 = str + len - 1;\n    while(p1<p2){\n        temp = *p1;\n        *p1 = *p2;\n        *p2 = temp;\n        p1++;\n        p2--;\n    }\n}\n\nint main(int argc, char* argv[]){\n    char str[100] = \"ABCDEFGH\";\n\n    reverse(str);\n\n    int len = strlen(str);\n\n    for(int i=1; i<len; i+=2){\n        printf(\"%c\",str[i]);\n    }\n\n    printf(\"\\n\");\n\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "C언어",
-      "문자열",
-      "역순",
-      "2024년1회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-1_005",
     "categoryId": "exam-2024-1",
     "subcategory": "네트워크 IP주소",
     "type": "theory",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": " 아래 그림에서의 네트워크에서 라우터를 통한 할당 가능한 IP를 보기에서 찾아 2번, 4번, 5번의 IP를 작성하시오. \n\n[보기]\n ㄱ.192.168.35.0 ㄴ.192.168.35.72 ㄷ.192.168.36.0 ㄹ.192.168.36.249 ㅁ.129.200.8.0 ㅂ.129.200.8.249",
     "imageUrl": "exam-2024-1_005.png",
     "answer": "(2) 192.168.35.72 (4) 129.200.8.249 (5)192.168.36.249",
-    "explanation": "① 192.168.35.3 AND 255.255.255.0\n3 = 0000 0011, 0 = 0000 0000\n0000 0011 AND 0000 0000 = 0000 0000 = 0\n네트워크 주소: 192.168.35.0\n호스트 개수: 2의8승(서브넷 0개수) = 256\n브로드캐스트 주소: 192.168.35.0 + (256 - 1) = 192.168.35.255 \n\n② 129.200.10.16/22\n네트워크 주소: 129.200.8.0(IP와 서브넷 마스크 AND 연산)\n브로드캐스트: 129.200.11.255(네트워크 주소 + 호스트개수  -1)\n마지막 유효 호스트: 129.200.11.254\n\n③ 192.168.36.24/24\n네트워크 주소: 192.168.36.0\n브로드캐스트: 192.168.36.255\n마지막 유효 호스트: 192.168.36.254",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "네트워크",
-      "IP주소",
-      "서브넷마스크",
-      "2024년1회"
-    ]
+    "explanation": "① 192.168.35.3 AND 255.255.255.0\n3 = 0000 0011, 0 = 0000 0000\n0000 0011 AND 0000 0000 = 0000 0000 = 0\n네트워크 주소: 192.168.35.0\n호스트 개수: 2의8승(서브넷 0개수) = 256\n브로드캐스트 주소: 192.168.35.0 + (256 - 1) = 192.168.35.255 \n\n② 129.200.10.16/22\n네트워크 주소: 129.200.8.0(IP와 서브넷 마스크 AND 연산)\n브로드캐스트: 129.200.11.255(네트워크 주소 + 호스트개수  -1)\n마지막 유효 호스트: 129.200.11.254\n\n③ 192.168.36.24/24\n네트워크 주소: 192.168.36.0\n브로드캐스트: 192.168.36.255\n마지막 유효 호스트: 192.168.36.254"
   },
   {
     "id": "exam-2024-1_006",
     "categoryId": "exam-2024-1",
     "subcategory": "데이터베이스 정규화",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "아래 표에서 나타나고 있는 정규형을 작성하시오.",
     "imageUrl": "exam-2024-1_006.png",
     "answer": "제3정규형 또는 3NF",
-    "explanation": "제3정규형(3NF)은 제2정규형을 만족하면서 이행적 함수 종속을 제거한 정규형입니다.\n- 제1정규형(1NF): 원자값만 포함\n- 제2정규형(2NF): 부분적 함수 종속 제거\n- 제3정규형(3NF): 이행적 함수 종속 제거 (A→B, B→C일 때 A→C 제거)\n- BCNF: 모든 결정자가 후보키\n이행적 종속: X→Y, Y→Z이면 X→Z가 되는 관계를 제거합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "데이터베이스",
-      "정규화",
-      "3NF",
-      "이행적종속",
-      "2024년1회"
-    ]
+    "explanation": "제3정규형(3NF)은 제2정규형을 만족하면서 이행적 함수 종속을 제거한 정규형입니다.\n- 제1정규형(1NF): 원자값만 포함\n- 제2정규형(2NF): 부분적 함수 종속 제거\n- 제3정규형(3NF): 이행적 함수 종속 제거 (A→B, B→C일 때 A→C 제거)\n- BCNF: 모든 결정자가 후보키\n이행적 종속: X→Y, Y→Z이면 X→Z가 되는 관계를 제거합니다."
   },
   {
     "id": "exam-2024-1_007",
     "categoryId": "exam-2024-1",
     "subcategory": "네트워크 라우팅",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "링크 상태(Link State) 알고리즘을 사용하며, 최단 경로를 찾기 위해 다익스트라(Dijkstra) 알고리즘을 사용하는 내부 라우팅 프로토콜은 무엇인가?",
     "answer": "OSPF",
-    "explanation": "OSPF(Open Shortest Path First)는 링크 상태 라우팅 프로토콜입니다.\n- 다익스트라(Dijkstra) 알고리즘을 사용하여 최단 경로를 계산\n- 대규모 네트워크를 Area로 분할하여 관리\n- 라우팅 테이블 변경 시에만 정보를 전송 (효율적)\n\n비교:\n- RIP: 거리 벡터 방식, 최대 15홉, 벨만-포드 알고리즘\n- OSPF: 링크 상태 방식, 홉 수 제한 없음, 다익스트라 알고리즘",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "네트워크",
-      "라우팅",
-      "OSPF",
-      "다익스트라",
-      "2024년1회"
-    ]
+    "explanation": "OSPF(Open Shortest Path First)는 링크 상태 라우팅 프로토콜입니다.\n- 다익스트라(Dijkstra) 알고리즘을 사용하여 최단 경로를 계산\n- 대규모 네트워크를 Area로 분할하여 관리\n- 라우팅 테이블 변경 시에만 정보를 전송 (효율적)\n\n비교:\n- RIP: 거리 벡터 방식, 최대 15홉, 벨만-포드 알고리즘\n- OSPF: 링크 상태 방식, 홉 수 제한 없음, 다익스트라 알고리즘"
   },
   {
     "id": "exam-2024-1_008",
     "categoryId": "exam-2024-1",
     "subcategory": "SQL 조인",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "관계형 데이터베이스에서 조인(Join)의 종류에 대한 다음 설명에 해당하는 것을 각각 작성하시오.\n(1) 조건을 사용하여 두 릴레이션의 튜플을 결합하는 조인 (비교 연산자 사용)\n(2) 비교 연산자가 '='인 조인\n(3) ((2)) 조인에서 중복 속성을 제거한 조인",
     "answer": "(1) 세타조인 (2) 동등조인 (3) 자연조인",
-    "explanation": "① 세타 조인(Theta Join): 비교 연산자(=, <, >, ≤, ≥, ≠)를 사용하여 조건에 맞는 투플을 결합\n② 동등 조인(Equi Join): 세타 조인 중 '=' 연산자만 사용하는 조인\n③ 자연 조인(Natural Join): 동등 조인 결과에서 중복 속성(같은 이름의 컬럼)을 하나만 남기고 제거\n\n관계: 세타조인 ⊃ 동등조인 ⊃ 자연조인",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "SQL",
-      "조인",
-      "세타조인",
-      "동등조인",
-      "자연조인",
-      "2024년1회"
-    ]
+    "explanation": "① 세타 조인(Theta Join): 비교 연산자(=, <, >, ≤, ≥, ≠)를 사용하여 조건에 맞는 투플을 결합\n② 동등 조인(Equi Join): 세타 조인 중 '=' 연산자만 사용하는 조인\n③ 자연 조인(Natural Join): 동등 조인 결과에서 중복 속성(같은 이름의 컬럼)을 하나만 남기고 제거\n\n관계: 세타조인 ⊃ 동등조인 ⊃ 자연조인"
   },
   {
     "id": "exam-2024-1_009",
     "categoryId": "exam-2024-1",
     "subcategory": "운영체제 페이지교체",
     "type": "theory",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": "페이지 프레임이 3개이고, 페이지 참조 순서가 1, 2, 3, 1, 2, 4, 1, 2, 5, 7일 때,\n(1) LRU(Least Recently Used) 알고리즘의 페이지 부재(Page Fault) 횟수\n(2) LFU(Least Frequently Used) 알고리즘의 페이지 부재(Page Fault) 횟수\n를 각각 구하시오.",
     "answer": "(1) 6 (2) 6",
-    "explanation": "LRU (가장 오래전에 사용된 페이지 교체):\n1→[1] F, 2→[1,2] F, 3→[1,2,3] F, 1→[2,3,1] H, 2→[3,1,2] H, 4→[1,2,4] F(3교체), 1→[2,4,1] H→... 총 6회 부재\n\nLFU (가장 적게 사용된 페이지 교체):\n사용 빈도가 가장 적은 페이지를 교체합니다. 동일 빈도일 경우 LRU 적용.\n총 6회 부재",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "운영체제",
-      "페이지교체",
-      "LRU",
-      "LFU",
-      "2024년1회"
-    ]
+    "explanation": "LRU (가장 오래전에 사용된 페이지 교체):\n1→[1] F, 2→[1,2] F, 3→[1,2,3] F, 1→[2,3,1] H, 2→[3,1,2] H, 4→[1,2,4] F(3교체), 1→[2,4,1] H→... 총 6회 부재\n\nLFU (가장 적게 사용된 페이지 교체):\n사용 빈도가 가장 적은 페이지를 교체합니다. 동일 빈도일 경우 LRU 적용.\n총 6회 부재"
   },
   {
     "id": "exam-2024-1_010",
     "categoryId": "exam-2024-1",
     "subcategory": "Java 상속실행순서",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": "다음 Java 코드의 출력 순서를 작성하시오. (상속에서 생성자와 초기화 블록의 실행 순서)",
     "answer": "563172",
     "explanation": "Java에서 상속 관계의 실행 순서:\n1. 부모 클래스의 static 블록 → 자식 클래스의 static 블록\n2. 부모 클래스의 인스턴스 초기화 블록 → 부모 생성자\n3. 자식 클래스의 인스턴스 초기화 블록 → 자식 생성자\n\n실행 순서: 5→6→3→1→7→2",
     "codeSnippet": "class Parent {\n    int x, y;\n \n    Parent(int x, int y) { ①\n        this.x=x;\n        this y=y;\n    }\n \n    int getT() { ②\n        return x*y;\n    }\n}\n\nclass Child extend Parent {\n    int x;\n \n    Child (int x) { ③\n        super(x+1, x);\n        this.x=x;\n    }\n \n    int getT(int n){ ④\n        return super.getT()+n;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) { ⑤\n        Parent parent = new Child(3); ⑥\n        System.out.println(parent.getT()); ⑦\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "Java",
-      "상속",
-      "생성자",
-      "초기화블록",
-      "2024년1회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-1_011",
     "categoryId": "exam-2024-1",
     "subcategory": "C언어 복리계산 구조체",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": "다음 C 코드의 출력값을 작성하시오. (구조체를 이용한 복리 계산)",
     "answer": "9981 and 2795.10",
     "explanation": "초기화 (initAcc)\nmyAcc 구조체 생성: accNum = 9981, bal = 2200.0 저장.\n조건부 잔액 계산 (xxx)\n인자로 amount = 100.0 전달.\n조건 검사: 100.0 > 0 && 100.0 < 2200.0 → 참(True).\n실행: 2200.0 - 100.0 = 2100.0. (잔액에서 출금)\n복리 이자 계산 (yyy & sim_pow)\n거듭제곱: sim_pow(1.1, 3) 실행 → 1.1*1.1*1.1 = 1.331\n잔액 갱신: 2100.0 * 1.331 = 2795.10\n최종 출력 (printf)\n%d: 계좌번호 9981 출력\n%.2f: 소수점 둘째 자리까지 잔액 2795.10 출력\n",
     "codeSnippet": "#include <stdio.h>\n \n \ntypedef struct{\n    int accNum;\n    double bal;\n}BankAcc;\n\ndouble sim_pow(double base, int year){\n    int i;\n    double r = 1.0;\n \n    for(i=0; i<year; i++){\n        r = r*base;\n    }\n    return r;\n} \n\nvoid initAcc(BankAcc *acc, int x, double y){\n    acc -> accNum = x;\n    acc -> bal = y;\n}\n\nvoid xxx(BankAcc *acc, double *en){\n    if (*en > 0 && *en < acc -> bal) {\n        acc -> bal = acc -> bal-*en;\n    }else{\n        acc -> bal = acc -> bal+*en;\n    }\n}\n\nvoid yyy(BankAcc *acc){\n    acc -> bal = acc -> bal * sim_pow((1+0.1),3);\n}\n \nint main(){\n \n    BankAcc myAcc;\n    initAcc(&myAcc, 9981, 2200.0);\n    double amount = 100.0;\n    xxx(&myAcc, &amount);\n    yyy(&myAcc);\n    printf(\"%d and %.2f\", myAcc.accNum, myAcc.bal);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "C언어",
-      "구조체",
-      "복리계산",
-      "2024년1회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-1_012",
     "categoryId": "exam-2024-1",
     "subcategory": "Python 문자열연결",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "다음 Python 코드의 출력값을 작성하시오.",
     "answer": "Seynaau",
     "explanation": "리스트 a = [\"Seoul\", \"Kyeonggi\", \"Incheon\", \"Daejun\", \"Daegu\", \"Pusan\"]\nstr = \"S\"로 초기화\n각 요소의 인덱스 [1] 문자를 이어붙임:\n- Seoul[1] = 'e' → \"Se\"\n- Kyeonggi[1] = 'y' → \"Sey\"\n- Incheon[1] = 'n' → \"Seyn\"\n- Daejun[1] = 'a' → \"Seyna\"\n- Daegu[1] = 'a' → \"Seynaa\"\n- Pusan[1] = 'u' → \"Seynaau\"\n결과: Seynaau",
     "codeSnippet": "a = [\"Seoul\", \"Kyeonggi\", \"Incheon\", \"Daejun\", \"Daegu\", \"Pusan\"]\nstr = \"S\"\nfor i in a:\n    str = str + i[1]\nprint(str)",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "Python",
-      "문자열",
-      "리스트",
-      "인덱싱",
-      "2024년1회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2024-1_013",
     "categoryId": "exam-2024-1",
     "subcategory": "SQL 서브쿼리",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "아래 보기의 SQL 문장과 테이블을 참고하여 출력 값을 표로 작성하시오.",
     "answer": "a\nb",
     "explanation": "① 서브쿼리 실행: R2 테이블에서 D 컬럼의 값이 \"k\"인 행들을 찾습니다.\n② 값 추출: 해당 행들의 C 컬럼 값들을 모읍니다. \n③메인쿼리 실행: 이제 R1 테이블에서 C 컬럼의 값이 위에서 찾은 값들 중 하나라도 포함된(IN) 행을 찾습니다.",
     "imageUrl": "exam-2024-1_013.png",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "SQL",
-      "서브쿼리",
-      "2024년1회"
-    ],
     "codeSnippet": "SELECT\n    B\nFROM\n    R1\nWHERE\n    C IN (SELECT C FROM R2 WHERE D=\"k\");"
   },
   {
@@ -286,104 +137,47 @@
     "categoryId": "exam-2024-1",
     "subcategory": "테스트 커버리지",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "각 개별 조건이 다른 조건에 독립적으로 전체 결정(Decision)의 결과에 영향을 미치는지를 확인하는 테스트 커버리지 기법은 무엇인가?\n\n[보기]\nㄱ. 구문 커버리지      ㄴ. 결정 커버리지    ㄷ. 조건 커버리지    ㄹ. 변경 조건/결정 커버리지     ㅁ.다중 조건 커버리지      ㅂ.경로 커버리지    ㅅ.조건/결정 커버리지",
     "answer": "변경 조건/결정 커버리지 ",
-    "explanation": "결정 커버리지는 \"결과가 True/False가 한 번씩 나왔는가\"만 보지만, MC/DC는 \"그 결과가 '누구' 때문에 바뀌었는가\"까지 입증합니다",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "테스트",
-      "커버리지",
-      "MC/DC",
-      "2024년1회"
-    ]
+    "explanation": "결정 커버리지는 \"결과가 True/False가 한 번씩 나왔는가\"만 보지만, MC/DC는 \"그 결과가 '누구' 때문에 바뀌었는가\"까지 입증합니다"
   },
   {
     "id": "exam-2024-1_015",
     "categoryId": "exam-2024-1",
     "subcategory": "보안 악성코드",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "시스템에 불법적으로 설치되어 관리자 권한(root)을 획득하고, 자신의 존재를 숨기며 백도어나 트로이목마를 설치하는 악성 소프트웨어 도구 모음은 무엇인가? \n\n[보기]\nㄱ.Worm    ㄴ.Trojan horse    ㄷ.Backdoor     ㄹ.Virus     ㅁ.Ransomware      ㅂ.Spyware     ㅅ.Rootkit",
     "answer": "Rootkit",
-    "explanation": "루트킷(Rootkit)은 시스템에 불법적으로 설치되는 악성 도구 모음입니다.\n특징:\n- root(관리자) + kit(도구모음)의 합성어\n- 시스템의 관리자 권한을 획득\n- 자신의 존재를 로그, 프로세스 목록 등에서 숨김\n- 백도어, 키로거, 트로이목마 등을 함께 설치\n- 탐지가 매우 어려움 (커널 레벨에서 동작 가능)\n대응: 무결성 검사 도구, 행위 기반 탐지",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "보안",
-      "루트킷",
-      "악성코드",
-      "2024년1회"
-    ]
+    "explanation": "루트킷(Rootkit)은 시스템에 불법적으로 설치되는 악성 도구 모음입니다.\n특징:\n- root(관리자) + kit(도구모음)의 합성어\n- 시스템의 관리자 권한을 획득\n- 자신의 존재를 로그, 프로세스 목록 등에서 숨김\n- 백도어, 키로거, 트로이목마 등을 함께 설치\n- 탐지가 매우 어려움 (커널 레벨에서 동작 가능)\n대응: 무결성 검사 도구, 행위 기반 탐지"
   },
   {
     "id": "exam-2024-1_016",
     "categoryId": "exam-2024-1",
     "subcategory": "Java 다형성",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "다음 Java 코드의 출력값을 작성하시오. (상속과 다형성을 활용한 코드)",
     "answer": "9",
     "explanation": "다형성(Polymorphism)에 의해 부모 타입 참조변수로 자식 객체를 가리킬 때, 오버라이딩된 메서드가 호출됩니다.\n자식 클래스에서 메서드를 오버라이딩하여 다른 계산을 수행합니다.\n최종 결과: 9",
     "codeSnippet": "class classOne {\n    int a, b;\n \n    public classOne(int a, int b) {\n        this.a = a;\n        this.b = b;\n    }\n \n    public void print() {\n        System.out.println(a + b);\n    }\n \n}\nclass classTwo extends classOne {\n    int po = 3;\n    \n    public classTwo(int i) {\n        super(i, i+1);\n    }\n \n    public void print() {\n        System.out.println(po*po);\n    }\n}\n \npublic class main {  \n    public static void main(String[] args) {\n        classOne one = new classTwo(10);\n        one.print();\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "Java",
-      "다형성",
-      "오버라이딩",
-      "상속",
-      "2024년1회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-1_017",
     "categoryId": "exam-2024-1",
     "subcategory": "보안 APT",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "특정 조직이나 기업을 대상으로 장기간에 걸쳐 지속적이고 은밀하게 다양한 공격 기법을 사용하여 정보를 탈취하는 지능형 사이버 공격은 무엇인가?\n\n[보기]\n사회공학 기법,     Adware,     MITM,      XDR,     Replace attack,      key logger attack,  APT",
     "answer": "APT",
-    "explanation": "APT(Advanced Persistent Threat, 지능형 지속 위협):\n- Advanced: 고도화된 공격 기술 사용 (제로데이, 사회공학 등)\n- Persistent: 장기간 지속적으로 공격 수행\n- Threat: 특정 대상을 목표로 한 위협\n\n공격 단계: 침투 → 검색 → 수집 → 유출\n특징:\n- 특정 조직/기업을 표적으로 함\n- 사회공학적 기법 활용 (스피어 피싱 등)\n- 장기간 은밀하게 활동\n- APT 그룹이 국가 지원을 받는 경우도 있음",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "보안",
-      "APT",
-      "사이버공격",
-      "2024년1회"
-    ]
+    "explanation": "APT(Advanced Persistent Threat, 지능형 지속 위협):\n- Advanced: 고도화된 공격 기술 사용 (제로데이, 사회공학 등)\n- Persistent: 장기간 지속적으로 공격 수행\n- Threat: 특정 대상을 목표로 한 위협\n\n공격 단계: 침투 → 검색 → 수집 → 유출\n특징:\n- 특정 조직/기업을 표적으로 함\n- 사회공학적 기법 활용 (스피어 피싱 등)\n- 장기간 은밀하게 활동\n- APT 그룹이 국가 지원을 받는 경우도 있음"
   },
   {
     "id": "exam-2024-1_018",
     "categoryId": "exam-2024-1",
     "subcategory": "SQL COUNT",
     "type": "sql",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "직원 테이블에 다음 데이터가 있을 때, 아래 SQL문의 실행 결과를 작성하시오.",
     "answer": "1",
     "explanation": "쿼리는 다음 두 가지 경우 중 하나라도 해당되는 데이터의 개수를 셉니다.\n경우 A: 사원번호(EMPNO)가 100보다 크면서, 동시에 급여(SAL)가 3000 이상인 사람\n경우 B: 사원번호(EMPNO)가 정확히 200인 사람 (이 경우 급여가 얼마든 상관없이 무조건 포함)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "SQL",
-      "COUNT",
-      "NULL",
-      "집계함수",
-      "2024년1회"
-    ],
     "codeSnippet": "[직원 테이블]\n EMPNO | SAL     \n-------+------\n  100  | 1000   \n  200  | 3000   \n  300  | 1500 \n\nSELECT \n    COUNT(*) \nFROM \n    TABLE \nWHERE \n    EMPNO > 100 \nAND \n    SAL >= 3000 OR EMPNO = 200;"
   },
   {
@@ -391,43 +185,19 @@
     "categoryId": "exam-2024-1",
     "subcategory": "C언어 문자인코딩변환",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 1,
     "question": "다음 C 코드의 출력값을 작성하시오. (시저 암호 방식의 문자 변환)",
     "answer": "Nd sc 1",
     "explanation": "각 문자를 규칙에 따라 변환합니다:\n입력: \"It is 8\"\n- 대문자: (char - 'A' + 5) % 26 + 'A'\n  I → (8+5)%26 = 13 → N\n- 소문자: (char - 'a' + 10) % 26 + 'a'\n  t → (19+10)%26 = 3 → d\n  i → (8+10)%26 = 18 → s\n  s → (18+10)%26 = 2 → c\n- 숫자: (char - '0' + 3) % 10 + '0'\n  8 → (8+3)%10 = 1 → 1\n- 공백: 그대로\n결과: Nd sc 1",
     "codeSnippet": "#include <stdio.h>\n#include <ctype.h>\nint main() {\n    char* p = \"It is 8\";\n    char result[100];\n    int i;\n    for (i = 0; p[i] != '\\0'; i++) {\n        if (isupper(p[i]))\n            result[i] = (p[i] - 'A' + 5) % 26 + 'A';\n        else if (islower(p[i]))\n            result[i] = (p[i] - 'a' + 10) % 26 + 'a';\n        else if (isdigit(p[i]))\n            result[i] = (p[i] - '0' + 3) % 10 + '0';\n        else\n            result[i] = p[i];\n    }\n    result[i] = '\\0';\n    printf(\"%s\", result);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "C언어",
-      "문자변환",
-      "시저암호",
-      "인코딩",
-      "2024년1회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-1_020",
     "categoryId": "exam-2024-1",
     "subcategory": "디자인패턴",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 1,
     "question": "구체적인 클래스에 의존하지 않고, 서로 관련되거나 의존적인 객체들의 집합(제품군)을 생성하기 위한 인터페이스를 제공하는 생성 디자인 패턴을 (____) 패턴이라고 한다. 괄호 안에 알맞은 용어를 작성하시오.",
     "answer": "Abstract Factory",
-    "explanation": "Abstract Factory(추상 팩토리) 패턴은 생성(Creational) 패턴 중 하나입니다.\n- 관련된 객체들의 집합(제품군)을 생성하는 인터페이스를 제공\n- 구체적인 클래스에 의존하지 않고 객체 생성\n- 제품군을 쉽게 교체 가능\n\n비교:\n- Factory Method: 하나의 객체 생성을 서브클래스에 위임\n- Abstract Factory: 관련된 객체 집합의 생성을 캡슐화\n- Builder: 복잡한 객체의 단계별 생성",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/476",
-    "tags": [
-      "디자인패턴",
-      "Abstract Factory",
-      "생성패턴",
-      "GoF",
-      "2024년1회"
-    ]
+    "explanation": "Abstract Factory(추상 팩토리) 패턴은 생성(Creational) 패턴 중 하나입니다.\n- 관련된 객체들의 집합(제품군)을 생성하는 인터페이스를 제공\n- 구체적인 클래스에 의존하지 않고 객체 생성\n- 제품군을 쉽게 교체 가능\n\n비교:\n- Factory Method: 하나의 객체 생성을 서브클래스에 위임\n- Abstract Factory: 관련된 객체 집합의 생성을 캡슐화\n- Builder: 복잡한 객체의 단계별 생성"
   }
 ]

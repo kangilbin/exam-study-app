@@ -4,435 +4,197 @@
     "categoryId": "exam-2023-3",
     "subcategory": "Java 다형성/오버라이딩",
     "type": "code",
-    "difficulty": 3,
-    "year": 2023,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 작성하시오.",
     "answer": "BDCDD",
     "explanation": "A b = new B()로 선언했으므로 실제 객체는 B입니다(다형성).\nb.paint() → B의 paint() 호출:\n  super.draw() → A의 draw() 호출 → \"B\" 출력 → draw() 호출 → B의 draw() 호출(동적 바인딩) → \"D\" 출력\n  System.out.print(\"C\") → \"C\" 출력\n  this.draw() → B의 draw() 호출 → \"D\" 출력\nb.draw() → B의 draw() 호출 → \"D\" 출력\n결과: BDCDD",
     "codeSnippet": "public class main{\n    public static void main(String[] args) {\n        A b = new B();\n        b.paint();\n        b.draw();\n    }\n}\n\nclass A {\n    public void paint() {\n        System.out.print(\"A\");\n        draw();\n    }\n    public void draw() {\n        System.out.print(\"B\");\n        draw();\n    }\n}\n\nclass B extends A {\n    public void paint() {\n        super.draw();\n        System.out.print(\"C\");\n        this.draw();\n    }\n    public void draw() {\n        System.out.print(\"D\");\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "Java",
-      "다형성",
-      "오버라이딩",
-      "상속",
-      "2023년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2023-3_002",
     "categoryId": "exam-2023-3",
     "subcategory": "인증 프로토콜",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 설명에 해당하는 용어를 보기에서 고르시오.\n- 사용자 자격증명 공유 없이 타사 애플리케이션에 데이터/리소스 접근 권한을 부여하는 개방형 표준 프로토콜\n- 사용자 데이터 제어를 유지하면서 접근 권한을 부여하며, 액세스 토큰을 사용하는 메커니즘\n- 애플리케이션이 사용자를 대신하여 리소스에 접근할 때 액세스 토큰을 수령\n- 사용자 자격증명 미노출, 클라우드/온라인마켓/금융서비스 등에서 사용\n- SNS 플랫폼(Facebook, Twitter, LinkedIn)에서 광범위하게 사용\n- 보안 강화, 개발 간소화, 사용자 편의성 제공\n\n[보기] NFT, JWT, SAML, accessToken, SSO, OIDC, Authentication, OAuth, Cookie, Refresh Token",
     "answer": "OAuth",
-    "explanation": "OAuth(Open Authorization)는 사용자 자격증명을 공유하지 않고도 타사 애플리케이션에 리소스 접근 권한을 부여하는 개방형 표준 프로토콜입니다.\n- 액세스 토큰 기반 인가(Authorization) 메커니즘\n- 비밀번호 공유 없이 제3자 앱이 사용자 리소스에 접근 가능\n- OAuth 2.0이 현재 표준으로 널리 사용됨\n- 유사 개념: SSO(통합 인증), SAML(보안 마크업), OIDC(OpenID Connect, OAuth 기반 인증 계층)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "보안",
-      "OAuth",
-      "인증",
-      "프로토콜",
-      "2023년3회"
-    ]
+    "explanation": "OAuth(Open Authorization)는 사용자 자격증명을 공유하지 않고도 타사 애플리케이션에 리소스 접근 권한을 부여하는 개방형 표준 프로토콜입니다.\n- 액세스 토큰 기반 인가(Authorization) 메커니즘\n- 비밀번호 공유 없이 제3자 앱이 사용자 리소스에 접근 가능\n- OAuth 2.0이 현재 표준으로 널리 사용됨\n- 유사 개념: SSO(통합 인증), SAML(보안 마크업), OIDC(OpenID Connect, OAuth 기반 인증 계층)"
   },
   {
     "id": "exam-2023-3_003",
     "categoryId": "exam-2023-3",
     "subcategory": "Linux 파일 권한",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "Linux에서 test.txt 파일에 대해 다음 권한을 설정하는 명령어의 빈칸을 채우시오.\n- 사용자(Owner): 읽기/쓰기/실행\n- 그룹(Group): 읽기/실행\n- 기타(Other): 실행\n\n(1) (2) test.txt",
     "answer": "(1) chmod (2) 751",
-    "explanation": "① chmod: 파일 권한을 변경하는 Linux 명령어(change mode)\n② 751: 각 자릿수는 읽기(4)+쓰기(2)+실행(1)의 합\n- 사용자: rwx = 4+2+1 = 7\n- 그룹: r-x = 4+0+1 = 5\n- 기타: --x = 0+0+1 = 1\n따라서 chmod 751 test.txt",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "Linux",
-      "chmod",
-      "파일권한",
-      "2023년3회"
-    ]
+    "explanation": "① chmod: 파일 권한을 변경하는 Linux 명령어(change mode)\n② 751: 각 자릿수는 읽기(4)+쓰기(2)+실행(1)의 합\n- 사용자: rwx = 4+2+1 = 7\n- 그룹: r-x = 4+0+1 = 5\n- 기타: --x = 0+0+1 = 1\n따라서 chmod 751 test.txt"
   },
   {
     "id": "exam-2023-3_004",
     "categoryId": "exam-2023-3",
     "subcategory": "C언어 완전수",
     "type": "code",
-    "difficulty": 3,
-    "year": 2023,
-    "round": 3,
     "question": "다음 C 코드의 출력값을 작성하시오.",
     "answer": "34",
     "explanation": "test(n) 함수는 n이 완전수(자기 자신을 제외한 약수의 합이 자기 자신과 같은 수)인지 판별합니다.\n2~100 사이의 완전수:\n- 6: 1+2+3 = 6 (완전수)\n- 28: 1+2+4+7+14 = 28 (완전수)\nsum = 6 + 28 = 34\n결과: 34",
     "codeSnippet": "#include <stdio.h>\n\nint test(int n) {\n    int i, sum = 0;\n    for (i = 1; i <= n / 2; i++){\n        if (n % i == 0)\n            sum += i;\n    }\n    if (n == sum)\n        return 1;\n    return 0;\n}\n\nint main(){\n    int i, sum = 0;\n    for (i = 2; i <= 100; i++){\n        if (test(i))\n            sum += i;\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "C언어",
-      "완전수",
-      "함수",
-      "약수",
-      "2023년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2023-3_005",
     "categoryId": "exam-2023-3",
     "subcategory": "C언어 구조체 포인터",
     "type": "code",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 C 코드에서 구조체 포인터를 통해 멤버에 접근할 때 사용하는 빈칸의 연산자를 작성하시오.",
     "answer": "->",
     "explanation": "구조체 포인터로 멤버에 접근할 때는 화살표 연산자(->)를 사용합니다.\n- d1은 구조체 변수이므로 점(.) 연산자 사용: d1.numPtr\n- d2는 구조체 포인터이므로 화살표(->) 연산자 사용: d2->numPtr\n- d2->numPtr은 (*d2).numPtr과 동일한 의미입니다.",
     "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Data {\n    char c;\n    int *numPtr;\n} Data;\n\nint main() {\n    int num = 10;\n    Data d1;\n    Data *d2 = malloc(sizeof(struct Data));\n\n    d1.numPtr = &num;\n    d2 ( 1 ) numPtr = &num;\n\n    printf(\"%d\\n\", *d1.numPtr);\n    printf(\"%d\\n\", *d2 ( 1 ) numPtr);\n    free(d2);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "C언어",
-      "구조체",
-      "포인터",
-      "화살표연산자",
-      "2023년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2023-3_006",
     "categoryId": "exam-2023-3",
     "subcategory": "SQL UNION",
     "type": "code",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 SQL문의 실행 결과를 작성하시오.\n\nT1 테이블 A컬럼: 3, 1, 4\nT2 테이블 A컬럼: 2, 4, 3",
     "answer": "4\n3\n2\n1",
     "explanation": "UNION은 두 SELECT 결과의 합집합을 구하며 중복을 제거합니다.\nT1의 A: {3, 1, 4}\nT2의 A: {2, 4, 3}\n합집합(중복 제거): {1, 2, 3, 4}\nORDER BY A DESC(내림차순): 4, 3, 2, 1\n\n참고: UNION ALL을 사용하면 중복을 제거하지 않습니다.",
-    "codeSnippet": "SELECT A FROM T1\nUNION\nSELECT A FROM T2\nORDER BY A DESC;",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "SQL",
-      "UNION",
-      "ORDER BY",
-      "집합연산",
-      "2023년3회"
-    ]
+    "codeSnippet": "SELECT A FROM T1\nUNION\nSELECT A FROM T2\nORDER BY A DESC;"
   },
   {
     "id": "exam-2023-3_007",
     "categoryId": "exam-2023-3",
     "subcategory": "접근통제 유형",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "서버 접근 통제 유형 3가지에 대한 설명이다. 각 빈칸에 알맞은 용어를 작성하시오.\n(1) 규칙 기반 접근통제로, 객체의 허용 등급과 주체의 접근 허가 권한에 기반하여 접근을 제한하는 방식\n(2) 중앙 관리자가 통제하며, 조직 내 역할(Role)에 기반하여 자원 접근을 제한하는 방식\n(3) 신분 기반 접근통제로, 주체나 그룹의 신분에 기반하여 객체 접근을 제한하는 방식",
     "answer": "(1) MAC (2) RBAC (3) DAC",
-    "explanation": "① MAC(Mandatory Access Control, 강제적 접근통제): 보안 등급(레이블) 기반, 관리자가 규칙 설정, 군사/정부기관에서 주로 사용\n② RBAC(Role-Based Access Control, 역할 기반 접근통제): 사용자의 역할에 따라 권한 부여, 중앙 관리자가 통제\n③ DAC(Discretionary Access Control, 임의적 접근통제): 객체 소유자가 접근 권한을 자율적으로 부여, 유연하지만 보안 약점 존재",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "보안",
-      "접근통제",
-      "MAC",
-      "RBAC",
-      "DAC",
-      "2023년3회"
-    ]
+    "explanation": "① MAC(Mandatory Access Control, 강제적 접근통제): 보안 등급(레이블) 기반, 관리자가 규칙 설정, 군사/정부기관에서 주로 사용\n② RBAC(Role-Based Access Control, 역할 기반 접근통제): 사용자의 역할에 따라 권한 부여, 중앙 관리자가 통제\n③ DAC(Discretionary Access Control, 임의적 접근통제): 객체 소유자가 접근 권한을 자율적으로 부여, 유연하지만 보안 약점 존재"
   },
   {
     "id": "exam-2023-3_008",
     "categoryId": "exam-2023-3",
     "subcategory": "C언어 재귀함수",
     "type": "code",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 C 코드의 출력값을 작성하시오.",
     "answer": "5040",
     "explanation": "f(n)은 팩토리얼을 구하는 재귀함수입니다.\nf(7) = 7 * f(6) = 7 * 6 * f(5) = ... = 7 * 6 * 5 * 4 * 3 * 2 * 1 = 5040\n\n재귀 과정:\nf(7) = 7 * f(6) = 7 * 720 = 5040\nf(6) = 6 * f(5) = 6 * 120 = 720\nf(5) = 5 * f(4) = 5 * 24 = 120\nf(4) = 4 * f(3) = 4 * 6 = 24\nf(3) = 3 * f(2) = 3 * 2 = 6\nf(2) = 2 * f(1) = 2 * 1 = 2\nf(1) = 1 (종료 조건)",
     "codeSnippet": "#include <stdio.h>\n\nint f(int n) {\n    if(n <= 1) return 1;\n    else return n * f(n - 1);\n}\n\nint main() {\n    printf(\"%d\", f(7));\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "C언어",
-      "재귀함수",
-      "팩토리얼",
-      "2023년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2023-3_009",
     "categoryId": "exam-2023-3",
     "subcategory": "네트워크 전송방식",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 설명에 해당하는 네트워크 기술을 작성하시오.\n- 자료를 일정한 크기로 정하여 순서대로 전송하는 데이터 전송 방식\n- 셀(Cell) 단위의 고정 길이 패킷을 사용하며, 처리가 단순하여 고속망에 적합\n- 가상채널 기반 연결 지향 서비스를 제공\n- 53바이트의 고정 길이 셀을 사용",
     "answer": "ATM",
-    "explanation": "ATM(Asynchronous Transfer Mode, 비동기 전송 모드)은 53바이트의 고정 길이 셀을 사용하는 데이터 전송 기술입니다.\n- 셀 구성: 5바이트 헤더 + 48바이트 페이로드 = 53바이트\n- 가상채널(VC)과 가상경로(VP) 기반 연결 지향\n- 고정 길이 셀로 처리가 단순하여 고속 데이터 전송에 적합\n- 음성, 데이터, 영상 등 다양한 서비스 통합 전송 가능",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "네트워크",
-      "ATM",
-      "비동기전송",
-      "셀",
-      "2023년3회"
-    ]
+    "explanation": "ATM(Asynchronous Transfer Mode, 비동기 전송 모드)은 53바이트의 고정 길이 셀을 사용하는 데이터 전송 기술입니다.\n- 셀 구성: 5바이트 헤더 + 48바이트 페이로드 = 53바이트\n- 가상채널(VC)과 가상경로(VP) 기반 연결 지향\n- 고정 길이 셀로 처리가 단순하여 고속 데이터 전송에 적합\n- 음성, 데이터, 영상 등 다양한 서비스 통합 전송 가능"
   },
   {
     "id": "exam-2023-3_010",
     "categoryId": "exam-2023-3",
     "subcategory": "C언어 포인터/문자열",
     "type": "code",
-    "difficulty": 3,
-    "year": 2023,
-    "round": 3,
     "question": "다음 C 코드의 출력 결과를 작성하시오.",
     "answer": "KOREA\nOREA\nK\nE\nO",
     "explanation": "char *p = \"KOREA\"에서 p는 문자열의 시작 주소를 가리킵니다.\nK(0) O(1) R(2) E(3) A(4) \\0(5)\n\n1) printf(\"%s\\n\", p) → p부터 끝까지 출력: KOREA\n2) printf(\"%s\\n\", p+1) → p+1부터 끝까지 출력: OREA\n3) printf(\"%c\\n\", *p) → p가 가리키는 문자: K\n4) printf(\"%c\\n\", *(p+3)) → p+3이 가리키는 문자: E\n5) printf(\"%c\\n\", *p+4) → *p는 'K'(ASCII 75), 75+4=79는 'O': O",
     "codeSnippet": "#include <stdio.h>\n\nint main() {\n    char* p = \"KOREA\";\n    printf(\"%s\\n\", p);\n    printf(\"%s\\n\", p+1);\n    printf(\"%c\\n\", *p);\n    printf(\"%c\\n\", *(p+3));\n    printf(\"%c\\n\", *p+4);\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "C언어",
-      "포인터",
-      "문자열",
-      "ASCII",
-      "2023년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2023-3_011",
     "categoryId": "exam-2023-3",
     "subcategory": "Java 재귀/오버라이딩",
     "type": "code",
-    "difficulty": 3,
-    "year": 2023,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 작성하시오.",
     "answer": "2",
     "explanation": "Parent obj = new Child()이므로 Child의 compute()가 호출됩니다.\nChild의 compute(num) = compute(num-1) + compute(num-3)\n\ncompute(7) = compute(6) + compute(4)\ncompute(6) = compute(5) + compute(3)\ncompute(5) = compute(4) + compute(2)\ncompute(4) = compute(3) + compute(1)\ncompute(3) = compute(2) + compute(0)\ncompute(2) = compute(1) + compute(-1)\ncompute(1) = 1, compute(0) = 0, compute(-1) = -1\n\ncompute(2) = 1 + (-1) = 0\ncompute(3) = 0 + 0 = 0\ncompute(4) = 0 + 1 = 1\ncompute(5) = 1 + 0 = 1\ncompute(6) = 1 + 0 = 1\ncompute(7) = 1 + 1 = 2\n결과: 2",
     "codeSnippet": "class Parent {\n    int compute(int num) {\n        if(num <= 1)\n            return num;\n        return compute(num - 1) + compute(num - 2);\n    }\n}\n\nclass Child extends Parent {\n    int compute(int num) {\n        if(num <= 1)\n            return num;\n        return compute(num - 1) + compute(num - 3);\n    }\n}\n\npublic class main {\n    public static void main(String args[]) {\n        Parent obj = new Child();\n        System.out.print(obj.compute(7));\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "Java",
-      "재귀함수",
-      "오버라이딩",
-      "상속",
-      "2023년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2023-3_012",
     "categoryId": "exam-2023-3",
     "subcategory": "네트워크 주소변환",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2023,
-    "round": 3,
     "question": "외부 공인 IP 주소와 포트를 내부 사설 IP 주소로 재기록하여 라우터를 통과하는 네트워크 트래픽을 전송하는 기술은 무엇인가?",
     "answer": "NAT",
-    "explanation": "NAT(Network Address Translation, 네트워크 주소 변환)는 사설 IP와 공인 IP를 상호 변환하는 기술입니다.\n- 사설 IP를 가진 내부 네트워크 장치가 외부 인터넷과 통신할 수 있게 해줌\n- 공인 IP 부족 문제를 해결하고 내부 네트워크를 외부로부터 보호\n- 라우터나 방화벽에서 주로 수행\n- 종류: Static NAT, Dynamic NAT, PAT(Port Address Translation)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "네트워크",
-      "NAT",
-      "IP주소",
-      "주소변환",
-      "2023년3회"
-    ]
+    "explanation": "NAT(Network Address Translation, 네트워크 주소 변환)는 사설 IP와 공인 IP를 상호 변환하는 기술입니다.\n- 사설 IP를 가진 내부 네트워크 장치가 외부 인터넷과 통신할 수 있게 해줌\n- 공인 IP 부족 문제를 해결하고 내부 네트워크를 외부로부터 보호\n- 라우터나 방화벽에서 주로 수행\n- 종류: Static NAT, Dynamic NAT, PAT(Port Address Translation)"
   },
   {
     "id": "exam-2023-3_013",
     "categoryId": "exam-2023-3",
     "subcategory": "Java 에러 분석",
     "type": "code",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 Java 코드에서 에러가 발생하는 라인 번호를 작성하시오.",
     "answer": "7",
     "explanation": "7번 라인에서 static 메서드인 get()이 인스턴스 변수 name에 접근하려고 하므로 컴파일 에러가 발생합니다.\n- static 메서드는 클래스 레벨에서 호출되므로 인스턴스 변수에 직접 접근할 수 없습니다.\n- name은 인스턴스 변수이므로 객체가 생성되어야 접근 가능합니다.\n- 해결 방법: name을 static으로 선언하거나, get() 메서드에서 static을 제거해야 합니다.",
     "codeSnippet": "1  class Person {\n2      private String name;\n3      public Person(String val) {\n4          name = val;\n5      }\n6      public static String get() {\n7          return name;\n8      }\n9      public void print() {\n10         System.out.println(name);\n11     }\n12 }\n13\n14 public class main {\n15     public static void main(String[] args) {\n16         Person obj = new Person(\"Kim\");\n17         obj.print();\n18     }\n19 }",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "Java",
-      "static",
-      "컴파일에러",
-      "인스턴스변수",
-      "2023년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2023-3_014",
     "categoryId": "exam-2023-3",
     "subcategory": "Python 입출력",
     "type": "code",
-    "difficulty": 1,
-    "year": 2023,
-    "round": 3,
     "question": "다음 Python 코드의 빈칸에 들어갈 메서드명을 작성하시오.\n입력값을 공백 기준으로 분리하여 두 변수에 저장하는 메서드입니다.",
     "answer": "split",
     "explanation": "split()은 문자열을 특정 구분자로 분리하여 리스트로 반환하는 메서드입니다.\n- input().split(): 입력값을 공백 기준으로 분리\n- input().split(','): 입력값을 쉼표 기준으로 분리\n- 기본 구분자는 공백(스페이스, 탭, 줄바꿈)\n- 예: \"10 20\".split() → ['10', '20']",
     "codeSnippet": "num1, num2 = input().(    )()\nnum1 = int(num1)\nnum2 = int(num2)\nprint(num1, num2)",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "Python",
-      "split",
-      "입출력",
-      "문자열",
-      "2023년3회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2023-3_015",
     "categoryId": "exam-2023-3",
     "subcategory": "UML 다이어그램",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음은 판매와 관련된 다이어그램이다. 해당 다이어그램의 명칭을 쓰시오",
     "imageUrl": "exam-2023-3_015.png",
     "answer": "패키지 다이어그램 또는 패키지",
-    "explanation": "패키지 다이어그램(Package Diagram)은 UML 구조 다이어그램의 하나로, 시스템의 요소들을 관련된 그룹으로 묶어 표현합니다.\n- 패키지는 폴더 모양의 기호로 표현\n- 패키지 간의 의존 관계를 점선 화살표로 표시\n- 시스템의 논리적 구조를 상위 수준에서 파악 가능\n- 대규모 시스템의 구조를 이해하기 쉽게 함",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "UML",
-      "패키지다이어그램",
-      "다이어그램",
-      "2023년3회"
-    ]
+    "explanation": "패키지 다이어그램(Package Diagram)은 UML 구조 다이어그램의 하나로, 시스템의 요소들을 관련된 그룹으로 묶어 표현합니다.\n- 패키지는 폴더 모양의 기호로 표현\n- 패키지 간의 의존 관계를 점선 화살표로 표시\n- 시스템의 논리적 구조를 상위 수준에서 파악 가능\n- 대규모 시스템의 구조를 이해하기 쉽게 함"
   },
   {
     "id": "exam-2023-3_016",
     "categoryId": "exam-2023-3",
     "subcategory": "소프트웨어 테스트",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 설명에 해당하는 테스트 기법을 보기에서 고르시오.\n- 입력/출력값이 특정 그룹으로 분류되고 그룹 내에서 동일하게 취급되는 시험 기법\n- 유사한 입력값은 동일한 결과를 낸다고 가정하여 테스트\n- 하나의 값이 분할 내 모든 값을 대표\n- 모든 입력값을 시험할 필요 없음, 경계값 분석과 함께 사용\n\n[보기]\nㄱ. Equivalence Partitioning  ㄴ. Statement Coverage  ㄷ. Boundary Value Analysis  ㄹ. Branch Coverage  ㅁ. Error Guessing  ㅂ. Condition Coverage  ㅅ. Cause Effect Graph",
     "answer": "ㄱ",
-    "explanation": "동치 분할(Equivalence Partitioning)은 블랙박스 테스트 기법으로, 입력 데이터를 유사한 결과를 내는 그룹(동치 클래스)으로 나누어 각 그룹에서 대표값을 선택하여 테스트합니다.\n- 유효 동치 클래스: 정상적인 입력값 그룹\n- 무효 동치 클래스: 비정상적인 입력값 그룹\n- 테스트 케이스 수를 줄이면서 효과적인 테스트 가능\n- 경계값 분석(Boundary Value Analysis)과 함께 자주 사용됨",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "테스트",
-      "동치분할",
-      "블랙박스테스트",
-      "2023년3회"
-    ]
+    "explanation": "동치 분할(Equivalence Partitioning)은 블랙박스 테스트 기법으로, 입력 데이터를 유사한 결과를 내는 그룹(동치 클래스)으로 나누어 각 그룹에서 대표값을 선택하여 테스트합니다.\n- 유효 동치 클래스: 정상적인 입력값 그룹\n- 무효 동치 클래스: 비정상적인 입력값 그룹\n- 테스트 케이스 수를 줄이면서 효과적인 테스트 가능\n- 경계값 분석(Boundary Value Analysis)과 함께 자주 사용됨"
   },
   {
     "id": "exam-2023-3_017",
     "categoryId": "exam-2023-3",
     "subcategory": "클라우드 서비스",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2023,
-    "round": 3,
     "question": "클라우드 컴퓨팅 서비스 유형 3가지를 작성하시오.\n(1) 서버, 스토리지, 네트워크 등 인프라를 서비스로 제공\n(2) 애플리케이션 개발/실행에 필요한 플랫폼을 서비스로 제공\n(3) 소프트웨어를 서비스로 제공하여 사용자가 별도 설치 없이 이용 \n\n[보기]\nㄱ.PaaS  ㄴ.SaaS ㄷ.IaaS",
     "answer": "(1) IaaS (2) PaaS (3) SaaS",
-    "explanation": "① IaaS(Infrastructure as a Service): 서버, 스토리지, 네트워크 등 IT 인프라를 가상화하여 제공 (예: AWS EC2, Azure VM)\n② PaaS(Platform as a Service): 애플리케이션 개발/배포에 필요한 플랫폼 제공 (예: Heroku, Google App Engine)\n③ SaaS(Software as a Service): 완성된 소프트웨어를 인터넷을 통해 제공 (예: Gmail, Google Docs, Salesforce)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "클라우드",
-      "IaaS",
-      "PaaS",
-      "SaaS",
-      "2023년3회"
-    ]
+    "explanation": "① IaaS(Infrastructure as a Service): 서버, 스토리지, 네트워크 등 IT 인프라를 가상화하여 제공 (예: AWS EC2, Azure VM)\n② PaaS(Platform as a Service): 애플리케이션 개발/배포에 필요한 플랫폼 제공 (예: Heroku, Google App Engine)\n③ SaaS(Software as a Service): 완성된 소프트웨어를 인터넷을 통해 제공 (예: Gmail, Google Docs, Salesforce)"
   },
   {
     "id": "exam-2023-3_018",
     "categoryId": "exam-2023-3",
     "subcategory": "라우팅 프로토콜",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "다음 설명에 해당하는 라우팅 프로토콜을 작성하시오.\n- 최소 Hop Count를 파악하여 라우팅하는 프로토콜\n- Distance Vector 방식의 다이나믹 라우팅 프로토콜\n- 최단 경로(가장 적은 Hop Count)를 선택\n- 최대 Hop Count는 15이며, IGP로 광범위하게 이용",
     "answer": "RIP",
-    "explanation": "RIP(Routing Information Protocol)는 거리 벡터(Distance Vector) 방식의 내부 라우팅 프로토콜입니다.\n- Hop Count(경유하는 라우터 수)를 메트릭으로 사용\n- 최대 Hop Count: 15 (16은 도달 불가)\n- 30초마다 라우팅 테이블 전체를 이웃 라우터에 브로드캐스트\n- 소규모 네트워크에 적합, 대규모에서는 수렴 속도가 느림\n- 비교: OSPF는 링크 상태(Link State) 방식, BGP는 외부 라우팅 프로토콜(EGP)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "네트워크",
-      "RIP",
-      "라우팅",
-      "거리벡터",
-      "2023년3회"
-    ]
+    "explanation": "RIP(Routing Information Protocol)는 거리 벡터(Distance Vector) 방식의 내부 라우팅 프로토콜입니다.\n- Hop Count(경유하는 라우터 수)를 메트릭으로 사용\n- 최대 Hop Count: 15 (16은 도달 불가)\n- 30초마다 라우팅 테이블 전체를 이웃 라우터에 브로드캐스트\n- 소규모 네트워크에 적합, 대규모에서는 수렴 속도가 느림\n- 비교: OSPF는 링크 상태(Link State) 방식, BGP는 외부 라우팅 프로토콜(EGP)"
   },
   {
     "id": "exam-2023-3_019",
     "categoryId": "exam-2023-3",
     "subcategory": "관계대수",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2023,
-    "round": 3,
     "question": "관계대수의 연산과 기호를 올바르게 매칭하시오.\n\n[연산]\n(1) Join  (2) Project  (3) Select  (4) Division\n\n[보기]\nㄱ. σ    ㄴ. π    ㄷ. ⋈    ㄹ. ÷",
     "answer": "(1) ㄷ (2) ㄴ (3) ㄱ (4) ㄹ",
-    "explanation": "(1) Join(조인) - ⋈: 두 릴레이션의 공통 속성을 기준으로 결합\n(2) Project(프로젝트) - π: 릴레이션에서 특정 속성(열)만 추출\n(3) Select(셀렉트) - σ: 릴레이션에서 조건을 만족하는 튜플(행) 추출\n(4) Division(디비전) - ÷: 릴레이션 R에서 S의 모든 튜플과 관련 있는 R의 튜플 추출\n\n참고: 순수 관계 연산자는 Select, Project, Join, Division이 있습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "데이터베이스",
-      "관계대수",
-      "Join",
-      "Select",
-      "Project",
-      "2023년3회"
-    ]
+    "explanation": "(1) Join(조인) - ⋈: 두 릴레이션의 공통 속성을 기준으로 결합\n(2) Project(프로젝트) - π: 릴레이션에서 특정 속성(열)만 추출\n(3) Select(셀렉트) - σ: 릴레이션에서 조건을 만족하는 튜플(행) 추출\n(4) Division(디비전) - ÷: 릴레이션 R에서 S의 모든 튜플과 관련 있는 R의 튜플 추출\n\n참고: 순수 관계 연산자는 Select, Project, Join, Division이 있습니다."
   },
   {
     "id": "exam-2023-3_020",
     "categoryId": "exam-2023-3",
     "subcategory": "데이터베이스 무결성",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2023,
-    "round": 3,
     "question": "다음 설명에 해당하는 데이터베이스 무결성 유형을 작성하시오.\n- 2개의 관련 있는 테이블 간의 일관성을 유지하는 것\n- 기본키와 외래키의 관계를 강제하는 것\n- 외래키 값은 반드시 부모 테이블의 기본키 또는 후보키 값으로 존재해야 함",
     "answer": "참조 무결성 또는 참조",
-    "explanation": "참조 무결성(Referential Integrity)은 외래키가 참조하는 값이 부모 테이블의 기본키에 반드시 존재해야 한다는 규칙입니다.\n\n데이터베이스 무결성 종류:\n- 개체 무결성: 기본키는 NULL이거나 중복될 수 없음\n- 참조 무결성: 외래키는 참조 테이블의 기본키 값이거나 NULL\n- 도메인 무결성: 속성값은 정의된 도메인 범위 내여야 함\n- 키 무결성: 릴레이션에 최소 하나의 키가 존재해야 함\n- NULL 무결성: 특정 속성은 NULL이 될 수 없음",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/453",
-    "tags": [
-      "데이터베이스",
-      "무결성",
-      "참조무결성",
-      "외래키",
-      "2023년3회"
-    ]
+    "explanation": "참조 무결성(Referential Integrity)은 외래키가 참조하는 값이 부모 테이블의 기본키에 반드시 존재해야 한다는 규칙입니다.\n\n데이터베이스 무결성 종류:\n- 개체 무결성: 기본키는 NULL이거나 중복될 수 없음\n- 참조 무결성: 외래키는 참조 테이블의 기본키 값이거나 NULL\n- 도메인 무결성: 속성값은 정의된 도메인 범위 내여야 함\n- 키 무결성: 릴레이션에 최소 하나의 키가 존재해야 함\n- NULL 무결성: 특정 속성은 NULL이 될 수 없음"
   }
 ]

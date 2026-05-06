@@ -6,12 +6,6 @@
 /** 문제 유형 */
 export type QuestionType = 'code' | 'theory' | 'sql';
 
-/** 난이도 */
-export type Difficulty = 1 | 2 | 3; // 1=하, 2=중, 3=상
-
-/** 문제 출처 */
-export type QuestionSource = 'pdf' | 'generated';
-
 /** 프로그래밍 언어 (코드 문제용) */
 export type CodeLanguage = 'c' | 'java' | 'python';
 
@@ -20,7 +14,6 @@ export type CategoryId =
   | 'code-c'
   | 'code-java'
   | 'code-python'
-  | 'code-common'
   | 'sql-dml'
   | 'exam-2022-3'
   | 'exam-2023-1'
@@ -59,29 +52,13 @@ export interface Question {
   categoryId: CategoryId;            // 대분류 카테고리
   subcategory: string;               // 소분류 (자유 형식)
   type: QuestionType;                // 문제 유형
-  difficulty: Difficulty;            // 난이도
-  year?: number;                     // 기출 연도
-  round?: number;                    // 기출 회차
-
-  // 공통 필드
   question: string;                  // 질문 텍스트 (마크다운 지원)
   answer: string;                    // 정답 텍스트
   explanation: string;               // 해설 (블러 처리 후 공개)
-
-  // 코드 문제 전용
   codeSnippet?: string;             // 코드 스니펫
   codeLanguage?: CodeLanguage;      // 코드 언어
-
-  // 이미지 문제 전용
   imageUrl?: string;                // 문제 이미지 경로 (테이블/다이어그램 등)
-
-  // 객관식 전용
   choices?: Choice[];                // 선택지 (없으면 단답형/서술형으로 암기 모드만)
-
-  // 메타데이터
-  source: QuestionSource;            // 출처
-  sourceFile?: string;               // 원본 PDF 파일명
-  tags: string[];                    // 검색/필터용 태그
 }
 
 /** 카테고리 엔티티 */

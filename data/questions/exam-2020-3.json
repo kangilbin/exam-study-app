@@ -4,398 +4,191 @@
     "categoryId": "exam-2020-3",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "소프트웨어 공학에서 복잡한 코드를 단순화하고 소스의 가독성을 높여 유지보수성을 향상시키는 기법을 무엇이라 하는가?",
     "answer": "리팩토링",
-    "explanation": "리팩토링은 외부 동작을 변경하지 않으면서 내부 코드를 개선하는 기법입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "리팩토링",
-      "소프트웨어공학",
-      "2020년3회"
-    ]
+    "explanation": "리팩토링은 외부 동작을 변경하지 않으면서 내부 코드를 개선하는 기법입니다."
   },
   {
     "id": "exam-2020-3_002",
     "categoryId": "exam-2020-3",
     "subcategory": "C언어 반복문",
     "type": "code",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
     "answer": "0",
     "explanation": "c가 0으로 초기화되어 있으므로 c*=i는 항상 0이 됩니다. (0 * 어떤 수 = 0)",
     "codeSnippet": "#include <stdio.h>\nvoid main(){\n    int i=0, c=0;\n    while(i<10){\n        i++;\n        c*=i;\n    }\n    printf(\"%d\",c);\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "C언어",
-      "반복문",
-      "2020년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2020-3_003",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "다익스트라 알고리즘을 이용한 대규모 네트워크에 적합한 링크 상태 라우팅 프로토콜은?",
     "answer": "OSPF",
-    "explanation": "OSPF는 내부 라우팅 프로토콜로, 다익스트라 알고리즘을 사용하며 홉 카운트에 제한이 없습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "OSPF",
-      "라우팅",
-      "네트워크",
-      "2020년3회"
-    ]
+    "explanation": "OSPF는 내부 라우팅 프로토콜로, 다익스트라 알고리즘을 사용하며 홉 카운트에 제한이 없습니다."
   },
   {
     "id": "exam-2020-3_004",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "형상 관리 항목의 버전 관리를 위해 변경 사항을 검토, 승인하여 현재의 베이스라인(Baseline)에 반영될 수 있도록 변경 여부와 변경 활동을 통제하는 활동을 무엇이라 하는가?",
     "answer": "형상 통제",
-    "explanation": "형상 관리 절차: 형상 식별 → 형상 통제 → 형상 감사 → 형상 기록\n\n형상 식별 - 형상 관리 대상을 정의 및 식별하는 활동\n형상 통제 - 형상 항목의 버전 관리를 위한 형상통제위원회 운영\n형상 감사 - 소프트웨어 베이스라인의 무결성 평가\n형상 기록 - 소프트웨어 현상 및 변경관리에 대한 각종 수행결과를 기록",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "형상관리",
-      "형상통제",
-      "2020년3회"
-    ]
+    "explanation": "형상 관리 절차: 형상 식별 → 형상 통제 → 형상 감사 → 형상 기록\n\n형상 식별 - 형상 관리 대상을 정의 및 식별하는 활동\n형상 통제 - 형상 항목의 버전 관리를 위한 형상통제위원회 운영\n형상 감사 - 소프트웨어 베이스라인의 무결성 평가\n형상 기록 - 소프트웨어 현상 및 변경관리에 대한 각종 수행결과를 기록"
   },
   {
     "id": "exam-2020-3_005",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "심리학자 톰 마릴은 컴퓨터가 메세지를 전달하고, 메세지가 제대로 도착했는지 확인하며, 도착하지 않았을 경우 메세지를 재전송하는 일련의 방법을 '기술적 은어'를 뜻하는 (      )이라는 용어로 정의했다. 괄호 (    ) 안에 들어갈 용어를 쓰시오.",
     "answer": "프로토콜",
-    "explanation": "프로토콜은 서로 다른 시스템이나 기기들 간의 데이터 교환을 위한 표준화된 통신규약입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "프로토콜",
-      "네트워크",
-      "2020년3회"
-    ]
+    "explanation": "프로토콜은 서로 다른 시스템이나 기기들 간의 데이터 교환을 위한 표준화된 통신규약입니다."
   },
   {
     "id": "exam-2020-3_006",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "TCP/IP에서 오류가 발생하면 ( ) 메시지를 보내서 오류가 발생했음을 알린다. 빈칸에 들어갈 프로토콜은?",
     "answer": "ICMP ",
-    "explanation": "ICMP(Internet Control Message Protocol)는 IP 패킷 처리 시 발생하는 문제를 알려주는 프로토콜로, 8바이트 헤더와 가변 길이 데이터로 구성됩니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "ICMP",
-      "네트워크",
-      "2020년3회"
-    ]
+    "explanation": "ICMP(Internet Control Message Protocol)는 IP 패킷 처리 시 발생하는 문제를 알려주는 프로토콜로, 8바이트 헤더와 가변 길이 데이터로 구성됩니다."
   },
   {
     "id": "exam-2020-3_007",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 3,
-    "year": 2020,
-    "round": 3,
     "question": "다음 아래 제어 흐름 그래프가 분기 커버리지를 만족하기 위한 테스팅 순서를 쓰시오.",
     "imageUrl": "exam-2020-3_007.png",
     "answer": "1234561, 124567 또는 1234567, 124561",
-    "explanation": "결정 커버리지(분기 커버리지)는 모든 조건식이 적어도 한 번은 참과 거짓의 결과를 수행해야 합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "분기커버리지",
-      "테스트",
-      "2020년3회"
-    ]
+    "explanation": "결정 커버리지(분기 커버리지)는 모든 조건식이 적어도 한 번은 참과 거짓의 결과를 수행해야 합니다."
   },
   {
     "id": "exam-2020-3_008",
     "categoryId": "exam-2020-3",
     "subcategory": "SQL GROUP BY",
     "type": "sql",
-    "difficulty": 3,
-    "year": 2020,
-    "round": 3,
     "question": "다음 조건을 만족하면서, 과목별 점수의 평균이 90이 상인 과목이름, 최소점수, 최대점수를 구하는 SQL문을 작성하시오. \n\n- 대소문자를 구분하지 않는다.\n- WHERE 구분을 사용하지 않는다.\n- GROUP BY, HAVING구문을 반드시 사용한다.\n- 세미콜론(;)은 생략 가능하다.\n- 별칭(AS)을 사용해야 한다.",
     "imageUrl": "exam-2020-3_008.png",
     "answer": "SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름 HAVING AVG(점수) >= 90;",
-    "explanation": "GROUP BY로 그룹화 후 HAVING으로 그룹 조건을 필터링합니다. WHERE는 그룹화 전, HAVING은 그룹화 후 조건입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "SQL",
-      "GROUP BY",
-      "HAVING",
-      "집계함수",
-      "2020년3회"
-    ]
+    "explanation": "GROUP BY로 그룹화 후 HAVING으로 그룹 조건을 필터링합니다. WHERE는 그룹화 전, HAVING은 그룹화 후 조건입니다."
   },
   {
     "id": "exam-2020-3_009",
     "categoryId": "exam-2020-3",
     "subcategory": "SQL DELETE",
     "type": "sql",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "학생 테이블에서 이름이 '민수'인 튜플을 삭제하는 SQL문을 작성하시오.",
     "imageUrl": "exam-2020-3_009.png",
     "answer": "DELETE FROM 학생 WHERE 이름 = '민수';",
-    "explanation": "DELETE문은 조건에 맞는 행(튜플)을 삭제합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "SQL",
-      "DELETE",
-      "2020년3회"
-    ]
+    "explanation": "DELETE문은 조건에 맞는 행(튜플)을 삭제합니다."
   },
   {
     "id": "exam-2020-3_010",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "릴레이션 B 조건에 맞는 것들만 릴레이션 A에서 튜플을 꺼내 프로젝션하는 관계 대수의 기호는?\n\n[보기]\n ㄱ.σ   ㄴ.π   ㄷ.⋈   ㄹ.÷",
     "answer": "÷",
-    "explanation": "순수관계연산자: 셀렉트(σ), 프로젝트(π), 조인(⋈), 디비전(÷)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "관계대수",
-      "디비전",
-      "DB",
-      "2020년3회"
-    ]
+    "explanation": "순수관계연산자: 셀렉트(σ), 프로젝트(π), 조인(⋈), 디비전(÷)"
   },
   {
     "id": "exam-2020-3_011",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "식별자 표기 시 접두어에 자료형을 붙이는 표기법은?",
     "answer": "헝가리안 표기법 또는 헝가리안",
-    "explanation": "카멜(goodMan), 파스칼(GoodMan), 스네이크(good_man), 헝가리안(szGoodMan - sz는 String Zero)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "표기법",
-      "헝가리안",
-      "2020년3회"
-    ]
+    "explanation": "카멜(goodMan), 파스칼(GoodMan), 스네이크(good_man), 헝가리안(szGoodMan - sz는 String Zero)"
   },
   {
     "id": "exam-2020-3_012",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "동치분할 테스트, 경계값 분석 테스트 등의 종류가 있는 테스트 기법은?",
     "answer": "블랙박스 테스트 또는 블랙박스",
-    "explanation": "블랙박스 테스트는 소프트웨어의 내부 구조를 모르는 상태에서 기능을 테스트하는 기법입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "블랙박스",
-      "테스트",
-      "2020년3회"
-    ]
+    "explanation": "블랙박스 테스트는 소프트웨어의 내부 구조를 모르는 상태에서 기능을 테스트하는 기법입니다."
   },
   {
     "id": "exam-2020-3_013",
     "categoryId": "exam-2020-3",
     "subcategory": "C언어 함수호출",
     "type": "code",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
     "answer": "234",
     "explanation": "r100() = 200 + r10() = 200 + 30 + r1() = 200 + 30 + 4 = 234",
     "codeSnippet": "#include <stdio.h>\nint r1(){ return 4; }\nint r10(){ return (30+r1()); }\nint r100(){ return (200+r10()); }\nint main(){\n    printf(\"%d\\n\", r100());\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "C언어",
-      "함수호출",
-      "2020년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2020-3_014",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "데이터베이스의 전체적인 구조와 거동에 관한 기술이며, 데이터 객체의 성질, 이들 간의 관계, 그리고 데이터가 지켜야 할 제약 조건에 대한 정의를 총칭하는 용어를 쓰시오.",
     "answer": "스키마 또는 DB스키마",
-    "explanation": "스키마는 데이터베이스의 논리적 설계를 나타내는 구조입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "스키마",
-      "DB",
-      "2020년3회"
-    ]
+    "explanation": "스키마는 데이터베이스의 논리적 설계를 나타내는 구조입니다."
   },
   {
     "id": "exam-2020-3_015",
     "categoryId": "exam-2020-3",
     "subcategory": "Java 추상클래스",
     "type": "code",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오. (Vehicle obj = new Car(\"Spark\"); obj.getName();)",
     "answer": "Vehicle name:Spark",
     "explanation": "Car 생성자에서 setName(\"Spark\") 호출. obj.getName()은 매개변수 없는 Vehicle의 getName() 호출.",
     "codeSnippet": "abstract class Vehicle {\n    private String name;\n    abstract public String getName(String val);\n    public String getName(){\n        return \"Vehicle name:\" + name;\n    }\n    public void setName(String val){ name = val; }\n}\nclass Car extends Vehicle {\n    public Car(String val){ setName(val); }\n    public String getName(String val){\n        return \"Car name:\" + val;\n    }\n}\npublic class Main {\n    public static void main(String[] args){\n        Vehicle obj = new Car(\"Spark\");\n        System.out.print(obj.getName());\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "Java",
-      "추상클래스",
-      "오버로딩",
-      "2020년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2020-3_016",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/UI",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "UI 설계 원칙 중 하나로, 누구나 별다른 설명 없이도 쉽게 이해하고 사용할 수 있어야 하며, 쉬운 검색과 일관성 등을 부특성으로 가지는 원칙은 무엇인가?",
     "answer": "직관성",
-    "explanation": "직관성은 쉬운 검색, 쉬운 사용성, 일관성 등의 부특성을 가집니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "UI",
-      "직관성",
-      "2020년3회"
-    ]
+    "explanation": "직관성은 쉬운 검색, 쉬운 사용성, 일관성 등의 부특성을 가집니다."
   },
   {
     "id": "exam-2020-3_017",
     "categoryId": "exam-2020-3",
     "subcategory": "Java 반복문",
     "type": "code",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오. (짝수만 누적 합산)",
     "answer": "30",
     "explanation": "i가 홀수일 때 continue로 건너뛰므로 짝수(2+4+6+8+10)만 합산 = 30",
     "codeSnippet": "public class Main {\n    public static void main(String[] args){\n        int i=0, sum=0;\n        while(i<10){\n            i++;\n            if(i%2==1) continue;\n            sum += i;\n        }\n        System.out.println(sum);\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "Java",
-      "반복문",
-      "continue",
-      "2020년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2020-3_018",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2020,
-    "round": 3,
     "question": "EAI 유형에는 메시지 버스, 하이브리드 외 2가지를 쓰시오.(한글 작성)",
     "answer": "포인트 투 포인트, 허브 앤 스포크",
-    "explanation": "EAI 유형: 포인트 투 포인트(1:1 통합), 허브 앤 스포크(중앙 집중), 메시지 버스(미들웨어), 하이브리드(혼합)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "EAI",
-      "소프트웨어공학",
-      "2020년3회"
-    ]
+    "explanation": "EAI 유형: 포인트 투 포인트(1:1 통합), 허브 앤 스포크(중앙 집중), 메시지 버스(미들웨어), 하이브리드(혼합)"
   },
   {
     "id": "exam-2020-3_019",
     "categoryId": "exam-2020-3",
     "subcategory": "이론/프로그래밍",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "객체 지향 프로그래밍에서 객체 생성 시 자동으로 호출되어 객체의 초기화를 담당하는 특수한 메서드를 무엇이라 하는가?",
     "answer": "생성자 또는 Constructor",
-    "explanation": "생성자는 클래스명과 동일한 이름을 가지며 반환형이 없습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "생성자",
-      "C++",
-      "2020년3회"
-    ]
+    "explanation": "생성자는 클래스명과 동일한 이름을 가지며 반환형이 없습니다."
   },
   {
     "id": "exam-2020-3_020",
     "categoryId": "exam-2020-3",
     "subcategory": "SQL ALTER",
     "type": "sql",
-    "difficulty": 1,
-    "year": 2020,
-    "round": 3,
     "question": "학생 테이블에 주소 속성을 추가하는 SQL문의 빈칸 (1), (2)를 채우시오.",
     "answer": "1. ALTER  2. ADD",
     "explanation": "ALTER TABLE은 테이블 구조를 변경하는 DDL 명령어이며, ADD는 컬럼을 추가합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/194",
-    "tags": [
-      "SQL",
-      "ALTER",
-      "DDL",
-      "2020년3회"
-    ],
     "codeSnippet": "( 1 ) TABLE 학생 ( 2 ) 주소 VARCHAR(20);"
   }
 ]

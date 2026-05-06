@@ -16,7 +16,6 @@ const questionFiles: Record<string, Question[]> = {
   'code-c': require('@/data/questions/code-c.json'),
   'code-java': require('@/data/questions/code-java.json'),
   'code-python': require('@/data/questions/code-python.json'),
-  'code-common': require('@/data/questions/code-common.json'),
   'sql-dml': require('@/data/questions/sql-dml.json'),
   'exam-2020-1': require('@/data/questions/exam-2020-1.json'),
   'exam-2020-2': require('@/data/questions/exam-2020-2.json'),

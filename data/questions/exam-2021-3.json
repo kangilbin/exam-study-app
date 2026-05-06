@@ -4,259 +4,124 @@
     "categoryId": "exam-2021-3",
     "subcategory": "Java 싱글톤",
     "type": "code",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오. (Connection 싱글톤 패턴)",
     "answer": "3",
     "explanation": "싱글톤 패턴으로 conn1,conn2,conn3 모두 같은 인스턴스. count()를 3번 호출하여 count=3",
     "codeSnippet": "class Connection {\n    private static Connection _inst = null;\n    private int count = 0;\n    static public Connection get() {\n        if(_inst == null) _inst = new Connection();\n        return _inst;\n    }\n    public void count() { count++; }\n    public int getCount() { return count; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Connection conn1 = Connection.get();\n        conn1.count();\n        Connection conn2 = Connection.get();\n        conn2.count();\n        Connection conn3 = Connection.get();\n        conn3.count();\n        System.out.print(conn1.getCount());\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "Java",
-      "싱글톤",
-      "디자인패턴",
-      "2021년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2021-3_002",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/보안",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "AAA에서 (1)사용자 신원 검증, (2)권한/서비스 허용, (3)자원 사용 정보 수집은? \n\n[보기]\nㄱ.Authorization    ㄴ.Accounting    ㄷ. Authentication    ㄹ. Application  ㅁ.Availability   ㅂ.Accountability",
     "answer": "1. Authentication  2. Authorization  3. Accounting",
-    "explanation": "AAA: 인증(Authentication), 인가(Authorization), 계정(Accounting)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "AAA",
-      "보안",
-      "인증",
-      "2021년3회"
-    ]
+    "explanation": "AAA: 인증(Authentication), 인가(Authorization), 계정(Accounting)"
   },
   {
     "id": "exam-2021-3_003",
     "categoryId": "exam-2021-3",
     "subcategory": "SQL DCL",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "데이터베이스 관리자가 사용자에게 특정 데이터베이스 객체에 대한 접근 권한이나 시스템 권한(객체 생성, DBA 권한 등)을 부여하기 위해 사용하는 제어어(DCL)를 쓰시오.",
     "answer": "GRANT",
-    "explanation": "Grant: 권한 부여, Revoke: 권한 회수. 둘 다 DCL(Data Control Language)입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "Grant",
-      "DCL",
-      "SQL",
-      "2021년3회"
-    ]
+    "explanation": "Grant: 권한 부여, Revoke: 권한 회수. 둘 다 DCL(Data Control Language)입니다."
   },
   {
     "id": "exam-2021-3_004",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/보안",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 중, 설명에 대한 괄호 안에 들어가는 내용에 대해 작성하시오.\n( ) 스푸핑은 근거리 통신망 하에서 ( ) 메시지를 이용하여 상대방의 데이터 패킷을 중간에서 가로채는 중간자 공격 기법이다. 이 공격은 데이터 링크 상의 프로토콜인 (  )를 이용하기 때문에 근거리상의 통신에서만 사용할 수 있는 공격이다.",
     "answer": "ARP",
-    "explanation": "ARP 스푸핑은 ARP 프로토콜을 이용한 근거리 통신 공격입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "ARP스푸핑",
-      "보안",
-      "2021년3회"
-    ]
+    "explanation": "ARP 스푸핑은 ARP 프로토콜을 이용한 근거리 통신 공격입니다."
   },
   {
     "id": "exam-2021-3_005",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다른 모듈의 내부 논리 조직을 제어하기 위해 제어 신호를 이용하여 통신하는 결합도를 영문으로 쓰시오.",
     "answer": "Control Coupling 또는 control",
-    "explanation": "결합도(강→약): Content > Common > External > Control > Stamp > Data",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "결합도",
-      "제어결합도",
-      "2021년3회"
-    ]
+    "explanation": "결합도(강→약): Content > Common > External > Control > Stamp > Data"
   },
   {
     "id": "exam-2021-3_006",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "OSI 7계층에서 (1)오류/흐름 관리, (2)목적지까지 전달, (3)데이터 압축 해제하는 계층은?",
     "answer": "1. 데이터링크  2. 네트워크  3. 표현",
-    "explanation": "데이터링크: 프레임 전송, 오류/흐름 제어\n네트워크: 경로 선택, 패킷 전달\n표현: 인코딩/디코딩, 암호화",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "OSI7계층",
-      "네트워크",
-      "2021년3회"
-    ]
+    "explanation": "데이터링크: 프레임 전송, 오류/흐름 제어\n네트워크: 경로 선택, 패킷 전달\n표현: 인코딩/디코딩, 암호화"
   },
   {
     "id": "exam-2021-3_007",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/UML",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 중, 설명에 대한 괄호 ( ) 안에 들어갈 알맞는 보기를 고르시오.\n눈에 보이지 않는 것을 개념적으로 표현하는 것이 '추상화'라하며,\n이는 실세계의 복잡한 상황을 간결하고 명확하게 개념화(槪念化)하는 것이다.\n\n(  1  )은 클래스들 사이의 전체 또는 부분 같은 관계를 나타내는 것이고,\n(  2  )은 한 클래스가 다른 클래스를 포함하는 상위 개념일 때 IS-A관계라하며, 일반화 관계로 모델링한다.\n\n  \n\n[보기]\nㄱ.Encapsulation    ㄴ.Generalization    ㄷ.Polymorphism    ㄹ.Aggregation   ㅁ.Specialization   ㅂ.Association",
     "answer": "1. Aggregation  2. Generalization",
-    "explanation": "집합(Aggregation): 전체-부분 관계, 일반화(Generalization): 상속 관계(IS-A)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "UML",
-      "클래스다이어그램",
-      "2021년3회"
-    ]
+    "explanation": "집합(Aggregation): 전체-부분 관계, 일반화(Generalization): 상속 관계(IS-A)"
   },
   {
     "id": "exam-2021-3_008",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 3,
     "question": "테스트케이스 구성요소에서 ()안에 들어갈 알맞는 보기를 고르시오. \n\n[보기]\nㄱ. 테스트 조건 ㄴ. 테스트 환경 ㄷ. 테스트 유형 ㄹ. 테스트 데이터 ㅁ. 예상 결과 ㅂ. 수행 단계 ㅅ. 성공/실패 기준",
     "imageUrl": "exam-2025-3_019.png",
     "answer": "1. 테스트 조건  2. 테스트 데이터  3. 예상 결과",
-    "explanation": "테스트 케이스: 입력값, 조건, 예상 결과의 세트입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "테스트케이스",
-      "2021년3회"
-    ]
+    "explanation": "테스트 케이스: 입력값, 조건, 예상 결과의 세트입니다."
   },
   {
     "id": "exam-2021-3_009",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 중, 설명에 대한 괄호 ( ) 안에 들어갈 알맞는 보기를 고르시오.\n\n(  ) 통해 요구사항 명세를 입력 조건과 출력 조건 간의 논리적 관계로 표현하고, \n이를 기반으로 테스트케이스를 도출한다.\n(  )의 ‘원인(causes)’은 입력 조건을 의미하고 ‘결과(effects)’는 입력 조건의 결과를 의미하며,\n원인과 결과 간의 논리적 관계를 AND, OR, NOT 같은 boolean 연산자를 사용하여 표현한다. \n\n[보기]\nㄱ. Equivalence Partitioning  ㄴ. Statement Coverage  ㄷ. Boundary Value Analysis  ㄹ. Branch Coverage  ㅁ. Error Guessing  ㅂ. Condition Coverage  ㅅ. Cause Effect Graph",
     "answer": "Cause Effect Graph",
-    "explanation": "블랙박스 테스트 기법 중 하나로, 입력 조건과 출력 간의 논리적 관계를 분석합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "원인결과그래프",
-      "블랙박스",
-      "2021년3회"
-    ]
+    "explanation": "블랙박스 테스트 기법 중 하나로, 입력 조건과 출력 간의 논리적 관계를 분석합니다."
   },
   {
     "id": "exam-2021-3_010",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/보안",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 중, 설명에 대한 괄호 ( ) 안에 들어갈 알맞는 보기를 고르시오.\n\n(   )는 블록 암호의 일종으로, 미국 NBS (National Bureau of Standards, 현재 NIST)에서 국가 표준으로 정한 암호이다. \n(   )는 64비트 평문을 64비트 암호문으로 암호화하는 대칭키 암호 알고리즘이다.\n(   )의 키는 7비트마다 오류검출을 위한 정보가 1비트씩 들어가기 때문에 실질적으로는 56비트이다.",
     "answer": "DES",
-    "explanation": "DES는 64비트 블록 암호로 실질적 키는 56비트. AES로 대체되었습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "DES",
-      "암호화",
-      "보안",
-      "2021년3회"
-    ]
+    "explanation": "DES는 64비트 블록 암호로 실질적 키는 56비트. AES로 대체되었습니다."
   },
   {
     "id": "exam-2021-3_011",
     "categoryId": "exam-2021-3",
     "subcategory": "Java 비트연산",
     "type": "code",
-    "difficulty": 3,
-    "year": 2021,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오.",
     "answer": "7",
     "explanation": "조건식에서 비트연산자 사용. else문 실행 → a=c+d=3+5=8, 7==c는 false, d!=a(8)은 true → XOR → true → a(8) 출력이 아닌 else → d(5) 출력... 최종 7",
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        int a=3, b=4, c=3, d=5;\n        if((a==2|a==c)&!(c>d)&(1==b^c!=d)){\n            a=b+c;\n            if(7==b^c!=a) System.out.println(a);\n            else System.out.println(b);\n        }else{\n            a=c+d;\n            if(7==c^d!=a) System.out.println(a);\n            else System.out.println(d);\n        }\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "Java",
-      "비트연산",
-      "조건문",
-      "2021년3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2021-3_012",
     "categoryId": "exam-2021-3",
     "subcategory": "C언어 포인터배열",
     "type": "code",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
     "answer": "37",
     "explanation": "*arr[1]=24, **arr=*arr[0]=12, 12+1=13. 24+13=37",
     "codeSnippet": "#include <stdio.h>\nint main(){\n    int *arr[3];\n    int a=12, b=24, c=36;\n    arr[0]=&a; arr[1]=&b; arr[2]=&c;\n    printf(\"%d\\n\", *arr[1] + **arr + 1);\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "C언어",
-      "포인터",
-      "배열",
-      "2021년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2021-3_013",
     "categoryId": "exam-2021-3",
     "subcategory": "SQL 결과값",
     "type": "sql",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음 테이블에서 쿼리 실행 결과를 구하시오.",
     "answer": "4",
     "explanation": "조건에 맞는 행의 수를 구하는 문제입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "SQL",
-      "SQL 결과값",
-      "2021년3회"
-    ],
     "codeSnippet": "[A 테이블]\n CODE | NAME\n ------+------\n 3258  |  smith\n 4324  |  allen\n 5432  |  scott\n\n[B 테이블]\n  NO  | RULE\n------+------\n  12   |   s%\n  32   |  %t%\n\nSELECT COUNT(*) FROM T1 A CROSS JOIN T2 B WHERE A.NAME LIKE B.RULE;"
   },
   {
@@ -264,139 +129,66 @@
     "categoryId": "exam-2021-3",
     "subcategory": "Python 비교연산",
     "type": "code",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 3,
     "question": "다음 파이썬 코드의 출력 결과를 쓰시오.\na,b = 100, 200\nprint(a==b)",
     "answer": "False",
     "explanation": "100 != 200이므로 False. Python에서 boolean 출력 시 첫 글자 대문자입니다.",
     "codeSnippet": "a, b = 100, 200\nprint(a==b)",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "Python",
-      "비교연산",
-      "2021년3회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2021-3_015",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/UML",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 3,
     "question": "다음 중, 설명에 대한 괄호 ( ) 안에 들어갈 알맞는 답을 작성하시오.\n\n( ) 다이어그램은 문제 해결을 위한 도메인 구조를 나타내어 보이지 않는 도메인 안의 개념과\n같은 추상적인 개념을 기술하기 위해 나타낸 것이다.\n또한 소프트웨어의 설계 혹은 완성된 소프트웨어의 구현 설명을 목적으로 사용할 수 있다.\n( ) 다이어그램의 형식은 ( )를 포함하여 속성(attribute)과 메서드(method)가 있다.",
     "answer": "클래스",
-    "explanation": "클래스 다이어그램은 시스템의 정적인 구조를 나타내는 UML 구조 다이어그램입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "UML",
-      "클래스다이어그램",
-      "2021년3회"
-    ]
+    "explanation": "클래스 다이어그램은 시스템의 정적인 구조를 나타내는 UML 구조 다이어그램입니다."
   },
   {
     "id": "exam-2021-3_016",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/디자인패턴",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "부모 클래스에 알려지지 않은 구체 클래스를 생성하며, 자식 클래스가 어떤 객체를 생성할지 결정하는 패턴은?",
     "answer": "Factory Method 또는 팩토리 메서드",
-    "explanation": "팩토리 메서드 패턴은 객체 생성을 서브클래스에 위임하는 생성 패턴입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "팩토리메서드",
-      "디자인패턴",
-      "2021년3회"
-    ]
+    "explanation": "팩토리 메서드 패턴은 객체 생성을 서브클래스에 위임하는 생성 패턴입니다."
   },
   {
     "id": "exam-2021-3_017",
     "categoryId": "exam-2021-3",
     "subcategory": "C언어 구조체포인터",
     "type": "code",
-    "difficulty": 3,
-    "year": 2021,
-    "round": 3,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
     "answer": "501",
     "explanation": "(p+1)->hab=84+75=159, (p+1)->hhab=159+95+88=342, 159+342=501",
     "codeSnippet": "#include <stdio.h>\nstruct jsu {\n    char name[12];\n    int os, db, hab, hhab;\n};\nint main(){\n    struct jsu st[3] = {{\"데이터1\",95,88},{\"데이터2\",84,91},{\"데이터3\",86,75}};\n    struct jsu* p = &st[0];\n    (p+1)->hab = (p+1)->os + (p+2)->db;\n    (p+1)->hhab = (p+1)->hab + p->os + p->db;\n    printf(\"%d\\n\", (p+1)->hab + (p+1)->hhab);\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "C언어",
-      "구조체",
-      "포인터",
-      "2021년3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2021-3_018",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 3,
     "question": "다음은, 파일 구조(File Structures)에 대한 설명이다. 괄호 ( ) 안에 들어갈 알맞는 답을 작성하시오.\n\n파일구조는 파일을 구성하는 레코드들이 보조기억장치에 편성되는 방식으로 접근 방식에 따라 방식이 달라진다.\n접근 방법중, 레코드들을 키-값 순으로 정렬하여 기록하고, 레코드의 키 항목만을 모은 (  )을 구성하여 편성하는 방식이 있으며, 레코드를 참조할 때는 (   ) 이 가르키는 주소를 사용하여 직접 참조할 수 있다. 파일 구조에는 순차 접근, (  ) 접근,  해싱 접근이 있다.",
     "answer": "인덱스 또눈 index",
-    "explanation": "파일 접근 방식: 순차 접근, 인덱스 접근, 해싱 접근",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "인덱스",
-      "파일구조",
-      "DB",
-      "2021년3회"
-    ]
+    "explanation": "파일 접근 방식: 순차 접근, 인덱스 접근, 해싱 접근"
   },
   {
     "id": "exam-2021-3_019",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/UI",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 3,
     "question": "그래픽을 통해 컴퓨터와 정보를 교환하는 환경으로, 마우스 등으로 아이콘을 클릭하여 작업하는 방식의 영문 약어는?",
     "answer": "GUI",
-    "explanation": "GUI(Graphical User Interface): 그래픽 기반 사용자 인터페이스. CLI(Command Line Interface)와 대비됩니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "GUI",
-      "UI",
-      "2021년3회"
-    ]
+    "explanation": "GUI(Graphical User Interface): 그래픽 기반 사용자 인터페이스. CLI(Command Line Interface)와 대비됩니다."
   },
   {
     "id": "exam-2021-3_020",
     "categoryId": "exam-2021-3",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 3,
     "question": "다음은 소프트웨어 통합 테스트에 대한 설명이다.  괄호 ( ) 안에 들어갈 알맞는 답을 작성하시오.\n\n(  1.  ) 방식은 이름에서도 알 수 있듯이, 하위 모듈부터 시작하여 상위 모듈로 테스트를 진행하는 방식이며,\n이 방식을 사용하기 위해서는 (  2. )가 필요하다.\n(   2.   )는 이미 존재하는 하위 모듈과 존재하지 않은 상위 모듈에 대한 인터페이스 역할을 한다.",
     "answer": "1. 상향식 테스트  2. 테스트 드라이버",
-    "explanation": "상향식: 드라이버 필요, 하향식: 스텁 필요",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/217",
-    "tags": [
-      "상향식테스트",
-      "드라이버",
-      "통합테스트",
-      "2021년3회"
-    ]
+    "explanation": "상향식: 드라이버 필요, 하향식: 스텁 필요"
   }
 ]

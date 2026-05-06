@@ -10,6 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import { BannerAdView } from '@/components/ads/BannerAdView';
 import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
+import { useAdStore } from '@/store/useAdStore';
 
 export default function QuizResultScreen() {
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function QuizResultScreen() {
   }>();
 
   const { showAd } = useInterstitialAd();
+  const bannerHeight = useAdStore((s) => s.bannerHeight);
 
   const total = parseInt(params.total || '0', 10);
   const correct = parseInt(params.correct || '0', 10);
@@ -91,6 +93,9 @@ export default function QuizResultScreen() {
             <Text style={styles.secondaryButtonText}>홈으로</Text>
           </Pressable>
         </View>
+
+        {/* 전역 배너 광고 높이만큼 공간 확보 */}
+        <View style={{ height: bannerHeight }} />
       </ScrollView>
     </SafeAreaView>
   );

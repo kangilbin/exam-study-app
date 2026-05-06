@@ -4,98 +4,46 @@
     "categoryId": "exam-2021-2",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "네트워크 장치 없이 동적 토폴로지를 가지며, 긴급 구조/군사 네트워크에 활용되는 네트워크는?(한글로 작성)",
     "answer": "애드혹 네트워크 또는 애드폭",
-    "explanation": "애드혹은 AP 없이 단말 간 직접 통신하는 무선 네트워크 방식입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "애드혹",
-      "네트워크",
-      "2021년2회"
-    ]
+    "explanation": "애드혹은 AP 없이 단말 간 직접 통신하는 무선 네트워크 방식입니다."
   },
   {
     "id": "exam-2021-2_002",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/UI",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "(1) 사람의 감정이나 경험을 나타내는 개념, (2) 사용자 인터페이스(CLI 등)는?",
     "answer": "1. UX  2. UI",
-    "explanation": "UX: 사용자 경험, UI: 사용자 인터페이스(CLI, GUI 등)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "UX",
-      "UI",
-      "2021년2회"
-    ]
+    "explanation": "UX: 사용자 경험, UI: 사용자 인터페이스(CLI, GUI 등)"
   },
   {
     "id": "exam-2021-2_003",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "트랜잭션의 특징 중 하나로, 트랜잭션과 관련된 작업들이 연산 결과에 모두 반영되거나, 아니면 전혀 반영되지 않아야 한다(All or Nothing)는 원칙을 무엇이라 하는가?",
     "answer": "원자성 또는 Atomicity",
-    "explanation": "원자성(Atomicity)은 트랜잭션의 All or Nothing 속성입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "트랜잭션",
-      "원자성",
-      "2021년2회"
-    ]
+    "explanation": "원자성(Atomicity)은 트랜잭션의 All or Nothing 속성입니다."
   },
   {
     "id": "exam-2021-2_004",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "아래 표를 만족하는 정규형은?",
     "imageUrl": "exam-2021-2_004.png",
     "answer": "제2정규형 또는 2NF",
-    "explanation": "1NF:원자값, 2NF:부분종속제거, 3NF:이행종속제거, BCNF:후보키아닌 결정자 제거",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "정규화",
-      "2NF",
-      "DB",
-      "2021년2회"
-    ]
+    "explanation": "1NF:원자값, 2NF:부분종속제거, 3NF:이행종속제거, BCNF:후보키아닌 결정자 제거"
   },
   {
     "id": "exam-2021-2_005",
     "categoryId": "exam-2021-2",
     "subcategory": "SQL UPDATE",
     "type": "sql",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "테이블 수정 시 빈칸 (1), (2)에 들어갈 키워드를 쓰시오.",
     "answer": "1. UPDATE  2. SET",
     "explanation": "UPDATE문: UPDATE 테이블 SET 컬럼=값 WHERE 조건;",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "SQL",
-      "UPDATE",
-      "DML",
-      "2021년2회"
-    ],
     "codeSnippet": "( 1 ) 테이블명 ( 2 ) 컬럼 = 값\nWHERE 조건;"
   },
   {
@@ -103,20 +51,9 @@
     "categoryId": "exam-2021-2",
     "subcategory": "SQL JOIN",
     "type": "sql",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "다음 SQL문의 빈칸 (1), (2)에 들어갈 키워드를 쓰시오.",
     "answer": "1. ON  2. 학과",
     "explanation": "JOIN의 조건절은 ON 키워드를 사용합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "SQL",
-      "JOIN",
-      "ON",
-      "2021년2회"
-    ],
     "codeSnippet": "SELECT ...\nFROM 학생정보 a JOIN 학과정보 b\n( 1 ) a.학과 = b.( 2 )"
   },
   {
@@ -124,80 +61,38 @@
     "categoryId": "exam-2021-2",
     "subcategory": "Python 비트연산",
     "type": "code",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "다음 파이썬 코드의 출력 결과를 쓰시오.",
     "answer": "26",
     "explanation": "i=1: 100>>1=50, 50+1=51\ni=2: 100>>2=25, 25+1=26\n최종 result=26",
     "codeSnippet": "a = 100\nresult = 0\nfor i in range(1,3):\n    result = a >> i\n    result = result + 1\nprint(result)",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "Python",
-      "비트연산",
-      "2021년2회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2021-2_008",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/보안",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "미국 NIST에서 DES를 대체하기 위해 만든 128비트 블록 크기의 대칭키 암호화 방식은?",
     "answer": "AES",
-    "explanation": "AES는 128/192/256비트 키를 지원하는 대칭키 암호 알고리즘입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "AES",
-      "암호화",
-      "보안",
-      "2021년2회"
-    ]
+    "explanation": "AES는 128/192/256비트 키를 지원하는 대칭키 암호 알고리즘입니다."
   },
   {
     "id": "exam-2021-2_009",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "화이트박스 테스트에서 (1)모든 문장 최소 한번 수행, (2)조건별 참/거짓, (3)개별 조건 참/거짓은? \n\n[보기]\nㄱ. 문장 커버리지    ㄴ. 결정 커버리지    ㄷ.다중 조건 커버리지    ㄹ. 변경 결정/조건 커버리지 ㅁ. 조건 커버리지   ㅂ. 경로 커버리지",
     "answer": "1. 문장 커버리지  2. 결정 커버리지  3. 조건 커버리지",
-    "explanation": "화이트박스 테스트의 코드 커버리지 유형입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "커버리지",
-      "화이트박스",
-      "2021년2회"
-    ]
+    "explanation": "화이트박스 테스트의 코드 커버리지 유형입니다."
   },
   {
     "id": "exam-2021-2_010",
     "categoryId": "exam-2021-2",
     "subcategory": "SQL LIKE/ORDER",
     "type": "sql",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "'이'로 시작하는 이름을 내림차순 정렬하는 SQL에서 빈칸 (1), (2)를 쓰시오.",
     "answer": "1. '이%'  2. DESC",
     "explanation": "LIKE '이%': 이로 시작하는 패턴, DESC: 내림차순",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "SQL",
-      "LIKE",
-      "ORDER BY",
-      "2021년2회"
-    ],
     "codeSnippet": "SELECT ...\nFROM ...\nWHERE 이름 LIKE ( 1 )\nORDER BY 컬럼 ( 2 )"
   },
   {
@@ -205,202 +100,97 @@
     "categoryId": "exam-2021-2",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "응집도에서 (1)순서에 따라 수행, (2)동일한 입출력 사용, (3)하나의 기능에 밀접하게 연관은? \n\n[보기]\nㄱ.기능적 응집도   ㄴ.순차적 응집도   ㄷ.절차적 응집도   ㄹ.교환적 응집도    ㅁ.논리적 응집도   ㅂ.우연적 응집도",
     "answer": "1. 절차적 응집도  2. 교환적 응집도  3. 기능적 응집도",
-    "explanation": "응집도(낮→높): 우연 > 논리 > 시간 > 절차 > 교환 > 순차 > 기능",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "응집도",
-      "소프트웨어공학",
-      "2021년2회"
-    ]
+    "explanation": "응집도(낮→높): 우연 > 논리 > 시간 > 절차 > 교환 > 순차 > 기능"
   },
   {
     "id": "exam-2021-2_012",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/네트워크",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "패킷교환 방식에서 (1)미리 연결 후 통신하는 연결형, (2)헤더 붙여 개별 전달하는 비연결형은?",
     "answer": "1. 가상 회선 방식  2. 데이터그램 방식",
-    "explanation": "패킷교환: 가상회선(연결형, 순서보장), 데이터그램(비연결형, 독립경로)",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "패킷교환",
-      "가상회선",
-      "데이터그램",
-      "2021년2회"
-    ]
+    "explanation": "패킷교환: 가상회선(연결형, 순서보장), 데이터그램(비연결형, 독립경로)"
   },
   {
     "id": "exam-2021-2_013",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/디자인패턴",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "괄호 (   ) 안에 알맞는 단어를 쓰시오.\n\n디자인 패턴 중에서 (   )패턴은 반복적으로 사용되는 객체들의 상호작용을 패턴화 한 것으로,\n클래스나 객체들이 상호작용하는 방법이다. 알고리즘의 패턴에는 Interpreter, Observer, Command 가 있다.",
     "answer": "행위 또는 Behavioral",
-    "explanation": "행위(Behavioral) 패턴은 객체나 클래스 간의 교류 방법을 정의합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "디자인패턴",
-      "행위패턴",
-      "2021년2회"
-    ]
+    "explanation": "행위(Behavioral) 패턴은 객체나 클래스 간의 교류 방법을 정의합니다."
   },
   {
     "id": "exam-2021-2_014",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/DB",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "병행제어기법 중 데이터에 대한 연산을 마칠 때까지 상호배제하는 기법은?",
     "answer": "로킹 또는 Locking",
-    "explanation": "병행제어기법: 로킹, 타임스탬프, 최적 병행 수행, 다중 버전",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "로킹",
-      "병행제어",
-      "DB",
-      "2021년2회"
-    ]
+    "explanation": "병행제어기법: 로킹, 타임스탬프, 최적 병행 수행, 다중 버전"
   },
   {
     "id": "exam-2021-2_015",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/소프트웨어공학",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "럼바우 데이터 모델링에서 (1)입력값이 출력값일 때 DFD 사용, (2) 시간에 따라 변하는 것(상태 다이어그램), (3)객체들 간의 관계를 정의(ERD) 사용하는 모델링은?\n\n[보기]\nㄱ.Object Modeling     ㄴ.Dynamic Modeling    ㄷ.Function Modeling    ㄹ.Structural Modeling    ㅁ.Behavioral Modeling    ㅂ.Process Modeling",
     "answer": "1. Function Modeling   2. Dynamic 모델링  3. Object 모델링",
-    "explanation": "럼바우 분석 절차: 객체 모델링 → 동적 모델링 → 기능 모델링",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "럼바우",
-      "소프트웨어공학",
-      "2021년2회"
-    ]
+    "explanation": "럼바우 분석 절차: 객체 모델링 → 동적 모델링 → 기능 모델링"
   },
   {
     "id": "exam-2021-2_016",
     "categoryId": "exam-2021-2",
     "subcategory": "C언어 거듭제곱",
     "type": "code",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오. mp(2,10)",
     "answer": "1024",
     "explanation": "2의 10승 = 1024",
     "codeSnippet": "int mp(int base, int exp){\n    int res = 1;\n    for(int i=0; i<exp; i++)\n        res = res * base;\n    return res;\n}\nint main(){\n    printf(\"%d\", mp(2,10));\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "C언어",
-      "거듭제곱",
-      "2021년2회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2021-2_017",
     "categoryId": "exam-2021-2",
     "subcategory": "Java static메서드",
     "type": "code",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "클래스 내에서 객체 생성 없이 사용할 수 있는 메서드의 키워드는?",
     "answer": "static",
     "explanation": "static 메서드는 클래스명.메서드명()으로 호출 가능합니다.",
     "codeSnippet": "public class Test {\n    public static void main(String[] args){\n        System.out.print(Test.check(1));\n    }\n    (_____) String check(int num){\n        return (num >= 0) ? \"positive\" : \"negative\";\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "Java",
-      "static",
-      "2021년2회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2021-2_018",
     "categoryId": "exam-2021-2",
     "subcategory": "C언어 포인터배열",
     "type": "code",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "다음 C언어 코드의 출력 결과를 쓰시오.",
     "answer": "8",
     "explanation": "ary[0]=1, ary[1]=*(ary+0)+2=1+2=3, ary[2]=*ary+3=1+3=4. 합=1+3+4=8",
     "codeSnippet": "int main(){\n    int ary[3];\n    int s = 0;\n    *(ary+0)=1;\n    ary[1] = *(ary+0)+2;\n    ary[2] = *ary+3;\n    for(int i=0; i<3; i++)\n        s=s+ary[i];\n    printf(\"%d\",s);\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "C언어",
-      "포인터",
-      "배열",
-      "2021년2회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2021-2_019",
     "categoryId": "exam-2021-2",
     "subcategory": "Java 상속/오버라이딩",
     "type": "code",
-    "difficulty": 2,
-    "year": 2021,
-    "round": 2,
     "question": "다음 Java 코드의 출력 결과를 쓰시오.",
     "answer": "11",
     "explanation": "a1.sun(3,2)=3+2=5, a2.sun(3,2)=3-2+super.sun(3,2)=1+5=6, 합=5+6=11",
     "codeSnippet": "public class ovr1 {\n    public static void main(String[] args){\n        ovr1 a1 = new ovr1();\n        ovr2 a2 = new ovr2();\n        System.out.println(a1.sun(3,2) + a2.sun(3,2));\n    }\n    int sun(int x, int y){ return x + y; }\n}\nclass ovr2 extends ovr1 {\n    int sun(int x, int y){\n        return x - y + super.sun(x,y);\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "Java",
-      "상속",
-      "오버라이딩",
-      "2021년2회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2021-2_020",
     "categoryId": "exam-2021-2",
     "subcategory": "이론/테스트",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2021,
-    "round": 2,
     "question": "상향식 테스트 시 상위 모듈 역할을 대신하는 것은 테스트 드라이버, 하향식 테스트 시 하위 모듈 역할을 대신하는 것은?(한글로 작성)",
     "answer": "테스트 스텁 또는 스텁",
-    "explanation": "테스트 하네스: 드라이버(상향식), 스텁(하향식), 슈트, 케이스, 스크립트, 목 오브젝트",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/210",
-    "tags": [
-      "스텁",
-      "테스트",
-      "통합테스트",
-      "2021년2회"
-    ]
+    "explanation": "테스트 하네스: 드라이버(상향식), 스텁(하향식), 슈트, 케이스, 스크립트, 목 오브젝트"
   }
 ]

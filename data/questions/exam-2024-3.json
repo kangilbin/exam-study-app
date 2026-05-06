@@ -4,69 +4,31 @@
     "categoryId": "exam-2024-3",
     "subcategory": "Java String equals",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오. (String의 == 비교와 equals() 비교)",
     "answer": "OOBAA",
     "explanation": "Java에서 문자열 리터럴은 String Pool에 저장되어 같은 리터럴은 같은 참조를 가집니다.\nString a = \"Hello\", b = \"Hello\"일 때 a==b는 true(같은 Pool 참조)이므로 \"O\"가 출력됩니다.\na.equals(b)도 true이므로 \"O\"가 출력됩니다.\nnew String()으로 생성한 경우 == 비교는 false이지만 equals()는 true입니다.",
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        String a = \"Hello\";\n        String b = \"Hello\";\n        String c = new String(\"Hello\");\n        System.out.print(a == b ? \"O\" : \"X\");\n        System.out.print(a.equals(b) ? \"O\" : \"X\");\n        System.out.print(a == c ? \"A\" : \"B\");\n        System.out.print(a.equals(c) ? \"A\" : \"B\");\n        System.out.print(b.equals(c) ? \"A\" : \"B\");\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Java",
-      "String",
-      "equals",
-      "참조비교",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-3_002",
     "categoryId": "exam-2024-3",
     "subcategory": "Python 리스트역순 합차",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Python 코드의 출력 결과를 쓰시오.",
     "answer": "3",
     "explanation": "func(lst)는 리스트를 역순으로 뒤집습니다.\nlst = [1,2,3,4,5,6] → func 실행 후 lst = [6,5,4,3,2,1]\nlst[::2] = [6,4,2] → sum = 12\nlst[1::2] = [5,3,1] → sum = 9\n12 - 9 = 3",
     "codeSnippet": "def func(lst):\n    for i in range(len(lst) // 2):\n        lst[i], lst[-i-1] = lst[-i-1], lst[i]\n\nlst = [1, 2, 3, 4, 5, 6]\nfunc(lst)\nprint(sum(lst[::2]) - sum(lst[1::2]))",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Python",
-      "리스트",
-      "슬라이싱",
-      "역순",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2024-3_003",
     "categoryId": "exam-2024-3",
     "subcategory": "SQL JOIN COUNT",
     "type": "sql",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 SQL문의 실행 결과를 쓰시오.",
     "answer": "1",
     "explanation": "INNER JOIN은 두 테이블에서 조인 조건을 만족하는 행만 결합합니다. A와 B를 id로 조인한 후 A.val > 10 조건을 만족하는 행의 수를 COUNT(*)로 세면 1이 됩니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "SQL",
-      "JOIN",
-      "COUNT",
-      "2024년",
-      "3회"
-    ],
     "codeSnippet": "[employee 테이블]\n id | name   | project_id\n----+--------+-----------\n  1 |  John  | 100\n  2 | Carry  | 200\n  3 | Rachel | 100\n\n[project 테이블]\n project_id | name\n-----------+----------\n 100       | Alpha\n 200       | Beta\n 300       | Gamma\n\nSELECT count(*)\nFROM employee AS e\nJOIN project AS p\n  ON e.project_id = p.project_id\nWHERE p.name IN (\n  SELECT name FROM project p\n  WHERE p.project_id IN (\n    SELECT project_id FROM employee\n    GROUP BY project_id\n    HAVING count(*) < 2\n  )\n)"
   },
   {
@@ -74,381 +36,168 @@
     "categoryId": "exam-2024-3",
     "subcategory": "LRU 페이지부재",
     "type": "theory",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 3,
     "question": "페이지 프레임 수가 3이고, 페이지 참조 순서가 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1일 때, LRU(Least Recently Used) 페이지 교체 알고리즘을 사용한 경우 페이지 부재(Page Fault) 횟수를 구하시오. (초기 상태는 비어있음)",
     "answer": "12",
-    "explanation": "LRU는 가장 오랫동안 사용되지 않은 페이지를 교체합니다.\n프레임 3개로 참조열을 처리하면:\n2→부재(2), 3→부재(2,3), 2→적중, 1→부재(2,3,1), 5→부재(교체→3,1,5 또는 2,1,5), ...\n전체 과정을 거치면 총 12번의 페이지 부재가 발생합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "운영체제",
-      "페이지교체",
-      "LRU",
-      "페이지부재",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "LRU는 가장 오랫동안 사용되지 않은 페이지를 교체합니다.\n프레임 3개로 참조열을 처리하면:\n2→부재(2), 3→부재(2,3), 2→적중, 1→부재(2,3,1), 5→부재(교체→3,1,5 또는 2,1,5), ...\n전체 과정을 거치면 총 12번의 페이지 부재가 발생합니다."
   },
   {
     "id": "exam-2024-3_005",
     "categoryId": "exam-2024-3",
     "subcategory": "스머프공격",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2024,
-    "round": 3,
     "question": "IP 변조와 ICMP 패킷을 이용한 DDoS 공격의 일종으로, 출발지 IP를 피해자의 IP로 변조한 ICMP Echo Request 패킷을 브로드캐스트 주소로 전송하여 대량의 응답이 피해자에게 집중되게 하는 공격은? (한글로 작성)",
     "answer": "스머프 또는 스머핑",
-    "explanation": "스머프(Smurf) or 스머핑(Smurfing) 공격은 공격자가 출발지 IP를 피해자의 IP로 위조한 ICMP Echo Request 패킷을 네트워크의 브로드캐스트 주소로 보내, 해당 네트워크의 모든 호스트가 피해자에게 ICMP Echo Reply를 보내도록 유도하는 DDoS 공격입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "보안",
-      "DDoS",
-      "스머프",
-      "ICMP",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "스머프(Smurf) or 스머핑(Smurfing) 공격은 공격자가 출발지 IP를 피해자의 IP로 위조한 ICMP Echo Request 패킷을 네트워크의 브로드캐스트 주소로 보내, 해당 네트워크의 모든 호스트가 피해자에게 ICMP Echo Reply를 보내도록 유도하는 DDoS 공격입니다."
   },
   {
     "id": "exam-2024-3_006",
     "categoryId": "exam-2024-3",
     "subcategory": "GoF 행위패턴",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "GoF 디자인 패턴 중. 객체들 간의 통신 방법을 정의하고 알고리즘을 캡슐화하여 객체 간의 결합도를 낮추고, Observer, Strategy, Command, Iterator 패턴이 속하는 분류 (___) 패턴이라고 한다. 괄호안에 들어갈 용어를 작성하시오. (한글로 작성)",
     "answer": "행위",
-    "explanation": "GoF 디자인 패턴의 분류:\n- 생성(Creational): Factory Method, Abstract Factory, Builder, Prototype, Singleton\n- 구조(Structural): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy\n- 행위(Behavioral): Observer, Strategy, Command, Iterator, Mediator, Memento, State, Template Method, Visitor, Chain of Responsibility, Interpreter\nObserver, Strategy, Command, Iterator는 모두 행위 패턴에 해당합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "디자인패턴",
-      "GoF",
-      "행위패턴",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "GoF 디자인 패턴의 분류:\n- 생성(Creational): Factory Method, Abstract Factory, Builder, Prototype, Singleton\n- 구조(Structural): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy\n- 행위(Behavioral): Observer, Strategy, Command, Iterator, Mediator, Memento, State, Template Method, Visitor, Chain of Responsibility, Interpreter\nObserver, Strategy, Command, Iterator는 모두 행위 패턴에 해당합니다."
   },
   {
     "id": "exam-2024-3_007",
     "categoryId": "exam-2024-3",
     "subcategory": "C static변수",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 C 코드의 출력 결과를 쓰시오.",
     "answer": "20",
     "explanation": "func() 내 static 변수 x는 프로그램 실행 동안 값이 유지됩니다.\nmain에서 for문이 4번(i=0,1,2,3) 반복됩니다.\n매 반복마다 x++(main의 x)하고 func()를 호출합니다.\nfunc() 호출 시마다 static x가 2씩 증가:\n1회: static x=2, 2회: x=4, 3회: x=6, 4회: x=8\nsum = 2+4+6+8 = 20",
     "codeSnippet": "#include <stdio.h>\nint func() {\n    int static x = 0;\n    x += 2;\n    return x;\n}\nint main() {\n    int x = 1;\n    int sum = 0;\n    for (int i = 0; i < 4; i++) {\n        x++;\n        sum += func();\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "C언어",
-      "static",
-      "지역변수",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-3_008",
     "categoryId": "exam-2024-3",
     "subcategory": "개체무결성",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2024,
-    "round": 3,
     "question": "무결성제약조건에 대한 문제이다. 아래 표에서 어떠한 (       ) 무결성을 위반하였는지 작성하시오",
     "imageUrl": "exam-2024-3_008.png",
     "answer": "개체",
-    "explanation": "개체 무결성(Entity Integrity)은 기본키를 구성하는 어떠한 속성 값도 NULL이거나 중복될 수 없다는 제약조건입니다.\n- 참조 무결성: 외래키 값은 참조하는 릴레이션의 기본키 값이거나 NULL이어야 함\n- 도메인 무결성: 속성 값이 정의된 도메인에 속해야 함",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "데이터베이스",
-      "무결성",
-      "개체무결성",
-      "기본키",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "개체 무결성(Entity Integrity)은 기본키를 구성하는 어떠한 속성 값도 NULL이거나 중복될 수 없다는 제약조건입니다.\n- 참조 무결성: 외래키 값은 참조하는 릴레이션의 기본키 값이거나 NULL이어야 함\n- 도메인 무결성: 속성 값이 정의된 도메인에 속해야 함"
   },
   {
     "id": "exam-2024-3_009",
     "categoryId": "exam-2024-3",
     "subcategory": "URL구조매칭",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "URL의 구성요소를 순서대로 나열한 것이다. 빈칸에 해당하는 번호를 순서대로 쓰시오.\n(  )://(    )/(  )?(  )#()\n답을 숫자로 나열하시오. \n\n보기\n1. query : 서버에 전달할 추가 데이터 2.path : 서버 내의 특정 자원을 가리키는 경로 3. scheme : 리소스에 접근하는 방법이나 프로토콜 \n4. authority : 사용자 정보, 호스트명, 포트 번호 5. fragment : 특정 문서 내의 위치",
     "answer": "34215",
-    "explanation": "URL(Uniform Resource Locator)의 구조:\nscheme(3)://authority(4)/path(2)?query(1)#fragment(5)\n예: https://www.example.com:443/path/page?key=value#nose",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "네트워크",
-      "URL",
-      "웹",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "URL(Uniform Resource Locator)의 구조:\nscheme(3)://authority(4)/path(2)?query(1)#fragment(5)\n예: https://www.example.com:443/path/page?key=value#nose"
   },
   {
     "id": "exam-2024-3_010",
     "categoryId": "exam-2024-3",
     "subcategory": "Python 타입검사",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Python 코드의 출력 결과를 쓰시오.",
     "answer": "45",
     "explanation": "func 함수는 인자의 타입에 따라 다른 값을 반환합니다.\nfunc('100.0'): type(str) == type(str) → len('100.0') = 5\nfunc(100.0): type(float) != type(int), type(float) != type(str) → else: 20\nfunc((100,200)): type(tuple) → else: 20\n5 + 20 + 20 = 45",
     "codeSnippet": "def func(value):\n    if type(value) == type(100):\n        return 100\n    elif type(value) == type(\"\"):\n        return len(value)\n    else:\n        return 20\n\na = '100.0'\nb = 100.0\nc = (100, 200)\nprint(func(a) + func(b) + func(c))",
-    "codeLanguage": "python",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Python",
-      "type",
-      "함수",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "python"
   },
   {
     "id": "exam-2024-3_011",
     "categoryId": "exam-2024-3",
     "subcategory": "Java 다형성 필드접근",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오. (업캐스팅 시 메서드 오버라이딩과 필드 은닉)",
     "answer": "52",
     "explanation": "Base a = new Derivate(): 업캐스팅\na.getX(): 오버라이딩된 Derivate의 getX() 호출 → 7*3 = 21\na.x: 선언 타입(Base)의 필드 접근 → 3 (필드는 오버라이딩이 아닌 은닉)\nb.getX(): Derivate의 getX() → 7*3 = 21\nb.x: Derivate의 x → 7\n21 + 3 + 21 + 7 = 52",
     "codeSnippet": "class Base {\n    int x = 3;\n    int getX() { return x * 2; }\n}\nclass Derivate extends Base {\n    int x = 7;\n    int getX() { return x * 3; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Base a = new Derivate();\n        Derivate b = new Derivate();\n        System.out.print(a.getX() + a.x + b.getX() + b.x);\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Java",
-      "다형성",
-      "업캐스팅",
-      "필드은닉",
-      "오버라이딩",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-3_012",
     "categoryId": "exam-2024-3",
     "subcategory": "C 연결리스트 swap",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 3,
     "question": "다음 C 코드의 출력 결과를 쓰시오. (연결리스트에서 노드 교환 후 순회)",
     "answer": "312",
     "explanation": "연결리스트의 노드들을 swap한 후 순회하면서 출력합니다. 초기 연결리스트 1→2→3에서 특정 노드들의 포인터를 교환한 결과, 순회 시 3→1→2 순서로 출력되어 312가 됩니다.",
     "codeSnippet": "#include <stdio.h>\n \nstruct Node {\n int value;\n struct Node* next;\n};\n \nvoid func(struct Node* node){\n  while(node != NULL && node->next != NULL){\n     int t = node->value;\n     node->value = node->next->value;\n     node->next->value = t;\n     node = node->next->next;\n  }\n}\n \nint main(){\n  struct Node n1 = {1, NULL};\n  struct Node n2 = {2, NULL};\n  struct Node n3 = {3, NULL};\n  \n  n1.next = &n3;\n  n3.next = &n2;\n \n  func(&n1);  \n \n  struct Node* current = &n1;\n \n  while(current != NULL){\n    printf(\"%d\", current->value);\n    current = current->next;\n }\n return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "C언어",
-      "연결리스트",
-      "포인터",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-3_013",
     "categoryId": "exam-2024-3",
     "subcategory": "테스트커버리지",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "화이트박스 테스트의 테스트 커버리지 유형 3가지를 쓰시오.\n(1) 테스트를 통해 프로그램의 모든 문장을 최소한 한 번씩 실행했는지를 측정\n(2) 프로그램 내의 모든 분기(조건문)의 각 분기를 최소한 한 번씩 실행했는지를 측정\n(3) 복합 조건 내의 각 개별 조건이 참과 거짓으로 평가되는 경우를 모두 테스트했는지를 측정 \n\n[보기]\nㄱ. 조건 ㄴ. 경로 ㄷ. 결정 ㄹ. 분기 ㅁ.함수 ㅂ. 문장 ㅅ. 루프",
     "answer": "(1) 문장 (2) 분기 (3) 조건",
-    "explanation": "화이트박스 테스트의 주요 커버리지 유형:\n1) 문장 커버리지(Statement Coverage): 모든 실행 문장을 최소 1번 실행\n2) 분기 커버리지(Branch/Decision Coverage): 모든 분기(참/거짓)를 최소 1번 실행\n3) 조건 커버리지(Condition Coverage): 각 개별 조건식이 참/거짓을 최소 1번씩 가지도록 실행\n이 외에도 경로 커버리지, MC/DC 등이 있습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "테스트",
-      "커버리지",
-      "화이트박스",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "화이트박스 테스트의 주요 커버리지 유형:\n1) 문장 커버리지(Statement Coverage): 모든 실행 문장을 최소 1번 실행\n2) 분기 커버리지(Branch/Decision Coverage): 모든 분기(참/거짓)를 최소 1번 실행\n3) 조건 커버리지(Condition Coverage): 각 개별 조건식이 참/거짓을 최소 1번씩 가지도록 실행\n이 외에도 경로 커버리지, MC/DC 등이 있습니다."
   },
   {
     "id": "exam-2024-3_014",
     "categoryId": "exam-2024-3",
     "subcategory": "UML 클래스관계",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "아래는 UML클래스의 관계에 관한 문제이다. 보기를 보고 알맞는 관계를 선택하여 작성하시오.\n[보기]\nㄱ. 의존 ㄴ. 연관 ㄷ. 일반화",
     "imageUrl": "exam-2024-3_014.png",
     "answer": "(1) 연관 (2) 일반화 (3) 의존",
-    "explanation": "(1) 연관(Association): 클래스 간에 지속적인 관계가 있음을 나타내며 실선으로 표현합니다.\n(2) 일반화(Generalization): 상속 관계를 나타내며 빈 삼각형 화살표로 표현합니다.\n(3) 의존(Dependency): 한 클래스가 다른 클래스를 일시적으로 사용하는 관계로 점선 화살표로 표현합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "UML",
-      "클래스다이어그램",
-      "관계",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "(1) 연관(Association): 클래스 간에 지속적인 관계가 있음을 나타내며 실선으로 표현합니다.\n(2) 일반화(Generalization): 상속 관계를 나타내며 빈 삼각형 화살표로 표현합니다.\n(3) 의존(Dependency): 한 클래스가 다른 클래스를 일시적으로 사용하는 관계로 점선 화살표로 표현합니다."
   },
   {
     "id": "exam-2024-3_015",
     "categoryId": "exam-2024-3",
     "subcategory": "DB키 용어",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 설명에 해당하는 데이터베이스 키(Key)를 보기에서 찾아 각각 쓰시오.\n(1) 다른 릴레이션의 기본키를 참조하는 키\n(2) 유일성과 최소성을 만족하는 키\n(3) 후보키 중 기본키로 선정되지 않은 키\n(4) 유일성은 만족하지만 최소성은 만족하지 않을 수 있는 키 \n\n[보기] ㄱ. 슈퍼키 ㄴ. 외래키 ㄷ. 대체키 ㄹ. 후보키",
     "answer": "(1) 외래키 (2) 후보키 (3) 대체키 (4) 슈퍼키",
-    "explanation": "(가) 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하여 릴레이션 간의 관계를 표현합니다.\n(나) 후보키(Candidate Key): 유일성과 최소성을 모두 만족하는 키로, 기본키가 될 수 있는 후보입니다.\n(다) 대체키(Alternate Key): 후보키 중 기본키로 선정되지 않은 나머지 키입니다.\n(라) 슈퍼키(Super Key): 유일성은 만족하지만 최소성은 만족하지 않을 수 있는 키입니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "데이터베이스",
-      "키",
-      "외래키",
-      "후보키",
-      "대체키",
-      "슈퍼키",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "(가) 외래키(Foreign Key): 다른 릴레이션의 기본키를 참조하여 릴레이션 간의 관계를 표현합니다.\n(나) 후보키(Candidate Key): 유일성과 최소성을 모두 만족하는 키로, 기본키가 될 수 있는 후보입니다.\n(다) 대체키(Alternate Key): 후보키 중 기본키로 선정되지 않은 나머지 키입니다.\n(라) 슈퍼키(Super Key): 유일성은 만족하지만 최소성은 만족하지 않을 수 있는 키입니다."
   },
   {
     "id": "exam-2024-3_016",
     "categoryId": "exam-2024-3",
     "subcategory": "C 이중포인터",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 3,
     "question": "다음 C 코드의 출력 결과를 쓰시오.",
     "answer": "1",
     "explanation": "arr={3,1,4,1,5}, p=arr, pp=&p\nfunc에서 이중 포인터를 통해 각 원소를 (arr[i]+i)%5로 변환합니다:\narr[0]=(3+0)%5=3, arr[1]=(1+1)%5=2, arr[2]=(4+2)%5=1\narr[3]=(1+3)%5=4, arr[4]=(5+4)%5=4\nnum = arr[2] = 1",
     "codeSnippet": "#include <stdio.h>\nvoid func(int** arr, int size) {\n    for (int i = 0; i < size; i++) {\n        *(*arr + i) = (*(*arr + i) + i) % size;\n    }\n}\n\nint main() {\n    int arr[] = {3, 1, 4, 1, 5};\n    int* p = arr;\n    int** pp = &p;\n    int num = 6;\n\n    func(pp, 5);\n    num = arr[2];\n    printf(\"%d\", num);\n    return 0;\n}",
-    "codeLanguage": "c",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "C언어",
-      "이중포인터",
-      "배열",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "c"
   },
   {
     "id": "exam-2024-3_017",
     "categoryId": "exam-2024-3",
     "subcategory": "VPN",
     "type": "theory",
-    "difficulty": 1,
-    "year": 2024,
-    "round": 3,
     "question": "공중 네트워크(인터넷)를 통해 사설 네트워크를 확장할 수 있도록 암호화된 터널을 생성하는 기술은 무엇인가?(종류로는 IPsec, SSL, L2TP 등)",
     "answer": "VPN",
-    "explanation": "VPN(Virtual Private Network, 가상 사설망)은 공중 네트워크(인터넷)를 통해 전용 회선처럼 안전한 통신을 제공하는 기술입니다. 터널링, 암호화, 인증 기술을 사용하여 데이터를 보호합니다. IPSec, SSL/TLS 등의 프로토콜을 사용할 수 있습니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "네트워크",
-      "보안",
-      "VPN",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "VPN(Virtual Private Network, 가상 사설망)은 공중 네트워크(인터넷)를 통해 전용 회선처럼 안전한 통신을 제공하는 기술입니다. 터널링, 암호화, 인증 기술을 사용하여 데이터를 보호합니다. IPSec, SSL/TLS 등의 프로토콜을 사용할 수 있습니다."
   },
   {
     "id": "exam-2024-3_018",
     "categoryId": "exam-2024-3",
     "subcategory": "Java 예외처리",
     "type": "code",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오.",
     "answer": "101",
     "explanation": "func()에서 NullPointerException을 throw합니다.\ntry 블록에서 func() 호출 시 예외 발생\ncatch(NullPointerException e): NullPointerException이 잡히므로 sum = 0 + 1 = 1\nfinally 블록은 항상 실행: sum = 1 + 100 = 101\n출력: 101",
     "codeSnippet": "public class ExceptionHandling {\n    public static void main(String[] args) {\n        int sum = 0;\n        try {\n            func();\n        } catch (NullPointerException e) {\n            sum = sum + 1;\n        } catch (Exception e) {\n            sum = sum + 10;\n        } finally {\n            sum = sum + 100;\n        }\n        System.out.print(sum);\n    }\n    static void func() throws Exception {\n        throw new NullPointerException();\n    }\n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Java",
-      "예외처리",
-      "try-catch",
-      "finally",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-3_019",
     "categoryId": "exam-2024-3",
     "subcategory": "Java 타입소거",
     "type": "code",
-    "difficulty": 3,
-    "year": 2024,
-    "round": 3,
     "question": "다음 Java 코드의 출력 결과를 쓰시오.",
     "answer": "B0",
     "explanation": "new Collection<>(0)으로 호출하더라도 클래스 내부의 value는 Object 타입으로 취급되어, Printer 클래스의 오버로딩 메서드 중 가장 포괄적인 print(Object a)가 실행됩니다",
     "codeSnippet": "class Main {\n \n  public static class Collection<T>{\n    T value;\n \n    public Collection(T t){\n        value = t;\n    }\n \n    public void print(){\n       new Printer().print(value);\n    }\n \n   class Printer{\n      void print(Integer a){\n        System.out.print(\"A\" + a);\n      }\n      void print(Object a){\n        System.out.print(\"B\" + a);\n      } \n      void print(Number a){\n        System.out.print(\"C\" + a);\n      }\n   }\n }\n \n  public static void main(String[] args) {\n      new Collection<>(0).print();\n  }\n  \n}",
-    "codeLanguage": "java",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "Java",
-      "제네릭",
-      "타입소거",
-      "2024년",
-      "3회"
-    ]
+    "codeLanguage": "java"
   },
   {
     "id": "exam-2024-3_020",
     "categoryId": "exam-2024-3",
     "subcategory": "Ad-hoc Network",
     "type": "theory",
-    "difficulty": 2,
-    "year": 2024,
-    "round": 3,
     "question": "중앙 관리나 고정된 인프라 없이 임시로 구성되는 네트워크워크로 일반적으로 무선 통신을 통해 노드들이 직접 연결되어 데이터를 주고받고 긴급 구조, 긴급 회의, 군사적인 상황 등에서 유용하게 활용될 수 있다. 무엇이라고 하는지 보기에서 알맞은 기호를 골라 작성하시오.\n\n[보기]\nㄱ.Infrastructure Network ㄴ.Firmware Network ㄷ.Peer-to-Peer Network ㄹ.Ad-hoc Network ㅁ.Mesh Network ㅂ.Sensor Network ㅅ.Virtual Private Network",
     "answer": "Ad-hoc Network",
-    "explanation": "Ad-hoc Network(애드혹 네트워크)는 고정된 인프라(기지국, 라우터 등) 없이 이동 노드들만으로 구성되는 자율적인 네트워크입니다. 각 노드가 호스트이자 라우터 역할을 수행하며, 멀티홉 라우팅을 통해 통신합니다. MANET(Mobile Ad-hoc Network)이라고도 합니다.",
-    "source": "generated",
-    "sourceFile": "https://chobopark.tistory.com/495",
-    "tags": [
-      "네트워크",
-      "Ad-hoc",
-      "무선네트워크",
-      "2024년",
-      "3회"
-    ]
+    "explanation": "Ad-hoc Network(애드혹 네트워크)는 고정된 인프라(기지국, 라우터 등) 없이 이동 노드들만으로 구성되는 자율적인 네트워크입니다. 각 노드가 호스트이자 라우터 역할을 수행하며, 멀티홉 라우팅을 통해 통신합니다. MANET(Mobile Ad-hoc Network)이라고도 합니다."
   }
 ]

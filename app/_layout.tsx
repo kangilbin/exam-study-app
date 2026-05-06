@@ -35,11 +35,8 @@ export default function RootLayout() {
       </Stack>
 
       {/* 전역 배너 광고 - 앱 전체에서 단 1개 유지, 재로딩 없음 */}
-      <View
-        style={{ position: 'absolute', bottom: bottomInset, left: 0, right: 0 }}
-        onLayout={(e) => setBannerHeight(e.nativeEvent.layout.height)}
-      >
-        <BannerAdView />
+      <View style={{ position: 'absolute', bottom: bottomInset, left: 0, right: 0 }}>
+        <BannerAdView onHeightChange={setBannerHeight} />
       </View>
     </View>
   );
