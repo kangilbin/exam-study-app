@@ -3,7 +3,6 @@
     "name": "정처기 실기 프리패스",
     "slug": "exam-study-app",
     "version": "1.0.0",
-    "orientation": "portrait",
     "platforms": ["ios", "android"],
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",

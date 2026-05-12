@@ -4,16 +4,22 @@
  * 배너 광고는 여기서 단 1회 마운트 → 화면 이동 시 재로딩 없음
  */
 
+import { useEffect } from 'react';
 import { View } from 'react-native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import * as ScreenOrientation from 'expo-screen-orientation';
 import { BannerAdView } from '@/components/ads/BannerAdView';
 import { useAdStore } from '@/store/useAdStore';
 
 export default function RootLayout() {
   const { bottom: bottomInset } = useSafeAreaInsets();
   const setBannerHeight = useAdStore((s) => s.setBannerHeight);
+
+  useEffect(() => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+  }, []);
 
   return (
     <View style={{ flex: 1 }}>
