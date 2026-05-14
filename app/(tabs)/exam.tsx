@@ -3,7 +3,6 @@
  * 연도별 SectionList로 기출 회차 표시
  */
 
-import { useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -11,166 +10,20 @@ import {
   Pressable,
   StyleSheet,
   Modal,
-  Alert,
   ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { getCategoriesByGroup } from '@/features/categories/services/categoryService';
-import { loadQuestionsByCategory } from '@/features/questions/services/questionService';
-import { useQuizStore } from '@/store/useQuizStore';
-import { useUserStore } from '@/store/useUserStore';
-import { useRewardedAd } from '@/components/ads/useRewardedAd';
 import { COLORS } from '@/lib/constants';
-import type { Category, CategoryId } from '@/features/questions/types';
-
-/** 연도별 섹션 타입 */
-interface ExamSection {
-  title: string;
-  data: Category[];
-}
-
-/** 카테고리 ID에서 연도를 추출 */
-const extractYear = (id: string): number => {
-  const match = id.match(/exam-(\d{4})/);
-  return match ? parseInt(match[1], 10) : 0;
-};
-
-/** 모달에 표시할 정보 */
-interface ResumeInfo {
-  categoryId: CategoryId;
-  categoryName: string;
-  totalCount: number;
-  seenCount: number;
-  unseenCount: number;
-  canResume: boolean;
-  resumeIndex: number;
-  resumeTotal: number;
-  correctCount: number;
-  incorrectCount: number;
-  score: number;
-  isPassed: boolean;
-  isCompleted: boolean;
-}
+import type { Category } from '@/features/questions/types';
+import { useExamCategories, type ExamSection } from '@/features/questions/hooks/useExamCategories';
 
 export default function ExamScreen() {
-  const router = useRouter();
-  /** progress 구독으로 학습 후 돌아왔을 때 리렌더링 보장 */
-  const progress = useUserStore((s) => s.progress);
-  const [modalInfo, setModalInfo] = useState<ResumeInfo | null>(null);
-  const [isWaitingForAd, setIsWaitingForAd] = useState(false);
-  const { showAd } = useRewardedAd();
+  const { sections, progress, modalInfo, setModalInfo, isWaitingForAd, handleExamPress, navigateWithMode, getItemStats } =
+    useExamCategories();
 
-  /** 광고 로딩 대기 상태를 포함한 showAd 래퍼 */
-  const showAdWithLoading = (callbacks: Parameters<typeof showAd>[0]) => {
-    setIsWaitingForAd(true);
-    showAd({
-      onRewarded: () => { setIsWaitingForAd(false); callbacks.onRewarded(); },
-      onDismissed: () => { setIsWaitingForAd(false); callbacks.onDismissed?.(); },
-      onError: () => {
-        setIsWaitingForAd(false);
-        Alert.alert('알림', '광고를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
-      },
-    });
-  };
-
-  /** 기출 카테고리를 연도별로 그룹핑 */
-  const sections = useMemo<ExamSection[]>(() => {
-    const examCategories = getCategoriesByGroup('exam');
-    
-    // 카테고리 ID에서 연도를 추출하여 중복 제거 후 내림차순 정렬
-    const years = Array.from(
-      new Set(examCategories.map((c) => extractYear(c.id)))
-    ).sort((a, b) => b - a);
-
-    return years
-      .map((year) => ({
-        title: `${year}년`,
-        data: examCategories
-          .filter((c) => extractYear(c.id) === year)
-          .sort((a, b) => b.id.localeCompare(a.id)),
-      }))
-      .filter((s) => s.data.length > 0);
-  }, []);
-
-  /** 기출문제 카드 클릭 */
-  const handleExamPress = (item: Category) => {
-    const allQs = loadQuestionsByCategory(item.id);
-    const userProgress = useUserStore.getState().progress;
-    const unseenQs = allQs.filter((q) => {
-      const p = userProgress[q.id];
-      return !p || p.status === 'unseen';
-    });
-    const seenCount = allQs.length - unseenQs.length;
-
-    const quizCanResume = useQuizStore.getState().categoryId === item.id
-      && useQuizStore.getState().questions.length > 0
-      && useQuizStore.getState().currentIndex > 0;
-
-    // 처음 도전: 보상형 광고 시청 후 진입
-    if (seenCount === 0 && !quizCanResume) {
-      showAdWithLoading({
-        onRewarded: () => router.push(`/quiz/${item.id}`),
-        onDismissed: () =>
-          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
-      });
-      return;
-    }
-
-    // 기록이 있으면 모달 표시
-    const stats = useUserStore.getState().getCategoryStats(item.id);
-    const score = allQs.length > 0
-      ? Math.round((stats.correctCount / allQs.length) * 100)
-      : 0;
-
-    setModalInfo({
-      categoryId: item.id,
-      categoryName: item.name,
-      totalCount: allQs.length,
-      seenCount,
-      unseenCount: unseenQs.length,
-      canResume: quizCanResume,
-      resumeIndex: useQuizStore.getState().currentIndex,
-      resumeTotal: useQuizStore.getState().questions.length,
-      correctCount: stats.correctCount,
-      incorrectCount: stats.incorrectCount,
-      score,
-      isPassed: score >= 60,
-      isCompleted: unseenQs.length === 0,
-    });
-  };
-
-  /** 모달에서 선택 후 이동 */
-  const navigateWithMode = (mode: string) => {
-    if (!modalInfo) return;
-    const catId = modalInfo.categoryId;
-
-    // 전체 다시 풀기: 보상형 광고 시청 후 기록 초기화 → 진입
-    if (mode === 'all') {
-      setModalInfo(null);
-      showAdWithLoading({
-        onRewarded: () => {
-          useUserStore.getState().resetCategoryProgress(catId);
-          router.push(`/quiz/${catId}?mode=${mode}`);
-        },
-        onDismissed: () =>
-          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
-      });
-      return;
-    }
-
-    setModalInfo(null);
-    router.push(`/quiz/${catId}?mode=${mode}`);
-  };
-
-  /** 회차 카드 렌더링 */
   const renderItem = ({ item }: { item: Category }) => {
-    const stats = useUserStore.getState().getCategoryStats(item.id);
-    const progress =
-      item.questionCount > 0
-        ? Math.round((stats.seenCount / item.questionCount) * 100)
-        : 0;
+    const { stats, progress } = getItemStats(item);
 
     return (
       <Pressable

@@ -11,7 +11,7 @@ import { getQuestionById } from '@/features/questions/services/questionService';
 import type { Question, CategoryId, GradeResult } from '@/features/questions/types';
 
 /** 문제별 답변 상태 (이전 문제 복원용) */
-interface QuestionAnswerState {
+export interface QuestionAnswerState {
   selectedChoiceIndex: number | null;
   isAnswered: boolean;
   isExplanationRevealed: boolean;

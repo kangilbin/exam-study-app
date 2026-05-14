@@ -3,7 +3,6 @@
  * memorize 카테고리 → 카드형 암기, 그 외 → 문제 풀이
  */
 
-import { useEffect, useMemo, useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -21,142 +20,46 @@ import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import questionImages from '@/assets/images/questions';
-import {
-  useQuizStore,
-  useCurrentQuestion,
-  useCorrectCount,
-  useIsQuizComplete,
-} from '@/store/useQuizStore';
-import { useUserStore } from '@/store/useUserStore';
-import { useFlashcardStore } from '@/store/useFlashcardStore';
-import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from '@/features/questions/services/questionService';
-import {
-  loadFlashcards,
-  shuffleCards,
-  isMemorizeCategory,
-} from '@/features/flashcards/services/flashcardService';
+import { isMemorizeCategory } from '@/features/flashcards/services/flashcardService';
 import FlashCardDeck from '@/components/FlashCardDeck';
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
-import { detectAnswerType } from '@/features/questions/services/gradingService';
-import type { CategoryId, Question } from '@/features/questions/types';
-import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
+import type { CategoryId } from '@/features/questions/types';
 import { useAdStore } from '@/store/useAdStore';
-
-const FONT_SIZE_MAP = { small: 11, medium: 13, large: 16 } as const;
-const INTERSTITIAL_INTERVAL = 5;
+import { useFlashcardSession } from '@/features/flashcards/hooks/useFlashcardSession';
+import { useQuizSession } from '@/features/questions/hooks/useQuizSession';
 
 export default function QuizScreen() {
   const { categoryId, mode } = useLocalSearchParams<{ categoryId: string; mode?: string }>();
   const router = useRouter();
   const category = getCategoryById(categoryId as CategoryId);
-  const { showAd } = useInterstitialAd();
-
-  // ─── memorize 카테고리 → 카드형 암기 UI ───
   const isCardMode = isMemorizeCategory(categoryId || '');
-
-  const fcStartSession = useFlashcardStore((s) => s.startSession);
-  const fcFlipCard = useFlashcardStore((s) => s.flipCard);
-  const fcMarkKnown = useFlashcardStore((s) => s.markKnown);
-  const fcMarkUnknown = useFlashcardStore((s) => s.markUnknown);
-  const fcToggleDisplayMode = useFlashcardStore((s) => s.toggleDisplayMode);
-  const fcResetSession = useFlashcardStore((s) => s.resetSession);
-  const fcGoToPrevious = useFlashcardStore((s) => s.goToPrevious);
-  const fcGoToNext = useFlashcardStore((s) => s.goToNext);
-  const fcSaveSession = useFlashcardStore((s) => s.saveSession);
-  const fcResumeSession = useFlashcardStore((s) => s.resumeSession);
-  const fcResumeFromProgress = useFlashcardStore((s) => s.resumeFromProgress);
-  const fcClearLastSession = useFlashcardStore((s) => s.clearLastSession);
-  const fcDisplayMode = useFlashcardStore((s) => s.displayMode);
-  const fcCards = useFlashcardStore((s) => s.cards);
-  const fcCurrentIndex = useFlashcardStore((s) => s.currentIndex);
-  const fcIsFlipped = useFlashcardStore((s) => s.isFlipped);
-  const fcCardProgress = useFlashcardStore((s) => s.cardProgress);
-  const fcGetSessionStats = useFlashcardStore((s) => s.getSessionStats);
-  const fcFlashcardBookmarks = useFlashcardStore((s) => s.flashcardBookmarks);
-  const fcToggleFlashcardBookmark = useFlashcardStore((s) => s.toggleFlashcardBookmark);
-
-  const [showComplete, setShowComplete] = useState(false);
-  const [showExitModal, setShowExitModal] = useState(false);
   const bannerHeight = useAdStore((s) => s.bannerHeight);
 
-  // 카드 세션 초기화
-  useEffect(() => {
-    if (!isCardMode || !categoryId) return;
+  const {
+    fcCards, fcCurrentIndex, fcIsFlipped, fcDisplayMode, fcCardProgress,
+    fcFlashcardBookmarks, fcIsComplete, fcStats, fcProgress,
+    showComplete, setShowComplete, showExitModal, setShowExitModal,
+    fcFlipCard, fcGoToPrevious, fcGoToNext, fcToggleDisplayMode, fcToggleFlashcardBookmark,
+    handleFcKnown, handleFcUnknown,
+    handleRetryUnknown, handleRetryAll,
+    handleGoBack, handleConfirmExit, handleExitAfterComplete,
+  } = useFlashcardSession(categoryId || '', mode);
 
-    // 북마크 세션은 외부에서 startSession 완료 후 진입 — 재초기화 방지
-    if (categoryId === 'flashcard-bookmark') return;
-
-    // mode=resume → lastSession 복원 또는 cardProgress 기반 이어서 학습
-    if (mode === 'resume') {
-      const lastSession = useFlashcardStore.getState().lastSession;
-      if (lastSession?.categoryId === categoryId) {
-        const success = fcResumeSession();
-        if (success) return;
-      }
-      // lastSession 없으면 cardProgress 기반으로 첫 unseen 카드부터
-      fcResumeFromProgress(categoryId as CategoryId);
-      return;
-    }
-
-    let cards = loadFlashcards(categoryId as CategoryId);
-    if (mode === 'unknown') {
-      cards = cards.filter((c) => {
-        const p = fcCardProgress[c.id];
-        return p && p.status === 'unknown';
-      });
-    }
-    if (cards.length === 0) cards = loadFlashcards(categoryId as CategoryId);
-    fcStartSession(categoryId as CategoryId, cards);
-  }, [categoryId, isCardMode]);
-
-  const fcIsComplete = fcCurrentIndex >= fcCards.length && fcCards.length > 0;
-  useEffect(() => {
-    if (fcIsComplete) setShowComplete(true);
-  }, [fcIsComplete]);
-
-  const fcStats = useMemo(() => fcGetSessionStats(), [fcCurrentIndex, fcCardProgress]);
-  const fcProgress = fcCards.length > 0 ? fcCurrentIndex / fcCards.length : 0;
-
-  const handleFcKnown = useCallback(() => fcMarkKnown(), [fcMarkKnown]);
-  const handleFcUnknown = useCallback(() => fcMarkUnknown(), [fcMarkUnknown]);
+  const {
+    questions, currentIndex, currentQuestion, correctCount, isComplete,
+    isAnswered, isExplanationRevealed, selectedChoiceIndex,
+    userAnswers, gradeResult, bookmarks, toggleBookmark,
+    codeFontSize, isSubjectiveCategory, answerMeta, hasSubjectiveInput,
+    sqlRowCount, setSqlRowCount,
+    revealExplanation, setUserAnswer, removeUserAnswers, quizGoToPrevious,
+    handleChoicePress, handleNext, handleSubjectiveSubmit,
+    handleShowAnswer, handleRetry,
+  } = useQuizSession(categoryId || '', mode);
 
   // 카드형 UI 렌더링
   if (isCardMode) {
     const categoryName = category?.name || '암기 카드';
-
-    const handleRetryUnknown = () => {
-      setShowComplete(false);
-      let cards = loadFlashcards(categoryId as CategoryId).filter((c) => {
-        const p = fcCardProgress[c.id];
-        return p && p.status === 'unknown';
-      });
-      if (cards.length === 0) cards = loadFlashcards(categoryId as CategoryId);
-      fcStartSession(categoryId as CategoryId, cards);
-    };
-
-    const handleRetryAll = () => {
-      setShowComplete(false);
-      const cards = shuffleCards(loadFlashcards(categoryId as CategoryId));
-      fcStartSession(categoryId as CategoryId, cards);
-    };
-
-    const handleGoBack = () => {
-      setShowExitModal(true);
-    };
-
-    const handleConfirmExit = () => {
-      setShowExitModal(false);
-      fcSaveSession();
-      fcResetSession();
-      router.back();
-    };
-
-    const handleExitAfterComplete = () => {
-      fcClearLastSession();
-      fcResetSession();
-      router.back();
-    };
 
     return (
       <GestureHandlerRootView style={{ flex: 1 }}>
@@ -329,251 +232,7 @@ export default function QuizScreen() {
       </GestureHandlerRootView>
     );
   }
-  // ─── 여기서부터 기존 문제 풀이 UI ───
-
-  const startQuiz = useQuizStore((s) => s.startQuiz);
-  const startQuizAt = useQuizStore((s) => s.startQuizAt);
-  const restoreSavedSession = useQuizStore((s) => s.restoreSavedSession);
-  const quizGoToPrevious = useQuizStore((s) => s.goToPrevious);
-  const resetQuiz = useQuizStore((s) => s.resetQuiz);
-  const selectChoice = useQuizStore((s) => s.selectChoice);
-  const submitAnswer = useQuizStore((s) => s.submitAnswer);
-  const revealExplanation = useQuizStore((s) => s.revealExplanation);
-  const nextQuestion = useQuizStore((s) => s.nextQuestion);
-  const selectedChoiceIndex = useQuizStore((s) => s.selectedChoiceIndex);
-  const isAnswered = useQuizStore((s) => s.isAnswered);
-  const isExplanationRevealed = useQuizStore((s) => s.isExplanationRevealed);
-  const currentIndex = useQuizStore((s) => s.currentIndex);
-  const questions = useQuizStore((s) => s.questions);
-  const results = useQuizStore((s) => s.results);
-  const currentQuestion = useCurrentQuestion();
-  const correctCount = useCorrectCount();
-  const isComplete = useIsQuizComplete();
-  const updateProgress = useUserStore((s) => s.updateProgress);
-  const bookmarks = useUserStore((s) => s.bookmarks);
-  const toggleBookmark = useUserStore((s) => s.toggleBookmark);
-  const shuffleMode = useUserStore((s) => s.settings.shuffleMode);
-  const fontSize = useUserStore((s) => s.settings.fontSize);
-  const codeFontSize = FONT_SIZE_MAP[fontSize];
-
-  // 주관식 상태
-  const userAnswers = useQuizStore((s) => s.userAnswers);
-  const gradeResult = useQuizStore((s) => s.gradeResult);
-  const setUserAnswer = useQuizStore((s) => s.setUserAnswer);
-  const removeUserAnswers = useQuizStore((s) => s.removeUserAnswers);
-  const submitSubjectiveAnswer = useQuizStore((s) => s.submitSubjectiveAnswer);
-  const isSubjectiveCategory = categoryId?.startsWith('exam-')
-    || categoryId?.startsWith('code-')
-    || categoryId?.startsWith('sql-')
-    || currentQuestion?.categoryId?.startsWith('exam-')
-    || currentQuestion?.categoryId?.startsWith('code-')
-    || currentQuestion?.categoryId?.startsWith('sql-')
-    || false;
-
-  // 현재 문제의 답변 메타 정보 (주관식일 때만 계산)
-  const answerMeta = useMemo(
-    () => (isSubjectiveCategory && currentQuestion ? detectAnswerType(currentQuestion) : null),
-    [isSubjectiveCategory, currentQuestion?.id],
-  );
-
-  // SQL 결과 행 수 관리 - userAnswers에서 복원
-  const [sqlRowCount, setSqlRowCount] = useState(1);
-  useEffect(() => {
-    // userAnswers에 row_ 키가 있으면 행 수 복원, 없으면 1
-    const rowKeys = Object.keys(userAnswers).filter((k) => k.startsWith('row_'));
-    if (rowKeys.length > 0) {
-      const maxRow = rowKeys.reduce((max, k) => {
-        const m = k.match(/^row_(\d+)/);
-        return m ? Math.max(max, parseInt(m[1], 10)) : max;
-      }, 0);
-      setSqlRowCount(maxRow + 1);
-    } else {
-      setSqlRowCount(1);
-    }
-  }, [currentQuestion?.id]);
-
-  useEffect(() => {
-    if (!categoryId) return;
-
-    // 북마크/오답은 이전 화면에서 startQuiz 호출 완료
-    if (categoryId === 'bookmark') return;
-
-    // 오답 다시 풀기 (기출문제만)
-    if (categoryId === 'incorrect') {
-      const userProgress = useUserStore.getState().progress;
-      let qs = getIncorrectQuestions(userProgress, 'exam');
-      if (shuffleMode) qs = shuffleQuestions(qs);
-      startQuiz('incorrect' as CategoryId, qs);
-      return;
-    }
-
-    // mode=resume → 기존 세션 복원 (퀴즈 세션 이어서)
-    if (mode === 'resume') {
-      const quizState = useQuizStore.getState();
-      const restored = quizState.answeredStates[quizState.currentIndex];
-      useQuizStore.setState({
-        selectedChoiceIndex: restored?.selectedChoiceIndex ?? null,
-        isAnswered: restored?.isAnswered ?? false,
-        isExplanationRevealed: restored?.isExplanationRevealed ?? false,
-        userAnswers: restored?.userAnswers ?? {},
-        gradeResult: restored?.gradeResult ?? null,
-      });
-      return;
-    }
-
-    const allQs = loadQuestionsByCategory(categoryId as CategoryId);
-
-    // mode=resume-progress → 전체 문제 중 첫 unseen 위치부터 (세션 복원 우선)
-    if (mode === 'resume-progress') {
-      const quizState = useQuizStore.getState();
-      const userProgress = useUserStore.getState().progress;
-
-      // 1순위: 현재 활성 세션이 같은 카테고리
-      // 2순위: savedSessions에서 복원
-      let qs: Question[] = [];
-      let states: Record<number, any> = {};
-
-      if (quizState.categoryId === categoryId && quizState.questions.length > 0) {
-        qs = quizState.questions;
-        states = quizState.answeredStates;
-      } else if (restoreSavedSession(categoryId as string)) {
-        // restoreSavedSession이 상태를 복원함
-        const restored = useQuizStore.getState();
-        qs = restored.questions;
-        states = restored.answeredStates;
-      }
-
-      if (qs.length > 0) {
-        // 첫 unseen 위치 찾기
-        let resumeIndex = 0;
-        for (let i = 0; i < qs.length; i++) {
-          const p = userProgress[qs[i].id];
-          if (!p || p.status === 'unseen') {
-            resumeIndex = i;
-            break;
-          }
-          if (i === qs.length - 1) resumeIndex = 0;
-        }
-        const restoredState = states[resumeIndex];
-        useQuizStore.setState({
-          currentIndex: resumeIndex,
-          selectedChoiceIndex: restoredState?.selectedChoiceIndex ?? null,
-          isAnswered: restoredState?.isAnswered ?? false,
-          isExplanationRevealed: restoredState?.isExplanationRevealed ?? false,
-          userAnswers: restoredState?.userAnswers ?? {},
-          gradeResult: restoredState?.gradeResult ?? null,
-        });
-        return;
-      }
-
-      // 저장된 세션 없으면 새로 시작
-      let resumeIndex = 0;
-      for (let i = 0; i < allQs.length; i++) {
-        const p = userProgress[allQs[i].id];
-        if (!p || p.status === 'unseen') {
-          resumeIndex = i;
-          break;
-        }
-        if (i === allQs.length - 1) resumeIndex = 0;
-      }
-      startQuizAt(categoryId as CategoryId, allQs, resumeIndex);
-      return;
-    }
-
-    // mode=incorrect → 틀린 문제만
-    if (mode === 'incorrect') {
-      const userProgress = useUserStore.getState().progress;
-      const incorrectQs = allQs.filter((q) => {
-        const p = userProgress[q.id];
-        return p?.status === 'incorrect';
-      });
-      let qs = incorrectQs.length > 0 ? incorrectQs : allQs;
-      if (shuffleMode) qs = shuffleQuestions(qs);
-      startQuiz(categoryId as CategoryId, qs);
-      return;
-    }
-
-    // mode=unseen → 안 푼 문제만
-    if (mode === 'unseen') {
-      const userProgress = useUserStore.getState().progress;
-      const unseenQs = allQs.filter((q) => {
-        const p = userProgress[q.id];
-        return !p || p.status === 'unseen';
-      });
-      let qs = unseenQs.length > 0 ? unseenQs : allQs;
-      if (shuffleMode) qs = shuffleQuestions(qs);
-      startQuiz(categoryId as CategoryId, qs);
-      return;
-    }
-
-    // mode=all 또는 기본 → 전체 문제
-    let qs = [...allQs];
-    if (shuffleMode) qs = shuffleQuestions(qs);
-    startQuiz(categoryId as CategoryId, qs);
-  }, [categoryId]);
-
-  /** 주관식 제출 */
-  const handleSubjectiveSubmit = () => {
-    if (!currentQuestion) return;
-    submitSubjectiveAnswer(answerMeta);
-    const result = useQuizStore.getState().gradeResult;
-    if (currentQuestion && result) {
-      updateProgress(currentQuestion.id, result.isCorrect ? 'correct' : 'incorrect');
-    }
-  };
-
-  /** 주관식 입력값 존재 여부 (제출 버튼 활성화용) */
-  const hasSubjectiveInput = useMemo(() => {
-    if (!answerMeta) return false;
-    if (answerMeta.type === 'sqlResult' && answerMeta.sqlExpectedRows) {
-      return answerMeta.sqlExpectedRows.some((row, r) =>
-        row.some((_, c) => (userAnswers[`row_${r}_col_${c}`] || '').trim().length > 0),
-      );
-    }
-    if (answerMeta.type === 'multiple' && answerMeta.parts) {
-      return answerMeta.parts.some((_, i) => (userAnswers[`part_${i}`] || '').trim().length > 0);
-    }
-    return (userAnswers['main'] || '').trim().length > 0;
-  }, [answerMeta, userAnswers]);
-
-  /** 선택지 터치 시 즉시 채점 */
-  const handleChoicePress = (index: number) => {
-    if (isAnswered) return;
-    selectChoice(index);
-    // selectChoice 후 바로 submitAnswer 호출 (Zustand는 동기적이므로 순서 보장)
-    submitAnswer();
-    // 진행도 기록
-    if (currentQuestion) {
-      const isCorrect = currentQuestion.choices?.[index]?.isCorrect ?? false;
-      updateProgress(currentQuestion.id, isCorrect ? 'correct' : 'incorrect');
-    }
-  };
-
-  const handleNext = () => {
-    if (isComplete) {
-      resetQuiz();
-      router.replace({
-        pathname: '/quiz/result',
-        params: {
-          categoryId: categoryId || '',
-          total: String(questions.length),
-          correct: String(correctCount),
-          incorrect: JSON.stringify(
-            results.filter((r) => !r.isCorrect).map((r) => r.questionId)
-          ),
-        },
-      });
-    } else {
-      const nextIndex = currentIndex + 1;
-      if (nextIndex > 0 && nextIndex % INTERSTITIAL_INTERVAL === 0) {
-        showAd(() => nextQuestion());
-      } else {
-        nextQuestion();
-      }
-    }
-  };
-
-  if (!currentQuestion) {
+  if (!currentQuestion && !isCardMode) {
     return (
       <SafeAreaView style={styles.container}>
         <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
@@ -586,9 +245,6 @@ export default function QuizScreen() {
       </SafeAreaView>
     );
   }
-
-  // 정답 인덱스 찾기
-  const correctIndex = currentQuestion.choices?.findIndex((c) => c.isCorrect) ?? -1;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -890,10 +546,7 @@ export default function QuizScreen() {
             {!isAnswered ? (
               <Pressable
                 style={styles.showAnswerButton}
-                onPress={() => {
-                  useQuizStore.setState({ isAnswered: true });
-                  updateProgress(currentQuestion.id, 'correct');
-                }}
+                onPress={handleShowAnswer}
               >
                 <Text style={styles.showAnswerButtonText}>정답 보기</Text>
               </Pressable>
@@ -944,15 +597,7 @@ export default function QuizScreen() {
             <>
               <Pressable
                 style={styles.retryButton}
-                onPress={() => {
-                  useQuizStore.setState({
-                    selectedChoiceIndex: null,
-                    isAnswered: false,
-                    isExplanationRevealed: false,
-                    userAnswers: {},
-                    gradeResult: null,
-                  });
-                }}
+                onPress={handleRetry}
               >
                 <MaterialCommunityIcons name="refresh" size={18} color={COLORS.primary} />
               </Pressable>
