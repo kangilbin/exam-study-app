@@ -8,7 +8,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
-import { BannerAdView } from '@/components/ads/BannerAdView';
 import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 import { useAdStore } from '@/store/useAdStore';
 
@@ -67,11 +66,6 @@ export default function QuizResultScreen() {
             ? '괜찮습니다. 오답을 복습해보세요.'
             : '더 많은 연습이 필요합니다. 화이팅!'}
         </Text>
-
-        {/* 광고 배너 */}
-        <View style={styles.adContainer}>
-          <BannerAdView />
-        </View>
 
         {/* 버튼 */}
         <View style={styles.buttonGroup}>
@@ -143,7 +137,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 32,
   },
-  adContainer: { width: '100%', marginBottom: 24 },
   buttonGroup: { width: '100%', gap: 12 },
   primaryButton: {
     backgroundColor: COLORS.primary,
