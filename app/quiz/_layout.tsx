@@ -14,7 +14,6 @@ export default function QuizLayout() {
   return (
     <View style={{ flex: 1 }}>
       <Stack
-        style={{ flex: 1 }}
         screenOptions={{
           headerStyle: { backgroundColor: '#6366f1' },
           headerTintColor: '#ffffff',
