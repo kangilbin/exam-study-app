@@ -5,7 +5,7 @@
  */
 
 import { useState, useRef } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, useWindowDimensions } from 'react-native';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
 
 const isExpoGo = Constants.executionEnvironment === ExecutionEnvironment.StoreClient;
@@ -26,9 +26,15 @@ export const BannerAdView = isExpoGo
       // 발생시키는 경우, onAdLoaded 시점에 저장된 높이를 사용해 높이 전달
       const pendingHeightRef = useRef(0);
 
+      // 태블릿 대응: ANCHORED_ADAPTIVE_BANNER는 컨테이너 너비에 맞게 높이가 결정됨
+      // 태블릿(800dp+)에서 배너가 과도하게 커져 탭바를 가리는 문제 방지
+      // 최대 너비 468dp(Full Banner 기준)로 제한 → 최대 높이 ~60dp로 유지
+      const { width: screenWidth } = useWindowDimensions();
+      const bannerWidth = Math.min(screenWidth, 468);
+
       return (
         <View
-          style={[styles.container, !isLoaded && styles.hidden]}
+          style={[styles.container, !isLoaded && styles.hidden, { width: bannerWidth, alignSelf: 'center' }]}
           onLayout={(e) => {
             const h = e.nativeEvent.layout.height;
             if (isLoaded && h > 0) {

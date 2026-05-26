@@ -1,0 +1,2 @@
+- [Theory Data Expansion Completion](theory-data-expansion-completion.md) — Feature reached 93% design match rate, 230 questions from PDF, 8-day execution
+- [AdMob Add Completion](admob-add-completion.md) — AdMob 광고 통합 (보상형+배너), 100% 매칭율, Android 버그 수정 완료

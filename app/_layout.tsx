@@ -7,7 +7,7 @@
 import { useEffect } from 'react';
 import { View } from 'react-native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+import { SystemBars } from 'react-native-edge-to-edge';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
 export default function RootLayout() {
@@ -17,7 +17,8 @@ export default function RootLayout() {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar style="auto" />
+      {/* SystemBars: StatusBar + NavigationBar 색상/스타일 통합 제어 */}
+      <SystemBars style="light" />
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: '#6366f1' },

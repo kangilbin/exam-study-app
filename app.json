@@ -3,7 +3,10 @@
     "name": "정처기 실기 프리패스",
     "slug": "exam-study-app",
     "version": "1.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "scheme": "exam-study",
@@ -24,7 +27,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "package": "com.examstudy.app",
-      "versionCode": 5,
+      "versionCode": 6,
       "predictiveBackGestureEnabled": false
     },
     "plugins": [
@@ -36,7 +39,8 @@
           "androidAppId": "ca-app-pub-3001608230251687~9159924895",
           "iosAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
         }
-      ]
+      ],
+      "react-native-edge-to-edge"
     ],
     "updates": {
       "url": "https://u.expo.dev/1bd8b54b-f3ce-4ece-bd7a-9199e512576e"
