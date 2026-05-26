@@ -78,7 +78,7 @@ export default function ExamScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <SectionList
         sections={sections}
         renderItem={renderItem}

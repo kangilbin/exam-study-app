@@ -25,7 +25,6 @@ import FlashCardDeck from '@/components/FlashCardDeck';
 import { getCategoryById } from '@/features/categories/services/categoryService';
 import { COLORS } from '@/lib/constants';
 import type { CategoryId } from '@/features/questions/types';
-import { useAdStore } from '@/store/useAdStore';
 import { useFlashcardSession } from '@/features/flashcards/hooks/useFlashcardSession';
 import { useQuizSession } from '@/features/questions/hooks/useQuizSession';
 
@@ -34,8 +33,6 @@ export default function QuizScreen() {
   const router = useRouter();
   const category = getCategoryById(categoryId as CategoryId);
   const isCardMode = isMemorizeCategory(categoryId || '');
-  const bannerHeight = useAdStore((s) => s.bannerHeight);
-
   const {
     fcCards, fcCurrentIndex, fcIsFlipped, fcDisplayMode, fcCardProgress,
     fcFlashcardBookmarks, fcIsComplete, fcStats, fcProgress,
@@ -63,7 +60,7 @@ export default function QuizScreen() {
 
     return (
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
           <Stack.Screen options={{ headerShown: false }} />
 
           {/* 헤더 */}
@@ -166,9 +163,6 @@ export default function QuizScreen() {
             </View>
           )}
 
-          {/* 전역 배너 광고 높이만큼 공간 확보 */}
-          <View style={{ height: bannerHeight }} />
-
           {/* 완료 모달 */}
           <Modal visible={showComplete} transparent animationType="fade">
             <View style={styles.fcModalOverlay}>
@@ -234,7 +228,7 @@ export default function QuizScreen() {
   }
   if (!currentQuestion && !isCardMode) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
         <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>이 카테고리에 문제가 없습니다.</Text>
@@ -247,7 +241,7 @@ export default function QuizScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       {/* 진행도 */}
@@ -616,8 +610,6 @@ export default function QuizScreen() {
 
       </KeyboardAvoidingView>
 
-      {/* 배너 spacer: KAV 밖 → 키보드 이벤트와 완전히 분리 */}
-      <View style={{ height: bannerHeight }} />
     </SafeAreaView>
   );
 }

@@ -3,7 +3,7 @@
  */
 
 import { View, Text, FlatList, Pressable, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useUserStore } from '@/store/useUserStore';
@@ -11,8 +11,10 @@ import { useQuizStore } from '@/store/useQuizStore';
 import { getQuestionById } from '@/features/questions/services/questionService';
 import { COLORS } from '@/lib/constants';
 import type { Question, CategoryId } from '@/features/questions/types';
+import { BannerAdView } from '@/components/ads/BannerAdView';
 
 export default function BookmarksScreen() {
+  const { bottom } = useSafeAreaInsets();
   const router = useRouter();
   const bookmarkIds = useUserStore((s) => s.bookmarks);
   const toggleBookmark = useUserStore((s) => s.toggleBookmark);
@@ -36,7 +38,7 @@ export default function BookmarksScreen() {
 
   if (bookmarkedQuestions.length === 0) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
         <View style={styles.emptyContainer}>
           <MaterialCommunityIcons
             name="bookmark-off-outline"
@@ -50,6 +52,7 @@ export default function BookmarksScreen() {
             학습 중 하트 아이콘을 눌러 북마크하세요.
           </Text>
         </View>
+        <View style={{ paddingBottom: bottom }}><BannerAdView /></View>
       </SafeAreaView>
     );
   }
@@ -90,6 +93,7 @@ export default function BookmarksScreen() {
           </Pressable>
         )}
       />
+      <BannerAdView />
     </SafeAreaView>
   );
 }

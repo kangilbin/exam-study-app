@@ -38,7 +38,7 @@ export default function ProfileScreen() {
     : 0;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <ScrollView contentContainerStyle={styles.content}>
         {/* 통계 카드 */}
         <View style={styles.statsCard}>

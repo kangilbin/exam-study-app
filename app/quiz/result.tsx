@@ -9,7 +9,6 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
-import { useAdStore } from '@/store/useAdStore';
 
 export default function QuizResultScreen() {
   const router = useRouter();
@@ -21,7 +20,6 @@ export default function QuizResultScreen() {
   }>();
 
   const { showAd } = useInterstitialAd();
-  const bannerHeight = useAdStore((s) => s.bannerHeight);
 
   const total = parseInt(params.total || '0', 10);
   const correct = parseInt(params.correct || '0', 10);
@@ -29,7 +27,7 @@ export default function QuizResultScreen() {
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <ScrollView contentContainerStyle={styles.content}>
         {/* 결과 원형 */}
         <View style={styles.resultCircle}>
@@ -88,8 +86,6 @@ export default function QuizResultScreen() {
           </Pressable>
         </View>
 
-        {/* 전역 배너 광고 높이만큼 공간 확보 */}
-        <View style={{ height: bannerHeight }} />
       </ScrollView>
     </SafeAreaView>
   );

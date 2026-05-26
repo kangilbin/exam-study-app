@@ -4,7 +4,7 @@
 
 import { useMemo } from 'react';
 import { View, Text, FlatList, Pressable, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFlashcardStore } from '@/store/useFlashcardStore';
@@ -12,6 +12,7 @@ import { loadFlashcards } from '@/features/flashcards/services/flashcardService'
 import { COLORS } from '@/lib/constants';
 import type { FlashCard } from '@/features/flashcards/types';
 import type { CategoryId } from '@/features/questions/types';
+import { BannerAdView } from '@/components/ads/BannerAdView';
 
 const MEMORIZE_CATEGORIES: CategoryId[] = [
   'memorize-se',
@@ -21,6 +22,7 @@ const MEMORIZE_CATEGORIES: CategoryId[] = [
 ];
 
 export default function FlashcardBookmarksScreen() {
+  const { bottom } = useSafeAreaInsets();
   const router = useRouter();
   const bookmarkIds = useFlashcardStore((s) => s.flashcardBookmarks);
   const toggleFlashcardBookmark = useFlashcardStore((s) => s.toggleFlashcardBookmark);
@@ -54,7 +56,7 @@ export default function FlashcardBookmarksScreen() {
 
   if (bookmarkedCards.length === 0) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
         <View style={styles.emptyContainer}>
           <MaterialCommunityIcons
             name="bookmark-off-outline"
@@ -66,6 +68,7 @@ export default function FlashcardBookmarksScreen() {
             학습 중 북마크 아이콘을 눌러 저장하세요.
           </Text>
         </View>
+        <View style={{ paddingBottom: bottom }}><BannerAdView /></View>
       </SafeAreaView>
     );
   }
@@ -106,6 +109,7 @@ export default function FlashcardBookmarksScreen() {
           </Pressable>
         )}
       />
+      <BannerAdView />
     </SafeAreaView>
   );
 }

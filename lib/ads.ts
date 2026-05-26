@@ -16,17 +16,17 @@ const TEST_REWARDED_ID = 'ca-app-pub-3940256099942544/5224354917';
 
 /** 실제 광고 단위 ID */
 const PROD_BANNER_ID = Platform.select({
-  android: 'ca-app-pub-3001608230251687/2898773493',
+  android: 'ca-app-pub-3001608230251687/1482559519',
   ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
 }) ?? TEST_BANNER_ID;
 
 const PROD_INTERSTITIAL_ID = Platform.select({
-  android: 'ca-app-pub-3001608230251687/3828711783',
+  android: 'ca-app-pub-3001608230251687/1287575246',
   ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
 }) ?? TEST_INTERSTITIAL_ID;
 
 const PROD_REWARDED_ID = Platform.select({
-  android: 'ca-app-pub-3001608230251687/5092357802',
+  android: 'ca-app-pub-3001608230251687/4313193835',
   ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
 }) ?? TEST_REWARDED_ID;
 
