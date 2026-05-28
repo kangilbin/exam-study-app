@@ -245,7 +245,12 @@ export const useQuizSession = (categoryId: string, mode: string | undefined) => 
       });
     } else {
       const nextIndex = currentIndex + 1;
-      if (nextIndex > 0 && nextIndex % INTERSTITIAL_INTERVAL === 0) {
+      // 기출문제(exam-)는 진입 시 보상형 광고를 이미 시청 → 전면 광고 없음
+      // 학습 탭 카테고리만 5문제마다 전면 광고 표시
+      const isExamCategory = categoryId?.startsWith('exam-') ||
+        categoryId?.startsWith('code-') ||
+        categoryId?.startsWith('sql-');
+      if (!isExamCategory && nextIndex > 0 && nextIndex % INTERSTITIAL_INTERVAL === 0) {
         showAd(() => nextQuestion());
       } else {
         nextQuestion();
