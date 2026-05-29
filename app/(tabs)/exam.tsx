@@ -12,13 +12,14 @@ import {
   Modal,
   ActivityIndicator,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import type { Category } from '@/features/questions/types';
 import { useExamCategories, type ExamSection } from '@/features/questions/hooks/useExamCategories';
 
 export default function ExamScreen() {
+  const { bottom } = useSafeAreaInsets();
   const { sections, progress, modalInfo, setModalInfo, isWaitingForAd, handleExamPress, navigateWithMode, getItemStats } =
     useExamCategories();
 
@@ -123,22 +124,15 @@ export default function ExamScreen() {
         animationType="fade"
         onRequestClose={() => setModalInfo(null)}
       >
-        <Pressable
-          style={styles.modalOverlay}
-          onPress={() => setModalInfo(null)}
-        >
-          <Pressable style={styles.modalContent} onPress={() => {}}>
+        <Pressable style={styles.modalOverlay} onPress={() => setModalInfo(null)}>
+          <Pressable style={[styles.modalContent, { paddingBottom: 36 + bottom }]} onPress={() => {}}>
             {/* 헤더 */}
             <View style={styles.modalHeader}>
-              <MaterialCommunityIcons
-                name="file-document-outline"
-                size={32}
-                color={COLORS.primary}
-              />
+              <MaterialCommunityIcons name="file-document-outline" size={32} color={COLORS.primary} />
               <Text style={styles.modalTitle}>{modalInfo?.categoryName}</Text>
             </View>
 
-            {/* 진행 상태: 완료 시 점수 카드, 미완료 시 기존 통계 */}
+            {/* 진행 상태: 완료 시 점수 카드, 미완료 시 통계 */}
             {modalInfo?.isCompleted ? (
               <View style={styles.modalStats}>
                 <View style={{ flex: 1, alignItems: 'center' }}>
@@ -146,49 +140,19 @@ export default function ExamScreen() {
                     {modalInfo.score}
                     <Text style={styles.scoreSuffix}>점</Text>
                   </Text>
-                  <View
-                    style={[
-                      styles.passBadge,
-                      {
-                        backgroundColor: modalInfo.isPassed
-                          ? COLORS.successLight
-                          : COLORS.dangerLight,
-                      },
-                    ]}
-                  >
-                    <Text
-                      style={[
-                        styles.passBadgeText,
-                        {
-                          color: modalInfo.isPassed
-                            ? COLORS.success
-                            : COLORS.danger,
-                        },
-                      ]}
-                    >
+                  <View style={[styles.passBadge, { backgroundColor: modalInfo.isPassed ? COLORS.successLight : COLORS.dangerLight }]}>
+                    <Text style={[styles.passBadgeText, { color: modalInfo.isPassed ? COLORS.success : COLORS.danger }]}>
                       {modalInfo.isPassed ? '합격' : '불합격'}
                     </Text>
                   </View>
                   <View style={styles.scoreDetailRow}>
                     <View style={styles.scoreDetailItem}>
-                      <MaterialCommunityIcons
-                        name="check-circle"
-                        size={16}
-                        color={COLORS.success}
-                      />
-                      <Text style={[styles.scoreDetailText, { color: COLORS.success }]}>
-                        정답 {modalInfo.correctCount}개
-                      </Text>
+                      <MaterialCommunityIcons name="check-circle" size={16} color={COLORS.success} />
+                      <Text style={[styles.scoreDetailText, { color: COLORS.success }]}>정답 {modalInfo.correctCount}개</Text>
                     </View>
                     <View style={styles.scoreDetailItem}>
-                      <MaterialCommunityIcons
-                        name="close-circle"
-                        size={16}
-                        color={COLORS.danger}
-                      />
-                      <Text style={[styles.scoreDetailText, { color: COLORS.danger }]}>
-                        오답 {modalInfo.incorrectCount}개
-                      </Text>
+                      <MaterialCommunityIcons name="close-circle" size={16} color={COLORS.danger} />
+                      <Text style={[styles.scoreDetailText, { color: COLORS.danger }]}>오답 {modalInfo.incorrectCount}개</Text>
                     </View>
                   </View>
                 </View>
@@ -201,16 +165,12 @@ export default function ExamScreen() {
                 </View>
                 <View style={styles.modalStatDivider} />
                 <View style={styles.modalStatItem}>
-                  <Text style={[styles.modalStatValue, { color: COLORS.success }]}>
-                    {modalInfo?.seenCount}
-                  </Text>
+                  <Text style={[styles.modalStatValue, { color: COLORS.success }]}>{modalInfo?.seenCount}</Text>
                   <Text style={styles.modalStatLabel}>학습완료</Text>
                 </View>
                 <View style={styles.modalStatDivider} />
                 <View style={styles.modalStatItem}>
-                  <Text style={[styles.modalStatValue, { color: COLORS.primary }]}>
-                    {modalInfo?.unseenCount}
-                  </Text>
+                  <Text style={[styles.modalStatValue, { color: COLORS.primary }]}>{modalInfo?.unseenCount}</Text>
                   <Text style={styles.modalStatLabel}>미학습</Text>
                 </View>
               </View>
@@ -218,54 +178,32 @@ export default function ExamScreen() {
 
             {/* 버튼들 */}
             <View style={styles.modalButtons}>
-              {/* 이어서 풀기: 전체 문제 중 첫 unseen 위치부터 */}
               {modalInfo && modalInfo.unseenCount > 0 && (
-                <Pressable
-                  style={[styles.modalButton, styles.modalButtonPrimary]}
-                  onPress={() => navigateWithMode('resume-progress')}
-                >
+                <Pressable style={[styles.modalButton, styles.modalButtonPrimary]} onPress={() => navigateWithMode('resume-progress')}>
                   <MaterialCommunityIcons name="play-circle" size={20} color="#fff" />
-                  <Text style={styles.modalButtonPrimaryText}>
-                    이어서 풀기 ({modalInfo.unseenCount}문제 남음)
-                  </Text>
+                  <Text style={styles.modalButtonPrimaryText}>이어서 풀기 ({modalInfo.unseenCount}문제 남음)</Text>
                 </Pressable>
               )}
-
-              {/* 틀린 문제만 다시 풀기 (완료 + 틀린 문제 있을 때) */}
               {modalInfo?.isCompleted && modalInfo.incorrectCount > 0 && (
-                <Pressable
-                  style={[styles.modalButton, styles.modalButtonPrimary]}
-                  onPress={() => navigateWithMode('incorrect')}
-                >
+                <Pressable style={[styles.modalButton, styles.modalButtonPrimary]} onPress={() => navigateWithMode('incorrect')}>
                   <MaterialCommunityIcons name="close-circle-outline" size={20} color="#fff" />
-                  <Text style={styles.modalButtonPrimaryText}>
-                    틀린 문제만 다시 풀기 ({modalInfo.incorrectCount}문제)
-                  </Text>
+                  <Text style={styles.modalButtonPrimaryText}>틀린 문제만 다시 풀기 ({modalInfo.incorrectCount}문제)</Text>
                 </Pressable>
               )}
-
-              {/* 전체 다시 풀기 */}
-              <Pressable
-                style={[styles.modalButton, styles.modalButtonOutline]}
-                onPress={() => navigateWithMode('all')}
-              >
+              <Pressable style={[styles.modalButton, styles.modalButtonOutline]} onPress={() => navigateWithMode('all')}>
                 <MaterialCommunityIcons name="refresh" size={20} color={COLORS.primary} />
-                <Text style={styles.modalButtonOutlineText}>
-                  전체 다시 풀기 ({modalInfo?.totalCount}문제)
-                </Text>
+                <Text style={styles.modalButtonOutlineText}>전체 다시 풀기 ({modalInfo?.totalCount}문제)</Text>
               </Pressable>
             </View>
 
             {/* 닫기 */}
-            <Pressable
-              style={styles.modalClose}
-              onPress={() => setModalInfo(null)}
-            >
+            <Pressable style={styles.modalClose} onPress={() => setModalInfo(null)}>
               <Text style={styles.modalCloseText}>취소</Text>
             </Pressable>
           </Pressable>
         </Pressable>
       </Modal>
+
     </SafeAreaView>
   );
 }

@@ -13,7 +13,7 @@ import {
   StyleSheet,
   Modal,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getAllCategories } from '@/features/categories/services/categoryService';
@@ -50,6 +50,7 @@ interface StudyResumeInfo {
 }
 
 export default function HomeScreen() {
+  const { bottom } = useSafeAreaInsets();
   const router = useRouter();
   /** 기출 제외, 문제 또는 플래시카드가 있는 카테고리 */
   const categories = getAllCategories().filter(
@@ -296,7 +297,7 @@ export default function HomeScreen() {
           style={styles.modalOverlay}
           onPress={() => setModalInfo(null)}
         >
-          <Pressable style={styles.modalContent} onPress={() => {}}>
+          <Pressable style={[styles.modalContent, { paddingBottom: 36 + bottom }]} onPress={() => {}}>
             {/* 헤더 */}
             <View style={styles.modalHeader}>
               <MaterialCommunityIcons
