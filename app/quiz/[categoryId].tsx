@@ -13,6 +13,7 @@ import {
   TextInput,
   Modal,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
@@ -242,7 +243,10 @@ export default function QuizScreen() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Stack.Screen options={{ title: categoryId === 'incorrect' ? '틀린 문제 다시 풀기' : categoryId === 'bookmark' ? '북마크 문제 풀기' : `${category?.name || ''} 문제풀이` }} />
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
       {/* 진행도 */}
       <View style={styles.progressContainer}>
         <View style={styles.progressBarBg}>
@@ -370,7 +374,7 @@ export default function QuizScreen() {
                       <View key={i} style={styles.multipleRow}>
                         <Text style={styles.multipleLabel}>{part.label}</Text>
                         <TextInput
-                          style={styles.subjectiveInput}
+                          style={[styles.subjectiveInput, styles.multipleRowInput]}
                           placeholder="답 입력"
                           placeholderTextColor={COLORS.gray[400]}
                           value={userAnswers[`part_${i}`] || ''}
@@ -727,6 +731,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray[200],
     fontSize: 16,
     color: COLORS.text,
+    // Android에서 폰트 패딩으로 인한 텍스트 렌더링 이슈 방지
+    ...(Platform.OS === 'android' && { includeFontPadding: false }),
   },
   textArea: {
     minHeight: 120,
@@ -745,6 +751,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: COLORS.primary,
     minWidth: 30,
+  },
+  // flexDirection: 'row' 컨테이너 안에서 TextInput이 너비를 채우도록 flex: 1 필수
+  multipleRowInput: {
+    flex: 1,
   },
   submitButton: {
     backgroundColor: COLORS.primary,
