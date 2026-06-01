@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "update:prod": "EXPO_PUBLIC_AD_ENV=production eas update --branch production",
+    "update:preview": "EXPO_PUBLIC_AD_ENV=test eas update --branch preview"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
