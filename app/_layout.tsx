@@ -9,10 +9,12 @@ import { View } from 'react-native';
 import { Stack } from 'expo-router';
 import { SystemBars } from 'react-native-edge-to-edge';
 import * as ScreenOrientation from 'expo-screen-orientation';
+import { initializeAdMob } from '@/lib/admob';
 
 export default function RootLayout() {
   useEffect(() => {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+    initializeAdMob();
   }, []);
 
   return (
@@ -31,7 +33,11 @@ export default function RootLayout() {
         <Stack.Screen name="quiz" options={{ headerShown: false }} />
         <Stack.Screen
           name="bookmarks"
-          options={{ title: '북마크', presentation: 'card' }}
+          options={{ title: '기출 북마크', presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="flashcard-bookmarks"
+          options={{ title: '학습 북마크', presentation: 'card' }}
         />
       </Stack>
     </View>

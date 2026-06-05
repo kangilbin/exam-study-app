@@ -15,6 +15,8 @@ import {
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useAdGate } from '@/components/ads/useAdGate';
+import { AdGateOverlay } from '@/components/ads/AdGateOverlay';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getAllCategories } from '@/features/categories/services/categoryService';
 import { getQuestionCountExcludingGroup, getQuestionIdsExcludingGroup } from '@/features/questions/services/questionService';
@@ -52,6 +54,7 @@ interface StudyResumeInfo {
 export default function HomeScreen() {
   const { bottom } = useSafeAreaInsets();
   const router = useRouter();
+  const { showAdWithLoading, isWaitingForAd, adBlockedCountdown, proceedImmediately } = useAdGate();
   /** 기출 제외, 문제 또는 플래시카드가 있는 카테고리 */
   const categories = getAllCategories().filter(
     (cat) => cat.group !== 'exam' && (cat.questionCount > 0 || isMemorizeCategory(cat.id))
@@ -107,9 +110,9 @@ export default function HomeScreen() {
 
       const hasProgress = knownCount + unknownCount > 0;
 
-      // 학습 기록 없으면 바로 진입
+      // 학습 기록 없으면 광고 후 진입
       if (!hasProgress) {
-        router.push(`/quiz/${item.id}`);
+        showAdWithLoading(() => router.push(`/quiz/${item.id}`));
         return;
       }
 
@@ -135,9 +138,9 @@ export default function HomeScreen() {
     } else {
       const stats = useUserStore.getState().getCategoryStats(item.id);
 
-      // 학습 기록 없으면 바로 진입
+      // 학습 기록 없으면 광고 후 진입
       if (stats.seenCount === 0) {
-        router.push(`/quiz/${item.id}?mode=unseen`);
+        showAdWithLoading(() => router.push(`/quiz/${item.id}?mode=unseen`));
         return;
       }
 
@@ -168,22 +171,18 @@ export default function HomeScreen() {
     setModalInfo(null);
 
     if (modalInfo.isCard) {
-      switch (mode) {
-        case 'resume':
-          router.push(`/quiz/${catId}?mode=resume`);
-          break;
-        case 'all':
-          router.push(`/quiz/${catId}`);
-          break;
-        case 'unknown':
-          router.push(`/quiz/${catId}?mode=unknown`);
-          break;
-      }
+      const paths: Record<string, string> = {
+        resume: `/quiz/${catId}?mode=resume`,
+        all: `/quiz/${catId}`,
+        unknown: `/quiz/${catId}?mode=unknown`,
+      };
+      const path = paths[mode];
+      if (path) showAdWithLoading(() => router.push(path));
     } else {
-      if (mode === 'all') {
-        useUserStore.getState().resetCategoryProgress(catId);
-      }
-      router.push(`/quiz/${catId}?mode=${mode}`);
+      showAdWithLoading(() => {
+        if (mode === 'all') useUserStore.getState().resetCategoryProgress(catId);
+        router.push(`/quiz/${catId}?mode=${mode}`);
+      });
     }
   };
 
@@ -284,6 +283,12 @@ export default function HomeScreen() {
           </View>
         }
         contentContainerStyle={styles.listContent}
+      />
+
+      <AdGateOverlay
+        isWaitingForAd={isWaitingForAd}
+        adBlockedCountdown={adBlockedCountdown}
+        proceedImmediately={proceedImmediately}
       />
 
       {/* 학습 모드 선택 모달 */}

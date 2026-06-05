@@ -10,18 +10,21 @@ import {
   Pressable,
   StyleSheet,
   Modal,
-  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import type { Category } from '@/features/questions/types';
 import { useExamCategories, type ExamSection } from '@/features/questions/hooks/useExamCategories';
+import { AdGateOverlay } from '@/components/ads/AdGateOverlay';
 
 export default function ExamScreen() {
   const { bottom } = useSafeAreaInsets();
-  const { sections, progress, modalInfo, setModalInfo, isWaitingForAd, handleExamPress, navigateWithMode, getItemStats } =
-    useExamCategories();
+  const {
+    sections, progress, modalInfo, setModalInfo,
+    isWaitingForAd, adBlockedCountdown, proceedImmediately,
+    handleExamPress, navigateWithMode, getItemStats,
+  } = useExamCategories();
 
   const renderItem = ({ item }: { item: Category }) => {
     const { stats, progress } = getItemStats(item);
@@ -107,15 +110,11 @@ export default function ExamScreen() {
         }
       />
 
-      {/* 광고 로딩 오버레이 */}
-      {isWaitingForAd && (
-        <View style={styles.adLoadingOverlay}>
-          <View style={styles.adLoadingBox}>
-            <ActivityIndicator size="large" color={COLORS.primary} />
-            <Text style={styles.adLoadingText}>광고 불러오는 중...</Text>
-          </View>
-        </View>
-      )}
+      <AdGateOverlay
+        isWaitingForAd={isWaitingForAd}
+        adBlockedCountdown={adBlockedCountdown}
+        proceedImmediately={proceedImmediately}
+      />
 
       {/* 학습 모드 선택 모달 */}
       <Modal
@@ -439,6 +438,30 @@ const styles = StyleSheet.create({
   adLoadingText: {
     fontSize: 15,
     color: COLORS.textSecondary,
+  },
+  adBlockedTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: COLORS.text,
+    textAlign: 'center',
+  },
+  adBlockedSub: {
+    fontSize: 14,
+    color: COLORS.textSecondary,
+    textAlign: 'center',
+    lineHeight: 20,
+  },
+  adBlockedButton: {
+    marginTop: 4,
+    paddingVertical: 10,
+    paddingHorizontal: 28,
+    backgroundColor: COLORS.primary,
+    borderRadius: 10,
+  },
+  adBlockedButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#fff',
   },
   modalCloseText: {
     fontSize: 15,

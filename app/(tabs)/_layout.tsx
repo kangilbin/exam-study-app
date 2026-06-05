@@ -15,9 +15,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { BannerAdView } from '@/components/ads/BannerAdView';
+import { RewardedAdProvider } from '@/components/ads/RewardedAdContext';
 
 export default function TabLayout() {
   return (
+    <RewardedAdProvider>
     <Tabs
       tabBar={(props: BottomTabBarProps) => (
         <View>
@@ -81,5 +83,6 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    </RewardedAdProvider>
   );
 }

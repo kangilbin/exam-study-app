@@ -1,11 +1,10 @@
 import { useState, useMemo } from 'react';
-import { Alert } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useUserStore } from '@/store/useUserStore';
 import { useQuizStore } from '@/store/useQuizStore';
 import { getCategoriesByGroup } from '@/features/categories/services/categoryService';
 import { loadQuestionsByCategory } from '@/features/questions/services/questionService';
-import { useRewardedAd } from '@/components/ads/useRewardedAd';
+import { useAdGate } from '@/components/ads/useAdGate';
 import type { Category, CategoryId } from '@/features/questions/types';
 
 export interface ExamSection {
@@ -36,9 +35,8 @@ const extractYear = (id: string): number => {
 
 export const useExamCategories = () => {
   const router = useRouter();
-  const { showAd } = useRewardedAd();
+  const { showAdWithLoading, isWaitingForAd, adBlockedCountdown, proceedImmediately } = useAdGate();
   const [modalInfo, setModalInfo] = useState<ResumeInfo | null>(null);
-  const [isWaitingForAd, setIsWaitingForAd] = useState(false);
 
   const sections = useMemo<ExamSection[]>(() => {
     const examCategories = getCategoriesByGroup('exam');
@@ -56,18 +54,6 @@ export const useExamCategories = () => {
       .filter((s) => s.data.length > 0);
   }, []);
 
-  const showAdWithLoading = (callbacks: Parameters<typeof showAd>[0]) => {
-    setIsWaitingForAd(true);
-    showAd({
-      onRewarded: () => { setIsWaitingForAd(false); callbacks.onRewarded(); },
-      onDismissed: () => { setIsWaitingForAd(false); callbacks.onDismissed?.(); },
-      onError: () => {
-        setIsWaitingForAd(false);
-        Alert.alert('알림', '광고를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
-      },
-    });
-  };
-
   const handleExamPress = (item: Category) => {
     const allQs = loadQuestionsByCategory(item.id);
     const userProgress = useUserStore.getState().progress;
@@ -83,11 +69,7 @@ export const useExamCategories = () => {
       useQuizStore.getState().currentIndex > 0;
 
     if (seenCount === 0 && !quizCanResume) {
-      showAdWithLoading({
-        onRewarded: () => router.push(`/quiz/${item.id}`),
-        onDismissed: () =>
-          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
-      });
+      showAdWithLoading(() => router.push(`/quiz/${item.id}`));
       return;
     }
 
@@ -116,22 +98,16 @@ export const useExamCategories = () => {
   const navigateWithMode = (mode: string) => {
     if (!modalInfo) return;
     const catId = modalInfo.categoryId;
+    setModalInfo(null);
 
     if (mode === 'all') {
-      setModalInfo(null);
-      showAdWithLoading({
-        onRewarded: () => {
-          useUserStore.getState().resetCategoryProgress(catId);
-          router.push(`/quiz/${catId}?mode=${mode}`);
-        },
-        onDismissed: () =>
-          Alert.alert('안내', '광고를 끝까지 시청해야 문제를 풀 수 있습니다.'),
+      showAdWithLoading(() => {
+        useUserStore.getState().resetCategoryProgress(catId);
+        router.push(`/quiz/${catId}?mode=${mode}`);
       });
-      return;
+    } else {
+      showAdWithLoading(() => router.push(`/quiz/${catId}?mode=${mode}`));
     }
-
-    setModalInfo(null);
-    router.push(`/quiz/${catId}?mode=${mode}`);
   };
 
   const progress = useUserStore((s) => s.progress);
@@ -150,6 +126,8 @@ export const useExamCategories = () => {
     modalInfo,
     setModalInfo,
     isWaitingForAd,
+    adBlockedCountdown,
+    proceedImmediately,
     handleExamPress,
     navigateWithMode,
     getItemStats,

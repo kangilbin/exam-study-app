@@ -1,0 +1,1 @@
+- [AdMob Ad Flow Architecture](admob-ad-flow.md) — per-screen useRewardedInterstitialAd instances, shared AdEventType.ERROR listener collision risk

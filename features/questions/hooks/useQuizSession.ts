@@ -10,16 +10,12 @@ import {
 import { useUserStore } from '@/store/useUserStore';
 import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from '@/features/questions/services/questionService';
 import { detectAnswerType } from '@/features/questions/services/gradingService';
-import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 import type { CategoryId, Question } from '@/features/questions/types';
 
 const FONT_SIZE_MAP = { small: 11, medium: 13, large: 16 } as const;
-const INTERSTITIAL_INTERVAL = 5;
 
 export const useQuizSession = (categoryId: string, mode: string | undefined) => {
   const router = useRouter();
-  const { showAd } = useInterstitialAd();
-
   const startQuiz = useQuizStore((s) => s.startQuiz);
   const startQuizAt = useQuizStore((s) => s.startQuizAt);
   const restoreSavedSession = useQuizStore((s) => s.restoreSavedSession);
@@ -244,17 +240,7 @@ export const useQuizSession = (categoryId: string, mode: string | undefined) => 
         },
       });
     } else {
-      const nextIndex = currentIndex + 1;
-      // 기출문제(exam-)는 진입 시 보상형 광고를 이미 시청 → 전면 광고 없음
-      // 학습 탭 카테고리만 5문제마다 전면 광고 표시
-      const isExamCategory = categoryId?.startsWith('exam-') ||
-        categoryId?.startsWith('code-') ||
-        categoryId?.startsWith('sql-');
-      if (!isExamCategory && nextIndex > 0 && nextIndex % INTERSTITIAL_INTERVAL === 0) {
-        showAd(() => nextQuestion());
-      } else {
-        nextQuestion();
-      }
+      nextQuestion();
     }
   };
 

@@ -8,7 +8,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
-import { useInterstitialAd } from '@/components/ads/useInterstitialAd';
 
 export default function QuizResultScreen() {
   const router = useRouter();
@@ -18,8 +17,6 @@ export default function QuizResultScreen() {
     correct: string;
     incorrect: string;
   }>();
-
-  const { showAd } = useInterstitialAd();
 
   const total = parseInt(params.total || '0', 10);
   const correct = parseInt(params.correct || '0', 10);
@@ -79,7 +76,7 @@ export default function QuizResultScreen() {
 
           <Pressable
             style={styles.secondaryButton}
-            onPress={() => showAd(() => router.navigate('/(tabs)'))}
+            onPress={() => router.navigate('/(tabs)')}
           >
             <MaterialCommunityIcons name="home" size={20} color={COLORS.primary} />
             <Text style={styles.secondaryButtonText}>홈으로</Text>

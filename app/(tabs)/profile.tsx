@@ -7,6 +7,8 @@ import { useMemo } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useAdGate } from '@/components/ads/useAdGate';
+import { AdGateOverlay } from '@/components/ads/AdGateOverlay';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useUserStore } from '@/store/useUserStore';
 import { useFlashcardStore } from '@/store/useFlashcardStore';
@@ -16,6 +18,7 @@ import { COLORS } from '@/lib/constants';
 
 export default function ProfileScreen() {
   const router = useRouter();
+  const { showAdWithLoading, isWaitingForAd, adBlockedCountdown, proceedImmediately } = useAdGate();
   const progress = useUserStore((s) => s.progress);
   const examQuestionIds = getQuestionIdsByGroup('exam');
   const totalQuestions = examQuestionIds.length;
@@ -71,7 +74,7 @@ export default function ProfileScreen() {
         <View style={styles.menuSection}>
           <Pressable
             style={styles.menuItem}
-            onPress={() => router.push('/bookmarks')}
+            onPress={() => showAdWithLoading(() => router.push('/bookmarks'))}
           >
             <MaterialCommunityIcons name="cards-heart" size={24} color={COLORS.primary} />
             <Text style={styles.menuText}>기출 북마크</Text>
@@ -81,7 +84,7 @@ export default function ProfileScreen() {
 
           <Pressable
             style={styles.menuItem}
-            onPress={() => router.push('/flashcard-bookmarks')}
+            onPress={() => showAdWithLoading(() => router.push('/flashcard-bookmarks'))}
           >
             <MaterialCommunityIcons name="bookmark" size={24} color={COLORS.primary} />
             <Text style={styles.menuText}>학습 북마크</Text>
@@ -136,6 +139,11 @@ export default function ProfileScreen() {
           </Pressable>
         </View>
       </ScrollView>
+      <AdGateOverlay
+        isWaitingForAd={isWaitingForAd}
+        adBlockedCountdown={adBlockedCountdown}
+        proceedImmediately={proceedImmediately}
+      />
     </SafeAreaView>
   );
 }
