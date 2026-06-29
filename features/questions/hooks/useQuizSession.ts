@@ -5,7 +5,6 @@ import {
   useCurrentQuestion,
   useCorrectCount,
   useIsQuizComplete,
-  type QuestionAnswerState,
 } from '@/store/useQuizStore';
 import { useUserStore } from '@/store/useUserStore';
 import { loadQuestionsByCategory, shuffleQuestions, getIncorrectQuestions } from '@/features/questions/services/questionService';
@@ -18,7 +17,6 @@ export const useQuizSession = (categoryId: string, mode: string | undefined) => 
   const router = useRouter();
   const startQuiz = useQuizStore((s) => s.startQuiz);
   const startQuizAt = useQuizStore((s) => s.startQuizAt);
-  const restoreSavedSession = useQuizStore((s) => s.restoreSavedSession);
   const quizGoToPrevious = useQuizStore((s) => s.goToPrevious);
   const resetQuiz = useQuizStore((s) => s.resetQuiz);
   const selectChoice = useQuizStore((s) => s.selectChoice);
@@ -104,39 +102,7 @@ export const useQuizSession = (categoryId: string, mode: string | undefined) => 
     const allQs = loadQuestionsByCategory(categoryId as CategoryId);
 
     if (mode === 'resume-progress') {
-      const quizState = useQuizStore.getState();
       const userProgress = useUserStore.getState().progress;
-
-      let qs: Question[] = [];
-      let states: Record<number, QuestionAnswerState> = {};
-
-      if (quizState.categoryId === categoryId && quizState.questions.length > 0) {
-        qs = quizState.questions;
-        states = quizState.answeredStates;
-      } else if (restoreSavedSession(categoryId as string)) {
-        const restored = useQuizStore.getState();
-        qs = restored.questions;
-        states = restored.answeredStates;
-      }
-
-      if (qs.length > 0) {
-        let resumeIndex = 0;
-        for (let i = 0; i < qs.length; i++) {
-          const p = userProgress[qs[i].id];
-          if (!p || p.status === 'unseen') { resumeIndex = i; break; }
-          if (i === qs.length - 1) resumeIndex = 0;
-        }
-        const restoredState = states[resumeIndex];
-        useQuizStore.setState({
-          currentIndex: resumeIndex,
-          selectedChoiceIndex: restoredState?.selectedChoiceIndex ?? null,
-          isAnswered: restoredState?.isAnswered ?? false,
-          isExplanationRevealed: restoredState?.isExplanationRevealed ?? false,
-          userAnswers: restoredState?.userAnswers ?? {},
-          gradeResult: restoredState?.gradeResult ?? null,
-        });
-        return;
-      }
 
       let resumeIndex = 0;
       for (let i = 0; i < allQs.length; i++) {

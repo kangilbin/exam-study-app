@@ -23,7 +23,7 @@ export default function QuizTab() {
   const progress = useUserStore((s) => s.progress);
   const cardProgress = useFlashcardStore((s) => s.cardProgress);
   const getCategoryProgress = useFlashcardStore((s) => s.getCategoryProgress);
-  const categories = getCategoriesWithQuestions();
+  const categories = getCategoriesWithQuestions().filter((cat) => cat.group !== 'exam');
 
   const handleCategoryPress = (categoryId: string) => {
     if (isMemorizeCategory(categoryId)) {

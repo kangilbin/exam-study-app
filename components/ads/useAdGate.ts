@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSharedRewardedAd } from './RewardedAdContext';
 
-const AD_LOAD_TIMEOUT_MS = 30_000; // TODO: 테스트 후 원복 (원래 15_000)
+const AD_LOAD_TIMEOUT_MS = 15_000;
 
 export const useAdGate = () => {
   const { showAd, cancelAd } = useSharedRewardedAd();
