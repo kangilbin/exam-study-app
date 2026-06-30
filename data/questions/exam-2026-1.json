@@ -175,11 +175,11 @@
     "categoryId": "exam-2026-1",
     "subcategory": "SQL",
     "type": "sql",
-    "question": "다음 SQL 실행 결과의 행 수를 작성하시오.",
+    "question": "다음 SQL 실행 결과의 행 수를 작성하시오.(왼쪽 사원 테이블 오른쪽 부서 테이블)",
     "imageUrl": "exam-2026-1_018.png",
     "answer": "2",
-    "explanation": "employees와 employee 테이블을 조인하여 평균 예산(AVG(budget))보다 예산이 큰 부서의 직원 수를 COUNT(*) 한다. 결과는 2행.",
-    "codeSnippet": "SELECT COUNT(*)\nFROM employees e\nJOIN employee d ON e.id = d.id\nWHERE d.budget > (SELECT AVG(budget)\n                  FROM employee);",
+    "explanation": "사원 테이블과 부서 테이블을 조인하여 평균 예산(AVG(budget))보다 예산이 큰 부서의 직원 수를 COUNT(*) 한다. 결과는 2행.",
+    "codeSnippet": "SELECT COUNT(*)\nFROM 사원 e\nJOIN 부서 d ON e.부서번호 = d.부서번호\nWHERE d.budget > (SELECT AVG(budget)\n                  FROM 부서);",
     "codeLanguage": "sql"
   },
   {
