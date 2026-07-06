@@ -51,7 +51,12 @@ interface QuizState {
 
   // 액션
   startQuiz: (categoryId: CategoryId, questions: Question[]) => void;
-  startQuizAt: (categoryId: CategoryId, questions: Question[], startIndex: number) => void;
+  startQuizAt: (
+    categoryId: CategoryId,
+    questions: Question[],
+    startIndex: number,
+    initialResults?: { questionId: string; isCorrect: boolean }[],
+  ) => void;
   canResume: (categoryId: string) => boolean;
   saveCurrentSession: () => void;
   restoreSavedSession: (categoryId: string) => boolean;
@@ -102,7 +107,7 @@ export const useQuizStore = create<QuizState>()(
         });
       },
 
-      startQuizAt: (categoryId, questions, startIndex) => {
+      startQuizAt: (categoryId, questions, startIndex, initialResults) => {
         // 현재 세션을 먼저 저장
         get().saveCurrentSession();
         const safeIndex = Math.min(startIndex, questions.length - 1);
@@ -113,7 +118,8 @@ export const useQuizStore = create<QuizState>()(
           selectedChoiceIndex: null,
           isAnswered: false,
           isExplanationRevealed: false,
-          results: [],
+          // 이어서 풀기 시 이전에 이미 채점된 문제의 결과를 유지해야 최종 정답 수가 정확함
+          results: initialResults ?? [],
           startedAt: Date.now(),
           userAnswers: {},
           gradeResult: null,

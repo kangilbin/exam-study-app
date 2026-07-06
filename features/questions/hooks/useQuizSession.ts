@@ -110,7 +110,17 @@ export const useQuizSession = (categoryId: string, mode: string | undefined) => 
         if (!p || p.status === 'unseen') { resumeIndex = i; break; }
         if (i === allQs.length - 1) resumeIndex = 0;
       }
-      startQuizAt(categoryId as CategoryId, allQs, resumeIndex);
+
+      // 이전 세션에서 이미 채점된 문제들의 정답 여부를 복원 (최종 결과 화면의 정답 수 유실 방지)
+      const initialResults = allQs
+        .slice(0, resumeIndex)
+        .filter((q) => {
+          const status = userProgress[q.id]?.status;
+          return status === 'correct' || status === 'incorrect';
+        })
+        .map((q) => ({ questionId: q.id, isCorrect: userProgress[q.id].status === 'correct' }));
+
+      startQuizAt(categoryId as CategoryId, allQs, resumeIndex, initialResults);
       return;
     }
 
