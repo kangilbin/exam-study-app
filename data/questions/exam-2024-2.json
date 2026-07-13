@@ -100,10 +100,10 @@
     "categoryId": "exam-2024-2",
     "subcategory": "RIP 라우팅경로",
     "type": "theory",
-    "question": "RIP(Routing Information Protocol) 라우팅 테이블이 주어졌을 때, A에서 F로 가는 최적 경로를 구하시오. (RIP는 홉 카운트 기반이며, 최소 홉 수 경로를 선택한다.)",
+    "question": "RIP(Routing Information Protocol) 라우팅 테이블이 주어졌을 때, A에서 F로 가는 최적 경로를 구하시오.",
     "answer": "ADCF",
     "imageUrl": "exam-2024-2_011.png",
-    "explanation": "RIP는 거리 벡터 라우팅 프로토콜로 홉 카운트(Hop Count)를 메트릭으로 사용합니다. 최대 홉 수는 15이며, 16은 도달 불가능을 의미합니다. 주어진 네트워크에서 A→D→C→F 경로가 홉 수 3으로 최소이므로 이 경로가 선택됩니다."
+    "explanation": "RIP는 거리 벡터 라우팅 홉 카운트(Hop Count)를 메트릭으로 사용합니다. 주어진 네트워크에서 A→D→C→F 경로가 홉 수 3으로 최소이므로 이 경로가 선택됩니다."
   },
   {
     "id": "exam-2024-2_012",
@@ -112,8 +112,8 @@
     "type": "theory",
     "question": "다음 프로세스들이 주어졌을 때, SRT(Shortest Remaining Time) 스케줄링의 평균 대기시간을 구하시오.",
     "answer": "6.5",
-    "explanation": "SRT는 선점형 SJF로, 잔여 실행시간이 가장 짧은 프로세스를 우선 실행합니다.\n0~1: P1(잔여7)\n1~2: P2 도착(잔여4<7), P2 실행(잔여3)\n2~3: P3 도착(잔여2<3), P3 실행(잔여1)\n3~4: P4 도착(잔여1=P3잔여1), P4 실행(잔여0)\n4~5: P3 실행 완료\n5~8: P2 실행 완료(잔여3)\n8~15: P1 실행 완료(잔여7)\n대기시간: P1=15-0-8=7, P2=8-1-4=3, P3=5-2-2=1, P4=4-3-1=0\n평균=(7+3+1+0)/4=2.75 또는 문제 조건에 따라 6.5",
-    "codeSnippet": "프로세스 | 도착시간 | 실행시간\n--------|---------|--------\n  P1    |    0    |    8\n  P2    |    1    |    4\n  P3    |    2    |    2\n  P4    |    3    |    1",
+    "explanation": "SRT는 선점형 SJF로, 잔여 실행시간이 가장 짧은 프로세스를 우선 실행합니다.\n0~1: P1 실행(잔여 8→7)\n1: P2 도착(잔여4). P1 잔여7 > P2 잔여4 → P2로 선점\n1~5: P2 실행하여 완료 (2에 P3(잔여9), 3에 P4(잔여5) 도착하지만 이 시점 P2의 잔여시간이 더 짧아 계속 실행)\n5: P2 완료. 대기 중인 P1(잔여7), P3(잔여9), P4(잔여5) 중 최소는 P4\n5~10: P4 실행하여 완료\n10: 대기 중인 P1(잔여7), P3(잔여9) 중 최소는 P1\n10~17: P1 실행하여 완료\n17~26: P3 실행하여 완료\n\n완료시간: P2=5, P4=10, P1=17, P3=26\n대기시간(완료시간-도착시간-실행시간):\nP1=17-0-8=9\nP2=5-1-4=0\nP3=26-2-9=15\nP4=10-3-5=2\n평균 대기시간=(9+0+15+2)/4=26/4=6.5",
+    "codeSnippet": "프로세스 | 도착시간 | 실행시간\n--------|---------|--------\n  P1    |    0    |    8\n  P2    |    1    |    4\n  P3    |    2    |    9\n  P4    |    3    |    5",
     "codeLanguage": "text"
   },
   {
@@ -154,8 +154,8 @@
     "categoryId": "exam-2024-2",
     "subcategory": "제어 결합도",
     "type": "theory",
-    "question": "어떤 모듈이 다른 모듈의 내부 논리 흐름을 제어하기 위한 목적으로 제어 신호(flag, switch 등)를 이용하여 통신하는 경우의 결합도를 무엇이라 하는가?",
-    "answer": "제어(Control) 결합도",
+    "question": "어떤 모듈이 다른 모듈의 내부 논리 흐름을 제어하기 위한 목적으로 제어 신호(flag, switch 등)를 이용하여 통신하는 경우의 결합도를 보기에서 고르시오.\n\n[보기]\nㄱ.자료 결합도   ㄴ.스탬프 결합도   ㄷ.제어 결합도   ㄹ.공통 결합도   ㅁ.내용 결합도",
+    "answer": "ㄷ",
     "explanation": "제어(Control) 결합도는 한 모듈이 다른 모듈에게 제어 요소(플래그, 스위치 등)를 전달하여 다른 모듈의 처리 흐름을 제어하는 경우입니다. 결합도의 순서(낮음→높음): 자료→스탬프→제어→외부→공통→내용 결합도입니다."
   },
   {
@@ -163,7 +163,7 @@
     "categoryId": "exam-2024-2",
     "subcategory": "Java 재귀 중복제거",
     "type": "code",
-    "question": "다음 Java 코드의 출력 결과를 쓰시오. (재귀를 활용한 문자열 중복 제거 및 역순 출력)",
+    "question": "다음 Java 코드의 출력 결과를 쓰시오.",
     "answer": "dcba",
     "explanation": "재귀 함수 removeDup은 문자열의 끝(인덱스 7)부터 시작하여 0까지 역순으로 탐색합니다.\nstr=\"aabbccdd\"에서 역순으로 처음 만나는 고유 문자를 result에 추가합니다.\n인덱스7: 'd' → result=\"d\"\n인덱스6: 'd' → 이미 있음, 건너뜀\n인덱스5: 'c' → result=\"dc\"\n인덱스4: 'c' → 이미 있음\n인덱스3: 'b' → result=\"dcb\"\n인덱스2: 'b' → 이미 있음\n인덱스1: 'a' → result=\"dcba\"\n인덱스0: 'a' → 이미 있음\n출력: dcba",
     "codeSnippet": "public class Main {\n    static String str = \"aabbccdd\";\n    static String result = \"\";\n\n    public static void removeDup(int idx) {\n        if (idx < 0) return;\n        char ch = str.charAt(idx);\n        if (result.indexOf(ch) == -1) {\n            result += ch;\n        }\n        removeDup(idx - 1);\n    }\n\n    public static void main(String[] args) {\n        removeDup(str.length() - 1);\n        System.out.print(result);\n    }\n}",
@@ -176,8 +176,8 @@
     "type": "code",
     "question": "다음 C 코드의 출력 결과를 쓰시오.",
     "answer": "-13",
-    "explanation": "swap() 함수는 자체 지역변수를 선언하여 교환하므로 main의 a, b에는 영향이 없습니다.\nmain에서 a=11, b=19 그대로입니다.\nswitch(a=11): case 11에 매칭 → b+=2 → b=21\nbreak가 없으므로 fall-through → default: b+=3 → b=24\na-b = 11-24 = -13",
-    "codeSnippet": "#include <stdio.h>\nvoid swap() {\n    int a = 11, b = 19, temp;\n    temp = a; a = b; b = temp;\n}\nint main() {\n    int a = 11, b = 19;\n    swap();\n    switch(a) {\n        case 1: b += 1; break;\n        case 11: b += 2;\n        default: b += 3; break;\n    }\n    printf(\"%d\", a - b);\n    return 0;\n}",
+    "explanation": "swap(a, b) 함수는 매개변수를 값(value)으로 전달받으므로, 함수 내부에서 a, b를 교환해도 main의 a, b에는 영향이 없습니다.\nmain에서 a=11, b=19 그대로입니다.\nswitch(a=11): case 11에 매칭 → b+=2 → b=21\nbreak가 없으므로 fall-through → default: b+=3 → b=24 → break\na-b = 11-24 = -13",
+    "codeSnippet": "#include <stdio.h>\nvoid swap(int a, int b) {\n    int t = a;\n    a = b;\n    b = t;\n}\nint main() {\n    int a = 11;\n    int b = 19;\n    swap(a, b);\n    switch(a) {\n        case 1:\n            b += 1;\n        case 11:\n            b += 2;\n        default:\n            b += 3;\n            break;\n    }\n    printf(\"%d\", a - b);\n    return 0;\n}",
     "codeLanguage": "c"
   },
   {
@@ -197,8 +197,8 @@
     "subcategory": "Java split",
     "type": "code",
     "question": "다음 Java 코드의 출력 결과를 쓰시오.",
-    "answer": "STRING",
-    "explanation": "str = \"ITISTESTSTRING\"\nstr.split(\"T\")로 'T' 기준으로 분리하면:\n\"I\", \"IS\", \"ES\", \"S\", \"RING\"\n이 중 result[3]은 인덱스 3의 값입니다.\n문제에서 제시한 정답은 \"STRING\"으로, 이는 split 구현에 따라 연속된 구분자 처리 방식이 다를 수 있습니다.",
+    "answer": "S",
+    "explanation": "str = \"ITISTESTSTRING\"\nstr.split(\"T\")로 'T' 기준으로 분리하면:\nresult[0]=\"I\", result[1]=\"IS\", result[2]=\"ES\", result[3]=\"S\", result[4]=\"RING\"\n따라서 result[3]은 \"S\"입니다.",
     "codeSnippet": "public class Main {\n    public static void main(String[] args) {\n        String str = \"ITISTESTSTRING\";\n        String[] result = str.split(\"T\");\n        System.out.print(result[3]);\n    }\n}",
     "codeLanguage": "java"
   }
