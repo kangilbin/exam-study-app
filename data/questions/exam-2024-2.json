@@ -16,7 +16,7 @@
     "subcategory": "반정규화",
     "type": "theory",
     "question": "정규화된 데이터베이스에서 성능 향상을 위해 의도적으로 중복을 허용하거나 테이블을 합치는 등의 기법을 무엇이라 하는가?",
-    "answer": "반정규화(De-normalization)",
+    "answer": "반정규화",
     "explanation": "반정규화(De-normalization)는 정규화된 엔티티, 속성, 관계에 대해 시스템의 성능 향상과 개발 및 운영의 단순화를 위해 데이터 모델을 통합하는 프로세스입니다. 디스크 I/O량이 많거나 경로가 너무 멀어 조인으로 인한 성능 저하가 예상될 때, 칼럼을 계산하여 읽을 때의 성능이 저하될 것이 예상될 때 수행합니다."
   },
   {
@@ -24,10 +24,10 @@
     "categoryId": "exam-2024-2",
     "subcategory": "SQL 빈칸",
     "type": "sql",
-    "question": "다음 SQL문의 빈칸 (가), (나)에 들어갈 키워드를 순서대로 쓰시오.",
+    "question": "다음 SQL문의 빈칸 ①~④에 들어갈 키워드를 순서대로 쓰시오.",
     "answer": "VALUES, SELECT, FROM, SET",
-    "explanation": "INSERT INTO ... VALUES는 직접 값을 삽입하는 구문입니다. INSERT INTO ... SELECT ... FROM은 다른 테이블에서 조건에 맞는 데이터를 가져와 삽입하는 구문입니다. UPDATE ... SET은 기존 레코드의 값을 수정하는 구문입니다.",
-    "codeSnippet": "-- 직접 값 삽입\nINSERT INTO 사원 (사원번호, 이름, 주소, 부서)\n(가) (32431, '정실기', '서울', '영업');\n\n-- 조회 결과 삽입\nINSERT INTO 부서 (사원번호, 이름, 나이, 부서)\n(나) 사원번호, 이름, 나이, 23\nFROM 사원 WHERE 이름 = '정실기';"
+    "explanation": "INSERT INTO ... VALUES는 직접 값을 삽입하는 구문입니다. INSERT INTO ... SELECT ... FROM은 다른 테이블에서 조회한 결과를 삽입하는 구문입니다. SELECT ... FROM은 테이블의 전체 데이터를 조회하는 구문입니다. UPDATE ... SET은 기존 레코드의 값을 수정하는 구문입니다.",
+    "codeSnippet": "-- 신입 사원이 들어와서 사원 테이블에 추가\nINSERT INTO 사원 (사원번호, 이름, 주소, 부서)\n① (32431, '정실기', '서울', '영업');\n\n-- 위 신입사원을 검색하면서 부서 테이블에 추가\nINSERT INTO 부서 (사원번호, 이름, 나이, 부서)\n② 사원번호, 이름, 나이, 23\nFROM 사원 WHERE 이름 = '정실기';\n\n-- 전체 사원 테이블 조회\nSELECT * ③ 사원;\n\n-- 퇴사로 인해 부서에 해당하는 값을 '퇴사'로 변경\nUPDATE 사원 ④ 부서 = '퇴사' WHERE 사원번호 = 32431;"
   },
   {
     "id": "exam-2024-2_004",
@@ -82,8 +82,8 @@
     "categoryId": "exam-2024-2",
     "subcategory": "순차적 응집도",
     "type": "theory",
-    "question": "모듈 내에서 한 활동으로부터 나온 출력값이 다음 활동의 입력값으로 사용되는 경우의 응집도를 무엇이라 하는가?",
-    "answer": "순차적(Sequential) 응집도",
+    "question": "모듈 내에서 한 활동으로부터 나온 출력값이 다음 활동의 입력값으로 사용되는 경우의 응집도를 보기에서 고르시오.\n\n[보기]\nㄱ.순차적 응집도   ㄴ.절차적 응집도   ㄷ.통신적 응집도   ㄹ.기능적 응집도   ㅁ.시간적 응집도",
+    "answer": "ㄱ",
     "explanation": "순차적(Sequential) 응집도는 모듈 내 하나의 활동에서 나온 출력 데이터가 다음 활동의 입력 데이터로 사용되는 형태입니다. 응집도의 순서(낮음→높음): 우연적→논리적→시간적→절차적→통신적→순차적→기능적 응집도입니다."
   },
   {
@@ -91,8 +91,8 @@
     "categoryId": "exam-2024-2",
     "subcategory": "Iterator 패턴",
     "type": "theory",
-    "question": "GoF 디자인 패턴 중, 컬렉션의 내부 구조를 노출하지 않으면서 그 안의 모든 요소에 순차적으로 접근할 수 있게 해주는 행위 패턴은 무엇인가?",
-    "answer": "Iterator",
+    "question": "GoF 디자인 패턴 중, 컬렉션의 내부 구조를 노출하지 않으면서 그 안의 모든 요소에 순차적으로 접근할 수 있게 해주는 행위 패턴은 보기에서 고르시오.\n\n[보기]\nㄱ.Observer   ㄴ.Iterator   ㄷ.Strategy   ㄹ.Visitor   ㅁ.Command",
+    "answer": "ㄴ",
     "explanation": "Iterator(반복자) 패턴은 컬렉션 구현 방법을 노출시키지 않으면서도 그 집합체 안에 있는 모든 항목에 순차적으로 접근할 수 있는 방법을 제공하는 패턴입니다. 내부 표현을 외부에 감추면서 순회할 수 있어 다양한 순회 방식을 지원할 수 있습니다."
   },
   {
@@ -102,6 +102,7 @@
     "type": "theory",
     "question": "RIP(Routing Information Protocol) 라우팅 테이블이 주어졌을 때, A에서 F로 가는 최적 경로를 구하시오. (RIP는 홉 카운트 기반이며, 최소 홉 수 경로를 선택한다.)",
     "answer": "ADCF",
+    "imageUrl": "exam-2024-2_011.png",
     "explanation": "RIP는 거리 벡터 라우팅 프로토콜로 홉 카운트(Hop Count)를 메트릭으로 사용합니다. 최대 홉 수는 15이며, 16은 도달 불가능을 의미합니다. 주어진 네트워크에서 A→D→C→F 경로가 홉 수 3으로 최소이므로 이 경로가 선택됩니다."
   },
   {
