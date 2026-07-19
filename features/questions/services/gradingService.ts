@@ -424,11 +424,13 @@ export const detectAnswerType = (question: Question): AnswerMeta => {
 
   // 7. 영문 단어 조합: "Observer Pattern", "Abstract Factory"
   if (ENGLISH_WORDS_PATTERN.test(answer.trim())) {
+    const trimmed = answer.trim();
+    const label = findLabelForAnswer(question.question, trimmed);
     return {
       type: 'fullName',
-      hint: '영문명을 입력하세요',
-      primaryAnswer: answer.trim(),
-      alternatives: [answer.trim()],
+      hint: label ? '영문명 또는 보기 기호를 입력하세요' : '영문명을 입력하세요',
+      primaryAnswer: trimmed,
+      alternatives: label ? [trimmed, label] : [trimmed],
     };
   }
 

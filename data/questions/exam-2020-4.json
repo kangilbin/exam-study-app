@@ -81,7 +81,7 @@
     "categoryId": "exam-2020-4",
     "subcategory": "Python 리스트",
     "type": "code",
-    "question": "다음 파이썬 코드의 출력 결과를 쓰시오.\nlol = [[1,2,3],[4,5],[6,7,8,9]]\nprint(lol[0])\nprint(lol[2][1])",
+    "question": "다음 파이썬 코드의 출력 결과를 쓰시오.",
     "answer": "[1, 2, 3]\n7\n123\n45\n6789",
     "explanation": "2차원 리스트에서 lol[0]은 [1,2,3], lol[2][1]은 7입니다.",
     "codeSnippet": "lol = [[1,2,3],[4,5],[6,7,8,9]]\nprint(lol[0])\nprint(lol[2][1])\nfor sub in lol:\n    for item in sub:\n        print(item, end=\"\")\n    print()",
