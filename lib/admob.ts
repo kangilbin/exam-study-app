@@ -27,6 +27,10 @@ let _retryCount = 0;
 
 const MAX_RETRIES = 3;
 const RETRY_BASE_MS = 1000; // 1s → 2s → 4s
+// 짧은 간격 재시도가 의미 있는 "일시적" 에러만 허용(화이트리스트).
+// no-fill(재고 없음)·invalid-request(설정 오류) 등은 몇 초 내 재시도해도
+// 대부분 또 실패 → 요청수만 늘고 일치율을 갉아먹으므로 재시도하지 않음.
+const RETRIABLE_ERROR_CODES = ['network-error', 'internal-error'];
 
 const _listeners = new Set<() => void>();
 function _setState(next: Partial<AdState>): void {
@@ -76,8 +80,9 @@ export async function initializeAdMob(): Promise<void> {
     _isInitialized = true;
 
     // initialize() 완료 후 인스턴스 생성 + 리스너 등록
+    // 개인화 광고 요청(false) → 입찰 광고주 풀 확대로 일치율/eCPM 상승 (한국 전용 배포)
     _ad = RewardedInterstitialAd.createForAdRequest(REWARDED_INTERSTITIAL_AD_UNIT_ID, {
-      requestNonPersonalizedAdsOnly: true,
+      requestNonPersonalizedAdsOnly: false,
     });
 
     _ad.addAdEventListener(RewardedAdEventType.LOADED, () => {
@@ -87,9 +92,14 @@ export async function initializeAdMob(): Promise<void> {
 
     _ad.addAdEventListener(RewardedAdEventType.EARNED_REWARD, () => {});
 
-    _ad.addAdEventListener(AdEventType.ERROR, () => {
+    _ad.addAdEventListener(AdEventType.ERROR, (error) => {
       _setState({ loaded: false, isLoading: false });
-      _scheduleRetry();
+      // SDK가 준 error.code 기준으로 재시도 여부 결정.
+      // 화이트리스트에 없는 에러(no-fill 등)는 재시도하지 않아 요청 낭비를 막는다.
+      const code = (error as { code?: string })?.code ?? '';
+      if (RETRIABLE_ERROR_CODES.some((c) => code.includes(c))) {
+        _scheduleRetry();
+      }
     });
 
     _ad.addAdEventListener(AdEventType.CLOSED, () => {
