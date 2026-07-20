@@ -37,6 +37,7 @@ const questionFiles: Record<string, Question[]> = {
   'exam-2025-2': require('@/data/questions/exam-2025-2.json'),
   'exam-2025-3': require('@/data/questions/exam-2025-3.json'),
   'exam-2026-1': require('@/data/questions/exam-2026-1.json'),
+  'exam-2026-2': require('@/data/questions/exam-2026-2.json'),
   };
 /** 메모리 캐시 (앱 실행 중 유지) */
 let allQuestionsCache: Question[] | null = null;

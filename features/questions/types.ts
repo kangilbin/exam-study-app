@@ -34,6 +34,8 @@ export type CategoryId =
   | 'exam-2025-1'
   | 'exam-2025-2'
   | 'exam-2025-3'
+  | 'exam-2026-1'
+  | 'exam-2026-2'
   | 'memorize-se'
   | 'memorize-network'
   | 'memorize-db'

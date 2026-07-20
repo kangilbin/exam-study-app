@@ -250,5 +250,14 @@
     "description": "2026년 1회 정보처리기사 실기 기출문제",
     "questionCount": 0,
     "subcategories": []
+  },
+  {
+    "id": "exam-2026-2",
+    "name": "2026년 2회",
+    "icon": "file-document-outline",
+    "group": "exam",
+    "description": "2026년 2회 정보처리기사 실기 기출문제",
+    "questionCount": 0,
+    "subcategories": []
   }
 ]
