@@ -28,7 +28,7 @@ export const BannerAdView = isExpoGo
           <BannerAd
             unitId={BANNER_AD_UNIT_ID}
             size={adSize}
-            requestOptions={{ requestNonPersonalizedAdsOnly: true }}
+            requestOptions={{ requestNonPersonalizedAdsOnly: false }}
             onAdLoaded={() => setIsLoaded(true)}
             onAdFailedToLoad={() => setIsLoaded(false)}
           />
