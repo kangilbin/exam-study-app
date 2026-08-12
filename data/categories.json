@@ -6,7 +6,15 @@
     "group": "code",
     "description": "C언어 코드 해석 및 출력 결과 예측",
     "questionCount": 0,
-    "subcategories": ["포인터", "배열", "구조체", "함수", "재귀", "문자열", "연산자"]
+    "subcategories": [
+      "포인터",
+      "배열",
+      "구조체",
+      "함수",
+      "재귀",
+      "문자열",
+      "연산자"
+    ]
   },
   {
     "id": "code-java",
@@ -15,7 +23,15 @@
     "group": "code",
     "description": "Java 코드 해석, 클래스, 상속, 오버라이딩",
     "questionCount": 0,
-    "subcategories": ["클래스", "상속", "오버라이딩", "인터페이스", "컬렉션", "예외처리", "생성자"]
+    "subcategories": [
+      "클래스",
+      "상속",
+      "오버라이딩",
+      "인터페이스",
+      "컬렉션",
+      "예외처리",
+      "생성자"
+    ]
   },
   {
     "id": "code-python",
@@ -24,7 +40,14 @@
     "group": "code",
     "description": "Python 코드 해석 및 출력 결과",
     "questionCount": 0,
-    "subcategories": ["리스트", "딕셔너리", "함수", "클래스", "슬라이싱", "람다"]
+    "subcategories": [
+      "리스트",
+      "딕셔너리",
+      "함수",
+      "클래스",
+      "슬라이싱",
+      "람다"
+    ]
   },
   {
     "id": "sql-dml",
@@ -33,7 +56,14 @@
     "group": "sql",
     "description": "SELECT, INSERT, UPDATE, DELETE 등 데이터 조작어",
     "questionCount": 0,
-    "subcategories": ["SELECT", "JOIN", "서브쿼리", "GROUP BY", "HAVING", "ORDER BY"]
+    "subcategories": [
+      "SELECT",
+      "JOIN",
+      "서브쿼리",
+      "GROUP BY",
+      "HAVING",
+      "ORDER BY"
+    ]
   },
   {
     "id": "memorize-se",
@@ -42,7 +72,23 @@
     "group": "theory",
     "description": "개발방법론, UML, 디자인패턴, 테스트, 아키텍처, 통합구현",
     "questionCount": 0,
-    "subcategories": ["개발방법론", "요구사항", "UML", "디자인패턴", "아키텍처", "테스트", "모듈", "형상관리", "SOLID", "EAI", "CMMi", "빌드", "통합구현", "화면설계", "패키징"]
+    "subcategories": [
+      "개발방법론",
+      "요구사항",
+      "UML",
+      "디자인패턴",
+      "아키텍처",
+      "테스트",
+      "모듈",
+      "형상관리",
+      "SOLID",
+      "EAI",
+      "CMMi",
+      "빌드",
+      "통합구현",
+      "화면설계",
+      "패키징"
+    ]
   },
   {
     "id": "memorize-network",
@@ -51,7 +97,19 @@
     "group": "theory",
     "description": "OSI 7계층, TCP/IP, 프로토콜, 암호화, 보안공격, 보안솔루션",
     "questionCount": 0,
-    "subcategories": ["OSI", "TCP/IP", "프로토콜", "암호화", "보안공격", "보안솔루션", "접근통제", "라우팅", "IP", "DoS", "네트워크장비"]
+    "subcategories": [
+      "OSI",
+      "TCP/IP",
+      "프로토콜",
+      "암호화",
+      "보안공격",
+      "보안솔루션",
+      "접근통제",
+      "라우팅",
+      "IP",
+      "DoS",
+      "네트워크장비"
+    ]
   },
   {
     "id": "memorize-db",
@@ -60,7 +118,19 @@
     "group": "theory",
     "description": "스키마, 정규화, 관계대수, 트랜잭션, 회복, 병행제어",
     "questionCount": 0,
-    "subcategories": ["스키마", "정규화", "관계대수", "트랜잭션", "회복기법", "병행제어", "무결성", "키", "SQL분류", "분산DB", "파일접근"]
+    "subcategories": [
+      "스키마",
+      "정규화",
+      "관계대수",
+      "트랜잭션",
+      "회복기법",
+      "병행제어",
+      "무결성",
+      "키",
+      "SQL분류",
+      "분산DB",
+      "파일접근"
+    ]
   },
   {
     "id": "memorize-os",
@@ -69,194 +139,205 @@
     "group": "theory",
     "description": "프로세스, 스케줄링, 메모리관리, 교착상태, UNIX/리눅스",
     "questionCount": 0,
-    "subcategories": ["스케줄링", "교착상태", "프로세스", "메모리", "운영체제", "유닉스", "리눅스", "IPC", "신기술", "전산용어"]
+    "subcategories": [
+      "스케줄링",
+      "교착상태",
+      "프로세스",
+      "메모리",
+      "운영체제",
+      "유닉스",
+      "리눅스",
+      "IPC",
+      "신기술",
+      "전산용어"
+    ]
   },
   {
     "id": "exam-2020-1",
-    "name": "2020년 1회",
+    "name": "모의고사 1회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2020년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 1회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2020-2",
-    "name": "2020년 2회",
+    "name": "모의고사 2회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2020년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 2회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2020-3",
-    "name": "2020년 3회",
+    "name": "모의고사 3회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2020년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 3회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2020-4",
-    "name": "2020년 4회",
+    "name": "모의고사 4회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2020년 4회 정보처리기사 실기 기출문제",
+    "description": "모의고사 4회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2021-1",
-    "name": "2021년 1회",
+    "name": "모의고사 5회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2021년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 5회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2021-2",
-    "name": "2021년 2회",
+    "name": "모의고사 6회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2021년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 6회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2021-3",
-    "name": "2021년 3회",
+    "name": "모의고사 7회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2021년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 7회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2022-1",
-    "name": "2022년 1회",
+    "name": "모의고사 8회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2022년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 8회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2022-2",
-    "name": "2022년 2회",
+    "name": "모의고사 9회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2022년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 9회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2022-3",
-    "name": "2022년 3회",
+    "name": "모의고사 10회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2022년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 10회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2023-1",
-    "name": "2023년 1회",
+    "name": "모의고사 11회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2023년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 11회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2023-2",
-    "name": "2023년 2회",
+    "name": "모의고사 12회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2023년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 12회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2023-3",
-    "name": "2023년 3회",
+    "name": "모의고사 13회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2023년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 13회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2024-1",
-    "name": "2024년 1회",
+    "name": "모의고사 14회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2024년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 14회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2024-2",
-    "name": "2024년 2회",
+    "name": "모의고사 15회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2024년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 15회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2024-3",
-    "name": "2024년 3회",
+    "name": "모의고사 16회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2024년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 16회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2025-1",
-    "name": "2025년 1회",
+    "name": "모의고사 17회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2025년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 17회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2025-2",
-    "name": "2025년 2회",
+    "name": "모의고사 18회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2025년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 18회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2025-3",
-    "name": "2025년 3회",
+    "name": "모의고사 19회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2025년 3회 정보처리기사 실기 기출문제",
+    "description": "모의고사 19회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2026-1",
-    "name": "2026년 1회",
+    "name": "모의고사 20회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2026년 1회 정보처리기사 실기 기출문제",
+    "description": "모의고사 20회",
     "questionCount": 0,
     "subcategories": []
   },
   {
     "id": "exam-2026-2",
-    "name": "2026년 2회",
+    "name": "모의고사 21회",
     "icon": "file-document-outline",
     "group": "exam",
-    "description": "2026년 2회 정보처리기사 실기 기출문제",
+    "description": "모의고사 21회",
     "questionCount": 0,
     "subcategories": []
   }

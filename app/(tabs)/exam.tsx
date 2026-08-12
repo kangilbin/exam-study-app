@@ -1,12 +1,12 @@
 /**
- * 기출문제 탭 화면
- * 연도별 SectionList로 기출 회차 표시
+ * 모의고사 탭 화면
+ * 회차 순서(모의고사 1회~N회)대로 FlatList로 표시
  */
 
 import {
   View,
   Text,
-  SectionList,
+  FlatList,
   Pressable,
   StyleSheet,
   Modal,
@@ -15,13 +15,13 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS } from '@/lib/constants';
 import type { Category } from '@/features/questions/types';
-import { useExamCategories, type ExamSection } from '@/features/questions/hooks/useExamCategories';
+import { useExamCategories } from '@/features/questions/hooks/useExamCategories';
 import { AdGateOverlay } from '@/components/ads/AdGateOverlay';
 
 export default function ExamScreen() {
   const { bottom } = useSafeAreaInsets();
   const {
-    sections, progress, modalInfo, setModalInfo,
+    items, progress, modalInfo, setModalInfo,
     isWaitingForAd, adBlockedCountdown, proceedImmediately,
     handleExamPress, navigateWithMode, getItemStats,
   } = useExamCategories();
@@ -67,30 +67,14 @@ export default function ExamScreen() {
     );
   };
 
-  /** 연도별 섹션 헤더 렌더링 */
-  const renderSectionHeader = ({
-    section,
-  }: {
-    section: ExamSection;
-  }) => (
-    <View style={styles.sectionHeader}>
-      <Text style={styles.sectionTitle}>{section.title}</Text>
-      <Text style={styles.sectionCount}>
-        {section.data.length}개 회차
-      </Text>
-    </View>
-  );
-
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-      <SectionList
-        sections={sections}
+      <FlatList
+        data={items}
         renderItem={renderItem}
-        renderSectionHeader={renderSectionHeader}
         keyExtractor={(item) => item.id}
         extraData={progress}
         contentContainerStyle={styles.listContent}
-        stickySectionHeadersEnabled={false}
         ListHeaderComponent={
           <Text style={styles.header}>
             회차를 선택하여 문제를 풀어보세요
@@ -104,7 +88,7 @@ export default function ExamScreen() {
               color={COLORS.gray[300]}
             />
             <Text style={styles.emptyText}>
-              기출문제가 없습니다
+              모의고사가 없습니다
             </Text>
           </View>
         }
@@ -219,23 +203,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.textSecondary,
     marginBottom: 16,
-  },
-  sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 12,
-    marginBottom: 8,
-    paddingHorizontal: 4,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: COLORS.text,
-  },
-  sectionCount: {
-    fontSize: 13,
-    color: COLORS.textSecondary,
   },
   card: {
     flexDirection: 'row',

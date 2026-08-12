@@ -1,6 +1,6 @@
 /**
  * 학습 탭 화면
- * 전체 진행도 + 카테고리 그리드 (기출 제외)
+ * 전체 진행도 + 카테고리 그리드 (모의고사 제외)
  * 카테고리 클릭 시 학습 기록이 있으면 이어서/처음부터 선택 모달 표시
  */
 
@@ -55,7 +55,7 @@ export default function HomeScreen() {
   const { bottom } = useSafeAreaInsets();
   const router = useRouter();
   const { showAdWithLoading, isWaitingForAd, adBlockedCountdown, proceedImmediately } = useAdGate();
-  /** 기출 제외, 문제 또는 플래시카드가 있는 카테고리 */
+  /** 모의고사 제외, 문제 또는 플래시카드가 있는 카테고리 */
   const categories = getAllCategories().filter(
     (cat) => cat.group !== 'exam' && (cat.questionCount > 0 || isMemorizeCategory(cat.id))
   );

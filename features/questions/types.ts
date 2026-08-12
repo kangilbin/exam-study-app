@@ -7,7 +7,7 @@
 export type QuestionType = 'code' | 'theory' | 'sql';
 
 /** 프로그래밍 언어 (코드 문제용) */
-export type CodeLanguage = 'c' | 'java' | 'python';
+export type CodeLanguage = 'c' | 'java' | 'python' | 'sql';
 
 /** 카테고리 ID */
 export type CategoryId =
@@ -61,6 +61,13 @@ export interface Question {
   codeLanguage?: CodeLanguage;      // 코드 언어
   imageUrl?: string;                // 문제 이미지 경로 (테이블/다이어그램 등)
   choices?: Choice[];                // 선택지 (없으면 단답형/서술형으로 암기 모드만)
+
+  /**
+   * 저작권 리스크 완화를 위한 콘텐츠 변형 이력 (copyright-risk-mitigation).
+   * 백필 이전 문항에는 없을 수 있어 당분간 옵셔널로 유지한다.
+   */
+  changeType?: 'kept' | 'rewritten';
+  changeReason?: 'image' | 'high-frequency-term' | 'code-concept' | 'out-of-scope';
 }
 
 /** 카테고리 엔티티 */

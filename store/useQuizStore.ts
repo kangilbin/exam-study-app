@@ -355,6 +355,25 @@ export const useQuizStore = create<QuizState>()(
     {
       name: '@quiz-store',
       storage: createJSONStorage(() => AsyncStorage),
+      version: 1,
+      // v1: 저작권 대응 재배치로 문항 id가 다른 문항을 가리키게 되어, 진행 중이던/저장된
+      // 퀴즈 세션(questionIds, results)을 그대로 복원하면 엉뚱한 문항·결과가 섞인다.
+      // 버전이 낮은 기존 데이터는 세션 관련 상태를 전부 초기화한다.
+      migrate: (persistedState, version) => {
+        if (version < 1) {
+          return {
+            categoryId: null,
+            questionIds: [],
+            currentIndex: 0,
+            results: [],
+            startedAt: null,
+            userAnswers: {},
+            answeredStates: {},
+            savedSessions: {},
+          };
+        }
+        return persistedState;
+      },
       partialize: (state) => ({
         categoryId: state.categoryId,
         questionIds: state.questions.map((q) => q.id),

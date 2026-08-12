@@ -33,7 +33,7 @@ export default function RootLayout() {
         <Stack.Screen name="quiz" options={{ headerShown: false }} />
         <Stack.Screen
           name="bookmarks"
-          options={{ title: '기출 북마크', presentation: 'card' }}
+          options={{ title: '모의고사 북마크', presentation: 'card' }}
         />
         <Stack.Screen
           name="flashcard-bookmarks"

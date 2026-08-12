@@ -45,7 +45,7 @@ export default function ProfileScreen() {
       <ScrollView contentContainerStyle={styles.content}>
         {/* 통계 카드 */}
         <View style={styles.statsCard}>
-          <Text style={styles.statsTitle}>기출문제 학습 통계</Text>
+          <Text style={styles.statsTitle}>모의고사 학습 통계</Text>
           <View style={styles.statsGrid}>
             <View style={styles.statItem}>
               <Text style={styles.statValue}>{overallStats.totalSeen}</Text>
@@ -77,7 +77,7 @@ export default function ProfileScreen() {
             onPress={() => showAdWithLoading(() => router.push('/bookmarks'))}
           >
             <MaterialCommunityIcons name="cards-heart" size={24} color={COLORS.primary} />
-            <Text style={styles.menuText}>기출 북마크</Text>
+            <Text style={styles.menuText}>모의고사 북마크</Text>
             <Text style={styles.menuBadge}>{bookmarks.length}</Text>
             <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.gray[400]} />
           </Pressable>

@@ -1,0 +1,161 @@
+{
+  "exam-2020-1": {
+    "se": 8,
+    "db": 3,
+    "network-security": 4,
+    "sql": 1,
+    "os": 1,
+    "code": 3
+  },
+  "exam-2020-2": {
+    "db": 4,
+    "code": 3,
+    "se": 7,
+    "sql": 2,
+    "network-security": 2,
+    "os": 2
+  },
+  "exam-2020-3": {
+    "se": 8,
+    "code": 4,
+    "network-security": 3,
+    "sql": 3,
+    "db": 2
+  },
+  "exam-2020-4": {
+    "network-security": 4,
+    "se": 6,
+    "db": 2,
+    "code": 5,
+    "os": 2,
+    "sql": 1
+  },
+  "exam-2021-1": {
+    "network-security": 4,
+    "db": 4,
+    "se": 6,
+    "code": 4,
+    "sql": 1,
+    "os": 1
+  },
+  "exam-2021-2": {
+    "network-security": 3,
+    "se": 6,
+    "db": 3,
+    "sql": 3,
+    "code": 5
+  },
+  "exam-2021-3": {
+    "code": 5,
+    "network-security": 4,
+    "db": 2,
+    "se": 8,
+    "sql": 1
+  },
+  "exam-2022-1": {
+    "db": 5,
+    "code": 6,
+    "sql": 1,
+    "se": 5,
+    "os": 1,
+    "network-security": 2
+  },
+  "exam-2022-2": {
+    "db": 3,
+    "network-security": 4,
+    "se": 5,
+    "sql": 1,
+    "code": 6,
+    "os": 1
+  },
+  "exam-2022-3": {
+    "code": 8,
+    "db": 3,
+    "se": 3,
+    "network-security": 5,
+    "os": 1
+  },
+  "exam-2023-1": {
+    "code": 8,
+    "se": 3,
+    "network-security": 5,
+    "db": 2,
+    "sql": 2
+  },
+  "exam-2023-2": {
+    "code": 9,
+    "sql": 2,
+    "se": 4,
+    "network-security": 4,
+    "db": 1
+  },
+  "exam-2023-3": {
+    "code": 8,
+    "network-security": 5,
+    "os": 2,
+    "sql": 1,
+    "se": 2,
+    "db": 2
+  },
+  "exam-2024-1": {
+    "code": 8,
+    "se": 3,
+    "network-security": 4,
+    "db": 2,
+    "os": 1,
+    "sql": 2
+  },
+  "exam-2024-2": {
+    "code": 9,
+    "db": 2,
+    "sql": 1,
+    "network-security": 4,
+    "se": 3,
+    "os": 1
+  },
+  "exam-2024-3": {
+    "code": 9,
+    "sql": 1,
+    "os": 1,
+    "network-security": 3,
+    "se": 4,
+    "db": 2
+  },
+  "exam-2025-1": {
+    "network-security": 5,
+    "db": 2,
+    "code": 9,
+    "sql": 1,
+    "se": 3
+  },
+  "exam-2025-2": {
+    "db": 3,
+    "network-security": 3,
+    "os": 2,
+    "code": 9,
+    "se": 3
+  },
+  "exam-2025-3": {
+    "se": 3,
+    "os": 1,
+    "network-security": 4,
+    "code": 8,
+    "sql": 3,
+    "db": 1
+  },
+  "exam-2026-1": {
+    "code": 7,
+    "se": 4,
+    "db": 1,
+    "network-security": 5,
+    "sql": 3
+  },
+  "exam-2026-2": {
+    "se": 3,
+    "code": 7,
+    "network-security": 4,
+    "os": 1,
+    "sql": 4,
+    "db": 1
+  }
+}

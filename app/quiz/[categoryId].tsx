@@ -295,7 +295,7 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* 주관식 (기출 카테고리) */}
+        {/* 주관식 (모의고사 카테고리) */}
         {isSubjectiveCategory && answerMeta ? (
           <View style={styles.subjectiveArea}>
             {!isAnswered ? (

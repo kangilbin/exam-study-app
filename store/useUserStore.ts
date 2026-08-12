@@ -116,6 +116,17 @@ export const useUserStore = create<UserState>()(
     {
       name: '@user-store',
       storage: createJSONStorage(() => AsyncStorage),
+      version: 1,
+      // v1: 저작권 대응 재배치로 문항 id가 다른 문항을 가리키게 되어, 이전에 저장된
+      // progress/bookmarks(questionId 기준)를 그대로 두면 엉뚱한 문항에 결과가 붙는다.
+      // 버전이 낮은 기존 데이터는 progress/bookmarks만 초기화하고 settings는 유지한다.
+      migrate: (persistedState, version) => {
+        const state = persistedState as UserState;
+        if (version < 1) {
+          return { ...state, progress: {}, bookmarks: [] };
+        }
+        return state;
+      },
       partialize: (state) => ({
         progress: state.progress,
         bookmarks: state.bookmarks,

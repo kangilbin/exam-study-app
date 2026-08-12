@@ -1,6 +1,6 @@
 /**
  * 탭 네비게이션 레이아웃
- * 3개 탭: 학습, 기출, 내정보
+ * 3개 탭: 학습, 모의고사, 내정보
  *
  * 배너 광고 구조:
  * - custom tabBar로 [BannerAdView][BottomTabBar] 순서로 렌더링
@@ -57,8 +57,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="exam"
         options={{
-          title: '기출',
-          headerTitle: '기출문제',
+          title: '모의고사',
+          headerTitle: '모의고사',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="file-document-outline" color={color} size={size} />
           ),

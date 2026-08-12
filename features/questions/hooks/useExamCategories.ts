@@ -7,11 +7,6 @@ import { loadQuestionsByCategory } from '@/features/questions/services/questionS
 import { useAdGate } from '@/components/ads/useAdGate';
 import type { Category, CategoryId } from '@/features/questions/types';
 
-export interface ExamSection {
-  title: string;
-  data: Category[];
-}
-
 export interface ResumeInfo {
   categoryId: CategoryId;
   categoryName: string;
@@ -28,30 +23,15 @@ export interface ResumeInfo {
   isCompleted: boolean;
 }
 
-const extractYear = (id: string): number => {
-  const match = id.match(/exam-(\d{4})/);
-  return match ? parseInt(match[1], 10) : 0;
-};
-
 export const useExamCategories = () => {
   const router = useRouter();
   const { showAdWithLoading, isWaitingForAd, adBlockedCountdown, proceedImmediately } = useAdGate();
   const [modalInfo, setModalInfo] = useState<ResumeInfo | null>(null);
 
-  const sections = useMemo<ExamSection[]>(() => {
-    const examCategories = getCategoriesByGroup('exam');
-    const years = Array.from(
-      new Set(examCategories.map((c) => extractYear(c.id))),
-    ).sort((a, b) => b - a);
-
-    return years
-      .map((year) => ({
-        title: `${year}년`,
-        data: examCategories
-          .filter((c) => extractYear(c.id) === year)
-          .sort((a, b) => b.id.localeCompare(a.id)),
-      }))
-      .filter((s) => s.data.length > 0);
+  // 모의고사는 특정 연도의 실제 기출을 나타내지 않으므로 연도별로 묶지 않고
+  // 회차 순서(모의고사 1회~N회) 그대로 평평한 목록으로 보여준다.
+  const items = useMemo<Category[]>(() => {
+    return [...getCategoriesByGroup('exam')].sort((a, b) => a.id.localeCompare(b.id));
   }, []);
 
   const handleExamPress = (item: Category) => {
@@ -121,7 +101,7 @@ export const useExamCategories = () => {
   };
 
   return {
-    sections,
+    items,
     progress,
     modalInfo,
     setModalInfo,
