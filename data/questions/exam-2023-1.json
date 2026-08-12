@@ -132,7 +132,7 @@
     "type": "theory",
     "question": "다음 UML 관계에 대한 설명에서 (1),(2)에 해당하는 답을 보기에서 골라 쓰시오.\n\n(1) 한 클래스가 다른 클래스를 부분으로 포함하되, 전체 객체가 소멸되면 부분 객체도 함께 소멸되는 강한 전체-부분 관계\n(2) 한 클래스가 다른 클래스를 일시적으로 사용하는 짧은 기간의 관계로, 사용하는 클래스가 변경되면 사용되는 클래스도 영향을 받을 수 있는 관계\n\n[보기]\nㄱ. Composition  ㄴ. Dependency  ㄷ. Aggregation  ㄹ. Generalization  ㅁ. Association  ㅂ. Realization",
     "answer": "1. Composition 2. Dependency",
-    "explanation": "Composition(합성)은 전체 객체가 소멸되면 부분 객체도 함께 소멸되는 강한 전체-부분 관계이고, Dependency(의존)는 한 클래스가 다른 클래스를 일시적으로 사용하는 관계이다.\n관련 용어: Aggregation(이전 정답) - 전체-부분 관계이지만 부분이 독립적으로 존재할 수 있는 약한 집합 관계. Generalization(이전 정답) - 상속 관계(IS-A)를 나타내는 일반화 관계. Association - 클래스 간의 단순한 연관 관계. Realization - 인터페이스와 구현체 간의 실체화 관계.",
+    "explanation": "Composition(합성)은 전체 객체가 소멸되면 부분 객체도 함께 소멸되는 강한 전체-부분 관계이고, Dependency(의존)는 한 클래스가 다른 클래스를 일시적으로 사용하는 관계이다.\n관련 용어: Aggregation- 전체-부분 관계이지만 부분이 독립적으로 존재할 수 있는 약한 집합 관계. Generalization- 상속 관계(IS-A)를 나타내는 일반화 관계. Association - 클래스 간의 단순한 연관 관계. Realization - 인터페이스와 구현체 간의 실체화 관계.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },

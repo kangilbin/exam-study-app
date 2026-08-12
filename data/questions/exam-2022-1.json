@@ -6,7 +6,7 @@
     "type": "theory",
     "question": "트랜잭션 내에서 수행한 변경 사항을 데이터베이스에 영구적으로 반영하기 위해 사용하는 트랜잭션 제어어(TCL)를 보기에서 골라 쓰시오.\n\n[보기]\nㄱ. GRANT  ㄴ. REVOKE  ㄷ. COMMIT  ㄹ. ROLLBACK  ㅁ. SAVEPOINT  ㅂ. SELECT",
     "answer": "COMMIT",
-    "explanation": "COMMIT은 트랜잭션에서 수행한 변경 사항을 데이터베이스에 영구적으로 반영하는 TCL(Transaction Control Language) 명령어이다.\n관련 용어: GRANT(이전 정답) - 데이터베이스 객체에 대한 접근 권한이나 시스템 권한을 부여하는 DCL 명령어. REVOKE - 부여된 권한을 회수하는 DCL 명령어. ROLLBACK - 트랜잭션의 변경 사항을 취소하고 이전 상태로 되돌리는 TCL 명령어. SAVEPOINT - 트랜잭션 내에 롤백 지점을 지정하는 TCL 명령어. SELECT - 데이터를 조회하는 DML 명령어.",
+    "explanation": "COMMIT은 트랜잭션에서 수행한 변경 사항을 데이터베이스에 영구적으로 반영하는 TCL(Transaction Control Language) 명령어이다.\n관련 용어: GRANT- 데이터베이스 객체에 대한 접근 권한이나 시스템 권한을 부여하는 DCL 명령어. REVOKE - 부여된 권한을 회수하는 DCL 명령어. ROLLBACK - 트랜잭션의 변경 사항을 취소하고 이전 상태로 되돌리는 TCL 명령어. SAVEPOINT - 트랜잭션 내에 롤백 지점을 지정하는 TCL 명령어. SELECT - 데이터를 조회하는 DML 명령어.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },
@@ -197,7 +197,7 @@
     "type": "theory",
     "question": "한 객체의 상태가 변경되었을 때 그 객체에 의존하는 다른 객체들에게 자동으로 알림을 보내 통지하는 디자인 패턴은 무엇인지 보기에서 골라 쓰시오.\n\n[보기]\nㄱ. Factory Method  ㄴ. Observer  ㄷ. Singleton  ㄹ. Adapter  ㅁ. Decorator  ㅂ. Strategy",
     "answer": "Observer",
-    "explanation": "Observer(옵저버) 패턴은 1:N 의존 관계를 정의하여 한 객체의 상태 변화를 그 객체에 의존하는 다른 객체들에게 자동으로 통지하는 행위 패턴이다.\n관련 용어: Factory Method(이전 정답) - 객체 생성을 서브클래스에 위임하는 생성 패턴. Singleton - 클래스의 인스턴스를 하나만 생성하도록 보장하는 생성 패턴. Adapter - 호환되지 않는 인터페이스를 연결해주는 구조 패턴. Decorator - 객체에 동적으로 기능을 추가하는 구조 패턴. Strategy - 알고리즘군을 캡슐화하여 상호 교환 가능하게 만드는 행위 패턴.",
+    "explanation": "Observer(옵저버) 패턴은 1:N 의존 관계를 정의하여 한 객체의 상태 변화를 그 객체에 의존하는 다른 객체들에게 자동으로 통지하는 행위 패턴이다.\n관련 용어: Factory Method- 객체 생성을 서브클래스에 위임하는 생성 패턴. Singleton - 클래스의 인스턴스를 하나만 생성하도록 보장하는 생성 패턴. Adapter - 호환되지 않는 인터페이스를 연결해주는 구조 패턴. Decorator - 객체에 동적으로 기능을 추가하는 구조 패턴. Strategy - 알고리즘군을 캡슐화하여 상호 교환 가능하게 만드는 행위 패턴.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },
@@ -219,7 +219,7 @@
     "type": "theory",
     "question": "다음 설명에 해당하는 암호화 알고리즘을 보기에서 골라 쓰시오.\n\n서로 다른 두 개의 키(공개키, 개인키)를 사용하는 비대칭키(공개키) 암호화 알고리즘으로, 큰 소수의 곱을 인수분해하기 어려운 문제에 기반한다. 전자서명, 키 교환 등에 널리 사용된다.\n\n[보기]\nㄱ. DES  ㄴ. AES  ㄷ. RSA  ㄹ. SEED  ㅁ. ECC  ㅂ. IDEA",
     "answer": "RSA",
-    "explanation": "RSA는 큰 소수의 곱을 인수분해하기 어려운 문제에 기반한 대표적인 공개키(비대칭키) 암호화 알고리즘이다.\n관련 용어: DES(이전 정답) - 64비트 평문을 64비트 암호문으로 암호화하는 대칭키 블록 암호(실질 키 56비트). AES - DES를 대체한 128비트 블록 단위의 대칭키 암호 알고리즘. SEED - 한국에서 개발한 128비트 블록 단위의 대칭키 암호 알고리즘. ECC(타원곡선 암호) - 타원곡선 이산대수 문제에 기반한 공개키 암호 알고리즘. IDEA - 64비트 블록 단위의 대칭키 암호 알고리즘.",
+    "explanation": "RSA는 큰 소수의 곱을 인수분해하기 어려운 문제에 기반한 대표적인 공개키(비대칭키) 암호화 알고리즘이다.\n관련 용어: DES- 64비트 평문을 64비트 암호문으로 암호화하는 대칭키 블록 암호(실질 키 56비트). AES - DES를 대체한 128비트 블록 단위의 대칭키 암호 알고리즘. SEED - 한국에서 개발한 128비트 블록 단위의 대칭키 암호 알고리즘. ECC(타원곡선 암호) - 타원곡선 이산대수 문제에 기반한 공개키 암호 알고리즘. IDEA - 64비트 블록 단위의 대칭키 암호 알고리즘.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },

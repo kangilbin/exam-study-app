@@ -136,7 +136,7 @@
     "type": "theory",
     "question": "다음 소프트웨어 테스트 용어에 대한 설명으로 보기에 알맞는 답을 작성하시오.\n\n(1) 개발 중인 소프트웨어가 요구사항 명세서에 맞게 만들어졌는지를 검증하는 활동으로, '제품을 올바르게 만들었는가'에 대한 답을 구하는 과정\n(2) 사용자의 요구를 충족시키는지 확인하는 활동으로, '올바른 제품을 만들었는가'에 대한 답을 구하는 과정\n\n[보기] Verification, Validation, static, dynamic, Review, Inspection",
     "answer": "1. Verification 2. Validation",
-    "explanation": "Verification(검증)은 요구사항 명세서를 기준으로 소프트웨어가 올바르게 개발되었는지를 확인하는 활동이고, Validation(확인)은 사용자의 요구를 충족시키는지를 확인하는 활동이다.\n관련 용어: static(이전 정답) - 코드를 실행하지 않고 소스 코드를 분석하는 정적 분석 기법. dynamic(이전 정답) - 코드를 실행하여 동작을 추적하며 분석하는 동적 분석 기법. Review - 관련자들이 모여 산출물을 검토하는 활동. Inspection - 정형화된 절차에 따라 결함을 찾는 검토 기법.",
+    "explanation": "Verification(검증)은 요구사항 명세서를 기준으로 소프트웨어가 올바르게 개발되었는지를 확인하는 활동이고, Validation(확인)은 사용자의 요구를 충족시키는지를 확인하는 활동이다.\n관련 용어: static- 코드를 실행하지 않고 소스 코드를 분석하는 정적 분석 기법. dynamic- 코드를 실행하여 동작을 추적하며 분석하는 동적 분석 기법. Review - 관련자들이 모여 산출물을 검토하는 활동. Inspection - 정형화된 절차에 따라 결함을 찾는 검토 기법.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },
@@ -191,7 +191,7 @@
     "type": "theory",
     "question": "음성 인식을 통해 사용자와 컴퓨터가 상호작용하는 인터페이스 방식으로, 화면 대신 음성 명령과 응답으로 정보를 주고받는 인터페이스 방식의 영문 약어를 보기에서 골라 쓰시오.\n\n[보기]\nㄱ. GUI  ㄴ. VUI  ㄷ. CLI  ㄹ. NUI  ㅁ. OUI",
     "answer": "VUI",
-    "explanation": "VUI(Voice User Interface)는 음성을 매개로 사용자와 컴퓨터가 상호작용하는 인터페이스이다.\n관련 용어: GUI(이전 정답) - 그래픽을 통해 아이콘 등을 클릭하여 조작하는 인터페이스. CLI - 명령어를 입력하여 조작하는 텍스트 기반 인터페이스. NUI - 신체 동작 등 자연스러운 행동으로 조작하는 인터페이스. OUI - 특정 개체(사물) 중심의 사용자 인터페이스.",
+    "explanation": "VUI(Voice User Interface)는 음성을 매개로 사용자와 컴퓨터가 상호작용하는 인터페이스이다.\n관련 용어: GUI- 그래픽을 통해 아이콘 등을 클릭하여 조작하는 인터페이스. CLI - 명령어를 입력하여 조작하는 텍스트 기반 인터페이스. NUI - 신체 동작 등 자연스러운 행동으로 조작하는 인터페이스. OUI - 특정 개체(사물) 중심의 사용자 인터페이스.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },

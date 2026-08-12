@@ -235,7 +235,7 @@
     "type": "theory",
     "question": "다음 설명에 해당하는 프로토콜을 보기에서 골라 영어 약자로 작성하시오.\n\n네트워크 계층(IP 계층)에서 데이터의 기밀성과 무결성을 보장하기 위해 사용되는 보안 프로토콜로, 터널 모드와 전송 모드를 지원하며 VPN 구축에 널리 사용된다.\n\n[보기]\nㄱ. TKIP  ㄴ. IPSec  ㄷ. SSL  ㄹ. WPA2  ㅁ. SET",
     "answer": "IPSec",
-    "explanation": "IPSec(IP Security)은 네트워크 계층에서 데이터의 기밀성과 무결성을 보장하는 보안 프로토콜로, 터널 모드와 전송 모드를 지원하며 VPN 구축에 사용된다.\n관련 용어: TKIP(이전 정답) - WPA에서 사용하는 임시 키 무결성 프로토콜로 WEP의 취약점을 보완. SSL - 전송 계층에서 데이터를 암호화하는 보안 프로토콜(현재는 TLS로 발전). WPA2 - AES 기반의 무선랜(Wi-Fi) 보안 표준. SET(Secure Electronic Transaction) - 전자상거래에서 신용카드 결제 정보를 안전하게 처리하기 위한 보안 프로토콜.",
+    "explanation": "IPSec(IP Security)은 네트워크 계층에서 데이터의 기밀성과 무결성을 보장하는 보안 프로토콜로, 터널 모드와 전송 모드를 지원하며 VPN 구축에 사용된다.\n관련 용어: TKIP- WPA에서 사용하는 임시 키 무결성 프로토콜로 WEP의 취약점을 보완. SSL - 전송 계층에서 데이터를 암호화하는 보안 프로토콜(현재는 TLS로 발전). WPA2 - AES 기반의 무선랜(Wi-Fi) 보안 표준. SET(Secure Electronic Transaction) - 전자상거래에서 신용카드 결제 정보를 안전하게 처리하기 위한 보안 프로토콜.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   }

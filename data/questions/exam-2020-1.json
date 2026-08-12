@@ -39,7 +39,7 @@
     "type": "theory",
     "question": "모듈 내부의 각 구성 요소들이 하나의 단일한 기능을 수행하기 위해 서로 밀접하게 관련되어 있는 응집도(Cohesion) 유형을 영문으로 쓰시오.\n\n[보기]\nㄱ. Functional Cohesion  ㄴ. Control Coupling  ㄷ. Sequential Cohesion  ㄹ. Communicational Cohesion  ㅁ. Temporal Cohesion  ㅂ. Logical Cohesion",
     "answer": "Functional Cohesion",
-    "explanation": "Functional Cohesion(기능적 응집도)은 모듈 내부의 모든 요소가 하나의 단일 기능 수행을 위해 필수적으로 결합되어 있는, 응집도 중 가장 강한 유형이다.\n관련 용어: Control Coupling(이전 정답) - 다른 모듈의 내부 논리 조직을 제어하기 위해 제어 신호를 이용해 통신하는 결합도. Sequential Cohesion(순차적 응집도) - 한 요소의 출력이 다음 요소의 입력으로 사용되는 응집도. Communicational Cohesion(교환적 응집도) - 동일한 입출력 데이터를 사용하는 요소들이 모인 응집도. Temporal Cohesion(시간적 응집도) - 특정 시간에 함께 수행되어야 하는 요소들이 모인 응집도. Logical Cohesion(논리적 응집도) - 유사한 성격이나 형태의 기능을 논리적으로 묶은 응집도.",
+    "explanation": "Functional Cohesion(기능적 응집도)은 모듈 내부의 모든 요소가 하나의 단일 기능 수행을 위해 필수적으로 결합되어 있는, 응집도 중 가장 강한 유형이다.\n관련 용어: Control Coupling - 다른 모듈의 내부 논리 조직을 제어하기 위해 제어 신호를 이용해 통신하는 결합도. Sequential Cohesion(순차적 응집도) - 한 요소의 출력이 다음 요소의 입력으로 사용되는 응집도. Communicational Cohesion(교환적 응집도) - 동일한 입출력 데이터를 사용하는 요소들이 모인 응집도. Temporal Cohesion(시간적 응집도) - 특정 시간에 함께 수행되어야 하는 요소들이 모인 응집도. Logical Cohesion(논리적 응집도) - 유사한 성격이나 형태의 기능을 논리적으로 묶은 응집도.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },
@@ -106,7 +106,7 @@
     "type": "theory",
     "question": "데이터베이스 병행제어 기법에 대한 설명이다. (1),(2)에 해당하는 기법을 보기에서 찾아 적으시오.\n\n(1) 트랜잭션이 데이터 항목에 접근하기 전에 락(Lock)을 획득하여 다른 트랜잭션의 동시 접근을 제한하는 기법\n(2) 트랜잭션에 고유한 타임스탬프를 부여하여 그 순서대로 실행되도록 보장하는 기법\n\n[보기] Locking, Timestamp Ordering, redo, undo, 2PC, Deadlock",
     "answer": "1. Locking 2. Timestamp Ordering",
-    "explanation": "로킹(Locking) 기법은 락을 이용해 데이터 항목에 대한 동시 접근을 제어하고, 타임스탬프 순서(Timestamp Ordering) 기법은 트랜잭션 생성 시각(타임스탬프)을 기준으로 실행 순서를 결정하여 일관성을 보장한다.\n관련 용어: redo(이전 정답) - 로그를 이용해 장애 발생 전까지의 작업을 다시 수행하는 회복 기법. undo(이전 정답) - 트랜잭션의 작업을 취소하고 이전 상태로 되돌리는 회복 기법. 2PC(Two-Phase Commit) - 분산 트랜잭션의 일관성을 보장하는 2단계 커밋 프로토콜. Deadlock - 둘 이상의 트랜잭션이 서로 자원을 기다리며 무한 대기하는 상태.",
+    "explanation": "로킹(Locking) 기법은 락을 이용해 데이터 항목에 대한 동시 접근을 제어하고, 타임스탬프 순서(Timestamp Ordering) 기법은 트랜잭션 생성 시각(타임스탬프)을 기준으로 실행 순서를 결정하여 일관성을 보장한다.\n관련 용어: redo- 로그를 이용해 장애 발생 전까지의 작업을 다시 수행하는 회복 기법. undo- 트랜잭션의 작업을 취소하고 이전 상태로 되돌리는 회복 기법. 2PC(Two-Phase Commit) - 분산 트랜잭션의 일관성을 보장하는 2단계 커밋 프로토콜. Deadlock - 둘 이상의 트랜잭션이 서로 자원을 기다리며 무한 대기하는 상태.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },

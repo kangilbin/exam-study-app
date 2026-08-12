@@ -154,7 +154,7 @@
     "type": "theory",
     "question": "다음 접근 통제(Access Control) 모델에 대한 설명에서 (1),(2),(3)에 해당하는 답을 보기에서 골라 쓰시오.\n\n(1) 주체의 신원에 따라 객체에 대한 접근을 통제하는 방식\n(2) 주체와 객체의 등급(보안 레이블)에 따라 접근을 통제하는 방식\n(3) 주체의 역할(role)에 따라 접근 권한을 부여하는 방식\n\n[보기]\nㄱ. DAC  ㄴ. MAC  ㄷ. RBAC  ㄹ. Authentication  ㅁ. Authorization  ㅂ. Accounting",
     "answer": "1. DAC 2. MAC 3. RBAC",
-    "explanation": "DAC(임의적 접근통제)는 주체(사용자)의 신원에 따라 접근을 통제하고, MAC(강제적 접근통제)는 주체와 객체에 부여된 보안 등급(레이블)에 따라 접근을 통제하며, RBAC(역할 기반 접근통제)는 주체에게 부여된 역할(role)에 따라 접근 권한을 부여한다.\n관련 용어: Authentication(이전 정답) - 사용자의 신원을 검증하는 인증 과정. Authorization(이전 정답) - 인증된 사용자에게 특정 자원에 대한 접근 권한을 부여하는 인가 과정. Accounting(이전 정답) - 사용자의 자원 사용 내역을 기록·관리하는 계정 관리 과정 (Authentication, Authorization, Accounting은 AAA 프레임워크의 구성 요소).",
+    "explanation": "DAC(임의적 접근통제)는 주체(사용자)의 신원에 따라 접근을 통제하고, MAC(강제적 접근통제)는 주체와 객체에 부여된 보안 등급(레이블)에 따라 접근을 통제하며, RBAC(역할 기반 접근통제)는 주체에게 부여된 역할(role)에 따라 접근 권한을 부여한다.\n관련 용어: Authentication- 사용자의 신원을 검증하는 인증 과정. Authorization- 인증된 사용자에게 특정 자원에 대한 접근 권한을 부여하는 인가 과정. Accounting- 사용자의 자원 사용 내역을 기록·관리하는 계정 관리 과정 (Authentication, Authorization, Accounting은 AAA 프레임워크의 구성 요소).",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   },
@@ -232,7 +232,7 @@
     "type": "theory",
     "question": "다음 설명에 해당하는 페이지 교체 알고리즘의 이름을 보기에서 골라 쓰시오.\n\n- 페이지 부재(Page Fault) 발생 시, 가장 오랫동안 참조되지 않은 페이지를 교체 대상으로 선정하는 기법\n- 각 페이지의 최근 참조 시간을 기록해야 하므로 오버헤드가 발생할 수 있음\n\n[보기]\nㄱ. FIFO  ㄴ. LRU  ㄷ. LFU  ㄹ. OPT  ㅁ. RAID 0  ㅂ. Clock",
     "answer": "LRU",
-    "explanation": "LRU(Least Recently Used)는 가장 오랫동안 참조되지 않은 페이지를 교체 대상으로 선정하는 페이지 교체 알고리즘이다.\n관련 용어: FIFO - 가장 먼저 메모리에 적재된 페이지를 교체하는 기법. LFU - 참조 횟수가 가장 적은 페이지를 교체하는 기법. OPT(최적 교체) - 이후 가장 오랫동안 사용되지 않을 페이지를 교체하는 이론적 기법. RAID 0(이전 정답) - 스트라이핑 방식으로 데이터를 블록 단위로 나누어 여러 디스크에 분산 저장하는 구성. Clock(2차 기회 알고리즘) - 참조 비트를 이용하여 LRU를 근사적으로 구현하는 기법.",
+    "explanation": "LRU(Least Recently Used)는 가장 오랫동안 참조되지 않은 페이지를 교체 대상으로 선정하는 페이지 교체 알고리즘이다.\n관련 용어: FIFO - 가장 먼저 메모리에 적재된 페이지를 교체하는 기법. LFU - 참조 횟수가 가장 적은 페이지를 교체하는 기법. OPT(최적 교체) - 이후 가장 오랫동안 사용되지 않을 페이지를 교체하는 이론적 기법. RAID 0- 스트라이핑 방식으로 데이터를 블록 단위로 나누어 여러 디스크에 분산 저장하는 구성. Clock(2차 기회 알고리즘) - 참조 비트를 이용하여 LRU를 근사적으로 구현하는 기법.",
     "changeType": "rewritten",
     "changeReason": "high-frequency-term"
   }
